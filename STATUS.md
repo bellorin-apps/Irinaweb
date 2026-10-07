@@ -1,0 +1,85 @@
+# STATUS — Dra. Irina González Sáez
+
+Última actualización: 2026-10-07 (Claude) · Fuente de cálculo: `PLAN.md`
+
+```
+PROYECTO — DRA. IRINA
+
+Avance global
+█░░░░░░░░░░░░░░░░░░░ 6%
+
+Fase actual
+██████████████░░░░░░ 70%
+Fase 0/12 — Descubrimiento
+
+Estado
+🟡 Esperando respuestas del propietario (Checkpoint 1) y acceso técnico al WordPress
+```
+
+## Métricas
+
+| Métrica | Valor |
+|---|---|
+| Fase | 0/12 |
+| Tareas | 8 / 97 |
+| Peso completado | 16 / 253 |
+| En curso | 0 |
+| Bloqueadas | 1 (acceso técnico al sitio desde el entorno) |
+| Pendientes del propietario | 3 (cuestionario lote 1, confirmación Dra., acceso WPVibe/red) |
+
+## Estado por área
+
+```
+Discovery        ███████░░░  70%
+Auditoría WP     ░░░░░░░░░░   0%
+Investigación    ░░░░░░░░░░   0%
+Arquitectura     ░░░░░░░░░░   0%
+Diseño           ░░░░░░░░░░   0%
+Desarrollo       ░░░░░░░░░░   0%
+Contenido        ░░░░░░░░░░   0%
+SEO              ░░░░░░░░░░   0%
+QA               ░░░░░░░░░░   0%
+Launch           ░░░░░░░░░░   0%
+```
+
+## LISTO
+
+- Repositorio y base documental
+- MASTER_PROMPT v1.0
+- Recolección de información existente (CV, título, consejo, tarjetas, logo, dominio, Search Console)
+- Cuestionario de discovery y checklist de documentos
+- Plan maestro ponderado (13 fases, 97 tareas)
+
+## AHORA
+
+- Esperando Checkpoint 1 (respuestas del propietario)
+- Esperando acceso técnico al WordPress para iniciar Fase 1
+
+## FALTA
+
+- Auditoría técnica WP + backup + staging
+- Investigación y estrategia
+- Arquitectura, diseño, desarrollo, contenido, SEO, QA, launch
+
+## Bloqueos
+
+| ID | Bloqueo | Tipo | Desbloquea |
+|---|---|---|---|
+| B1 | `drairinagonzalez.com` y `doctoralia.com.mx` denegados por la política de red del entorno cloud | Propietario (configuración del entorno) | Fase 1 completa |
+| B2 | Conexión WPVibe no autorizada (link de un clic en wp-admin) | Propietario | Lectura/escritura WP vía REST y WP-CLI |
+
+## Riesgo de entrega
+
+🟡 Medio — no hay fotografía profesional utilizable de la Dra. (la sesión de 2022 es personal) y falta confirmación médica de credenciales/servicios.
+
+## Entrega estimada
+
+Aún no confiable. Motivo: faltan respuestas del Checkpoint 1, acceso técnico al WordPress y fotografía.
+
+## Dependencias externas (no cuentan como trabajo técnico)
+
+- Respuestas del cuestionario (lote 1)
+- Confirmación de la Dra. Irina sobre credenciales y servicios
+- Sesión fotográfica profesional
+- Revisión legal/regulatoria
+- Accesos: hosting, Search Console, GBP, Doctoralia, licencias

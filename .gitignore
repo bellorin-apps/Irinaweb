@@ -1,0 +1,35 @@
+# Secrets / local config — NUNCA versionar
+.env
+.env.*
+*.local.php
+wp-config.php
+wp-config-*.php
+*.pem
+*.key
+secrets/
+credentials/
+
+# Dependencias y builds
+node_modules/
+vendor/
+dist/
+build/
+*.map
+
+# Backups y dumps (se guardan fuera del repo)
+backups/
+*.sql
+*.sql.gz
+*.zip
+*.tar.gz
+
+# OS / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Temporales
+tmp/
+.cache/

@@ -1,0 +1,206 @@
+# PLAN MAESTRO — Dra. Irina González Sáez
+
+Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
+
+## Cómo se calcula el avance
+
+- Cada tarea tiene un **peso** (1 = pequeña, 2 = media, 3 = grande, 5 = crítica/estructural).
+- Avance global = Σ(peso de tareas DONE) / Σ(peso total).
+- Una tarea está DONE solo si cumple: IMPLEMENTED + TESTED + REVIEWED (Codex cuando aplica) + FIXED + VERIFIED.
+- Estados: `TODO` · `DOING` · `BLOCKED` · `OWNER` (OWNER_DECISION_REQUIRED / depende del propietario) · `REVIEW` (en auditoría Codex) · `DONE`.
+- "Trabajo técnico" excluye las tareas marcadas `ext` (dependencias externas: aprobación médica, fotos, documentos, legal).
+
+## Checkpoints con el propietario
+
+| Checkpoint | Fase | Qué se aprueba |
+|---|---|---|
+| CP1 | 0 | Discovery + información faltante |
+| CP2 | 4 | Dirección visual |
+| CP3 | 6 | Home + sistema visual representativo |
+| CP4 | 7 | Contenido médico |
+| CP5 | 11 | Pre-launch |
+
+---
+
+## FASE 0 — Descubrimiento y onboarding
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 0.1 | Inicializar repositorio, estructura documental, `.gitignore` | 2 | DONE | Commit inicial |
+| 0.2 | Incorporar Prompt Maestro v1.0 en `MASTER_PROMPT.md` | 2 | DONE | |
+| 0.3 | Recolectar información existente (Drive, correo, público) sin inventar | 3 | DONE | Ver `DISCOVERY.md` |
+| 0.4 | Identificar dominio, hosting, estado de indexación | 2 | DONE | drairinagonzalez.com; Search Console activo |
+| 0.5 | Extraer identidad visual existente (logo, paleta, tarjetas) | 2 | DONE | Ver `DISCOVERY.md` §Identidad |
+| 0.6 | Redactar cuestionario de discovery agrupado (12 bloques) | 2 | DONE | `DISCOVERY.md` |
+| 0.7 | Checklist de documentos requeridos | 1 | DONE | `DISCOVERY.md` |
+| 0.8 | Plan maestro con fases, pesos y Definition of Done | 2 | DONE | Este archivo |
+| 0.9 | Respuestas del propietario al cuestionario (lote 1: desbloqueadores) | 3 | OWNER | ext |
+| 0.10 | Confirmación expresa de la Dra. Irina de credenciales y servicios | 3 | OWNER | ext |
+| 0.11 | CHECKPOINT 1 cerrado | 1 | OWNER | ext |
+
+## FASE 1 — Acceso, auditoría técnica, backup y staging
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 1.1 | Habilitar acceso técnico al WordPress (red del entorno + WPVibe/REST o WP-CLI) | 2 | BLOCKED | Dominio bloqueado por política de red del entorno; link de autorización WPVibe pendiente |
+| 1.2 | Inventario completo (WP, PHP, servidor, SSL, theme, plugins, MU, usuarios, roles, contenido, medios, opciones, cron, integraciones) | 3 | TODO | `docs/AUDIT_WP.md` |
+| 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | TODO | |
+| 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | TODO | Alertas existentes: noindex + canónica duplicada |
+| 1.5 | Clasificar inventario KEEP / REPLACE / REMOVE / INVESTIGATE | 2 | TODO | |
+| 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | TODO | |
+| 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | TODO | |
+| 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | TODO | |
+| 1.9 | Codex: auditoría de seguridad del estado actual | 2 | TODO | |
+
+## FASE 2 — Investigación y estrategia
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 2.1 | `REFERENCE_RESEARCH.md`: Stanford Sleep, Mayo, Cleveland, Johns Hopkins, Sleep Doctor, ENT privados, referentes UX | 3 | TODO | |
+| 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | TODO | |
+| 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | TODO | Sin asumir volúmenes |
+| 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | OWNER | Requiere respuestas |
+| 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | TODO | |
+| 2.6 | Codex: revisión de estrategia y keyword map | 1 | TODO | |
+
+## FASE 3 — Arquitectura (información, SEO, WordPress)
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 3.1 | `SITEMAP.md`: URLs, intención por página, clusters ORL y Sueño | 3 | TODO | |
+| 3.2 | `SEO.md`: keyword map, titles, canonicals, internal linking, mapa 301 | 3 | TODO | |
+| 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | TODO | |
+| 3.4 | Schema map por tipo de página | 2 | TODO | |
+| 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | TODO | |
+| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | TODO | |
+| 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | OWNER | |
+| 3.8 | Codex: auditoría de arquitectura contra MASTER_PROMPT | 2 | TODO | |
+
+## FASE 4 — Design System y dirección visual
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 4.1 | Derivar sistema digital de la identidad existente (paleta, tipografía, logo, favicon) | 3 | TODO | |
+| 4.2 | Tokens globales (color, tipo, espacio, radio, sombra, motion) | 3 | TODO | |
+| 4.3 | Componentes base: botones, inputs, cards, badges, iconografía Lucide | 3 | TODO | |
+| 4.4 | Concepto visual "Sleep experience" dentro de la marca | 2 | TODO | |
+| 4.5 | Mockups/prototipos: Home, Dra. Irina, página médica, artículo, móvil | 5 | TODO | |
+| 4.6 | `DESIGN_SYSTEM.md` | 2 | TODO | |
+| 4.7 | CHECKPOINT 2: dirección visual aprobada | 2 | OWNER | ext |
+
+## FASE 5 — Infraestructura de código
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 5.1 | Child theme `irina-gonzalez` (estructura, enqueue, hooks Hello, setup) | 5 | TODO | |
+| 5.2 | Plugin `dra-irina-core`: CPT, taxonomías, campos, settings centrales (NAP, horarios, enlaces) | 5 | TODO | |
+| 5.3 | Fuente única de verdad: módulo de datos de contacto/profesionales reutilizable | 3 | TODO | |
+| 5.4 | Schema JSON-LD propio sin duplicar con el plugin SEO | 3 | TODO | |
+| 5.5 | Tooling: linters (PHPCS WPCS, stylelint, eslint), build de assets, fuentes WOFF2 locales | 2 | TODO | |
+| 5.6 | Instalación/configuración plugins aprobados en staging | 2 | TODO | |
+| 5.7 | Codex: auditoría de código (PHP/JS/CSS/seguridad) | 3 | TODO | |
+
+## FASE 6 — Build del núcleo visual
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 6.1 | Header + navegación + CTA + mobile bar | 3 | TODO | |
+| 6.2 | Footer | 2 | TODO | |
+| 6.3 | Home | 5 | TODO | |
+| 6.4 | Página Dra. Irina (entidad/autora) | 5 | TODO | |
+| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | TODO | |
+| 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | TODO | |
+| 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
+| 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | TODO | |
+| 6.9 | Codex: auditoría del núcleo | 3 | TODO | |
+| 6.10 | CHECKPOINT 3: Home + sistema visual aprobados | 2 | OWNER | ext |
+
+## FASE 7 — Contenido médico
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | TODO | |
+| 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | TODO | |
+| 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | TODO | |
+| 7.4 | Bibliografía verificable por página | 2 | TODO | |
+| 7.5 | Revisión técnica/SEO de drafts | 2 | TODO | |
+| 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | OWNER | ext |
+| 7.7 | CHECKPOINT 4 | 1 | OWNER | ext |
+
+## FASE 8 — Escalado del sitio
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 8.1 | Resto de páginas de condición/servicio | 5 | TODO | |
+| 8.2 | Centro de recursos/artículos iniciales | 3 | TODO | |
+| 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | TODO | |
+| 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | TODO | |
+| 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | TODO | |
+| 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
+| 8.7 | 404 útil (noindex), búsqueda interna si procede | 2 | TODO | |
+| 8.8 | Navegador de síntomas (orientación, no diagnóstico) | 3 | TODO | |
+| 8.9 | Favicon/app icons, OG template | 1 | TODO | |
+
+## FASE 9 — SEO técnico, schema, analítica, local
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 9.1 | On-page completo: titles, metas, H1, canonicals, OG por página | 3 | TODO | |
+| 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | TODO | |
+| 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | TODO | |
+| 9.4 | GA4 + Search Console + eventos de conversión | 2 | TODO | |
+| 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | Requiere acceso |
+| 9.6 | Codex: QA SEO | 2 | TODO | |
+
+## FASE 10 — Performance, seguridad, accesibilidad
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | TODO | |
+| 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | TODO | |
+| 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | TODO | |
+| 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | TODO | |
+| 10.5 | Codex: QA performance + seguridad + accesibilidad | 3 | TODO | |
+
+## FASE 11 — QA integral y pre-launch
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 11.1 | QA funcional (enlaces, forms, email, agenda, WhatsApp, maps, 404, cookies, analytics) | 3 | TODO | |
+| 11.2 | QA dispositivos (Chrome, Edge, Safari, Firefox, Android, iOS) | 2 | TODO | |
+| 11.3 | QA contenido (consistencia NAP, nombres, títulos, claims, fechas) | 2 | TODO | |
+| 11.4 | Consistency check de Codex contra MASTER_PROMPT | 2 | TODO | |
+| 11.5 | `LAUNCH_CHECKLIST.md` completado | 2 | TODO | |
+| 11.6 | CHECKPOINT 5: pre-launch aprobado | 2 | OWNER | ext |
+
+## FASE 12 — Launch y post-launch
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 12.1 | Deploy staging → producción con backup y rollback | 5 | TODO | |
+| 12.2 | Día 0 validación; Día 1 errores críticos | 2 | TODO | |
+| 12.3 | Día 7 Search Console + analytics; Día 30 indexación/keywords/conversiones/CWV | 2 | TODO | |
+| 12.4 | `MAINTENANCE.md` + plan SEO 6–12 meses + KPIs | 3 | TODO | |
+
+---
+
+## Resumen de pesos
+
+| Fase | Peso total | Peso DONE |
+|---|---|---|
+| 0 | 23 | 16 |
+| 1 | 20 | 0 |
+| 2 | 14 | 0 |
+| 3 | 20 | 0 |
+| 4 | 20 | 0 |
+| 5 | 23 | 0 |
+| 6 | 33 | 0 |
+| 7 | 22 | 0 |
+| 8 | 26 | 0 |
+| 9 | 13 | 0 |
+| 10 | 14 | 0 |
+| 11 | 13 | 0 |
+| 12 | 12 | 0 |
+| **Total** | **253** | **16** |
+
+Avance global: 16 / 253 = **6%** · Tareas: 8 / 97 DONE.
