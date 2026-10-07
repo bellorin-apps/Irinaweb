@@ -4,7 +4,7 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] **Seguir `docs/RUNBOOK_RESET.md` pasos 1–9** (backup, Sensia a otorrino-monterrey.com, sitio WordPress nuevo en drairinagonzalez.com, SSL, contraseña de aplicación + secretos, red amplia).
+- [ ] **Seguir `docs/RUNBOOK_RESET.md` pasos 1–2** (backup descargado; contraseña de aplicación + secretos + red amplia). Claude ejecuta 3, 4 y 6 por REST.
 - [ ] Crear el proyecto web de Iskra en Adobe Fonts y pasar el ID del kit (el `xxxxxxx.css`).
 
 - [ ] Responder `DISCOVERY.md` → Lote 1 (preguntas marcadas ⚡).
