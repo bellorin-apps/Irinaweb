@@ -71,7 +71,7 @@ Launch           ░░░░░░░░░░   0%
 | ID | Bloqueo | Tipo | Desbloquea |
 |---|---|---|---|
 | B1 | La política de red del entorno (nivel Limited) deniega `drairinagonzalez.com`, Doctoralia, wordpress.org, Google Fonts, Awwwards y todos los sitios de referencia; solo pasan buscadores. Recomendación: subir el nivel de acceso de red del entorno, no solo añadir dominios | Propietario (configuración del entorno) | Fase 1 y verificación visual de la investigación |
-| B2 | Sin canal de operación al WordPress: WPVibe descartado por el propietario; SSH imposible desde cloud (proxy solo TLS). Falta Application Password en secretos del entorno + Hostinger Git deploy | Propietario | Operación REST, despliegue de código, briefing alojado |
+| B2 | Sin canal de operación al WordPress desde cloud (WPVibe descartado; SSH imposible por el proxy TLS). La sesión local "Membretador" tiene la clave SSH pero su clasificador exige autorización del propietario en esa sesión. Opciones: autorizarla allí, ejecutar `tools/deploy/*.sh` desde Git Bash, o Application Password en secretos del entorno para REST | Propietario | Inventario Fase 1, briefing alojado, despliegue de código |
 
 ## Riesgo de entrega
 
