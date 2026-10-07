@@ -1,0 +1,319 @@
+== dominios en la cuenta ==
+bankoincambios.com
+drairinagonzalez.com
+drluisbellorin.com
+gibelab.com
+idenbauer.com
+josebellorin.com
+paintcar.mx
+roraima.mx
+== webroot ==
+/home/u855694717/domains/drairinagonzalez.com/public_html
+total 300
+drwxr-xr-x  6 u855694717 o70484443  4096 Oct  7 23:07 .
+drwxr-xr-x  3 u855694717 o70484443  4096 Oct  7 23:07 ..
+-rw-r--r--  1 u855694717 o70484443 16417 Oct  7 23:07 default.php
+-rw-r--r--  1 u855694717 o70484443  1496 Oct  7 23:07 .htaccess
+-rw-r--r--  1 u855694717 o70484443   714 Oct  7 23:07 .htaccess.bk
+-rw-r--r--  1 u855694717 o70484443   405 Oct  7 23:07 index.php
+-rw-r--r--  1 u855694717 o70484443 19903 Oct  7 23:07 license.txt
+-rw-r--r--  1 u855694717 o70484443   354 Oct  7 23:07 llms.txt
+drwxr-xr-x  2 u855694717 o70484443  4096 Oct  7 23:07 .private
+-rw-r--r--  1 u855694717 o70484443  7407 Oct  7 23:07 readme.html
+-rw-r--r--  1 u855694717 o70484443  7718 Oct  7 23:07 wp-activate.php
+drwxr-xr-x  9 u855694717 o70484443  4096 Aug  8 00:22 wp-admin
+-rw-r--r--  1 u855694717 o70484443   351 Oct  7 23:07 wp-blog-header.php
+-rw-r--r--  1 u855694717 o70484443  2323 Oct  7 23:07 wp-comments-post.php
+-rw-r--r--  1 u855694717 o70484443  3532 Oct  7 23:07 wp-config.php
+-rw-r--r--  1 u855694717 o70484443  3339 Oct  7 23:07 wp-config-sample.php
+drwxr-xr-x 10 u855694717 o70484443  4096 Oct  7 23:07 wp-content
+-rw-r--r--  1 u855694717 o70484443  5617 Oct  7 23:07 wp-cron.php
+drwxr-xr-x 34 u855694717 o70484443 16384 Oct  7 14:59 wp-includes
+-rw-r--r--  1 u855694717 o70484443  2493 Oct  7 23:07 wp-links-opml.php
+-rw-r--r--  1 u855694717 o70484443  3937 Oct  7 23:07 wp-load.php
+-rw-r--r--  1 u855694717 o70484443 52536 Oct  7 23:07 wp-login.php
+-rw-r--r--  1 u855694717 o70484443  8727 Oct  7 23:07 wp-mail.php
+-rw-r--r--  1 u855694717 o70484443 33152 Oct  7 23:07 wp-settings.php
+-rw-r--r--  1 u855694717 o70484443 35081 Oct  7 23:07 wp-signup.php
+-rw-r--r--  1 u855694717 o70484443  5396 Oct  7 23:07 wp-trackback.php
+-rw-r--r--  1 u855694717 o70484443  3205 Oct  7 23:07 xmlrpc.php
+== PHP ==
+PHP 8.0.30 (cli) (built: Aug 23 2026 15:57:34) ( NTS )
+PHP 8.4.23 (cli) (built: Jul 10 2026 14:30:57) (NTS)
+== WP-CLI ==
+/usr/local/bin/wp
+WP-CLI 2.12.0
+== wp core version ==
+7.1.3
+== wp option get home ==
+https://drairinagonzalez.com
+== wp option get siteurl ==
+https://drairinagonzalez.com
+== wp option get blog_public ==
+1
+== wp option get permalink_structure ==
+/%postname%/
+== wp option get timezone_string ==
+
+== wp theme list --format=csv ==
+name,status,update,version,update_version,auto_update
+astra,active,none,4.14.0,,off
+== wp plugin list --format=csv ==
+name,status,update,version,update_version,auto_update
+elementor,active,none,4.3.4,,off
+litespeed-cache,active,none,7.9.1,,off
+seo-by-rank-math,active,none,1.0.280,,off
+sensia,active,none,0.2.6,,off
+google-site-kit,active,none,1.189.0,,off
+elementor-safe-mode,must-use,,1.0.0,,off
+hostinger-preview-domain,must-use,,1.4.0,,off
+hostinger-auto-updates,must-use,,1.0.8,,off
+== wp post list --post_type=page --post_status=any --fields=ID,post_title,post_name,post_status --format=csv ==
+ID,post_title,post_name,post_status
+143,Links,links,publish
+106,Inicio,inicio,publish
+3,"Privacy Policy",privacy-policy,draft
+== wp post list --post_type=post --post_status=any --fields=ID,post_title,post_name,post_status --format=csv ==
+ID,post_title,post_name,post_status
+== wp user list --fields=ID,user_login,roles --format=csv ==
+ID,user_login,roles
+1,bellgiga@gmail.com,administrator
+2,irina,subscriber
+== wp cron event list --fields=hook,next_run_relative --format=csv ==
+hook,next_run_relative
+action_scheduler_run_queue,"41 seconds"
+wp_privacy_delete_old_export_files,"2 minutes 12 seconds"
+litespeed_task_lqip,"3 minutes"
+rank_math/redirection/clean_trashed,"17 minutes 16 seconds"
+rank_math/links/internal_links,"17 minutes 16 seconds"
+wp_update_plugins,"28 minutes 52 seconds"
+wp_update_themes,"58 minutes 52 seconds"
+wp_update_user_counts,"11 hours"
+googlesitekit_cron_update_remote_features,"11 hours"
+wp_version_check,"11 hours 58 minutes"
+googlesitekit_email_reporting_monitor,"13 hours 43 minutes"
+wp_privacy_personal_data_cleanup_requests,"15 hours 17 minutes"
+rank_math/content-ai/update_prompts,"20 hours 57 minutes"
+recovery_mode_clean_expired_keys,"22 hours 58 minutes"
+wp_scheduled_delete,"23 hours"
+delete_expired_transients,"23 hours"
+wp_scheduled_auto_draft_delete,"23 hours 2 minutes"
+elementor/tracker/send_event,"23 hours 4 minutes"
+googlesitekit_email_reporting_initiator,"4 days 9 hours"
+wp_delete_temp_updater_backups,"4 days 22 hours"
+run_weekly_partner_astra,"4 days 23 hours"
+wp_site_health_scheduled_check,"5 days 22 hours"
+googlesitekit_email_reporting_cleanup,"3 weeks 2 days"
+googlesitekit_email_reporting_initiator,"3 weeks 3 days"
+googlesitekit_email_reporting_initiator,"2 months 3 weeks"
+== wp rewrite list --format=csv ==
+match,query,source
+"sitemap_index\.xml$",index.php?sitemap=1,other
+"([^/]+?)-sitemap([0-9]+)?\.xml$",index.php?sitemap=$matches[1]&sitemap_n=$matches[2],other
+"([a-z]+)?-?sitemap\.xsl$",index.php?xsl=$matches[1],other
+^wp-json/?$,index.php?rest_route=/,other
+^wp-json/(.*)?,index.php?rest_route=/$matches[1],other
+^index.php/wp-json/?$,index.php?rest_route=/,other
+^index.php/wp-json/(.*)?,index.php?rest_route=/$matches[1],other
+"^wp-sitemap\.xml$",index.php?sitemap=index,other
+"^wp-sitemap\.xsl$",index.php?sitemap-stylesheet=sitemap,other
+"^wp-sitemap-index\.xsl$",index.php?sitemap-stylesheet=index,other
+"^wp-sitemap-([a-z]+?)-([a-z\d_-]+?)-(\d+?)\.xml$",index.php?sitemap=$matches[1]&sitemap-subtype=$matches[2]&paged=$matches[3],other
+"^wp-sitemap-([a-z]+?)-(\d+?)\.xml$",index.php?sitemap=$matches[1]&paged=$matches[2],other
+^op/?$,index.php?sensia_app=1,other
+^op/(entrar|salir|salida|membretar)/?$,index.php?sensia_app=1&sensia_vista=$matches[1],other
+^op/marca/(.+)$,index.php?sensia_app=1&sensia_marca=$matches[1],other
+^op/api/(.+)$,index.php?sensia_app=1&sensia_api=$matches[1],other
+^oauth/authorize$,index.php?mcp_oauth_endpoint=authorize,other
+^oauth/authorize-callback$,index.php?mcp_oauth_endpoint=authorize-callback,other
+^oauth/token$,index.php?mcp_oauth_endpoint=token,other
+^oauth/consent$,index.php?mcp_oauth_endpoint=consent,other
+^oauth/revoke$,index.php?mcp_oauth_endpoint=revoke,other
+"^\.well-known/oauth-protected-resource$",index.php?mcp_oauth_discovery=protected-resource,other
+"^\.well-known/oauth-authorization-server$",index.php?mcp_oauth_discovery=authorization-server,other
+category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?category_name=$matches[1]&feed=$matches[2],category
+category/(.+?)/(feed|rdf|rss|rss2|atom)/?$,index.php?category_name=$matches[1]&feed=$matches[2],category
+category/(.+?)/embed/?$,index.php?category_name=$matches[1]&embed=true,category
+"category/(.+?)/page/?([0-9]{1,})/?$",index.php?category_name=$matches[1]&paged=$matches[2],category
+category/(.+?)/?$,index.php?category_name=$matches[1],category
+tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?tag=$matches[1]&feed=$matches[2],post_tag
+tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?tag=$matches[1]&feed=$matches[2],post_tag
+tag/([^/]+)/embed/?$,index.php?tag=$matches[1]&embed=true,post_tag
+"tag/([^/]+)/page/?([0-9]{1,})/?$",index.php?tag=$matches[1]&paged=$matches[2],post_tag
+tag/([^/]+)/?$,index.php?tag=$matches[1],post_tag
+type/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?post_format=$matches[1]&feed=$matches[2],post_format
+type/([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?post_format=$matches[1]&feed=$matches[2],post_format
+type/([^/]+)/embed/?$,index.php?post_format=$matches[1]&embed=true,post_format
+"type/([^/]+)/page/?([0-9]{1,})/?$",index.php?post_format=$matches[1]&paged=$matches[2],post_format
+type/([^/]+)/?$,index.php?post_format=$matches[1],post_format
+e-floating-buttons/[^/]+/attachment/([^/]+)/?$,index.php?attachment=$matches[1],e-floating-buttons
+e-floating-buttons/[^/]+/attachment/([^/]+)/trackback/?$,index.php?attachment=$matches[1]&tb=1,e-floating-buttons
+e-floating-buttons/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],e-floating-buttons
+e-floating-buttons/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],e-floating-buttons
+"e-floating-buttons/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$",index.php?attachment=$matches[1]&cpage=$matches[2],e-floating-buttons
+e-floating-buttons/[^/]+/attachment/([^/]+)/embed/?$,index.php?attachment=$matches[1]&embed=true,e-floating-buttons
+e-floating-buttons/([^/]+)/embed/?$,index.php?e-floating-buttons=$matches[1]&embed=true,e-floating-buttons
+e-floating-buttons/([^/]+)/trackback/?$,index.php?e-floating-buttons=$matches[1]&tb=1,e-floating-buttons
+"e-floating-buttons/([^/]+)/page/?([0-9]{1,})/?$",index.php?e-floating-buttons=$matches[1]&paged=$matches[2],e-floating-buttons
+"e-floating-buttons/([^/]+)/comment-page-([0-9]{1,})/?$",index.php?e-floating-buttons=$matches[1]&cpage=$matches[2],e-floating-buttons
+e-floating-buttons/([^/]+)(?:/([0-9]+))?/?$,index.php?e-floating-buttons=$matches[1]&page=$matches[2],e-floating-buttons
+e-floating-buttons/[^/]+/([^/]+)/?$,index.php?attachment=$matches[1],e-floating-buttons
+e-floating-buttons/[^/]+/([^/]+)/trackback/?$,index.php?attachment=$matches[1]&tb=1,e-floating-buttons
+e-floating-buttons/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],e-floating-buttons
+e-floating-buttons/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],e-floating-buttons
+"e-floating-buttons/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$",index.php?attachment=$matches[1]&cpage=$matches[2],e-floating-buttons
+e-floating-buttons/[^/]+/([^/]+)/embed/?$,index.php?attachment=$matches[1]&embed=true,e-floating-buttons
+"robots\.txt$",index.php?robots=1,other
+"favicon\.ico$",index.php?favicon=1,other
+"sitemap\.xml",index.php?sitemap=index,other
+".*wp-(atom|rdf|rss|rss2|feed|commentsrss2)\.php$",index.php?feed=old,other
+".*wp-app\.php(/.*)?$",index.php?error=403,other
+.*wp-register.php$,index.php?register=true,other
+feed/(feed|rdf|rss|rss2|atom)/?$,index.php?&feed=$matches[1],root
+(feed|rdf|rss|rss2|atom)/?$,index.php?&feed=$matches[1],root
+embed/?$,index.php?&embed=true,root
+"page/?([0-9]{1,})/?$",index.php?&paged=$matches[1],root
+"comment-page-([0-9]{1,})/?$",index.php?&page_id=106&cpage=$matches[1],root
+comments/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?&feed=$matches[1]&withcomments=1,comments
+comments/(feed|rdf|rss|rss2|atom)/?$,index.php?&feed=$matches[1]&withcomments=1,comments
+comments/embed/?$,index.php?&embed=true,comments
+search/(.+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?s=$matches[1]&feed=$matches[2],search
+search/(.+)/(feed|rdf|rss|rss2|atom)/?$,index.php?s=$matches[1]&feed=$matches[2],search
+search/(.+)/embed/?$,index.php?s=$matches[1]&embed=true,search
+"search/(.+)/page/?([0-9]{1,})/?$",index.php?s=$matches[1]&paged=$matches[2],search
+search/(.+)/?$,index.php?s=$matches[1],search
+author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?author_name=$matches[1]&feed=$matches[2],author
+author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?author_name=$matches[1]&feed=$matches[2],author
+author/([^/]+)/embed/?$,index.php?author_name=$matches[1]&embed=true,author
+"author/([^/]+)/page/?([0-9]{1,})/?$",index.php?author_name=$matches[1]&paged=$matches[2],author
+author/([^/]+)/?$,index.php?author_name=$matches[1],author
+"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$",index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4],date
+"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$",index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4],date
+"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/embed/?$",index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&embed=true,date
+"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$",index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&paged=$matches[4],date
+"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$",index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3],date
+"([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$",index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3],date
+"([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$",index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3],date
+"([0-9]{4})/([0-9]{1,2})/embed/?$",index.php?year=$matches[1]&monthnum=$matches[2]&embed=true,date
+"([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$",index.php?year=$matches[1]&monthnum=$matches[2]&paged=$matches[3],date
+"([0-9]{4})/([0-9]{1,2})/?$",index.php?year=$matches[1]&monthnum=$matches[2],date
+([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?year=$matches[1]&feed=$matches[2],date
+([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$,index.php?year=$matches[1]&feed=$matches[2],date
+([0-9]{4})/embed/?$,index.php?year=$matches[1]&embed=true,date
+"([0-9]{4})/page/?([0-9]{1,})/?$",index.php?year=$matches[1]&paged=$matches[2],date
+([0-9]{4})/?$,index.php?year=$matches[1],date
+.?.+?/attachment/([^/]+)/?$,index.php?attachment=$matches[1],page
+.?.+?/attachment/([^/]+)/trackback/?$,index.php?attachment=$matches[1]&tb=1,page
+.?.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],page
+.?.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],page
+".?.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$",index.php?attachment=$matches[1]&cpage=$matches[2],page
+.?.+?/attachment/([^/]+)/embed/?$,index.php?attachment=$matches[1]&embed=true,page
+(.?.+?)/embed/?$,index.php?pagename=$matches[1]&embed=true,page
+(.?.+?)/trackback/?$,index.php?pagename=$matches[1]&tb=1,page
+(.?.+?)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?pagename=$matches[1]&feed=$matches[2],page
+(.?.+?)/(feed|rdf|rss|rss2|atom)/?$,index.php?pagename=$matches[1]&feed=$matches[2],page
+"(.?.+?)/page/?([0-9]{1,})/?$",index.php?pagename=$matches[1]&paged=$matches[2],page
+"(.?.+?)/comment-page-([0-9]{1,})/?$",index.php?pagename=$matches[1]&cpage=$matches[2],page
+(.?.+?)(?:/([0-9]+))?/?$,index.php?pagename=$matches[1]&page=$matches[2],page
+[^/]+/attachment/([^/]+)/?$,index.php?attachment=$matches[1],post
+[^/]+/attachment/([^/]+)/trackback/?$,index.php?attachment=$matches[1]&tb=1,post
+[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],post
+[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],post
+"[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$",index.php?attachment=$matches[1]&cpage=$matches[2],post
+[^/]+/attachment/([^/]+)/embed/?$,index.php?attachment=$matches[1]&embed=true,post
+([^/]+)/embed/?$,index.php?name=$matches[1]&embed=true,post
+([^/]+)/trackback/?$,index.php?name=$matches[1]&tb=1,post
+([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?name=$matches[1]&feed=$matches[2],post
+([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?name=$matches[1]&feed=$matches[2],post
+"([^/]+)/page/?([0-9]{1,})/?$",index.php?name=$matches[1]&paged=$matches[2],post
+"([^/]+)/comment-page-([0-9]{1,})/?$",index.php?name=$matches[1]&cpage=$matches[2],post
+([^/]+)(?:/([0-9]+))?/?$,index.php?name=$matches[1]&page=$matches[2],post
+[^/]+/([^/]+)/?$,index.php?attachment=$matches[1],post
+[^/]+/([^/]+)/trackback/?$,index.php?attachment=$matches[1]&tb=1,post
+[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],post
+[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$,index.php?attachment=$matches[1]&feed=$matches[2],post
+"[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$",index.php?attachment=$matches[1]&cpage=$matches[2],post
+[^/]+/([^/]+)/embed/?$,index.php?attachment=$matches[1]&embed=true,post
+== wp menu list --format=csv ==
+term_id,name,slug,locations,count
+== wp-config (solo flags) ==
+define( 'WP_CACHE', true );
+define( 'WP_CACHE_KEY_SALT', '[REDACTADO — no se versiona]' );
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+if ( ! defined( 'WP_DEBUG' ) ) {
+	define( 'WP_DEBUG', false );
+== robots.txt ==
+(no existe archivo; lo genera WP)
+== .htaccess (primeras 60 líneas) ==
+# BEGIN LSCACHE
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule litespeed/debug/.*\.log$ - [F,L]
+RewriteRule \.litespeed_conf\.dat - [F,L]
+</IfModule>
+<IfModule LiteSpeed>
+CacheLookup on
+RewriteRule .* - [E=Cache-Control:no-autoflush]
+
+### marker ASYNC start ###
+RewriteCond %{REQUEST_URI} /wp-admin/admin-ajax\.php
+RewriteCond %{QUERY_STRING} action=async_litespeed
+RewriteRule .* - [E=noabort:1]
+### marker ASYNC end ###
+
+### marker DROPQS start ###
+CacheKeyModify -qs:fbclid
+CacheKeyModify -qs:gclid
+CacheKeyModify -qs:utm*
+CacheKeyModify -qs:_ga
+### marker DROPQS end ###
+
+</IfModule>
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+# END LSCACHE
+# BEGIN NON_LSCACHE
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+# END NON_LSCACHE
+# BEGIN WordPress
+# Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+== cabeceras home ==
+HTTP/2 301 
+date: Wed, 07 Oct 2026 23:42:48 GMT
+content-type: text/html; charset=UTF-8
+content-length: 0
+location: https://drairinagonzalez.com/
+x-powered-by: PHP/8.2.33
+x-redirect-by: WordPress
+x-litespeed-cache: miss
+platform: hostinger
+panel: hpanel
+content-security-policy: upgrade-insecure-requests
+server: hcdn
+alt-svc: h3=":443"; ma=86400
+x-hcdn-request-id: ad62287014248481aab58eb9f0776ea8-asc-edge13
+x-hcdn-cache-status: MISS
+x-hcdn-upstream-rt: 1.476
+
+== cabeceras dominio alterno ==
+== robots/sitemap por http ==
+HTTP/2 200 
+date: Wed, 07 Oct 2026 23:42:49 GMT
+content-type: text/xml; charset=UTF-8
+HTTP/2 301 
+date: Wed, 07 Oct 2026 23:42:50 GMT
+content-type: text/html; charset=UTF-8

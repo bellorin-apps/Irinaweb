@@ -20,7 +20,7 @@ else
   echo '== themes (carpetas) =='; ls wp-content/themes
   echo '== mu-plugins =='; ls wp-content/mu-plugins 2>/dev/null || echo 'ninguno'
 fi
-echo '== wp-config (solo flags) =='; grep -E "WP_DEBUG|WP_CACHE|DISALLOW_FILE_EDIT|WP_MEMORY_LIMIT|FORCE_SSL|WP_HOME|WP_SITEURL" wp-config.php || echo 'sin flags'
+echo '== wp-config (solo flags) =='; grep -E "WP_DEBUG|WP_CACHE|DISALLOW_FILE_EDIT|WP_MEMORY_LIMIT|FORCE_SSL|WP_HOME|WP_SITEURL" wp-config.php | grep -viE "salt|key" || echo 'sin flags'
 echo '== robots.txt =='; cat robots.txt 2>/dev/null || echo '(no existe archivo; lo genera WP)'
 echo '== .htaccess (primeras 60 líneas) =='; head -60 .htaccess 2>/dev/null
 echo '== cabeceras home =='; curl -sI '$SITE_URL/' | head -25

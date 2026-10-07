@@ -15,7 +15,8 @@ rscp "$SRC/index.html" "$SRC/guardar.php" "$SRC/.htaccess" "$SSH_USER@$SSH_HOST:
 echo "→ Token y config.php (se conserva el token existente si ya hay config.php)"
 TOKEN="$(rssh "if [ -f '$DEST/config.php' ]; then php -r 'echo (require \"$DEST/config.php\")[\"token\"];'; fi")"
 if [ -z "$TOKEN" ]; then
-  TOKEN="$(LC_ALL=C tr -dc 'a-z0-9' </dev/urandom | head -c 32)"
+  # 32 hex. No usar `tr </dev/urandom | head -c`: con pipefail en Git Bash muere por SIGPIPE (exit 141).
+  TOKEN="$(od -An -tx1 -N16 /dev/urandom | tr -d ' \n')"
   rssh "cat > '$DEST/config.php' <<PHP
 <?php
 return [
