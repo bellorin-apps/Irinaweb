@@ -40,14 +40,17 @@ add_action(
 	20
 );
 
-// Fuentes locales: preload solo del archivo crítico (regular). Se activa cuando existan los WOFF2 licenciados.
+// Iskra vía Adobe Fonts (D-010). El ID del proyecto web se configura con el filtro irina_adobe_fonts_kit o la constante IRINA_ADOBE_FONTS_KIT.
 add_action(
 	'wp_head',
 	static function (): void {
-		$font = '/assets/fonts/iskra-regular.woff2';
-		if ( is_readable( IRINA_THEME_DIR . $font ) ) {
-			printf( '<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n", esc_url( IRINA_THEME_URI . $font ) );
+		$kit = apply_filters( 'irina_adobe_fonts_kit', defined( 'IRINA_ADOBE_FONTS_KIT' ) ? IRINA_ADOBE_FONTS_KIT : '' );
+		if ( ! $kit || ! preg_match( '/^[a-z0-9]{6,12}$/', $kit ) ) {
+			return;
 		}
+		echo '<link rel="preconnect" href="https://use.typekit.net" crossorigin>' . "\n";
+		printf( '<link rel="stylesheet" href="https://use.typekit.net/%s.css" media="print" onload="this.media=\'all\'">' . "\n", esc_attr( $kit ) );
+		printf( '<noscript><link rel="stylesheet" href="https://use.typekit.net/%s.css"></noscript>' . "\n", esc_attr( $kit ) );
 	},
 	1
 );

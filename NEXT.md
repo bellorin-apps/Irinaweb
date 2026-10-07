@@ -4,15 +4,15 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] **Abrir una sesión local de Claude Code en tu PC y pegar el encargo de `HANDOFF_LOCAL.md`** (usa la clave SSH de Sensia; despliega el briefing y saca el inventario). Es el único camino para SSH.
+- [ ] **Ejecutar en Git Bash** `tools/deploy/inventory.sh` y `tools/deploy/deploy-briefing.sh` (ver pasos en el chat del 2026-10-07); hacer push de `docs/audit/`.
+- [ ] Crear el proyecto web de Iskra en Adobe Fonts y pasar el ID del kit (el `xxxxxxx.css`).
 
 - [ ] Responder `DISCOVERY.md` → Lote 1 (preguntas marcadas ⚡).
 - [ ] Red del entorno cloud: subir el nivel de acceso (la lista de dominios bloqueados incluye wordpress.org y todos los referentes); como mínimo permitir `drairinagonzalez.com`, `www.drairinagonzalez.com`, `wordpress.org`, `api.wordpress.org`, `downloads.wordpress.org`, `fonts.googleapis.com`, `fonts.gstatic.com`, `doctoralia.com.mx`.
 - [ ] Crear en wp-admin (Usuarios → tu perfil → Contraseñas de aplicación) una contraseña de aplicación "claude-ops" y guardarla como secretos del entorno: `IRINA_WP_URL=https://www.drairinagonzalez.com`, `IRINA_WP_USER`, `IRINA_WP_APP_PASSWORD`.
 - [ ] Hostinger hPanel → Git: desplegar rama `deploy/core` en `public_html/wp-content/plugins/dra-irina-core` y `deploy/theme` en `public_html/wp-content/themes/irina-gonzalez` (Claude genera las ramas).
 - [ ] Briefing: Claude lo despliega en `/briefing/` en cuanto exista el canal de operación; entonces entrega la URL con token para enviársela a la Dra.
-- [ ] Buscar el recibo/licencia de la fuente Iskra (MyFonts o TypeTogether).
-- [ ] Decidir OD-004 (posicionamiento respecto al Dr. Moreno) y OD-005 (nombre exacto de CAB Medical).
+- [x] OD-004, OD-005, OD-006 y dominio canónico (D-020) decididos.
 
 ## Prioridad 2 — Claude (sin dependencias del propietario)
 
