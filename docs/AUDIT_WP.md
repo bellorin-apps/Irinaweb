@@ -55,10 +55,18 @@ Inventario de producción: `docs/audit/inventory-20261007-174227.txt` (solo lect
 | ID 2 `irina` | subscriber | KEEP; pasará a rol `revisor_medico` cuando se active `dra-irina-core` |
 
 ### Otros hallazgos
-- Reescrituras `oauth/*` y `.well-known/oauth-*` con `mcp_oauth_endpoint`: INVESTIGATE (origen probable: servidor MCP de WordPress core 7.x o un plugin). Verificar y, si no se usa, desactivar.
+- Reescrituras `oauth/*` y `.well-known/oauth-*` (`mcp_oauth_endpoint`, `mcp_oauth_discovery`): INVESTIGATE. Site Kit ya se eliminó (2026-10-07); si persisten tras `wp rewrite flush`, el origen es Sensia o el core de WordPress 7.x. No tocar hasta identificarlo.
 - Cron: Action Scheduler, LiteSpeed, Rank Math, Site Kit email reporting, elementor tracker, Astra partner weekly. Los de Astra y Site Kit desaparecen al eliminarlos.
 
-## 3. Orden de limpieza (por REST desde cloud, con verificación de `/op` tras cada bloque)
+## 3. Ejecutado por REST el 2026-10-07
+
+- Zona horaria `America/Monterrey`, formato de fecha `j de F de Y`, hora `H:i`.
+- Página 3 "Privacy Policy" (borrador) a papelera.
+- Google Site Kit desactivado y eliminado.
+- `/op` verificado después de cada cambio (302 a `/op/entrar/`).
+- Pendiente: página 106 "Inicio" (Astra) se conserva como portada provisional hasta que exista la nueva Home.
+
+## 4. Orden de limpieza restante (por REST desde cloud, con verificación de `/op` tras cada bloque)
 
 1. Ajustes: zona horaria `America/Monterrey`, idioma `es_MX`, formato de fecha, título y descripción del sitio.
 2. Contenido: borrar páginas 106 y 3; conservar 143 "Links"; vaciar papelera.

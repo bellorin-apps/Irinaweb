@@ -5,7 +5,7 @@ Pegar este encargo en una sesión de Claude Code abierta en una carpeta nueva de
 ```
 Clona https://github.com/bellorin-apps/Irinaweb rama ccr-6254502d-xly8ww en esta carpeta.
 Lee MASTER_PROMPT.md, STATUS.md, NEXT.md, BATON.md y docs/DEPLOY.md.
-Copia tools/deploy/env.example.sh a tools/deploy/env.sh y ajusta SSH_KEY a la clave que ya usas para Sensia (misma cuenta Hostinger u855694717). No pegues claves en el chat.
+Copia tools/deploy/env.example.sh a tools/deploy/env.sh y ajusta SSH_KEY a la clave del alias `gibelab` de tu ~/.ssh/config (misma cuenta Hostinger u855694717). No pegues claves en el chat.
 Ejecuta en orden, desde Git Bash o WSL:
   bash tools/deploy/inventory.sh        (solo lectura; guarda docs/audit/inventory-*.txt)
   bash tools/deploy/deploy-briefing.sh  (sube /briefing/ y muestra la URL con token)
