@@ -61,19 +61,19 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | REVIEW | `docs/COMPETITION_MONTERREY.md`; ítems "no verificado" por bloqueo de red |
 | 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | REVIEW | Sin volúmenes; evidencia SERP; pendiente cruzar con Search Console |
 | 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | OWNER | Requiere respuestas |
-| 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | TODO | |
+| 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | REVIEW | v0.1; audiencias por validar con briefing |
 | 2.6 | Codex: revisión de estrategia y keyword map | 1 | TODO | |
 
 ## FASE 3 — Arquitectura (información, SEO, WordPress)
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 3.1 | `SITEMAP.md`: URLs, intención por página, clusters ORL y Sueño | 3 | TODO | |
+| 3.1 | `SITEMAP.md`: URLs, intención por página, clusters ORL y Sueño | 3 | REVIEW | v0.1; páginas OFRECE por confirmar |
 | 3.2 | `SEO.md`: keyword map, titles, canonicals, internal linking, mapa 301 | 3 | TODO | |
-| 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | TODO | |
-| 3.4 | Schema map por tipo de página | 2 | TODO | |
-| 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | TODO | |
-| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | TODO | |
+| 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | REVIEW | `ARCHITECTURE.md` §4 |
+| 3.4 | Schema map por tipo de página | 2 | REVIEW | `ARCHITECTURE.md` §5 |
+| 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | REVIEW | v0.1 |
+| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | REVIEW | v0.1 |
 | 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | OWNER | |
 | 3.8 | Codex: auditoría de arquitectura contra MASTER_PROMPT | 2 | TODO | |
 
@@ -191,8 +191,8 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 |---|---|---|
 | 0 | 23 | 16 |
 | 1 | 20 | 0 |
-| 2 | 14 | 4 (REVIEW ×0.5) |
-| 3 | 20 | 0 |
+| 2 | 14 | 5.5 (REVIEW ×0.5) |
+| 3 | 20 | 6.5 (REVIEW ×0.5) |
 | 4 | 20 | 0 |
 | 5 | 23 | 0 |
 | 6 | 33 | 0 |
@@ -202,6 +202,6 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
-| **Total** | **253** | **20** |
+| **Total** | **253** | **28** |
 
-Avance global: 20 / 253 = **8%** · Tareas: 8 / 97 DONE · 3 en REVIEW.
+Avance global: 28 / 253 = **11%** · Tareas: 8 / 97 DONE · 9 en REVIEW.

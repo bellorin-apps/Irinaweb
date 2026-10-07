@@ -35,11 +35,17 @@ Tres investigaciones producidas con subagentes y verificadas por Claude en su fo
 - `docs/COMPETITION_MONTERREY.md` — 10 competidores ORL + 6 actores de sueño; 31 ítems marcados "no verificado".
 - `KEYWORDS.md` — keyword map sin volúmenes; evidencia SERP; 11 reglas anticanibalización; títulos propuestos.
 
+## Tercera entrega (Fase 2/3)
+
+`STRATEGY.md`, `SITEMAP.md`, `ARCHITECTURE.md`, `PLUGINS.md` (v0.1). Decisiones D-013 a D-017 y OD-006 en `DECISIONS.md`.
+
 ## Pedido a Codex
 
 - Auditar `PLAN.md`: ¿la ponderación es razonable? ¿Falta alguna tarea exigida por el MASTER_PROMPT?
 - Auditar `DISCOVERY.md`: comprobar que cada dato "CONFIRMADO POR DOCUMENTO" cite su fuente y que nada se haya elevado a confirmado sin respaldo.
 - Auditar las tres investigaciones de Fase 2: afirmaciones sin fuente presentadas como hechos, volúmenes inventados, URLs propuestas que canibalicen, recomendaciones que contradigan el MASTER_PROMPT (p. ej. páginas doorway, keyword stuffing, testimonios fabricados).
+- Auditar `ARCHITECTURE.md` contra MASTER_PROMPT §95–§104: separación theme/core, Elementor controlado, fuente única de verdad, workflow médico por capacidades, emisor único de schema; validar la decisión D-014 (campos nativos sin ACF) frente a coste de mantenimiento.
+- Auditar `SITEMAP.md` y `STRATEGY.md`: canibalización, páginas doorway, claims no verificables.
 - Clasificar hallazgos (BLOCKER/CRITICAL/HIGH/MEDIUM/LOW/SUGGESTION) en `QA.md`.
 
 ## Criterios de aceptación de esta entrega

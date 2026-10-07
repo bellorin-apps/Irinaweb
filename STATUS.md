@@ -6,11 +6,11 @@
 PROYECTO — DRA. IRINA
 
 Avance global
-██░░░░░░░░░░░░░░░░░░ 8%
+██░░░░░░░░░░░░░░░░░░ 11%
 
 Fase actual
 ██████████████░░░░░░ 70%
-Fase 0/12 — Descubrimiento (Fase 2 iniciada en paralelo: 3 investigaciones en REVIEW)
+Fase 0/12 — Descubrimiento (Fases 2 y 3 avanzadas en paralelo; 9 tareas en REVIEW)
 
 Estado
 🟡 Lote 1 del propietario respondido; esperando briefing de la Dra. y autorización WPVibe
@@ -21,11 +21,11 @@ Estado
 | Métrica | Valor |
 |---|---|
 | Fase | 0/12 |
-| Tareas | 8 / 97 DONE · 3 en REVIEW |
-| Peso completado | 20 / 253 |
+| Tareas | 8 / 97 DONE · 9 en REVIEW |
+| Peso completado | 28 / 253 |
 | En curso | 0 |
 | Bloqueadas | 1 (red del entorno: bloquea el sitio y casi toda la web) |
-| Pendientes del propietario | 3 (autorizar WPVibe, compartir mini app con la Dra., permitir dominio en la red del entorno) |
+| Pendientes del propietario | 4 (autorizar WPVibe, compartir mini app con la Dra., ampliar red del entorno, decisiones OD-004/005/006) |
 
 ## Estado por área
 
@@ -33,6 +33,7 @@ Estado
 Discovery        ███████░░░  70%
 Auditoría WP     ░░░░░░░░░░   0%
 Investigación    ████░░░░░░  40%
+Arquitectura     ███░░░░░░░  33%
 Arquitectura     ░░░░░░░░░░   0%
 Diseño           ░░░░░░░░░░   0%
 Desarrollo       ░░░░░░░░░░   0%
@@ -52,8 +53,8 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
-- Codex: auditoría de las tres investigaciones (`BATON.md`)
-- Claude: `ARCHITECTURE.md`, `SITEMAP.md` y content model a partir de KEYWORDS.md
+- Codex: auditoría de investigaciones, STRATEGY, SITEMAP, ARCHITECTURE y PLUGINS (`BATON.md`)
+- Claude: scaffold de `dra-irina-core` y `irina-gonzalez` (Fase 5.1–5.2, sin desplegar)
 
 - Briefing de la Dra. (mini app publicada) para cerrar Checkpoint 1
 - Esperando acceso técnico al WordPress para iniciar Fase 1

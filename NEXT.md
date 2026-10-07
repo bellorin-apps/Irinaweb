@@ -16,9 +16,9 @@
 - [x] `docs/REFERENCE_RESEARCH.md` (2.1) — en REVIEW.
 - [x] `docs/COMPETITION_MONTERREY.md` (2.2) — en REVIEW.
 - [x] `KEYWORDS.md` (2.3) — en REVIEW.
-- [ ] `STRATEGY.md` (2.5): posicionamiento "otorrinolaringólogo especialista en ronquido y apnea", mensaje central, propuesta de valor.
-- [ ] `SITEMAP.md` (3.1) y `SEO.md` (3.2) a partir de KEYWORDS.md.
-- [ ] Borrador de content model y schema map (3.3, 3.4) sobre la base de la especialidad confirmada por documentos.
+- [x] `STRATEGY.md` (2.5), `SITEMAP.md` (3.1), `ARCHITECTURE.md` (3.3–3.5), `PLUGINS.md` (3.6) — en REVIEW.
+- [ ] `SEO.md` (3.2): consolidar keyword map, titles y reglas técnicas.
+- [ ] Scaffold de `wp-content/plugins/dra-irina-core` y `wp-content/themes/irina-gonzalez` con linters (5.1, 5.2, 5.5), sin desplegar.
 - [ ] Propuesta de sistema digital derivado de la identidad existente (4.1) — paleta, tipografía candidata, favicon desde `Logo-Favicon.ai`.
 - [ ] Preparar scaffold de `irina-gonzalez` (child theme) y `dra-irina-core` (plugin) en el repo, sin desplegar.
 

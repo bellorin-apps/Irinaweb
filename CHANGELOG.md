@@ -8,4 +8,5 @@
 - Lote 1 de respuestas del propietario incorporado a DISCOVERY.md (nombre, género, contacto, sede, hosting, licencias, agenda, GBP, tipografía Iskra, opiniones, fotos, accesos).
 - Mini app de briefing para la Dra. publicada como artefacto con guardado persistente (D-009).
 - Fase 2 parcial: `docs/REFERENCE_RESEARCH.md`, `docs/COMPETITION_MONTERREY.md`, `KEYWORDS.md` (en REVIEW). Avance 8%.
+- Fase 2/3: `STRATEGY.md`, `SITEMAP.md`, `ARCHITECTURE.md`, `PLUGINS.md` v0.1 (REVIEW). Decisiones D-013..D-017, OD-006. Avance 11%.
 - Bloqueo registrado: acceso de red del entorno a drairinagonzalez.com y doctoralia.com.mx.
