@@ -71,7 +71,7 @@ Launch           ░░░░░░░░░░   0%
 | ID | Bloqueo | Tipo | Desbloquea |
 |---|---|---|---|
 | B1 | La política de red del entorno (nivel Limited) deniega `drairinagonzalez.com`, Doctoralia, wordpress.org, Google Fonts, Awwwards y todos los sitios de referencia; solo pasan buscadores. Recomendación: subir el nivel de acceso de red del entorno, no solo añadir dominios | Propietario (configuración del entorno) | Fase 1 y verificación visual de la investigación |
-| B2 | Conexión WPVibe no autorizada (link de un clic en wp-admin) | Propietario (dijo que la autorizará) | Lectura/escritura WP vía REST y WP-CLI |
+| B2 | Sin canal de operación al WordPress: WPVibe descartado por el propietario; SSH imposible desde cloud (proxy solo TLS). Falta Application Password en secretos del entorno + Hostinger Git deploy | Propietario | Operación REST, despliegue de código, briefing alojado |
 
 ## Riesgo de entrega
 
