@@ -1,6 +1,6 @@
 # BATON — Transferencia operativa Claude ↔ Codex
 
-Última actualización: 2026-10-07 · Entrega: Claude → Codex
+Última actualización: 2026-10-07 (segunda entrega) · Entrega: Claude → Codex
 
 ## Contexto operativo
 
@@ -27,10 +27,19 @@ Todos los `.md` de raíz y `docs/`. Sin código todavía.
 - Certificación del Consejo Mexicano de ORL y CCC: acreditación del examen (febrero 2025) con diploma anunciado para mayo 2025. Falta ver el diploma/vigencia y número.
 - Cédula profesional mexicana: trámite iniciado en marzo 2025; estado desconocido.
 
+## Segunda entrega (Fase 2 parcial)
+
+Tres investigaciones producidas con subagentes y verificadas por Claude en su forma (no en su contenido visual, porque la red del entorno bloqueó todos los dominios de referencia):
+
+- `docs/REFERENCE_RESEARCH.md` — cada afirmación marcada [S] (snippet/fuente secundaria) o [I] (inferencia a verificar); Anexo B con checklist de verificación visual.
+- `docs/COMPETITION_MONTERREY.md` — 10 competidores ORL + 6 actores de sueño; 31 ítems marcados "no verificado".
+- `KEYWORDS.md` — keyword map sin volúmenes; evidencia SERP; 11 reglas anticanibalización; títulos propuestos.
+
 ## Pedido a Codex
 
 - Auditar `PLAN.md`: ¿la ponderación es razonable? ¿Falta alguna tarea exigida por el MASTER_PROMPT?
 - Auditar `DISCOVERY.md`: comprobar que cada dato "CONFIRMADO POR DOCUMENTO" cite su fuente y que nada se haya elevado a confirmado sin respaldo.
+- Auditar las tres investigaciones de Fase 2: afirmaciones sin fuente presentadas como hechos, volúmenes inventados, URLs propuestas que canibalicen, recomendaciones que contradigan el MASTER_PROMPT (p. ej. páginas doorway, keyword stuffing, testimonios fabricados).
 - Clasificar hallazgos (BLOCKER/CRITICAL/HIGH/MEDIUM/LOW/SUGGESTION) en `QA.md`.
 
 ## Criterios de aceptación de esta entrega

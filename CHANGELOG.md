@@ -7,4 +7,5 @@
 - Fase 0 al 70%: información existente recolectada con fuentes; cuestionario y checklist de documentos listos.
 - Lote 1 de respuestas del propietario incorporado a DISCOVERY.md (nombre, género, contacto, sede, hosting, licencias, agenda, GBP, tipografía Iskra, opiniones, fotos, accesos).
 - Mini app de briefing para la Dra. publicada como artefacto con guardado persistente (D-009).
+- Fase 2 parcial: `docs/REFERENCE_RESEARCH.md`, `docs/COMPETITION_MONTERREY.md`, `KEYWORDS.md` (en REVIEW). Avance 8%.
 - Bloqueo registrado: acceso de red del entorno a drairinagonzalez.com y doctoralia.com.mx.

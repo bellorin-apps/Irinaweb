@@ -6,11 +6,11 @@
 PROYECTO — DRA. IRINA
 
 Avance global
-█░░░░░░░░░░░░░░░░░░░ 6%
+██░░░░░░░░░░░░░░░░░░ 8%
 
 Fase actual
 ██████████████░░░░░░ 70%
-Fase 0/12 — Descubrimiento
+Fase 0/12 — Descubrimiento (Fase 2 iniciada en paralelo: 3 investigaciones en REVIEW)
 
 Estado
 🟡 Lote 1 del propietario respondido; esperando briefing de la Dra. y autorización WPVibe
@@ -21,10 +21,10 @@ Estado
 | Métrica | Valor |
 |---|---|
 | Fase | 0/12 |
-| Tareas | 8 / 97 |
-| Peso completado | 16 / 253 |
+| Tareas | 8 / 97 DONE · 3 en REVIEW |
+| Peso completado | 20 / 253 |
 | En curso | 0 |
-| Bloqueadas | 1 (acceso técnico al sitio desde el entorno) |
+| Bloqueadas | 1 (red del entorno: bloquea el sitio y casi toda la web) |
 | Pendientes del propietario | 3 (autorizar WPVibe, compartir mini app con la Dra., permitir dominio en la red del entorno) |
 
 ## Estado por área
@@ -32,7 +32,7 @@ Estado
 ```
 Discovery        ███████░░░  70%
 Auditoría WP     ░░░░░░░░░░   0%
-Investigación    ░░░░░░░░░░   0%
+Investigación    ████░░░░░░  40%
 Arquitectura     ░░░░░░░░░░   0%
 Diseño           ░░░░░░░░░░   0%
 Desarrollo       ░░░░░░░░░░   0%
@@ -52,6 +52,9 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
+- Codex: auditoría de las tres investigaciones (`BATON.md`)
+- Claude: `ARCHITECTURE.md`, `SITEMAP.md` y content model a partir de KEYWORDS.md
+
 - Briefing de la Dra. (mini app publicada) para cerrar Checkpoint 1
 - Esperando acceso técnico al WordPress para iniciar Fase 1
 
@@ -65,7 +68,7 @@ Launch           ░░░░░░░░░░   0%
 
 | ID | Bloqueo | Tipo | Desbloquea |
 |---|---|---|---|
-| B1 | `drairinagonzalez.com` y `doctoralia.com.mx` denegados por la política de red del entorno cloud | Propietario (configuración del entorno) | Fase 1 completa |
+| B1 | La política de red del entorno (nivel Limited) deniega `drairinagonzalez.com`, Doctoralia, wordpress.org, Google Fonts, Awwwards y todos los sitios de referencia; solo pasan buscadores. Recomendación: subir el nivel de acceso de red del entorno, no solo añadir dominios | Propietario (configuración del entorno) | Fase 1 y verificación visual de la investigación |
 | B2 | Conexión WPVibe no autorizada (link de un clic en wp-admin) | Propietario (dijo que la autorizará) | Lectura/escritura WP vía REST y WP-CLI |
 
 ## Riesgo de entrega

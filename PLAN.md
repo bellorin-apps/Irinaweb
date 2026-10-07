@@ -7,7 +7,8 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 - Cada tarea tiene un **peso** (1 = pequeña, 2 = media, 3 = grande, 5 = crítica/estructural).
 - Avance global = Σ(peso de tareas DONE) / Σ(peso total).
 - Una tarea está DONE solo si cumple: IMPLEMENTED + TESTED + REVIEWED (Codex cuando aplica) + FIXED + VERIFIED.
-- Estados: `TODO` · `DOING` · `BLOCKED` · `OWNER` (OWNER_DECISION_REQUIRED / depende del propietario) · `REVIEW` (en auditoría Codex) · `DONE`.
+- Estados: `TODO` · `DOING` · `BLOCKED` · `OWNER` (OWNER_DECISION_REQUIRED / depende del propietario) · `REVIEW` (implementado y verificado por Claude, pendiente de auditoría Codex) · `DONE`.
+- Una tarea en `REVIEW` cuenta la mitad de su peso; `DONE` cuenta el peso completo. Nada más suma.
 - "Trabajo técnico" excluye las tareas marcadas `ext` (dependencias externas: aprobación médica, fotos, documentos, legal).
 
 ## Checkpoints con el propietario
@@ -34,7 +35,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 0.6 | Redactar cuestionario de discovery agrupado (12 bloques) | 2 | DONE | `DISCOVERY.md` |
 | 0.7 | Checklist de documentos requeridos | 1 | DONE | `DISCOVERY.md` |
 | 0.8 | Plan maestro con fases, pesos y Definition of Done | 2 | DONE | Este archivo |
-| 0.9 | Respuestas del propietario al cuestionario (lote 1: desbloqueadores) | 3 | OWNER | ext |
+| 0.9 | Respuestas del propietario al cuestionario (lote 1: desbloqueadores) | 3 | DOING | ext — lote 1 respondido por el propietario; resto delegado a la mini app de la Dra. |
 | 0.10 | Confirmación expresa de la Dra. Irina de credenciales y servicios | 3 | OWNER | ext |
 | 0.11 | CHECKPOINT 1 cerrado | 1 | OWNER | ext |
 
@@ -56,9 +57,9 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 2.1 | `REFERENCE_RESEARCH.md`: Stanford Sleep, Mayo, Cleveland, Johns Hopkins, Sleep Doctor, ENT privados, referentes UX | 3 | TODO | |
-| 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | TODO | |
-| 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | TODO | Sin asumir volúmenes |
+| 2.1 | `docs/REFERENCE_RESEARCH.md`: Stanford Sleep, Mayo, Cleveland, Johns Hopkins, Sleep Doctor, ENT privados, referentes UX | 3 | REVIEW | Basado en snippets: todos los dominios bloqueados por la red del entorno; incluye checklist de verificación visual |
+| 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | REVIEW | `docs/COMPETITION_MONTERREY.md`; ítems "no verificado" por bloqueo de red |
+| 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | REVIEW | Sin volúmenes; evidencia SERP; pendiente cruzar con Search Console |
 | 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | OWNER | Requiere respuestas |
 | 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | TODO | |
 | 2.6 | Codex: revisión de estrategia y keyword map | 1 | TODO | |
@@ -190,7 +191,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 |---|---|---|
 | 0 | 23 | 16 |
 | 1 | 20 | 0 |
-| 2 | 14 | 0 |
+| 2 | 14 | 4 (REVIEW ×0.5) |
 | 3 | 20 | 0 |
 | 4 | 20 | 0 |
 | 5 | 23 | 0 |
@@ -201,6 +202,6 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
-| **Total** | **253** | **16** |
+| **Total** | **253** | **20** |
 
-Avance global: 16 / 253 = **6%** · Tareas: 8 / 97 DONE.
+Avance global: 20 / 253 = **8%** · Tareas: 8 / 97 DONE · 3 en REVIEW.
