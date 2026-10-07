@@ -4,7 +4,7 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] **Ejecutar en Git Bash** `tools/deploy/inventory.sh` y `tools/deploy/deploy-briefing.sh` (ver pasos en el chat del 2026-10-07); hacer push de `docs/audit/`.
+- [ ] **Seguir `docs/RUNBOOK_RESET.md` pasos 1–9** (backup, Sensia a otorrino-monterrey.com, sitio WordPress nuevo en drairinagonzalez.com, SSL, contraseña de aplicación + secretos, red amplia).
 - [ ] Crear el proyecto web de Iskra en Adobe Fonts y pasar el ID del kit (el `xxxxxxx.css`).
 
 - [ ] Responder `DISCOVERY.md` → Lote 1 (preguntas marcadas ⚡).

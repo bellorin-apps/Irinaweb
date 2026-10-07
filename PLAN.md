@@ -43,11 +43,11 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 1.1 | Habilitar acceso técnico al WordPress (red del entorno + WPVibe/REST o WP-CLI) | 2 | BLOCKED | Dominio bloqueado por política de red del entorno; link de autorización WPVibe pendiente |
-| 1.2 | Inventario completo (WP, PHP, servidor, SSL, theme, plugins, MU, usuarios, roles, contenido, medios, opciones, cron, integraciones) | 3 | TODO | `docs/AUDIT_WP.md` |
+| 1.1 | Canal técnico: red amplia del entorno + Application Password del WordPress NUEVO (REST); SSH solo desde la PC | 2 | OWNER | D-018, D-021 |
+| 1.2 | Reinicio desde cero según `docs/RUNBOOK_RESET.md` (pasos 1–10: backup, Sensia a su dominio, sitio nuevo, SSL, canal) | 3 | OWNER | Sustituye al inventario del sitio viejo |
 | 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | TODO | |
 | 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | TODO | Alertas existentes: noindex + canónica duplicada |
-| 1.5 | Clasificar inventario KEEP / REPLACE / REMOVE / INVESTIGATE | 2 | TODO | |
+| 1.5 | Configuración base del WordPress nuevo por REST: idioma, zona horaria, permalinks, www canónico, borrar demo, plugins aprobados | 2 | TODO | Antes `KEEP/REPLACE/REMOVE`, ya no aplica |
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | TODO | |
 | 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | TODO | |
 | 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | TODO | |

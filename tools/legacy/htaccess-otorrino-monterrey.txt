@@ -1,0 +1,21 @@
+# Bloque para el .htaccess del WordPress VIEJO (domains/otorrino-monterrey.com/public_html).
+# Pegar ANTES del bloque "# BEGIN WordPress". Deja /op/* en su sitio y manda todo lo demás al sitio nuevo.
+# Verificar después: curl -I https://otorrino-monterrey.com/            -> 301 a https://www.drairinagonzalez.com/
+#                     curl -I https://otorrino-monterrey.com/op/         -> 302 a /op/entrar (Sensia sigue vivo)
+#                     curl -I https://otorrino-monterrey.com/wp-login.php -> 200 (acceso para recuperar contraseña)
+
+# BEGIN Sensia-only host
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/op(/|$)
+RewriteCond %{REQUEST_URI} !^/wp-login\.php$
+RewriteCond %{REQUEST_URI} !^/wp-admin(/|$)
+RewriteCond %{REQUEST_URI} !^/wp-json(/|$)
+RewriteCond %{REQUEST_URI} !^/wp-content/plugins/sensia/
+RewriteCond %{REQUEST_URI} !^/wp-includes/
+RewriteRule ^(.*)$ https://www.drairinagonzalez.com/$1 [R=301,L]
+</IfModule>
+<IfModule mod_headers.c>
+Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+# END Sensia-only host
