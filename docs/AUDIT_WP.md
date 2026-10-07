@@ -13,7 +13,7 @@ Inventario de producción: `docs/audit/inventory-20261007-174227.txt` (solo lect
 | WP-CLI | 2.12.0 en `/usr/local/bin/wp` |
 | home / siteurl | `https://drairinagonzalez.com` (sin www); `www` → 301 al apex |
 | SSL | Activo para el apex; `otorrino-monterrey.com` sin certificado (aparcado, redirige por http) |
-| Dominio alterno | `otorrino-monterrey.com` aparcado + redirección 301 en hPanel (pendiente verificar tras propagación/SSL) |
+| Dominio alterno | `otorrino-monterrey.com` aparcado + redirección 301 en hPanel; verificada por el propietario el 2026-10-07 |
 | wp-config | `WP_CACHE` true, `WP_DEBUG` false; **faltan** `DISALLOW_FILE_EDIT` y `FORCE_SSL_ADMIN` |
 | .htaccess | Bloque LiteSpeed + WordPress estándar; existen `.htaccess.bk` y carpeta `.private` (investigar y limpiar) |
 | Indexación | `blog_public = 1` (indexable); robots.txt generado por WP; `sitemap_index.xml` de Rank Math responde 200 |

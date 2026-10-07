@@ -20,8 +20,8 @@
     },
     "typography": {
       "fontFamilies": [
-        { "slug": "display", "name": "Iskra (display)", "fontFamily": "\"Iskra\", \"Segoe UI\", system-ui, sans-serif" },
-        { "slug": "body", "name": "Iskra (texto)", "fontFamily": "\"Iskra\", \"Segoe UI\", system-ui, sans-serif" }
+        { "slug": "display", "name": "Iskra (display)", "fontFamily": "\"iskra\", \"Segoe UI\", system-ui, sans-serif" },
+        { "slug": "body", "name": "Iskra (texto)", "fontFamily": "\"iskra\", \"Segoe UI\", system-ui, sans-serif" }
       ],
       "fontSizes": [
         { "slug": "sm", "size": "0.875rem", "name": "Pequeño" },

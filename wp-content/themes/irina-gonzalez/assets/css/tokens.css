@@ -22,8 +22,9 @@
   --color-focus: var(--color-secondary);
 
   /* Tipografía */
-  --font-display: "Iskra", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-body: "Iskra", "Segoe UI", system-ui, -apple-system, sans-serif;
+  /* Adobe Fonts expone la familia como "iskra" (pesos 100–900 + itálicas). Usar solo 300/400/500/700 en CSS. */
+  --font-display: "iskra", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "iskra", "Segoe UI", system-ui, -apple-system, sans-serif;
   --text-sm: 0.875rem;
   --text-md: 1rem;
   --text-lg: 1.25rem;

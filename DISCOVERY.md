@@ -24,7 +24,7 @@ Nota de privacidad: en el Drive existen documentos de identidad, migratorios y f
 | Licencias | Elementor Pro disponible. ACF Pro, Rank Math Pro y Fluent Forms Pro: no | CONFIRMADO (propietario) |
 | Canal de agenda | **WhatsApp** es el CTA principal | CONFIRMADO (propietario) — cierra OD-003 |
 | Google Business Profile | Existe y lo administra el propietario | CONFIRMADO (propietario) |
-| Tipografía | **Iskra vía Adobe Fonts** (cuenta del propietario), con sus variantes; la fuente del logo no se reutiliza | CONFIRMADO (propietario) — falta ID del proyecto web de Adobe Fonts |
+| Tipografía | **Iskra vía Adobe Fonts**, kit `nlo5pss` (familia `iskra`, pesos 100–900 con itálicas); la fuente del logo no se reutiliza | CONFIRMADO (propietario) |
 | Opiniones | Mostrar opiniones de Doctoralia con su widget oficial | CONFIRMADO (propietario) — Codex revisa implicaciones publicitarias |
 | Fotografía | Sesión profesional en las próximas 2 a 4 semanas | CONFIRMADO (propietario) |
 | Accesos | WPVibe (autoriza), Search Console (misma cuenta), panel Hostinger, Codex ya tiene el repo | CONFIRMADO (propietario) |

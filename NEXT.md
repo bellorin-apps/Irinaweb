@@ -5,7 +5,7 @@
 ## Prioridad 1 — Desbloqueadores (propietario)
 
 - [ ] **Seguir `docs/RUNBOOK_RESET.md` pasos 1–2** (backup descargado; contraseña de aplicación + secretos + red amplia). Claude ejecuta 3, 4 y 6 por REST.
-- [ ] Crear el proyecto web de Iskra en Adobe Fonts y pasar el ID del kit (el `xxxxxxx.css`).
+- [x] Adobe Fonts kit `nlo5pss` configurado en el tema.
 
 - [ ] Responder `DISCOVERY.md` → Lote 1 (preguntas marcadas ⚡).
 - [ ] Red del entorno cloud: subir el nivel de acceso (la lista de dominios bloqueados incluye wordpress.org y todos los referentes); como mínimo permitir `drairinagonzalez.com`, `www.drairinagonzalez.com`, `wordpress.org`, `api.wordpress.org`, `downloads.wordpress.org`, `fonts.googleapis.com`, `fonts.gstatic.com`, `doctoralia.com.mx`.
@@ -13,7 +13,7 @@
 - [ ] Hostinger hPanel → Git: desplegar rama `deploy/core` en `public_html/wp-content/plugins/dra-irina-core` y `deploy/theme` en `public_html/wp-content/themes/irina-gonzalez` (Claude genera las ramas).
 - [x] Briefing desplegado en `/briefing/` (sesión local, 2026-10-07). Enviar la URL con token a la Dra.
 - [x] Links se conserva (D-023); canónico sin www (D-022); Site Kit fuera (D-024).
-- [ ] Subir PHP a 8.4 en hPanel y verificar /op (D-025).
+- [ ] Subir PHP a 8.4 en hPanel y verificar /op (D-025) — en curso.
 - [x] OD-004, OD-005, OD-006 y dominio canónico (D-020) decididos.
 
 ## Prioridad 2 — Claude (sin dependencias del propietario)
