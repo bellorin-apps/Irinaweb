@@ -1,0 +1,9 @@
+{
+  "name": "irinaweb-tools",
+  "private": true,
+  "type": "module",
+  "description": "Herramientas de operación remota (SSH a través del proxy del entorno). No se despliegan al sitio.",
+  "dependencies": {
+    "ssh2": "^1.16.0"
+  }
+}

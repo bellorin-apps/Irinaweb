@@ -38,3 +38,7 @@ tmp/
 vendor/
 composer.lock
 .phpcs.cache
+
+# Herramientas locales
+tools/node_modules/
+tools/package-lock.json
