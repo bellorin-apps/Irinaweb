@@ -13,7 +13,7 @@ Fase actual
 Fase 0/12 — Descubrimiento
 
 Estado
-🟡 Esperando respuestas del propietario (Checkpoint 1) y acceso técnico al WordPress
+🟡 Lote 1 del propietario respondido; esperando briefing de la Dra. y autorización WPVibe
 ```
 
 ## Métricas
@@ -25,7 +25,7 @@ Estado
 | Peso completado | 16 / 253 |
 | En curso | 0 |
 | Bloqueadas | 1 (acceso técnico al sitio desde el entorno) |
-| Pendientes del propietario | 3 (cuestionario lote 1, confirmación Dra., acceso WPVibe/red) |
+| Pendientes del propietario | 3 (autorizar WPVibe, compartir mini app con la Dra., permitir dominio en la red del entorno) |
 
 ## Estado por área
 
@@ -52,7 +52,7 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
-- Esperando Checkpoint 1 (respuestas del propietario)
+- Briefing de la Dra. (mini app publicada) para cerrar Checkpoint 1
 - Esperando acceso técnico al WordPress para iniciar Fase 1
 
 ## FALTA
@@ -66,7 +66,7 @@ Launch           ░░░░░░░░░░   0%
 | ID | Bloqueo | Tipo | Desbloquea |
 |---|---|---|---|
 | B1 | `drairinagonzalez.com` y `doctoralia.com.mx` denegados por la política de red del entorno cloud | Propietario (configuración del entorno) | Fase 1 completa |
-| B2 | Conexión WPVibe no autorizada (link de un clic en wp-admin) | Propietario | Lectura/escritura WP vía REST y WP-CLI |
+| B2 | Conexión WPVibe no autorizada (link de un clic en wp-admin) | Propietario (dijo que la autorizará) | Lectura/escritura WP vía REST y WP-CLI |
 
 ## Riesgo de entrega
 

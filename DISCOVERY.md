@@ -1,6 +1,6 @@
 # DISCOVERY — Fase 0
 
-Fecha: 2026-10-07 · Responsable: Claude · Estado: cuestionario abierto (Checkpoint 1)
+Fecha: 2026-10-07 · Responsable: Claude · Estado: lote 1 del propietario respondido; preguntas médicas/legales delegadas a la mini app de briefing para la Dra.
 
 Leyenda de confianza:
 
@@ -9,6 +9,26 @@ Leyenda de confianza:
 - **PENDIENTE** — no se tiene.
 
 Nota de privacidad: en el Drive existen documentos de identidad, migratorios y fiscales de la Dra. **No se han copiado ni se copiarán** a este repositorio ni al sitio (D-004).
+
+---
+
+## 0. Respuestas del propietario (2026-10-07)
+
+| Tema | Decisión | Estado |
+|---|---|---|
+| Nombre en el sitio | **Dra. Irina González Sáez** | CONFIRMADO (propietario) |
+| Género de la especialidad | **"Otorrinolaringólogo" en todo** (textos, títulos, SEO), coherente con logo y tarjetas | CONFIRMADO (propietario) — cierra OD-001 |
+| Contacto | WhatsApp +52 81 2368 5381 y consultorio 81 1569 5744 se publican; **urgencias NO se publica**; correo soy@drairinagonzalez.com | CONFIRMADO (propietario) |
+| Sede | CAB Medical Headquarters, Consultorio 6, Piso 2, Av. Paseo de los Leones 2341, Cumbres 2.º Sector, 64610 Monterrey, N.L. — única sede | CONFIRMADO (propietario) |
+| Hosting | Hostinger, misma cuenta que idenbauer.com | CONFIRMADO (propietario) |
+| Licencias | Elementor Pro disponible. ACF Pro, Rank Math Pro y Fluent Forms Pro: no | CONFIRMADO (propietario) |
+| Canal de agenda | **WhatsApp** es el CTA principal | CONFIRMADO (propietario) — cierra OD-003 |
+| Google Business Profile | Existe y lo administra el propietario | CONFIRMADO (propietario) |
+| Tipografía | El logo usa una fuente que **no** debe reutilizarse. La marca usa **Iskra** (archivos W04 .woff/.otf en Drive, carpeta "Iskra": UltraThin, Thin, ThinItalic, Bold y otros pesos). Verificar licencia web/self-hosting | CONFIRMADO (propietario) — licencia POR CONFIRMAR |
+| Opiniones | Mostrar opiniones de Doctoralia con su widget oficial | CONFIRMADO (propietario) — Codex revisa implicaciones publicitarias |
+| Fotografía | Sesión profesional en las próximas 2 a 4 semanas | CONFIRMADO (propietario) |
+| Accesos | WPVibe (autoriza), Search Console (misma cuenta), panel Hostinger, Codex ya tiene el repo | CONFIRMADO (propietario) |
+| Credenciales, servicios, sueño, pacientes, horario, legal | Se preguntan directamente a la Dra. mediante la **mini app de briefing** (artefacto con guardado persistente) | EN CURSO |
 
 ---
 
