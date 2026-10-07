@@ -43,3 +43,4 @@ composer.lock
 tools/node_modules/
 tools/package-lock.json
 tools/briefing/config.php
+tools/deploy/env.sh
