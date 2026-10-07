@@ -42,3 +42,4 @@ composer.lock
 # Herramientas locales
 tools/node_modules/
 tools/package-lock.json
+tools/briefing/config.php

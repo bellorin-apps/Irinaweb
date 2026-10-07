@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Briefing Dra. Irina</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: una sola columna centrada, secciones apiladas con navegación por pestañas pegajosa; pensada para responder desde el teléfono con un toque por respuesta. */
+:root{
+  --bg:#f7f5fa; --surface:#ffffff; --fg:#2b2730; --muted:#6d6577; --line:#e4dfea;
+  --purple:#8c4eaa; --purple-soft:#f1e8f4; --teal:#3ca1a7; --teal-soft:#e4f3f4;
+  --ok:#2e8b57; --warn:#b7791f; --shadow:0 1px 2px rgba(60,40,80,.06),0 8px 24px rgba(60,40,80,.06);
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#171420; --surface:#201c2a; --fg:#ece7f2; --muted:#a79fb3; --line:#352f42;
+  --purple:#b48ad0; --purple-soft:#2b2238; --teal:#5fc4ca; --teal-soft:#1b3234;
+  --ok:#5ec48a; --warn:#e0a94a; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#171420; --surface:#201c2a; --fg:#ece7f2; --muted:#a79fb3; --line:#352f42;
+  --purple:#b48ad0; --purple-soft:#2b2238; --teal:#5fc4ca; --teal-soft:#1b3234;
+  --ok:#5ec48a; --warn:#e0a94a; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.5}
+.wrap{max-width:720px;margin:0 auto;padding-block:0 96px;padding-inline:16px}
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{font-size:1.5rem;font-weight:800;letter-spacing:-.01em}
+h2{font-size:1.2rem;font-weight:800}
+h3{font-size:1rem;font-weight:700}
+p{margin:0}
+.muted{color:var(--muted)}
+.small{font-size:.875rem}
+.eyebrow{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--teal)}
+
+header.top{padding-block:24px 16px;display:grid;gap:10px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:40px;height:40px;flex:none}
+.progress{display:grid;gap:6px}
+.bar{height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--teal));transition:width .3s ease}
+.status{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;margin-inline:-16px;padding-inline:16px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:8px 14px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+nav.tabs button[aria-selected="true"]{background:var(--purple);border-color:var(--purple);color:#fff}
+nav.tabs button .n{display:inline-block;min-width:1.4em;margin-left:6px;font-size:.75rem;opacity:.8;font-variant-numeric:tabular-nums}
+
+section.panel{display:none;gap:20px;padding-block:16px}
+section.panel.active{display:grid}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);display:grid;gap:14px}
+.q{display:grid;gap:8px}
+.q > label, .q > .qlabel{font-weight:700}
+.hint{font-size:.85rem;color:var(--muted)}
+
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices button{border:1.5px solid var(--line);background:transparent;color:var(--fg);border-radius:10px;padding:10px 14px;font:inherit;font-size:.95rem;font-weight:600;cursor:pointer;min-height:44px;text-align:left}
+.choices button[aria-pressed="true"]{border-color:var(--purple);background:var(--purple-soft);color:var(--purple)}
+.choices.teal button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal-soft);color:var(--teal)}
+.choices button:focus-visible,nav.tabs button:focus-visible,input:focus-visible,textarea:focus-visible,.btn:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+.svc{display:grid;gap:8px}
+.svc .row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.svc .row:first-child{border-top:0}
+.svc .row .name{font-weight:600;min-width:0}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{border:0;background:transparent;color:var(--muted);padding:8px 10px;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;min-height:40px}
+.seg button + button{border-left:1.5px solid var(--line)}
+.seg button[aria-pressed="true"]{color:#fff}
+.seg button[data-v="ofrece"][aria-pressed="true"],.seg button[data-v="realizo"][aria-pressed="true"]{background:var(--teal)}
+.seg button[data-v="refiere"][aria-pressed="true"],.seg button[data-v="indico"][aria-pressed="true"]{background:var(--purple)}
+.seg button[data-v="no"][aria-pressed="true"]{background:var(--muted)}
+@media (max-width:460px){.svc .row{grid-template-columns:1fr}.seg{width:100%}.seg button{flex:1;text-align:center}}
+
+input[type=text],textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px;font:inherit;font-size:1rem;background:var(--surface);color:var(--fg)}
+textarea{min-height:88px;resize:vertical}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.grid2{grid-template-columns:1fr}}
+
+.footer-bar{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;justify-content:center;z-index:6}
+.footer-bar .inner{width:100%;max-width:720px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.btn{border:0;border-radius:10px;padding:12px 16px;font:inherit;font-weight:700;cursor:pointer;min-height:44px}
+.btn.primary{background:var(--purple);color:#fff}
+.btn.ghost{background:transparent;color:var(--purple);border:1.5px solid var(--purple)}
+.btn:disabled{opacity:.5;cursor:default}
+.save{font-size:.8rem;color:var(--muted);min-width:0}
+.save.ok{color:var(--ok)}
+.save.warn{color:var(--warn)}
+
+.note{border-left:3px solid var(--teal);background:var(--teal-soft);padding:10px 12px;border-radius:8px;font-size:.9rem}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .25s;z-index:7}
+.toast.show{opacity:1}
+pre.summary{white-space:pre-wrap;font:inherit;font-size:.9rem;background:var(--purple-soft);border-radius:10px;padding:12px;max-height:50vh;overflow:auto;margin:0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--purple)" stroke-width="3"/><circle cx="20" cy="20" r="11" fill="none" stroke="var(--teal)" stroke-width="3"/><circle cx="20" cy="20" r="3.5" fill="var(--purple)"/></svg>
+      <div>
+        <p class="eyebrow">Sitio web · drairinagonzalez.com</p>
+        <h1>Briefing para la Dra. Irina</h1>
+      </div>
+    </div>
+    <p class="muted">Responde con un toque. Nada se publica en el sitio sin esta confirmación. Puedes salir y volver: tus respuestas se guardan.</p>
+    <div class="progress">
+      <div class="bar"><i id="bar"></i></div>
+      <div class="status"><span id="count">0 de 0 respondidas</span><span id="saveState" class="save">Sin guardar</span></div>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Secciones"></nav>
+
+  <main id="panels"></main>
+</div>
+
+<div class="footer-bar"><div class="inner">
+  <button class="btn ghost" id="prevBtn" type="button">Anterior</button>
+  <span class="save small" id="footState"></span>
+  <button class="btn primary" id="nextBtn" type="button">Siguiente</button>
+</div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+
+// ---------- Definición del cuestionario ----------
+// type: single | multi | tri (OFRECE/REFIERO/NO) | study (REALIZO/INDICO/REFIERO/NO) | text | textarea
+const SECTIONS = [
+ {id:"perfil", title:"Perfil", items:[
+  {id:"idiomas", type:"multi", q:"¿En qué idiomas atiendes consulta?", opts:["Español","Inglés","Portugués","Otro"]},
+  {id:"anios", type:"single", q:"¿Qué cifra de experiencia es correcta y defendible para publicar?", hint:"Residencia desde 2011; especialista desde 2017.", opts:["Más de 15 años en ORL (desde residencia)","Más de 8 años como especialista","Prefiero no publicar una cifra","Otra (la escribo abajo)"]},
+  {id:"anios_otro", type:"text", q:"Si elegiste «Otra», escribe la cifra o frase", optional:true},
+  {id:"enfoque", type:"textarea", q:"Describe en una o dos frases cómo atiendes a tus pacientes", hint:"Con tus palabras. Se usará como base de la sección «Enfoque» y no se inventará nada.", optional:true},
+  {id:"no_publicar", type:"multi", q:"¿Hay algo de tu trayectoria que NO quieras publicar?", opts:["Ayudantías quirúrgicas con otros médicos","Centros médicos donde has trabajado","Etapa en Venezuela","Nada, todo puede publicarse"]},
+  {id:"docencia", type:"single", q:"¿Tienes experiencia docente o cargos hospitalarios actuales que deban aparecer?", opts:["No","Sí (la describo abajo)"]},
+  {id:"docencia_txt", type:"text", q:"Describe la experiencia docente o cargo", optional:true},
+ ]},
+ {id:"credenciales", title:"Credenciales", items:[
+  {id:"ced_med", type:"single", q:"Cédula profesional de Medicina en México", opts:["La tengo y autorizo publicar el número","La tengo pero no publicar el número","Está en trámite","No la tengo"]},
+  {id:"ced_med_num", type:"text", q:"Número de cédula de Medicina (si autorizas publicarlo)", optional:true},
+  {id:"ced_esp", type:"single", q:"Cédula de especialidad (Otorrinolaringología)", opts:["La tengo y autorizo publicar el número","La tengo pero no publicar el número","Está en trámite","No la tengo"]},
+  {id:"ced_esp_num", type:"text", q:"Número de cédula de especialidad (si autorizas publicarlo)", optional:true},
+  {id:"consejo", type:"single", q:"Certificación del Consejo Mexicano de ORL y Cirugía de Cabeza y Cuello (examen acreditado en febrero 2025)", opts:["Recibí el diploma y autorizo publicar número y vigencia","Recibí el diploma; publicar sin número","Aún no lo recibo","No estoy segura"]},
+  {id:"consejo_num", type:"text", q:"Número de certificado y vigencia (ejemplo: 1234 · vigente a 2030)", optional:true},
+  {id:"issste", type:"single", q:"Subespecialización en Desórdenes Respiratorios del Dormir, Ronquido y Rinología Aplicada (ISSSTE, Monterrey 2018)", opts:["Tengo diploma o constancia y lo compartiré","Tengo constancia pero no la encuentro ahora","No tengo documento","El nombre del programa es distinto (lo corrijo abajo)"]},
+  {id:"issste_txt", type:"text", q:"Nombre exacto del programa o institución, si difiere", optional:true},
+  {id:"membresias", type:"multi", q:"Membresías vigentes", opts:["Sociedad Mexicana de ORL y CCC","Sociedad Iberoamericana de Cirugía de Sueño","Colegio de ORL de Nuevo León","Ninguna vigente","Otra (abajo)"]},
+  {id:"membresias_txt", type:"text", q:"Otras membresías o asociaciones", optional:true},
+  {id:"publicaciones", type:"textarea", q:"Publicaciones adicionales o enlace de la publicación de 2019 (International Journal of Head and Neck Surgery)", optional:true},
+ ]},
+ {id:"orl", title:"ORL", intro:"Marca cada tema: OFREZCO (lo atiendo), REFIERO (lo canalizo a otro especialista) o NO.", items:[
+  {id:"g_oido", type:"group", q:"Oído"},
+  {id:"otitis", type:"tri", q:"Otitis e infecciones de oído"},
+  {id:"cerumen", type:"tri", q:"Tapones de cerumen"},
+  {id:"hipoacusia", type:"tri", q:"Hipoacusia y pérdida auditiva"},
+  {id:"tinnitus", type:"tri", q:"Tinnitus (zumbido)"},
+  {id:"vertigo", type:"tri", q:"Vértigo y problemas de equilibrio"},
+  {id:"perforacion", type:"tri", q:"Perforación timpánica"},
+  {id:"cx_oido", type:"tri", q:"Cirugía de oído"},
+  {id:"g_nariz", type:"group", q:"Nariz y senos paranasales"},
+  {id:"rinitis", type:"tri", q:"Rinitis"},
+  {id:"sinusitis", type:"tri", q:"Sinusitis"},
+  {id:"septum", type:"tri", q:"Desviación del tabique / obstrucción nasal"},
+  {id:"polipos", type:"tri", q:"Pólipos nasales"},
+  {id:"epistaxis", type:"tri", q:"Sangrado nasal (epistaxis)"},
+  {id:"septoplastia", type:"tri", q:"Septoplastia y turbinoplastia"},
+  {id:"cx_endoscopica", type:"tri", q:"Cirugía endoscópica de nariz y senos"},
+  {id:"rinoplastia", type:"tri", q:"Rinoplastia funcional"},
+  {id:"g_garganta", type:"group", q:"Garganta, voz y cuello"},
+  {id:"amigdalitis", type:"tri", q:"Amigdalitis y faringitis"},
+  {id:"amigdalas", type:"tri", q:"Cirugía de amígdalas y adenoides"},
+  {id:"reflujo", type:"tri", q:"Reflujo laringofaríngeo"},
+  {id:"voz", type:"tri", q:"Trastornos de la voz y laringe"},
+  {id:"disfagia", type:"tri", q:"Dificultad para tragar"},
+  {id:"cuello", type:"tri", q:"Masas o ganglios en cuello"},
+  {id:"g_otros", type:"group", q:"Otros"},
+  {id:"alergias", type:"tri", q:"Alergias respiratorias (diagnóstico y tratamiento)"},
+  {id:"endoscopia_cons", type:"tri", q:"Endoscopia nasal y laringoscopia en consultorio"},
+  {id:"poblacion", type:"multi", q:"¿A quién atiendes?", opts:["Niños","Adolescentes","Adultos","Adultos mayores"]},
+  {id:"edad_min", type:"text", q:"Si atiendes niños, ¿desde qué edad?", optional:true},
+  {id:"hospitales", type:"textarea", q:"Hospitales donde operas actualmente (solo los que quieras publicar)", optional:true},
+ ]},
+ {id:"sueno", title:"Sueño", intro:"Esta especialización será una sección propia del sitio. Marca lo que realmente haces.", items:[
+  {id:"g_cond", type:"group", q:"Condiciones"},
+  {id:"apnea", type:"tri", q:"Apnea obstructiva del sueño"},
+  {id:"ronquido", type:"tri", q:"Ronquido"},
+  {id:"somnolencia", type:"tri", q:"Somnolencia diurna excesiva"},
+  {id:"trd", type:"tri", q:"Trastornos respiratorios del dormir (en general)"},
+  {id:"insomnio", type:"tri", q:"Insomnio"},
+  {id:"g_est", type:"group", q:"Estudios diagnósticos"},
+  {id:"psg", type:"study", q:"Polisomnografía"},
+  {id:"poligrafia", type:"study", q:"Poligrafía respiratoria"},
+  {id:"domiciliario", type:"study", q:"Estudio de sueño domiciliario"},
+  {id:"dise", type:"study", q:"Endoscopia de sueño inducido (DISE)"},
+  {id:"g_tx", type:"group", q:"Tratamientos"},
+  {id:"cpap", type:"tri", q:"CPAP: indicación, titulación y seguimiento"},
+  {id:"dam", type:"tri", q:"Dispositivos de avance mandibular"},
+  {id:"faringoplastia", type:"tri", q:"Faringoplastia y cirugía de paladar (suturas barbadas)"},
+  {id:"cx_nasal_sueno", type:"tri", q:"Cirugía nasal para mejorar el sueño"},
+  {id:"posicional", type:"tri", q:"Terapia posicional y medidas de higiene del sueño"},
+  {id:"lab_sueno", type:"text", q:"¿Con qué laboratorio o clínica de sueño trabajas? (nombre, si quieres publicarlo)", optional:true},
+  {id:"sueno_ped", type:"single", q:"¿Atiendes trastornos del sueño en niños?", opts:["Sí","Solo casos seleccionados","No"]},
+ ]},
+ {id:"pacientes", title:"Pacientes", items:[
+  {id:"motivos", type:"multi", q:"Los motivos de consulta más frecuentes en tu práctica (elige hasta 10)", opts:["Ronquido","Sospecha de apnea del sueño","Obstrucción nasal","Sinusitis","Rinitis / alergia","Dolor de oído / otitis","Pérdida auditiva","Tinnitus","Vértigo","Dolor de garganta / amigdalitis","Amígdalas en niños","Problemas de voz","Tapón de cerumen","Sangrado nasal","Masa en cuello"]},
+  {id:"motivos_txt", type:"text", q:"Otros motivos frecuentes", optional:true},
+  {id:"online", type:"single", q:"Consulta en línea", opts:["No ofrezco","Solo seguimiento","Primera consulta y seguimiento"]},
+  {id:"seguros", type:"single", q:"Aseguradoras", opts:["Solo pacientes particulares","Particulares y reembolso de seguros","Convenio directo con aseguradoras (abajo cuáles)"]},
+  {id:"seguros_txt", type:"text", q:"Aseguradoras con convenio", optional:true},
+  {id:"pago", type:"multi", q:"Formas de pago", opts:["Efectivo","Tarjeta","Transferencia","Facturación disponible"]},
+  {id:"urgencias", type:"single", q:"¿Atiendes urgencias?", opts:["Sí","Solo pacientes en tratamiento","No"]},
+  {id:"referencias", type:"single", q:"¿Recibes pacientes referidos por otros médicos?", opts:["Sí","No"]},
+  {id:"duracion", type:"single", q:"Duración aproximada de la primera consulta", opts:["30 minutos","45 minutos","60 minutos","Depende del caso"]},
+  {id:"llevar", type:"multi", q:"¿Qué debe llevar el paciente a la primera consulta?", opts:["Identificación","Estudios previos (audiometría, tomografía, estudio de sueño)","Lista de medicamentos","Referencia médica si la tiene","Datos de seguro si aplica"]},
+ ]},
+ {id:"consultorio", title:"Consultorio", items:[
+  {id:"dias", type:"multi", q:"Días de consulta", opts:["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"]},
+  {id:"horario", type:"text", q:"Horario (ejemplo: 9:00 a 14:00 y 16:00 a 19:00)"},
+  {id:"estacionamiento", type:"single", q:"Estacionamiento en CAB Medical Headquarters", opts:["Sí, gratuito","Sí, con costo","Sí, con validación","No hay"]},
+  {id:"acceso", type:"multi", q:"Accesibilidad", opts:["Elevador","Acceso para silla de ruedas","Planta baja","No lo sé"]},
+  {id:"llegar", type:"textarea", q:"Referencias para llegar (cómo lo explicas a tus pacientes)", optional:true},
+  {id:"whatsapp_resp", type:"single", q:"¿Quién responde el WhatsApp de citas?", opts:["Yo misma","Asistente","Recepción del centro","Varios"]},
+  {id:"gbp_horario", type:"single", q:"¿El horario de tu ficha de Google es el mismo?", opts:["Sí","No, hay que actualizarlo","No lo sé"]},
+ ]},
+ {id:"contenido", title:"Contenido y legal", items:[
+  {id:"screening", type:"multi", q:"Cuestionarios de orientación que usas y apruebas mostrar (nunca como diagnóstico)", opts:["Escala de Epworth","STOP-Bang","Ninguno","Otro (abajo)"]},
+  {id:"screening_txt", type:"text", q:"Otro cuestionario", optional:true},
+  {id:"descargables", type:"multi", q:"Documentos para pacientes que pueden publicarse como descargables", opts:["Indicaciones prequirúrgicas","Preparación para estudio de sueño","Diario de sueño","Ninguno por ahora"]},
+  {id:"faq", type:"textarea", q:"Preguntas que tus pacientes repiten en consulta (3 a 5)", optional:true},
+  {id:"articulos", type:"single", q:"¿Quieres publicar artículos o guías para pacientes?", opts:["Sí, uno o dos al mes","Sí, uno al trimestre","Solo una base inicial","No"]},
+  {id:"aviso_func", type:"single", q:"Aviso de Funcionamiento del consultorio", opts:["Sí, lo tengo","Lo tiene el centro médico","No","No lo sé"]},
+  {id:"aviso_pub", type:"single", q:"Aviso de Publicidad ante COFEPRIS", opts:["Sí, vigente","En trámite","No","No lo sé"]},
+  {id:"aviso_priv", type:"single", q:"Aviso de privacidad actual", opts:["Tengo uno (impreso o digital)","No tengo"]},
+  {id:"abogado", type:"single", q:"¿Cuentas con asesor legal para revisar los textos legales del sitio?", opts:["Sí","No"]},
+  {id:"responsable", type:"single", q:"Responsable de los datos personales en el aviso de privacidad", opts:["Yo, como persona física","Otro (abajo)"]},
+  {id:"responsable_txt", type:"text", q:"Nombre y correo del responsable, si es otro", optional:true},
+  {id:"confirmo", type:"single", q:"Confirmación", hint:"Al confirmar, autorizas usar estas respuestas como base del sitio. Todo texto médico volverá a pasar por tu revisión antes de publicarse.", opts:["Revisé mis respuestas y confirmo"]},
+ ]},
+];
+
+const TRI = [["ofrece","Ofrezco"],["refiere","Refiero"],["no","No"]];
+const STUDY = [["realizo","Realizo"],["indico","Indico e interpreto"],["refiere","Refiero"],["no","No"]];
+
+// ---------- Estado ----------
+let answers = {};
+const TOKEN = new URLSearchParams(location.search).get("t") || "";
+let saveTimer = null, saving = false, pendingSave = false, current = 0;
+const LS_KEY = "briefing-dra-irina-v1";
+
+try { const d = localStorage.getItem(LS_KEY); if (d) answers = JSON.parse(d) || {}; } catch (e) {}
+
+const $ = (s, el) => (el || document).querySelector(s);
+const tabsEl = $("#tabs"), panelsEl = $("#panels"), toastEl = $("#toast");
+
+function toast(msg){ toastEl.textContent = msg; toastEl.classList.add("show"); setTimeout(() => toastEl.classList.remove("show"), 2200); }
+
+function answerable(it){ return it.type !== "group" && !it.optional; }
+function isAnswered(it){
+  const v = answers[it.id];
+  if (v == null) return false;
+  if (Array.isArray(v)) return v.length > 0;
+  return String(v).trim() !== "";
+}
+
+// ---------- Render ----------
+function build(){
+  SECTIONS.forEach((sec, i) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.role = "tab"; b.id = "tab-" + sec.id; b.setAttribute("aria-controls", "panel-" + sec.id);
+    b.innerHTML = sec.title + '<span class="n" id="n-' + sec.id + '"></span>';
+    b.addEventListener("click", () => show(i));
+    tabsEl.appendChild(b);
+
+    const p = document.createElement("section");
+    p.className = "panel"; p.id = "panel-" + sec.id; p.role = "tabpanel"; p.setAttribute("aria-labelledby", "tab-" + sec.id);
+    const head = document.createElement("div");
+    head.innerHTML = '<p class="eyebrow">Sección ' + (i + 1) + ' de ' + SECTIONS.length + '</p><h2>' + sec.title + '</h2>' + (sec.intro ? '<p class="muted small">' + sec.intro + '</p>' : '');
+    p.appendChild(head);
+
+    let card = null, svc = null;
+    sec.items.forEach(it => {
+      if (it.type === "group"){
+        card = document.createElement("div"); card.className = "card";
+        card.innerHTML = '<h3>' + it.q + '</h3>';
+        svc = document.createElement("div"); svc.className = "svc"; card.appendChild(svc);
+        p.appendChild(card); return;
+      }
+      if (it.type === "tri" || it.type === "study"){
+        if (!svc){ card = document.createElement("div"); card.className = "card"; svc = document.createElement("div"); svc.className = "svc"; card.appendChild(svc); p.appendChild(card); }
+        const row = document.createElement("div"); row.className = "row";
+        row.innerHTML = '<div class="name">' + it.q + '</div>';
+        const seg = document.createElement("div"); seg.className = "seg"; seg.setAttribute("role", "group"); seg.setAttribute("aria-label", it.q);
+        (it.type === "tri" ? TRI : STUDY).forEach(([v, label]) => {
+          const bt = document.createElement("button"); bt.type = "button"; bt.dataset.v = v; bt.textContent = label;
+          bt.setAttribute("aria-pressed", answers[it.id] === v ? "true" : "false");
+          bt.addEventListener("click", () => { answers[it.id] = v; [...seg.children].forEach(c => c.setAttribute("aria-pressed", c === bt ? "true" : "false")); changed(); });
+          seg.appendChild(bt);
+        });
+        row.appendChild(seg); svc.appendChild(row); return;
+      }
+      svc = null;
+      const c = document.createElement("div"); c.className = "card";
+      const qd = document.createElement("div"); qd.className = "q";
+      const lab = document.createElement(it.type === "text" || it.type === "textarea" ? "label" : "div");
+      if (lab.tagName === "LABEL") lab.htmlFor = "f-" + it.id; else lab.className = "qlabel";
+      lab.textContent = it.q + (it.optional ? "" : "");
+      qd.appendChild(lab);
+      if (it.hint){ const h = document.createElement("p"); h.className = "hint"; h.textContent = it.hint; qd.appendChild(h); }
+      if (it.type === "single" || it.type === "multi"){
+        const ch = document.createElement("div"); ch.className = "choices" + (it.type === "multi" ? " teal" : "");
+        it.opts.forEach(o => {
+          const bt = document.createElement("button"); bt.type = "button"; bt.textContent = o;
+          const sel = it.type === "multi" ? (answers[it.id] || []).includes(o) : answers[it.id] === o;
+          bt.setAttribute("aria-pressed", sel ? "true" : "false");
+          bt.addEventListener("click", () => {
+            if (it.type === "single"){ answers[it.id] = o; [...ch.children].forEach(c => c.setAttribute("aria-pressed", c === bt ? "true" : "false")); }
+            else {
+              let arr = Array.isArray(answers[it.id]) ? answers[it.id].slice() : [];
+              const exclusive = ["Ninguna vigente","Ninguno","Ninguno por ahora","Nada, todo puede publicarse","No lo sé"];
+              if (arr.includes(o)) arr = arr.filter(x => x !== o);
+              else { if (exclusive.includes(o)) arr = []; else arr = arr.filter(x => !exclusive.includes(x)); arr.push(o); }
+              answers[it.id] = arr;
+              [...ch.children].forEach(c => c.setAttribute("aria-pressed", arr.includes(c.textContent) ? "true" : "false"));
+            }
+            changed();
+          });
+          ch.appendChild(bt);
+        });
+        qd.appendChild(ch);
+      } else {
+        const inp = document.createElement(it.type === "textarea" ? "textarea" : "input");
+        if (it.type === "text") inp.type = "text";
+        inp.id = "f-" + it.id; inp.value = answers[it.id] || ""; inp.autocomplete = "off";
+        inp.addEventListener("input", () => { answers[it.id] = inp.value; changed(true); });
+        qd.appendChild(inp);
+      }
+      if (it.optional){ const o = document.createElement("p"); o.className = "hint"; o.textContent = "Opcional"; qd.appendChild(o); }
+      c.appendChild(qd); p.appendChild(c);
+    });
+
+    if (i === SECTIONS.length - 1){
+      const sum = document.createElement("div"); sum.className = "card";
+      sum.innerHTML = '<h3>Resumen para enviar</h3><p class="hint">Si prefieres, copia este resumen y envíaselo a José por WhatsApp. Las respuestas también quedan guardadas aquí.</p><pre class="summary" id="summary"></pre><div class="choices"><button type="button" class="btn ghost" id="copyBtn">Copiar resumen</button></div>';
+      p.appendChild(sum);
+    }
+    panelsEl.appendChild(p);
+  });
+  $("#copyBtn").addEventListener("click", copySummary);
+  $("#prevBtn").addEventListener("click", () => show(current - 1));
+  $("#nextBtn").addEventListener("click", () => show(current + 1));
+}
+
+function show(i){
+  current = Math.max(0, Math.min(SECTIONS.length - 1, i));
+  [...tabsEl.children].forEach((b, k) => b.setAttribute("aria-selected", k === current ? "true" : "false"));
+  [...panelsEl.children].forEach((p, k) => p.classList.toggle("active", k === current));
+  $("#prevBtn").disabled = current === 0;
+  $("#nextBtn").textContent = current === SECTIONS.length - 1 ? "Fin" : "Siguiente";
+  $("#nextBtn").disabled = current === SECTIONS.length - 1;
+  tabsEl.children[current].scrollIntoView({ block: "nearest", inline: "center" });
+  window.scrollTo({ top: 0 });
+  try { localStorage.setItem(LS_KEY + "-tab", String(current)); } catch (e) {}
+}
+
+function updateProgress(){
+  let total = 0, done = 0;
+  SECTIONS.forEach(sec => {
+    let t = 0, d = 0;
+    sec.items.forEach(it => { if (answerable(it)){ t++; if (isAnswered(it)) d++; } });
+    total += t; done += d;
+    const n = $("#n-" + sec.id); if (n) n.textContent = d + "/" + t;
+  });
+  $("#bar").style.width = (total ? Math.round(done / total * 100) : 0) + "%";
+  $("#count").textContent = done + " de " + total + " respondidas";
+  renderSummary();
+}
+
+function label(it, v){
+  if (it.type === "tri") return (TRI.find(x => x[0] === v) || [])[1] || v;
+  if (it.type === "study") return (STUDY.find(x => x[0] === v) || [])[1] || v;
+  return Array.isArray(v) ? v.join(", ") : v;
+}
+function summaryText(){
+  const lines = ["BRIEFING — Dra. Irina González Sáez", "Fecha: " + new Date().toLocaleDateString("es-MX"), ""];
+  SECTIONS.forEach(sec => {
+    lines.push("## " + sec.title);
+    sec.items.forEach(it => {
+      if (it.type === "group"){ lines.push("· " + it.q); return; }
+      if (isAnswered(it)) lines.push("- " + it.q + ": " + label(it, answers[it.id]));
+    });
+    lines.push("");
+  });
+  return lines.join("\n");
+}
+function renderSummary(){ const s = $("#summary"); if (s) s.textContent = summaryText(); }
+
+function copySummary(){
+  const text = summaryText();
+  const fallback = () => { const s = $("#summary"); const r = document.createRange(); r.selectNodeContents(s); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Selecciona y copia el texto"); };
+  if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(() => toast("Resumen copiado"), fallback); } else fallback();
+}
+
+// ---------- Guardado ----------
+function setSave(txt, cls){ const a = $("#saveState"), b = $("#footState"); [a, b].forEach(el => { el.textContent = txt; el.className = "save" + (cls ? " " + cls : ""); }); }
+
+function changed(debounceLong){
+  updateProgress();
+  try { localStorage.setItem(LS_KEY, JSON.stringify(answers)); localStorage.setItem(LS_KEY + "-at", new Date().toISOString()); } catch (e) {}
+  setSave("Guardando…");
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(persist, debounceLong ? 900 : 250);
+}
+
+async function persist(){
+  if (saving){ pendingSave = true; return; }
+  saving = true;
+  try {
+    const r = await fetch("guardar.php", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ token: TOKEN, answers, updatedAt: new Date().toISOString(), version: 1 }) });
+    if (r.ok){ setSave("Guardado", "ok"); }
+    else if (r.status === 403){ setSave("Enlace no válido; usa «Copiar resumen»", "warn"); }
+    else { setSave("No se pudo guardar; usa «Copiar resumen»", "warn"); }
+  } catch (e) {
+    setSave("Sin conexión; se reintenta al guardar de nuevo", "warn");
+  } finally {
+    saving = false;
+    if (pendingSave){ pendingSave = false; persist(); }
+  }
+}
+
+async function connect(){
+  if (!TOKEN){ setSave("Enlace sin token; usa «Copiar resumen»", "warn"); return; }
+  try {
+    const r = await fetch("guardar.php?token=" + encodeURIComponent(TOKEN), { cache: "no-store" });
+    if (!r.ok) return;
+    const d = await r.json();
+    if (d && d.answers && Object.keys(d.answers).length){
+      const localEmpty = Object.keys(answers).length === 0;
+      let remoteNewer = false;
+      try { remoteNewer = !localEmpty && d.updatedAt && new Date(d.updatedAt) > new Date(localStorage.getItem(LS_KEY + "-at") || 0); } catch (e) { remoteNewer = true; }
+      if (localEmpty || remoteNewer){ answers = d.answers; rebuild(); }
+    }
+    setSave("Guardado", "ok");
+  } catch (e) { setSave("Guardado en este dispositivo", "warn"); }
+}
+
+function rebuild(){ tabsEl.innerHTML = ""; panelsEl.innerHTML = ""; build(); updateProgress(); show(current); }
+
+build(); updateProgress();
+let startTab = 0; try { startTab = parseInt(localStorage.getItem(LS_KEY + "-tab") || "0", 10) || 0; } catch (e) {}
+show(startTab);
+connect();
+})();
+</script>
+
+</body>
+</html>
