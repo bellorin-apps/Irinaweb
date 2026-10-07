@@ -8,7 +8,7 @@ Actualizado: 2026-10-07. Sin credenciales en este archivo (la clave SSH vive sol
 |---|---|---|
 | Host SSH | 89.117.7.12 · puerto 65002 · usuario `u855694717` | Sesión local "Membretador" |
 | Autenticación | Clave OpenSSH (en la PC del propietario); alternativa: añadir clave pública en hPanel → Avanzado → Acceso SSH | Membretador |
-| Raíz del dominio | `/home/u855694717/domains/drairinagonzalez.com` (tras "Cambiar dominio" en hPanel el 2026-10-07; antes `otorrino-monterrey.com`; verificar con `ls ~/domains`) | Membretador + cambio de José |
+| Raíz del dominio | `/home/u855694717/domains/drairinagonzalez.com` (confirmado por Membretador con `ls ~/domains` el 2026-10-07; la carpeta `otorrino-monterrey.com` ya no existe) | Membretador |
 | Webroot WordPress | `/home/u855694717/domains/drairinagonzalez.com/public_html` (dominio principal: drairinagonzalez.com; `otorrino-monterrey.com` aparcado con 301 a https://drairinagonzalez.com) | hPanel 2026-10-07 |
 | PHP web | `/opt/alt/php84/usr/bin/php` (8.4.23) | Membretador |
 | Servidor | LiteSpeed (cabecera X-LiteSpeed-Cache-Control); Hostinger sobrescribe Content-Security-Policy | Membretador |
