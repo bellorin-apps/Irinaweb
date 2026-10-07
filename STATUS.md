@@ -6,14 +6,14 @@
 PROYECTO — DRA. IRINA
 
 Avance global
-██░░░░░░░░░░░░░░░░░░ 11%
+███░░░░░░░░░░░░░░░░░ 13%
 
 Fase actual
 ██████████████░░░░░░ 70%
 Fase 0/12 — Descubrimiento (Fases 2 y 3 avanzadas en paralelo; 9 tareas en REVIEW)
 
 Estado
-🟡 Reinicio en sitio (D-021): backup hecho, dominio principal corregido y 301 creada; esperando contraseña de aplicación + red para operar por REST
+🟢 Fase 1 en marcha: backup, dominio, inventario y briefing desplegado; falta canal REST desde cloud (secreto de red) para la limpieza
 ```
 
 ## Métricas
@@ -21,8 +21,8 @@ Estado
 | Métrica | Valor |
 |---|---|
 | Fase | 0/12 |
-| Tareas | 8 / 97 DONE · 9 en REVIEW |
-| Peso completado | 28 / 253 |
+| Tareas | 9 / 97 DONE · 10 en REVIEW |
+| Peso completado | 32.5 / 253 |
 | En curso | 0 |
 | Bloqueadas | 1 (red del entorno: bloquea el sitio y casi toda la web) |
 | Pendientes del propietario | 4 (autorizar WPVibe, compartir mini app con la Dra., ampliar red del entorno, decisiones OD-004/005/006) |
@@ -31,7 +31,7 @@ Estado
 
 ```
 Discovery        ███████░░░  70%
-Auditoría WP     ░░░░░░░░░░   0%
+Auditoría WP     ██████░░░░  60%
 Investigación    ████░░░░░░  40%
 Arquitectura     ███░░░░░░░  33%
 Desarrollo       █░░░░░░░░░  10%
@@ -57,7 +57,8 @@ Launch           ░░░░░░░░░░   0%
 - Codex: auditoría de investigaciones, STRATEGY, SITEMAP, ARCHITECTURE y PLUGINS (`BATON.md`)
 - Claude: scaffold de `dra-irina-core` y `irina-gonzalez` creado y en verde con PHPCS (5.1, 5.2, 5.5 DOING; no cuentan hasta probarse en WordPress real)
 
-- Briefing de la Dra. (mini app publicada) para cerrar Checkpoint 1
+- Briefing de la Dra. desplegado en /briefing/ (URL con token entregada al propietario) — esperando respuestas
+- Limpieza del WordPress según `docs/AUDIT_WP.md` §3 en cuanto haya canal REST
 - Esperando acceso técnico al WordPress para iniciar Fase 1
 
 ## FALTA
@@ -71,7 +72,7 @@ Launch           ░░░░░░░░░░   0%
 | ID | Bloqueo | Tipo | Desbloquea |
 |---|---|---|---|
 | B1 | La política de red del entorno (nivel Limited) deniega `drairinagonzalez.com`, Doctoralia, wordpress.org, Google Fonts, Awwwards y todos los sitios de referencia; solo pasan buscadores. Recomendación: subir el nivel de acceso de red del entorno, no solo añadir dominios | Propietario (configuración del entorno) | Fase 1 y verificación visual de la investigación |
-| B2 | Sin canal de operación al WordPress desde cloud (WPVibe descartado; SSH imposible por el proxy TLS). La sesión local "Membretador" tiene la clave SSH pero su clasificador exige autorización del propietario en esa sesión. Opciones: autorizarla allí, ejecutar `tools/deploy/*.sh` desde Git Bash, o Application Password en secretos del entorno para REST | Propietario | Inventario Fase 1, briefing alojado, despliegue de código |
+| B2 | ~~Sin canal al servidor~~ RESUELTO: sesión local "Irinaweb servidor deployment" con SSH + WP-CLI. Pendiente solo el canal REST desde cloud (secreto de red Basic + acceso a red amplio) | Propietario | Limpieza y configuración por REST desde cloud |
 
 ## Riesgo de entrega
 

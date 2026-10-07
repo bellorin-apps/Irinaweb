@@ -11,7 +11,9 @@
 - [ ] Red del entorno cloud: subir el nivel de acceso (la lista de dominios bloqueados incluye wordpress.org y todos los referentes); como mínimo permitir `drairinagonzalez.com`, `www.drairinagonzalez.com`, `wordpress.org`, `api.wordpress.org`, `downloads.wordpress.org`, `fonts.googleapis.com`, `fonts.gstatic.com`, `doctoralia.com.mx`.
 - [ ] Crear en wp-admin (Usuarios → tu perfil → Contraseñas de aplicación) una contraseña de aplicación "claude-ops" y guardarla como secretos del entorno: `IRINA_WP_URL=https://www.drairinagonzalez.com`, `IRINA_WP_USER`, `IRINA_WP_APP_PASSWORD`.
 - [ ] Hostinger hPanel → Git: desplegar rama `deploy/core` en `public_html/wp-content/plugins/dra-irina-core` y `deploy/theme` en `public_html/wp-content/themes/irina-gonzalez` (Claude genera las ramas).
-- [ ] Briefing: Claude lo despliega en `/briefing/` en cuanto exista el canal de operación; entonces entrega la URL con token para enviársela a la Dra.
+- [x] Briefing desplegado en `/briefing/` (sesión local, 2026-10-07). Enviar la URL con token a la Dra.
+- [ ] Confirmar si la página "Links" (ID 143) se usa en redes antes de borrarla.
+- [ ] OD-007: canónico con `www` (D-020) o sin `www` (estado actual, propiedad de Search Console y Sensia ya en apex). Recomendación: **sin www**.
 - [x] OD-004, OD-005, OD-006 y dominio canónico (D-020) decididos.
 
 ## Prioridad 2 — Claude (sin dependencias del propietario)

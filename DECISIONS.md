@@ -36,3 +36,4 @@ Formato: ID · Fecha · Decisión · Alternativas · Motivo · Estado (Vigente /
 | OD-004 | ~~Dr. Rafael Moreno Sales~~ | — | **RESUELTO 2026-10-07:** experiencia quirúrgica genérica sin nombrar colegas; no competir por marcas de terceros |
 | OD-005 | ~~Nombre del centro~~ | — | **RESUELTO 2026-10-07:** "CAB Medical" en schema, Google y textos |
 | OD-006 | ~~Precios~~ | — | **RESUELTO 2026-10-07:** solo costo de consulta; cirugías y estudios "previa valoración" |
+| OD-007 | Canónico `www.drairinagonzalez.com` (D-020) frente a `drairinagonzalez.com` sin www (estado actual: home, Search Console, Sensia y la 301 de www→apex ya apuntan al apex) | www / sin www | **Sin www**: cero cambios de riesgo, coincide con Search Console y Sensia; las tarjetas con "www" siguen funcionando porque www redirige. Si se aprueba, D-020 se sustituye |

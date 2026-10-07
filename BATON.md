@@ -43,6 +43,10 @@ Tres investigaciones producidas con subagentes y verificadas por Claude en su fo
 
 `wp-content/plugins/dra-irina-core` y `wp-content/themes/irina-gonzalez`. PHPCS (WordPress + PHPCompatibilityWP) en verde con `composer install && vendor/bin/phpcs`. Sin pruebas en WordPress real todavía (bloqueo de red y sin acceso al sitio).
 
+## Quinta entrega (Fase 1)
+
+Backup, cambio de dominio principal, 301, inventario (`docs/audit/`) y clasificación en `docs/AUDIT_WP.md`. Briefing desplegado por la sesión local. Scripts corregidos por la sesión local (token sin SIGPIPE; filtro de salts en inventario).
+
 ## Pedido a Codex
 
 - Auditar `PLAN.md`: ¿la ponderación es razonable? ¿Falta alguna tarea exigida por el MASTER_PROMPT?
