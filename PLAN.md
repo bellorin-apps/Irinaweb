@@ -93,11 +93,11 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 5.1 | Child theme `irina-gonzalez` (estructura, enqueue, hooks Hello, setup) | 5 | TODO | |
-| 5.2 | Plugin `dra-irina-core`: CPT, taxonomías, campos, settings centrales (NAP, horarios, enlaces) | 5 | TODO | |
+| 5.1 | Child theme `irina-gonzalez` (estructura, enqueue, hooks Hello, setup) | 5 | DOING | Scaffold en repo: style, functions, inc/*, tokens, base, components, sleep, main.js, templates placeholder. Falta: fuentes, sprite Lucide completo, header/footer, templates reales (Fase 6) |
+| 5.2 | Plugin `dra-irina-core`: CPT, taxonomías, campos, settings centrales (NAP, horarios, enlaces) | 5 | DOING | Scaffold: 4 CPT, 3 taxonomías, MetaRegistry (REST schema + sanitización), PracticeSettings, workflow médico por capacidades, schema Graph, shortcodes, tracking. Falta: UI de meta boxes (repetidores), widgets Elementor, pruebas en WP real |
 | 5.3 | Fuente única de verdad: módulo de datos de contacto/profesionales reutilizable | 3 | TODO | |
 | 5.4 | Schema JSON-LD propio sin duplicar con el plugin SEO | 3 | TODO | |
-| 5.5 | Tooling: linters (PHPCS WPCS, stylelint, eslint), build de assets, fuentes WOFF2 locales | 2 | TODO | |
+| 5.5 | Tooling: linters (PHPCS WPCS, stylelint, eslint), build de assets, fuentes WOFF2 locales | 2 | DOING | PHPCS + WPCS configurados y en verde. Falta: stylelint/eslint, build de sprite, fuentes |
 | 5.6 | Instalación/configuración plugins aprobados en staging | 2 | TODO | |
 | 5.7 | Codex: auditoría de código (PHP/JS/CSS/seguridad) | 3 | TODO | |
 

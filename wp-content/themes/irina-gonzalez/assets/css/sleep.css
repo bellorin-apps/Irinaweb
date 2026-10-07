@@ -1,0 +1,11 @@
+/* Sub-marca Sueño: atmósfera nocturna controlada, solo en /sueno/ y sus hijas. */
+.di-sleep-hero {
+  background: linear-gradient(160deg, var(--color-night) 0%, var(--color-night-2) 60%, #3a2f63 100%);
+  color: #f3eefa;
+}
+.di-sleep-hero h1, .di-sleep-hero h2 { color: #fff; }
+.di-sleep-hero .di-eyebrow { color: var(--color-accent); }
+.di-sleep-hero .di-btn--ghost { color: #fff; }
+.di-breath { animation: di-breath 6s ease-in-out infinite; transform-origin: center; }
+@keyframes di-breath { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.06); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .di-breath { animation: none; } }

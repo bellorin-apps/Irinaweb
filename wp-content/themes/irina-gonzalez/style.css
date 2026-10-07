@@ -1,0 +1,16 @@
+/*
+Theme Name:   Irina González
+Theme URI:    https://www.drairinagonzalez.com/
+Description:  Child theme de Hello Elementor para el sitio de la Dra. Irina González Sáez. Presentación, templates y assets. Los datos viven en el plugin dra-irina-core.
+Author:       Bellorin Apps
+Template:     hello-elementor
+Version:      0.1.0
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.1
+License:      GNU General Public License v2 or later
+License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  irina-gonzalez
+*/
+
+/* Los estilos se encolan desde inc/enqueue.php (assets/css/*). Este archivo solo declara el tema. */

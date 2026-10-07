@@ -1,0 +1,47 @@
+/* Componentes propios. Un archivo por ahora; se divide en components/* cuando crezca. */
+
+/* Botones */
+.di-btn {
+  display: inline-flex; align-items: center; gap: var(--space-xs);
+  min-height: 48px; padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-pill); border: 1.5px solid transparent;
+  font-weight: 600; text-decoration: none; cursor: pointer;
+  transition: background var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), transform var(--motion-fast) var(--ease-out);
+}
+.di-btn:hover { transform: translateY(-1px); }
+.di-btn--primary { background: var(--color-primary); color: #fff; }
+.di-btn--primary:hover { background: var(--color-primary-strong); color: #fff; }
+.di-btn--whatsapp { background: var(--color-secondary); color: #fff; }
+.di-btn--whatsapp:hover { background: var(--color-secondary-strong); color: #fff; }
+.di-btn--ghost { background: transparent; color: var(--color-primary); border-color: currentColor; }
+
+/* Barra inferior móvil (§55) */
+.di-mobile-bar {
+  position: fixed; inset-inline: 0; bottom: 0; z-index: 50;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  background: var(--color-surface); border-top: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-xs) calc(var(--space-xs) + env(safe-area-inset-bottom, 0px));
+  box-shadow: var(--shadow-elevated);
+}
+.di-mobile-bar a { display: grid; justify-items: center; gap: 2px; font-size: var(--text-sm); font-weight: 600; text-decoration: none; color: var(--color-text); padding: var(--space-xs); }
+.di-mobile-bar a:first-child { color: var(--color-secondary-strong); }
+@media (min-width: 900px) { .di-mobile-bar { display: none; } }
+body.has-mobile-bar { padding-bottom: 72px; }
+@media (min-width: 900px) { body.has-mobile-bar { padding-bottom: 0; } }
+
+/* Revisión médica, fuentes, FAQ */
+.di-review-badge { display: flex; flex-wrap: wrap; gap: var(--space-xs); align-items: center; font-size: var(--text-sm); color: var(--color-muted); padding: var(--space-sm) var(--space-md); background: var(--color-secondary-soft); border-radius: var(--radius-md); }
+.di-sources { font-size: var(--text-sm); color: var(--color-muted); }
+.di-sources ol { padding-left: 1.25rem; }
+.di-faq details { border-top: 1px solid var(--color-border); padding-block: var(--space-sm); }
+.di-faq summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: var(--space-md); }
+.di-faq summary::-webkit-details-marker { display: none; }
+
+/* Dirección y horario */
+.di-address { font-style: normal; }
+.di-hours { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.di-hours th { text-align: left; font-weight: 600; padding: 0.25rem 1rem 0.25rem 0; }
+.di-hours td { padding: 0.25rem 0; }
+
+/* Iconos Lucide */
+.di-icon { width: 1.25em; height: 1.25em; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

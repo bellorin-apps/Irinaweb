@@ -33,3 +33,8 @@ Thumbs.db
 # Temporales
 tmp/
 .cache/
+
+# Composer local
+vendor/
+composer.lock
+.phpcs.cache

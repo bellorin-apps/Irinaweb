@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": false,
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        { "slug": "primary", "name": "Púrpura", "color": "#8C4EAA" },
+        { "slug": "secondary", "name": "Teal", "color": "#3CA1A7" },
+        { "slug": "accent", "name": "Teal claro", "color": "#9CCED1" },
+        { "slug": "surface", "name": "Superficie", "color": "#FFFFFF" },
+        { "slug": "surface-soft", "name": "Superficie suave", "color": "#F6F3F9" },
+        { "slug": "text", "name": "Texto", "color": "#2B2730" },
+        { "slug": "muted", "name": "Texto secundario", "color": "#6D6577" },
+        { "slug": "border", "name": "Borde", "color": "#E4DFEA" },
+        { "slug": "night", "name": "Noche (Sueño)", "color": "#1B1630" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        { "slug": "display", "name": "Iskra (display)", "fontFamily": "\"Iskra\", \"Segoe UI\", system-ui, sans-serif" },
+        { "slug": "body", "name": "Iskra (texto)", "fontFamily": "\"Iskra\", \"Segoe UI\", system-ui, sans-serif" }
+      ],
+      "fontSizes": [
+        { "slug": "sm", "size": "0.875rem", "name": "Pequeño" },
+        { "slug": "md", "size": "1rem", "name": "Base" },
+        { "slug": "lg", "size": "1.25rem", "name": "Grande" },
+        { "slug": "xl", "size": "1.5625rem", "name": "Título 3" },
+        { "slug": "2xl", "size": "1.953rem", "name": "Título 2" },
+        { "slug": "3xl", "size": "2.441rem", "name": "Título 1" },
+        { "slug": "4xl", "size": "3.052rem", "name": "Hero" }
+      ]
+    },
+    "spacing": { "units": [ "px", "rem", "%" ] },
+    "layout": { "contentSize": "720px", "wideSize": "1200px" }
+  }
+}

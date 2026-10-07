@@ -18,7 +18,9 @@
 - [x] `KEYWORDS.md` (2.3) — en REVIEW.
 - [x] `STRATEGY.md` (2.5), `SITEMAP.md` (3.1), `ARCHITECTURE.md` (3.3–3.5), `PLUGINS.md` (3.6) — en REVIEW.
 - [ ] `SEO.md` (3.2): consolidar keyword map, titles y reglas técnicas.
-- [ ] Scaffold de `wp-content/plugins/dra-irina-core` y `wp-content/themes/irina-gonzalez` con linters (5.1, 5.2, 5.5), sin desplegar.
+- [x] Scaffold de `wp-content/plugins/dra-irina-core` y `wp-content/themes/irina-gonzalez` con PHPCS (5.1, 5.2, 5.5 en DOING).
+- [ ] Meta boxes con repetidores (FAQ, fuentes, síntomas) en `Fields/MetaBoxes.php`.
+- [ ] Probar plugin y tema en un WordPress local del contenedor (wp-env o descarga directa si la red lo permite) antes de staging.
 - [ ] Propuesta de sistema digital derivado de la identidad existente (4.1) — paleta, tipografía candidata, favicon desde `Logo-Favicon.ai`.
 - [ ] Preparar scaffold de `irina-gonzalez` (child theme) y `dra-irina-core` (plugin) en el repo, sin desplegar.
 

@@ -34,6 +34,7 @@ Discovery        ███████░░░  70%
 Auditoría WP     ░░░░░░░░░░   0%
 Investigación    ████░░░░░░  40%
 Arquitectura     ███░░░░░░░  33%
+Desarrollo       █░░░░░░░░░  10%
 Arquitectura     ░░░░░░░░░░   0%
 Diseño           ░░░░░░░░░░   0%
 Desarrollo       ░░░░░░░░░░   0%
@@ -54,7 +55,7 @@ Launch           ░░░░░░░░░░   0%
 ## AHORA
 
 - Codex: auditoría de investigaciones, STRATEGY, SITEMAP, ARCHITECTURE y PLUGINS (`BATON.md`)
-- Claude: scaffold de `dra-irina-core` y `irina-gonzalez` (Fase 5.1–5.2, sin desplegar)
+- Claude: scaffold de `dra-irina-core` y `irina-gonzalez` creado y en verde con PHPCS (5.1, 5.2, 5.5 DOING; no cuentan hasta probarse en WordPress real)
 
 - Briefing de la Dra. (mini app publicada) para cerrar Checkpoint 1
 - Esperando acceso técnico al WordPress para iniciar Fase 1

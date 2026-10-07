@@ -9,4 +9,5 @@
 - Mini app de briefing para la Dra. publicada como artefacto con guardado persistente (D-009).
 - Fase 2 parcial: `docs/REFERENCE_RESEARCH.md`, `docs/COMPETITION_MONTERREY.md`, `KEYWORDS.md` (en REVIEW). Avance 8%.
 - Fase 2/3: `STRATEGY.md`, `SITEMAP.md`, `ARCHITECTURE.md`, `PLUGINS.md` v0.1 (REVIEW). Decisiones D-013..D-017, OD-006. Avance 11%.
+- Fase 5 scaffold: plugin `dra-irina-core` (CPT, taxonomías, meta con schema REST, ajustes del consultorio, workflow médico, schema JSON-LD, shortcodes, tracking) y child theme `irina-gonzalez` (tokens, base, componentes, sueño, JS, templates placeholder). PHPCS en verde.
 - Bloqueo registrado: acceso de red del entorno a drairinagonzalez.com y doctoralia.com.mx.
