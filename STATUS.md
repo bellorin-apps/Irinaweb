@@ -13,7 +13,7 @@ Fase actual
 Fase 0/12 — Descubrimiento (Fases 2 y 3 avanzadas en paralelo; 9 tareas en REVIEW)
 
 Estado
-🟡 Reinicio desde cero decidido (D-021): esperando pasos 1–9 del runbook por parte del propietario
+🟡 Reinicio en sitio (D-021): backup hecho, dominio principal corregido y 301 creada; esperando contraseña de aplicación + red para operar por REST
 ```
 
 ## Métricas
