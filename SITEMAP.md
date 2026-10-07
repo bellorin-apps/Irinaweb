@@ -4,7 +4,7 @@ Versión 0.1 · 2026-10-07 · Estado: REVIEW. Deriva de `KEYWORDS.md`. Cada URL 
 
 ## 1. Convenciones
 
-- Dominio canónico: `https://www.drairinagonzalez.com/` (con `www`, confirmado por el propietario). Redirección 301 de la variante sin `www` y de `http`.
+- Dominio canónico: `https://drairinagonzalez.com/` (sin `www`, D-022). Redirección 301 de `www`, de `http` y de `otorrino-monterrey.com`.
 - Slugs en minúsculas, sin acentos ni eñe, con guiones. Barra final siempre.
 - Un pilar por especialidad; las páginas hijas cuelgan del pilar al que pertenecen.
 - `noindex`: gracias, 404, búsqueda, staging, páginas legales secundarias si no aportan valor de búsqueda (el aviso de privacidad sí se indexa).
@@ -45,6 +45,7 @@ Versión 0.1 · 2026-10-07 · Estado: REVIEW. Deriva de `KEYWORDS.md`. Cada URL 
 ├── /preguntas-frecuentes/           Preguntas de servicio (horario, seguros, pagos, en línea)
 ├── /recursos/                       Centro de recursos para pacientes (artículos y guías)
 │   └── /recursos/{slug}/
+├── /links/                          Enlaces para redes (se conserva, noindex)
 ├── /contacto/                       Ubicación, mapa, cómo llegar, estacionamiento, horario, formulario
 ├── /gracias/                        Confirmación de formulario (noindex)
 ├── /aviso-de-privacidad/

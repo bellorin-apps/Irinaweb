@@ -12,8 +12,8 @@
 - [ ] Crear en wp-admin (Usuarios → tu perfil → Contraseñas de aplicación) una contraseña de aplicación "claude-ops" y guardarla como secretos del entorno: `IRINA_WP_URL=https://www.drairinagonzalez.com`, `IRINA_WP_USER`, `IRINA_WP_APP_PASSWORD`.
 - [ ] Hostinger hPanel → Git: desplegar rama `deploy/core` en `public_html/wp-content/plugins/dra-irina-core` y `deploy/theme` en `public_html/wp-content/themes/irina-gonzalez` (Claude genera las ramas).
 - [x] Briefing desplegado en `/briefing/` (sesión local, 2026-10-07). Enviar la URL con token a la Dra.
-- [ ] Confirmar si la página "Links" (ID 143) se usa en redes antes de borrarla.
-- [ ] OD-007: canónico con `www` (D-020) o sin `www` (estado actual, propiedad de Search Console y Sensia ya en apex). Recomendación: **sin www**.
+- [x] Links se conserva (D-023); canónico sin www (D-022); Site Kit fuera (D-024).
+- [ ] Subir PHP a 8.4 en hPanel y verificar /op (D-025).
 - [x] OD-004, OD-005, OD-006 y dominio canónico (D-020) decididos.
 
 ## Prioridad 2 — Claude (sin dependencias del propietario)
