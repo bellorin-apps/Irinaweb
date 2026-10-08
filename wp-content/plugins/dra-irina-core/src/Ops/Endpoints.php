@@ -22,8 +22,13 @@ final class Endpoints {
 		add_action( 'rest_api_init', [ $this, 'routes' ] );
 	}
 
-	private static function admin_only(): bool {
+	public static function admin_only(): bool {
 		return current_user_can( 'manage_options' );
+	}
+
+	private static function denied( string $name ): bool {
+		$lower = strtolower( $name );
+		return in_array( $name, self::DENY, true ) || str_contains( $lower, 'secret' ) || str_contains( $lower, 'password' ) || str_contains( $lower, 'salt' ) || str_contains( $lower, 'token' );
 	}
 
 	public function routes(): void {
@@ -36,7 +41,7 @@ final class Endpoints {
 					'permission_callback' => [ self::class, 'admin_only' ],
 					'callback'            => static function ( \WP_REST_Request $r ) {
 						$name = (string) $r['name'];
-						if ( in_array( $name, self::DENY, true ) || str_contains( $name, 'secret' ) || str_contains( $name, 'password' ) ) {
+						if ( self::denied( $name ) ) {
 							return new \WP_Error( 'di_denied', 'Opción no permitida.', [ 'status' => 403 ] );
 						}
 						return rest_ensure_response( [ 'name' => $name, 'value' => get_option( $name, null ) ] );
@@ -47,7 +52,7 @@ final class Endpoints {
 					'permission_callback' => [ self::class, 'admin_only' ],
 					'callback'            => static function ( \WP_REST_Request $r ) {
 						$name = (string) $r['name'];
-						if ( in_array( $name, self::DENY, true ) ) {
+						if ( self::denied( $name ) ) {
 							return new \WP_Error( 'di_denied', 'Opción no permitida.', [ 'status' => 403 ] );
 						}
 						$body = $r->get_json_params();
