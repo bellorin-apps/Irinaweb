@@ -31,7 +31,7 @@ pages["otorrinolaringologia"] = [
         "items": rep([("Amigdalitis", "Dolor de garganta frecuente; amígdalas en niños", "/padecimientos/amigdalitis/"), ("Reflujo laringofaríngeo", "Carraspera, ronquera y sensación de algo en la garganta", "/padecimientos/reflujo-laringofaringeo/")], "label", "sub", "url")}),
     container("orl-trat", "di-listado", {"eyebrow": "Tratamientos", "title": "Procedimientos y <em>cirugías.</em>", "post_type": "tratamiento", "area": "orl",
         "note": "Toda cirugía se indica tras una valoración; en la consulta se explican opciones, recuperación y alternativas.",
-        "items": rep([("Septoplastia", "Cirugía del tabique nasal", "/tratamientos/septoplastia/"), ("Turbinoplastia", "Reducción de cornetes", "/tratamientos/turbinoplastia/"), ("Amígdalas y adenoides", "Amigdalectomía y adenoidectomía", "/tratamientos/amigdalas-y-adenoides/")], "label", "sub", "url")}),
+        "items": rep([("Septoplastia", "Cirugía del tabique nasal", "/tratamientos/septoplastia/"), ("Turbinoplastia", "Reducción de cornetes", "/tratamientos/turbinoplastia/"), ("Amígdalas y adenoides", "Amigdalectomía y adenoidectomía", "/tratamientos/amigdalas-y-adenoides/"), ("Rinoplastia funcional y estética", "Respirar y verse bien: valoración con equipo quirúrgico", "/tratamientos/rinoplastia/")], "label", "sub", "url")}),
     container("orl-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Un síntoma que no se va?", "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": "Hola, quisiera agendar una consulta de otorrinolaringología con la Dra. Irina González Sáez."}),
 ]
 

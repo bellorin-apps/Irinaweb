@@ -61,10 +61,10 @@ Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el ser
 - **Garganta/cuello:** amigdalitis y faringitis, cirugía de amígdalas y adenoides, reflujo laringofaríngeo, voz y laringe, disfagia, masas o ganglios en cuello.
 - **Otros:** alergias respiratorias (diagnóstico y tratamiento); endoscopia nasal y laringoscopia en consultorio.
 - **Población:** niños desde 0 meses, adolescentes, adultos, adultos mayores.
-- **Hospitales donde opera (publicables):** Christus Muguerza, Hospital Zambrano Hellion, Hospital Ángeles Valle Oriente (confirmados por el propietario 2026-10-08); **Hospital Universitario «Dr. José Eleuterio González»** (servicios médicos desde ~2025; cargo exacto [PENDIENTE DE CONFIRMACIÓN]) y **Hospitaria** (ambos añadidos por el propietario tras hablar con la Dra., 2026-10-08).
+- **Hospitales donde opera (publicables):** Christus Muguerza, Hospital Zambrano Hellion, Hospital Ángeles Valle Oriente (confirmados por el propietario 2026-10-08); **Hospital Universitario «Dr. José Eleuterio González»** (servicios médicos desde ~2025; cargo: «Otorrino de servicios médicos» según el propietario, 2026-10-08; confirmación documental pendiente) y **Hospitaria** (ambos añadidos por el propietario tras hablar con la Dra., 2026-10-08).
 - **Horario:** temporalmente NO se publica; el sitio muestra «Previa cita» (D-032). La Dra. ajustará su agenda la semana del 13 de octubre.
 - **Publicaciones:** la Dra. refiere DOS publicaciones en revistas médicas; registrada solo IJHNS 2019. Segunda cita [PENDIENTE DE CONFIRMACIÓN] (se busca en el CV).
-- **Plan a medio plazo:** rinoplastia funcional y estética cuando la Dra. opere de forma independiente (OD-009). Hoy no se afirma nada al respecto.
+- **Rinoplastia:** el propietario decide mencionarla desde ahora con redacción prudente (OD-009 resuelto); la página queda en borrador hasta que la Dra. apruebe el texto.
 
 ### Sueño
 - **Condiciones (OFRECE):** apnea obstructiva, ronquido, somnolencia diurna, trastornos respiratorios del dormir, insomnio.

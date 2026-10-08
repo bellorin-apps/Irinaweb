@@ -33,7 +33,7 @@ Versión 0.1 · 2026-10-07 · Estado: REVIEW. Deriva de `KEYWORDS.md`. Cada URL 
 │       ├── /tratamientos/turbinoplastia/
 │       ├── /tratamientos/amigdalas-y-adenoides/
 │       ├── /tratamientos/cirugia-endoscopica-nasal/        (si OFRECE)
-│       └── /tratamientos/rinoplastia/                      (RESERVADA, OD-009: borrador hasta que la Dra. la realice de forma independiente)
+│       └── /tratamientos/rinoplastia/                      (OD-009 resuelto: en borrador con redacción prudente hasta aprobación de la Dra.)
 ├── /sueno/                          Pilar Sueño (sub-marca visual)
 │   ├── /sueno/ronquido/
 │   ├── /sueno/apnea-obstructiva-del-sueno/

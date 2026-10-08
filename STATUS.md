@@ -25,7 +25,7 @@ Estado
 | Peso completado | 74 / 253 |
 | En curso | 6 (6.4 página de la Dra., 6.5, 6.6 plantillas; 5.1, 5.2, 5.5) |
 | Bloqueadas | 0 |
-| Pendientes del propietario | 4 (calidad de imágenes en CDN de hPanel, sesión para capturas de QA, licencia Elementor Pro, aviso de privacidad de la Dra.) |
+| Pendientes del propietario | 4 (CDN en hPanel, SSL dominio aparcado, sesión para capturas de QA, aviso de privacidad de la Dra.) |
 
 ## Estado por área
 

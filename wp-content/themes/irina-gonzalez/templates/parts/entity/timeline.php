@@ -26,7 +26,7 @@ $irina_q    = get_posts(
 			],
 			[
 			'key'     => 'di_tipo',
-			'value'   => [ 'curso', 'conferencia', 'publicacion', 'experiencia' ],
+			'value'   => [ 'curso', 'conferencia', 'publicacion', 'experiencia', 'trabajo' ],
 			'compare' => 'IN',
 			],
 		],
@@ -41,6 +41,7 @@ foreach ( $irina_q as $irina_c ) {
 	$irina_pre    = [
 		'conferencia' => __( 'Ponente: ', 'irina-gonzalez' ),
 		'publicacion' => __( 'Coautora: ', 'irina-gonzalez' ),
+		'trabajo'     => __( 'Trabajo presentado: ', 'irina-gonzalez' ),
 	][ $irina_tipo ] ?? '';
 	$irina_rows[] = [ '' !== $irina_anio ? $irina_anio : __( 'Docencia', 'irina-gonzalez' ), $irina_pre . $irina_c->post_title . ( '' !== $irina_inst ? ', ' . $irina_inst : '' ) . ( '' !== $irina_lug ? ', ' . $irina_lug : '' ) ];
 }

@@ -39,4 +39,3 @@ Pendientes de decisión: OD-009 rinoplastia; cargo en el Hospital Universitario;
 
 - CDN → optimización de imágenes (D-030).
 - SSL de otorrino-monterrey.com (Q-007).
-- Licencia de Elementor Pro.

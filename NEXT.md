@@ -6,8 +6,7 @@
 
 - [x] Checkpoint 3 cerrado (D-034): portada Home v2, logotipo completo, foto autorizada; conmutación con `tools/deploy/go-live-home.sh`.
 
-- [ ] OD-009 rinoplastia: elegir opción (recomendada b + c).
-- [ ] Cargo exacto de la Dra. en el Hospital Universitario y segunda publicación (cita completa) → DISCOVERY.
+- [x] OD-009 resuelto: mencionar rinoplastia desde ahora (borrador prudente). Cargo HU recibido. Segunda publicación: pendiente de la Dra.
 
 - [ ] **SSL de otorrino-monterrey.com** (Q-007): hPanel → Seguridad → SSL, instalar certificado para el dominio aparcado y su www; después verificar que https://otorrino-monterrey.com/ → 301 → https://drairinagonzalez.com/.
 - [ ] hPanel → CDN → optimización de imágenes: subir calidad (D-030) y purgar CDN.
@@ -18,7 +17,7 @@
 - [x] Briefing confirmado por la Dra. (2026-10-08).
 - [x] Horario, hospitales, redes y Doctoralia confirmados (2026-10-08); sin laboratorio externo.
 - [ ] Pendiente de la Dra.: aviso de privacidad actual y número/constancia del Aviso de Publicidad (no urgente).
-- [ ] Conectar la licencia de Elementor Pro (wp-admin → Elementor → Licencia).
+- [x] Licencia de Elementor Pro activada (2026-10-08).
 
 - [x] Reset ejecutado según `docs/RUNBOOK_RESET.md` (2026-10-07/08).
 - [x] Adobe Fonts kit `nlo5pss` configurado en el tema.

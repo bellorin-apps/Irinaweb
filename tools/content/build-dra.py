@@ -43,7 +43,10 @@ creds = [
     ("curso-cirugia-medicina-sueno-2019", "Curso Internacional en Cirugía y Medicina de Sueño", "curso", "", "Monterrey", "2019", 1, 63),
     ("conferencia-cpap-2018", "«Manejo del CPAP»", "conferencia", "Curso Triológico", "Mazatlán", "2018", 1, 64),
     ("conferencia-faringoplastia-2017", "«Evolución de la faringoplastia en SAHOS, más allá de la UPPP»", "conferencia", "68.º Congreso Nacional de Otorrinolaringología", "Acapulco", "2017", 1, 65),
-    ("hu-jose-eleuterio-gonzalez", "Servicios médicos del Hospital Universitario «Dr. José Eleuterio González»", "experiencia", "", "Monterrey", "2025", 0, 66),
+    ("hu-jose-eleuterio-gonzalez", "Otorrinolaringólogo, Servicios Médicos del Hospital Universitario «Dr. José Eleuterio González»", "experiencia", "", "Monterrey", "2025", 1, 59),
+    ("trabajo-herniacion-duramadre-2016", "«Herniación de duramadre en oído medio»", "trabajo", "IX Triológico Venezolano de ORL", "", "2016", 1, 67),
+    ("trabajo-carcinoma-nasofaringeo-2016", "«Presentación clásica de carcinoma nasofaríngeo: a propósito de un caso»", "trabajo", "IX Triológico Venezolano de ORL", "", "2016", 1, 68),
+    ("trabajo-rinoescleroma-2016", "«Rinoescleroma: a propósito de un caso»", "trabajo", "IX Triológico Venezolano de ORL", "", "2016", 1, 69),
     ("docencia-pregrado", "Profesora de otorrinolaringología de pregrado en UNEFM, ULA y UNERG", "experiencia", "", "Venezuela", "", 1, 70),
 ]
 here = pathlib.Path(__file__).parent

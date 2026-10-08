@@ -121,13 +121,43 @@
  },
  {
   "slug": "hu-jose-eleuterio-gonzalez",
-  "titulo": "Servicios médicos del Hospital Universitario «Dr. José Eleuterio González»",
+  "titulo": "Otorrinolaringólogo, Servicios Médicos del Hospital Universitario «Dr. José Eleuterio González»",
   "tipo": "experiencia",
   "institucion": "",
   "lugar": "Monterrey",
   "anio": "2025",
-  "mostrar": 0,
-  "orden": 66
+  "mostrar": 1,
+  "orden": 59
+ },
+ {
+  "slug": "trabajo-herniacion-duramadre-2016",
+  "titulo": "«Herniación de duramadre en oído medio»",
+  "tipo": "trabajo",
+  "institucion": "IX Triológico Venezolano de ORL",
+  "lugar": "",
+  "anio": "2016",
+  "mostrar": 1,
+  "orden": 67
+ },
+ {
+  "slug": "trabajo-carcinoma-nasofaringeo-2016",
+  "titulo": "«Presentación clásica de carcinoma nasofaríngeo: a propósito de un caso»",
+  "tipo": "trabajo",
+  "institucion": "IX Triológico Venezolano de ORL",
+  "lugar": "",
+  "anio": "2016",
+  "mostrar": 1,
+  "orden": 68
+ },
+ {
+  "slug": "trabajo-rinoescleroma-2016",
+  "titulo": "«Rinoescleroma: a propósito de un caso»",
+  "tipo": "trabajo",
+  "institucion": "IX Triológico Venezolano de ORL",
+  "lugar": "",
+  "anio": "2016",
+  "mostrar": 1,
+  "orden": 69
  },
  {
   "slug": "docencia-pregrado",

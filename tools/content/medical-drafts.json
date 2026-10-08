@@ -365,6 +365,24 @@
    "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
   },
   {
+   "slug": "rinoplastia",
+   "titulo": "Rinoplastia funcional y estética",
+   "area": "orl",
+   "zona": "nariz",
+   "tipo": "cirugia",
+   "oferta": "ofrece",
+   "resumen": "Valoración y planificación de la cirugía de nariz que mejora la respiración y, cuando se desea, la forma: septoplastia, turbinoplastia y rinoplastia, con un equipo quirúrgico especializado. [PENDIENTE DE CONFIRMACIÓN: redacción final de la Dra. sobre su participación en rinoplastias]",
+   "candidatos": [
+    "Obstrucción nasal con o sin deseo de cambio estético",
+    "Secuelas de traumatismo nasal",
+    "Rinoplastia previa con problemas para respirar"
+   ],
+   "resuelve": [
+    "desviacion-de-tabique-nasal"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
    "slug": "estudio-del-sueno",
    "titulo": "Estudio del sueño",
    "area": "sueno",
