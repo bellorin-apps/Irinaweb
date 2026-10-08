@@ -5,7 +5,8 @@
 ## Prioridad 1 — Desbloqueadores (propietario)
 
 - [x] Briefing confirmado por la Dra. (2026-10-08).
-- [ ] Preguntar a la Dra. por WhatsApp: horario de martes y jueves (¿13:00 a 15:30?), laboratorio de sueño, publicaciones adicionales, nombres completos de hospitales, enlaces de redes y Doctoralia, y pedir el aviso de privacidad actual y el número del Aviso de Publicidad.
+- [x] Horario, hospitales, redes y Doctoralia confirmados (2026-10-08); sin laboratorio externo.
+- [ ] Pendiente de la Dra.: aviso de privacidad actual y número/constancia del Aviso de Publicidad (no urgente).
 - [ ] Conectar la licencia de Elementor Pro (wp-admin → Elementor → Licencia).
 
 - [ ] **Seguir `docs/RUNBOOK_RESET.md` pasos 1–2** (backup descargado; contraseña de aplicación + secretos + red amplia). Claude ejecuta 3, 4 y 6 por REST.

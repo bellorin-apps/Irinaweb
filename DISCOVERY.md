@@ -61,14 +61,14 @@ Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el ser
 - **Garganta/cuello:** amigdalitis y faringitis, cirugía de amígdalas y adenoides, reflujo laringofaríngeo, voz y laringe, disfagia, masas o ganglios en cuello.
 - **Otros:** alergias respiratorias (diagnóstico y tratamiento); endoscopia nasal y laringoscopia en consultorio.
 - **Población:** niños desde 0 meses, adolescentes, adultos, adultos mayores.
-- **Hospitales donde opera (publicables):** Christus Muguerza, Hospital Zambrano Hellion, Hospital Ángeles Valle Oriente *(nombres completos por confirmar)*.
+- **Hospitales donde opera (publicables):** Christus Muguerza, Hospital Zambrano Hellion, Hospital Ángeles Valle Oriente (confirmados por el propietario 2026-10-08).
 
 ### Sueño
 - **Condiciones (OFRECE):** apnea obstructiva, ronquido, somnolencia diurna, trastornos respiratorios del dormir, insomnio.
 - **Estudios:** polisomnografía → **indica e interpreta**; poligrafía respiratoria → **realiza**; estudio domiciliario → **realiza**; endoscopia de sueño (DISE) → **realiza**.
 - **Tratamientos (OFRECE):** CPAP (indicación, titulación y seguimiento), faringoplastia y cirugía de paladar con suturas barbadas, cirugía nasal para el sueño, terapia posicional e higiene del sueño. **Dispositivos de avance mandibular: REFIERE.**
 - **Sueño pediátrico:** solo casos seleccionados.
-- Laboratorio/clínica de sueño con la que trabaja: ⬜ sin respuesta.
+- Laboratorio/clínica de sueño: **no trabaja con terceros; los estudios los realiza ella** (propietario, 2026-10-08).
 
 ### Pacientes
 | Tema | Respuesta |
@@ -84,7 +84,7 @@ Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el ser
 | Tema | Respuesta |
 |---|---|
 | Días | Lunes a sábado |
-| Horario (texto literal) | «Lunes 9:00 a 12:30 pm · Martes 1:00 a 1:30 · miércoles 9:00 a 12:30 · jueves 1:00 a 1:30 · viernes 8:30 a 11:30 · sábado 8:00 a 12:00». **Martes y jueves "1:00 a 1:30" parece incompleto (¿13:00 a 15:30?): confirmar antes de publicar.** Cargados en el sitio L, X, V y S |
+| Horario | Lunes y miércoles 9:00–12:30 · martes y jueves 13:00–14:00 (dos consultas: 13:00 y 13:30) · viernes 8:30–11:30 · sábado 8:00–12:00. **Confirmado por el propietario 2026-10-08**; cargado en el sitio |
 | Estacionamiento | Sí, gratuito |
 | Accesibilidad | Elevador; acceso para silla de ruedas |
 | Cómo llegar | "CAB Medical Headquarters, segundo piso, consultorio 6" |
@@ -100,7 +100,7 @@ Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el ser
 | Artículos | Sí, uno o dos al mes |
 | Aviso de Funcionamiento | Sí, lo tiene |
 | Aviso de Publicidad COFEPRIS | Sí, vigente (pedir número/fecha para el footer si aplica) |
-| Aviso de privacidad | Tiene uno (impreso o digital): pedir el documento para adaptarlo |
+| Aviso de privacidad | Tiene uno; **pendiente de entrega**. Decisión del propietario: si hace falta antes, usar un aviso genérico provisional (se redacta el definitivo conforme a la LFPDPPP en Fase 8) |
 | Asesor legal | No: los borradores legales los revisa la Dra. y el propietario |
 | Responsable de datos personales | Ella, como persona física |
 | Confirmación final | ✅ Confirmado |
@@ -150,10 +150,10 @@ Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el ser
 | Teléfono consultorio | 81 1569 5744 | POR CONFIRMAR | Tarjetas 2025 |
 | Teléfono "solo urgencias" | 81 1382 0042 | POR CONFIRMAR — decidir si se publica | Tarjetas 2025; CV |
 | Email profesional | soy@drairinagonzalez.com (también existe drairinagonzalezsaez@gmail.com en el CV) | POR CONFIRMAR cuál es el oficial | Tarjetas; CV; usuario WP |
-| Redes | @drairinagonzalezORL (Instagram, LinkedIn, TikTok, Facebook según iconos de la tarjeta) | POR CONFIRMAR (URLs exactas y cuáles están activas) | Tarjetas; CV |
+| Redes | Mismo usuario en todas: instagram.com/drairinagonzalezorl (confirmado), facebook.com/drairinagonzalezorl y tiktok.com/@drairinagonzalezorl (responden 200), linkedin.com/in/drairinagonzalezorl (no verificable por bloqueo de LinkedIn) | CONFIRMADO (propietario 2026-10-08) | Propietario |
 | Horario | — | PENDIENTE | |
 | Estacionamiento / acceso | — | PENDIENTE | |
-| Doctoralia | Perfil existente con ~9 opiniones y consulta en línea | POR CONFIRMAR (URL exacta) | Búsqueda pública |
+| Doctoralia | https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez | CONFIRMADO (propietario 2026-10-08) | Propietario |
 | Google Business Profile | — | PENDIENTE | |
 
 ### 1.4 Identidad visual (existe y se respeta)
