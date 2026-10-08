@@ -3,6 +3,10 @@
 . "$(dirname "${BASH_SOURCE[0]}")/lib.sh"
 WP="cd '$WEBROOT' && /opt/alt/php84/usr/bin/php /usr/local/bin/wp --skip-plugins=elementor,elementor-pro"
 w(){ rssh "$WP $*"; }
+# `post update` de una página con plantilla elementor_header_footer falla con "Plantilla de página no válida"
+# si Elementor no está cargado (WP-CLI valida page_template). Para esas órdenes, todos los plugins.
+WPALL="cd '$WEBROOT' && /opt/alt/php84/usr/bin/php /usr/local/bin/wp"
+wa(){ rssh "$WPALL $*"; }
 NEW="${1:-168}"; OLD="${2:-106}"
 
 echo "→ Estado previo"
@@ -10,13 +14,13 @@ echo "  show_on_front=$(w "option get show_on_front") page_on_front=$(w "option 
 echo "  $NEW: $(w "post get $NEW --field=post_status") · robots=$(w "post meta get $NEW rank_math_robots --format=json" 2>/dev/null)"
 
 echo "→ Portada = $NEW (publicada, sin noindex)"
-w "post update $NEW --post_status=publish --post_title='Inicio'" >/dev/null
+wa "post update $NEW --post_status=publish --post_title='Inicio'" >/dev/null
 w "post meta delete $NEW rank_math_robots" >/dev/null 2>&1 || true
 w "option update show_on_front page" >/dev/null
 w "option update page_on_front $NEW" >/dev/null
 
 echo "→ Portada anterior $OLD → borrador «Inicio (antiguo)»"
-w "post update $OLD --post_status=draft --post_title='Inicio (antiguo)' --post_name=inicio-antiguo" >/dev/null
+wa "post update $OLD --post_status=draft --post_title='Inicio (antiguo)' --post_name=inicio-antiguo" >/dev/null
 
 echo "→ Plantillas Theme Builder heredadas (39 header, 79 footer) → papelera (D-029)"
 for t in 39 79; do w "post get $t --field=post_type" >/dev/null 2>&1 && w "post delete $t" >/dev/null && echo "  $t en papelera"; done
