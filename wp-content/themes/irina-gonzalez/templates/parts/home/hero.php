@@ -13,6 +13,7 @@ $irina_a   = wp_parse_args(
 		'eyebrow'         => __( 'Otorrinolaringólogo en Monterrey', 'irina-gonzalez' ),
 		'title'           => __( 'Respirar bien,<br>dormir bien,<br><em>oír bien.</em>', 'irina-gonzalez' ),
 		'lead'            => '',
+		'lead_mobile'     => '',
 		'image_id'        => 0,
 		'trust'           => [],
 		'secondary_label' => __( 'Conocer a la Dra. Irina', 'irina-gonzalez' ),
@@ -43,7 +44,8 @@ if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
 		<?php
 		if ( '' !== $irina_a['lead'] ) :
 			?>
-			<p class="di-lead"><?php echo esc_html( $irina_a['lead'] ); ?></p><?php endif; ?>
+			<p class="di-lead di-lead--desktop"><?php echo esc_html( $irina_a['lead'] ); ?></p><?php endif; ?>
+		<?php if ( '' !== $irina_a['lead_mobile'] ) : ?><p class="di-lead di-lead--mobile"><?php echo esc_html( $irina_a['lead_mobile'] ); ?></p><?php endif; ?>
 		<div class="di-hero-cta"><?php echo $irina_cta; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 		<?php if ( $irina_a['trust'] ) : ?>
 			<ul class="di-hero-trust">
