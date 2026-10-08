@@ -4,6 +4,9 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
+- [ ] **SSL de otorrino-monterrey.com** (Q-007): hPanel → Seguridad → SSL, instalar certificado para el dominio aparcado y su www; después verificar que https://otorrino-monterrey.com/ → 301 → https://drairinagonzalez.com/.
+- [ ] hPanel → CDN → optimización de imágenes: subir calidad (D-030) y purgar CDN.
+
 - [x] Checkpoint 2 cerrado (2026-10-08): dirección v2 aprobada; ajustes menores se harán sobre el build real.
 - [x] Adobe Fonts: Iskra carga en /preview/ (kit autorizado).
 
