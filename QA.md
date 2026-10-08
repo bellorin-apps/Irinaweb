@@ -28,3 +28,5 @@ _(Fase 6 en adelante.)_
 ## QA funcional / dispositivos / SEO / performance / seguridad / contenido
 
 _(Fase 11.)_
+
+| Q-006 | 2026-10-08 | Gate de publicación médica: al intentar `wp post update 205 --post_status=publish` sobre una condición sin aprobación médica, `MedicalReview::block_unapproved_publish` la dejó en `pending` también desde WP-CLI | Prueba superada; comportamiento esperado (solo la Dra. asigna MEDICALLY APPROVED). Sin cambios | Cerrada |
