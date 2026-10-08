@@ -50,7 +50,8 @@ foreach ( $irina_q as $irina_c ) {
 		$irina_cards[] = [ $irina_label, $irina_c->post_title, trim( implode( ', ', array_filter( [ $irina_inst, $irina_lug ] ) ) . ( '' !== $irina_anio ? '. ' . $irina_anio . '.' : '' ) ) ];
 	}
 }
-$irina_tags = array_merge( $irina_tags, array_map( 'strval', (array) $irina_a['extra_tags'] ) );
+$irina_extra = array_map( 'strval', (array) $irina_a['extra_tags'] );
+$irina_tags  = array_merge( $irina_tags, $irina_extra ? $irina_extra : irina_hospitals() );
 if ( ! $irina_cards && ! $irina_tags ) {
 	return;
 }

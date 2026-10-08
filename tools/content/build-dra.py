@@ -24,7 +24,7 @@ page = [
     container("dra-creds", "di-credenciales", {
         "eyebrow": "Formación y certificaciones", "title": "Credenciales <em>verificables.</em>",
         "tags_title": "Membresías y hospitales",
-        "extra_tags": "Christus Muguerza\nHospital Zambrano Hellion\nHospital Ángeles Valle Oriente"}),
+        "extra_tags": ""}),
     container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "Formación continua en <em>cirugía de sueño.</em>"}),
     container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu primera consulta",
         "text": "30 minutos para escucharte, explorar y proponerte un plan.", "message": ""}),
@@ -43,6 +43,7 @@ creds = [
     ("curso-cirugia-medicina-sueno-2019", "Curso Internacional en Cirugía y Medicina de Sueño", "curso", "", "Monterrey", "2019", 1, 63),
     ("conferencia-cpap-2018", "«Manejo del CPAP»", "conferencia", "Curso Triológico", "Mazatlán", "2018", 1, 64),
     ("conferencia-faringoplastia-2017", "«Evolución de la faringoplastia en SAHOS, más allá de la UPPP»", "conferencia", "68.º Congreso Nacional de Otorrinolaringología", "Acapulco", "2017", 1, 65),
+    ("hu-jose-eleuterio-gonzalez", "Servicios médicos del Hospital Universitario «Dr. José Eleuterio González»", "experiencia", "", "Monterrey", "2025", 0, 66),
     ("docencia-pregrado", "Profesora de otorrinolaringología de pregrado en UNEFM, ULA y UNERG", "experiencia", "", "Venezuela", "", 1, 70),
 ]
 here = pathlib.Path(__file__).parent

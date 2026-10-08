@@ -43,6 +43,11 @@ $irina_title = '' !== $irina_a['title'] ? $irina_a['title'] : trim( (string) iri
 				?>
 				<dt><?php echo esc_html( (string) $irina_l ); ?></dt><dd><?php echo esc_html( (string) $irina_v ); ?></dd><?php endforeach; ?></dl>
 			<?php
+			if ( '' !== irina_hours_note() ) :
+				?>
+				<p class="di-reveal di-reveal--d3"><b><?php esc_html_e( 'Horario', 'irina-gonzalez' ); ?>:</b> <?php echo esc_html( irina_hours_note() ); ?></p>
+				<?php
+			endif;
 			$irina_rows = irina_hours_rows(); if ( $irina_rows ) :
 				?>
 				<table class="di-hours di-reveal di-reveal--d3">

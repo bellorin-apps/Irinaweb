@@ -120,6 +120,16 @@
   "orden": 65
  },
  {
+  "slug": "hu-jose-eleuterio-gonzalez",
+  "titulo": "Servicios médicos del Hospital Universitario «Dr. José Eleuterio González»",
+  "tipo": "experiencia",
+  "institucion": "",
+  "lugar": "Monterrey",
+  "anio": "2025",
+  "mostrar": 0,
+  "orden": 66
+ },
+ {
   "slug": "docencia-pregrado",
   "titulo": "Profesora de otorrinolaringología de pregrado en UNEFM, ULA y UNERG",
   "tipo": "experiencia",

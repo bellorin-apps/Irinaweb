@@ -79,7 +79,7 @@ pages["primera-consulta"] = [
 
 pages["contacto"] = [
     container("co-bleed", "di-bleed", {"eyebrow": "Contacto", "title": "Consultorio en<br><em>Cumbres, Monterrey.</em>",
-        "lead": "CAB Medical, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Agenda por WhatsApp o llámanos en horario de consultorio.",
+        "lead": "CAB Medical, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Consulta previa cita: agenda por WhatsApp.",
         "variant": "sand", "crumb": "Contacto"}),
     container("co-ubic", "di-ubicacion", {"eyebrow": "Cómo llegar", "title": "",
         "facts": rep([("Estacionamiento", "Gratuito"), ("Acceso", "Elevador y acceso para silla de ruedas")], "label", "value"),
@@ -93,8 +93,8 @@ pages["preguntas-frecuentes"] = [
     container("faq-bleed", "di-bleed", {"eyebrow": "Preguntas frecuentes", "title": "Lo que más <em>nos preguntan.</em>",
         "lead": "Horario, costos, seguros, niños y qué pasa en la consulta. Las dudas médicas se responden en cada página de padecimiento.", "variant": "sand", "crumb": "Preguntas frecuentes"}),
     container("faq-serv", "di-faq", {"eyebrow": "Servicio", "title": "Consulta y <em>agenda.</em>", "items": rep([
-        ("¿Cómo agendo?", "Por WhatsApp, en un toque desde cualquier página del sitio, o por teléfono en horario de consultorio."),
-        ("¿Cuál es el horario?", "Lunes y miércoles 9:00–12:30 · Martes y jueves 13:00–14:00 · Viernes 8:30–11:30 · Sábado 8:00–12:00."),
+        ("¿Cómo agendo?", "Por WhatsApp, en un toque desde cualquier página del sitio, o por teléfono. La consulta es previa cita."),
+        ("¿Cuál es el horario?", "Previa cita: agenda por WhatsApp y te confirmamos el horario disponible."),
         ("¿Cuánto dura la consulta?", "Alrededor de 30 minutos."),
         ("¿Cuánto cuesta?", "Costo de la consulta: " + PEND + ". Cirugías y estudios, previa valoración."),
         ("¿Aceptan seguros?", "Particulares y reembolso de seguros de gastos médicos."),

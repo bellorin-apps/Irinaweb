@@ -50,7 +50,7 @@ data = [
     container("doctora", "di-doctora", {
         "eyebrow": "Dra. Irina González Sáez", "quote": "«Escucharte también es parte del tratamiento.»",
         "text": "Médico cirujano por la Universidad Nacional Experimental Francisco de Miranda y especialista en Otorrinolaringología por la Universidad Centroccidental Lisandro Alvarado. Subespecialización en desórdenes respiratorios del dormir, ronquido y rinología aplicada en el ISSSTE de Monterrey.",
-        "creds": "Certificada por el Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello\nSociedad Iberoamericana de Cirugía de Sueño · Colegio de ORL de Nuevo León\nCirugía en Christus Muguerza, Zambrano Hellion y Ángeles Valle Oriente",
+        "creds": "Certificada por el Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello\nSociedad Iberoamericana de Cirugía de Sueño · Colegio de ORL de Nuevo León\nCirugía en Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente, Hospital Universitario y Hospitaria",
         "link": "/dra-irina-gonzalez-saez/", "link_label": "Conocer a la Dra. Irina"}),
     container("pasos", "di-pasos", {
         "eyebrow": "Cómo trabajamos", "title": "Qué esperar en <em>tu consulta.</em>",

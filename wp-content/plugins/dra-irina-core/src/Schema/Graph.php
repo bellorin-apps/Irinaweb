@@ -65,7 +65,7 @@ final class Graph {
 		if ( $same_as ) {
 			$node['sameAs'] = $same_as;
 		}
-		$hours = self::opening_hours( (string) ( $p['horario'] ?? '' ) );
+		$hours = empty( $p['horario_oculto'] ) ? self::opening_hours( (string) ( $p['horario'] ?? '' ) ) : [];
 		if ( $hours ) {
 			$node['openingHoursSpecification'] = $hours;
 		}
@@ -79,7 +79,95 @@ final class Graph {
 				'name'  => $p['centro'],
 			];
 		}
+		$hospitals = array_values( array_filter( array_map( 'trim', (array) preg_split( '/\r?\n/', (string) ( $p['hospitales'] ?? '' ) ) ) ) );
+		if ( $hospitals ) {
+			$node['hospitalAffiliation'] = array_map(
+				static fn( string $h ): array => [
+					'@type' => 'Hospital',
+					'name'  => $h,
+				],
+				$hospitals
+			);
+		}
+		$node = array_merge( $node, self::credential_nodes() );
 		return apply_filters( 'dra_irina_schema_physician', $node );
+	}
+
+	/**
+	 * memberOf, alumniOf, hasCredential y publicaciones desde el CPT credencial (solo mostrar=true).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function credential_nodes(): array {
+		if ( ! post_type_exists( 'credencial' ) ) {
+			return [];
+		}
+		$out = [];
+		$q   = get_posts(
+			[
+				'post_type'      => 'credencial',
+				'posts_per_page' => 50,
+				'meta_key'       => 'di_mostrar', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				'meta_value'     => '1', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			]
+		);
+		foreach ( $q as $c ) {
+			$tipo = (string) get_post_meta( $c->ID, 'di_tipo', true );
+			$inst = (string) get_post_meta( $c->ID, 'di_institucion', true );
+			$anio = (string) get_post_meta( $c->ID, 'di_anio', true );
+			$url  = (string) get_post_meta( $c->ID, 'di_url', true );
+			switch ( $tipo ) {
+				case 'membresia':
+					$out['memberOf'][] = [
+						'@type' => 'Organization',
+						'name'  => $c->post_title,
+					];
+					break;
+				case 'formacion':
+				case 'especialidad':
+					if ( '' !== $inst ) {
+						$out['alumniOf'][] = [
+							'@type' => 'EducationalOrganization',
+							'name'  => $inst,
+						];
+					}
+					$out['hasCredential'][] = array_filter(
+						[
+							'@type'              => 'EducationalOccupationalCredential',
+							'name'               => $c->post_title,
+							'credentialCategory' => 'formacion' === $tipo ? 'degree' : 'specialty',
+							'recognizedBy'       => '' !== $inst ? [
+								'@type' => 'Organization',
+								'name'  => $inst,
+							] : null,
+						]
+					);
+					break;
+				case 'certificacion':
+					$out['hasCredential'][] = [
+						'@type'              => 'EducationalOccupationalCredential',
+						'name'               => $c->post_title,
+						'credentialCategory' => 'certification',
+					];
+					break;
+				case 'publicacion':
+					$out['subjectOf'][] = array_filter(
+						[
+							'@type'         => 'ScholarlyArticle',
+							'name'          => trim( $c->post_title, '«»' ),
+							'isPartOf'      => '' !== $inst ? [
+								'@type' => 'Periodical',
+								'name'  => $inst,
+							] : null,
+							'datePublished' => '' !== $anio ? $anio : null,
+							'url'           => '' !== $url ? $url : null,
+							'author'        => [ '@id' => self::physician_id() ],
+						]
+					);
+					break;
+			}
+		}
+		return $out;
 	}
 
 	/** Convierte "Lunes|09:00-14:00,16:00-19:00" en OpeningHoursSpecification. */

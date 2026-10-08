@@ -4,6 +4,9 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
+- [ ] OD-009 rinoplastia: elegir opción (recomendada b + c).
+- [ ] Cargo exacto de la Dra. en el Hospital Universitario y segunda publicación (cita completa) → DISCOVERY.
+
 - [ ] **SSL de otorrino-monterrey.com** (Q-007): hPanel → Seguridad → SSL, instalar certificado para el dominio aparcado y su www; después verificar que https://otorrino-monterrey.com/ → 301 → https://drairinagonzalez.com/.
 - [ ] hPanel → CDN → optimización de imágenes: subir calidad (D-030) y purgar CDN.
 

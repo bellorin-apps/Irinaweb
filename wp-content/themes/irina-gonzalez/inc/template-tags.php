@@ -79,6 +79,9 @@ function irina_phone_label( string $e164 ): string {
  */
 function irina_hours_rows(): array {
 	$rows = [];
+	if ( irina_practice( 'horario_oculto' ) ) {
+		return [];
+	}
 	foreach ( (array) preg_split( '/\r\n|\r|\n/', (string) irina_practice( 'horario' ) ) as $line ) {
 		$parts = array_map( 'trim', explode( '|', $line, 2 ) );
 		if ( 2 === count( $parts ) && '' !== $parts[0] ) {
@@ -171,4 +174,20 @@ function irina_brand_block( string $context = 'header' ): string {
 		return $full . $white . sprintf( '<span class="screen-reader-text">%s · %s</span>', esc_html( $name ), esc_html( $sub ) );
 	}
 	return irina_brand_mark() . sprintf( '<span class="di-brand__name">%s<small>%s</small></span>', esc_html( $name ), esc_html( $sub ) );
+}
+
+/**
+ * Texto que sustituye al horario cuando no se publica.
+ */
+function irina_hours_note(): string {
+	return irina_practice( 'horario_oculto' ) ? (string) apply_filters( 'irina_hours_note', __( 'Previa cita. Agenda por WhatsApp.', 'irina-gonzalez' ) ) : '';
+}
+
+/**
+ * Hospitales publicables (Ajustes → Consultorio), uno por línea.
+ *
+ * @return array<int, string>
+ */
+function irina_hospitals(): array {
+	return array_values( array_filter( array_map( 'trim', (array) preg_split( '/\r\n|\r|\n/', (string) irina_practice( 'hospitales' ) ) ) ) );
 }

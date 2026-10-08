@@ -74,6 +74,10 @@ $irina_soc   = array_filter(
 			</div>
 			<div>
 				<h4><?php esc_html_e( 'Horario', 'irina-gonzalez' ); ?></h4>
+				<?php
+				if ( '' !== irina_hours_note() ) :
+					?>
+					<p><?php echo esc_html( irina_hours_note() ); ?></p><?php endif; ?>
 				<?php if ( $irina_rows ) : ?>
 					<table class="di-hours">
 					<?php

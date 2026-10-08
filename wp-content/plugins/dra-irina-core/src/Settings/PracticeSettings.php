@@ -39,6 +39,8 @@ final class PracticeSettings {
 			'whatsapp_mensaje'    => [ 'Mensaje prellenado de WhatsApp', 'textarea', true ],
 			'email'               => [ 'Correo', 'email', true ],
 			'horario'             => [ 'Horario (una línea por día: "Lunes|09:00-14:00,16:00-19:00")', 'textarea', true ],
+			'horario_oculto'      => [ 'No publicar el horario: mostrar «Previa cita» (el dato se conserva)', 'checkbox', true ],
+			'hospitales'          => [ 'Hospitales donde opera (uno por línea; publicables)', 'textarea', true ],
 			'instagram'           => [ 'Instagram (URL)', 'url', true ],
 			'facebook'            => [ 'Facebook (URL)', 'url', true ],
 			'linkedin'            => [ 'LinkedIn (URL)', 'url', true ],
