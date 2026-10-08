@@ -108,8 +108,12 @@ function irina_brand_svg( string $name, string $css_class ): string {
 	$svg = (string) file_get_contents( $file ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- archivo local del tema.
 	$svg = (string) preg_replace( '/<\?xml[^>]*>|<!DOCTYPE[^>]*>|<!--.*?-->|<script.*?<\/script>|<title>.*?<\/title>|<desc>.*?<\/desc>/is', '', $svg );
 	$svg = (string) preg_replace( '/\son[a-z]+="[^"]*"|\sxlink:href="(?!#)[^"]*"|\shref="(?!#)[^"]*"/i', '', $svg );
-	$svg = (string) preg_replace( '/<svg\b([^>]*?)\s(class|width|height)="[^"]*"/i', '<svg$1', $svg );
-	$svg = (string) preg_replace( '/<svg\b/i', sprintf( '<svg class="%s" aria-hidden="true" focusable="false"', esc_attr( $css_class ) ), $svg, 1 );
+	$svg = (string) preg_replace_callback(
+		'/<svg\b[^>]*>/i',
+		static fn( array $m ): string => str_replace( '<svg', sprintf( '<svg class="%s" aria-hidden="true" focusable="false"', esc_attr( $css_class ) ), (string) preg_replace( '/\s(class|width|height)="[^"]*"/i', '', $m[0] ) ),
+		$svg,
+		1
+	);
 	return trim( $svg );
 }
 
