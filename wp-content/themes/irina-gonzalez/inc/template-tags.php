@@ -15,7 +15,7 @@ function irina_icon( string $name, string $css_class = 'di-icon', int $size = 24
 		'<svg class="%1$s" width="%2$d" height="%2$d" aria-hidden="true" focusable="false"><use href="%3$s#%4$s"></use></svg>',
 		esc_attr( $css_class ),
 		$size,
-		esc_url( IRINA_THEME_URI . '/assets/icons/lucide.svg' ),
+		esc_url( IRINA_THEME_URI . '/assets/icons/lucide.svg?v=' . irina_asset_version( 'assets/icons/lucide.svg' ) ),
 		esc_attr( $name )
 	);
 }
