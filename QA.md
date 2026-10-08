@@ -21,6 +21,8 @@ Estados: OPEN · FIXING · FIXED · VERIFIED · WONTFIX (con motivo)
 
 | Q-005 | HIGH | Código | `Ops\Endpoints::admin_only` era `private static` y se usaba como `permission_callback` → fatal 500 en `/ops/*` en producción (core 0.2.0). | Sesión local Irinaweb | FIXED | 0.2.1: método público; lista de denegación unificada para GET y POST (secret/password/salt/token). Lección: probar activación y rutas en un WP local antes de desplegar (pendiente red/herramientas) |
 
+| Q-006 | INFO | Workflow | Prueba del gate de publicación médica: `wp post update 205 --post_status=publish` sobre una condición sin aprobación quedó en `pending` (también desde WP-CLI). | Sesión local Irinaweb | VERIFIED | 2026-10-08: comportamiento esperado (solo la Dra. asigna MEDICALLY APPROVED). Sin cambios de código |
+
 ## QA visual
 
 _(Fase 6 en adelante.)_
@@ -29,4 +31,3 @@ _(Fase 6 en adelante.)_
 
 _(Fase 11.)_
 
-| Q-006 | 2026-10-08 | Gate de publicación médica: al intentar `wp post update 205 --post_status=publish` sobre una condición sin aprobación médica, `MedicalReview::block_unapproved_publish` la dejó en `pending` también desde WP-CLI | Prueba superada; comportamiento esperado (solo la Dra. asigna MEDICALLY APPROVED). Sin cambios | Cerrada |
