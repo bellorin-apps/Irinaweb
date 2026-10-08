@@ -58,3 +58,7 @@ add_action(
 		}
 	}
 );
+
+// Calidad de las versiones intermedias que genera WordPress (por defecto 82). La foto del hero se sirve en tamaño completo con srcset.
+add_filter( 'jpeg_quality', static fn(): int => 94 );
+add_filter( 'wp_editor_set_quality', static fn(): int => 94 );
