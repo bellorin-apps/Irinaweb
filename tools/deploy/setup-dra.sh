@@ -30,6 +30,8 @@ w "post meta update $P_DRA _elementor_version 4.3.4" >/dev/null
 w "eval 'update_post_meta( $P_DRA, \"_elementor_data\", wp_slash( file_get_contents( \"/tmp/dra-elementor.json\" ) ) ); echo strlen( get_post_meta( $P_DRA, \"_elementor_data\", true ) ) . \" bytes\\n\";'"
 rssh "rm -f /tmp/dra-elementor.json"
 w "post meta delete $P_DRA _elementor_css" >/dev/null 2>&1 || true
+# Elementor cachea el HTML de cada elemento en post meta; sin borrarlo, los cambios de _elementor_data no se ven.
+w "post meta delete $P_DRA _elementor_element_cache" >/dev/null 2>&1 || true
 w "post meta update $P_DRA rank_math_robots --format=json '[\"noindex\",\"nofollow\"]'" >/dev/null
 w "cache flush" >/dev/null; w "litespeed-purge all" >/dev/null 2>&1 || true
 echo "Página $P_DRA lista (estado: $(w "post get $P_DRA --field=post_status")). Vista previa con sesión iniciada: $SITE_URL/?page_id=$P_DRA&preview=true"
