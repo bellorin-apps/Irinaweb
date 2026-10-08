@@ -4,8 +4,8 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] **Checkpoint 2:** revisar `https://drairinagonzalez.com/preview/` (Home, Dra. Irina, apnea, artículo) en escritorio y móvil y aprobar o corregir la dirección visual.
-- [ ] Adobe Fonts: confirmar que el kit `nlo5pss` tiene autorizado el dominio `drairinagonzalez.com` (si Iskra no carga en /preview/, es esto).
+- [x] Checkpoint 2 cerrado (2026-10-08): dirección v2 aprobada; ajustes menores se harán sobre el build real.
+- [x] Adobe Fonts: Iskra carga en /preview/ (kit autorizado).
 
 - [x] Briefing confirmado por la Dra. (2026-10-08).
 - [x] Horario, hospitales, redes y Doctoralia confirmados (2026-10-08); sin laboratorio externo.

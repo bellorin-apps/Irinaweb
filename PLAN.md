@@ -87,7 +87,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 4.4 | Concepto visual "Sleep experience" dentro de la marca | 2 | REVIEW | `DESIGN_SYSTEM.md` §6; aplicado en maquetas |
 | 4.5 | Mockups/prototipos: Home, Dra. Irina, página médica, artículo, móvil | 5 | REVIEW | Publicadas 2026-10-08 en `/preview/` (200 ×4, noindex) |
 | 4.6 | `DESIGN_SYSTEM.md` | 2 | REVIEW | v0.1 |
-| 4.7 | CHECKPOINT 2: dirección visual aprobada | 2 | OWNER | ext |
+| 4.7 | CHECKPOINT 2: dirección visual aprobada | 2 | DONE | 2026-10-08: v2 aprobada por el propietario («ciertos cambios los haremos después»); D-026 |
 
 ## FASE 5 — Infraestructura de código
 
@@ -193,7 +193,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 1 | 20 | 6 (DONE 3 + REVIEW ×0.5) |
 | 2 | 14 | 6.5 (REVIEW ×0.5) |
 | 3 | 20 | 7.5 (REVIEW ×0.5) |
-| 4 | 20 | 9 (REVIEW ×0.5) |
+| 4 | 20 | 11 (DONE 2 + REVIEW ×0.5) |
 | 5 | 23 | 0 |
 | 6 | 33 | 0 |
 | 7 | 22 | 0 |
@@ -202,6 +202,6 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
-| **Total** | **253** | **52** |
+| **Total** | **253** | **54** |
 
-Avance global: 52 / 253 = **21%** · Tareas: 12 / 97 DONE · 20 en REVIEW · 3 DOING.
+Avance global: 54 / 253 = **21%** · Tareas: 13 / 97 DONE · 20 en REVIEW · 5 DOING.

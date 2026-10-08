@@ -9,23 +9,23 @@ Avance global
 ████░░░░░░░░░░░░░░░░ 21%
 
 Fase actual
-█████░░░░░ 45%
-Fase 4/12 — Design System y dirección visual (Fases 0 cerrada; 1, 2, 3 y 5 avanzadas)
+█████░░░░░ 55%
+Fase 6/12 — Build del núcleo visual en WordPress (CP2 cerrado; Fase 4 en REVIEW de Codex)
 
 Estado
-🟢 Maquetas publicadas en /preview/ (noindex); esperando decisión del Checkpoint 2
+🟢 CP2 cerrado con la dirección v2; empieza la construcción en WordPress
 ```
 
 ## Métricas
 
 | Métrica | Valor |
 |---|---|
-| Fase | 4/12 |
-| Tareas | 12 / 97 DONE · 20 en REVIEW · 3 DOING |
-| Peso completado | 52 / 253 |
+| Fase | 6/12 |
+| Tareas | 13 / 97 DONE · 20 en REVIEW · 5 DOING |
+| Peso completado | 54 / 253 |
 | En curso | 3 (5.1, 5.2, 5.5 infraestructura) |
 | Bloqueadas | 0 |
-| Pendientes del propietario | 4 (Checkpoint 2, licencia Elementor Pro, dominios del kit Adobe Fonts, aviso de privacidad de la Dra.) |
+| Pendientes del propietario | 2 (licencia Elementor Pro, aviso de privacidad de la Dra.) |
 
 ## Estado por área
 
@@ -34,7 +34,7 @@ Discovery        ██████████ 100%
 Auditoría WP     ████░░░░░░  30%
 Investigación    █████░░░░░  46%
 Arquitectura     ████░░░░░░  38%
-Diseño           █████░░░░░  45%
+Diseño           ██████░░░░  55%
 Desarrollo       ░░░░░░░░░░   0%  (scaffold en DOING; cuenta al probarse)
 Contenido        ░░░░░░░░░░   0%
 SEO              ██░░░░░░░░  20%
@@ -54,7 +54,7 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
-- Propietario: revisar las maquetas en escritorio y móvil y decidir Checkpoint 2
+- Claude: Fase 6 en WordPress (header, footer, Home, plantillas) con el sistema v2
 - Codex: auditorías pendientes según `BATON.md`
 
 ## FALTA
@@ -79,7 +79,6 @@ Núcleo visual en WordPress (Checkpoint 3) en 2 a 3 semanas desde la aprobación
 
 ## Dependencias externas (no cuentan como trabajo técnico)
 
-- Aprobación de dirección visual (CP2)
 - Sesión fotográfica profesional
 - Aviso de privacidad y Aviso de Publicidad de la Dra.
 - Revisión médica de contenidos (Fase 7)
