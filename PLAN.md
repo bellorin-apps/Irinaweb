@@ -35,9 +35,9 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 0.6 | Redactar cuestionario de discovery agrupado (12 bloques) | 2 | DONE | `DISCOVERY.md` |
 | 0.7 | Checklist de documentos requeridos | 1 | DONE | `DISCOVERY.md` |
 | 0.8 | Plan maestro con fases, pesos y Definition of Done | 2 | DONE | Este archivo |
-| 0.9 | Respuestas del propietario al cuestionario (lote 1: desbloqueadores) | 3 | DOING | ext — lote 1 respondido por el propietario; resto delegado a la mini app de la Dra. |
-| 0.10 | Confirmación expresa de la Dra. Irina de credenciales y servicios | 3 | OWNER | ext |
-| 0.11 | CHECKPOINT 1 cerrado | 1 | OWNER | ext |
+| 0.9 | Respuestas del propietario al cuestionario (lote 1: desbloqueadores) | 3 | DONE | Lotes 1–3 respondidos 2026-10-07 |
+| 0.10 | Confirmación expresa de la Dra. Irina de credenciales y servicios | 3 | DONE | Briefing confirmado 2026-10-08 (80 respuestas) |
+| 0.11 | CHECKPOINT 1 cerrado | 1 | DONE | 2026-10-08 |
 
 ## FASE 1 — Acceso, auditoría técnica, backup y staging
 
@@ -60,7 +60,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 2.1 | `docs/REFERENCE_RESEARCH.md`: Stanford Sleep, Mayo, Cleveland, Johns Hopkins, Sleep Doctor, ENT privados, referentes UX | 3 | REVIEW | Basado en snippets: todos los dominios bloqueados por la red del entorno; incluye checklist de verificación visual |
 | 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | REVIEW | `docs/COMPETITION_MONTERREY.md`; ítems "no verificado" por bloqueo de red |
 | 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | REVIEW | Sin volúmenes; evidencia SERP; pendiente cruzar con Search Console |
-| 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | OWNER | Requiere respuestas |
+| 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | REVIEW | 11 motivos reales de la Dra. (DISCOVERY §0b) |
 | 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | REVIEW | v0.1; audiencias por validar con briefing |
 | 2.6 | Codex: revisión de estrategia y keyword map | 1 | TODO | |
 
@@ -74,7 +74,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 3.4 | Schema map por tipo de página | 2 | REVIEW | `ARCHITECTURE.md` §5 |
 | 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | REVIEW | v0.1 |
 | 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | REVIEW | v0.1 |
-| 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | OWNER | |
+| 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | REVIEW | WhatsApp principal (D-011); varias personas responden |
 | 3.8 | Codex: auditoría de arquitectura contra MASTER_PROMPT | 2 | TODO | |
 
 ## FASE 4 — Design System y dirección visual
@@ -189,10 +189,10 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 
 | Fase | Peso total | Peso DONE |
 |---|---|---|
-| 0 | 23 | 16 |
+| 0 | 23 | 23 |
 | 1 | 20 | 6 (DONE 3 + REVIEW ×0.5) |
-| 2 | 14 | 5.5 (REVIEW ×0.5) |
-| 3 | 20 | 6.5 (REVIEW ×0.5) |
+| 2 | 14 | 6.5 (REVIEW ×0.5) |
+| 3 | 20 | 7.5 (REVIEW ×0.5) |
 | 4 | 20 | 0 |
 | 5 | 23 | 0 |
 | 6 | 33 | 0 |
@@ -202,6 +202,6 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
-| **Total** | **253** | **34** |
+| **Total** | **253** | **43** |
 
-Avance global: 34 / 253 = **13%** · Tareas: 9 / 97 DONE · 12 en REVIEW.
+Avance global: 43 / 253 = **17%** · Tareas: 12 / 97 DONE · 14 en REVIEW.

@@ -32,9 +32,9 @@ Nota de privacidad: en el Drive existen documentos de identidad, migratorios y f
 
 ---
 
-## 0b. Respuestas de la Dra. Irina (briefing alojado, 2026-10-08) — PARCIAL, SIN CONFIRMACIÓN FINAL
+## 0b. Respuestas de la Dra. Irina (briefing alojado, 2026-10-08) — **CONFIRMADAS POR LA DRA.**
 
-Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el servidor, actualizadas 2026-10-08T00:11:39+00:00). Estado: **72 respuestas; falta pulsar "Revisé mis respuestas y confirmo"** y completar los campos marcados ⬜. Hasta la confirmación, todo se trata como POR CONFIRMAR, pero ya sirve para construir.
+Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el servidor, actualizadas 2026-10-08T00:11:39+00:00). Estado: **80 respuestas y confirmación final pulsada el 2026-10-08 (00:35 UTC)**. Los campos ⬜ quedaron vacíos y se preguntan por WhatsApp. Esto cierra el CHECKPOINT 1.
 
 ### Perfil
 | Tema | Respuesta |
@@ -84,7 +84,7 @@ Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el ser
 | Tema | Respuesta |
 |---|---|
 | Días | Lunes a sábado |
-| Horario | ⬜ sin respuesta (campo de texto) |
+| Horario (texto literal) | «Lunes 9:00 a 12:30 pm · Martes 1:00 a 1:30 · miércoles 9:00 a 12:30 · jueves 1:00 a 1:30 · viernes 8:30 a 11:30 · sábado 8:00 a 12:00». **Martes y jueves "1:00 a 1:30" parece incompleto (¿13:00 a 15:30?): confirmar antes de publicar.** Cargados en el sitio L, X, V y S |
 | Estacionamiento | Sí, gratuito |
 | Accesibilidad | Elevador; acceso para silla de ruedas |
 | Cómo llegar | "CAB Medical Headquarters, segundo piso, consultorio 6" |
@@ -97,9 +97,13 @@ Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el ser
 | Cuestionarios de orientación aprobados | Escala de Epworth; STOP-Bang |
 | Descargables | Indicaciones prequirúrgicas; preparación para estudio de sueño |
 | FAQ reales | "¿Cómo se limpian los oídos?"; "¿Cómo es un postoperatorio?" |
-| Artículos | ⬜ sin respuesta |
-| Aviso de Funcionamiento · Aviso de Publicidad COFEPRIS · Aviso de privacidad · Asesor legal · Responsable de datos | ⬜ sin respuesta |
-| Confirmación final | ⬜ **pendiente** |
+| Artículos | Sí, uno o dos al mes |
+| Aviso de Funcionamiento | Sí, lo tiene |
+| Aviso de Publicidad COFEPRIS | Sí, vigente (pedir número/fecha para el footer si aplica) |
+| Aviso de privacidad | Tiene uno (impreso o digital): pedir el documento para adaptarlo |
+| Asesor legal | No: los borradores legales los revisa la Dra. y el propietario |
+| Responsable de datos personales | Ella, como persona física |
+| Confirmación final | ✅ Confirmado |
 
 ---
 

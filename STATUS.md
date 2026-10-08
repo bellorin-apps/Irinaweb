@@ -6,11 +6,11 @@
 PROYECTO — DRA. IRINA
 
 Avance global
-███░░░░░░░░░░░░░░░░░ 13%
+███░░░░░░░░░░░░░░░░░ 17%
 
 Fase actual
-██████████████░░░░░░ 70%
-Fase 0/12 — Descubrimiento (Fases 2 y 3 avanzadas en paralelo; 9 tareas en REVIEW)
+█████████░ 90%
+Fase 1/12 — Acceso, auditoría y limpieza (Fase 0 cerrada; Fases 2, 3 y 5 avanzadas)
 
 Estado
 🟢 Fase 1 en marcha: backup, dominio, inventario y briefing desplegado; falta canal REST desde cloud (secreto de red) para la limpieza
@@ -20,9 +20,9 @@ Estado
 
 | Métrica | Valor |
 |---|---|
-| Fase | 0/12 |
-| Tareas | 9 / 97 DONE · 12 en REVIEW |
-| Peso completado | 34 / 253 |
+| Fase | 1/12 |
+| Tareas | 12 / 97 DONE · 14 en REVIEW |
+| Peso completado | 43 / 253 |
 | En curso | 0 |
 | Bloqueadas | 1 (red del entorno: bloquea el sitio y casi toda la web) |
 | Pendientes del propietario | 4 (autorizar WPVibe, compartir mini app con la Dra., ampliar red del entorno, decisiones OD-004/005/006) |
@@ -30,7 +30,7 @@ Estado
 ## Estado por área
 
 ```
-Discovery        █████████░  90%
+Discovery        ██████████ 100%
 Auditoría WP     ████████░░  80%
 Investigación    ████░░░░░░  40%
 Arquitectura     ███░░░░░░░  33%
@@ -57,7 +57,7 @@ Launch           ░░░░░░░░░░   0%
 - Codex: auditoría de investigaciones, STRATEGY, SITEMAP, ARCHITECTURE y PLUGINS (`BATON.md`)
 - Claude: scaffold de `dra-irina-core` y `irina-gonzalez` creado y en verde con PHPCS (5.1, 5.2, 5.5 DOING; no cuentan hasta probarse en WordPress real)
 
-- Briefing de la Dra.: 72 respuestas recibidas; faltan horario, bloque legal y confirmación final
+- Checkpoint 1 cerrado: briefing de la Dra. confirmado (80 respuestas)
 - Plugin 0.2.1 y tema activos; datos del consultorio cargados; Rank Math configurado; Elementor Pro activo (licencia pendiente)
 - Siguiente: Fase 4 (sistema visual y mockups del núcleo) hacia Checkpoint 2
 - Esperando acceso técnico al WordPress para iniciar Fase 1
@@ -77,11 +77,11 @@ Launch           ░░░░░░░░░░   0%
 
 ## Riesgo de entrega
 
-🟡 Medio — no hay fotografía profesional utilizable de la Dra. (la sesión de 2022 es personal) y falta confirmación médica de credenciales/servicios.
+🟡 Medio — falta la sesión fotográfica profesional (prevista en 2 a 4 semanas); el resto de dependencias del propietario está cubierto.
 
 ## Entrega estimada
 
-Aún no confiable. Motivo: faltan respuestas del Checkpoint 1, acceso técnico al WordPress y fotografía.
+Ventana preliminar: núcleo visual (Checkpoint 3) en 2 a 3 semanas de trabajo; sitio completo listo para pre-launch en 6 a 8 semanas, condicionado a fotos y revisión médica de contenidos. Confianza: Baja (sin historial de velocidad suficiente).
 
 ## Dependencias externas (no cuentan como trabajo técnico)
 

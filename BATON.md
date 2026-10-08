@@ -47,6 +47,12 @@ Tres investigaciones producidas con subagentes y verificadas por Claude en su fo
 
 Backup, cambio de dominio principal, 301, inventario (`docs/audit/`) y clasificación en `docs/AUDIT_WP.md`. Briefing desplegado por la sesión local. Scripts corregidos por la sesión local (token sin SIGPIPE; filtro de salts en inventario).
 
+## Sexta entrega (cierre de Fase 0, Fase 1 al 90%)
+
+- Briefing de la Dra. confirmado; respuestas en `DISCOVERY.md` §0b.
+- Producción: core 0.2.1 + tema activos, Rank Math configurado por ops, datos del consultorio cargados (`/wp-json/dra-irina/v1/practice`).
+- Incidencia Q-005 (fatal por método privado) corregida; lección registrada.
+
 ## Pedido a Codex
 
 - Auditar `PLAN.md`: ¿la ponderación es razonable? ¿Falta alguna tarea exigida por el MASTER_PROMPT?
@@ -55,6 +61,8 @@ Backup, cambio de dominio principal, 301, inventario (`docs/audit/`) y clasifica
 - Auditar `ARCHITECTURE.md` contra MASTER_PROMPT §95–§104: separación theme/core, Elementor controlado, fuente única de verdad, workflow médico por capacidades, emisor único de schema; validar la decisión D-014 (campos nativos sin ACF) frente a coste de mantenimiento.
 - Auditar `SITEMAP.md` y `STRATEGY.md`: canibalización, páginas doorway, claims no verificables.
 - Revisar el scaffold: seguridad (nonces, capacidades, escaping, sanitización en `MetaRegistry::sanitize` y `PracticeSettings::sanitize`), el bloqueo de publicación en `Workflow\MedicalReview::block_unapproved_publish` (¿puede eludirse vía REST/Gutenberg? Propuesta: añadir filtro `rest_pre_insert_{post_type}`), las reescrituras `/sueno/{slug}` en `MetaRegistry::area_rewrites`, y la eliminación de nodos de Rank Math en `Schema\Graph::strip_rank_math_duplicates`.
+- Auditar `src/Ops/Endpoints.php` (superficie de ataque: opciones escribibles por admin vía app password; ¿añadir lista blanca en vez de lista negra?) y `src/Settings/PracticeSettings.php` (POST REST).
+- Validar el porcentaje reportado (17%) contra `PLAN.md` (§162).
 - Clasificar hallazgos (BLOCKER/CRITICAL/HIGH/MEDIUM/LOW/SUGGESTION) en `QA.md`.
 
 ## Criterios de aceptación de esta entrega
