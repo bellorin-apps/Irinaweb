@@ -11,3 +11,10 @@
 - Fase 2/3: `STRATEGY.md`, `SITEMAP.md`, `ARCHITECTURE.md`, `PLUGINS.md` v0.1 (REVIEW). Decisiones D-013..D-017, OD-006. Avance 11%.
 - Fase 5 scaffold: plugin `dra-irina-core` (CPT, taxonomías, meta con schema REST, ajustes del consultorio, workflow médico, schema JSON-LD, shortcodes, tracking) y child theme `irina-gonzalez` (tokens, base, componentes, sueño, JS, templates placeholder). PHPCS en verde.
 - Bloqueo registrado: acceso de red del entorno a drairinagonzalez.com y doctoralia.com.mx.
+
+## 2026-10-08
+
+- Checkpoint 1 cerrado: briefing de la Dra. confirmado; horario, hospitales, redes y Doctoralia incorporados; datos cargados en `PracticeSettings` y Physician JSON-LD en vivo.
+- Plugin `dra-irina-core` 0.2.1 (ops endpoints corregidos, Q-005) y tema activos en producción; Rank Math configurado; PHP 8.4; Elementor Pro instalado.
+- Fase 4: sistema visual (tokens, componentes, sub-marca Sueño), `DESIGN_SYSTEM.md` v0.1 y maquetas Home / Dra. Irina / apnea / artículo en `tools/preview/`; `tools/deploy/deploy-preview.sh` para publicarlas en `/preview/` (noindex). Avance 20%.
+- `env.example.sh`: `SITE_URL` canónico sin www.

@@ -1,24 +1,24 @@
 # NEXT — Siguiente trabajo
 
-Última actualización: 2026-10-07
+Última actualización: 2026-10-08
 
 ## Prioridad 1 — Desbloqueadores (propietario)
+
+- [ ] **Checkpoint 2:** revisar `https://drairinagonzalez.com/preview/` (Home, Dra. Irina, apnea, artículo) en escritorio y móvil y aprobar o corregir la dirección visual.
+- [ ] Adobe Fonts: confirmar que el kit `nlo5pss` tiene autorizado el dominio `drairinagonzalez.com` (si Iskra no carga en /preview/, es esto).
 
 - [x] Briefing confirmado por la Dra. (2026-10-08).
 - [x] Horario, hospitales, redes y Doctoralia confirmados (2026-10-08); sin laboratorio externo.
 - [ ] Pendiente de la Dra.: aviso de privacidad actual y número/constancia del Aviso de Publicidad (no urgente).
 - [ ] Conectar la licencia de Elementor Pro (wp-admin → Elementor → Licencia).
 
-- [ ] **Seguir `docs/RUNBOOK_RESET.md` pasos 1–2** (backup descargado; contraseña de aplicación + secretos + red amplia). Claude ejecuta 3, 4 y 6 por REST.
+- [x] Reset ejecutado según `docs/RUNBOOK_RESET.md` (2026-10-07/08).
 - [x] Adobe Fonts kit `nlo5pss` configurado en el tema.
 
-- [ ] Responder `DISCOVERY.md` → Lote 1 (preguntas marcadas ⚡).
-- [ ] Red del entorno cloud: subir el nivel de acceso (la lista de dominios bloqueados incluye wordpress.org y todos los referentes); como mínimo permitir `drairinagonzalez.com`, `www.drairinagonzalez.com`, `wordpress.org`, `api.wordpress.org`, `downloads.wordpress.org`, `fonts.googleapis.com`, `fonts.gstatic.com`, `doctoralia.com.mx`.
-- [ ] Crear en wp-admin (Usuarios → tu perfil → Contraseñas de aplicación) una contraseña de aplicación "claude-ops" y guardarla como secretos del entorno: `IRINA_WP_URL=https://www.drairinagonzalez.com`, `IRINA_WP_USER`, `IRINA_WP_APP_PASSWORD`.
-- [ ] Hostinger hPanel → Git: desplegar rama `deploy/core` en `public_html/wp-content/plugins/dra-irina-core` y `deploy/theme` en `public_html/wp-content/themes/irina-gonzalez` (Claude genera las ramas).
+- [x] Lotes de discovery respondidos; red del entorno ampliada; secreto de red REST configurado; despliegue de código por `tools/deploy/deploy-code.sh` desde la sesión local.
 - [x] Briefing desplegado en `/briefing/` (sesión local, 2026-10-07). Enviar la URL con token a la Dra.
 - [x] Links se conserva (D-023); canónico sin www (D-022); Site Kit fuera (D-024).
-- [ ] Subir PHP a 8.4 en hPanel y verificar /op (D-025) — en curso.
+- [x] PHP 8.4 activo; /op verificado (D-025).
 - [x] OD-004, OD-005, OD-006 y dominio canónico (D-020) decididos.
 
 ## Prioridad 2 — Claude (sin dependencias del propietario)
@@ -31,16 +31,19 @@
 - [x] Scaffold de `wp-content/plugins/dra-irina-core` y `wp-content/themes/irina-gonzalez` con PHPCS (5.1, 5.2, 5.5 en DOING).
 - [ ] Meta boxes con repetidores (FAQ, fuentes, síntomas) en `Fields/MetaBoxes.php`.
 - [ ] Probar plugin y tema en un WordPress local del contenedor (wp-env o descarga directa si la red lo permite) antes de staging.
-- [ ] Propuesta de sistema digital derivado de la identidad existente (4.1) — paleta, tipografía candidata, favicon desde `Logo-Favicon.ai`.
-- [ ] Preparar scaffold de `irina-gonzalez` (child theme) y `dra-irina-core` (plugin) en el repo, sin desplegar.
+- [x] Sistema visual (4.1–4.4, 4.6) en REVIEW; maquetas (4.5) en despliegue.
+- [ ] Exportar favicon y logo SVG desde `Logo-Favicon.ai` (tras CP2).
+- [ ] Tras CP2: Fase 6 en WordPress (header, footer, Home con datos del core, templates).
 
-## Prioridad 3 — En cuanto haya acceso al WP
+## Prioridad 3 — Fase 1 restante
 
-- [ ] Fase 1 completa: inventario, auditoría pública, Search Console, backup verificado, staging.
-- [ ] Clasificación KEEP / REPLACE / REMOVE / INVESTIGATE.
+- [ ] 1.3 auditoría pública (robots, sitemap, headers, CWV baseline) y 1.4 Search Console (sitemap sin www).
+- [ ] 1.7 staging protegido (evaluar si `/preview/` + Elementor en borrador basta hasta Fase 6).
 - [ ] Codex: auditoría de seguridad del estado actual.
 
 ## Codex — próxima auditoría solicitada
+
+- Auditar `DESIGN_SYSTEM.md` y `tools/preview/` (contraste, semántica, jerarquía, coherencia con tokens del tema).
 
 - Revisar `PLAN.md` (ponderación y Definition of Done) y `DISCOVERY.md` (que no se haya inventado ningún dato: todo debe tener fuente).
 - Auditar `docs/REFERENCE_RESEARCH.md`, `docs/COMPETITION_MONTERREY.md` y `KEYWORDS.md`: verificar que ninguna afirmación sin fuente se presente como hecho, que no haya volúmenes inventados y que las propuestas de URL no canibalicen.

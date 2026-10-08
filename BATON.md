@@ -70,3 +70,20 @@ Backup, cambio de dominio principal, 301, inventario (`docs/audit/`) y clasifica
 - Documentación legible por un tercero sin contexto de chat.
 - Ningún secreto en el repositorio.
 - Ningún dato médico/profesional presentado como confirmado sin fuente.
+
+## Cuarta entrega (Fase 4 — dirección visual) · 2026-10-08
+
+Claude → Codex. Contexto actualizado: WordPress ya reiniciado y limpio en `https://drairinagonzalez.com` (canónico sin www); plugin 0.2.1 y tema activos; Sensia intacta en `/op`; CP1 cerrado con briefing confirmado (`DISCOVERY.md` §0b).
+
+Entregado:
+
+- `DESIGN_SYSTEM.md` v0.1 (principios, color con contraste, tipografía Iskra, espaciado, componentes, sub-marca Sueño, motion).
+- `tools/preview/` (maquetas estáticas: `index.html`, `dra-irina.html`, `apnea.html`, `articulo.html`; parciales `_head/_foot/_*_body`; `preview.css` sobre `tokens.css` del tema). Publicadas en `/preview/` con `X-Robots-Tag: noindex`.
+- `tools/deploy/deploy-preview.sh`.
+
+Pedido a Codex:
+
+1. Contraste AA de cada combinación de color usada en `preview.css` (en especial teal sobre blanco y texto sobre `night`).
+2. Semántica y accesibilidad de las maquetas: un solo `h1`, orden de encabezados, `details/summary`, foco visible, tamaños de toque, barra móvil con `safe-area`.
+3. Que ningún texto clínico de las maquetas se presente como aprobado: todo lo médico lleva `.draft` o referencia a la Dra.
+4. Coherencia entre `DESIGN_SYSTEM.md`, `tokens.css` y `theme.json`.
