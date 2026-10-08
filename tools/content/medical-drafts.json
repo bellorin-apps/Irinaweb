@@ -1,0 +1,438 @@
+{
+ "condicion": [
+  {
+   "slug": "otitis",
+   "titulo": "Otitis",
+   "area": "orl",
+   "zona": "oido",
+   "resumen": "Infección o inflamación del oído, frecuente en niños pero también en adultos. Puede ser del oído externo o del oído medio.",
+   "sintomas": [
+    "Dolor de oído",
+    "Sensación de oído tapado",
+    "Fiebre, sobre todo en niños",
+    "Salida de líquido por el oído"
+   ],
+   "cuando_consultar": [
+    "Dolor intenso o que dura más de dos días",
+    "Fiebre alta o salida de líquido",
+    "Infecciones de oído que se repiten"
+   ],
+   "tratamientos": [],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "tapon-de-cerumen",
+   "titulo": "Tapón de cerumen",
+   "area": "orl",
+   "zona": "oido",
+   "resumen": "Acumulación de cera que obstruye el conducto auditivo. El cerumen protege el oído; el problema aparece cuando se compacta, muchas veces por el uso de cotonetes.",
+   "sintomas": [
+    "Oído tapado",
+    "Escuchar menos de un lado",
+    "Zumbido",
+    "Molestia o picazón"
+   ],
+   "cuando_consultar": [
+    "Oído tapado que no mejora",
+    "Dolor o pérdida de audición",
+    "Antes de intentar retirarlo en casa"
+   ],
+   "tratamientos": [],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "hipoacusia",
+   "titulo": "Hipoacusia (pérdida de audición)",
+   "area": "orl",
+   "zona": "oido",
+   "resumen": "Disminución de la audición en uno o ambos oídos, de aparición gradual o súbita. El otorrinolaringólogo identifica la causa y define el tratamiento médico, quirúrgico o de apoyo auditivo.",
+   "sintomas": [
+    "Pedir que repitan lo que dicen",
+    "Subir el volumen de la televisión",
+    "Escuchar menos de un oído",
+    "Dificultad para seguir conversaciones con ruido"
+   ],
+   "cuando_consultar": [
+    "Pérdida de audición repentina (en horas o días): valoración pronta",
+    "Pérdida progresiva que afecta la vida diaria",
+    "Pérdida de audición en niños"
+   ],
+   "tratamientos": [],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "tinnitus",
+   "titulo": "Tinnitus (acúfeno)",
+   "area": "orl",
+   "zona": "oido",
+   "resumen": "Percepción de un zumbido, pitido o silbido sin una fuente externa de sonido. Tiene causas diversas y el primer paso es descartar las que tienen tratamiento.",
+   "sintomas": [
+    "Zumbido o pitido constante o intermitente",
+    "Más notorio en silencio o por la noche",
+    "Puede acompañarse de pérdida de audición"
+   ],
+   "cuando_consultar": [
+    "Tinnitus de un solo oído",
+    "Aparición súbita o con pérdida de audición",
+    "Cuando afecta el sueño o la concentración"
+   ],
+   "tratamientos": [],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "vertigo",
+   "titulo": "Vértigo",
+   "area": "orl",
+   "zona": "oido",
+   "resumen": "Sensación de que todo gira, con frecuencia originada en el oído interno. Se diferencia del mareo inespecífico y se estudia con exploración y maniobras en consultorio.",
+   "sintomas": [
+    "Sensación de giro al mover la cabeza o al acostarse",
+    "Náusea",
+    "Inestabilidad al caminar",
+    "Puede acompañarse de zumbido o pérdida de audición"
+   ],
+   "cuando_consultar": [
+    "Primer episodio de vértigo",
+    "Episodios que se repiten",
+    "Vértigo con pérdida de audición, dolor de cabeza intenso o alteraciones neurológicas: urgencia"
+   ],
+   "tratamientos": [],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "rinitis",
+   "titulo": "Rinitis",
+   "area": "orl",
+   "zona": "nariz",
+   "resumen": "Inflamación de la mucosa nasal, alérgica o no alérgica. Produce nariz tapada, estornudos y escurrimiento, y afecta el sueño y la calidad de vida.",
+   "sintomas": [
+    "Nariz tapada",
+    "Estornudos en salva",
+    "Escurrimiento nasal claro",
+    "Picazón de nariz y ojos"
+   ],
+   "cuando_consultar": [
+    "Síntomas la mayor parte del año",
+    "Cuando afectan el sueño o el rendimiento",
+    "Si los medicamentos de venta libre no controlan los síntomas"
+   ],
+   "tratamientos": [
+    "turbinoplastia"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "sinusitis",
+   "titulo": "Sinusitis",
+   "area": "orl",
+   "zona": "nariz",
+   "resumen": "Inflamación de los senos paranasales, aguda o crónica. Se valora la causa (infección, alergia, obstrucción anatómica, pólipos) con endoscopia nasal.",
+   "sintomas": [
+    "Presión o dolor en la cara",
+    "Nariz tapada y secreción espesa",
+    "Pérdida de olfato",
+    "Tos y dolor de cabeza"
+   ],
+   "cuando_consultar": [
+    "Síntomas que duran más de diez días o empeoran",
+    "Sinusitis que se repite varias veces al año",
+    "Pérdida de olfato persistente"
+   ],
+   "tratamientos": [
+    "cirugia-endoscopica-nasal"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "desviacion-de-tabique-nasal",
+   "titulo": "Desviación del tabique nasal",
+   "area": "orl",
+   "zona": "nariz",
+   "resumen": "El tabique separa las dos fosas nasales; cuando está desviado obstruye el paso del aire por uno o ambos lados y puede contribuir al ronquido.",
+   "sintomas": [
+    "Nariz tapada de un lado o alternante",
+    "Respirar por la boca",
+    "Ronquido",
+    "Sinusitis de repetición"
+   ],
+   "cuando_consultar": [
+    "Obstrucción nasal constante",
+    "Ronquido o mal descanso",
+    "Sangrados nasales frecuentes"
+   ],
+   "tratamientos": [
+    "septoplastia"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "polipos-nasales",
+   "titulo": "Pólipos nasales",
+   "area": "orl",
+   "zona": "nariz",
+   "resumen": "Crecimientos benignos de la mucosa nasal, asociados con inflamación crónica. Obstruyen la nariz y disminuyen el olfato.",
+   "sintomas": [
+    "Nariz tapada progresiva",
+    "Pérdida de olfato",
+    "Secreción nasal",
+    "Sensación de presión"
+   ],
+   "cuando_consultar": [
+    "Obstrucción nasal que no mejora",
+    "Pérdida de olfato",
+    "Sinusitis crónica"
+   ],
+   "tratamientos": [
+    "cirugia-endoscopica-nasal"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "epistaxis",
+   "titulo": "Sangrado nasal (epistaxis)",
+   "area": "orl",
+   "zona": "nariz",
+   "resumen": "Sangrado por la nariz. La mayoría de los casos son leves y se originan en la parte anterior del tabique; se estudian cuando se repiten.",
+   "sintomas": [
+    "Sangrado por una fosa nasal",
+    "Sangrado que se repite",
+    "Sangrado tras resequedad o traumatismo"
+   ],
+   "cuando_consultar": [
+    "Sangrado abundante que no se detiene en 20 minutos: urgencia",
+    "Sangrados frecuentes",
+    "Sangrado en personas que toman anticoagulantes"
+   ],
+   "tratamientos": [],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "amigdalitis",
+   "titulo": "Amigdalitis",
+   "area": "orl",
+   "zona": "garganta",
+   "resumen": "Infección o inflamación de las amígdalas. Cuando se repite muchas veces al año o las amígdalas crecen demasiado, se valora el tratamiento quirúrgico.",
+   "sintomas": [
+    "Dolor de garganta",
+    "Fiebre",
+    "Dificultad para tragar",
+    "Amígdalas grandes o con placas"
+   ],
+   "cuando_consultar": [
+    "Varios episodios al año",
+    "Amígdalas grandes con ronquido en niños",
+    "Dificultad para respirar o tragar"
+   ],
+   "tratamientos": [
+    "amigdalas-y-adenoides"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "reflujo-laringofaringeo",
+   "titulo": "Reflujo laringofaríngeo",
+   "area": "orl",
+   "zona": "garganta",
+   "resumen": "El contenido del estómago llega a la garganta y la laringe e irrita la mucosa; a menudo sin acidez. Se le llama reflujo silencioso.",
+   "sintomas": [
+    "Carraspera constante",
+    "Sensación de algo en la garganta",
+    "Ronquera",
+    "Tos crónica"
+   ],
+   "cuando_consultar": [
+    "Ronquera que dura más de tres semanas",
+    "Carraspera o sensación de cuerpo extraño persistentes",
+    "Tos crónica sin causa"
+   ],
+   "tratamientos": [],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "ronquido",
+   "titulo": "Ronquido",
+   "area": "sueno",
+   "zona": "sueno",
+   "resumen": "El ronquido es el ruido que produce el aire al pasar por una vía aérea estrecha durante el sueño. Puede ser solo molesto o ser el signo visible de una apnea del sueño.",
+   "sintomas": [
+    "Ronquido fuerte y frecuente",
+    "Pausas en la respiración que otros notan",
+    "Sueño poco reparador",
+    "Boca seca al despertar"
+   ],
+   "cuando_consultar": [
+    "Cuando la pareja o la familia notan pausas en la respiración",
+    "Somnolencia durante el día",
+    "Ronquido en niños"
+   ],
+   "tratamientos": [
+    "estudio-del-sueno",
+    "cirugia-de-ronquido-y-apnea"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "apnea-obstructiva-del-sueno",
+   "titulo": "Apnea obstructiva del sueño",
+   "area": "sueno",
+   "zona": "sueno",
+   "resumen": "Qué es, cómo se diagnostica y qué opciones de tratamiento existen, explicado por una otorrinolaringólogo especialista en sueño.",
+   "sintomas": [
+    "Ronquido fuerte con pausas que otros notan",
+    "Sueño no reparador y somnolencia durante el día",
+    "Dolor de cabeza al despertar, boca seca",
+    "Dificultad para concentrarse, irritabilidad"
+   ],
+   "cuando_consultar": [
+    "Si roncas y alguien ha visto que dejas de respirar",
+    "Si te despiertas cansado a pesar de dormir suficiente",
+    "Si tienes presión alta difícil de controlar"
+   ],
+   "tratamientos": [
+    "estudio-del-sueno",
+    "cpap",
+    "cirugia-de-ronquido-y-apnea",
+    "dispositivo-de-avance-mandibular"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  }
+ ],
+ "tratamiento": [
+  {
+   "slug": "septoplastia",
+   "titulo": "Septoplastia",
+   "area": "orl",
+   "zona": "nariz",
+   "tipo": "cirugia",
+   "oferta": "ofrece",
+   "resumen": "Cirugía que corrige la desviación del tabique nasal para mejorar el paso del aire. Se realiza por dentro de la nariz, sin cicatrices visibles.",
+   "candidatos": [
+    "Obstrucción nasal por tabique desviado que no mejora con tratamiento médico"
+   ],
+   "resuelve": [
+    "desviacion-de-tabique-nasal"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "turbinoplastia",
+   "titulo": "Turbinoplastia",
+   "area": "orl",
+   "zona": "nariz",
+   "tipo": "cirugia",
+   "oferta": "ofrece",
+   "resumen": "Reducción de los cornetes nasales cuando crecen y obstruyen la nariz, con frecuencia por rinitis crónica.",
+   "candidatos": [
+    "Nariz tapada por cornetes grandes que no responde a medicamentos"
+   ],
+   "resuelve": [
+    "rinitis"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "amigdalas-y-adenoides",
+   "titulo": "Cirugía de amígdalas y adenoides",
+   "area": "orl",
+   "zona": "garganta",
+   "tipo": "cirugia",
+   "oferta": "ofrece",
+   "resumen": "Amigdalectomía y adenoidectomía: retiro de amígdalas y adenoides cuando causan infecciones repetidas u obstruyen la respiración, sobre todo en niños.",
+   "candidatos": [
+    "Amigdalitis de repetición",
+    "Amígdalas o adenoides grandes con ronquido o apnea en niños"
+   ],
+   "resuelve": [
+    "amigdalitis"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "cirugia-endoscopica-nasal",
+   "titulo": "Cirugía endoscópica nasal",
+   "area": "orl",
+   "zona": "nariz",
+   "tipo": "cirugia",
+   "oferta": "ofrece",
+   "resumen": "Cirugía de los senos paranasales por vía endoscópica, sin incisiones externas, para sinusitis crónica o pólipos. [PENDIENTE DE CONFIRMACIÓN: la Dra. confirma si la ofrece]",
+   "candidatos": [
+    "Sinusitis crónica o pólipos que no mejoran con tratamiento médico"
+   ],
+   "resuelve": [
+    "sinusitis",
+    "polipos-nasales"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "estudio-del-sueno",
+   "titulo": "Estudio del sueño",
+   "area": "sueno",
+   "zona": "sueno",
+   "tipo": "estudio",
+   "oferta": "ofrece",
+   "resumen": "Poligrafía respiratoria realizada en casa e interpretada por la propia Dra.: registra respiración, oxígeno y ronquido durante la noche para confirmar y graduar la apnea.",
+   "candidatos": [
+    "Ronquido con pausas",
+    "Somnolencia diurna",
+    "Antes de decidir un tratamiento de ronquido o apnea"
+   ],
+   "resuelve": [
+    "ronquido",
+    "apnea-obstructiva-del-sueno"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "cpap",
+   "titulo": "CPAP",
+   "area": "sueno",
+   "zona": "sueno",
+   "tipo": "terapia",
+   "oferta": "ofrece",
+   "resumen": "Equipo que mantiene abierta la vía aérea con presión de aire durante el sueño. La Dra. indica, titula y da seguimiento para lograr adaptación y uso constante.",
+   "candidatos": [
+    "Apnea obstructiva del sueño confirmada por estudio"
+   ],
+   "resuelve": [
+    "apnea-obstructiva-del-sueno"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "cirugia-de-ronquido-y-apnea",
+   "titulo": "Cirugía de ronquido y apnea",
+   "area": "sueno",
+   "zona": "sueno",
+   "tipo": "cirugia",
+   "oferta": "ofrece",
+   "resumen": "Faringoplastia con suturas barbadas y cirugía nasal para ensanchar la vía aérea cuando la anatomía lo indica. La endoscopia de sueño ayuda a localizar dónde se cierra.",
+   "candidatos": [
+    "Ronquido o apnea con obstrucción localizada en paladar o nariz",
+    "Personas que no toleran el CPAP, según valoración"
+   ],
+   "resuelve": [
+    "ronquido",
+    "apnea-obstructiva-del-sueno"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  },
+  {
+   "slug": "dispositivo-de-avance-mandibular",
+   "titulo": "Dispositivo de avance mandibular",
+   "area": "sueno",
+   "zona": "sueno",
+   "tipo": "terapia",
+   "oferta": "refiere",
+   "resumen": "Férula que adelanta la mandíbula durante el sueño para abrir la vía aérea. La Dra. lo indica y lo coordina con un odontólogo especializado.",
+   "candidatos": [
+    "Ronquido o apnea leve a moderada, según valoración"
+   ],
+   "resuelve": [
+    "ronquido",
+    "apnea-obstructiva-del-sueno"
+   ],
+   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+  }
+ ]
+}

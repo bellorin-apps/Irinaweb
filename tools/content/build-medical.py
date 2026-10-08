@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+"""Borradores de padecimientos y tratamientos (CPT condicion/tratamiento) para que la Dra. los revise.
+Se crean en estado DRAFT y estado_medico=borrador; el gate del plugin impide publicarlos sin aprobación médica.
+Contenido: resumen orientativo y listas generales de síntomas y señales de consulta; nada de cifras, promesas ni indicaciones individuales."""
+import json, pathlib
+D = "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+cond = [
+ # slug, titulo, area, zona, resumen, sintomas, cuando_consultar, tratamientos_relacionados(slugs)
+ ("otitis","Otitis","orl","oido","Infección o inflamación del oído, frecuente en niños pero también en adultos. Puede ser del oído externo o del oído medio.",
+  ["Dolor de oído","Sensación de oído tapado","Fiebre, sobre todo en niños","Salida de líquido por el oído"],["Dolor intenso o que dura más de dos días","Fiebre alta o salida de líquido","Infecciones de oído que se repiten"],[]),
+ ("tapon-de-cerumen","Tapón de cerumen","orl","oido","Acumulación de cera que obstruye el conducto auditivo. El cerumen protege el oído; el problema aparece cuando se compacta, muchas veces por el uso de cotonetes.",
+  ["Oído tapado","Escuchar menos de un lado","Zumbido","Molestia o picazón"],["Oído tapado que no mejora","Dolor o pérdida de audición","Antes de intentar retirarlo en casa"],[]),
+ ("hipoacusia","Hipoacusia (pérdida de audición)","orl","oido","Disminución de la audición en uno o ambos oídos, de aparición gradual o súbita. El otorrinolaringólogo identifica la causa y define el tratamiento médico, quirúrgico o de apoyo auditivo.",
+  ["Pedir que repitan lo que dicen","Subir el volumen de la televisión","Escuchar menos de un oído","Dificultad para seguir conversaciones con ruido"],["Pérdida de audición repentina (en horas o días): valoración pronta","Pérdida progresiva que afecta la vida diaria","Pérdida de audición en niños"],[]),
+ ("tinnitus","Tinnitus (acúfeno)","orl","oido","Percepción de un zumbido, pitido o silbido sin una fuente externa de sonido. Tiene causas diversas y el primer paso es descartar las que tienen tratamiento.",
+  ["Zumbido o pitido constante o intermitente","Más notorio en silencio o por la noche","Puede acompañarse de pérdida de audición"],["Tinnitus de un solo oído","Aparición súbita o con pérdida de audición","Cuando afecta el sueño o la concentración"],[]),
+ ("vertigo","Vértigo","orl","oido","Sensación de que todo gira, con frecuencia originada en el oído interno. Se diferencia del mareo inespecífico y se estudia con exploración y maniobras en consultorio.",
+  ["Sensación de giro al mover la cabeza o al acostarse","Náusea","Inestabilidad al caminar","Puede acompañarse de zumbido o pérdida de audición"],["Primer episodio de vértigo","Episodios que se repiten","Vértigo con pérdida de audición, dolor de cabeza intenso o alteraciones neurológicas: urgencia"],[]),
+ ("rinitis","Rinitis","orl","nariz","Inflamación de la mucosa nasal, alérgica o no alérgica. Produce nariz tapada, estornudos y escurrimiento, y afecta el sueño y la calidad de vida.",
+  ["Nariz tapada","Estornudos en salva","Escurrimiento nasal claro","Picazón de nariz y ojos"],["Síntomas la mayor parte del año","Cuando afectan el sueño o el rendimiento","Si los medicamentos de venta libre no controlan los síntomas"],["turbinoplastia"]),
+ ("sinusitis","Sinusitis","orl","nariz","Inflamación de los senos paranasales, aguda o crónica. Se valora la causa (infección, alergia, obstrucción anatómica, pólipos) con endoscopia nasal.",
+  ["Presión o dolor en la cara","Nariz tapada y secreción espesa","Pérdida de olfato","Tos y dolor de cabeza"],["Síntomas que duran más de diez días o empeoran","Sinusitis que se repite varias veces al año","Pérdida de olfato persistente"],["cirugia-endoscopica-nasal"]),
+ ("desviacion-de-tabique-nasal","Desviación del tabique nasal","orl","nariz","El tabique separa las dos fosas nasales; cuando está desviado obstruye el paso del aire por uno o ambos lados y puede contribuir al ronquido.",
+  ["Nariz tapada de un lado o alternante","Respirar por la boca","Ronquido","Sinusitis de repetición"],["Obstrucción nasal constante","Ronquido o mal descanso","Sangrados nasales frecuentes"],["septoplastia"]),
+ ("polipos-nasales","Pólipos nasales","orl","nariz","Crecimientos benignos de la mucosa nasal, asociados con inflamación crónica. Obstruyen la nariz y disminuyen el olfato.",
+  ["Nariz tapada progresiva","Pérdida de olfato","Secreción nasal","Sensación de presión"],["Obstrucción nasal que no mejora","Pérdida de olfato","Sinusitis crónica"],["cirugia-endoscopica-nasal"]),
+ ("epistaxis","Sangrado nasal (epistaxis)","orl","nariz","Sangrado por la nariz. La mayoría de los casos son leves y se originan en la parte anterior del tabique; se estudian cuando se repiten.",
+  ["Sangrado por una fosa nasal","Sangrado que se repite","Sangrado tras resequedad o traumatismo"],["Sangrado abundante que no se detiene en 20 minutos: urgencia","Sangrados frecuentes","Sangrado en personas que toman anticoagulantes"],[]),
+ ("amigdalitis","Amigdalitis","orl","garganta","Infección o inflamación de las amígdalas. Cuando se repite muchas veces al año o las amígdalas crecen demasiado, se valora el tratamiento quirúrgico.",
+  ["Dolor de garganta","Fiebre","Dificultad para tragar","Amígdalas grandes o con placas"],["Varios episodios al año","Amígdalas grandes con ronquido en niños","Dificultad para respirar o tragar"],["amigdalas-y-adenoides"]),
+ ("reflujo-laringofaringeo","Reflujo laringofaríngeo","orl","garganta","El contenido del estómago llega a la garganta y la laringe e irrita la mucosa; a menudo sin acidez. Se le llama reflujo silencioso.",
+  ["Carraspera constante","Sensación de algo en la garganta","Ronquera","Tos crónica"],["Ronquera que dura más de tres semanas","Carraspera o sensación de cuerpo extraño persistentes","Tos crónica sin causa"],[]),
+ ("ronquido","Ronquido","sueno","sueno","El ronquido es el ruido que produce el aire al pasar por una vía aérea estrecha durante el sueño. Puede ser solo molesto o ser el signo visible de una apnea del sueño.",
+  ["Ronquido fuerte y frecuente","Pausas en la respiración que otros notan","Sueño poco reparador","Boca seca al despertar"],["Cuando la pareja o la familia notan pausas en la respiración","Somnolencia durante el día","Ronquido en niños"],["estudio-del-sueno","cirugia-de-ronquido-y-apnea"]),
+ ("apnea-obstructiva-del-sueno","Apnea obstructiva del sueño","sueno","sueno","Qué es, cómo se diagnostica y qué opciones de tratamiento existen, explicado por una otorrinolaringólogo especialista en sueño.",
+  ["Ronquido fuerte con pausas que otros notan","Sueño no reparador y somnolencia durante el día","Dolor de cabeza al despertar, boca seca","Dificultad para concentrarse, irritabilidad"],["Si roncas y alguien ha visto que dejas de respirar","Si te despiertas cansado a pesar de dormir suficiente","Si tienes presión alta difícil de controlar"],["estudio-del-sueno","cpap","cirugia-de-ronquido-y-apnea","dispositivo-de-avance-mandibular"]),
+]
+trat = [
+ # slug, titulo, area, zona, tipo, oferta, resumen, candidatos, que_resuelve(slugs)
+ ("septoplastia","Septoplastia","orl","nariz","cirugia","ofrece","Cirugía que corrige la desviación del tabique nasal para mejorar el paso del aire. Se realiza por dentro de la nariz, sin cicatrices visibles.",["Obstrucción nasal por tabique desviado que no mejora con tratamiento médico"],["desviacion-de-tabique-nasal"]),
+ ("turbinoplastia","Turbinoplastia","orl","nariz","cirugia","ofrece","Reducción de los cornetes nasales cuando crecen y obstruyen la nariz, con frecuencia por rinitis crónica.",["Nariz tapada por cornetes grandes que no responde a medicamentos"],["rinitis"]),
+ ("amigdalas-y-adenoides","Cirugía de amígdalas y adenoides","orl","garganta","cirugia","ofrece","Amigdalectomía y adenoidectomía: retiro de amígdalas y adenoides cuando causan infecciones repetidas u obstruyen la respiración, sobre todo en niños.",["Amigdalitis de repetición","Amígdalas o adenoides grandes con ronquido o apnea en niños"],["amigdalitis"]),
+ ("cirugia-endoscopica-nasal","Cirugía endoscópica nasal","orl","nariz","cirugia","ofrece","Cirugía de los senos paranasales por vía endoscópica, sin incisiones externas, para sinusitis crónica o pólipos. [PENDIENTE DE CONFIRMACIÓN: la Dra. confirma si la ofrece]",["Sinusitis crónica o pólipos que no mejoran con tratamiento médico"],["sinusitis","polipos-nasales"]),
+ ("estudio-del-sueno","Estudio del sueño","sueno","sueno","estudio","ofrece","Poligrafía respiratoria realizada en casa e interpretada por la propia Dra.: registra respiración, oxígeno y ronquido durante la noche para confirmar y graduar la apnea.",["Ronquido con pausas","Somnolencia diurna","Antes de decidir un tratamiento de ronquido o apnea"],["ronquido","apnea-obstructiva-del-sueno"]),
+ ("cpap","CPAP","sueno","sueno","terapia","ofrece","Equipo que mantiene abierta la vía aérea con presión de aire durante el sueño. La Dra. indica, titula y da seguimiento para lograr adaptación y uso constante.",["Apnea obstructiva del sueño confirmada por estudio"],["apnea-obstructiva-del-sueno"]),
+ ("cirugia-de-ronquido-y-apnea","Cirugía de ronquido y apnea","sueno","sueno","cirugia","ofrece","Faringoplastia con suturas barbadas y cirugía nasal para ensanchar la vía aérea cuando la anatomía lo indica. La endoscopia de sueño ayuda a localizar dónde se cierra.",["Ronquido o apnea con obstrucción localizada en paladar o nariz","Personas que no toleran el CPAP, según valoración"],["ronquido","apnea-obstructiva-del-sueno"]),
+ ("dispositivo-de-avance-mandibular","Dispositivo de avance mandibular","sueno","sueno","terapia","refiere","Férula que adelanta la mandíbula durante el sueño para abrir la vía aérea. La Dra. lo indica y lo coordina con un odontólogo especializado.",["Ronquido o apnea leve a moderada, según valoración"],["ronquido","apnea-obstructiva-del-sueno"]),
+]
+out = {"condicion": [dict(slug=s,titulo=t,area=a,zona=z,resumen=r,sintomas=si,cuando_consultar=cc,tratamientos=tr,nota=D) for s,t,a,z,r,si,cc,tr in cond],
+       "tratamiento": [dict(slug=s,titulo=t,area=a,zona=z,tipo=ti,oferta=o,resumen=r,candidatos=c,resuelve=rs,nota=D) for s,t,a,z,ti,o,r,c,rs in trat]}
+pathlib.Path(__file__).with_name("medical-drafts.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+print("ok", len(cond), "condiciones", len(trat), "tratamientos")

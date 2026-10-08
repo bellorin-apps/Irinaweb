@@ -90,6 +90,10 @@ add_filter(
 		if ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) || is_post_type_archive( [ 'condicion', 'tratamiento' ] ) || is_front_page() || is_page() ) {
 			$classes[] = 'has-bleed';
 		}
+		// Registro nocturno de la sub-marca Sueño en el pilar (las hijas lo aplican en su template).
+		if ( is_page( 'sueno' ) ) {
+			$classes[] = 'di-dark';
+		}
 		return $classes;
 	}
 );
