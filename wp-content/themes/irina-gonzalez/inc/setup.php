@@ -87,7 +87,7 @@ function irina_nav_fallback( array $args = [] ): void {
 add_filter(
 	'body_class',
 	static function ( array $classes ): array {
-		if ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) || is_post_type_archive( [ 'condicion', 'tratamiento' ] ) || is_front_page() ) {
+		if ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) || is_post_type_archive( [ 'condicion', 'tratamiento' ] ) || is_front_page() || ( is_page() && 'elementor_header_footer' === get_page_template_slug() ) ) {
 			$classes[] = 'has-bleed';
 		}
 		return $classes;

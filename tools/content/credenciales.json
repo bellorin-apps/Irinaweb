@@ -1,0 +1,132 @@
+[
+ {
+  "slug": "medico-cirujano",
+  "titulo": "Médico Cirujano",
+  "tipo": "formacion",
+  "institucion": "Universidad Nacional Experimental Francisco de Miranda",
+  "lugar": "Santa Ana de Coro, Venezuela",
+  "anio": "2010",
+  "mostrar": 1,
+  "orden": 40
+ },
+ {
+  "slug": "especialista-orl",
+  "titulo": "Especialista en Otorrinolaringología",
+  "tipo": "especialidad",
+  "institucion": "Universidad Centroccidental Lisandro Alvarado",
+  "lugar": "Barquisimeto, Venezuela",
+  "anio": "2018",
+  "mostrar": 1,
+  "orden": 10
+ },
+ {
+  "slug": "subespecializacion-sueno",
+  "titulo": "Subespecialización en Desórdenes Respiratorios del Dormir, Ronquido y Rinología Aplicada",
+  "tipo": "especialidad",
+  "institucion": "ISSSTE, Clínica Hospital A Constitución",
+  "lugar": "Monterrey",
+  "anio": "2018",
+  "mostrar": 1,
+  "orden": 20
+ },
+ {
+  "slug": "consejo-orl",
+  "titulo": "Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello, A.C.",
+  "tipo": "certificacion",
+  "institucion": "Certificación vigente a 2030",
+  "lugar": "",
+  "anio": "2025",
+  "mostrar": 1,
+  "orden": 30
+ },
+ {
+  "slug": "sociedad-iberoamericana-cirugia-sueno",
+  "titulo": "Sociedad Iberoamericana de Cirugía de Sueño",
+  "tipo": "membresia",
+  "institucion": "",
+  "lugar": "",
+  "anio": "2020",
+  "mostrar": 1,
+  "orden": 50
+ },
+ {
+  "slug": "colegio-orl-nuevo-leon",
+  "titulo": "Colegio de Otorrinolaringología de Nuevo León",
+  "tipo": "membresia",
+  "institucion": "",
+  "lugar": "",
+  "anio": "",
+  "mostrar": 1,
+  "orden": 51
+ },
+ {
+  "slug": "curso-faringoplastia-2024",
+  "titulo": "VI Curso Teórico Práctico de Faringoplastia Avanzada con Suturas Barbadas y Endoscopia de Sueño",
+  "tipo": "curso",
+  "institucion": "",
+  "lugar": "Monterrey",
+  "anio": "2024",
+  "mostrar": 1,
+  "orden": 60
+ },
+ {
+  "slug": "miembro-fundador-sics-2020",
+  "titulo": "Miembro fundador de la Sociedad Iberoamericana de Cirugía de Sueño",
+  "tipo": "experiencia",
+  "institucion": "",
+  "lugar": "Monterrey",
+  "anio": "2020",
+  "mostrar": 1,
+  "orden": 61
+ },
+ {
+  "slug": "publicacion-ijhns-2019",
+  "titulo": "«Selecting Different Approaches for Palate and Pharynx Surgery: Palatopharyngeal Arch Staging System»",
+  "tipo": "publicacion",
+  "institucion": "International Journal of Head and Neck Surgery, Vol. 10, n.º 4",
+  "lugar": "",
+  "anio": "2019",
+  "mostrar": 1,
+  "orden": 62
+ },
+ {
+  "slug": "curso-cirugia-medicina-sueno-2019",
+  "titulo": "Curso Internacional en Cirugía y Medicina de Sueño",
+  "tipo": "curso",
+  "institucion": "",
+  "lugar": "Monterrey",
+  "anio": "2019",
+  "mostrar": 1,
+  "orden": 63
+ },
+ {
+  "slug": "conferencia-cpap-2018",
+  "titulo": "«Manejo del CPAP»",
+  "tipo": "conferencia",
+  "institucion": "Curso Triológico",
+  "lugar": "Mazatlán",
+  "anio": "2018",
+  "mostrar": 1,
+  "orden": 64
+ },
+ {
+  "slug": "conferencia-faringoplastia-2017",
+  "titulo": "«Evolución de la faringoplastia en SAHOS, más allá de la UPPP»",
+  "tipo": "conferencia",
+  "institucion": "68.º Congreso Nacional de Otorrinolaringología",
+  "lugar": "Acapulco",
+  "anio": "2017",
+  "mostrar": 1,
+  "orden": 65
+ },
+ {
+  "slug": "docencia-pregrado",
+  "titulo": "Profesora de otorrinolaringología de pregrado en UNEFM, ULA y UNERG",
+  "tipo": "experiencia",
+  "institucion": "",
+  "lugar": "Venezuela",
+  "anio": "",
+  "mostrar": 1,
+  "orden": 70
+ }
+]
