@@ -25,7 +25,7 @@
 
 - [x] Plantillas 39/79 excluidas de la Home v2 (D-029); /inicio-v2/ con header/footer del tema y QA visual OK.
 - [ ] QA de la página de la Dra. (169) y la condición de muestra (205) tras setup-dra.sh; capturas 5 tamaños (6.7, 6.8).
-- [ ] Cargar `maps_url` y el iframe del mapa cuando el propietario pase el enlace de Google Maps.
+- [x] `maps_url`, `gbp_url` y coordenadas cargados por REST (2026-10-08); iframe del mapa en home-elementor.json (pendiente recargar 168).
 - [ ] Checkpoint 3: presentar Home, Dra. y apnea al propietario; al aprobarse, publicar páginas, Home como portada y retirar 39/79.
 
 - [x] `docs/REFERENCE_RESEARCH.md` (2.1) — en REVIEW.

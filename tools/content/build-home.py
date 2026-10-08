@@ -66,7 +66,7 @@ data = [
     container("ubicacion", "di-ubicacion", {
         "eyebrow": "Consultorio", "title": "",
         "facts": rep([("Estacionamiento", "Gratuito"), ("Acceso", "Elevador y acceso para silla de ruedas")], "label", "value"),
-        "map_embed": ""}),
+        "map_embed": "https://www.google.com/maps?q=25.7117869,-100.3765032&z=17&output=embed"}),
     container("cta", "di-cta", {
         "eyebrow": "Agenda", "title": "¿Hablamos de lo que te está quitando el descanso?",
         "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": ""}),
