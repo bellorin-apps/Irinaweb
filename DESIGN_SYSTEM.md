@@ -82,6 +82,12 @@ Reglas: texto púrpura solo sobre blanco o `surface-soft`; texto blanco sobre `p
 - Lenguaje: descanso, respirar, energía diurna. Nunca "cura" ni "garantizado".
 - Se aplica solo en: pilar `/sueno/` y sus hijas (D-026). En el Home, el bloque y la tarjeta de Sueño van en registro claro con degradado teal suave.
 
+## 6b. Marca en la interfaz
+
+- Archivos: `assets/brand/logotipo.svg` (isotipo púrpura #9B589F + nombre teal #089BA7; versión principal), `logotipo-inverso.svg`, `logotipo-mono.svg`, `logotipo-blanco.svg`; `isotipo*.svg` con el símbolo solo. Exportados por el propietario desde Illustrator (texto en contornos). El logotipo exportado dice «Irina González Sáez ORL» (no «OTORRINOLARINGOLOGO» como la versión impresa de 2023): se da por bueno, es el archivo del propietario.
+- Cabecera: por defecto logotipo completo, 64 px de alto en escritorio y 50 px en móvil; blanco sobre la cabecera a sangre y en color sobre crema al hacer scroll. Nombre, especialidad y ciudad solo para lectores de pantalla. Alternativa seleccionable en Ajustes → Consultorio: isotipo (52 px) + nombre en texto. Decisión pendiente del propietario.
+- Pie: logotipo blanco. Favicon y site icon: isotipo blanco sobre púrpura (D-031).
+
 ## 7. Fotografía e imagen
 
 - Hasta la sesión profesional (2–4 semanas, `docs/PHOTO_SHOTLIST.md`): marcadores con degradado de marca, nunca stock genérico.

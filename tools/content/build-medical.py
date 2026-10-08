@@ -50,3 +50,9 @@ out = {"condicion": [dict(slug=s,titulo=t,area=a,zona=z,resumen=r,sintomas=si,cu
        "tratamiento": [dict(slug=s,titulo=t,area=a,zona=z,tipo=ti,oferta=o,resumen=r,candidatos=c,resuelve=rs,nota=D) for s,t,a,z,ti,o,r,c,rs in trat]}
 pathlib.Path(__file__).with_name("medical-drafts.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
 print("ok", len(cond), "condiciones", len(trat), "tratamientos")
+
+# Recurso de muestra (artículo) para validar la plantilla editorial; borrador pendiente de la Dra.
+rec = [dict(slug="como-limpiar-los-oidos", titulo="Cómo limpiar los oídos sin lastimarlos", excerpt="El cerumen no es suciedad: protege el conducto auditivo. El problema aparece cuando intentamos sacarlo con cotonetes.",
+  html="<h2>Qué hace el cerumen</h2><p>Texto pendiente de la Dra.</p><h2>Por qué los cotonetes empeoran el tapón</h2><p>Texto pendiente de la Dra.</p><h2>Qué sí puedes hacer en casa</h2><p>Texto pendiente de la Dra.</p><p><strong>Borrador de muestra pendiente de revisión médica.</strong></p>")]
+pathlib.Path(__file__).with_name("recursos-drafts.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
+print("ok recursos", len(rec))
