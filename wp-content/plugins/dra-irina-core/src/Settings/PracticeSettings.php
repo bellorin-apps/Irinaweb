@@ -52,6 +52,8 @@ final class PracticeSettings {
 			'publicar_cedulas'    => [ 'Publicar cédulas en el sitio', 'checkbox', false ],
 			'consejo_certificado' => [ 'Certificación de Consejo (texto a mostrar)', 'text', true ],
 			'marca_isotipo_texto' => [ 'Cabecera: usar isotipo + nombre en texto (desmarcado = logotipo completo)', 'checkbox', false ],
+			'aviso_publicidad'    => [ 'Aviso de Publicidad COFEPRIS (número de ingreso)', 'text', true ],
+			'aviso_funcionamiento' => [ 'Aviso de Funcionamiento (número)', 'text', true ],
 			'responsable_datos'   => [ 'Responsable de datos personales', 'text', true ],
 			'correo_arco'         => [ 'Correo para derechos ARCO', 'email', true ],
 		];

@@ -12,6 +12,10 @@ rssh "mkdir -p '$DEST' '$DATA_DIR' && chmod 700 '$DATA_DIR'"
 echo "→ Subiendo archivos"
 rscp "$SRC/index.html" "$SRC/guardar.php" "$SRC/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/"
 
+echo "→ Subiendo cuestionario de fichas (fichas/)"
+rssh "mkdir -p '$DEST/fichas'"
+rscp "$SRC/fichas/index.html" "$SRC/fichas/guardar.php" "$SRC/fichas/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/fichas/"
+
 echo "→ Token y config.php (se conserva el token existente si ya hay config.php)"
 TOKEN="$(rssh "if [ -f '$DEST/config.php' ]; then php -r 'echo (require \"$DEST/config.php\")[\"token\"];'; fi")"
 if [ -z "$TOKEN" ]; then
@@ -38,3 +42,4 @@ echo "index: $code_index · GET con token: $body_get · sin token: $code_403 · 
 
 echo
 echo "URL para la Dra.: $SITE_URL/briefing/?t=$TOKEN"
+echo "URL fichas médicas: $SITE_URL/briefing/fichas/?t=$TOKEN"
