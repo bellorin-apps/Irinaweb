@@ -6,14 +6,14 @@
 PROYECTO — DRA. IRINA
 
 Avance global
-█████░░░░░░░░░░░░░░░ 23%
+█████░░░░░░░░░░░░░░░ 29%
 
 Fase actual
-██░░░░░░░░ 15%
-Fase 6/12 — Build del núcleo visual en WordPress (CP2 cerrado; Fase 4 en REVIEW de Codex)
+████████░░ 80%
+Fase 6/12 — Núcleo visual (CP3 cerrado; conmutación de portada en curso) · Fase 7 contenido en DOING
 
 Estado
-🟢 Construcción nocturna en curso (mandato del propietario): Home v2 cerrada; Dra., pilares ORL/Sueño, Primera consulta, Contacto, FAQ, legales y 22 fichas médicas en borrador; QA con capturas pendiente del propietario
+🟢 CP3 cerrado por el propietario: Home v2 pasa a portada hoy; páginas base y 22 fichas médicas en borrador a la espera de revisión de la Dra.
 ```
 
 ## Métricas
@@ -21,8 +21,8 @@ Estado
 | Métrica | Valor |
 |---|---|
 | Fase | 6/12 |
-| Tareas | 13 / 97 DONE · 23 en REVIEW · 8 DOING |
-| Peso completado | 59 / 253 |
+| Tareas | 21 / 97 DONE · 15 en REVIEW · 11 DOING |
+| Peso completado | 74 / 253 |
 | En curso | 6 (6.4 página de la Dra., 6.5, 6.6 plantillas; 5.1, 5.2, 5.5) |
 | Bloqueadas | 0 |
 | Pendientes del propietario | 4 (calidad de imágenes en CDN de hPanel, sesión para capturas de QA, licencia Elementor Pro, aviso de privacidad de la Dra.) |
@@ -34,8 +34,8 @@ Discovery        ██████████ 100%
 Auditoría WP     ████░░░░░░  30%
 Investigación    █████░░░░░  46%
 Arquitectura     ████░░░░░░  38%
-Diseño           ██████░░░░  55%
-Desarrollo       ██░░░░░░░░  15%  (Home, header y footer en REVIEW)
+Diseño           █████████░  90%
+Desarrollo       ████░░░░░░  40%  (Home, header, footer DONE; Dra. y plantillas en QA)
 Contenido        ░░░░░░░░░░   0%
 SEO              ██░░░░░░░░  20%
 QA               ░░░░░░░░░░   0%

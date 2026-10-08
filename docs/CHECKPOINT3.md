@@ -17,7 +17,17 @@ Preparado la noche del 8 al 9 de octubre de 2026 para la revisión del propietar
 | Padecimientos y tratamientos | wp-admin → Padecimientos / Tratamientos (22 borradores) | La Dra. revisa, corrige y aprueba («MEDICALLY APPROVED») uno por uno |
 | Artículo de muestra | wp-admin → Recursos (1 borrador) | Formato editorial |
 
-## Decisiones del propietario al cerrar CP3
+## Decisiones tomadas (2026-10-08, D-034)
+
+1. Portada: **sí**, Home v2 pasa a portada (`tools/deploy/go-live-home.sh`); 106 queda en borrador; plantillas 39/79 a papelera.
+2. Cabecera: **logotipo completo** (la casilla alternativa se conserva).
+3. Foto del hero: **autorizada por la Dra.**
+4. Versión en inglés: **después del lanzamiento en español** (fecha propuesta en NEXT.md).
+5. Horario: **no publicar por ahora** («Previa cita», D-032). Hospitales ampliados (D-033).
+
+Pendientes de decisión: OD-009 rinoplastia; cargo en el Hospital Universitario; segunda publicación; publicación de las páginas base cuando la Dra. apruebe sus textos.
+
+## Decisiones del propietario al cerrar CP3 (lista original)
 
 1. Portada: cambiar la portada a Home v2 y retirar las plantillas viejas del Theme Builder (D-029).
 2. Páginas base: publicarlas al aprobar sus textos (las que tengan [PENDIENTE DE CONFIRMACIÓN] pueden publicarse con el dato omitido o esperar).
