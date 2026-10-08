@@ -13,7 +13,7 @@ Fase actual
 Fase 6/12 — Build del núcleo visual en WordPress (CP2 cerrado; Fase 4 en REVIEW de Codex)
 
 Estado
-🟢 Home v2 cerrada (logo, foto, mapa, favicon, móvil) en /inicio-v2/ noindex; QA de la página de la Dra. y de apnea a la espera de capturas del propietario
+🟢 Construcción nocturna en curso (mandato del propietario): Home v2 cerrada; Dra., pilares ORL/Sueño, Primera consulta, Contacto, FAQ, legales y 22 fichas médicas en borrador; QA con capturas pendiente del propietario
 ```
 
 ## Métricas
@@ -54,8 +54,9 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
-- Propietario: revisar hPanel → CDN → optimización de imágenes (D-030) e iniciar sesión en la sesión local para capturas de 169 y 205
-- Claude: QA de la Dra. y apnea con esas capturas; luego Checkpoint 3
+- Sesión local: tandas B y C (contenido base, borradores médicos, hero móvil)
+- Propietario (mañana): CDN en hPanel (D-030), SSL de otorrino-monterrey.com (Q-007), sesión para capturas de 169/205, elección de cabecera (logotipo completo vs isotipo+texto)
+- Claude: QA de todas las páginas base con capturas; preparar Checkpoint 3
 - Codex: auditorías pendientes según `BATON.md`
 
 ## FALTA

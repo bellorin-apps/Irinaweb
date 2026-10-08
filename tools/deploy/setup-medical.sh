@@ -28,3 +28,15 @@ foreach ( \$d[\"tratamiento\"] as \$r ) { \$rel = array_values( array_filter( ar
 '"
 rssh "rm -f /tmp/medical-drafts.json"
 echo "Borradores listos (no publicados). Revisión de la Dra. en wp-admin → Padecimientos / Tratamientos."
+
+echo "→ Recursos (artículos) de muestra en borrador"
+rscp "$REPO/tools/content/recursos-drafts.json" "$SSH_USER@$SSH_HOST:/tmp/recursos-drafts.json"
+w "eval '
+foreach ( json_decode( file_get_contents( \"/tmp/recursos-drafts.json\" ), true ) as \$r ) {
+  \$q = get_posts( [ \"post_type\" => \"recurso\", \"name\" => \$r[\"slug\"], \"post_status\" => \"any\", \"posts_per_page\" => 1 ] );
+  if ( \$q ) { echo \"  existe \" . \$r[\"slug\"] . \" (\" . \$q[0]->ID . \")\n\"; continue; }
+  \$id = wp_insert_post( [ \"post_type\" => \"recurso\", \"post_status\" => \"draft\", \"post_title\" => \$r[\"titulo\"], \"post_name\" => \$r[\"slug\"], \"post_excerpt\" => \$r[\"excerpt\"], \"post_content\" => wp_slash( \$r[\"html\"] ) ] );
+  wp_set_object_terms( \$id, \"medical_review_required\", \"estado_medico\" );
+  echo \"  creado \" . \$r[\"slug\"] . \" (\" . \$id . \") draft\n\";
+}'"
+rssh "rm -f /tmp/recursos-drafts.json"

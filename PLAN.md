@@ -69,7 +69,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 3.1 | `SITEMAP.md`: URLs, intención por página, clusters ORL y Sueño | 3 | REVIEW | v0.1; páginas OFRECE por confirmar |
-| 3.2 | `SEO.md`: keyword map, titles, canonicals, internal linking, mapa 301 | 3 | TODO | |
+| 3.2 | `SEO.md`: keyword map, titles, canonicals, internal linking, mapa 301 | 3 | REVIEW | v0.2: keyword→URL, titles en seo.json, técnico, schema, enlazado |
 | 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | REVIEW | `ARCHITECTURE.md` §4 |
 | 3.4 | Schema map por tipo de página | 2 | REVIEW | `ARCHITECTURE.md` §5 |
 | 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | REVIEW | v0.1 |
@@ -108,7 +108,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 6.1 | Header + navegación + CTA + mobile bar | 3 | REVIEW | Verificado en /inicio-v2/; «Cómo llegar» aparece al cargar maps_url |
 | 6.2 | Footer | 2 | REVIEW | Verificado en /inicio-v2/ |
 | 6.3 | Home | 5 | REVIEW | /inicio-v2/ en producción (noindex): 8 widgets, header/footer del tema, QA visual OK escritorio y móvil; pendiente CP3 |
-| 6.4 | Página Dra. Irina (entidad/autora) | 5 | DOING | Widgets di-bleed/narrativa/credenciales/trayectoria + dra-elementor.json + credenciales.json; setup-dra.sh |
+| 6.4 | Página Dra. Irina (entidad/autora) | 5 | DOING | Cargada en 169 (borrador) con credenciales; falta QA con capturas |
 | 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; muestra privada de apnea |
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |

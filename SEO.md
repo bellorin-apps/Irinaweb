@@ -1,43 +1,56 @@
-# SEO — Arquitectura SEO
+# SEO — Arquitectura y reglas
 
-Estado: esqueleto (se completa en Fases 2–3 y 9). No asumir volúmenes de búsqueda; investigar.
+Versión 0.2 · 2026-10-08 · Estado: REVIEW. Deriva de `KEYWORDS.md` (keyword map y canibalización), `SITEMAP.md` (URLs) y `ARCHITECTURE.md` (schema). Nada de volúmenes de búsqueda: no se han medido.
 
-## 1. Objetivo local
+## 1. Entidad y objetivo local
 
-Monterrey, Nuevo León (ubicación real del consultorio, POR CONFIRMAR: Cumbres 2.º Sector).
+- Entidad: **Dra. Irina González Sáez**, `Physician` (+ `MedicalBusiness` del consultorio en CAB Medical, Cumbres 2.º Sector, Monterrey). Fuente única: `PracticeSettings` del plugin; el grafo JSON-LD lo emite solo `dra-irina-core` (Rank Math no emite Person/LocalBusiness/Organization).
+- Objetivo local: Monterrey, N.L.; variante de zona «Cumbres» solo en copy del Home, Contacto y GBP (sin páginas por colonia).
+- Género: «otorrinolaringólogo» en títulos y H1 (D-OD-001); «otorrinolaringóloga» solo en copy de Home y entidad.
 
-## 2. Entidad principal
+## 2. Keyword → URL (resumen; detalle en `KEYWORDS.md`)
 
-- Persona/Physician: Dra. Irina González Sáez.
-- Especialidad: Otorrinolaringología; subespecialización en desórdenes respiratorios del dormir, ronquido y rinología aplicada (según CV, POR CONFIRMAR).
-- Página de entidad: `/dra-irina-gonzalez-saez/` (propuesta).
+| URL | Keyword primaria | Secundarias (en copy) |
+|---|---|---|
+| `/` | otorrinolaringólogo en Monterrey | otorrino Monterrey · otorrino Cumbres · otorrinolaringóloga Monterrey |
+| `/dra-irina-gonzalez-saez/` | Dra. Irina González Sáez | otorrinolaringólogo certificado Monterrey · especialista en sueño |
+| `/otorrinolaringologia/` | otorrinolaringología Monterrey | cuándo ir al otorrino · oído nariz garganta |
+| `/sueno/` | especialista en ronquido y apnea del sueño en Monterrey | médico del sueño Monterrey · cirugía de sueño |
+| `/sueno/apnea-obstructiva-del-sueno/` | apnea obstructiva del sueño | apnea del sueño Monterrey · SAHOS |
+| `/sueno/ronquido/` | ronquido: causas y tratamiento | por qué ronco · cómo dejar de roncar |
+| `/sueno/estudio-del-sueno/` | estudio del sueño en Monterrey | poligrafía respiratoria · polisomnografía |
+| `/sueno/cirugia-de-ronquido-y-apnea/` | cirugía de ronquido en Monterrey | faringoplastia · suturas barbadas |
+| `/padecimientos/*`, `/tratamientos/*` | ver `KEYWORDS.md` §2.5 | — |
+| `/primera-consulta/`, `/contacto/`, `/preguntas-frecuentes/` | sin keyword propia | navegacional / servicio |
 
-## 3. Intenciones a investigar (sin asumir volumen)
+## 3. Titles y descriptions
 
-- otorrinolaringólogo / otorrino / otorrinolaringóloga Monterrey
-- especialista en sueño / apnea del sueño / ronquido Monterrey
-- médico del sueño / clínica del sueño Monterrey
-- condiciones ORL frecuentes (a definir con los motivos de consulta reales)
+Fuente: `tools/content/pages/seo.json` (se cargan como `rank_math_title` / `rank_math_description` con `setup-pages.sh`). Regla: title ≤ 60 caracteres útiles, marca al final con `|`; description 120–155 caracteres con beneficio y lugar; sin «mejor», «cura», «garantizado».
 
-## 4. Keyword map
+## 4. Técnico
 
-`SEARCH_INTENT → URL → PRIMARY KEYWORD → SECONDARY → ENTITY → CTA`
+- Canónico `https://drairinagonzalez.com/` (sin www, D-022); `www` y `http` → 301. `otorrino-monterrey.com` → 301 (pendiente SSL, Q-007).
+- Barra final siempre; slugs sin acentos.
+- `noindex`: `/inicio-v2/` (hasta ser portada), `/preview/*`, `/gracias/`, búsqueda, páginas en borrador (no indexables por defecto), `/links/` (D-023).
+- Sitemap: Rank Math (`sitemap_index.xml`); excluye noindex y borradores; enviar en Search Console tras CP3 (1.4).
+- Robots: permitir todo salvo `/wp-admin/`, `/preview/`, `/briefing/`; `/op/` sin indexar (Sensia gestiona su propio noindex: verificar en Fase 9).
+- Open Graph: Rank Math por página; imagen por defecto = retrato (cuando exista la sesión); `og:locale` es_MX.
+- Schema por tipo: Home `Physician`+`MedicalBusiness`; entidad `Physician` (sameAs Doctoralia, GBP, redes); condición `MedicalWebPage`+`MedicalCondition`; tratamiento `MedicalWebPage`+`MedicalProcedure`/`MedicalTherapy`/`MedicalTest`; FAQ `FAQPage` solo donde la FAQ sea visible; migas `BreadcrumbList`.
+- Migas visibles por template (`irina_breadcrumbs`); el `BreadcrumbList` lo emite Rank Math (configurado) para no duplicar.
+- Rendimiento como señal: ver `PERFORMANCE.md` (Fase 10).
 
-_(Se completa en `KEYWORDS.md`, Fase 2.3.)_
+## 5. Enlazado interno
 
-## 5. Clusters
+Reglas de `SITEMAP.md` §5. Implementación: widget `di-listado` (pilares → hijas), `di_tratamientos_relacionados` / `di_que_resuelve` (condición ↔ tratamiento), `di_relacionados` (lateral), Home → pilares, Dra., primera consulta y contacto.
 
-- Pilar ORL → condiciones/tratamientos reales.
-- Pilar Sueño → apnea, ronquido, trastornos respiratorios del dormir, diagnóstico, estudios, tratamiento (solo lo que la Dra. OFRECE).
+## 6. Redirecciones
 
-## 6. Técnico
+Mapa `OLD → NEW` pendiente de la auditoría de Search Console (1.4). Regla: 301 directo, sin cadenas, nunca todo a Home.
 
-- HTTPS, www/no-www, trailing slash, canonicals, robots, sitemap, noindex de staging/gracias/404.
-- Mapa `OLD URL → NEW URL → 301` tras auditoría de indexación (Fase 1.4).
-- Schema map por tipo de página (Fase 3.4). Un solo emisor de JSON-LD.
+## 7. Estado de indexación conocido
 
-## 7. Estado conocido de indexación
+Search Console registrado; alertas históricas de `noindex` y canónica elegida por Google distinta (dominio duplicado, Q-004 resuelto). Revisar cobertura y sitemap tras el cambio de portada (CP3).
 
-- Propiedad verificada en Search Console (correos de alertas, sep-2026).
-- Sitemap enviado (alerta "páginas de un sitemap").
-- Exclusiones: `noindex` y "Duplicada: Google ha elegido una canónica diferente". Detalle pendiente (correos en papelera, no accesibles por API).
+## 8. Versión en inglés
+
+Anexo A del MASTER_PROMPT: `/en/`, hreflang recíproco + `x-default` es, keyword map en inglés propio, `inLanguage` en schema. Fase 13; no antes del CP3.
