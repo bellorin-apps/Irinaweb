@@ -25,7 +25,12 @@ P_MED="$(ensure_page aviso-medico 'Aviso médico')"
 P_TERM="$(ensure_page terminos-de-uso 'Términos de uso')"
 
 echo "→ Home v2 (página $P_HOME, noindex hasta CP3)"
-rscp "$REPO/tools/content/home-elementor.json" "$SSH_USER@$SSH_HOST:/tmp/home-elementor.json"
+# Foto del hero: adjunto con slug hero-home en la biblioteca (subir con tools/deploy/upload-media.sh). Si no existe, el widget usa el degradado.
+HERO_ID="$(w "post list --post_type=attachment --post_name__in=hero-home --post_status=any --field=ID" | head -1)"
+HERO_URL=""; [ -n "$HERO_ID" ] && HERO_URL="$(w "post get $HERO_ID --field=guid")"
+sed -e "s#__HERO_ID__#${HERO_ID}#g" -e "s#__HERO_URL__#${HERO_URL}#g" "$REPO/tools/content/home-elementor.json" > /tmp/home-elementor.json
+echo "  hero-home: ${HERO_ID:-sin foto}"
+rscp /tmp/home-elementor.json "$SSH_USER@$SSH_HOST:/tmp/home-elementor.json"; rm -f /tmp/home-elementor.json
 w "post meta update $P_HOME _wp_page_template elementor_header_footer" >/dev/null
 w "post meta update $P_HOME _elementor_edit_mode builder" >/dev/null
 w "post meta update $P_HOME _elementor_template_type wp-page" >/dev/null

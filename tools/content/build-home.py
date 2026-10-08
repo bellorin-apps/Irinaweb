@@ -22,6 +22,7 @@ data = [
         "title": "Respirar bien,<br>dormir bien,<br><em>oír bien.</em>",
         "lead": "Dra. Irina González Sáez, otorrinolaringólogo certificado con subespecialización en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos, en Cumbres.",
         "trust": "Consejo Mexicano de ORL y CCC\nSubespecialidad en desórdenes respiratorios del sueño\nCAB Medical · Cumbres, Monterrey",
+        "image": {"id": "__HERO_ID__", "url": "__HERO_URL__"},
         "secondary_label": "Conocer a la Dra. Irina", "secondary_url": "/dra-irina-gonzalez-saez/",
         "ticker": "Ronquido y apnea\nNariz tapada\nSinusitis\nOído tapado\nHipoacusia y tinnitus\nVértigo\nAmígdalas y adenoides\nVoz y reflujo"}),
     container("areas", "di-areas", {
