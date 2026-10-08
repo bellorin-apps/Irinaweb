@@ -13,7 +13,7 @@ Fase actual
 Fase 6/12 — Build del núcleo visual en WordPress (CP2 cerrado; Fase 4 en REVIEW de Codex)
 
 Estado
-🟢 Home v2 en producción (noindex) con QA visual OK; página de la Dra. y plantilla médica en despliegue para QA; hacia Checkpoint 3
+🟢 Home v2 cerrada (logo, foto, mapa, favicon, móvil) en /inicio-v2/ noindex; QA de la página de la Dra. y de apnea a la espera de capturas del propietario
 ```
 
 ## Métricas
@@ -25,7 +25,7 @@ Estado
 | Peso completado | 59 / 253 |
 | En curso | 6 (6.4 página de la Dra., 6.5, 6.6 plantillas; 5.1, 5.2, 5.5) |
 | Bloqueadas | 0 |
-| Pendientes del propietario | 3 (enlace de Google Maps del consultorio, licencia Elementor Pro, aviso de privacidad de la Dra.) |
+| Pendientes del propietario | 4 (calidad de imágenes en CDN de hPanel, sesión para capturas de QA, licencia Elementor Pro, aviso de privacidad de la Dra.) |
 
 ## Estado por área
 
@@ -54,8 +54,8 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
-- Sesión local: desplegar plugin 0.3.1 + tema, cargar credenciales y página de la Dra. (setup-dra.sh)
-- QA de la página de la Dra. y de la plantilla médica; luego Checkpoint 3 con el propietario
+- Propietario: revisar hPanel → CDN → optimización de imágenes (D-030) e iniciar sesión en la sesión local para capturas de 169 y 205
+- Claude: QA de la Dra. y apnea con esas capturas; luego Checkpoint 3
 - Codex: auditorías pendientes según `BATON.md`
 
 ## FALTA
