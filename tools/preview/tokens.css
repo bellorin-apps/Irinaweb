@@ -1,0 +1,75 @@
+/* Design tokens — fuente única para CSS, Elementor Global Styles y theme.json.
+   Derivados de la identidad existente (logo y tarjetas): púrpura #8C4EAA / teal #3CA1A7. */
+:root {
+  /* Color */
+  --color-primary: #8c4eaa;
+  --color-primary-strong: #6f3a8b;
+  --color-primary-soft: #f1e8f4;
+  --color-secondary: #3ca1a7;
+  --color-secondary-strong: #2d8186;
+  --color-secondary-soft: #e4f3f4;
+  --color-accent: #9cced1;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f6f3f9;
+  --color-text: #2b2730;
+  --color-muted: #6d6577;
+  --color-border: #e4dfea;
+  --color-success: #2e8b57;
+  --color-warning: #b7791f;
+  --color-danger: #b43c3c;
+  --color-night: #1b1630;
+  --color-night-2: #2a2246;
+  --color-focus: var(--color-secondary);
+
+  /* Tipografía */
+  /* Adobe Fonts expone la familia como "iskra" (pesos 100–900 + itálicas). Usar solo 300/400/500/700 en CSS. */
+  --font-display: "iskra", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "iskra", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-4xl: 3.052rem;
+  --leading-tight: 1.15;
+  --leading-body: 1.6;
+  --measure: 65ch;
+
+  /* Espaciado (escala 4/8) */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --gutter: clamp(1rem, 4vw, 2rem);
+
+  /* Contenedores */
+  --container: 1200px;
+  --container-narrow: 760px;
+
+  /* Radios y sombras */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 1px 2px rgb(60 40 80 / 0.06), 0 6px 20px rgb(60 40 80 / 0.06);
+  --shadow-elevated: 0 10px 30px rgb(60 40 80 / 0.14);
+
+  /* Motion */
+  --motion-fast: 180ms;
+  --motion-base: 280ms;
+  --motion-slow: 450ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+    --motion-slow: 0ms;
+  }
+}
