@@ -9,7 +9,7 @@ w "eval '
 \$ids = [];
 foreach ( [ \"condicion\", \"tratamiento\" ] as \$type ) {
   foreach ( \$d[\$type] as \$r ) {
-    \$q = get_posts( [ \"post_type\" => \$type, \"name\" => \$r[\"slug\"], \"post_status\" => \"any\", \"posts_per_page\" => 1 ] );
+    \$q = get_posts( [ \"post_type\" => \$type, \"post_name__in\" => [ \$r[\"slug\"] ], \"post_status\" => \"any\", \"posts_per_page\" => 1, \"orderby\" => \"ID\", \"order\" => \"ASC\" ] ); // name+any no encuentra borradores/privadas (duplicó páginas el 07-10)
     \$content = \"<p>\" . esc_html( \$r[\"resumen\"] ) . \"</p><p><strong>\" . esc_html( \$r[\"nota\"] ) . \"</strong></p>\";
     if ( \$q ) { \$id = \$q[0]->ID; if ( \"publish\" !== \$q[0]->post_status ) { wp_update_post( [ \"ID\" => \$id, \"post_title\" => \$r[\"titulo\"] ] ); } echo \"  existe \"; }
     else { \$id = wp_insert_post( [ \"post_type\" => \$type, \"post_status\" => \"draft\", \"post_title\" => \$r[\"titulo\"], \"post_name\" => \$r[\"slug\"], \"post_content\" => \$content ] ); echo \"  creada \"; }
