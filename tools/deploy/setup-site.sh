@@ -37,13 +37,14 @@ w "post meta update $P_HOME rank_math_robots --format=json '[\"noindex\",\"nofol
 
 echo "→ Menús"
 ensure_menu(){ w "menu list --fields=slug --format=csv" | grep -qx "$1" || w "menu create '$2'" >/dev/null; }
-ensure_menu principal Principal; ensure_menu pie 'Pie de página'; ensure_menu legal Legal
+# El slug debe coincidir con el que WordPress deriva del nombre ("Pie de página" → pie-de-pagina).
+ensure_menu principal Principal; ensure_menu pie-de-pagina 'Pie de página'; ensure_menu legal Legal
 menu_items(){ w "menu item list $1 --fields=object_id --format=csv" | tail -n +2; }
 add_items(){ local menu="$1"; shift; local have; have="$(menu_items "$menu")"; for id in "$@"; do echo "$have" | grep -qx "$id" || w "menu item add-post $menu $id" >/dev/null; done; }
 add_items principal "$P_ORL" "$P_SUENO" "$P_DRA" "$P_PRIMERA" "$P_CONTACTO"
-add_items pie "$P_ORL" "$P_SUENO" "$P_PRIMERA" "$P_FAQ" "$P_CONTACTO"
+add_items pie-de-pagina "$P_ORL" "$P_SUENO" "$P_PRIMERA" "$P_FAQ" "$P_CONTACTO"
 add_items legal "$P_PRIV" "$P_MED" "$P_TERM"
-w "menu location assign principal primary" >/dev/null; w "menu location assign pie footer" >/dev/null; w "menu location assign legal legal" >/dev/null
+w "menu location assign principal primary" >/dev/null; w "menu location assign pie-de-pagina footer" >/dev/null; w "menu location assign legal legal" >/dev/null
 
 echo "→ Contenido de muestra privado (solo para revisar plantillas; se borra antes del launch)"
 S_ID="$(w "post list --post_type=condicion --name=apnea-obstructiva-del-sueno --post_status=any --field=ID" | head -1)"
