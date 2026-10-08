@@ -47,10 +47,10 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | REVIEW | `docs/audit/`, `docs/AUDIT_WP.md` |
 | 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | TODO | |
 | 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | TODO | Alertas existentes: noindex + canónica duplicada |
-| 1.5 | Configuración base del WordPress nuevo por REST: idioma, zona horaria, permalinks, www canónico, borrar demo, plugins aprobados | 2 | TODO | Antes `KEEP/REPLACE/REMOVE`, ya no aplica |
+| 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | REVIEW | Ejecutado 2026-10-07/08 por REST + sesión local |
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | DONE | Manual 2026-10-07 16:41 descargado; semanal automático activo |
 | 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | TODO | |
-| 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | TODO | |
+| 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | REVIEW | `docs/DEPLOY.md`, `docs/RUNBOOK_RESET.md` |
 | 1.9 | Codex: auditoría de seguridad del estado actual | 2 | TODO | |
 
 ## FASE 2 — Investigación y estrategia
@@ -190,7 +190,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | Fase | Peso total | Peso DONE |
 |---|---|---|
 | 0 | 23 | 16 |
-| 1 | 20 | 4.5 (DONE 3 + REVIEW ×0.5) |
+| 1 | 20 | 6 (DONE 3 + REVIEW ×0.5) |
 | 2 | 14 | 5.5 (REVIEW ×0.5) |
 | 3 | 20 | 6.5 (REVIEW ×0.5) |
 | 4 | 20 | 0 |
@@ -202,6 +202,6 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
-| **Total** | **253** | **32.5** |
+| **Total** | **253** | **34** |
 
-Avance global: 32.5 / 253 = **13%** · Tareas: 9 / 97 DONE · 10 en REVIEW.
+Avance global: 34 / 253 = **13%** · Tareas: 9 / 97 DONE · 12 en REVIEW.

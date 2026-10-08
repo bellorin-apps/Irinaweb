@@ -21,8 +21,8 @@ Estado
 | Métrica | Valor |
 |---|---|
 | Fase | 0/12 |
-| Tareas | 9 / 97 DONE · 10 en REVIEW |
-| Peso completado | 32.5 / 253 |
+| Tareas | 9 / 97 DONE · 12 en REVIEW |
+| Peso completado | 34 / 253 |
 | En curso | 0 |
 | Bloqueadas | 1 (red del entorno: bloquea el sitio y casi toda la web) |
 | Pendientes del propietario | 4 (autorizar WPVibe, compartir mini app con la Dra., ampliar red del entorno, decisiones OD-004/005/006) |
@@ -31,10 +31,10 @@ Estado
 
 ```
 Discovery        ███████░░░  70%
-Auditoría WP     ██████░░░░  60%
+Auditoría WP     ████████░░  80%
 Investigación    ████░░░░░░  40%
 Arquitectura     ███░░░░░░░  33%
-Desarrollo       █░░░░░░░░░  10%
+Desarrollo       ██░░░░░░░░  15%
 Arquitectura     ░░░░░░░░░░   0%
 Diseño           ░░░░░░░░░░   0%
 Desarrollo       ░░░░░░░░░░   0%
@@ -58,7 +58,7 @@ Launch           ░░░░░░░░░░   0%
 - Claude: scaffold de `dra-irina-core` y `irina-gonzalez` creado y en verde con PHPCS (5.1, 5.2, 5.5 DOING; no cuentan hasta probarse en WordPress real)
 
 - Briefing de la Dra. desplegado en /briefing/ (URL con token entregada al propietario) — esperando respuestas
-- Limpieza del WordPress según `docs/AUDIT_WP.md` §3 en cuanto haya canal REST
+- Plugin y tema desplegados y activos en producción (scaffold); configuración de Rank Math/LiteSpeed y datos del consultorio
 - Esperando acceso técnico al WordPress para iniciar Fase 1
 
 ## FALTA

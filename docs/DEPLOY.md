@@ -12,8 +12,9 @@ Actualizado: 2026-10-07. Sin credenciales en este archivo (la clave SSH vive sol
 | Webroot WordPress | `/home/u855694717/domains/drairinagonzalez.com/public_html` (dominio principal: drairinagonzalez.com; `otorrino-monterrey.com` aparcado con 301 a https://drairinagonzalez.com) | hPanel 2026-10-07 |
 | PHP web | `/opt/alt/php84/usr/bin/php` (8.4.23) | Membretador |
 | Servidor | LiteSpeed (cabecera X-LiteSpeed-Cache-Control); Hostinger sobrescribe Content-Security-Policy | Membretador |
-| WP-CLI | 2.12.0 en `/usr/local/bin/wp` (verificado por la sesión local Irinaweb) | Inventario 2026-10-07 |
+| WP-CLI | 2.12.0 en `/usr/local/bin/wp`. **Receta que funciona en este host:** `/opt/alt/php84/usr/bin/php /usr/local/bin/wp --skip-plugins=elementor <cmd>` (el php por defecto de la shell es 8.0 y Elementor 4.3.4 se carga dos veces en CLI al activar plugins) | Sesión local 2026-10-08 |
 | Convivencia | Plugin `sensia` (ruta `/op`, `/op/*`) y carpeta privada `wp-content/uploads/sensia-privado/` (documentos de pacientes): **no tocar** | Membretador |
+| Respaldos en servidor | `wp-config.php.bak-2026-10-08` (webroot); `~/sensia-backups/removed-2026-10-08/elementor-safe-mode.php`; Hostinger backup manual 2026-10-07 16:41 | Sesión local |
 
 ✅ Q-004 resuelto en hPanel el 2026-10-07: dominio principal `drairinagonzalez.com`; `otorrino-monterrey.com` aparcado y redirigido 301 a `https://drairinagonzalez.com`. Pendiente: canónico con `www` (home/siteurl) y SSL para www.
 

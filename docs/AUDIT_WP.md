@@ -55,7 +55,7 @@ Inventario de producción: `docs/audit/inventory-20261007-174227.txt` (solo lect
 | ID 2 `irina` | subscriber | KEEP; pasará a rol `revisor_medico` cuando se active `dra-irina-core` |
 
 ### Otros hallazgos
-- Reescrituras `oauth/*` y `.well-known/oauth-*` (`mcp_oauth_endpoint`, `mcp_oauth_discovery`): INVESTIGATE. Site Kit ya se eliminó (2026-10-07); si persisten tras `wp rewrite flush`, el origen es Sensia o el core de WordPress 7.x. No tocar hasta identificarlo.
+- Reescrituras `oauth/*` y `.well-known/oauth-*`: **origen identificado** (sesión local, 2026-10-08): servidor MCP/OAuth embebido en Rank Math 1.0.280 (`vendor/wp-media/mcp-oauth`). Decisión: KEEP por ahora (viene con el plugin SEO elegido); Codex lo revisa en la auditoría de seguridad (Fase 10) y se desactiva si Rank Math ofrece ajuste y no se usa.
 - Cron: Action Scheduler, LiteSpeed, Rank Math, Site Kit email reporting, elementor tracker, Astra partner weekly. Los de Astra y Site Kit desaparecen al eliminarlos.
 
 ## 3. Ejecutado por REST el 2026-10-07
@@ -66,11 +66,21 @@ Inventario de producción: `docs/audit/inventory-20261007-174227.txt` (solo lect
 - `/op` verificado después de cada cambio (302 a `/op/entrar/`).
 - Pendiente: página 106 "Inicio" (Astra) se conserva como portada provisional hasta que exista la nueva Home.
 
+## 3b. Ejecutado por la sesión local (SSH + WP-CLI) el 2026-10-08
+
+- Idioma `es_MX` activado.
+- Hello Elementor 3.5.1 instalado; Astra eliminado.
+- `elementor-safe-mode.php` (MU) apartado a `~/sensia-backups/removed-2026-10-08/`.
+- `wp-config.php`: `DISALLOW_FILE_EDIT` y `FORCE_SSL_ADMIN` (copia `.bak-2026-10-08`).
+- Desplegados y activados `dra-irina-core` 0.1.0 y tema `irina-gonzalez` 0.1.0 (child de Hello); `irina` → rol `revisor_medico`.
+- PHP del sitio a 8.4 (propietario, hPanel). Verificado: /op 302, home 200, wp-admin 302, REST OK, sin avisos PHP en el HTML.
+- Caché LiteSpeed purgada.
+
 ## 4. Orden de limpieza restante (por REST desde cloud, con verificación de `/op` tras cada bloque)
 
-1. Ajustes: zona horaria `America/Monterrey`, idioma `es_MX`, formato de fecha, título y descripción del sitio.
-2. Contenido: borrar páginas 106 y 3; conservar 143 "Links"; vaciar papelera.
-3. Tema: instalar Hello Elementor (wp-admin o WP-CLI desde la sesión local), activar, borrar Astra.
-4. Plugins: borrar `elementor-safe-mode` y `google-site-kit`.
-5. Hardening: `DISALLOW_FILE_EDIT`, `FORCE_SSL_ADMIN` (sesión local, edita wp-config), 2FA.
-6. Despliegue de `dra-irina-core` y `irina-gonzalez` (sesión local, `tools/deploy/deploy-code.sh`), activación y asignación de rol a `irina`.
+1. Datos del consultorio en Ajustes → Consultorio (REST) con lo confirmado por el propietario.
+2. Rank Math: título/descripción de la home, desactivar schema `Article` en páginas, sitemap sin tipos innecesarios, Open Graph.
+3. LiteSpeed Cache: configuración base (Fase 10).
+4. Elementor Pro: subir zip (propietario, una vez) y activar licencia.
+5. 2FA para el administrador.
+6. Página 106 "Inicio" se sustituye cuando exista la nueva Home (Fase 6).

@@ -132,6 +132,10 @@ final class Graph {
 	/** Grafo por tipo de página. */
 	public function graph(): array {
 		$nodes = [];
+		// Sin nombre profesional confirmado en Ajustes → Consultorio no se emite schema médico (MASTER_PROMPT §3, §40).
+		if ( '' === trim( (string) PracticeSettings::get( 'nombre_profesional' ) ) ) {
+			return apply_filters( 'dra_irina_schema_graph', [] );
+		}
 		if ( is_front_page() ) {
 			$nodes[] = self::physician();
 		} elseif ( is_page() && 'dra-irina-gonzalez-saez' === get_post_field( 'post_name', get_queried_object_id() ) ) {

@@ -200,5 +200,23 @@ final class PracticeSettings {
 				'callback'            => static fn() => rest_ensure_response( self::public_data() ),
 			]
 		);
+		register_rest_route(
+			'dra-irina/v1',
+			'/practice',
+			[
+				'methods'             => 'POST',
+				'permission_callback' => static fn(): bool => current_user_can( 'manage_options' ),
+				'callback'            => static function ( \WP_REST_Request $request ) {
+					$incoming = $request->get_json_params();
+					if ( ! is_array( $incoming ) ) {
+						return new \WP_Error( 'di_invalid', __( 'Cuerpo JSON inválido.', 'dra-irina-core' ), [ 'status' => 400 ] );
+					}
+					$merged = array_merge( self::all(), $incoming ); // Actualización parcial: solo las claves enviadas.
+					$clean  = ( new self() )->sanitize( $merged );
+					update_option( self::OPTION, $clean, false );
+					return rest_ensure_response( self::all() );
+				},
+			]
+		);
 	}
 }
