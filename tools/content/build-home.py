@@ -67,7 +67,7 @@ data = [
     container("ubicacion", "di-ubicacion", {
         "eyebrow": "Consultorio", "title": "",
         "facts": rep([("Estacionamiento", "Gratuito"), ("Acceso", "Elevador y acceso para silla de ruedas")], "label", "value"),
-        "map_embed": "https://www.google.com/maps?q=25.7117869,-100.3765032&z=17&output=embed"}),
+        "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.777590213581!2d-100.3765032!3d25.7117869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297c19d8eb1cb%3A0x5c3e8ac4d16be247!2sDra%20Irina%20Gonz%C3%A1lez%20S%C3%A1ez!5e0!3m2!1ses!2smx!4v1791433463370!5m2!1ses!2smx"}),
     container("cta", "di-cta", {
         "eyebrow": "Agenda", "title": "¿Hablamos de lo que te está quitando el descanso?",
         "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": ""}),
