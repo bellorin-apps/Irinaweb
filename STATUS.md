@@ -13,7 +13,7 @@ Fase actual
 Fase 6/12 — Núcleo visual (CP3 cerrado; conmutación de portada en curso) · Fase 7 contenido en DOING
 
 Estado
-🟢 CP3 cerrado por el propietario: Home v2 pasa a portada hoy; páginas base y 22 fichas médicas en borrador a la espera de revisión de la Dra.
+🟢 Home v2 publicada como portada (CP3 cerrado); páginas base y 23 fichas médicas en borrador a la espera de la revisión de la Dra.
 ```
 
 ## Métricas
