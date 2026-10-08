@@ -28,6 +28,7 @@ Formato: ID · Fecha · Decisión · Alternativas · Motivo · Estado (Vigente /
 | D-023 | 2026-10-07 | Página "Links" (`/links/`) se conserva: se usa en Instagram/TikTok. Se rehace con el nuevo diseño en la misma URL, `noindex` | Borrarla | Enlace activo en redes | Vigente |
 | D-024 | 2026-10-07 | Google Site Kit se elimina; Search Console y GA4 se gestionan directamente | Conservarlo | Menos peso y cron; decisión del propietario | Vigente |
 | D-025 | 2026-10-07 | PHP del sitio a 8.4 (hPanel → Avanzado → Configuración PHP); verificar /op y wp-admin después | 8.3; dejar 8.2 | Rendimiento y soporte; Sensia probada en 8.4 | Vigente — ejecuta el propietario |
+| D-026 | 2026-10-08 | Dirección visual v2: cálida y genuina, titulares gigantes, minimalista, cabeceras a sangre con fondos grandes, transiciones modernas; nocturno solo en páginas de Sueño; Home con mismas secciones; titular del hero se conserva | v1 (clara, tarjetas, bloque nocturno en Home) | Decisión del propietario en la primera ronda del CP2 | Vigente |
 | D-008 | 2026-10-07 | La sesión fotográfica de 2022 NO se usa en el sitio | Reutilizarla | Es una sesión personal (maternidad), monocroma, sin contexto clínico | Vigente — requiere nueva sesión |
 
 ## Decisiones pendientes del propietario (OWNER_DECISION_REQUIRED)

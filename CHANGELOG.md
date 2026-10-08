@@ -18,3 +18,4 @@
 - Plugin `dra-irina-core` 0.2.1 (ops endpoints corregidos, Q-005) y tema activos en producción; Rank Math configurado; PHP 8.4; Elementor Pro instalado.
 - Fase 4: sistema visual (tokens, componentes, sub-marca Sueño), `DESIGN_SYSTEM.md` v0.1 y maquetas Home / Dra. Irina / apnea / artículo en `tools/preview/`; `tools/deploy/deploy-preview.sh` para publicarlas en `/preview/` (noindex). Avance 20%.
 - `env.example.sh`: `SITE_URL` canónico sin www.
+- CP2 primera ronda: el propietario cambia la dirección (D-026). Maquetas v2 (cálidas, titulares gigantes, cabeceras a sangre, reveal/parallax) en `tools/preview/`; v1 archivada en `tools/preview/v1/`. `DESIGN_SYSTEM.md` v0.2.
