@@ -58,7 +58,7 @@ Reglas: texto púrpura solo sobre blanco o `surface-soft`; texto blanco sobre `p
 | Componente | Especificación |
 |---|---|
 | Header | Fijo, transparente en blanco sobre la cabecera a sangre y sólido (crema al 88 % con blur) al hacer scroll; 84 px; nav con subrayado animado desde 1024 px; CTA WhatsApp siempre visible; hamburguesa circular 46 px en móvil |
-| Cabecera a sangre | 100svh en Home, 78svh en interiores; fondo fotográfico grande con grano y degradado de sombra; título gigante abajo a la izquierda; indicador de scroll |
+| Cabecera a sangre | 100svh en Home, 78svh en interiores; fondo fotográfico grande con grano y degradado de sombra; título gigante abajo a la izquierda; indicador de scroll. **Móvil (< 900 px):** la foto 3:2 cubre por altura, así que se recorta el 12 % superior (img absoluta, top −12 %, height 112 %, object-position 70 % 0) para que el rostro quede en la mitad superior; bloque compacto abajo: overline, titular 2.2–2.7 rem, entradilla corta específica (`lead_mobile`), CTA WhatsApp a ancho completo + secundario debajo, señales de confianza en fila desplazable; padding inferior que respeta la barra móvil. Las reglas móviles van después de las generales en `components.css` |
 | Marquesina | Línea de motivos de consulta en Iskra 300 que se desplaza 40 s en bucle; se detiene con `prefers-reduced-motion` |
 | Botones | 48 px de alto, pill, peso 600. `primary` (púrpura), `whatsapp` (teal), `ghost` (borde), `light` (blanco sobre nocturno). Hover: −1 px de elevación |
 | Tarjeta de área | Fondo `primary-soft` (ORL) o `night` (Sueño); icono Lucide 28 px; título + lista de motivos; enlace |
