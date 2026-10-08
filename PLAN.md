@@ -81,11 +81,11 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 4.1 | Derivar sistema digital de la identidad existente (paleta, tipografía, logo, favicon) | 3 | REVIEW | `DESIGN_SYSTEM.md` §2–3; favicon pendiente de exportar |
-| 4.2 | Tokens globales (color, tipo, espacio, radio, sombra, motion) | 3 | REVIEW | `assets/css/tokens.css` |
+| 4.1 | Derivar sistema digital de la identidad existente (paleta, tipografía, logo, favicon) | 3 | DONE | `DESIGN_SYSTEM.md` §2–3; favicon pendiente de exportar |
+| 4.2 | Tokens globales (color, tipo, espacio, radio, sombra, motion) | 3 | DONE | `assets/css/tokens.css` |
 | 4.3 | Componentes base: botones, inputs, cards, badges, iconografía Lucide | 3 | REVIEW | `tools/preview/preview.css`; inputs pendientes (Fase 8) |
-| 4.4 | Concepto visual "Sleep experience" dentro de la marca | 2 | REVIEW | `DESIGN_SYSTEM.md` §6; aplicado en maquetas |
-| 4.5 | Mockups/prototipos: Home, Dra. Irina, página médica, artículo, móvil | 5 | REVIEW | Publicadas 2026-10-08 en `/preview/` (200 ×4, noindex) |
+| 4.4 | Concepto visual "Sleep experience" dentro de la marca | 2 | DONE | `DESIGN_SYSTEM.md` §6; aplicado en maquetas |
+| 4.5 | Mockups/prototipos: Home, Dra. Irina, página médica, artículo, móvil | 5 | DONE | Publicadas 2026-10-08 en `/preview/` (200 ×4, noindex) |
 | 4.6 | `DESIGN_SYSTEM.md` | 2 | REVIEW | v0.1 |
 | 4.7 | CHECKPOINT 2: dirección visual aprobada | 2 | DONE | 2026-10-08: v2 aprobada por el propietario («ciertos cambios los haremos después»); D-026 |
 
@@ -105,16 +105,16 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 6.1 | Header + navegación + CTA + mobile bar | 3 | REVIEW | Verificado en /inicio-v2/; «Cómo llegar» aparece al cargar maps_url |
-| 6.2 | Footer | 2 | REVIEW | Verificado en /inicio-v2/ |
-| 6.3 | Home | 5 | REVIEW | /inicio-v2/ en producción (noindex): 8 widgets, header/footer del tema, QA visual OK escritorio y móvil; pendiente CP3 |
+| 6.1 | Header + navegación + CTA + mobile bar | 3 | DONE | Verificado en /inicio-v2/; «Cómo llegar» aparece al cargar maps_url |
+| 6.2 | Footer | 2 | DONE | Verificado en /inicio-v2/ |
+| 6.3 | Home | 5 | DONE | /inicio-v2/ en producción (noindex): 8 widgets, header/footer del tema, QA visual OK escritorio y móvil; pendiente CP3 |
 | 6.4 | Página Dra. Irina (entidad/autora) | 5 | DOING | Cargada en 169 (borrador) con credenciales; falta QA con capturas |
 | 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; 22 fichas en borrador; falta QA con sesión |
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
 | 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | TODO | |
 | 6.9 | Codex: auditoría del núcleo | 3 | TODO | |
-| 6.10 | CHECKPOINT 3: Home + sistema visual aprobados | 2 | OWNER | ext |
+| 6.10 | CHECKPOINT 3: Home + sistema visual aprobados | 2 | DONE | 2026-10-08: portada = Home v2, logotipo completo, foto autorizada (D-034) |
 
 ## FASE 7 — Contenido médico
 
@@ -219,4 +219,4 @@ Criterio de entrada: contenido español base aprobado por la Dra. + CP3 superado
 | 13 (EN, aparte) | 19 | 0 — no suma al total del sitio en español |
 | **Total** | **253** | **59** |
 
-Avance global: 60.5 / 253 = **24%** · Tareas: 13 / 97 DONE · 24 en REVIEW · 11 DOING (la Fase 13 EN cuenta aparte).
+Avance global: 74 / 253 = **29%** · Tareas: 21 / 97 DONE · 17 en REVIEW · 11 DOING (la Fase 13 EN cuenta aparte).

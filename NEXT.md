@@ -4,6 +4,8 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
+- [x] Checkpoint 3 cerrado (D-034): portada Home v2, logotipo completo, foto autorizada; conmutación con `tools/deploy/go-live-home.sh`.
+
 - [ ] OD-009 rinoplastia: elegir opción (recomendada b + c).
 - [ ] Cargo exacto de la Dra. en el Hospital Universitario y segunda publicación (cita completa) → DISCOVERY.
 
@@ -61,5 +63,5 @@
 
 ## AFTER — Versión en inglés (Anexo A, Fase 13)
 
-- Propuesta de fecha de inicio: **dos semanas después de que la Dra. apruebe el contenido español de las páginas base (CP4 parcial)** y nunca antes del CP3. Estimación: si CP3 cierra la semana del 13 de octubre y CP4 base la del 27 de octubre de 2026, la fase inglesa arrancaría la semana del 10 de noviembre de 2026. El propietario confirma la fecha.
+- Decisión del propietario (D-034): la versión en inglés va **después del lanzamiento en español**. Propuesta de fecha: **inicio cuatro semanas después del launch español** (si el launch es la semana del 3 de noviembre de 2026, la fase inglesa arranca la semana del 1 de diciembre de 2026). El propietario confirma. Estimación: si CP3 cierra la semana del 13 de octubre y CP4 base la del 27 de octubre de 2026, la fase inglesa arrancaría la semana del 10 de noviembre de 2026. El propietario confirma la fecha.
 - Antes de arrancar: OD-008 (herramienta), `docs/GLOSSARY_EN.md`, keyword map en inglés.
