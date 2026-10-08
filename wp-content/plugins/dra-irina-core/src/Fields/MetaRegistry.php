@@ -119,7 +119,7 @@ final class MetaRegistry {
 			'credencial'  => [
 				'tipo'        => [
 					'type' => 'string',
-					'enum' => [ 'formacion', 'especialidad', 'certificacion', 'membresia', 'publicacion', 'curso', 'experiencia', 'conferencia' ],
+					'enum' => [ 'formacion', 'especialidad', 'certificacion', 'membresia', 'publicacion', 'curso', 'experiencia', 'conferencia', 'trabajo' ],
 				],
 				'institucion' => [ 'type' => 'string' ],
 				'lugar'       => [ 'type' => 'string' ],
