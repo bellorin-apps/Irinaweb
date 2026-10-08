@@ -105,12 +105,12 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 6.1 | Header + navegación + CTA + mobile bar | 3 | TODO | |
-| 6.2 | Footer | 2 | TODO | |
-| 6.3 | Home | 5 | TODO | |
+| 6.1 | Header + navegación + CTA + mobile bar | 3 | DOING | header.php, menu panel, mobile-bar.php; pendiente verificar en producción |
+| 6.2 | Footer | 2 | DOING | footer.php con PracticeSettings |
+| 6.3 | Home | 5 | DOING | Widgets di-* + home-elementor.json; publicada como /inicio-v2/ noindex (D-028) |
 | 6.4 | Página Dra. Irina (entidad/autora) | 5 | TODO | |
-| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | TODO | |
-| 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | TODO | |
+| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; muestra privada de apnea |
+| 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
 | 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | TODO | |
 | 6.9 | Codex: auditoría del núcleo | 3 | TODO | |

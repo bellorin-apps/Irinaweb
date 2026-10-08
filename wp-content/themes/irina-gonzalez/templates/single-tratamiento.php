@@ -1,6 +1,6 @@
 <?php
 /**
- * Template single-tratamiento — se construye en Fase 6 (núcleo visual). Mientras tanto delega en el parent.
+ * Template single-tratamiento (Fase 6). Markup en templates/parts/medical-page.php.
  *
  * @package IrinaGonzalez
  */
@@ -8,13 +8,12 @@
 declare( strict_types=1 );
 
 get_header();
-echo '<main id="content" class="di-container di-section">';
-if ( have_posts() ) {
-	while ( have_posts() ) {
-		the_post();
-		the_title( '<h1>', '</h1>' );
-		the_content();
-	}
+$irina_sleep = has_term( 'sueno', 'area', get_the_ID() );
+echo '<main id="content" class="di-main' . ( $irina_sleep ? ' di-dark' : '' ) . '">';
+while ( have_posts() ) {
+	the_post();
+	irina_part( 'medical-page' );
 }
+irina_part( 'cta-bleed' );
 echo '</main>';
 get_footer();

@@ -20,3 +20,4 @@
 - `env.example.sh`: `SITE_URL` canónico sin www.
 - CP2 primera ronda: el propietario cambia la dirección (D-026). Maquetas v2 (cálidas, titulares gigantes, cabeceras a sangre, reveal/parallax) en `tools/preview/`; v1 archivada en `tools/preview/v1/`. `DESIGN_SYSTEM.md` v0.2.
 - Checkpoint 2 cerrado: v2 con titulares en bold aprobada por el propietario; `/preview/` con assets versionados y sin caché. Inicia Fase 6.
+- Fase 6 build: tokens cálidos v2 en el tema, header/footer PHP (D-027), plantillas de condición/tratamiento/recurso/archivos, partes del Home, plugin 0.3.0 con 8 widgets Elementor `di-*`, `tools/content/home-elementor.json` y `tools/deploy/setup-site.sh` (D-028).

@@ -1,0 +1,64 @@
+<?php
+/**
+ * Home · hero a sangre. $args: eyebrow, title, lead, image_id, trust (array de strings), secondary_label, secondary_url.
+ *
+ * @package IrinaGonzalez
+ */
+
+declare( strict_types=1 );
+
+$irina_a   = wp_parse_args(
+	$args ?? [],
+	[
+		'eyebrow'         => __( 'Otorrinolaringólogo en Monterrey', 'irina-gonzalez' ),
+		'title'           => __( 'Respirar bien,<br>dormir bien,<br><em>oír bien.</em>', 'irina-gonzalez' ),
+		'lead'            => '',
+		'image_id'        => 0,
+		'trust'           => [],
+		'secondary_label' => __( 'Conocer a la Dra. Irina', 'irina-gonzalez' ),
+		'secondary_url'   => home_url( '/dra-irina-gonzalez-saez/' ),
+	]
+);
+$irina_cta = irina_whatsapp_button();
+if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
+	$irina_cta .= sprintf( '<a class="di-btn di-btn--ghost" href="%s">%s%s</a>', esc_url( $irina_a['secondary_url'] ), esc_html( $irina_a['secondary_label'] ), irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ) );
+}
+?>
+<section class="di-bleed">
+	<div class="di-bleed__bg di-bleed__bg--warm"><?php echo $irina_a['image_id'] ? wp_get_attachment_image( (int) $irina_a['image_id'], 'irina-hero', false, [ 'fetchpriority' => 'high' ] ) : ''; ?></div>
+	<div class="di-bleed__shade"></div>
+	<div class="di-container">
+		<p class="di-eyebrow"><?php echo esc_html( $irina_a['eyebrow'] ); ?></p>
+		<h1>
+		<?php
+		echo wp_kses(
+			$irina_a['title'],
+			[
+				'em' => [],
+				'br' => [],
+			]
+		);
+		?>
+		</h1>
+		<?php
+		if ( '' !== $irina_a['lead'] ) :
+			?>
+			<p class="di-lead"><?php echo esc_html( $irina_a['lead'] ); ?></p><?php endif; ?>
+		<div class="di-hero-cta"><?php echo $irina_cta; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+		<?php if ( $irina_a['trust'] ) : ?>
+			<ul class="di-hero-trust">
+			<?php
+			foreach ( (array) $irina_a['trust'] as $irina_t ) :
+				?>
+				<li><?php echo irina_icon( 'check-circle' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><?php echo esc_html( (string) $irina_t ); ?></li><?php endforeach; ?></ul>
+		<?php endif; ?>
+	</div>
+	<div class="di-scroll-hint" aria-hidden="true"></div>
+</section>
+<?php if ( ! empty( $irina_a['ticker'] ) ) : ?>
+	<div class="di-ticker" aria-hidden="true"><div class="di-ticker__track">
+	<?php
+	$irina_items = (array) $irina_a['ticker']; foreach ( array_merge( $irina_items, $irina_items ) as $irina_t ) :
+		?>
+		<span><?php echo esc_html( (string) $irina_t ); ?></span><?php endforeach; ?></div></div>
+<?php endif; ?>

@@ -15,6 +15,7 @@ use DraIrina\Core\PostTypes\Condicion;
 use DraIrina\Core\PostTypes\Credencial;
 use DraIrina\Core\PostTypes\Recurso;
 use DraIrina\Core\PostTypes\Tratamiento;
+use DraIrina\Core\Rendering\Elementor\Widgets as ElementorWidgets;
 use DraIrina\Core\Rendering\Shortcodes;
 use DraIrina\Core\Schema\Graph;
 use DraIrina\Core\Settings\PracticeSettings;
@@ -55,6 +56,7 @@ final class Plugin {
 			new MedicalReview(),
 			new Graph(),
 			new Shortcodes(),
+			new ElementorWidgets(),
 			new Events(),
 			new OpsEndpoints(),
 		];

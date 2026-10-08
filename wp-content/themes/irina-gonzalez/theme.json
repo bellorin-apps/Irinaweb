@@ -10,11 +10,13 @@
         { "slug": "primary", "name": "Púrpura", "color": "#8C4EAA" },
         { "slug": "secondary", "name": "Teal", "color": "#3CA1A7" },
         { "slug": "accent", "name": "Teal claro", "color": "#9CCED1" },
-        { "slug": "surface", "name": "Superficie", "color": "#FFFFFF" },
-        { "slug": "surface-soft", "name": "Superficie suave", "color": "#F6F3F9" },
-        { "slug": "text", "name": "Texto", "color": "#2B2730" },
-        { "slug": "muted", "name": "Texto secundario", "color": "#6D6577" },
-        { "slug": "border", "name": "Borde", "color": "#E4DFEA" },
+        { "slug": "surface", "name": "Superficie", "color": "#FBF7F2" },
+        { "slug": "surface-soft", "name": "Superficie suave", "color": "#F3EBE2" },
+        { "slug": "text", "name": "Texto", "color": "#241F23" },
+        { "slug": "muted", "name": "Texto secundario", "color": "#75696F" },
+        { "slug": "border", "name": "Borde", "color": "#E6DCD3" },
+        { "slug": "sand", "name": "Arena", "color": "#E9D9C8" },
+        { "slug": "peach", "name": "Durazno", "color": "#F1DCCB" },
         { "slug": "night", "name": "Noche (Sueño)", "color": "#1B1630" }
       ]
     },
@@ -34,6 +36,6 @@
       ]
     },
     "spacing": { "units": [ "px", "rem", "%" ] },
-    "layout": { "contentSize": "720px", "wideSize": "1200px" }
+    "layout": { "contentSize": "720px", "wideSize": "1320px" }
   }
 }

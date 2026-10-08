@@ -3,7 +3,7 @@
  * Plugin Name:       Dra. Irina Core
  * Plugin URI:        https://www.drairinagonzalez.com/
  * Description:       Funcionalidad y datos estructurados del sitio de la Dra. Irina González Sáez: tipos de contenido médico, campos, ajustes del consultorio, workflow de revisión médica y schema.org. Independiente del tema.
- * Version:           0.2.1
+ * Version:           0.3.0
  * Requires at least: 6.6
  * Requires PHP:      8.1
  * Author:            Bellorin Apps
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DRA_IRINA_CORE_VERSION', '0.2.1' );
+define( 'DRA_IRINA_CORE_VERSION', '0.3.0' );
 define( 'DRA_IRINA_CORE_FILE', __FILE__ );
 define( 'DRA_IRINA_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DRA_IRINA_CORE_URL', plugin_dir_url( __FILE__ ) );

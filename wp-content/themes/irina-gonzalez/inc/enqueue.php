@@ -49,8 +49,10 @@ add_action(
 			return;
 		}
 		echo '<link rel="preconnect" href="https://use.typekit.net" crossorigin>' . "\n";
+		// phpcs:disable WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet -- carga diferida de Adobe Fonts (print → all) no expresable con wp_enqueue_style.
 		printf( '<link rel="stylesheet" href="https://use.typekit.net/%s.css" media="print" onload="this.media=\'all\'">' . "\n", esc_attr( $kit ) );
 		printf( '<noscript><link rel="stylesheet" href="https://use.typekit.net/%s.css"></noscript>' . "\n", esc_attr( $kit ) );
+		// phpcs:enable
 	},
 	1
 );

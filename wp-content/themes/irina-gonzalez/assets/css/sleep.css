@@ -1,11 +1,17 @@
-/* Sub-marca Sueño: atmósfera nocturna controlada, solo en /sueno/ y sus hijas. */
-.di-sleep-hero {
-  background: linear-gradient(160deg, var(--color-night) 0%, var(--color-night-2) 60%, #3a2f63 100%);
-  color: #f3eefa;
-}
-.di-sleep-hero h1, .di-sleep-hero h2 { color: #fff; }
-.di-sleep-hero .di-eyebrow { color: var(--color-accent); }
-.di-sleep-hero .di-btn--ghost { color: #fff; }
-.di-breath { animation: di-breath 6s ease-in-out infinite; transform-origin: center; }
-@keyframes di-breath { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.06); opacity: 1; } }
+/* Sub-marca Sueño: registro nocturno solo en /sueno/ y sus hijas (D-026). */
+.di-dark { background: var(--color-night); color: #efe9f7; }
+.di-dark h1, .di-dark h2, .di-dark h3, .di-dark h4 { color: #fff; }
+.di-dark .di-eyebrow { color: var(--color-accent); }
+.di-dark .di-callout, .di-dark .di-inline-cta { background: rgb(255 255 255 / 0.06); }
+.di-dark .di-review-badge, .di-dark .di-faq details, .di-dark .di-toc, .di-dark .di-path > li, .di-dark .di-symptom, .di-dark .di-symptoms { border-color: rgb(255 255 255 / 0.15); }
+.di-dark .di-toc a, .di-dark .di-muted, .di-dark .di-sources, .di-dark .di-review-badge { color: rgb(255 255 255 / 0.6); }
+.di-dark .di-review-badge strong, .di-dark .di-inline-cta b { color: #fff; }
+.di-dark a { color: var(--color-accent); }
+.di-dark .di-btn--light { color: var(--color-night); }
+.di-dark .di-btn--whatsapp, .di-dark .di-btn--primary { color: #fff; }
+.di-dark .di-crumbs a { color: inherit; }
+.di-breath { position: absolute; top: 10%; right: 6%; width: min(42vw, 480px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgb(255 255 255 / 0.18); animation: di-breath 7s ease-in-out infinite; z-index: -1; }
+.di-breath::before { content: ""; position: absolute; inset: 14%; border-radius: 50%; border: 1px solid rgb(255 255 255 / 0.22); }
+.di-breath::after { content: ""; position: absolute; inset: 30%; border-radius: 50%; background: radial-gradient(circle, rgb(156 206 209 / 0.4), transparent 70%); }
+@keyframes di-breath { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.08); opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .di-breath { animation: none; } }

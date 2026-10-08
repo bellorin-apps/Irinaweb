@@ -56,3 +56,40 @@ add_filter(
 		return $template;
 	}
 );
+
+/**
+ * Menú de respaldo cuando no hay menú asignado: páginas clave del sitemap.
+ *
+ * @param array<string, mixed> $args Argumentos de wp_nav_menu.
+ */
+function irina_nav_fallback( array $args = [] ): void {
+	$items = [
+		'otorrinolaringologia'    => __( 'Otorrinolaringología', 'irina-gonzalez' ),
+		'sueno'                   => __( 'Sueño', 'irina-gonzalez' ),
+		'dra-irina-gonzalez-saez' => __( 'Dra. Irina', 'irina-gonzalez' ),
+		'primera-consulta'        => __( 'Primera consulta', 'irina-gonzalez' ),
+		'contacto'                => __( 'Contacto', 'irina-gonzalez' ),
+	];
+	$out   = '';
+	foreach ( $items as $slug => $label ) {
+		$page = get_page_by_path( $slug );
+		if ( $page instanceof WP_Post && 'publish' === $page->post_status ) {
+			$out .= sprintf( '<li class="menu-item"><a href="%s">%s</a></li>', esc_url( get_permalink( $page ) ), esc_html( $label ) );
+		}
+	}
+	if ( '' === $out ) {
+		return;
+	}
+	printf( '<ul class="%s">%s</ul>', esc_attr( (string) ( $args['menu_class'] ?? 'menu' ) ), $out ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado arriba.
+}
+
+// Clase de body cuando la página abre con cabecera a sangre (evita salto de layout antes del JS).
+add_filter(
+	'body_class',
+	static function ( array $classes ): array {
+		if ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) || is_post_type_archive( [ 'condicion', 'tratamiento' ] ) || is_front_page() ) {
+			$classes[] = 'has-bleed';
+		}
+		return $classes;
+	}
+);

@@ -44,7 +44,12 @@ final class Endpoints {
 						if ( self::denied( $name ) ) {
 							return new \WP_Error( 'di_denied', 'Opción no permitida.', [ 'status' => 403 ] );
 						}
-						return rest_ensure_response( [ 'name' => $name, 'value' => get_option( $name, null ) ] );
+						return rest_ensure_response(
+							[
+								'name'  => $name,
+								'value' => get_option( $name, null ),
+							]
+						);
 					},
 				],
 				[
@@ -65,7 +70,12 @@ final class Endpoints {
 							$value   = array_merge( is_array( $current ) ? $current : [], $value );
 						}
 						update_option( $name, $value );
-						return rest_ensure_response( [ 'name' => $name, 'value' => get_option( $name ) ] );
+						return rest_ensure_response(
+							[
+								'name'  => $name,
+								'value' => get_option( $name ),
+							]
+						);
 					},
 				],
 			]
@@ -89,9 +99,14 @@ final class Endpoints {
 				'methods'             => 'POST',
 				'permission_callback' => [ self::class, 'admin_only' ],
 				'callback'            => static function () {
-					do_action( 'litespeed_purge_all' );
+					do_action( 'litespeed_purge_all' ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- hook de LiteSpeed Cache.
 					wp_cache_flush();
-					return rest_ensure_response( [ 'ok' => true, 'litespeed' => has_action( 'litespeed_purge_all' ) > 0 ] );
+					return rest_ensure_response(
+						[
+							'ok'        => true,
+							'litespeed' => has_action( 'litespeed_purge_all' ) > 0,
+						]
+					);
 				},
 			]
 		);
