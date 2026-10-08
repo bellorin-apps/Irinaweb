@@ -30,7 +30,8 @@
 @media (max-width: 782px) { .admin-bar .di-header { top: 46px; } }
 .di-header__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); min-height: 84px; }
 .di-header.di-on-dark { color: #fff; }
-.di-header.is-scrolled, .di-header.is-open { background: rgb(251 247 242 / 0.88); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgb(0 0 0 / 0.06); color: var(--color-text); }
+.di-header.is-scrolled { background: rgb(251 247 242 / 0.88); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgb(0 0 0 / 0.06); color: var(--color-text); }
+.di-header.is-open { background: var(--color-surface); box-shadow: 0 1px 0 var(--color-border); color: var(--color-text); }
 body:not(.has-bleed) { padding-top: 84px; }
 .di-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
 .di-brand:hover { color: inherit; }
@@ -43,7 +44,9 @@ body:not(.has-bleed) { padding-top: 84px; }
 .di-nav li a::after { content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 100%; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform var(--motion-base) var(--ease-out); }
 .di-nav li a:hover::after, .di-nav li.current-menu-item a::after { transform: scaleX(1); transform-origin: left; }
 @media (min-width: 1024px) { .di-nav { display: flex; } }
-.di-burger { display: inline-grid; place-items: center; width: 46px; height: 46px; border: 1px solid currentColor; border-radius: 50%; background: transparent; color: inherit; cursor: pointer; }
+/* Especificidad alta: el kit global de Elementor y el reset de Hello estilizan <button>. */
+.di-header .di-burger, .di-header .di-burger:hover, .di-header .di-burger:focus, .di-header .di-burger:active { display: inline-grid; place-items: center; width: 46px; height: 46px; padding: 0; margin: 0; border: 1px solid currentColor; border-radius: 50%; background: transparent; color: inherit; cursor: pointer; box-shadow: none; font-size: 1rem; line-height: 1; }
+.di-header .di-burger .di-icon { width: 22px; height: 22px; }
 @media (min-width: 1024px) { .di-burger { display: none; } }
 .di-menu-panel { display: none; position: fixed; inset: 84px 0 0; z-index: 49; background: var(--color-surface); padding: var(--space-xl) var(--gutter); overflow: auto; }
 .admin-bar .di-menu-panel { top: calc(84px + 46px); }
