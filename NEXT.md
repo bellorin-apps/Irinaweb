@@ -23,6 +23,9 @@
 
 ## Prioridad 2 — Claude (sin dependencias del propietario)
 
+- [ ] Fase 6: retirar plantillas Theme Builder heredadas (39 header, 79 footer) para que rendericen header/footer del tema; verificar /inicio-v2/ y la condición privada de muestra; QA visual con capturas (6.7, 6.8).
+- [ ] Página de la Dra. (6.4): widgets o plantilla con credenciales desde el CPT `credencial`.
+
 - [x] `docs/REFERENCE_RESEARCH.md` (2.1) — en REVIEW.
 - [x] `docs/COMPETITION_MONTERREY.md` (2.2) — en REVIEW.
 - [x] `KEYWORDS.md` (2.3) — en REVIEW.

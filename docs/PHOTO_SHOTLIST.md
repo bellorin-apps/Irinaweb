@@ -38,3 +38,15 @@ Objetivo: fotografía real como centro de la marca. Evitar stock, poses artifici
 - 25–40 fotos seleccionadas, editadas con tono consistente (blancos limpios, pieles naturales, sin filtros fuertes).
 - Resolución mínima 4000 px lado largo. Nombres descriptivos (`dra-irina-gonzalez-saez-retrato-consultorio-01.jpg`).
 - Licencia de uso web y redes a nombre de la Dra.
+
+## Especificaciones técnicas por bloque del sitio (sistema v2, 2026-10-08)
+
+| Bloque | Dónde se carga | Proporción y tamaño mínimo | Composición |
+|---|---|---|---|
+| Hero del Home | Widget «DI · Hero» → Fotografía de fondo | 3:2 · 2400×1600 px (recorte `irina-hero` 1600×1000) | Sujeto en el tercio derecho; aire limpio a la izquierda para el titular blanco; luz cálida de ventana; degradado oscuro superpuesto abajo |
+| Retrato de la Dra. | Widget «DI · La Dra.» → Retrato | 3:4 · 1200×1600 px (recorte `irina-portrait` 900×1200) | Medio cuerpo con bata, consultorio desenfocado, mirada a cámara |
+| Cabecera página de la Dra. | Imagen destacada de la página | 2:1 · 2400×1200 px | Retrato editorial con aire a la izquierda |
+| Cabeceras médicas y artículos | Imagen destacada de condición / tratamiento / recurso | 2:1 · 2400×1200 px | Para Sueño: tonos fríos nocturnos; nunca stock evidente |
+| Paneles de áreas (opcional) | Futuro control de imagen | 4:5 · 1200×1500 px | Zona inferior tranquila para el texto |
+
+Formato: JPG calidad 80 o PNG; LiteSpeed genera WebP. Nombres descriptivos sin acentos (`dra-irina-consultorio-hero.jpg`). Las imágenes retocadas con IA sobre la sesión personal de 2022 requieren autorización expresa de la Dra. antes de publicarse (D-008).
