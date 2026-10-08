@@ -1,6 +1,6 @@
 # MASTER PROMPT — SITIO WEB DRA. IRINA GONZÁLEZ SÁEZ
 
-**MASTER PROMPT VERSION: 1.0**
+**MASTER PROMPT VERSION: 1.1**
 **Fecha de incorporación:** 2026-10-07
 **Fuente:** Prompt Maestro original del propietario (José Rafael Bellorín Gigante), secciones 0–165.
 **Estado:** Vigente. Este documento es la constitución del proyecto. Aplica íntegramente a Claude y a Codex.
@@ -12,6 +12,7 @@
 | Versión | Fecha | Cambio | Sección | Motivo |
 |---|---|---|---|---|
 | 1.0 | 2026-10-07 | Incorporación íntegra del Prompt Maestro original (0–165) | Todas | Arranque del proyecto |
+| 1.1 | 2026-10-08 | Anexo A: versión en inglés del sitio, a construir en el momento adecuado de la construcción | Anexo A | Instrucción del propietario (sesión local Irinaweb, noche del 7 al 8 de octubre de 2026) |
 
 ---
 
@@ -3524,4 +3525,29 @@ El detalle técnico permanece documentado para Claude y Codex y se muestra únic
 
 ## ANEXOS
 
-_(Sin anexos todavía. Las nuevas instrucciones permanentes del propietario se incorporan aquí con número de versión, fecha y sección.)_
+_(Las nuevas instrucciones permanentes del propietario se incorporan aquí con número de versión, fecha y sección.)_
+
+### ANEXO A — VERSIÓN EN INGLÉS DEL SITIO (v1.1 · 2026-10-08 · instrucción del propietario)
+
+El sitio tendrá una **versión en inglés**. No es un trabajo de arranque: se construye **en el momento adecuado durante la construcción**, y ese momento lo fija este anexo.
+
+**Cuándo (criterio de entrada):**
+
+1. El contenido en español de las páginas base (Home, Dra., Otorrinolaringología, Sueño, Primera consulta, Contacto, legales) está **aprobado por la Dra.** y pasó la revisión médica (§3, §44–45).
+2. La arquitectura, el design system y las plantillas están cerrados (Checkpoint 3 superado); traducir antes obliga a rehacer dos veces.
+3. Claude propone la fecha concreta en `NEXT.md` y el propietario la confirma. Hasta entonces la tarea figura en `PLAN.md` como fase propia, con peso, en estado `TODO`.
+
+**Qué:**
+
+- Alcance mínimo: las páginas base y las páginas de condición/tratamiento que la Dra. elija; el blog se traduce solo si lo decide el propietario.
+- Público: pacientes de habla inglesa en Monterrey y quienes consultan desde fuera de México. No se afirmará nada sobre «turismo médico», seguros extranjeros o atención en inglés en consulta sin confirmación expresa de la Dra. (§3).
+
+**Cómo (reglas no negociables):**
+
+- Misma regla fundamental: **nada médico se inventa ni se «mejora» al traducir**. La traducción la revisa la Dra. (o quien ella designe) antes de publicarse; sin esa aprobación la página inglesa queda en borrador. El workflow de revisión médica del plugin aplica igual al inglés.
+- Nada de traducción automática publicada sin revisión humana. Terminología clínica en inglés consistente (p. ej. *obstructive sleep apnea*, *ENT*), con glosario en `docs/`.
+- URLs: subdirectorio `/en/` bajo el dominio canónico (D-022), slugs en inglés, `hreflang` recíproco es/en + `x-default` al español (§38 permite hreflang solo con multiidioma: queda habilitado por este anexo). Sin páginas doorway ni duplicados (§14).
+- SEO: titles, meta, schema (`inLanguage`), sitemap y Open Graph por idioma; keyword map en inglés propio, no calcado del español.
+- UX: selector de idioma visible, menús, formularios, mensajes de WhatsApp, 404, gracias y legales traducidos; avisos legales en inglés con nota de que la versión en español prevalece (revisión legal §51).
+- Técnica: la decisión de herramienta (plugin de multiidioma vs. implementación nativa en el core del sitio) se registra en `DECISIONS.md` como OD antes de empezar; prioridad a la que no rompa Sensia (`/op`), ni el schema único, ni el rendimiento.
+- Progreso: la fase inglesa cuenta en `PROGRESS.md`/`STATUS.md` como tareas propias; no infla el avance del sitio en español.
