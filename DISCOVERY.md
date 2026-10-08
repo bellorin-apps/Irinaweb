@@ -32,6 +32,77 @@ Nota de privacidad: en el Drive existen documentos de identidad, migratorios y f
 
 ---
 
+## 0b. Respuestas de la Dra. Irina (briefing alojado, 2026-10-08) — PARCIAL, SIN CONFIRMACIÓN FINAL
+
+Fuente: `https://drairinagonzalez.com/briefing/` (respuestas guardadas en el servidor, actualizadas 2026-10-08T00:11:39+00:00). Estado: **72 respuestas; falta pulsar "Revisé mis respuestas y confirmo"** y completar los campos marcados ⬜. Hasta la confirmación, todo se trata como POR CONFIRMAR, pero ya sirve para construir.
+
+### Perfil
+| Tema | Respuesta |
+|---|---|
+| Idiomas | Español |
+| Años de experiencia | **No publicar cifra** |
+| Enfoque (sus palabras) | «Escucharte también es parte del tratamiento» |
+| No publicar | Ayudantías quirúrgicas con otros médicos (coincide con OD-004) |
+| Docencia | Docente de ORL de pregrado en UNEFM, ULA y UNERG (Venezuela) |
+
+### Credenciales
+| Tema | Respuesta |
+|---|---|
+| Cédula de Medicina (MX) | 12438166 — **autoriza publicar** |
+| Cédula de especialidad ORL (MX) | 15111342 — **autoriza publicar** |
+| Consejo Mexicano de ORL y CCC | Diploma recibido; **publicar sin número**; vigente a 2030 |
+| Subespecialización ISSSTE 2018 | Tiene diploma/constancia; lo compartirá |
+| Membresías vigentes | Sociedad Iberoamericana de Cirugía de Sueño; Colegio de ORL de Nuevo León |
+| Publicaciones adicionales | ⬜ sin respuesta |
+
+### Servicios ORL (OFRECE salvo indicación)
+- **Oído:** otitis, tapones de cerumen, hipoacusia, tinnitus, vértigo, perforación timpánica. **Cirugía de oído: REFIERE.**
+- **Nariz:** rinitis, sinusitis, desviación de tabique/obstrucción, pólipos, epistaxis, septoplastia y turbinoplastia, cirugía endoscópica nasal, rinoplastia funcional.
+- **Garganta/cuello:** amigdalitis y faringitis, cirugía de amígdalas y adenoides, reflujo laringofaríngeo, voz y laringe, disfagia, masas o ganglios en cuello.
+- **Otros:** alergias respiratorias (diagnóstico y tratamiento); endoscopia nasal y laringoscopia en consultorio.
+- **Población:** niños desde 0 meses, adolescentes, adultos, adultos mayores.
+- **Hospitales donde opera (publicables):** Christus Muguerza, Hospital Zambrano Hellion, Hospital Ángeles Valle Oriente *(nombres completos por confirmar)*.
+
+### Sueño
+- **Condiciones (OFRECE):** apnea obstructiva, ronquido, somnolencia diurna, trastornos respiratorios del dormir, insomnio.
+- **Estudios:** polisomnografía → **indica e interpreta**; poligrafía respiratoria → **realiza**; estudio domiciliario → **realiza**; endoscopia de sueño (DISE) → **realiza**.
+- **Tratamientos (OFRECE):** CPAP (indicación, titulación y seguimiento), faringoplastia y cirugía de paladar con suturas barbadas, cirugía nasal para el sueño, terapia posicional e higiene del sueño. **Dispositivos de avance mandibular: REFIERE.**
+- **Sueño pediátrico:** solo casos seleccionados.
+- Laboratorio/clínica de sueño con la que trabaja: ⬜ sin respuesta.
+
+### Pacientes
+| Tema | Respuesta |
+|---|---|
+| Motivos más frecuentes | Ronquido · sospecha de apnea · obstrucción nasal · sinusitis · rinitis/alergia · dolor de oído/otitis · pérdida auditiva · dolor de garganta/amigdalitis · amígdalas en niños · tapón de cerumen · problemas de voz |
+| Consulta en línea | Solo seguimiento |
+| Aseguradoras | Particulares y reembolso de seguros |
+| Pago | Efectivo, tarjeta, transferencia, facturación |
+| Urgencias / referidos | Sí / Sí |
+| Primera consulta | 30 minutos; llevar identificación, estudios previos, lista de medicamentos, referencia médica si la hay |
+
+### Consultorio
+| Tema | Respuesta |
+|---|---|
+| Días | Lunes a sábado |
+| Horario | ⬜ sin respuesta (campo de texto) |
+| Estacionamiento | Sí, gratuito |
+| Accesibilidad | Elevador; acceso para silla de ruedas |
+| Cómo llegar | "CAB Medical Headquarters, segundo piso, consultorio 6" |
+| WhatsApp lo responden | Varias personas |
+| Ficha de Google | Horario desactualizado: hay que corregirlo |
+
+### Contenido y legal
+| Tema | Respuesta |
+|---|---|
+| Cuestionarios de orientación aprobados | Escala de Epworth; STOP-Bang |
+| Descargables | Indicaciones prequirúrgicas; preparación para estudio de sueño |
+| FAQ reales | "¿Cómo se limpian los oídos?"; "¿Cómo es un postoperatorio?" |
+| Artículos | ⬜ sin respuesta |
+| Aviso de Funcionamiento · Aviso de Publicidad COFEPRIS · Aviso de privacidad · Asesor legal · Responsable de datos | ⬜ sin respuesta |
+| Confirmación final | ⬜ **pendiente** |
+
+---
+
 ## 1. Información que ya tenemos
 
 ### 1.1 Identidad profesional

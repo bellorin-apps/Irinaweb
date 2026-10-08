@@ -30,7 +30,7 @@ Estado
 ## Estado por área
 
 ```
-Discovery        ███████░░░  70%
+Discovery        █████████░  90%
 Auditoría WP     ████████░░  80%
 Investigación    ████░░░░░░  40%
 Arquitectura     ███░░░░░░░  33%
@@ -57,7 +57,7 @@ Launch           ░░░░░░░░░░   0%
 - Codex: auditoría de investigaciones, STRATEGY, SITEMAP, ARCHITECTURE y PLUGINS (`BATON.md`)
 - Claude: scaffold de `dra-irina-core` y `irina-gonzalez` creado y en verde con PHPCS (5.1, 5.2, 5.5 DOING; no cuentan hasta probarse en WordPress real)
 
-- Briefing de la Dra. desplegado en /briefing/ (URL con token entregada al propietario) — esperando respuestas
+- Briefing de la Dra.: 72 respuestas recibidas; faltan horario, bloque legal y confirmación final
 - Plugin y tema desplegados y activos en producción (scaffold); configuración de Rank Math/LiteSpeed y datos del consultorio
 - Esperando acceso técnico al WordPress para iniciar Fase 1
 
