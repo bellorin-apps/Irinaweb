@@ -146,8 +146,8 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 9.1 | On-page completo: titles, metas, H1, canonicals, OG por página | 3 | TODO | |
-| 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | TODO | |
+| 9.1 | On-page completo: titles, metas, H1, canonicals, OG por página | 3 | DOING | Base de Rank Math configurada (2026-10-08) |
+| 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | DOING | Sitemap restringido a tipos públicos; 301 del dominio viejo |
 | 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | TODO | |
 | 9.4 | GA4 + Search Console + eventos de conversión | 2 | TODO | |
 | 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | Requiere acceso |

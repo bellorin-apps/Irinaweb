@@ -39,7 +39,7 @@ Arquitectura     ░░░░░░░░░░   0%
 Diseño           ░░░░░░░░░░   0%
 Desarrollo       ░░░░░░░░░░   0%
 Contenido        ░░░░░░░░░░   0%
-SEO              ░░░░░░░░░░   0%
+SEO              ██░░░░░░░░  20%
 QA               ░░░░░░░░░░   0%
 Launch           ░░░░░░░░░░   0%
 ```
@@ -58,7 +58,8 @@ Launch           ░░░░░░░░░░   0%
 - Claude: scaffold de `dra-irina-core` y `irina-gonzalez` creado y en verde con PHPCS (5.1, 5.2, 5.5 DOING; no cuentan hasta probarse en WordPress real)
 
 - Briefing de la Dra.: 72 respuestas recibidas; faltan horario, bloque legal y confirmación final
-- Plugin y tema desplegados y activos en producción (scaffold); configuración de Rank Math/LiteSpeed y datos del consultorio
+- Plugin 0.2.1 y tema activos; datos del consultorio cargados; Rank Math configurado; Elementor Pro activo (licencia pendiente)
+- Siguiente: Fase 4 (sistema visual y mockups del núcleo) hacia Checkpoint 2
 - Esperando acceso técnico al WordPress para iniciar Fase 1
 
 ## FALTA

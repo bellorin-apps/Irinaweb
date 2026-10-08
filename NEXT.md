@@ -5,7 +5,7 @@
 ## Prioridad 1 — Desbloqueadores (propietario)
 
 - [ ] Pedir a la Dra. que termine el briefing: horario (texto), laboratorio de sueño, publicaciones, artículos, bloque legal (avisos COFEPRIS/privacidad/asesor/responsable) y pulsar "Confirmo".
-- [ ] Subir Elementor Pro (zip) en wp-admin → Plugins → Subir plugin y conectar licencia.
+- [ ] Conectar la licencia de Elementor Pro (wp-admin → Elementor → Licencia).
 
 - [ ] **Seguir `docs/RUNBOOK_RESET.md` pasos 1–2** (backup descargado; contraseña de aplicación + secretos + red amplia). Claude ejecuta 3, 4 y 6 por REST.
 - [x] Adobe Fonts kit `nlo5pss` configurado en el tema.

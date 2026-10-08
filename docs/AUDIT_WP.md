@@ -76,6 +76,13 @@ Inventario de producción: `docs/audit/inventory-20261007-174227.txt` (solo lect
 - PHP del sitio a 8.4 (propietario, hPanel). Verificado: /op 302, home 200, wp-admin 302, REST OK, sin avisos PHP en el HTML.
 - Caché LiteSpeed purgada.
 
+## 3c. Configuración por REST (ops) el 2026-10-08
+
+- Rank Math: título y descripción de la home orientados a intención; separador `|`; schema `Article` desactivado en páginas, entradas y CPT (el core emite lo médico, D-015); `local_business_type` Physician; `credencial`, plantillas de Elementor y taxonomías internas en `noindex`; breadcrumbs activos con etiquetas en español; módulos reducidos a sitemap, rich-snippet, link-counter, seo-analysis e instant-indexing (fuera: analytics, content-ai, ai-visibility, woocommerce, etc.).
+- Sitemap: solo páginas, padecimientos, tratamientos y recursos; sin autores, adjuntos, entradas ni taxonomías.
+- Verificado: home con JSON-LD WebSite + WebPage (Rank Math) y Physician (core); sitemap_index con `page-sitemap.xml`.
+- Nota: el `<title>` de la portada provisional lo fija la página 106 (meta propia de Rank Math); desaparece con la nueva Home.
+
 ## 4. Orden de limpieza restante (por REST desde cloud, con verificación de `/op` tras cada bloque)
 
 1. Datos del consultorio en Ajustes → Consultorio (REST) con lo confirmado por el propietario.
