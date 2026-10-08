@@ -8,4 +8,5 @@ rssh "printf 'Options -Indexes\nHeader set X-Robots-Tag \"noindex, nofollow\"\n'
 code="$(curl -sL -o /dev/null -w '%{http_code}' "$SITE_URL/preview/")"
 echo "preview: $code → $SITE_URL/preview/"
 for p in dra-irina apnea articulo; do printf '%s: %s\n' "$p" "$(curl -sL -o /dev/null -w '%{http_code}' "$SITE_URL/preview/$p.html")"; done
-curl -sIL "$SITE_URL/preview/" | grep -i x-robots-tag || echo "AVISO: falta X-Robots-Tag noindex"
+# hCDN puede servir la primera respuesta sin la cabecera recién escrita: reintento con cache-busting.
+curl -sIL "$SITE_URL/preview/" | grep -i x-robots-tag || curl -sIL "$SITE_URL/preview/?cb=$(date +%s)" | grep -i x-robots-tag || echo "AVISO: falta X-Robots-Tag noindex"
