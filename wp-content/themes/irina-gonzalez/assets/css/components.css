@@ -90,14 +90,15 @@ body.menu-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .di-scroll-hint::after { animation: none; } }
 /* Móvil (feedback del propietario): foto a toda altura con el rostro libre en la mitad superior; bloque compacto abajo sobre el fundido. Va DESPUÉS de las reglas generales para ganarles. */
 @media (max-width: 899px) {
-  .di-bleed__bg img { object-position: 70% 22%; }
-  .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0.3) 0%, rgb(0 0 0 / 0) 20%, rgb(20 10 20 / 0.1) 40%, rgb(20 10 20 / 0.78) 58%, rgb(20 10 20 / 0.93) 100%); }
+  .di-bleed__bg img { object-position: 70% 15%; }
+  .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0.3) 0%, rgb(0 0 0 / 0) 20%, rgb(20 10 20 / 0.08) 36%, rgb(20 10 20 / 0.8) 52%, rgb(20 10 20 / 0.94) 100%); }
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
   .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; }
   .di-bleed h1 { font-size: clamp(2.2rem, 10vw, 2.7rem); margin-bottom: var(--space-sm); }
-  .di-bleed .di-lead { font-size: 0.95rem; line-height: 1.4; margin-top: var(--space-xs); max-width: 36ch; }
-  .di-bleed .di-hero-cta { margin-top: var(--space-md); gap: var(--space-xs); flex-wrap: nowrap; }
-  .di-bleed .di-hero-cta .di-btn { min-height: 44px; padding: 0.55rem 1rem; font-size: 0.88rem; white-space: nowrap; }
+  .di-bleed .di-lead { font-size: 0.92rem; line-height: 1.4; margin-top: var(--space-xs); max-width: 36ch; }
+  .di-bleed .di-hero-cta { margin-top: var(--space-md); gap: var(--space-xs); flex-wrap: wrap; }
+  .di-bleed .di-hero-cta .di-btn { min-height: 46px; padding: 0.6rem 1.1rem; font-size: 0.9rem; white-space: nowrap; }
+  .di-bleed .di-hero-cta .di-btn:first-child { flex: 1 1 100%; justify-content: center; }
   .di-bleed .di-hero-trust { margin-top: var(--space-md); padding-top: var(--space-sm); gap: var(--space-md); flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; font-size: 0.78rem; -webkit-overflow-scrolling: touch; }
   .di-bleed .di-hero-trust::-webkit-scrollbar { display: none; }
   .di-bleed .di-hero-trust li { white-space: nowrap; flex: none; }
