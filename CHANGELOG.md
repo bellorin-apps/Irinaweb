@@ -27,3 +27,4 @@
 - Hero móvil cerrado (v7): recorte superior de la foto, entradilla corta `lead_mobile`, CTAs apilados; verificado por la sesión local con capturas y medidas (rostro libre, texto abajo).
 - 2026-10-08 (día): CP3 cerrado y **Home v2 publicada como portada** (D-034); horario oculto «Previa cita» (D-032); hospitales como fuente única con schema (D-033); credenciales en schema; OD-009 rinoplastia en borrador prudente; credencial HU y trabajos 2016; /links/ sin cabecera a sangre; Elementor Pro activado.
 - `/links/` rehecha con `di-enlaces` e iconos de red (D-036); sprite versionado por mtime.
+- Cuestionario de fichas médicas para la Dra. en `/briefing/fichas/` (D-038); avisos COFEPRIS en pie y aviso médico (D-037).

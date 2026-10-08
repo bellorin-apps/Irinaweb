@@ -4,6 +4,9 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
+- [ ] La Dra. responde el cuestionario de fichas en `/briefing/fichas/?t=…` (D-038); al confirmar, Claude redacta las 23 fichas.
+- [ ] PDF del Aviso de Funcionamiento (no estaba en el Escritorio) → giro, fecha y responsable sanitario.
+
 - [x] Checkpoint 3 cerrado (D-034): portada Home v2, logotipo completo, foto autorizada; conmutación con `tools/deploy/go-live-home.sh`.
 
 - [x] OD-009 resuelto: mencionar rinoplastia desde ahora (borrador prudente). Cargo HU recibido. Segunda publicación: pendiente de la Dra.
