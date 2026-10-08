@@ -26,7 +26,7 @@ foreach ( [
 	'facebook'  => 'Facebook',
 ] as $irina_k => $irina_l ) {
 	if ( '' !== (string) irina_practice( $irina_k ) ) {
-		$irina_links[] = [ $irina_l, (string) irina_practice( $irina_k ), 'arrow-right', '', false ];
+		$irina_links[] = [ $irina_l, (string) irina_practice( $irina_k ), $irina_k, '', false ];
 	}
 }
 if ( '' !== (string) irina_practice( 'doctoralia_url' ) ) {
@@ -35,7 +35,7 @@ if ( '' !== (string) irina_practice( 'doctoralia_url' ) ) {
 if ( '' !== (string) irina_practice( 'maps_url' ) ) {
 	$irina_links[] = [ __( 'Cómo llegar al consultorio', 'irina-gonzalez' ), (string) irina_practice( 'maps_url' ), 'map-pin', 'directions_click', false ];
 }
-$irina_links[] = [ __( 'Sitio web', 'irina-gonzalez' ), home_url( '/' ), 'arrow-right', '', false ];
+$irina_links[] = [ __( 'Sitio web', 'irina-gonzalez' ), home_url( '/' ), 'globe', '', false ];
 foreach ( (array) $irina_a['extra'] as $irina_e ) {
 	$irina_e = wp_parse_args(
 		(array) $irina_e,
