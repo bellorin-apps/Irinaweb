@@ -5,14 +5,14 @@
 WP="cd '$WEBROOT' && /opt/alt/php84/usr/bin/php /usr/local/bin/wp --skip-plugins=elementor,elementor-pro"
 w(){ rssh "$WP $*"; }
 
-echo "→ Páginas del sitemap (solo si faltan)"
+echo "→ Páginas del sitemap (solo si faltan; se crean como BORRADOR salvo que se indique otro estado — decisión del propietario 2026-10-07: nada vacío publicado ni indexable antes del CP3)"
 page_id(){ w "post list --post_type=page --name='$1' --post_status=any --field=ID" | head -1; }
-ensure_page(){ # slug título → imprime id
-  local id; id="$(page_id "$1")"
-  if [ -z "$id" ]; then id="$(w "post create --post_type=page --post_status=publish --post_title='$2' --post_name='$1' --porcelain")"; echo "  creada $1 ($id)" >&2; else echo "  existe $1 ($id)" >&2; fi
+ensure_page(){ # slug título [estado=draft] → imprime id
+  local id st="${3:-draft}"; id="$(page_id "$1")"
+  if [ -z "$id" ]; then id="$(w "post create --post_type=page --post_status=$st --post_title='$2' --post_name='$1' --porcelain")"; echo "  creada $1 ($id, $st)" >&2; else echo "  existe $1 ($id)" >&2; fi
   echo "$id"
 }
-P_HOME="$(ensure_page inicio-v2 'Inicio')"
+P_HOME="$(ensure_page inicio-v2 'Inicio' publish)"
 P_DRA="$(ensure_page dra-irina-gonzalez-saez 'Dra. Irina González Sáez')"
 P_ORL="$(ensure_page otorrinolaringologia 'Otorrinolaringología')"
 P_SUENO="$(ensure_page sueno 'Sueño')"
