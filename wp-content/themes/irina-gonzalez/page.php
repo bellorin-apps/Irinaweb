@@ -11,6 +11,13 @@ get_header();
 echo '<main id="content" class="di-main">';
 while ( have_posts() ) {
 	the_post();
+	// Páginas compuestas con Elementor sin plantilla «Theme» (p. ej. /links/): solo el contenido, sin cabecera a sangre.
+	if ( 'builder' === get_post_meta( get_the_ID(), '_elementor_edit_mode', true ) ) {
+		echo '<div class="di-elementor-page">';
+		the_content();
+		echo '</div>';
+		continue;
+	}
 	irina_part(
 		'bleed',
 		[
