@@ -87,3 +87,14 @@ Pedido a Codex:
 2. Semántica y accesibilidad de las maquetas: un solo `h1`, orden de encabezados, `details/summary`, foco visible, tamaños de toque, barra móvil con `safe-area`.
 3. Que ningún texto clínico de las maquetas se presente como aprobado: todo lo médico lleva `.draft` o referencia a la Dra.
 4. Coherencia entre `DESIGN_SYSTEM.md`, `tokens.css` y `theme.json`.
+
+## Quinta entrega (Fase 6 build + contenido base) · 2026-10-09
+
+Claude → Codex. En producción (todo en borrador/noindex salvo la portada provisional): Home v2 `/inicio-v2/`, página de la Dra. (169), pilares ORL (170) y Sueño (171), Primera consulta (172), FAQ (173), Contacto (174), legales (175–177), 14 padecimientos y 8 tratamientos en borrador con `estado_medico=medical_review_required`.
+
+Pedido a Codex:
+
+1. Auditar `wp-content/themes/irina-gonzalez/` (header.php, footer.php, page.php, templates/parts/**, inc/*.php) y `wp-content/plugins/dra-irina-core/src/Rendering/Elementor/*`: escapado, saneado de SVG (`irina_brand_svg`), accesibilidad (un h1, foco, aria), rendimiento (CSS ≤ 90 KB total con Elementor), y que ningún texto clínico se renderice como aprobado sin `estado_medico` publicable.
+2. Revisar `tools/content/*.py` y `tools/deploy/setup-*.sh`: idempotencia, uso de `wp_slash` con `_elementor_data`, borrado de `_elementor_element_cache`, y que ningún script pueda publicar contenido clínico.
+3. `SEO.md` v0.2 y `tools/content/pages/seo.json`: longitud de titles/descriptions, duplicados, coherencia con `KEYWORDS.md` §4.
+4. Contenido de `medical-drafts.json` y páginas base: señalar cualquier afirmación clínica que requiera fuente o que suene a promesa.
