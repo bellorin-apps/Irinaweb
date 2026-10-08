@@ -54,7 +54,6 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
-- Sesión local: tandas B y C (contenido base, borradores médicos, hero móvil)
 - Propietario (mañana): CDN en hPanel (D-030), SSL de otorrino-monterrey.com (Q-007), sesión para capturas de 169/205, elección de cabecera (logotipo completo vs isotipo+texto)
 - Claude: QA de todas las páginas base con capturas; preparar Checkpoint 3
 - Codex: auditorías pendientes según `BATON.md`
