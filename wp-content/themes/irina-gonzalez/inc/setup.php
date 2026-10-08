@@ -93,3 +93,19 @@ add_filter(
 		return $classes;
 	}
 );
+
+// Favicon e iconos de app desde assets/brand (generados del isotipo). Se usan si no hay site icon configurado en WordPress.
+add_action(
+	'wp_head',
+	static function (): void {
+		if ( has_site_icon() ) {
+			return;
+		}
+		$b = IRINA_THEME_URI . '/assets/brand/';
+		echo '<link rel="icon" href="' . esc_url( $b . 'favicon.ico' ) . '" sizes="32x32">' . "\n";
+		echo '<link rel="icon" href="' . esc_url( $b . 'favicon.svg' ) . '" type="image/svg+xml">' . "\n";
+		echo '<link rel="apple-touch-icon" href="' . esc_url( $b . 'apple-touch-icon.png' ) . '">' . "\n";
+		echo '<meta name="theme-color" content="#8c4eaa">' . "\n";
+	},
+	2
+);
