@@ -48,7 +48,7 @@ add_items legal "$P_PRIV" "$P_MED" "$P_TERM"
 w "menu location assign principal primary" >/dev/null; w "menu location assign pie-de-pagina footer" >/dev/null; w "menu location assign legal legal" >/dev/null
 
 echo "→ Contenido de muestra privado (solo para revisar plantillas; se borra antes del launch)"
-S_ID="$(w "post list --post_type=condicion --name=apnea-obstructiva-del-sueno --post_status=any --field=ID" | head -1)"
+S_ID="$(w "post list --post_type=condicion --post_name__in=apnea-obstructiva-del-sueno --post_status=any --orderby=ID --order=ASC --field=ID" | head -1)"
 if [ -z "$S_ID" ]; then
   S_ID="$(w "post create --post_type=condicion --post_status=private --post_title='Apnea obstructiva del sueño' --post_name=apnea-obstructiva-del-sueno --post_content='<p>Durante el sueño, la vía aérea superior se estrecha o se cierra por momentos y la respiración se interrumpe. El cuerpo reacciona con microdespertares que fragmentan el descanso, aunque la persona no los recuerde.</p><p><strong>Borrador de muestra. El texto clínico lo redacta y aprueba la Dra.</strong></p>' --porcelain")"
   w "post term set $S_ID area sueno" >/dev/null
