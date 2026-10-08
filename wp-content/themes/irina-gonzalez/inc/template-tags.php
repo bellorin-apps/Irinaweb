@@ -97,9 +97,30 @@ function irina_address_line(): string {
 }
 
 /**
- * Marca (anillos) hasta que se exporte el logotipo definitivo en SVG.
+ * SVG de marca inline desde assets/brand/<nombre>.svg, saneado (sin scripts, eventos ni referencias externas) y con clase/aria.
+ * Devuelve '' si el archivo no existe.
+ */
+function irina_brand_svg( string $name, string $css_class ): string {
+	$file = IRINA_THEME_DIR . '/assets/brand/' . sanitize_file_name( $name ) . '.svg';
+	if ( ! is_readable( $file ) ) {
+		return '';
+	}
+	$svg = (string) file_get_contents( $file ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- archivo local del tema.
+	$svg = (string) preg_replace( '/<\?xml[^>]*>|<!DOCTYPE[^>]*>|<!--.*?-->|<script.*?<\/script>|<title>.*?<\/title>|<desc>.*?<\/desc>/is', '', $svg );
+	$svg = (string) preg_replace( '/\son[a-z]+="[^"]*"|\sxlink:href="(?!#)[^"]*"|\shref="(?!#)[^"]*"/i', '', $svg );
+	$svg = (string) preg_replace( '/<svg\b([^>]*?)\s(class|width|height)="[^"]*"/i', '<svg$1', $svg );
+	$svg = (string) preg_replace( '/<svg\b/i', sprintf( '<svg class="%s" aria-hidden="true" focusable="false"', esc_attr( $css_class ) ), $svg, 1 );
+	return trim( $svg );
+}
+
+/**
+ * Isotipo de marca: assets/brand/isotipo.svg si existe; anillos provisionales si no.
  */
 function irina_brand_mark(): string {
+	$svg = irina_brand_svg( 'isotipo', 'di-brand__mark' );
+	if ( '' !== $svg ) {
+		return $svg;
+	}
 	return '<svg class="di-brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".9"/><circle cx="20" cy="20" r="10" fill="none" stroke="#3CA1A7" stroke-width="2.5"/><circle cx="20" cy="20" r="3" fill="currentColor"/></svg>';
 }
 
