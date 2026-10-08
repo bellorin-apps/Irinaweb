@@ -47,7 +47,7 @@ body:not(.has-bleed) { padding-top: 84px; }
 /* Especificidad alta: el kit global de Elementor y el reset de Hello estilizan <button>. */
 .di-header .di-burger, .di-header .di-burger:hover, .di-header .di-burger:focus, .di-header .di-burger:active { display: inline-grid; place-items: center; width: 46px; height: 46px; padding: 0; margin: 0; border: 1px solid currentColor; border-radius: 50%; background: transparent; color: inherit; cursor: pointer; box-shadow: none; font-size: 1rem; line-height: 1; }
 .di-header .di-burger .di-icon { width: 22px; height: 22px; }
-@media (min-width: 1024px) { .di-burger { display: none; } }
+@media (min-width: 1024px) { .di-header .di-burger { display: none; } }
 .di-menu-panel { display: none; position: fixed; inset: 84px 0 0; z-index: 49; background: var(--color-surface); padding: var(--space-xl) var(--gutter); overflow: auto; }
 .admin-bar .di-menu-panel { top: calc(84px + 46px); }
 .di-menu-panel.is-open { display: block; }
@@ -64,7 +64,8 @@ body.menu-open { overflow: hidden; }
 .di-bleed__bg--warm { background: linear-gradient(165deg, #3b2a33 0%, #6d4460 35%, #a8707a 65%, #dba67f 100%); }
 .di-bleed__bg--night { background: linear-gradient(170deg, #0f0c1f 0%, #1b1630 45%, #2a2246 80%, #3b5b7a 100%); }
 .di-bleed__bg--sand { background: linear-gradient(165deg, #4e3644 0%, #8c6670 45%, #e6c3a4 100%); }
-.di-bleed__bg img { width: 100%; height: 100%; object-fit: cover; }
+.di-bleed__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 65% 40%; }
+@media (max-width: 899px) { .di-bleed__bg img { object-position: 78% 30%; } }
 .di-bleed__bg::after { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: 0.28; mix-blend-mode: overlay; }
 .di-bleed__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.55) 100%); }
 .di-bleed .di-container { padding-block: clamp(5rem, 12vh, 9rem) clamp(3rem, 8vh, 6rem); }
@@ -155,9 +156,12 @@ body.menu-open { overflow: hidden; }
 .di-facts { display: grid; grid-template-columns: auto 1fr; gap: 0.5rem 1.2rem; margin: var(--space-lg) 0; }
 .di-facts dt { color: var(--color-muted); font-size: 0.9rem; }
 .di-facts dd { margin: 0; }
-.di-hours { border-collapse: collapse; font-variant-numeric: tabular-nums; width: 100%; max-width: 440px; }
-.di-hours th { text-align: left; font-weight: 500; padding: 0.5rem 1rem 0.5rem 0; border-bottom: 1px solid var(--color-border); }
-.di-hours td { padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); }
+/* Reset del estilo de tablas de Hello/Elementor (bordes y filas alternas). */
+.di-hours { border-collapse: collapse; border: 0; font-variant-numeric: tabular-nums; width: 100%; max-width: 440px; margin: 0; }
+.di-hours tr, .di-hours tr:nth-child(odd), .di-hours tr:nth-child(even) { background: transparent; }
+.di-hours th, .di-hours td { background: transparent; border: 0; border-bottom: 1px solid var(--color-border); text-align: left; vertical-align: top; }
+.di-hours th { font-weight: 500; padding: 0.5rem 1rem 0.5rem 0; }
+.di-hours td { padding: 0.5rem 0; }
 
 /* CTA a sangre */
 .di-cta-bleed { position: relative; color: #fff; padding-block: clamp(6rem, 16vh, 11rem); text-align: center; overflow: hidden; isolation: isolate; }

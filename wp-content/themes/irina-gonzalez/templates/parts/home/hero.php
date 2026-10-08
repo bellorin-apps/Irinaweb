@@ -25,7 +25,7 @@ if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
 }
 ?>
 <section class="di-bleed">
-	<div class="di-bleed__bg di-bleed__bg--warm"><?php echo $irina_a['image_id'] ? wp_get_attachment_image( (int) $irina_a['image_id'], 'irina-hero', false, [ 'fetchpriority' => 'high' ] ) : ''; ?></div>
+	<div class="di-bleed__bg di-bleed__bg--warm"><?php echo $irina_a['image_id'] ? wp_get_attachment_image( (int) $irina_a['image_id'], 'irina-hero' ) : ''; ?></div>
 	<div class="di-bleed__shade"></div>
 	<div class="di-container">
 		<p class="di-eyebrow"><?php echo esc_html( $irina_a['eyebrow'] ); ?></p>
