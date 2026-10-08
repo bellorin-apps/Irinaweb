@@ -109,7 +109,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 6.2 | Footer | 2 | REVIEW | Verificado en /inicio-v2/ |
 | 6.3 | Home | 5 | REVIEW | /inicio-v2/ en producción (noindex): 8 widgets, header/footer del tema, QA visual OK escritorio y móvil; pendiente CP3 |
 | 6.4 | Página Dra. Irina (entidad/autora) | 5 | DOING | Cargada en 169 (borrador) con credenciales; falta QA con capturas |
-| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; muestra privada de apnea |
+| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; 22 fichas en borrador; falta QA con sesión |
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
 | 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | TODO | |
@@ -120,9 +120,9 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | TODO | |
-| 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | TODO | |
-| 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | TODO | |
+| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | DOING | Cargados en WP (borrador) con marcadores [PENDIENTE DE CONFIRMACIÓN]; enfoque de la Dra. en borrador |
+| 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | DOING | 14 condiciones + 8 tratamientos en borrador (resumen, síntomas, cuándo consultar, relaciones); cuerpos pendientes |
+| 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | DOING | Primera consulta, Contacto y FAQ cargados (borrador) |
 | 7.4 | Bibliografía verificable por página | 2 | TODO | |
 | 7.5 | Revisión técnica/SEO de drafts | 2 | TODO | |
 | 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | OWNER | ext |
@@ -219,4 +219,4 @@ Criterio de entrada: contenido español base aprobado por la Dra. + CP3 superado
 | 13 (EN, aparte) | 19 | 0 — no suma al total del sitio en español |
 | **Total** | **253** | **59** |
 
-Avance global: 59 / 253 = **23%** · Tareas: 13 / 97 DONE · 23 en REVIEW · 8 DOING.
+Avance global: 60.5 / 253 = **24%** · Tareas: 13 / 97 DONE · 24 en REVIEW · 11 DOING (la Fase 13 EN cuenta aparte).
