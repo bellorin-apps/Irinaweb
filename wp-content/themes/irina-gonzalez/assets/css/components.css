@@ -35,7 +35,9 @@
 body:not(.has-bleed) { padding-top: 84px; }
 .di-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
 .di-brand:hover { color: inherit; }
-.di-brand__mark { width: 42px; height: 42px; flex: none; }
+.di-brand__mark { width: auto; height: 44px; flex: none; color: #9b589f; } /* isotipo oficial: púrpura sobre claro */
+.di-header.di-on-dark:not(.is-scrolled):not(.is-open) .di-brand__mark, .di-footer .di-brand__mark { color: #fff; } /* versión blanca sobre hero/pie */
+.di-brand__logo { display: block; width: auto; height: 72px; }
 .di-brand__name { font-family: var(--font-display); font-weight: 500; font-size: 1.08rem; line-height: 1.1; letter-spacing: -0.01em; }
 .di-brand__name small { display: block; font-weight: 400; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.75; }
 .di-nav { display: none; align-items: center; gap: var(--space-lg); }
