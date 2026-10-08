@@ -31,7 +31,7 @@ $irina_soc   = array_filter(
 		<p class="di-footer__big di-reveal"><?php echo esc_html( apply_filters( 'irina_footer_claim', __( 'Respirar bien, dormir bien, oír bien.', 'irina-gonzalez' ) ) ); ?></p>
 		<div class="di-footer__cols">
 			<div>
-				<a class="di-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo irina_brand_mark(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><span class="di-brand__name"><?php echo esc_html( (string) irina_practice( 'nombre_profesional' ) ); ?><small><?php echo esc_html( (string) irina_practice( 'especialidad' ) ); ?></small></span></a>
+				<a class="di-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo irina_brand_block( 'footer' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				<p><?php echo esc_html( (string) irina_practice( 'subespecialidad' ) ); ?></p>
 				<?php if ( '' !== $irina_cedul ) : ?>
 					<p><?php esc_html_e( 'Cédulas:', 'irina-gonzalez' ); ?> <?php echo esc_html( $irina_cedul ); ?><br><?php echo esc_html( (string) irina_practice( 'consejo_certificado' ) ); ?></p>

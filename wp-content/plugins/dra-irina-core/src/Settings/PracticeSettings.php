@@ -49,6 +49,7 @@ final class PracticeSettings {
 			'cedula_especialidad' => [ 'Cédula de especialidad', 'text', false ],
 			'publicar_cedulas'    => [ 'Publicar cédulas en el sitio', 'checkbox', false ],
 			'consejo_certificado' => [ 'Certificación de Consejo (texto a mostrar)', 'text', true ],
+			'marca_isotipo_texto' => [ 'Cabecera: usar isotipo + nombre en texto (desmarcado = logotipo completo)', 'checkbox', false ],
 			'responsable_datos'   => [ 'Responsable de datos personales', 'text', true ],
 			'correo_arco'         => [ 'Correo para derechos ARCO', 'email', true ],
 		];

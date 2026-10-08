@@ -28,16 +28,22 @@
 .di-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background var(--motion-base), box-shadow var(--motion-base), color var(--motion-base); color: var(--color-text); }
 .admin-bar .di-header { top: 32px; }
 @media (max-width: 782px) { .admin-bar .di-header { top: 46px; } }
-.di-header__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); min-height: 84px; }
+.di-header__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); min-height: 92px; }
+/* Logotipo completo: dos SVG (color y blanco); el CSS muestra el que toca según el fondo. */
+.di-brand__logo { width: auto; height: 64px; max-width: min(60vw, 260px); flex: none; }
+@media (max-width: 899px) { .di-brand__logo { height: 50px; } .di-header__inner { min-height: 80px; } }
+.di-brand__logo--white { display: none; }
+.di-header.di-on-dark:not(.is-scrolled):not(.is-open) .di-brand__logo--color, .di-footer .di-brand__logo--color { display: none; }
+.di-header.di-on-dark:not(.is-scrolled):not(.is-open) .di-brand__logo--white, .di-footer .di-brand__logo--white { display: block; }
 .di-header.di-on-dark { color: #fff; }
 .di-header.is-scrolled { background: rgb(251 247 242 / 0.88); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgb(0 0 0 / 0.06); color: var(--color-text); }
 .di-header.is-open { background: var(--color-surface); box-shadow: 0 1px 0 var(--color-border); color: var(--color-text); }
-body:not(.has-bleed) { padding-top: 84px; }
+body:not(.has-bleed) { padding-top: 92px; }
 .di-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
 .di-brand:hover { color: inherit; }
-.di-brand__mark { width: auto; height: 44px; max-width: 64px; flex: none; color: #9b589f; } /* isotipo oficial (fill=currentColor): púrpura sobre claro */
+.di-brand__mark { width: auto; height: 52px; max-width: 72px; flex: none; color: #9b589f; } /* isotipo oficial (fill=currentColor): púrpura sobre claro */
 .di-header.di-on-dark:not(.is-scrolled):not(.is-open) .di-brand__mark, .di-footer .di-brand__mark { color: #fff; } /* versión blanca sobre hero/pie */
-.di-brand__name { font-family: var(--font-display); font-weight: 500; font-size: 1.08rem; line-height: 1.1; letter-spacing: -0.01em; }
+.di-brand__name { font-family: var(--font-display); font-weight: 500; font-size: 1.2rem; line-height: 1.1; letter-spacing: -0.01em; }
 .di-brand__name small { display: block; font-weight: 400; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.75; }
 .di-nav { display: none; align-items: center; gap: var(--space-lg); }
 .di-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--space-lg); max-width: none; }
@@ -67,12 +73,20 @@ body.menu-open { overflow: hidden; }
 .di-bleed__bg--sand { background: linear-gradient(165deg, #4e3644 0%, #8c6670 45%, #e6c3a4 100%); }
 .di-bleed__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 65% 40%; }
 @media (max-width: 899px) {
-  /* Móvil: la foto ocupa el tercio superior largo y el texto se asienta sobre un fondo oscuro fundido con ella. */
-  .di-bleed__bg { background: #2a1e26; }
-  .di-bleed__bg img { height: 62%; object-position: 70% 15%; }
-  .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(42 30 38 / 0) 28%, rgb(42 30 38 / 0.6) 44%, #2a1e26 56%, #2a1e26 100%); }
-  .di-bleed:not(.di-bleed--short) .di-hero-trust { display: none; }
-  .di-bleed .di-lead { font-size: 1.05rem; }
+  /* Móvil (feedback del propietario): foto a toda altura con el rostro protagonista; titular, texto, CTAs y señales de confianza abajo sobre un fundido oscuro. */
+  .di-bleed__bg img { object-position: 72% 18%; }
+  .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0.3) 0%, rgb(0 0 0 / 0) 22%, rgb(20 10 20 / 0.15) 42%, rgb(20 10 20 / 0.78) 62%, rgb(20 10 20 / 0.92) 100%); }
+  .di-bleed:not(.di-bleed--short) .di-container { padding-bottom: calc(1.5rem + 72px + env(safe-area-inset-bottom, 0px)); }
+  .di-bleed .di-eyebrow { margin-bottom: var(--space-sm); }
+  .di-bleed h1 { margin-bottom: var(--space-sm); }
+  .di-bleed .di-lead { font-size: 1rem; line-height: 1.45; margin-top: var(--space-sm); max-width: 34ch; }
+  .di-hero-cta { margin-top: var(--space-lg); gap: var(--space-xs); }
+  .di-hero-cta .di-btn { min-height: 48px; padding-block: 0.65rem; }
+  .di-hero-trust { margin-top: var(--space-lg); padding-top: var(--space-md); gap: var(--space-md); flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; font-size: 0.82rem; -webkit-overflow-scrolling: touch; }
+  .di-hero-trust::-webkit-scrollbar { display: none; }
+  .di-hero-trust li { white-space: nowrap; }
+  .di-scroll-hint { display: none; }
+}
 }
 .di-bleed__bg::after { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: 0.28; mix-blend-mode: overlay; }
 .di-bleed__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.55) 100%); }

@@ -25,8 +25,7 @@ if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_loca
 <header class="di-header" id="di-header">
 	<div class="di-container di-header__inner">
 		<a class="di-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<?php echo irina_brand_mark(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- SVG estático del tema. ?>
-			<span class="di-brand__name"><?php echo esc_html( (string) irina_practice( 'nombre_profesional', get_bloginfo( 'name' ) ) ); ?><small><?php echo esc_html( (string) irina_practice( 'especialidad', '' ) ); ?> · <?php echo esc_html( (string) irina_practice( 'ciudad', 'Monterrey' ) ); ?></small></span>
+			<?php echo irina_brand_block( 'header' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- SVG del tema y texto escapado. ?>
 		</a>
 		<nav class="di-nav" aria-label="<?php esc_attr_e( 'Principal', 'irina-gonzalez' ); ?>">
 			<?php

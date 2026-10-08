@@ -157,3 +157,18 @@ function irina_breadcrumbs( array $trail ): string {
 	}
 	return '<nav class="di-crumbs" aria-label="' . esc_attr__( 'Migas de pan', 'irina-gonzalez' ) . '"><ol>' . implode( '', $items ) . '</ol></nav>';
 }
+
+/**
+ * Bloque de marca de la cabecera/pie: logotipo completo (SVG claro + blanco, el CSS muestra uno u otro) o isotipo + nombre en texto,
+ * según Ajustes → Consultorio. El nombre siempre va en texto (visible o solo para lectores de pantalla).
+ */
+function irina_brand_block( string $context = 'header' ): string {
+	$name = (string) irina_practice( 'nombre_profesional', get_bloginfo( 'name' ) );
+	$sub  = trim( (string) irina_practice( 'especialidad', '' ) . ( 'header' === $context ? ' · ' . (string) irina_practice( 'ciudad', '' ) : '' ), ' ·' );
+	$full = irina_brand_svg( 'logotipo', 'di-brand__logo di-brand__logo--color' );
+	if ( ! irina_practice( 'marca_isotipo_texto' ) && '' !== $full ) {
+		$white = irina_brand_svg( 'logotipo-blanco', 'di-brand__logo di-brand__logo--white' );
+		return $full . $white . sprintf( '<span class="screen-reader-text">%s · %s</span>', esc_html( $name ), esc_html( $sub ) );
+	}
+	return irina_brand_mark() . sprintf( '<span class="di-brand__name">%s<small>%s</small></span>', esc_html( $name ), esc_html( $sub ) );
+}
