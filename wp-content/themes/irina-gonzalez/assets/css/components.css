@@ -70,7 +70,7 @@ body.menu-open { overflow: hidden; }
   /* Móvil: la foto ocupa el tercio superior largo y el texto se asienta sobre un fondo oscuro fundido con ella. */
   .di-bleed__bg { background: #2a1e26; }
   .di-bleed__bg img { height: 62%; object-position: 70% 15%; }
-  .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(42 30 38 / 0) 28%, rgb(42 30 38 / 0.55) 46%, rgb(42 30 38 / 0.97) 58%, #2a1e26 100%); }
+  .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(42 30 38 / 0) 28%, rgb(42 30 38 / 0.6) 44%, #2a1e26 56%, #2a1e26 100%); }
   .di-bleed:not(.di-bleed--short) .di-hero-trust { display: none; }
   .di-bleed .di-lead { font-size: 1.05rem; }
 }
