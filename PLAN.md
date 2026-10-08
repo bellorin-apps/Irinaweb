@@ -85,7 +85,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 4.2 | Tokens globales (color, tipo, espacio, radio, sombra, motion) | 3 | REVIEW | `assets/css/tokens.css` |
 | 4.3 | Componentes base: botones, inputs, cards, badges, iconografía Lucide | 3 | REVIEW | `tools/preview/preview.css`; inputs pendientes (Fase 8) |
 | 4.4 | Concepto visual "Sleep experience" dentro de la marca | 2 | REVIEW | `DESIGN_SYSTEM.md` §6; aplicado en maquetas |
-| 4.5 | Mockups/prototipos: Home, Dra. Irina, página médica, artículo, móvil | 5 | DOING | `tools/preview/*.html`; despliegue a `/preview/` en curso (sesión local) |
+| 4.5 | Mockups/prototipos: Home, Dra. Irina, página médica, artículo, móvil | 5 | REVIEW | Publicadas 2026-10-08 en `/preview/` (200 ×4, noindex) |
 | 4.6 | `DESIGN_SYSTEM.md` | 2 | REVIEW | v0.1 |
 | 4.7 | CHECKPOINT 2: dirección visual aprobada | 2 | OWNER | ext |
 
@@ -193,7 +193,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 1 | 20 | 6 (DONE 3 + REVIEW ×0.5) |
 | 2 | 14 | 6.5 (REVIEW ×0.5) |
 | 3 | 20 | 7.5 (REVIEW ×0.5) |
-| 4 | 20 | 6.5 (REVIEW ×0.5) |
+| 4 | 20 | 9 (REVIEW ×0.5) |
 | 5 | 23 | 0 |
 | 6 | 33 | 0 |
 | 7 | 22 | 0 |
@@ -202,6 +202,6 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
-| **Total** | **253** | **49.5** |
+| **Total** | **253** | **52** |
 
-Avance global: 49.5 / 253 = **20%** · Tareas: 12 / 97 DONE · 19 en REVIEW · 4 DOING.
+Avance global: 52 / 253 = **21%** · Tareas: 12 / 97 DONE · 20 en REVIEW · 3 DOING.

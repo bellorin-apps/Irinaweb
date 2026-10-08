@@ -6,14 +6,14 @@
 PROYECTO — DRA. IRINA
 
 Avance global
-████░░░░░░░░░░░░░░░░ 20%
+████░░░░░░░░░░░░░░░░ 21%
 
 Fase actual
-███░░░░░░░ 33%
+█████░░░░░ 45%
 Fase 4/12 — Design System y dirección visual (Fases 0 cerrada; 1, 2, 3 y 5 avanzadas)
 
 Estado
-🟢 Maquetas del núcleo listas en el repo; publicándose en /preview/ para Checkpoint 2
+🟢 Maquetas publicadas en /preview/ (noindex); esperando decisión del Checkpoint 2
 ```
 
 ## Métricas
@@ -21,9 +21,9 @@ Estado
 | Métrica | Valor |
 |---|---|
 | Fase | 4/12 |
-| Tareas | 12 / 97 DONE · 19 en REVIEW · 4 DOING |
-| Peso completado | 49.5 / 253 |
-| En curso | 4 (4.5 maquetas; 5.1, 5.2, 5.5 infraestructura) |
+| Tareas | 12 / 97 DONE · 20 en REVIEW · 3 DOING |
+| Peso completado | 52 / 253 |
+| En curso | 3 (5.1, 5.2, 5.5 infraestructura) |
 | Bloqueadas | 0 |
 | Pendientes del propietario | 4 (Checkpoint 2, licencia Elementor Pro, dominios del kit Adobe Fonts, aviso de privacidad de la Dra.) |
 
@@ -34,7 +34,7 @@ Discovery        ██████████ 100%
 Auditoría WP     ████░░░░░░  30%
 Investigación    █████░░░░░  46%
 Arquitectura     ████░░░░░░  38%
-Diseño           ███░░░░░░░  33%
+Diseño           █████░░░░░  45%
 Desarrollo       ░░░░░░░░░░   0%  (scaffold en DOING; cuenta al probarse)
 Contenido        ░░░░░░░░░░   0%
 SEO              ██░░░░░░░░  20%
@@ -54,7 +54,6 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
-- Sesión local: desplegar `tools/preview/` en `https://drairinagonzalez.com/preview/` (noindex) y verificar
 - Propietario: revisar las maquetas en escritorio y móvil y decidir Checkpoint 2
 - Codex: auditorías pendientes según `BATON.md`
 
