@@ -1,6 +1,6 @@
 # PLAN MAESTRO — Dra. Irina González Sáez
 
-Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
+Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en inglés, Anexo A del MASTER_PROMPT 1.1)
 
 ## Cómo se calcula el avance
 
@@ -183,6 +183,20 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 12.3 | Día 7 Search Console + analytics; Día 30 indexación/keywords/conversiones/CWV | 2 | TODO | |
 | 12.4 | `MAINTENANCE.md` + plan SEO 6–12 meses + KPIs | 3 | TODO | |
 
+## FASE 13 — Versión en inglés (`/en/`, Anexo A) · cuenta aparte, no infla el avance del sitio en español
+
+Criterio de entrada: contenido español base aprobado por la Dra. + CP3 superado + fecha confirmada por el propietario (propuesta en `NEXT.md`).
+
+| ID | Tarea | Peso | Estado | Notas |
+|---|---|---|---|---|
+| 13.1 | Decisión de herramienta (plugin multiidioma vs. nativo en el core) · OD-008 | 2 | OWNER | Prioridad: que no rompa Sensia, el schema único ni el rendimiento |
+| 13.2 | Glosario clínico es/en en `docs/GLOSSARY_EN.md` y keyword map en inglés propio | 2 | TODO | |
+| 13.3 | Páginas base en inglés (Home, Dra., ORL, Sueño, Primera consulta, Contacto, legales) en borrador | 5 | TODO | Nada se publica sin revisión de la Dra. |
+| 13.4 | Condiciones/tratamientos elegidos por la Dra. | 3 | TODO | |
+| 13.5 | hreflang recíproco + x-default, sitemap, OG, schema `inLanguage`, selector de idioma, WhatsApp, 404/gracias | 3 | TODO | |
+| 13.6 | Revisión de la Dra. y legal (nota de prevalencia del español) | 2 | OWNER | ext |
+| 13.7 | QA y publicación de `/en/` | 2 | TODO | |
+
 ---
 
 ## Resumen de pesos
@@ -202,6 +216,7 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
+| 13 (EN, aparte) | 19 | 0 — no suma al total del sitio en español |
 | **Total** | **253** | **59** |
 
 Avance global: 59 / 253 = **23%** · Tareas: 13 / 97 DONE · 23 en REVIEW · 8 DOING.

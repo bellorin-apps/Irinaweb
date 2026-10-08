@@ -52,3 +52,8 @@
 
 - Revisar `PLAN.md` (ponderación y Definition of Done) y `DISCOVERY.md` (que no se haya inventado ningún dato: todo debe tener fuente).
 - Auditar `docs/REFERENCE_RESEARCH.md`, `docs/COMPETITION_MONTERREY.md` y `KEYWORDS.md`: verificar que ninguna afirmación sin fuente se presente como hecho, que no haya volúmenes inventados y que las propuestas de URL no canibalicen.
+
+## AFTER — Versión en inglés (Anexo A, Fase 13)
+
+- Propuesta de fecha de inicio: **dos semanas después de que la Dra. apruebe el contenido español de las páginas base (CP4 parcial)** y nunca antes del CP3. Estimación: si CP3 cierra la semana del 13 de octubre y CP4 base la del 27 de octubre de 2026, la fase inglesa arrancaría la semana del 10 de noviembre de 2026. El propietario confirma la fecha.
+- Antes de arrancar: OD-008 (herramienta), `docs/GLOSSARY_EN.md`, keyword map en inglés.

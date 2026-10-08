@@ -47,3 +47,4 @@ Formato: ID · Fecha · Decisión · Alternativas · Motivo · Estado (Vigente /
 | OD-005 | ~~Nombre del centro~~ | — | **RESUELTO 2026-10-07:** "CAB Medical" en schema, Google y textos |
 | OD-006 | ~~Precios~~ | — | **RESUELTO 2026-10-07:** solo costo de consulta; cirugías y estudios "previa valoración" |
 | OD-007 | ~~Canónico www / sin www~~ | — | **RESUELTO 2026-10-07:** sin www (D-022) |
+| OD-008 | Herramienta para la versión en inglés (Anexo A) | (a) Nativo en `dra-irina-core`: campo `idioma` + relación es/en por post, rewrite `/en/`, hreflang y schema propios · (b) Polylang (free) · (c) WPML | Recomendación provisional: **(a) nativo** para no añadir un plugin pesado, no tocar Sensia ni duplicar el schema; se decide al cumplirse el criterio de entrada (CP3 + contenido aprobado) |
