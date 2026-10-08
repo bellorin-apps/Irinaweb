@@ -257,3 +257,13 @@ body.has-mobile-bar { padding-bottom: 72px; }
 .di-timeline__y { font-family: var(--font-display); font-weight: 300; font-size: 1.8rem; line-height: 1; color: var(--color-secondary-strong); font-variant-numeric: tabular-nums; }
 .di-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0; max-width: none; }
 .di-tags li { font-size: 0.9rem; padding: 0.4rem 0.9rem; border-radius: var(--radius-pill); border: 1px solid var(--color-border); }
+
+/* Enlaces para redes (/links/) */
+.di-links { min-height: 70vh; display: grid; place-items: center; }
+.di-links__card { width: min(100% - 2 * var(--gutter), 460px); text-align: center; display: grid; justify-items: center; gap: var(--space-xs); }
+.di-links__card .di-brand__mark { height: 72px; max-width: 96px; color: var(--color-primary); margin-bottom: var(--space-sm); }
+.di-links__title { font-size: clamp(1.8rem, 5vw, 2.4rem); font-weight: 600; margin: 0; }
+.di-links__list { list-style: none; padding: 0; margin: var(--space-lg) 0 0; display: grid; gap: var(--space-sm); width: 100%; max-width: none; }
+.di-links__list .di-btn { width: 100%; justify-content: center; }
+.di-links__list .di-btn--ghost { color: var(--color-text); border-color: var(--color-border); background: #fff; }
+.di-links__list .di-btn--ghost:hover { border-color: var(--color-primary); color: var(--color-primary); }

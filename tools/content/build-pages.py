@@ -104,6 +104,8 @@ pages["preguntas-frecuentes"] = [
     container("faq-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Otra duda?", "text": "Escríbenos por WhatsApp.", "message": ""}),
 ]
 
+pages["links"] = [container("links", "di-enlaces", {"title": "", "subtitle": "", "extra": []})]
+
 legal = {}
 legal["aviso-de-privacidad"] = f"""<p><strong>Aviso de privacidad (versión provisional)</strong>. Este texto es un borrador genérico conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y queda sujeto a la versión definitiva de la Dra. y a revisión legal. {PEND}</p>
 <h2>Responsable</h2><p>{PEND}: Dra. Irina González Sáez, con domicilio en Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector, 64610 Monterrey, Nuevo León, es responsable del tratamiento de sus datos personales.</p>

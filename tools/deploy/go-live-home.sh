@@ -22,8 +22,8 @@ w "option update page_on_front $NEW" >/dev/null
 echo "→ Portada anterior $OLD → borrador «Inicio (antiguo)»"
 wa "post update $OLD --post_status=draft --post_title='Inicio (antiguo)' --post_name=inicio-antiguo" >/dev/null
 
-echo "→ Plantillas Theme Builder heredadas (39 header, 79 footer) → papelera (D-029)"
-for t in 39 79; do w "post get $t --field=post_type" >/dev/null 2>&1 && w "post delete $t" >/dev/null && echo "  $t en papelera"; done
+echo "→ Plantillas Theme Builder heredadas (39 header, 79 footer) → borrador (elementor_library no admite papelera) (D-029)"
+for t in 39 79; do w "post get $t --field=post_type" >/dev/null 2>&1 && w "post update $t --post_status=draft" >/dev/null && echo "  $t en borrador"; done
 w "option delete elementor_pro_theme_builder_conditions" >/dev/null 2>&1 || true
 
 echo "→ Rewrites y cachés"
@@ -39,5 +39,5 @@ L="$(curl -sL "$SITE_URL/links/?cb=$(date +%s)")"
 printf '  /links/: di-header=%s theme-builder=%s\n' "$(echo "$L" | grep -c 'id="di-header"')" "$(echo "$L" | grep -c 'data-elementor-type="header"')"
 echo "  sitemap incluye /: $(curl -sL "$SITE_URL/page-sitemap.xml" | grep -c "<loc>$SITE_URL/</loc>")"
 cat <<'ROLLBACK'
-Rollback: wp option update page_on_front 106 && wp post update 106 --post_status=publish --post_title='Inicio' --post_name=inicio && wp post update 168 --post_status=publish && wp post meta update 168 rank_math_robots --format=json '["noindex","nofollow"]' && wp post untrash 39 79 && purga.
+Rollback: wp option update page_on_front 106 && wp post update 106 --post_status=publish --post_title='Inicio' --post_name=inicio && wp post update 168 --post_status=publish && wp post meta update 168 rank_math_robots --format=json '["noindex","nofollow"]' && wp post update 39 79 --post_status=publish && rehacer _elementor_conditions (D-029) && purga.
 ROLLBACK

@@ -7,9 +7,10 @@ SRC="$REPO/tools/content/pages"
 pid(){ w "post list --post_type=page --post_name__in=$1 --post_status=any --field=ID" | head -1; }
 
 echo "→ Páginas Elementor"
-for slug in otorrinolaringologia sueno primera-consulta contacto preguntas-frecuentes; do
+for slug in otorrinolaringologia sueno primera-consulta contacto preguntas-frecuentes links; do
   ID="$(pid "$slug")"; [ -n "$ID" ] || { echo "  falta $slug (ejecuta setup-site.sh)"; continue; }
   rscp "$SRC/$slug.elementor.json" "$SSH_USER@$SSH_HOST:/tmp/$slug.json"
+  # Páginas con plantilla elementor_header_footer: WP-CLI valida la plantilla, por eso el meta va directo.
   w "post meta update $ID _wp_page_template elementor_header_footer" >/dev/null
   w "post meta update $ID _elementor_edit_mode builder" >/dev/null
   w "post meta update $ID _elementor_template_type wp-page" >/dev/null
