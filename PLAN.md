@@ -195,13 +195,13 @@ Versión: 1.0 · Fecha: 2026-10-07 · Fases: 13 (0–12)
 | 3 | 20 | 7.5 (REVIEW ×0.5) |
 | 4 | 20 | 11 (DONE 2 + REVIEW ×0.5) |
 | 5 | 23 | 0 |
-| 6 | 33 | 0 |
+| 6 | 33 | 5 (REVIEW ×0.5) |
 | 7 | 22 | 0 |
 | 8 | 26 | 0 |
 | 9 | 13 | 0 |
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
-| **Total** | **253** | **54** |
+| **Total** | **253** | **59** |
 
-Avance global: 54 / 253 = **21%** · Tareas: 13 / 97 DONE · 20 en REVIEW · 5 DOING.
+Avance global: 59 / 253 = **23%** · Tareas: 13 / 97 DONE · 23 en REVIEW · 8 DOING.

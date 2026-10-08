@@ -6,14 +6,14 @@
 PROYECTO — DRA. IRINA
 
 Avance global
-████░░░░░░░░░░░░░░░░ 21%
+█████░░░░░░░░░░░░░░░ 23%
 
 Fase actual
-█████░░░░░ 55%
+██░░░░░░░░ 15%
 Fase 6/12 — Build del núcleo visual en WordPress (CP2 cerrado; Fase 4 en REVIEW de Codex)
 
 Estado
-🟢 CP2 cerrado con la dirección v2; empieza la construcción en WordPress
+🟢 Home v2 en producción (noindex) con QA visual OK; página de la Dra. y plantilla médica en despliegue para QA; hacia Checkpoint 3
 ```
 
 ## Métricas
@@ -21,11 +21,11 @@ Estado
 | Métrica | Valor |
 |---|---|
 | Fase | 6/12 |
-| Tareas | 13 / 97 DONE · 20 en REVIEW · 5 DOING |
-| Peso completado | 54 / 253 |
-| En curso | 3 (5.1, 5.2, 5.5 infraestructura) |
+| Tareas | 13 / 97 DONE · 23 en REVIEW · 8 DOING |
+| Peso completado | 59 / 253 |
+| En curso | 6 (6.4 página de la Dra., 6.5, 6.6 plantillas; 5.1, 5.2, 5.5) |
 | Bloqueadas | 0 |
-| Pendientes del propietario | 2 (licencia Elementor Pro, aviso de privacidad de la Dra.) |
+| Pendientes del propietario | 3 (enlace de Google Maps del consultorio, licencia Elementor Pro, aviso de privacidad de la Dra.) |
 
 ## Estado por área
 
@@ -35,7 +35,7 @@ Auditoría WP     ████░░░░░░  30%
 Investigación    █████░░░░░  46%
 Arquitectura     ████░░░░░░  38%
 Diseño           ██████░░░░  55%
-Desarrollo       ░░░░░░░░░░   0%  (scaffold en DOING; cuenta al probarse)
+Desarrollo       ██░░░░░░░░  15%  (Home, header y footer en REVIEW)
 Contenido        ░░░░░░░░░░   0%
 SEO              ██░░░░░░░░  20%
 QA               ░░░░░░░░░░   0%
@@ -54,7 +54,8 @@ Launch           ░░░░░░░░░░   0%
 
 ## AHORA
 
-- Claude: Fase 6 en WordPress (header, footer, Home, plantillas) con el sistema v2
+- Sesión local: desplegar plugin 0.3.1 + tema, cargar credenciales y página de la Dra. (setup-dra.sh)
+- QA de la página de la Dra. y de la plantilla médica; luego Checkpoint 3 con el propietario
 - Codex: auditorías pendientes según `BATON.md`
 
 ## FALTA

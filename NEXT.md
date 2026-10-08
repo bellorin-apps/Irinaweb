@@ -23,8 +23,10 @@
 
 ## Prioridad 2 — Claude (sin dependencias del propietario)
 
-- [ ] Fase 6: retirar plantillas Theme Builder heredadas (39 header, 79 footer) para que rendericen header/footer del tema; verificar /inicio-v2/ y la condición privada de muestra; QA visual con capturas (6.7, 6.8).
-- [ ] Página de la Dra. (6.4): widgets o plantilla con credenciales desde el CPT `credencial`.
+- [x] Plantillas 39/79 excluidas de la Home v2 (D-029); /inicio-v2/ con header/footer del tema y QA visual OK.
+- [ ] QA de la página de la Dra. (169) y la condición de muestra (205) tras setup-dra.sh; capturas 5 tamaños (6.7, 6.8).
+- [ ] Cargar `maps_url` y el iframe del mapa cuando el propietario pase el enlace de Google Maps.
+- [ ] Checkpoint 3: presentar Home, Dra. y apnea al propietario; al aprobarse, publicar páginas, Home como portada y retirar 39/79.
 
 - [x] `docs/REFERENCE_RESEARCH.md` (2.1) — en REVIEW.
 - [x] `docs/COMPETITION_MONTERREY.md` (2.2) — en REVIEW.
