@@ -10,6 +10,7 @@ declare( strict_types=1 );
 namespace DraIrina\Core;
 
 use DraIrina\Core\Fields\MetaRegistry;
+use DraIrina\Core\Ops\Endpoints as OpsEndpoints;
 use DraIrina\Core\PostTypes\Condicion;
 use DraIrina\Core\PostTypes\Credencial;
 use DraIrina\Core\PostTypes\Recurso;
@@ -55,6 +56,7 @@ final class Plugin {
 			new Graph(),
 			new Shortcodes(),
 			new Events(),
+			new OpsEndpoints(),
 		];
 	}
 

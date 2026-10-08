@@ -29,7 +29,7 @@ Claude cloud (este repo) ──push──▶ GitHub ──pull──▶ Sesión 
                                                        └── tools/deploy/*.sh (idempotentes)
 ```
 
-Operación de WordPress desde cloud (lectura/escritura de contenido y ajustes) queda pendiente de una contraseña de aplicación en secretos del entorno (D-018).
+Operación de WordPress desde cloud: secreto de red Basic (contraseña de aplicación) inyectado por el proxy del entorno hacia `drairinagonzalez.com/wp-json/`. Además de la REST nativa, el plugin expone `dra-irina/v1/ops/*` solo para administradores: `option/{name}` (GET/POST, con `merge`), `flush-rewrite`, `purge-cache`, `info`. Opciones críticas (siteurl, home, active_plugins, template…) están vetadas.
 
 ## Scripts (`tools/deploy/`)
 
