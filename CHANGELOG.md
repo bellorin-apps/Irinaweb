@@ -22,3 +22,4 @@
 - Checkpoint 2 cerrado: v2 con titulares en bold aprobada por el propietario; `/preview/` con assets versionados y sin caché. Inicia Fase 6.
 - Fase 6 build: tokens cálidos v2 en el tema, header/footer PHP (D-027), plantillas de condición/tratamiento/recurso/archivos, partes del Home, plugin 0.3.0 con 8 widgets Elementor `di-*`, `tools/content/home-elementor.json` y `tools/deploy/setup-site.sh` (D-028).
 - Página de la Dra.: 4 widgets más (cabecera genérica, narrativo, credenciales y trayectoria desde el CPT `credencial`), plugin 0.3.1, `tools/content/{dra-elementor,credenciales}.json`, `tools/deploy/setup-dra.sh`. QA visual del Home en producción OK; D-029.
+- Logo real (SVG de José) en header/footer vía `irina_brand_svg()`; foto del hero a 2400×1600 q96 con srcset; mapa oficial embebido; favicon del isotipo como site icon (D-031); tipografía v2.1 más sutil; CDN de Hostinger recomprime imágenes (D-030, pendiente ajuste en hPanel).
