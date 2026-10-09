@@ -1,6 +1,6 @@
 # NEXT — Siguiente trabajo
 
-Última actualización: 2026-10-09
+Última actualización: 2026-10-09 · Convención: las guías paso a paso para José se dan en el chat cloud («Sitio web»); la sesión local deja solo resúmenes.
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
@@ -14,6 +14,8 @@
 
 - [x] OD-009 resuelto: mencionar rinoplastia desde ahora (borrador prudente). Cargo HU recibido. Segunda publicación: pendiente de la Dra.
 
+- [ ] GBP: horario desactualizado → dejar «previa cita» con los días/horarios que la Dra. confirme; mantener WhatsApp y dirección (CAB Medical, consultorio 6, piso 2).
+- [ ] Capturas de 169/170/171/205 con sesión: José inicia sesión en la pestaña wp-login de la sesión local y avisa «ya».
 - [ ] **SSL de otorrino-monterrey.com** (Q-007): hPanel → Seguridad → SSL, instalar certificado para el dominio aparcado y su www; después verificar que https://otorrino-monterrey.com/ → 301 → https://drairinagonzalez.com/.
 - [ ] hPanel → CDN → optimización de imágenes: subir calidad (D-030) y purgar CDN.
 
