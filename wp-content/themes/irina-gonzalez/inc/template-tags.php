@@ -134,18 +134,49 @@ function irina_brand_mark(): string {
 /**
  * Botón de WhatsApp con evento de medición.
  */
-function irina_whatsapp_button( string $label = '', string $message = '', string $css_class = 'di-btn di-btn--whatsapp' ): string {
+function irina_whatsapp_button( string $label = '', string $message = '', string $css_class = 'di-btn di-btn--whatsapp', string $short = '' ): string {
 	$url = irina_whatsapp_url( $message );
 	if ( '' === $url ) {
 		return '';
 	}
+	$label = '' !== $label ? $label : __( 'Agendar por WhatsApp', 'irina-gonzalez' );
+	$text  = '' !== $short
+		? sprintf( '<span class="di-btn__long">%s</span><span class="di-btn__short">%s</span>', esc_html( $label ), esc_html( $short ) )
+		: esc_html( $label );
 	return sprintf(
 		'<a class="%s" href="%s" target="_blank" rel="noopener" data-di-event="appointment_click">%s%s</a>',
 		esc_attr( $css_class ),
 		esc_url( $url ),
-		irina_icon( 'message-circle', 'di-icon' ),
-		esc_html( '' !== $label ? $label : __( 'Agendar por WhatsApp', 'irina-gonzalez' ) )
+		irina_icon( 'brand-whatsapp', 'di-icon di-icon--brand' ),
+		$text
 	);
+}
+
+/**
+ * Redes y Doctoralia como botones circulares (glifos oficiales; Doctoralia provisional hasta recibir su SVG).
+ */
+function irina_social_circles( string $css_class = 'di-social' ): string {
+	$links = [
+		'instagram'  => [ (string) irina_practice( 'instagram' ), 'Instagram', '' ],
+		'tiktok'     => [ (string) irina_practice( 'tiktok' ), 'TikTok', '' ],
+		'facebook'   => [ (string) irina_practice( 'facebook' ), 'Facebook', '' ],
+		'doctoralia' => [ (string) irina_practice( 'doctoralia_url' ), 'Doctoralia', ' data-di-event="doctoralia_click"' ],
+	];
+	$out   = '';
+	foreach ( $links as $key => [ $url, $name, $extra ] ) {
+		if ( '' === $url ) {
+			continue;
+		}
+		$out .= sprintf(
+			'<a class="di-social__btn" href="%s" target="_blank" rel="noopener" aria-label="%s" title="%s"%s>%s</a>',
+			esc_url( $url ),
+			esc_attr( $name ),
+			esc_attr( $name ),
+			$extra, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- literal.
+			irina_icon( 'brand-' . $key, 'di-icon di-icon--brand', 18 )
+		);
+	}
+	return '' === $out ? '' : sprintf( '<div class="%s">%s</div>', esc_attr( $css_class ), $out );
 }
 
 /**

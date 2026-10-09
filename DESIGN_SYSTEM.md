@@ -103,3 +103,13 @@ Reglas: texto púrpura solo sobre blanco o `surface-soft`; texto blanco sobre `p
 - Decisión del propietario sobre la dirección visual (maquetas en `/preview/`).
 - Exportar favicon y logo en SVG desde los originales.
 - Confirmar que el kit de Adobe Fonts tiene autorizado `drairinagonzalez.com`.
+
+
+## Addendum v0.3 (2026-10-09, D-046)
+
+- Interlineado en `em`: `--leading-title: 1em` (h1, h2, citas), `--leading-tight: 1.1em` (h3+), `--leading-body: 1.3em` (texto). Compacto por decisión del propietario; se ajusta con él.
+- Cabecera: 22 px de aire arriba y abajo con el logotipo a 68 px; al desplazarse 12 px y 48 px, barra `rgb(251 247 242 / 0.68)` con `blur(18px) saturate(1.4)` y sombra `0 10px 30px rgb(40 20 50 / 0.08)`. Móvil 18/10 px y 56/42 px.
+- Botones: semitransparentes con `backdrop-filter: blur(14px)`; WhatsApp `rgb(60 161 167 / 0.82)`, primario `rgb(140 78 170 / 0.82)`, fantasma `rgb(255 255 255 / 0.1)` con borde al 45 %. Provisional hasta confirmación.
+- Marcas: glifos oficiales (Simple Icons) en el sprite como `brand-*`, `fill: currentColor`. Redes y Doctoralia en `.di-social__btn` (40 px, círculo, borde `currentColor`). Doctoralia provisional.
+- Overline (`.di-eyebrow`): sin guion. Variante `.di-eyebrow--worm` (onda animada 1.6 s).
+- Hero móvil: foto a altura completa, `object-position: 60% 50%`; sombra solo del 56 % hacia abajo; h1 `clamp(1.9rem, 8.2vw, 2.3rem)`; CTAs 50/50 con `.di-btn__short`.

@@ -38,7 +38,8 @@ if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_loca
 					'fallback_cb'    => 'irina_nav_fallback',
 				]
 			);
-			echo irina_whatsapp_button(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado en la función.
+			echo irina_whatsapp_button( '', '', 'di-btn di-btn--whatsapp', __( 'WhatsApp', 'irina-gonzalez' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado en la función.
+			echo irina_social_circles(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado en la función.
 			?>
 		</nav>
 		<button class="di-burger" type="button" aria-expanded="false" aria-controls="di-menu-panel" aria-label="<?php esc_attr_e( 'Abrir menú', 'irina-gonzalez' ); ?>"><?php echo irina_icon( 'menu', 'di-icon', 22 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
@@ -56,5 +57,6 @@ if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_loca
 		]
 	);
 	echo irina_whatsapp_button(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo irina_social_circles( 'di-social di-social--panel' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	?>
 </div>

@@ -10,7 +10,7 @@ declare( strict_types=1 );
 $irina_a   = wp_parse_args(
 	$args ?? [],
 	[
-		'eyebrow'         => __( 'Otorrinolaringólogo en Monterrey', 'irina-gonzalez' ),
+		'eyebrow'         => __( 'Tu otorrino en Monterrey', 'irina-gonzalez' ),
 		'title'           => __( 'Respirar bien,<br>dormir bien,<br><em>oír bien.</em>', 'irina-gonzalez' ),
 		'lead'            => '',
 		'lead_mobile'     => '',
@@ -18,11 +18,12 @@ $irina_a   = wp_parse_args(
 		'trust'           => [],
 		'secondary_label' => __( 'Conocer a la Dra. Irina', 'irina-gonzalez' ),
 		'secondary_url'   => home_url( '/dra-irina-gonzalez-saez/' ),
+		'secondary_short' => __( 'La Dra. Irina', 'irina-gonzalez' ),
 	]
 );
-$irina_cta = irina_whatsapp_button();
+$irina_cta = irina_whatsapp_button( '', '', 'di-btn di-btn--whatsapp', __( 'WhatsApp', 'irina-gonzalez' ) );
 if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
-	$irina_cta .= sprintf( '<a class="di-btn di-btn--ghost" href="%s">%s%s</a>', esc_url( $irina_a['secondary_url'] ), esc_html( $irina_a['secondary_label'] ), irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ) );
+	$irina_cta .= sprintf( '<a class="di-btn di-btn--ghost" href="%s"><span class="di-btn__long">%s</span><span class="di-btn__short">%s</span>%s</a>', esc_url( $irina_a['secondary_url'] ), esc_html( $irina_a['secondary_label'] ), esc_html( $irina_a['secondary_short'] ?? __( 'La Dra. Irina', 'irina-gonzalez' ) ), irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ) );
 }
 ?>
 <section class="di-bleed">

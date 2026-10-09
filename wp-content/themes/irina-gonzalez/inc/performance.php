@@ -59,8 +59,10 @@ add_action(
 	}
 );
 
-// Calidad de las versiones intermedias que genera WordPress (por defecto 82) para el resto de imágenes; el hero no las usa.
-add_filter( 'jpeg_quality', static fn(): int => 94 );
+// Calidad 100 % en todo lo que genere WordPress (JPEG y WebP), por decisión del propietario (tanda 1, 2026-10-09): las fotos son
+// profesionales y la CDN se encarga del peso por dispositivo. Los originales se conservan sin reescalar (abajo).
+add_filter( 'jpeg_quality', static fn(): int => 100 );
+add_filter( 'wp_editor_set_quality', static fn(): int => 100 );
 // El original subido se conserva como tamaño "full" (WordPress no lo reescala a 2560 px): la foto del hero se sirve tal cual.
 add_filter( 'big_image_size_threshold', '__return_false' );
 

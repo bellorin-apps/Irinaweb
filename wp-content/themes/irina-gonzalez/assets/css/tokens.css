@@ -37,8 +37,9 @@
   --h-giant: clamp(2.7rem, 7.2vw, 6.4rem);
   --h-big: clamp(2.1rem, 4.6vw, 3.9rem);
   --h-mid: clamp(1.6rem, 3vw, 2.5rem);
-  --leading-tight: 1.15;
-  --leading-body: 1.6;
+  --leading-title: 1em;   /* tanda 1 (2026-10-09): interlineado compacto en em; se ajusta con el propietario */
+  --leading-tight: 1.1em;
+  --leading-body: 1.3em;
   --measure: 65ch;
 
   /* Espaciado (escala 4/8) */

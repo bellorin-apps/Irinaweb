@@ -18,7 +18,7 @@ if ( '' === $irina_wa && '' === $irina_tel ) {
 	<?php
 	if ( '' !== $irina_wa ) :
 		?>
-		<a href="<?php echo esc_url( $irina_wa ); ?>" target="_blank" rel="noopener" data-di-event="appointment_click"><?php echo irina_icon( 'message-circle', 'di-icon', 22 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>WhatsApp</a><?php endif; ?>
+		<a href="<?php echo esc_url( $irina_wa ); ?>" target="_blank" rel="noopener" data-di-event="appointment_click"><?php echo irina_icon( 'brand-whatsapp', 'di-icon di-icon--brand', 22 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>WhatsApp</a><?php endif; ?>
 	<?php
 	if ( '' !== $irina_tel ) :
 		?>
