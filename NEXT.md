@@ -17,7 +17,7 @@
 - [ ] GBP: horario desactualizado → dejar «previa cita» con los días/horarios que la Dra. confirme; mantener WhatsApp y dirección (CAB Medical, consultorio 6, piso 2).
 - [ ] Capturas de 169/170/171/205 con sesión: José inicia sesión en la pestaña wp-login de la sesión local y avisa «ya».
 - [ ] **SSL de otorrino-monterrey.com** (Q-007): hPanel → Seguridad → SSL, instalar certificado para el dominio aparcado y su www; después verificar que https://otorrino-monterrey.com/ → 301 → https://drairinagonzalez.com/.
-- [x] hPanel → CDN → optimización de imágenes (2026-10-09): escritorio 2400 px / 100 %, móvil 1200 px / 90 %; verificado: hero servido 2400×1600 WebP (1.18 MB) y 1200×800 (54 KB). José sigue viendo pérdida → D-042: tema sin grano sobre foto + original completo en escritorio; D-043: la CDN optimiza (interruptores ACTIVOS, 2400/100 % y 1200/90 %) y WordPress no toca nada: PNG subido (adjunto 321, hero en 168 actualizado, WebP 2400×1600 / 1200×800 verificado). Intermedias eliminadas (solo hero-home.png en disco). Pendiente: José vacía la caché del CDN.
+- [x] hPanel → CDN → optimización de imágenes (2026-10-09): escritorio 2400 px / 100 %, móvil 1200 px / 90 %; verificado: hero servido 2400×1600 WebP (1.18 MB) y 1200×800 (54 KB). José sigue viendo pérdida → D-042: tema sin grano sobre foto + original completo en escritorio; D-043: la CDN optimiza (interruptores ACTIVOS, 2400/100 % y 1200/90 %) y WordPress no toca nada: PNG subido byte a byte (versión con rostro editado, adjunto 322, hero en 168 actualizado, sin intermedias). Pendiente: José vacía la caché del CDN.
 
 - [x] Checkpoint 2 cerrado (2026-10-08): dirección v2 aprobada; ajustes menores se harán sobre el build real.
 - [x] Adobe Fonts: Iskra carga en /preview/ (kit autorizado).
