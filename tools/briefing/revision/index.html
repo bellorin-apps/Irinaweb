@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Revisión de fichas · Dra. Irina</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Mini app de revisión médica (D-040). Móvil primero: lista de fichas con progreso y, al abrir una, secciones plegables editables con autosave. */
+:root{
+  --bg:#f7f5fa; --surface:#ffffff; --fg:#2b2730; --muted:#6d6577; --line:#e4dfea;
+  --purple:#8c4eaa; --purple-soft:#f1e8f4; --teal:#3ca1a7; --teal-soft:#e4f3f4;
+  --ok:#2e8b57; --ok-soft:#e3f3ea; --warn:#b7791f; --warn-soft:#fbf1dc; --bad:#b4453f;
+  --shadow:0 1px 2px rgba(60,40,80,.06),0 8px 24px rgba(60,40,80,.06);
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#171420; --surface:#201c2a; --fg:#ece7f2; --muted:#a79fb3; --line:#352f42;
+  --purple:#b48ad0; --purple-soft:#2b2238; --teal:#5fc4ca; --teal-soft:#1b3234;
+  --ok:#5ec48a; --ok-soft:#1d3327; --warn:#e0a94a; --warn-soft:#3a2f17; --bad:#e07f79;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#171420; --surface:#201c2a; --fg:#ece7f2; --muted:#a79fb3; --line:#352f42;
+  --purple:#b48ad0; --purple-soft:#2b2238; --teal:#5fc4ca; --teal-soft:#1b3234;
+  --ok:#5ec48a; --ok-soft:#1d3327; --warn:#e0a94a; --warn-soft:#3a2f17; --bad:#e07f79;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding-block:0 110px;padding-inline:16px}
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{font-size:1.4rem;font-weight:800;letter-spacing:-.01em}
+h2{font-size:1.15rem;font-weight:800}
+h3{font-size:1rem;font-weight:700}
+p{margin:0}
+.muted{color:var(--muted)}
+.small{font-size:.875rem}
+.eyebrow{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--teal)}
+header.top{padding-block:20px 12px;display:grid;gap:10px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:40px;height:40px;flex:none}
+.progress{display:grid;gap:6px}
+.bar{height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--teal));transition:width .3s ease}
+.status{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+
+.filters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:6px}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:8px 14px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--purple);border-color:var(--purple);color:#fff}
+
+.list{display:grid;gap:10px;padding-block:8px}
+.item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.item:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.item .t{font-weight:700}
+.item .m{font-size:.8rem;color:var(--muted)}
+.pill{font-size:.72rem;font-weight:700;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.pill.pending{background:var(--purple-soft);color:var(--purple)}
+.pill.approved{background:var(--ok-soft);color:var(--ok)}
+.pill.changes{background:var(--warn-soft);color:var(--warn)}
+.pill.published{background:var(--teal-soft);color:var(--teal)}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);display:grid;gap:12px}
+.ficha{display:none;gap:14px;padding-block:8px}
+.ficha.active{display:grid}
+.back{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:var(--purple);font:inherit;font-weight:700;cursor:pointer;padding:6px 0}
+.head{display:grid;gap:6px}
+.head input{font-size:1.25rem;font-weight:800}
+details.sec{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+details.sec > summary{list-style:none;cursor:pointer;padding:14px 16px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:10px}
+details.sec > summary::-webkit-details-marker{display:none}
+details.sec > summary::after{content:"+";color:var(--muted);font-weight:800}
+details.sec[open] > summary::after{content:"–"}
+details.sec > .body{padding:0 16px 16px;display:grid;gap:10px}
+.hint{font-size:.82rem;color:var(--muted)}
+input[type=text],input[type=url],textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;font-size:1rem;background:var(--surface);color:var(--fg)}
+textarea{min-height:96px;resize:vertical;line-height:1.5}
+textarea.tall{min-height:180px}
+.rendered{border:1.5px dashed var(--line);border-radius:10px;padding:12px 14px;font-size:.98rem}
+.rendered p{margin:0 0 .7em}.rendered p:last-child{margin:0}.rendered ul{margin:.3em 0 .7em 1.2em;padding:0}
+.toggle{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+.toggle button{border:0;background:transparent;color:var(--muted);padding:7px 12px;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;min-height:36px}
+.toggle button + button{border-left:1.5px solid var(--line)}
+.toggle button[aria-pressed="true"]{background:var(--purple);color:#fff}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{border:0;background:transparent;color:var(--muted);padding:8px 12px;font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;min-height:40px}
+.seg button + button{border-left:1.5px solid var(--line)}
+.seg button[aria-pressed="true"]{color:#fff;background:var(--teal)}
+.seg button[data-v="refiere"][aria-pressed="true"]{background:var(--purple)}
+.seg button[data-v="no"][aria-pressed="true"]{background:var(--muted)}
+.row{display:grid;gap:8px;padding:10px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0;padding-top:0}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+@media (max-width:560px){.grid3{grid-template-columns:1fr}}
+.addrow{border:1.5px dashed var(--line);background:transparent;color:var(--purple);border-radius:10px;padding:10px;font:inherit;font-weight:700;cursor:pointer}
+.del{border:0;background:transparent;color:var(--bad);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;justify-self:start;padding:4px 0}
+
+.footer-bar{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));z-index:6}
+.footer-bar .inner{max-width:760px;margin:0 auto;display:grid;gap:8px}
+.footer-bar .btns{display:flex;gap:8px}
+.btn{border:0;border-radius:10px;padding:12px 14px;font:inherit;font-weight:700;cursor:pointer;min-height:44px;flex:1}
+.btn.ok{background:var(--ok);color:#fff}
+.btn.warn{background:transparent;color:var(--warn);border:1.5px solid var(--warn)}
+.btn.bad{background:transparent;color:var(--bad);border:1.5px solid var(--bad)}
+.btn.ghost{background:transparent;color:var(--purple);border:1.5px solid var(--purple)}
+.btn:disabled{opacity:.5;cursor:default}
+.save{font-size:.8rem;color:var(--muted);text-align:center}
+.save.ok{color:var(--ok)}.save.warn{color:var(--warn)}
+.note{border-left:3px solid var(--teal);background:var(--teal-soft);padding:10px 12px;border-radius:8px;font-size:.9rem}
+.note.warn{border-color:var(--warn);background:var(--warn-soft)}
+.note.ok{border-color:var(--ok);background:var(--ok-soft)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(120px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .25s;z-index:7;max-width:90vw;text-align:center}
+.toast.show{opacity:1}
+dialog{border:0;border-radius:14px;padding:0;max-width:min(92vw,480px);width:100%;background:var(--surface);color:var(--fg);box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(20,10,30,.5)}
+dialog form{display:grid;gap:12px;padding:18px}
+dialog .btns{display:flex;gap:8px;justify-content:flex-end}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--purple)" stroke-width="3"/><circle cx="20" cy="20" r="11" fill="none" stroke="var(--teal)" stroke-width="3"/><circle cx="20" cy="20" r="3.5" fill="var(--purple)"/></svg>
+      <div>
+        <p class="eyebrow">Sitio web · drairinagonzalez.com</p>
+        <h1 id="title">Revisión de fichas médicas</h1>
+      </div>
+    </div>
+    <p class="muted" id="intro">Lee cada ficha, corrige lo que quieras directamente en el texto y apruébala. Nada se publica sin tu aprobación, y la publicación la hacemos nosotros después.</p>
+    <div class="progress">
+      <div class="bar"><i id="bar"></i></div>
+      <div class="status"><span id="count">Cargando…</span><span id="saveState" class="save"></span></div>
+    </div>
+  </header>
+
+  <section id="listView">
+    <nav class="filters" id="filters" aria-label="Filtro"></nav>
+    <div class="list" id="list"></div>
+  </section>
+
+  <section class="ficha" id="fichaView"></section>
+</div>
+
+<div class="footer-bar" id="footer" hidden><div class="inner">
+  <div class="save" id="footState"></div>
+  <div class="btns">
+    <button class="btn bad" id="holdBtn" type="button">No publicar</button>
+    <button class="btn warn" id="changesBtn" type="button">Pedir cambios</button>
+    <button class="btn ok" id="approveBtn" type="button">Aprobar ficha</button>
+  </div>
+</div></div>
+
+<dialog id="noteDlg">
+  <form method="dialog">
+    <h2 id="noteTitle">Pedir cambios</h2>
+    <p class="small muted" id="noteHint">Escribe qué quieres cambiar o por qué no debe publicarse. Lo recibimos y lo aplicamos nosotros.</p>
+    <textarea id="noteText" placeholder="Por ejemplo: en «Cuándo consultar» agregar…"></textarea>
+    <div class="btns"><button class="btn ghost" value="cancel" type="button" id="noteCancel">Cancelar</button><button class="btn ok" value="ok" id="noteOk">Enviar</button></div>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+const $ = (s, el) => (el || document).querySelector(s);
+const TOKEN = new URLSearchParams(location.search).get("t") || "";
+const API = "revisar.php";
+const LABELS = {
+  content: ["Qué es", "En qué consiste", "Texto principal"],
+  resumen_paciente: "Resumen (entradilla)",
+  sintomas: "Síntomas frecuentes", causas: "Causas", cuando_consultar: "¿Cuándo consultar?",
+  diagnostico: "Cómo se diagnostica", enfoque_dra: "El enfoque de la Dra.",
+  oferta: "¿Lo ofreces o lo refieres?", candidatos: "Para quién está indicado",
+  estudio_previo: "Estudio previo", como_se_realiza: "Cómo se realiza", recuperacion: "Recuperación", riesgos_y_alternativas: "Riesgos y alternativas",
+  faq: "Preguntas frecuentes", fuentes: "Fuentes", excerpt: "Resumen del artículo"
+};
+const HINTS = {
+  list: "Una línea por punto.",
+  rich: "Puedes escribir texto normal; cada párrafo separado por una línea en blanco. Para negritas: <strong>así</strong>.",
+  text: "Una o dos frases.",
+  faq: "Pregunta y respuesta breve, como las haría una paciente.",
+  fuentes: "Guías o sociedades que respaldan el texto. Puedes quitar o añadir."
+};
+const TIPOS = ["guia", "sociedad", "articulo", "organismo", "libro", "otro"];
+
+let items = [], states = {}, filter = "all", current = null, dirty = {}, saveTimer = null, saving = false, pendingSave = false, viewMode = {};
+
+function toast(t){ const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast._t); toast._t = setTimeout(() => el.classList.remove("show"), 2600); }
+function setSave(txt, cls){ [$("#saveState"), $("#footState")].forEach(el => { el.textContent = txt; el.className = "save" + (cls ? " " + cls : ""); }); }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function pillClass(it){ if (it.published) return "published"; if (it.state === "medically_approved" || it.state === "ready_to_publish") return "approved"; if (it.state === "technical_review" || it.state === "draft") return "changes"; return "pending"; }
+function typeLabel(t){ return { condicion: "Padecimiento", tratamiento: "Tratamiento", recurso: "Artículo" }[t] || t; }
+
+async function api(params, body){
+  const opts = body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(Object.assign({ token: TOKEN }, body)) } : { cache: "no-store" };
+  const url = body ? API : API + "?" + new URLSearchParams(Object.assign({ token: TOKEN }, params));
+  const r = await fetch(url, opts);
+  let d = null; try { d = await r.json(); } catch (e) {}
+  if (!r.ok){ const err = new Error((d && (d.hint || d.error)) || ("HTTP " + r.status)); err.code = d && d.error; err.status = r.status; throw err; }
+  return d;
+}
+
+// ---------- Lista ----------
+function updateProgress(){
+  const total = items.length;
+  const ok = items.filter(i => i.state === "medically_approved" || i.state === "ready_to_publish" || i.published).length;
+  $("#bar").style.width = (total ? Math.round(ok / total * 100) : 0) + "%";
+  $("#count").textContent = ok + " de " + total + " aprobadas";
+}
+function renderFilters(){
+  const f = [["all", "Todas"], ["pending", "Pendientes"], ["approved", "Aprobadas"], ["changes", "Con cambios"], ["condicion", "Padecimientos"], ["tratamiento", "Tratamientos"], ["recurso", "Artículos"]];
+  $("#filters").innerHTML = f.map(([k, l]) => `<button type="button" data-f="${k}" aria-pressed="${filter === k}">${l}</button>`).join("");
+  $("#filters").querySelectorAll("button").forEach(b => b.onclick = () => { filter = b.dataset.f; renderList(); });
+}
+function renderList(){
+  renderFilters();
+  const rows = items.filter(it => filter === "all" || (["condicion", "tratamiento", "recurso"].includes(filter) ? it.type === filter : pillClass(it) === filter || (filter === "approved" && it.published)));
+  $("#list").innerHTML = rows.length ? rows.map(it => `
+    <button class="item" type="button" data-id="${it.id}">
+      <span><span class="t">${esc(it.title)}</span><br><span class="m">${typeLabel(it.type)}${it.area ? " · " + esc(it.area) : ""}${it.note ? " · nota enviada" : ""}</span></span>
+      <span class="pill ${pillClass(it)}">${it.published ? "Publicada" : esc(it.state_label)}</span>
+    </button>`).join("") : `<p class="muted">No hay fichas en este filtro.</p>`;
+  $("#list").querySelectorAll(".item").forEach(b => b.onclick = () => openFicha(parseInt(b.dataset.id, 10)));
+}
+
+// ---------- Ficha ----------
+function fieldEditor(key, kind, value){
+  const id = "f-" + key;
+  const label = Array.isArray(LABELS[key]) ? LABELS[key][current.type === "condicion" ? 0 : current.type === "tratamiento" ? 1 : 2] : (LABELS[key] || key);
+  let body = "";
+  if (kind === "list"){
+    body = `<textarea data-key="${key}" data-kind="list" aria-label="${esc(label)}">${esc((value || []).join("\n"))}</textarea>`;
+  } else if (kind === "rich" || kind === "content"){
+    const mode = viewMode[key] || "read";
+    body = `<div class="toggle" role="group" aria-label="Modo"><button type="button" data-mode="read" data-for="${key}" aria-pressed="${mode === "read"}">Leer</button><button type="button" data-mode="edit" data-for="${key}" aria-pressed="${mode === "edit"}">Editar</button></div>
+      <div class="rendered" data-render="${key}" ${mode === "edit" ? "hidden" : ""}>${renderRich(value || "")}</div>
+      <textarea class="tall" data-key="${key}" data-kind="rich" aria-label="${esc(label)}" ${mode === "read" ? "hidden" : ""}>${esc(toPlain(value || ""))}</textarea>`;
+  } else if (kind === "text"){
+    body = `<textarea data-key="${key}" data-kind="text" aria-label="${esc(label)}">${esc(value || "")}</textarea>`;
+  } else if (kind === "oferta"){
+    body = `<div class="seg" data-key="${key}">${[["ofrece", "La ofrezco"], ["refiere", "La refiero"], ["no", "No"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(value || "ofrece") === v}">${l}</button>`).join("")}</div>`;
+  } else if (kind === "faq"){
+    body = `<div data-rows="faq">${(value || []).map((q, i) => faqRow(q, i)).join("")}</div><button type="button" class="addrow" data-add="faq">+ Añadir pregunta</button>`;
+  } else if (kind === "fuentes"){
+    body = `<div data-rows="fuentes">${(value || []).map((f, i) => fuenteRow(f, i)).join("")}</div><button type="button" class="addrow" data-add="fuentes">+ Añadir fuente</button>`;
+  }
+  const hint = HINTS[kind === "content" ? "rich" : kind] || "";
+  const open = (kind === "content" || key === "resumen_paciente") ? " open" : "";
+  return `<details class="sec" id="${id}"${open}><summary>${esc(label)}</summary><div class="body">${hint ? `<p class="hint">${hint}</p>` : ""}${body}</div></details>`;
+}
+function faqRow(q, i){ return `<div class="row" data-i="${i}"><input type="text" data-sub="pregunta" placeholder="Pregunta" value="${esc(q.pregunta || "")}"><textarea data-sub="respuesta" placeholder="Respuesta">${esc(toPlain(q.respuesta || ""))}</textarea><button type="button" class="del" data-del="${i}">Quitar</button></div>`; }
+function fuenteRow(f, i){ return `<div class="row" data-i="${i}"><input type="text" data-sub="titulo" placeholder="Título de la guía o fuente" value="${esc(f.titulo || "")}"><div class="grid3"><input type="text" data-sub="autor" placeholder="Autor / sociedad" value="${esc(f.autor || "")}"><input type="text" data-sub="anio" placeholder="Año" value="${esc(f.anio || "")}"><select data-sub="tipo" style="border:1.5px solid var(--line);border-radius:10px;padding:10px;font:inherit;background:var(--surface);color:var(--fg)">${TIPOS.map(t => `<option value="${t}" ${(f.tipo || "guia") === t ? "selected" : ""}>${t}</option>`).join("")}</select></div><input type="url" data-sub="url" placeholder="https://…" value="${esc(f.url || "")}"><button type="button" class="del" data-del="${i}">Quitar</button></div>`; }
+
+// HTML simple <-> texto plano con párrafos (la Dra. no escribe HTML; conservamos <strong> y listas).
+function toPlain(html){
+  return String(html).replace(/\r/g, "").replace(/<\/li>\s*/gi, "\n").replace(/<\/(ul|ol)>\s*/gi, "\n\n").replace(/<(ul|ol)>\s*/gi, "").replace(/<li>/gi, "• ").replace(/<\/(p|h2|h3)>\s*/gi, "\n\n").replace(/<br\s*\/?>/gi, "\n").replace(/<\/?p>/gi, "").replace(/<h2>/gi, "## ").replace(/<h3>/gi, "### ").replace(/\n{3,}/g, "\n\n").trim();
+}
+function toHtml(plain){
+  const blocks = String(plain).replace(/\r/g, "").split(/\n{2,}/).map(b => b.trim()).filter(Boolean);
+  return blocks.map(b => {
+    if (/^(•|-|\*)\s/.test(b)) return "<ul>" + b.split("\n").map(l => l.replace(/^(•|-|\*)\s*/, "").trim()).filter(Boolean).map(l => "<li>" + inline(l) + "</li>").join("") + "</ul>";
+    if (/^##\s/.test(b)) return "<h2>" + inline(b.replace(/^##\s*/, "")) + "</h2>";
+    if (/^###\s/.test(b)) return "<h3>" + inline(b.replace(/^###\s*/, "")) + "</h3>";
+    return "<p>" + inline(b).replace(/\n/g, "<br>") + "</p>";
+  }).join("");
+}
+function inline(t){ return t.replace(/<(?!\/?(strong|em|b|i|a|br)\b)[^>]*>/gi, "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"); }
+function renderRich(html){ const d = document.createElement("div"); d.innerHTML = String(html).replace(/<script[\s\S]*?<\/script>/gi, ""); d.querySelectorAll("*").forEach(el => { if (!["P","STRONG","EM","B","I","UL","OL","LI","H2","H3","BR","A"].includes(el.tagName)) el.replaceWith(...el.childNodes); else [...el.attributes].forEach(a => { if (a.name !== "href") el.removeAttribute(a.name); }); }); return d.innerHTML; }
+
+async function openFicha(id){
+  setSave("Cargando…");
+  let d;
+  try { d = await api({ action: "get", id }); } catch (e) { toast("No se pudo abrir: " + e.message); setSave(""); return; }
+  current = d; dirty = {}; viewMode = {};
+  const kinds = Object.assign({ content: "content" }, d.kinds);
+  const values = Object.assign({ content: d.content }, d.meta);
+  const secs = [];
+  secs.push(fieldEditor("content", "content", d.content));
+  if (d.type === "recurso") secs.push(`<details class="sec" open><summary>${LABELS.excerpt}</summary><div class="body"><textarea data-key="excerpt" data-kind="text">${esc(d.excerpt)}</textarea></div></details>`);
+  Object.keys(d.kinds).forEach(k => secs.push(fieldEditor(k, d.kinds[k], d.meta[k])));
+  const locked = d.published;
+  const stateNote = d.published ? `<div class="note">Esta ficha ya está publicada en el sitio. Si quieres cambiar algo, usa «Pedir cambios» y lo aplicamos nosotros.</div>`
+    : d.state === "medically_approved" ? `<div class="note ok">Aprobada por ti${d.approved_at ? " el " + esc(d.approved_at.slice(0, 10)) : ""}. Puedes seguir corrigiendo; la publicación la hacemos nosotros.</div>`
+    : d.note ? `<div class="note warn">Tu nota enviada: «${esc(d.note)}». Cuando apliquemos el cambio vuelve a quedar pendiente de tu aprobación.</div>` : "";
+  $("#fichaView").innerHTML = `
+    <button class="back" type="button" id="backBtn">← Todas las fichas</button>
+    <div class="head"><p class="eyebrow">${typeLabel(d.type)}${d.area ? " · " + esc(d.area) : ""}</p>
+      <input type="text" data-key="title" data-kind="title" value="${esc(d.title)}" aria-label="Título" ${locked ? "disabled" : ""}>
+      ${stateNote}
+      ${d.related && d.related.length ? `<p class="small muted">Relacionado en el sitio: ${esc(d.related.join(" · "))}</p>` : ""}
+    </div>
+    ${secs.join("")}`;
+  if (locked) $("#fichaView").querySelectorAll("textarea,input,select,button.addrow,button.del,.seg button").forEach(el => el.disabled = true);
+  bindFicha();
+  $("#listView").hidden = true; $("#fichaView").classList.add("active"); $("#footer").hidden = false;
+  $("#approveBtn").disabled = locked; $("#holdBtn").disabled = locked;
+  $("#approveBtn").textContent = d.state === "medically_approved" ? "Aprobada ✓" : "Aprobar ficha";
+  setSave(locked ? "Solo lectura" : "Sin cambios");
+  window.scrollTo({ top: 0 });
+}
+function bindFicha(){
+  const v = $("#fichaView");
+  $("#backBtn").onclick = backToList;
+  v.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => {
+    const key = b.dataset.for; viewMode[key] = b.dataset.mode;
+    const sec = b.closest(".body"); sec.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", x === b));
+    const ta = sec.querySelector("textarea"), rd = sec.querySelector("[data-render]");
+    if (b.dataset.mode === "edit"){ ta.hidden = false; rd.hidden = true; ta.focus(); } else { rd.innerHTML = renderRich(toHtml(ta.value)); ta.hidden = true; rd.hidden = false; }
+  });
+  v.querySelectorAll("textarea[data-key],input[data-key]").forEach(el => el.addEventListener("input", () => markDirty(el.dataset.key)));
+  v.querySelectorAll(".seg button").forEach(b => b.onclick = () => { b.parentElement.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); markDirty(b.parentElement.dataset.key); });
+  v.querySelectorAll("[data-rows]").forEach(box => {
+    box.addEventListener("input", () => markDirty(box.dataset.rows));
+    box.addEventListener("click", e => { const d = e.target.closest("[data-del]"); if (d){ d.closest(".row").remove(); markDirty(box.dataset.rows); } });
+  });
+  v.querySelectorAll("[data-add]").forEach(b => b.onclick = () => {
+    const box = v.querySelector(`[data-rows="${b.dataset.add}"]`); const i = box.children.length;
+    box.insertAdjacentHTML("beforeend", b.dataset.add === "faq" ? faqRow({}, i) : fuenteRow({}, i));
+    box.lastElementChild.querySelector("input,textarea").focus();
+  });
+}
+function collect(key){
+  const v = $("#fichaView");
+  if (key === "title") return v.querySelector('[data-key="title"]').value;
+  if (key === "faq" || key === "fuentes"){
+    return [...v.querySelectorAll(`[data-rows="${key}"] .row`)].map(r => { const o = {}; r.querySelectorAll("[data-sub]").forEach(f => o[f.dataset.sub] = f.dataset.sub === "respuesta" ? toHtml(f.value) : f.value); return o; });
+  }
+  const seg = v.querySelector(`.seg[data-key="${key}"]`); if (seg) return seg.querySelector('[aria-pressed="true"]').dataset.v;
+  const el = v.querySelector(`[data-key="${key}"]`); if (!el) return undefined;
+  if (el.dataset.kind === "list") return el.value.split("\n").map(s => s.trim()).filter(Boolean);
+  if (el.dataset.kind === "rich") return toHtml(el.value);
+  return el.value;
+}
+function markDirty(key){ dirty[key] = true; setSave("Guardando…"); clearTimeout(saveTimer); saveTimer = setTimeout(persist, 900); }
+async function persist(){
+  if (!current || !Object.keys(dirty).length) return;
+  if (saving){ pendingSave = true; return; }
+  saving = true;
+  const fields = {}; Object.keys(dirty).forEach(k => { const val = collect(k); if (val !== undefined) fields[k] = val; });
+  dirty = {};
+  try {
+    const r = await api(null, { action: "save", id: current.id, fields });
+    setSave("Guardado", "ok");
+    if (fields.title){ const it = items.find(i => i.id === current.id); if (it) it.title = fields.title; }
+  } catch (e) {
+    Object.keys(fields).forEach(k => dirty[k] = true);
+    setSave(e.status === 403 ? "Enlace no válido" : "No se pudo guardar: " + e.message, "warn");
+  } finally { saving = false; if (pendingSave){ pendingSave = false; persist(); } }
+}
+async function flush(){ clearTimeout(saveTimer); if (Object.keys(dirty).length) await persist(); while (saving) await new Promise(r => setTimeout(r, 100)); }
+async function backToList(){ await flush(); current = null; $("#fichaView").classList.remove("active"); $("#listView").hidden = false; $("#footer").hidden = true; setSave(""); await loadList(); }
+
+// ---------- Estado ----------
+async function setState(kind){
+  if (!current) return;
+  await flush();
+  let note = "";
+  if (kind !== "approve"){
+    $("#noteTitle").textContent = kind === "changes" ? "Pedir cambios" : "No publicar";
+    $("#noteHint").textContent = kind === "changes" ? "Escribe qué quieres cambiar. Lo aplicamos nosotros y te la devolvemos para aprobar." : "Escribe por qué no debe publicarse esta ficha. Queda guardada, sin publicar.";
+    note = await askNote(); if (note === null) return; if (!note.trim()){ toast("Escribe una nota breve"); return; }
+  } else if (!confirm("¿Apruebas esta ficha tal como está ahora? Nosotros la publicamos después.")) return;
+  $("#approveBtn").disabled = $("#changesBtn").disabled = $("#holdBtn").disabled = true;
+  try {
+    const r = await api(null, { action: "state", id: current.id, state: kind, note });
+    const it = items.find(i => i.id === current.id); if (it){ it.state = r.state; it.state_label = r.state_label; it.note = r.note; it.approved_at = r.approved_at; }
+    toast(kind === "approve" ? "Ficha aprobada. ¡Gracias!" : "Nota enviada");
+    updateProgress();
+    if (kind === "approve"){ await backToList(); } else { await openFicha(current.id); }
+  } catch (e) { toast("No se pudo: " + e.message); }
+  finally { $("#approveBtn").disabled = $("#changesBtn").disabled = $("#holdBtn").disabled = false; }
+}
+function askNote(){
+  return new Promise(res => {
+    const dlg = $("#noteDlg"), ta = $("#noteText"); ta.value = "";
+    const done = v => { dlg.removeEventListener("close", onClose); dlg.close(); res(v); };
+    const onClose = () => res(null);
+    $("#noteCancel").onclick = () => done(null);
+    $("#noteOk").onclick = e => { e.preventDefault(); done(ta.value); };
+    dlg.addEventListener("close", onClose, { once: true });
+    dlg.showModal(); ta.focus();
+  });
+}
+$("#approveBtn").onclick = () => setState("approve");
+$("#changesBtn").onclick = () => setState("changes");
+$("#holdBtn").onclick = () => setState("hold");
+window.addEventListener("beforeunload", e => { if (Object.keys(dirty).length || saving){ e.preventDefault(); e.returnValue = ""; } });
+document.addEventListener("visibilitychange", () => { if (document.hidden) flush(); });
+
+// ---------- Carga ----------
+async function loadList(){
+  try {
+    const d = await api({ action: "list" });
+    items = d.items; states = d.states;
+    if (d.reviewer) $("#intro").textContent = "Hola, " + d.reviewer + ". Lee cada ficha, corrige lo que quieras directamente en el texto y apruébala. Nada se publica sin tu aprobación; la publicación la hacemos nosotros después.";
+    renderList(); updateProgress();
+  } catch (e) {
+    $("#list").innerHTML = `<div class="note warn">${e.status === 403 ? "Este enlace no es válido. Pide a José el enlace correcto." : "No se pudieron cargar las fichas: " + esc(e.message)}</div>`;
+    $("#count").textContent = "";
+  }
+}
+if (!TOKEN){ $("#list").innerHTML = `<div class="note warn">Este enlace no trae la clave de acceso. Pide a José el enlace completo.</div>`; $("#count").textContent = ""; }
+else loadList();
+})();
+</script>
+</body>
+</html>
