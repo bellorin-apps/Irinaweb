@@ -110,6 +110,8 @@ body.menu-open { overflow: hidden; }
 .di-scroll-hint::after { content: ""; position: absolute; inset: 0; background: #fff; animation: di-drop 2.2s ease-in-out infinite; }
 @keyframes di-drop { 0% { transform: translateY(-100%); } 60%, 100% { transform: translateY(100%); } }
 @media (prefers-reduced-motion: reduce) { .di-scroll-hint::after { animation: none; } }
+/* Pantallas bajas de escritorio: el bloque de texto nunca toca la cabecera. */
+@media (min-width: 900px) { .di-bleed:not(.di-bleed--short) .di-container { padding-top: 9rem; } }
 /* Móvil (feedback del propietario): foto a toda altura con el rostro libre en la mitad superior; bloque compacto abajo sobre el fundido. Va DESPUÉS de las reglas generales para ganarles. */
 @media (max-width: 899px) {
   /* La foto 3:2 cubre por altura: object-position Y no tiene recorrido. Se recorta el 12 % superior para subir el rostro. */
