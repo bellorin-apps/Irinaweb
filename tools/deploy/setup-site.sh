@@ -41,7 +41,13 @@ rssh "rm -f /tmp/home-elementor.json"
 w "post meta delete $P_HOME _elementor_css" >/dev/null 2>&1 || true
 # Elementor cachea el HTML de cada elemento en post meta; sin borrarlo, los cambios de _elementor_data no se ven.
 w "post meta delete $P_HOME _elementor_element_cache" >/dev/null 2>&1 || true
-w "post meta update $P_HOME rank_math_robots --format=json '[\"noindex\",\"nofollow\"]'" >/dev/null
+# noindex solo mientras NO sea la portada: tras go-live (page_on_front=168) marcarla vaciaba el sitemap de Rank Math (09-10).
+if [ "$(w "option get page_on_front")" = "$P_HOME" ]; then
+  w "post meta delete $P_HOME rank_math_robots" >/dev/null 2>&1 || true
+  echo "  $P_HOME es la portada: sin noindex"
+else
+  w "post meta update $P_HOME rank_math_robots --format=json '[\"noindex\",\"nofollow\"]'" >/dev/null
+fi
 
 echo "→ Menús"
 ensure_menu(){ w "menu list --fields=slug --format=csv" | grep -qx "$1" || w "menu create '$2'" >/dev/null; }
