@@ -35,3 +35,4 @@
 - Dominio aparcado: SSL activo verificado (Q-007 cerrado) y 301 host-based para cualquier ruta en el `.htaccess` del webroot (`parked-redirect.sh`, Q-012).
 - Sitemap de Rank Math reparado (Q-013: la portada volvía a `noindex` por `setup-site.sh`; corregido por la sesión local). QA con sesión de las interiores (Q-015); barra móvil legible en el registro nocturno (Q-014).
 - Página 404 útil del tema (8.7): rutas de salida solo a páginas publicadas, WhatsApp y nota para enlaces antiguos de otorrino-monterrey.com.
+- `publish-approved.sh` (dry-run por defecto) para publicar las fichas aprobadas en la mini app; `setup-medical.sh` ya no sobrescribe fichas aprobadas pendientes de publicar.

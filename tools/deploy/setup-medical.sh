@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Crea/actualiza las 23 fichas (padecimientos y tratamientos) desde tools/content/medical-drafts.json con todos los campos clínicos.
-# Siempre en DRAFT con estado medical_review_required; el gate médico impide publicarlas. Las ya publicadas (aprobadas por la Dra.) no se tocan.
+# Siempre en DRAFT con estado medical_review_required; el gate médico impide publicarlas. Las publicadas y las aprobadas en la mini app (D-040) no se tocan.
 . "$(dirname "${BASH_SOURCE[0]}")/lib.sh"
 WP="cd '$WEBROOT' && /opt/alt/php84/usr/bin/php /usr/local/bin/wp --skip-plugins=elementor,elementor-pro"
 w(){ rssh "$WP $*"; }
@@ -12,10 +12,12 @@ foreach ( [ \"condicion\", \"tratamiento\" ] as \$type ) {
   foreach ( \$d[\$type] as \$r ) {
     \$q = get_posts( [ \"post_type\" => \$type, \"post_name__in\" => [ \$r[\"slug\"] ], \"post_status\" => \"any\", \"posts_per_page\" => 1, \"orderby\" => \"ID\", \"order\" => \"ASC\" ] ); // name+any no encuentra borradores/privadas (duplicó páginas el 07-10)
     \$content = wp_slash( \$r[\"html\"] );
-    if ( \$q ) { \$id = \$q[0]->ID; if ( \"publish\" !== \$q[0]->post_status ) { wp_update_post( [ \"ID\" => \$id, \"post_title\" => \$r[\"titulo\"], \"post_content\" => \$content ] ); } echo \"  existe \"; }
+    if ( \$q ) { \$id = \$q[0]->ID; if ( \"publish\" !== \$q[0]->post_status && ! in_array( \\DraIrina\\Core\\Workflow\\MedicalReview::state( \$id ), [ \"medically_approved\", \"ready_to_publish\" ], true ) ) { wp_update_post( [ \"ID\" => \$id, \"post_title\" => \$r[\"titulo\"], \"post_content\" => \$content ] ); } echo \"  existe \"; }
     else { \$id = wp_insert_post( [ \"post_type\" => \$type, \"post_status\" => \"draft\", \"post_title\" => \$r[\"titulo\"], \"post_name\" => \$r[\"slug\"], \"post_content\" => \$content ] ); echo \"  creada \"; }
     \$ids[ \$r[\"slug\"] ] = \$id;
     if ( \"publish\" === get_post_status( \$id ) ) { echo \$type . \" \" . \$r[\"slug\"] . \" (\" . \$id . \") publicada: aprobada por la Dra., sin cambios\n\"; continue; }
+    // Aprobadas en la mini app (D-040) pero aún no publicadas: tampoco se tocan (lo que aprobó la Dra. es lo que se publica).
+    if ( in_array( \\DraIrina\\Core\\Workflow\\MedicalReview::state( \$id ), [ \"medically_approved\", \"ready_to_publish\" ], true ) ) { echo \$type . \" \" . \$r[\"slug\"] . \" (\" . \$id . \") aprobada: sin cambios\n\"; continue; }
     wp_set_object_terms( \$id, \$r[\"area\"], \"area\" );
     wp_set_object_terms( \$id, \$r[\"zona\"], \"zona\" );
     wp_set_object_terms( \$id, \"medical_review_required\", \"estado_medico\" );
@@ -28,9 +30,10 @@ foreach ( [ \"condicion\", \"tratamiento\" ] as \$type ) {
     echo \$type . \" \" . \$r[\"slug\"] . \" (\" . \$id . \") \" . get_post_status( \$id ) . \"\n\";
   }
 }
-foreach ( \$d[\"condicion\"] as \$r ) { if ( \"publish\" === get_post_status( \$ids[ \$r[\"slug\"] ] ) ) { continue; } \$rel = array_values( array_filter( array_map( fn( \$s ) => \$ids[ \$s ] ?? 0, \$r[\"tratamientos\"] ) ) ); update_post_meta( \$ids[ \$r[\"slug\"] ], \"di_tratamientos_relacionados\", \$rel ); }
-foreach ( \$d[\"tratamiento\"] as \$r ) { if ( \"publish\" === get_post_status( \$ids[ \$r[\"slug\"] ] ) ) { continue; } \$rel = array_values( array_filter( array_map( fn( \$s ) => \$ids[ \$s ] ?? 0, \$r[\"resuelve\"] ) ) ); update_post_meta( \$ids[ \$r[\"slug\"] ], \"di_que_resuelve\", \$rel ); }
-foreach ( array_merge( \$d[\"condicion\"], \$d[\"tratamiento\"] ) as \$r ) { \$id = \$ids[ \$r[\"slug\"] ]; if ( \"publish\" === get_post_status( \$id ) ) { continue; } \$rel = array_values( array_filter( array_map( fn( \$s ) => \$ids[ \$s ] ?? 0, \$r[\"relacionados\"] ) ) ); update_post_meta( \$id, \"di_relacionados\", \$rel ); }
+\$skip = fn( \$id ) => \"publish\" === get_post_status( \$id ) || in_array( \\DraIrina\\Core\\Workflow\\MedicalReview::state( \$id ), [ \"medically_approved\", \"ready_to_publish\" ], true );
+foreach ( \$d[\"condicion\"] as \$r ) { if ( \$skip( \$ids[ \$r[\"slug\"] ] ) ) { continue; } \$rel = array_values( array_filter( array_map( fn( \$s ) => \$ids[ \$s ] ?? 0, \$r[\"tratamientos\"] ) ) ); update_post_meta( \$ids[ \$r[\"slug\"] ], \"di_tratamientos_relacionados\", \$rel ); }
+foreach ( \$d[\"tratamiento\"] as \$r ) { if ( \$skip( \$ids[ \$r[\"slug\"] ] ) ) { continue; } \$rel = array_values( array_filter( array_map( fn( \$s ) => \$ids[ \$s ] ?? 0, \$r[\"resuelve\"] ) ) ); update_post_meta( \$ids[ \$r[\"slug\"] ], \"di_que_resuelve\", \$rel ); }
+foreach ( array_merge( \$d[\"condicion\"], \$d[\"tratamiento\"] ) as \$r ) { \$id = \$ids[ \$r[\"slug\"] ]; if ( \$skip( \$id ) ) { continue; } \$rel = array_values( array_filter( array_map( fn( \$s ) => \$ids[ \$s ] ?? 0, \$r[\"relacionados\"] ) ) ); update_post_meta( \$id, \"di_relacionados\", \$rel ); }
 '"
 rssh "rm -f /tmp/medical-drafts.json"
 echo "Borradores listos (no publicados). Revisión de la Dra. en wp-admin → Padecimientos / Tratamientos."
