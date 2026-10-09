@@ -16,3 +16,5 @@ La Dra. revisa y aprueba las fichas clínicas sin entrar a wp-admin: `/briefing/
 - `revision/revisar.php` — carga WordPress (`wp-load.php`) y ejecuta como el usuario con rol `revisor_medico` (`wp_set_current_user`), así el gate del plugin y las capacidades son los reales. Acciones: `list`, `get`, `save` (post_content/título y metas `di_*` con `wp_kses_post` / `sanitize_text_field`), `state` (`approve` → `medically_approved` + `_di_approved_by/_at`; `changes` → `technical_review` + `_di_review_note`; `hold` → `draft` + nota). **Nunca publica**: las fichas publicadas son de solo lectura en la app (solo admiten «Pedir cambios»).
 - Registro en `data_dir`: `revision-log.jsonl` (cada guardado y cambio de estado, con fecha, ficha, acción, nota y usuario) y `revision-latest.json` (resumen de estados). Sin correos (instrucción del propietario 2026-10-09).
 - Requisito: un usuario con rol `revisor_medico` (`wp user list --role=revisor_medico`); opcional `'reviewer_login' => 'irina'` en `config.php`.
+
+Las tres mini apps van siempre en versión clara (`data-theme="light"`, D-041).
