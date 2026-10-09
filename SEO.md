@@ -29,7 +29,7 @@ Fuente: `tools/content/pages/seo.json` (se cargan como `rank_math_title` / `rank
 
 ## 4. Técnico
 
-- Canónico `https://drairinagonzalez.com/` (sin www, D-022); `www` y `http` → 301. `otorrino-monterrey.com` → 301 (pendiente SSL, Q-007).
+- Canónico `https://drairinagonzalez.com/` (sin www, D-022); `www` y `http` → 301. `otorrino-monterrey.com` (apex y www, http y https) → 301 a la misma ruta en `https://drairinagonzalez.com` en un salto (Q-007 cerrado; regla host-based de `parked-redirect.sh`, Q-012).
 - Barra final siempre; slugs sin acentos.
 - `noindex`: `/inicio-v2/` (hasta ser portada), `/preview/*`, `/gracias/`, búsqueda, páginas en borrador (no indexables por defecto), `/links/` (D-023).
 - Sitemap: Rank Math (`sitemap_index.xml`); excluye noindex y borradores; enviar en Search Console tras CP3 (1.4).
