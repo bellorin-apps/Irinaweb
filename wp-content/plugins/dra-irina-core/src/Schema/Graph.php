@@ -94,7 +94,7 @@ final class Graph {
 	}
 
 	/**
-	 * memberOf, alumniOf, hasCredential y publicaciones desde el CPT credencial (solo mostrar=true).
+	 * Nodos memberOf, alumniOf, hasCredential y publicaciones desde el CPT credencial (solo mostrar=true).
 	 *
 	 * @return array<string, mixed>
 	 */
