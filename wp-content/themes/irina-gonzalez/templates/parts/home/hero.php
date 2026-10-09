@@ -10,7 +10,7 @@ declare( strict_types=1 );
 $irina_a   = wp_parse_args(
 	$args ?? [],
 	[
-		'eyebrow'         => __( 'Tu otorrino en Monterrey', 'irina-gonzalez' ),
+		'eyebrow'         => __( 'Tu otorrino|en Monterrey', 'irina-gonzalez' ), // «|» = salto de línea solo en móvil.
 		'title'           => __( 'Respirar bien,<br>dormir bien,<br><em>oír bien.</em>', 'irina-gonzalez' ),
 		'lead'            => '',
 		'lead_mobile'     => '',
@@ -30,7 +30,7 @@ if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
 	<div class="di-bleed__bg di-bleed__bg--warm"><?php echo $irina_a['image_id'] ? irina_hero_image( (int) $irina_a['image_id'] ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. ?></div>
 	<div class="di-bleed__shade"></div>
 	<div class="di-container">
-		<p class="di-eyebrow"><?php echo esc_html( $irina_a['eyebrow'] ); ?></p>
+		<p class="di-eyebrow"><span class="di-eyebrow__t"><?php echo str_replace( '|', '<span class="di-brm"></span> ', esc_html( $irina_a['eyebrow'] ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado antes del reemplazo. ?></span></p>
 		<h1>
 		<?php
 		echo wp_kses(

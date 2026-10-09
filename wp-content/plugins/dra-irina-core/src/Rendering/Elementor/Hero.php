@@ -27,7 +27,7 @@ final class Hero extends AbstractWidget {
 
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Contenido', 'dra-irina-core' ) ] );
-		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), __( 'Tu otorrino en Monterrey', 'dra-irina-core' ) );
+		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), __( 'Tu otorrino|en Monterrey', 'dra-irina-core' ) );
 		$this->text( 'title', __( 'Titular (permite <em> y <br>)', 'dra-irina-core' ), 'Respirar bien,<br>dormir bien,<br><em>oír bien.</em>', true );
 		$this->text( 'lead', __( 'Entradilla', 'dra-irina-core' ), '', true );
 		$this->text( 'lead_mobile', __( 'Entradilla corta para móvil (vacía = la misma)', 'dra-irina-core' ), '', true );

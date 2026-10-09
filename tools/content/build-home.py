@@ -18,7 +18,7 @@ def rep(items, *keys):
 
 data = [
     container("hero", "di-hero", {
-        "eyebrow": "Tu otorrino en Monterrey",
+        "eyebrow": "Tu otorrino|en Monterrey",
         "title": "Respirar bien,<br>dormir bien,<br><em>oír bien.</em>",
         "lead": "Dra. Irina González Sáez, otorrinolaringólogo certificado con subespecialización en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos, en Cumbres.",
         "lead_mobile": "Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.",
