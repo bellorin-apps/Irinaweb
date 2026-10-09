@@ -42,7 +42,8 @@ body_get="$(curl -s "$SITE_URL/briefing/guardar.php?token=$TOKEN")"
 code_403="$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL/briefing/guardar.php")"
 code_cfg="$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL/briefing/config.php")"
 code_rev="$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL/briefing/revision/revisar.php")"
-body_rev="$(curl -s "$SITE_URL/briefing/revision/revisar.php?token=$TOKEN&action=list" | head -c 160)"
+# cut (no head -c): head cierra la tubería y curl termina con exit 23 bajo pipefail.
+body_rev="$(curl -s "$SITE_URL/briefing/revision/revisar.php?token=$TOKEN&action=list" | cut -c1-160)"
 echo "index: $code_index · GET con token: $body_get · sin token: $code_403 · config.php: $code_cfg · revisar.php sin token: $code_rev"
 echo "revisar.php lista: $body_rev"
 [ "$code_index" = "200" ] && [ "$code_403" = "403" ] && [ "$code_cfg" != "200" ] && [ "$code_rev" = "403" ] || { echo "VERIFICACIÓN FALLIDA"; exit 1; }
