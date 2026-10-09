@@ -59,28 +59,32 @@ add_action(
 	}
 );
 
-// Calidad de las versiones intermedias que genera WordPress (por defecto 82). La foto del hero se sirve en tamaño completo con srcset.
+// Calidad de las versiones intermedias que genera WordPress (por defecto 82) para el resto de imágenes; el hero no las usa.
 add_filter( 'jpeg_quality', static fn(): int => 94 );
 // El original subido se conserva como tamaño "full" (WordPress no lo reescala a 2560 px): la foto del hero se sirve tal cual.
 add_filter( 'big_image_size_threshold', '__return_false' );
 
 /**
- * Imagen de cabecera a pantalla completa: srcset con el archivo original para escritorio y solo versiones pequeñas para móvil,
- * para que el navegador no elija una intermedia recomprimida (p. ej. 2048 px) en pantallas grandes.
+ * Imagen de cabecera a pantalla completa (D-042/D-043): se entrega ÚNICAMENTE el archivo original, sin srcset ni tamaños
+ * intermedios generados por WordPress. La CDN de Hostinger (optimización de imágenes activa) redimensiona y convierte por
+ * dispositivo a partir de ese original sin pérdida.
  */
 function irina_hero_image( int $attachment_id ): string {
-	$keep = static function ( array $sources, array $size_array, string $src, array $meta ) {
-		$full = (int) ( $meta['width'] ?? 0 );
-		foreach ( $sources as $w => $source ) {
-			if ( (int) $w !== $full && (int) $w > 1024 ) {
-				unset( $sources[ $w ] );
-			}
-		}
-		return $sources;
-	};
-	add_filter( 'wp_calculate_image_srcset', $keep, 10, 4 );
-	$html = wp_get_attachment_image( $attachment_id, 'full', false, [ 'sizes' => '100vw', 'loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async' ] );
-	remove_filter( 'wp_calculate_image_srcset', $keep, 10 );
+	$none = static fn(): array => [];
+	add_filter( 'wp_calculate_image_srcset', $none, 10, 0 );
+	$html = wp_get_attachment_image( $attachment_id, 'full', false, [ 'loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async' ] );
+	remove_filter( 'wp_calculate_image_srcset', $none, 10 );
 	return $html;
 }
+
+// La foto del hero (slug hero-home) no genera tamaños intermedios: el original es la única versión en disco.
+add_filter(
+	'intermediate_image_sizes_advanced',
+	static function ( array $sizes, array $image_meta, int $attachment_id ): array {
+		$post = get_post( $attachment_id );
+		return $post && str_starts_with( (string) $post->post_name, 'hero-home' ) ? [] : $sizes;
+	},
+	10,
+	3
+);
 add_filter( 'wp_editor_set_quality', static fn(): int => 94 );
