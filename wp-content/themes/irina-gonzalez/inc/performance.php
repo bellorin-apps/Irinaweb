@@ -72,7 +72,16 @@ add_filter( 'big_image_size_threshold', '__return_false' );
 function irina_hero_image( int $attachment_id ): string {
 	$none = static fn(): array => [];
 	add_filter( 'wp_calculate_image_srcset', $none, 10, 0 );
-	$html = wp_get_attachment_image( $attachment_id, 'full', false, [ 'loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async' ] );
+	$html = wp_get_attachment_image(
+		$attachment_id,
+		'full',
+		false,
+		[
+			'loading'       => 'eager',
+			'fetchpriority' => 'high',
+			'decoding'      => 'async',
+		]
+	);
 	remove_filter( 'wp_calculate_image_srcset', $none, 10 );
 	return $html;
 }
