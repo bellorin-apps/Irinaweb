@@ -68,7 +68,7 @@ pages["primera-consulta"] = [
     container("pc-narr", "di-narrativa", {"eyebrow": "Qué llevar", "title": "Llega con lo que <em>ya tienes.</em>",
         "text": "<ul><li>Identificación.</li><li>Estudios previos (audiometría, tomografía, estudio del sueño) si los tienes.</li><li>Lista de medicamentos que tomas.</li><li>Referencia médica, si la tienes.</li><li>Si vienes por ronquido o apnea: lo que tu pareja o familia ha notado al dormir.</li><li>Para niños: cartilla y antecedentes de infecciones de oído o garganta.</li></ul>", "draft": "yes"}),
     container("pc-faq", "di-faq", {"eyebrow": "Preguntas frecuentes", "title": "Costo, pagos y <em>seguros.</em>", "items": rep([
-        ("¿Cuánto cuesta la consulta?", "Costo de la consulta: " + PEND + ". Cirugías y estudios se cotizan después de la valoración."),
+        ("¿Cuánto cuesta la consulta?", "Te confirmamos el costo al agendar por WhatsApp. Cirugías y estudios se cotizan después de la valoración."),
         ("¿Aceptan seguros de gastos médicos?", "Atención a pacientes particulares y reembolso de seguros de gastos médicos; la Dra. entrega la documentación para tu aseguradora."),
         ("¿Cómo puedo pagar?", "Efectivo, tarjeta y transferencia. Facturación disponible."),
         ("¿Hay consulta en línea?", "Solo para seguimiento de pacientes ya valorados en consultorio."),
@@ -97,7 +97,7 @@ pages["preguntas-frecuentes"] = [
         ("¿Cómo agendo?", "Por WhatsApp, en un toque desde cualquier página del sitio, o por teléfono. La consulta es previa cita."),
         ("¿Cuál es el horario?", "Previa cita: agenda por WhatsApp y te confirmamos el horario disponible."),
         ("¿Cuánto dura la consulta?", "Alrededor de 30 minutos."),
-        ("¿Cuánto cuesta?", "Costo de la consulta: " + PEND + ". Cirugías y estudios, previa valoración."),
+        ("¿Cuánto cuesta?", "Te confirmamos el costo al agendar por WhatsApp. Cirugías y estudios, previa valoración."),
         ("¿Aceptan seguros?", "Particulares y reembolso de seguros de gastos médicos."),
         ("¿Cómo puedo pagar?", "Efectivo, tarjeta y transferencia. Facturación disponible."),
         ("¿Atienden en línea?", "Solo seguimiento de pacientes ya valorados en consultorio."),

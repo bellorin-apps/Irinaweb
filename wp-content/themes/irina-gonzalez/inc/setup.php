@@ -83,6 +83,24 @@ function irina_nav_fallback( array $args = [] ): void {
 	printf( '<ul class="%s">%s</ul>', esc_attr( (string) ( $args['menu_class'] ?? 'menu' ) ), $out ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado arriba.
 }
 
+// Los menús no enlazan a páginas en borrador: wp_nav_menu las pinta como ?page_id=N y dan 404 al visitante (Q-016).
+add_filter(
+	'wp_nav_menu_objects',
+	static function ( array $items ): array {
+		return array_values(
+			array_filter(
+				$items,
+				static function ( $item ): bool {
+					if ( ! isset( $item->type, $item->object_id ) || 'post_type' !== $item->type ) {
+						return true;
+					}
+					return 'publish' === get_post_status( (int) $item->object_id );
+				}
+			)
+		);
+	}
+);
+
 // Clase de body cuando la página abre con cabecera a sangre (evita salto de layout antes del JS).
 add_filter(
 	'body_class',
