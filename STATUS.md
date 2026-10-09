@@ -6,14 +6,14 @@
 PROYECTO — DRA. IRINA
 
 Avance global
-█████░░░░░░░░░░░░░░░ 29%
+██████░░░░░░░░░░░░░░ 31%
 
 Fase actual
 ████████░░ 80%
 Fase 6/12 — Núcleo visual (CP3 cerrado; conmutación de portada en curso) · Fase 7 contenido en DOING
 
 Estado
-🟢 Home v2 publicada como portada (CP3 cerrado); páginas base y 23 fichas médicas en borrador a la espera de la revisión de la Dra.
+🟢 Home v2 publicada como portada (CP3 cerrado); páginas base y 23 fichas médicas redactadas con las respuestas de la Dra. (cuestionario 2026-10-09), en borrador a la espera de su aprobación
 ```
 
 ## Métricas
@@ -22,7 +22,7 @@ Estado
 |---|---|
 | Fase | 6/12 |
 | Tareas | 21 / 97 DONE · 15 en REVIEW · 11 DOING |
-| Peso completado | 74 / 253 |
+| Peso completado | 79 / 253 |
 | En curso | 6 (6.4 página de la Dra., 6.5, 6.6 plantillas; 5.1, 5.2, 5.5) |
 | Bloqueadas | 0 |
 | Pendientes del propietario | 4 (CDN en hPanel, SSL dominio aparcado, sesión para capturas de QA, aviso de privacidad de la Dra.) |

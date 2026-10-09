@@ -109,7 +109,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 6.2 | Footer | 2 | DONE | Verificado en /inicio-v2/ |
 | 6.3 | Home | 5 | DONE | /inicio-v2/ en producción (noindex): 8 widgets, header/footer del tema, QA visual OK escritorio y móvil; pendiente CP3 |
 | 6.4 | Página Dra. Irina (entidad/autora) | 5 | DOING | Cargada en 169 (borrador) con credenciales; falta QA con capturas |
-| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; 22 fichas en borrador; falta QA con sesión |
+| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; 23 fichas completas en borrador; falta QA visual con sesión |
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
 | 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | TODO | |
@@ -121,9 +121,9 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | DOING | Cargados en WP (borrador) con marcadores [PENDIENTE DE CONFIRMACIÓN]; enfoque de la Dra. en borrador |
-| 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | DOING | 14 condiciones + 8 tratamientos en borrador (resumen, síntomas, cuándo consultar, relaciones); cuerpos pendientes |
+| 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | DONE | 14 condiciones + 9 tratamientos redactados con las respuestas de la Dra. (D-039); en borrador hasta su aprobación |
 | 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | DOING | Primera consulta, Contacto y FAQ cargados (borrador) |
-| 7.4 | Bibliografía verificable por página | 2 | TODO | |
+| 7.4 | Bibliografía verificable por página | 2 | DOING | Fuentes propuestas por ficha (SMORL, AAO-HNS, AASM, EPOS, ARIA); la Dra. valida |
 | 7.5 | Revisión técnica/SEO de drafts | 2 | TODO | |
 | 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | OWNER | ext |
 | 7.7 | CHECKPOINT 4 | 1 | OWNER | ext |
@@ -210,13 +210,13 @@ Criterio de entrada: contenido español base aprobado por la Dra. + CP3 superado
 | 4 | 20 | 11 (DONE 2 + REVIEW ×0.5) |
 | 5 | 23 | 0 |
 | 6 | 33 | 5 (REVIEW ×0.5) |
-| 7 | 22 | 0 |
+| 7 | 22 | 5 (DONE 7.2) |
 | 8 | 26 | 0 |
 | 9 | 13 | 0 |
 | 10 | 14 | 0 |
 | 11 | 13 | 0 |
 | 12 | 12 | 0 |
 | 13 (EN, aparte) | 19 | 0 — no suma al total del sitio en español |
-| **Total** | **253** | **59** |
+| **Total** | **253** | **64** |
 
-Avance global: 74 / 253 = **29%** · Tareas: 21 / 97 DONE · 17 en REVIEW · 11 DOING (la Fase 13 EN cuenta aparte).
+Avance global: 79 / 253 = **31%** · Tareas: 22 / 97 DONE · 17 en REVIEW · 11 DOING (la Fase 13 EN cuenta aparte).

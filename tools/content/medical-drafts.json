@@ -5,20 +5,74 @@
    "titulo": "Otitis",
    "area": "orl",
    "zona": "oido",
-   "resumen": "Infección o inflamación del oído, frecuente en niños pero también en adultos. Puede ser del oído externo o del oído medio.",
+   "resumen": "Infección o inflamación del oído, frecuente en niños pero también en adultos. Puede afectar el oído externo (el conducto) o el oído medio (detrás del tímpano).",
+   "html": "<p>«Otitis» significa inflamación del oído, y hay dos tipos que vemos todos los días en consulta. La <strong>otitis externa</strong> afecta el conducto auditivo, es típica después de nadar o de limpiarse con cotonetes, y duele sobre todo al tocar o jalar la oreja. La <strong>otitis media</strong> ocurre detrás del tímpano, casi siempre después de un resfriado, y es la causa más común de dolor de oído en niños.</p><p>En los niños también es frecuente la <strong>otitis media con líquido</strong>: el oído no duele, pero queda líquido atrapado que hace que escuchen menos. Cuando se repite o se prolonga, afecta el lenguaje y el rendimiento escolar, y por eso vale la pena revisarla.</p>",
    "sintomas": [
-    "Dolor de oído",
-    "Sensación de oído tapado",
+    "Dolor de oído, a veces intenso",
+    "Sensación de oído tapado o escuchar menos",
     "Fiebre, sobre todo en niños",
-    "Salida de líquido por el oído"
+    "Salida de líquido o pus por el oído",
+    "En bebés: llanto, irritabilidad y llevarse la mano al oído"
+   ],
+   "causas": [
+    "Infecciones respiratorias (resfriados, gripe) que inflaman la trompa de Eustaquio",
+    "Agua que queda en el conducto después de nadar",
+    "Lesiones al limpiar el oído con cotonetes u objetos",
+    "Alergias y adenoides grandes en niños",
+    "Piel sensible del conducto (eccema, dermatitis)"
    ],
    "cuando_consultar": [
     "Dolor intenso o que dura más de dos días",
-    "Fiebre alta o salida de líquido",
-    "Infecciones de oído que se repiten"
+    "Fiebre alta o salida de líquido por el oído",
+    "Infecciones de oído que se repiten en el año",
+    "Un niño que escucha menos o habla menos de lo esperado",
+    "Dolor de oído con inflamación detrás de la oreja: valoración urgente"
+   ],
+   "diagnostico": "<p>La valoración se hace en el consultorio: la Dra. revisa tu historia, explora el oído con otoscopia y, cuando hace falta ver con más detalle o limpiar el conducto, con microscopía de oído. En la mayoría de los casos esto basta para saber qué está pasando y empezar el tratamiento ese mismo día.</p><p>Cuando hay salida de secreción, la Dra. puede aspirarla y limpiar el conducto en el mismo consultorio para que el tratamiento llegue a donde debe. Si el tratamiento requiere cirugía de oído, la Dra. te explica las opciones y te refiere con un cirujano otológico de confianza.</p>",
+   "enfoque_dra": "<p>Una otitis bien tratada se cura sin dejar secuelas. Lo que la Dra. busca evitar es el ciclo de infecciones repetidas: por eso, además de tratar el episodio, revisa la nariz, las adenoides y los hábitos de limpieza para atacar la causa. Atiende a pacientes desde los primeros meses de vida.</p>",
+   "faq": [
+    {
+     "pregunta": "¿La otitis se contagia?",
+     "respuesta": "No. Lo que se contagia es el resfriado que la desencadena. La infección del oído en sí no pasa de una persona a otra."
+    },
+    {
+     "pregunta": "¿Puedo ponerme gotas que tengo en casa?",
+     "respuesta": "Mejor no antes de que te revisen. Algunas gotas están contraindicadas si el tímpano está perforado, y eso solo se sabe explorando el oído."
+    },
+    {
+     "pregunta": "¿Mi hijo puede nadar con otitis?",
+     "respuesta": "Durante una otitis activa conviene evitar el agua. Cuando el oído sana, la Dra. te dice cuándo y cómo retomar la alberca."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Otitis Media with Effusion",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2016",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Acute Otitis Externa",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2014",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "tapon-de-cerumen",
+    "hipoacusia"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "tapon-de-cerumen",
@@ -26,19 +80,65 @@
    "area": "orl",
    "zona": "oido",
    "resumen": "Acumulación de cera que obstruye el conducto auditivo. El cerumen protege el oído; el problema aparece cuando se compacta, muchas veces por el uso de cotonetes.",
+   "html": "<p>El cerumen no es suciedad. Es una capa protectora que la piel del conducto produce para atrapar polvo, repeler el agua y mantener a raya a bacterias y hongos. El oído se limpia solo: los movimientos de la mandíbula al hablar y masticar empujan la cera hacia afuera.</p><p>El <strong>tapón</strong> se forma cuando esa salida natural se interrumpe. La causa más frecuente es el cotonete, que empuja la cera hacia el fondo y la compacta contra el tímpano. También contribuyen los audífonos, los tapones para dormir o nadar, los conductos estrechos y la piel seca de las personas mayores.</p>",
    "sintomas": [
-    "Oído tapado",
+    "Sensación de oído tapado",
     "Escuchar menos de un lado",
     "Zumbido",
-    "Molestia o picazón"
+    "Molestia, picazón o sensación de presión",
+    "Tos refleja o mareo leve en algunos casos"
+   ],
+   "causas": [
+    "Uso de cotonetes u objetos para limpiar el oído",
+    "Audífonos, auriculares intrauriculares y tapones de uso frecuente",
+    "Conductos auditivos estrechos o con vello abundante",
+    "Piel seca del conducto, más común con la edad",
+    "Agua que hincha la cera ya acumulada"
    ],
    "cuando_consultar": [
-    "Oído tapado que no mejora",
+    "Oído tapado que no mejora en pocos días",
     "Dolor o pérdida de audición",
-    "Antes de intentar retirarlo en casa"
+    "Antes de intentar retirarlo en casa, sobre todo si has tenido perforación o cirugía de oído",
+    "Si usas audífonos o aparatos auditivos y notas que funcionan peor"
+   ],
+   "diagnostico": "<p>La valoración se hace en el consultorio: la Dra. revisa tu historia, explora el oído con otoscopia y, cuando hace falta ver con más detalle o limpiar el conducto, con microscopía de oído. En la mayoría de los casos esto basta para saber qué está pasando y empezar el tratamiento ese mismo día.</p><p>Si hay tapón, la Dra. lo retira en el mismo consultorio mediante lavado o aspiración bajo visión con microscopio, según el tipo de cera y la condición del tímpano. Suele resolverse en una sola visita.</p>",
+   "enfoque_dra": "<p>Retirar un tapón es rápido cuando lo hace quien ve lo que está haciendo. La Dra. prefiere la aspiración bajo microscopio porque permite limpiar sin lastimar la piel ni el tímpano, y aprovecha la visita para enseñarte cómo cuidar tus oídos y evitar que se repita.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Cómo debo limpiarme los oídos?",
+     "respuesta": "Solo la parte externa de la oreja, con la toalla al salir del baño. Nada debe entrar al conducto: ni cotonetes, ni llaves, ni velas. Si sientes el oído tapado, la revisión toma unos minutos."
+    },
+    {
+     "pregunta": "¿Sirven las gotas para reblandecer la cera?",
+     "respuesta": "Pueden ayudar en algunos casos, pero no sustituyen la revisión. Si el tapón es grande o el tímpano tiene alguna lesión, las gotas pueden empeorar la molestia."
+    },
+    {
+     "pregunta": "¿Con qué frecuencia debo venir a limpieza?",
+     "respuesta": "Depende de cada persona. Quienes usan audífonos o producen mucha cera suelen necesitar una revisión periódica; la Dra. te indica cada cuánto según tu caso."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Earwax (Cerumen Impaction)",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2017",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "otitis",
+    "hipoacusia"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "hipoacusia",
@@ -46,19 +146,73 @@
    "area": "orl",
    "zona": "oido",
    "resumen": "Disminución de la audición en uno o ambos oídos, de aparición gradual o súbita. El otorrinolaringólogo identifica la causa y define el tratamiento médico, quirúrgico o de apoyo auditivo.",
+   "html": "<p>Escuchar menos no es solo cuestión de edad. La hipoacusia puede deberse a un problema mecánico en el oído externo o medio (cera, líquido, perforación, rigidez de los huesecillos), a un daño en el oído interno o en el nervio auditivo, o a una combinación de ambos. Cada tipo tiene un tratamiento distinto, y por eso el primer paso es saber de dónde viene.</p><p>Hay una forma que merece atención inmediata: la <strong>hipoacusia súbita</strong>, cuando en horas o pocos días dejas de escuchar de un oído. Es una situación en la que el tiempo cuenta, y conviene que te valoren pronto.</p>",
    "sintomas": [
-    "Pedir que repitan lo que dicen",
-    "Subir el volumen de la televisión",
+    "Pedir que repitan lo que dicen, sobre todo con ruido de fondo",
+    "Subir el volumen de la televisión o del teléfono",
     "Escuchar menos de un oído",
-    "Dificultad para seguir conversaciones con ruido"
+    "Zumbido o sensación de oído tapado",
+    "En niños: no responder al nombre, retraso en el lenguaje o bajo rendimiento escolar"
+   ],
+   "causas": [
+    "Tapón de cerumen o líquido en el oído medio",
+    "Otitis de repetición o perforación del tímpano",
+    "Exposición prolongada al ruido",
+    "Envejecimiento del oído interno (presbiacusia)",
+    "Algunos medicamentos, infecciones y causas hereditarias"
    ],
    "cuando_consultar": [
-    "Pérdida de audición repentina (en horas o días): valoración pronta",
-    "Pérdida progresiva que afecta la vida diaria",
-    "Pérdida de audición en niños"
+    "Pérdida de audición repentina, en horas o días: valoración pronta",
+    "Pérdida progresiva que afecta la vida diaria o el trabajo",
+    "Pérdida de audición en niños, a cualquier edad",
+    "Hipoacusia de un solo oído o acompañada de zumbido o vértigo"
+   ],
+   "diagnostico": "<p>La Dra. revisa tu historia y explora el oído con otoscopia y microscopía para descartar causas visibles, como cera, líquido o una perforación.</p><p>Si hace falta medir cuánto escuchas, la Dra. indica una audiometría, que se realiza en un gabinete especializado. Con el resultado en mano define el tratamiento y, si tu caso requiere cirugía de oído, te orienta y te refiere con un cirujano otológico de confianza.</p>",
+   "enfoque_dra": "<p>Muchas pérdidas auditivas tienen solución, y otras se pueden compensar muy bien con un auxiliar auditivo bien indicado. El objetivo de la Dra. es que no te resignes: identificar la causa, tratar lo tratable y, cuando hace falta apoyo auditivo, orientarte para que la adaptación sea exitosa.</p>",
+   "faq": [
+    {
+     "pregunta": "¿La pérdida de audición se recupera?",
+     "respuesta": "Depende de la causa. Si es por cera, líquido o infección, suele recuperarse con tratamiento. Si es del oído interno, el objetivo es detener el avance y compensarla con un auxiliar auditivo cuando conviene."
+    },
+    {
+     "pregunta": "¿Necesito audífonos (auxiliares auditivos)?",
+     "respuesta": "Solo si la audiometría muestra una pérdida que lo justifica y después de descartar causas tratables. La Dra. te orienta sobre el tipo adecuado y te acompaña en la adaptación."
+    },
+    {
+     "pregunta": "¿A partir de qué edad se puede revisar la audición de un niño?",
+     "respuesta": "Desde recién nacido. Existen pruebas para cada edad; si tienes dudas sobre cómo escucha tu hijo, no esperes a que crezca."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Sudden Hearing Loss",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2019",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Age-Related Hearing Loss",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2024",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "tapon-de-cerumen",
+    "tinnitus",
+    "otitis"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "tinnitus",
@@ -66,18 +220,64 @@
    "area": "orl",
    "zona": "oido",
    "resumen": "Percepción de un zumbido, pitido o silbido sin una fuente externa de sonido. Tiene causas diversas y el primer paso es descartar las que tienen tratamiento.",
+   "html": "<p>El tinnitus o acúfeno es escuchar un sonido que no viene de afuera: un zumbido, un pitido, un siseo. Es muy frecuente y en la mayoría de las personas se relaciona con algún grado de pérdida auditiva, aunque también puede acompañar a un tapón de cerumen, a una otitis, a problemas de la mandíbula o al estrés y la falta de sueño.</p><p>No es una enfermedad en sí, sino un síntoma. Por eso la valoración se centra en encontrar su origen y en descartar las pocas causas que requieren estudio adicional, como el tinnitus de un solo oído o el que late al ritmo del pulso.</p>",
    "sintomas": [
-    "Zumbido o pitido constante o intermitente",
+    "Zumbido, pitido o silbido constante o intermitente",
     "Más notorio en silencio o por la noche",
-    "Puede acompañarse de pérdida de audición"
+    "Puede acompañarse de pérdida de audición o de oído tapado",
+    "Dificultad para concentrarse o para conciliar el sueño"
+   ],
+   "causas": [
+    "Pérdida auditiva por edad o por exposición al ruido",
+    "Tapón de cerumen, líquido o infección en el oído",
+    "Algunos medicamentos",
+    "Problemas de la articulación de la mandíbula o del cuello",
+    "Estrés, ansiedad y mal descanso, que lo amplifican"
    ],
    "cuando_consultar": [
     "Tinnitus de un solo oído",
-    "Aparición súbita o con pérdida de audición",
-    "Cuando afecta el sueño o la concentración"
+    "Aparición súbita o acompañada de pérdida de audición o vértigo",
+    "Tinnitus que late con el pulso",
+    "Cuando afecta el sueño, la concentración o el estado de ánimo"
+   ],
+   "diagnostico": "<p>La valoración se hace en el consultorio: la Dra. revisa tu historia, explora el oído con otoscopia y, cuando hace falta ver con más detalle o limpiar el conducto, con microscopía de oído. En la mayoría de los casos esto basta para saber qué está pasando y empezar el tratamiento ese mismo día.</p><p>Si hace falta medir cuánto escuchas, la Dra. indica una audiometría, que se realiza en un gabinete especializado. Con el resultado en mano define el tratamiento y, si tu caso requiere cirugía de oído, te orienta y te refiere con un cirujano otológico de confianza.</p>",
+   "enfoque_dra": "<p>El tinnitus se puede manejar, y en muchos casos mejora cuando se trata la causa o se compensa la pérdida auditiva. La Dra. te explica de dónde viene el tuyo, te enseña estrategias para que deje de ocupar el centro de tu atención y, cuando el sueño está afectado, lo aborda también desde su formación en medicina del sueño.</p>",
+   "faq": [
+    {
+     "pregunta": "¿El tinnitus tiene cura?",
+     "respuesta": "A veces desaparece al tratar la causa (cera, infección, líquido). Cuando se asocia a daño del oído interno, el objetivo es reducirlo y que deje de molestar, y eso se logra en la mayoría de los casos."
+    },
+    {
+     "pregunta": "¿Es señal de algo grave?",
+     "respuesta": "Casi nunca. Las señales que sí requieren estudio son el tinnitus de un solo oído, el que late con el pulso o el que aparece de golpe con pérdida de audición."
+    },
+    {
+     "pregunta": "¿Por qué lo escucho más de noche?",
+     "respuesta": "Porque en silencio no hay otros sonidos que lo enmascaren. Un ruido suave de fondo y una buena higiene de sueño suelen ayudar."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Tinnitus",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2014",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "hipoacusia",
+    "tapon-de-cerumen"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "vertigo",
@@ -85,19 +285,72 @@
    "area": "orl",
    "zona": "oido",
    "resumen": "Sensación de que todo gira, con frecuencia originada en el oído interno. Se diferencia del mareo inespecífico y se estudia con exploración y maniobras en consultorio.",
+   "html": "<p>Vértigo es la sensación de que tú o el entorno giran. No es lo mismo que «mareo» o inestabilidad: el vértigo verdadero suele venir del oído interno, donde está el órgano del equilibrio. La causa más común es el <strong>vértigo posicional</strong>, en el que pequeños cristales del oído interno se desplazan y provocan giros breves e intensos al mover la cabeza o acostarse.</p><p>Otras causas del oído son la neuritis vestibular, que produce un vértigo prolongado después de una infección viral, y la enfermedad de Ménière, con episodios de vértigo, zumbido y pérdida de audición. Distinguirlas se hace en consultorio con exploración y maniobras específicas.</p>",
    "sintomas": [
-    "Sensación de giro al mover la cabeza o al acostarse",
-    "Náusea",
+    "Sensación de giro al mover la cabeza, al acostarse o al voltear en la cama",
+    "Náusea o vómito",
     "Inestabilidad al caminar",
-    "Puede acompañarse de zumbido o pérdida de audición"
+    "Puede acompañarse de zumbido, oído tapado o pérdida de audición",
+    "Movimientos involuntarios de los ojos durante la crisis"
+   ],
+   "causas": [
+    "Vértigo posicional paroxístico benigno (cristales desplazados en el oído interno)",
+    "Neuritis vestibular tras una infección viral",
+    "Enfermedad de Ménière",
+    "Migraña vestibular",
+    "Algunos medicamentos y causas del sistema nervioso (menos frecuentes)"
    ],
    "cuando_consultar": [
     "Primer episodio de vértigo",
-    "Episodios que se repiten",
-    "Vértigo con pérdida de audición, dolor de cabeza intenso o alteraciones neurológicas: urgencia"
+    "Episodios que se repiten o que te impiden hacer tu vida normal",
+    "Vértigo con pérdida de audición de un lado",
+    "Vértigo con dolor de cabeza intenso, visión doble, dificultad para hablar o debilidad: urgencia"
+   ],
+   "diagnostico": "<p>La valoración se hace en el consultorio. La Dra. revisa cómo y cuándo aparece el vértigo, explora el oído y realiza maniobras de posición que reproducen el síntoma y permiten identificar su origen. En el vértigo posicional, la misma maniobra que lo diagnostica sirve para tratarlo.</p><p>Si hace falta medir cuánto escuchas, la Dra. indica una audiometría, que se realiza en un gabinete especializado. Con el resultado en mano define el tratamiento. Si hay signos que no corresponden al oído, indica una resonancia o te refiere con neurología. Si tu caso requiere cirugía de oído, te orienta y te refiere con un cirujano otológico de confianza.</p>",
+   "enfoque_dra": "<p>El vértigo asusta, pero la mayoría de las causas se resuelven bien. La Dra. dedica la consulta a entender tu episodio y a explorar con calma, porque en vértigo el diagnóstico está en la historia y en las maniobras, no en los estudios caros. Cuando el origen es posicional, el tratamiento se hace ahí mismo.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Es vértigo o es mareo?",
+     "respuesta": "Si sientes que todo gira, es vértigo y suele venir del oído. Si es una sensación de flotar, de cabeza vacía o de que te vas a desmayar, es mareo y tiene otras causas. La exploración ayuda a distinguirlos."
+    },
+    {
+     "pregunta": "¿Las pastillas para el vértigo lo curan?",
+     "respuesta": "Alivian la crisis, pero no corrigen la causa. En el vértigo posicional, lo que cura es la maniobra de reposición; en otras causas, el tratamiento depende del diagnóstico."
+    },
+    {
+     "pregunta": "¿Puedo manejar si tengo vértigo?",
+     "respuesta": "Durante una crisis o mientras no esté controlado, no. La Dra. te indicará cuándo es seguro retomar actividades."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Benign Paroxysmal Positional Vertigo",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2017",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Ménière's Disease",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2020",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "hipoacusia",
+    "tinnitus"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "rinitis",
@@ -105,21 +358,76 @@
    "area": "orl",
    "zona": "nariz",
    "resumen": "Inflamación de la mucosa nasal, alérgica o no alérgica. Produce nariz tapada, estornudos y escurrimiento, y afecta el sueño y la calidad de vida.",
+   "html": "<p>La rinitis es la inflamación del revestimiento interno de la nariz. La forma más conocida es la <strong>rinitis alérgica</strong>, desencadenada por ácaros, polen, mascotas u hongos, pero también existe la rinitis no alérgica, que reacciona a cambios de temperatura, olores fuertes, humo o ciertos medicamentos, incluidos los descongestionantes en spray cuando se usan muchos días seguidos.</p><p>Aunque suele verse como una molestia menor, la rinitis mal controlada altera el sueño, el rendimiento y, en niños, favorece la respiración por la boca y las otitis. Casi siempre se controla bien cuando se identifica el tipo y se trata con constancia.</p>",
    "sintomas": [
-    "Nariz tapada",
+    "Nariz tapada, de forma constante o alternando de lado",
     "Estornudos en salva",
     "Escurrimiento nasal claro",
-    "Picazón de nariz y ojos"
+    "Picazón de nariz, ojos o paladar",
+    "Respirar por la boca y ronquido, sobre todo en niños"
+   ],
+   "causas": [
+    "Alergia a ácaros, polen, mascotas u hongos",
+    "Cambios de temperatura, humo, olores fuertes y contaminación",
+    "Uso prolongado de descongestionantes en spray",
+    "Cambios hormonales, como en el embarazo",
+    "Crecimiento de los cornetes por inflamación crónica"
    ],
    "cuando_consultar": [
     "Síntomas la mayor parte del año",
-    "Cuando afectan el sueño o el rendimiento",
-    "Si los medicamentos de venta libre no controlan los síntomas"
+    "Cuando afectan el sueño, el rendimiento escolar o el trabajo",
+    "Si los medicamentos de venta libre no controlan los síntomas",
+    "Nariz tapada que no mejora con tratamiento",
+    "Si usas spray descongestionante a diario"
+   ],
+   "diagnostico": "<p>En consultorio la Dra. explora la nariz y realiza una <strong>endoscopia nasal</strong>: una cámara delgada que permite ver el tabique, los cornetes y la salida de los senos paranasales sin molestias importantes. Cuando se necesita conocer la anatomía con precisión o planear una cirugía, indica una tomografía de senos paranasales, que se realiza en un centro de imagen.</p><p>Cuando conviene confirmar la alergia y saber a qué reaccionas, la Dra. indica pruebas de alergia, que se realizan en un laboratorio o con alergología.</p>",
+   "enfoque_dra": "<p>La rinitis se controla con un plan, no con un spray de emergencia. La Dra. combina tratamiento médico, medidas en casa y, cuando los cornetes han crecido tanto que ya no responden a medicamentos, valora una turbinoplastia para devolverte el paso del aire. Atiende rinitis en niños desde los primeros meses de vida.</p>",
+   "faq": [
+    {
+     "pregunta": "¿La rinitis alérgica se cura?",
+     "respuesta": "La tendencia alérgica suele acompañarte, pero los síntomas se controlan muy bien con tratamiento constante y medidas en casa. En algunos casos la inmunoterapia (vacunas) reduce la sensibilidad con el tiempo."
+    },
+    {
+     "pregunta": "¿Por qué el spray descongestionante ya no me hace efecto?",
+     "respuesta": "Porque los descongestionantes en spray, usados más de unos días, inflaman la mucosa de rebote y crean dependencia. Hay que retirarlos con un plan y tratar la causa."
+    },
+    {
+     "pregunta": "¿Cuándo se opera la rinitis?",
+     "respuesta": "La rinitis en sí no se opera. Lo que se opera son los cornetes cuando crecieron tanto que obstruyen aun con tratamiento médico: es la turbinoplastia."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Allergic Rhinitis and its Impact on Asthma (ARIA) Guidelines",
+     "autor": "ARIA / OMS",
+     "anio": "2020",
+     "url": "https://www.euforea.eu/aria",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Allergic Rhinitis",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2015",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [
     "turbinoplastia"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "sinusitis",
+    "desviacion-de-tabique-nasal",
+    "ronquido"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "sinusitis",
@@ -127,21 +435,75 @@
    "area": "orl",
    "zona": "nariz",
    "resumen": "Inflamación de los senos paranasales, aguda o crónica. Se valora la causa (infección, alergia, obstrucción anatómica, pólipos) con endoscopia nasal.",
+   "html": "<p>Los senos paranasales son cavidades llenas de aire dentro de los huesos de la cara, conectadas con la nariz por pequeñas aberturas. Cuando esas aberturas se tapan, el moco se acumula, se infecta y aparece la sinusitis. La <strong>sinusitis aguda</strong> sigue casi siempre a un resfriado y se cura en pocas semanas. La <strong>sinusitis crónica</strong> dura meses y suele tener detrás una causa que mantiene la obstrucción: alergia, tabique desviado, pólipos o una anatomía estrecha.</p><p>Muchas personas viven años con «gripa» que no se quita, dolor de cara y pérdida de olfato. La endoscopia nasal permite ver qué está pasando y romper ese ciclo.</p>",
    "sintomas": [
-    "Presión o dolor en la cara",
-    "Nariz tapada y secreción espesa",
-    "Pérdida de olfato",
-    "Tos y dolor de cabeza"
+    "Presión o dolor en la cara, la frente o detrás de los ojos",
+    "Nariz tapada y secreción espesa, por delante o hacia la garganta",
+    "Pérdida o disminución del olfato",
+    "Tos, sobre todo nocturna, y dolor de cabeza",
+    "Mal aliento y sensación de fatiga"
+   ],
+   "causas": [
+    "Infecciones respiratorias virales que se complican",
+    "Rinitis alérgica mal controlada",
+    "Tabique desviado o cornetes grandes que bloquean el drenaje",
+    "Pólipos nasales",
+    "Problemas dentales en los molares superiores (menos frecuente)"
    ],
    "cuando_consultar": [
-    "Síntomas que duran más de diez días o empeoran",
+    "Síntomas que duran más de diez días o que empeoran después de haber mejorado",
     "Sinusitis que se repite varias veces al año",
-    "Pérdida de olfato persistente"
+    "Pérdida de olfato persistente",
+    "Dolor de cara con fiebre alta, hinchazón alrededor del ojo o cambios en la visión: urgencia"
+   ],
+   "diagnostico": "<p>En consultorio la Dra. explora la nariz y realiza una <strong>endoscopia nasal</strong>: una cámara delgada que permite ver el tabique, los cornetes y la salida de los senos paranasales sin molestias importantes. Cuando se necesita conocer la anatomía con precisión o planear una cirugía, indica una tomografía de senos paranasales, que se realiza en un centro de imagen.</p>",
+   "enfoque_dra": "<p>La Dra. trata primero con medicamentos y lavados, y busca la causa que mantiene la inflamación. Si la sinusitis es crónica y no responde, o si hay pólipos o una obstrucción anatómica, ofrece la cirugía endoscópica nasal, que abre los senos por dentro de la nariz sin cicatrices externas.</p>",
+   "faq": [
+    {
+     "pregunta": "¿La sinusitis siempre necesita antibiótico?",
+     "respuesta": "No. La mayoría de las sinusitis agudas son virales y mejoran con lavados nasales y tratamiento de los síntomas. El antibiótico se reserva para casos bacterianos, que la Dra. identifica en la exploración."
+    },
+    {
+     "pregunta": "¿Necesito una tomografía?",
+     "respuesta": "No siempre. La endoscopia en consultorio suele ser suficiente para el diagnóstico. La tomografía se indica cuando la sinusitis es crónica, hay sospecha de pólipos o se planea una cirugía."
+    },
+    {
+     "pregunta": "¿Los lavados nasales sirven de verdad?",
+     "respuesta": "Sí, son una de las medidas más efectivas y seguras. La Dra. te enseña cómo hacerlos bien para que ayuden y no molesten."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "European Position Paper on Rhinosinusitis and Nasal Polyps (EPOS 2020)",
+     "autor": "Fokkens WJ et al., Rhinology",
+     "anio": "2020",
+     "url": "https://epos2020.com/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Adult Sinusitis",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2015",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [
     "cirugia-endoscopica-nasal"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "rinitis",
+    "polipos-nasales",
+    "desviacion-de-tabique-nasal"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "desviacion-de-tabique-nasal",
@@ -149,21 +511,70 @@
    "area": "orl",
    "zona": "nariz",
    "resumen": "El tabique separa las dos fosas nasales; cuando está desviado obstruye el paso del aire por uno o ambos lados y puede contribuir al ronquido.",
+   "html": "<p>El tabique es la pared de cartílago y hueso que divide la nariz en dos fosas. Pocas personas lo tienen perfectamente recto, y eso no es un problema. Lo es cuando la desviación es suficiente para que el aire no pase bien por uno o ambos lados: entonces respiras por la boca, duermes mal, roncas y tienes sinusitis con más frecuencia.</p><p>La desviación puede ser de nacimiento o consecuencia de un golpe, a veces en la infancia y olvidado. Lo importante es que tiene solución definitiva: la septoplastia corrige la desviación por dentro de la nariz, sin cambiar su forma externa.</p>",
    "sintomas": [
     "Nariz tapada de un lado o alternante",
-    "Respirar por la boca",
-    "Ronquido",
-    "Sinusitis de repetición"
+    "Respirar por la boca, sobre todo al dormir",
+    "Ronquido y sueño poco reparador",
+    "Sinusitis de repetición",
+    "Sangrados nasales frecuentes y resequedad",
+    "Dolor de cabeza o presión facial en algunos casos"
+   ],
+   "causas": [
+    "Desarrollo desigual del cartílago y el hueso durante el crecimiento",
+    "Golpes en la nariz, incluidos los de la infancia",
+    "Fracturas nasales que consolidaron desviadas"
    ],
    "cuando_consultar": [
-    "Obstrucción nasal constante",
+    "Obstrucción nasal constante o que te obliga a respirar por la boca",
     "Ronquido o mal descanso",
-    "Sangrados nasales frecuentes"
+    "Sangrados nasales frecuentes",
+    "Sinusitis que se repite",
+    "Antes de cualquier cirugía de nariz, para valorar la función y la forma en conjunto"
+   ],
+   "diagnostico": "<p>En consultorio la Dra. explora la nariz y realiza una <strong>endoscopia nasal</strong>: una cámara delgada que permite ver el tabique, los cornetes y la salida de los senos paranasales sin molestias importantes. Cuando se necesita conocer la anatomía con precisión o planear una cirugía, indica una tomografía de senos paranasales, que se realiza en un centro de imagen.</p>",
+   "enfoque_dra": "<p>La Dra. valora la nariz completa, no solo el tabique: cornetes, válvula nasal y senos paranasales. Si la obstrucción tiene causa anatómica y no mejora con tratamiento médico, ofrece la septoplastia, sola o combinada con turbinoplastia, y cuando también quieres mejorar la forma de la nariz, lo planea como una rinoplastia funcional.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Todos los tabiques desviados se operan?",
+     "respuesta": "No. Solo cuando la desviación obstruye y los síntomas afectan tu vida. Muchas desviaciones no dan molestias y no necesitan nada."
+    },
+    {
+     "pregunta": "¿La septoplastia cambia la forma de mi nariz?",
+     "respuesta": "No. Se hace por dentro, sin incisiones externas. Si además quieres cambiar la forma, se puede planear una rinoplastia funcional en el mismo procedimiento."
+    },
+    {
+     "pregunta": "¿Se puede operar a un adolescente?",
+     "respuesta": "En general se prefiere esperar a que termine el crecimiento facial, salvo que la obstrucción sea importante. La Dra. lo valora caso por caso."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Improving Nasal Form and Function after Rhinoplasty",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2017",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    }
    ],
    "tratamientos": [
-    "septoplastia"
+    "septoplastia",
+    "rinoplastia",
+    "turbinoplastia"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "rinitis",
+    "sinusitis",
+    "ronquido"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "polipos-nasales",
@@ -171,21 +582,66 @@
    "area": "orl",
    "zona": "nariz",
    "resumen": "Crecimientos benignos de la mucosa nasal, asociados con inflamación crónica. Obstruyen la nariz y disminuyen el olfato.",
+   "html": "<p>Los pólipos nasales son como pequeñas uvas de mucosa inflamada que crecen dentro de la nariz y los senos paranasales. No son cáncer ni se transforman en él, pero sí obstruyen, quitan el olfato y mantienen una sinusitis crónica que no se va con nada. Se relacionan con inflamación persistente: asma, alergia, sensibilidad a la aspirina o una respuesta inflamatoria propia de cada persona.</p><p>El tratamiento combina medicamentos que reducen la inflamación y, cuando los pólipos ya ocupan demasiado espacio, cirugía endoscópica para retirarlos y abrir los senos. Como la tendencia a formarlos persiste, el seguimiento después de la cirugía es parte del tratamiento.</p>",
    "sintomas": [
-    "Nariz tapada progresiva",
-    "Pérdida de olfato",
-    "Secreción nasal",
-    "Sensación de presión"
+    "Nariz tapada progresiva, de ambos lados",
+    "Pérdida de olfato y del gusto",
+    "Secreción nasal espesa o hacia la garganta",
+    "Sensación de presión en la cara",
+    "Ronquido y respiración por la boca"
+   ],
+   "causas": [
+    "Inflamación crónica de la mucosa nasal (rinosinusitis crónica)",
+    "Asma y rinitis alérgica",
+    "Sensibilidad a la aspirina y a antiinflamatorios",
+    "Predisposición individual"
    ],
    "cuando_consultar": [
-    "Obstrucción nasal que no mejora",
+    "Obstrucción nasal que no mejora con tratamiento",
     "Pérdida de olfato",
-    "Sinusitis crónica"
+    "Sinusitis crónica que se repite tras varios tratamientos",
+    "Pólipo de un solo lado: siempre debe valorarse"
+   ],
+   "diagnostico": "<p>En consultorio la Dra. explora la nariz y realiza una <strong>endoscopia nasal</strong>: una cámara delgada que permite ver el tabique, los cornetes y la salida de los senos paranasales sin molestias importantes. Cuando se necesita conocer la anatomía con precisión o planear una cirugía, indica una tomografía de senos paranasales, que se realiza en un centro de imagen.</p><p>La tomografía es parte habitual del estudio de los pólipos porque muestra hasta dónde llegan y permite planear la cirugía con seguridad.</p>",
+   "enfoque_dra": "<p>La Dra. plantea los pólipos como una condición crónica que se controla: primero con tratamiento médico, después con cirugía endoscópica cuando la obstrucción lo justifica, y siempre con seguimiento para que no vuelvan a crecer. El objetivo es que respires y recuperes el olfato, y que la mejoría dure.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Los pólipos son peligrosos?",
+     "respuesta": "No son cáncer. Lo que sí requiere valoración es un pólipo de un solo lado o con sangrado, para descartar otras lesiones."
+    },
+    {
+     "pregunta": "¿Vuelven a salir después de la cirugía?",
+     "respuesta": "Pueden volver porque la tendencia inflamatoria persiste. Por eso el seguimiento y el tratamiento de mantenimiento son parte del plan, y reducen mucho las recaídas."
+    },
+    {
+     "pregunta": "¿Recuperaré el olfato?",
+     "respuesta": "En muchos casos mejora de forma notable con el tratamiento y la cirugía. La Dra. te orienta sobre qué esperar según el tiempo que lleves sin oler."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "European Position Paper on Rhinosinusitis and Nasal Polyps (EPOS 2020)",
+     "autor": "Fokkens WJ et al., Rhinology",
+     "anio": "2020",
+     "url": "https://epos2020.com/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [
     "cirugia-endoscopica-nasal"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "sinusitis",
+    "rinitis"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "epistaxis",
@@ -193,18 +649,64 @@
    "area": "orl",
    "zona": "nariz",
    "resumen": "Sangrado por la nariz. La mayoría de los casos son leves y se originan en la parte anterior del tabique; se estudian cuando se repiten.",
+   "html": "<p>La nariz sangra con facilidad porque su mucosa es delgada y tiene muchos vasos pequeños, sobre todo en la parte delantera del tabique. Ahí se originan casi todos los sangrados: por resequedad, por rascarse, por un resfriado o por el clima seco y el aire acondicionado. Suelen detenerse con presión y no indican nada grave.</p><p>Vale la pena estudiar los sangrados que se repiten, los que son abundantes y los que aparecen en personas que toman anticoagulantes o tienen presión alta. En consultorio se identifica el punto de sangrado y, en muchos casos, se trata en la misma visita.</p>",
    "sintomas": [
-    "Sangrado por una fosa nasal",
-    "Sangrado que se repite",
-    "Sangrado tras resequedad o traumatismo"
+    "Sangrado por una fosa nasal, a veces hacia la garganta",
+    "Sangrado que se repite en días o semanas",
+    "Sangrado tras resequedad, rascado o un resfriado",
+    "Costras y resequedad en la nariz"
+   ],
+   "causas": [
+    "Resequedad de la mucosa por clima seco, calefacción o aire acondicionado",
+    "Rascado o limpieza brusca de la nariz",
+    "Resfriados, rinitis y uso de sprays nasales",
+    "Tabique desviado con una zona expuesta al aire",
+    "Presión arterial alta, anticoagulantes y, con menos frecuencia, alteraciones de la coagulación"
    ],
    "cuando_consultar": [
-    "Sangrado abundante que no se detiene en 20 minutos: urgencia",
-    "Sangrados frecuentes",
-    "Sangrado en personas que toman anticoagulantes"
+    "Sangrado abundante que no se detiene en 20 minutos con presión: urgencia",
+    "Sangrados frecuentes, aunque sean pequeños",
+    "Sangrado en personas que toman anticoagulantes o antiagregantes",
+    "Sangrado en niños que se repite o de un solo lado con obstrucción"
+   ],
+   "diagnostico": "<p>En consultorio la Dra. explora la nariz y realiza una <strong>endoscopia nasal</strong>: una cámara delgada que permite ver el tabique, los cornetes y la salida de los senos paranasales sin molestias importantes. Cuando los sangrados se repiten, indica estudios de laboratorio para revisar la coagulación y, si sospecha una causa dentro de la nariz que la endoscopia no aclara, una tomografía.</p><p>Si se identifica el vaso que sangra, la Dra. puede cauterizarlo en consultorio con anestesia local.</p>",
+   "enfoque_dra": "<p>La Dra. te enseña primero qué hacer en casa cuando sangra la nariz, porque la mayoría de los episodios se controlan con presión bien aplicada. Después busca la causa y la trata: humedad, cuidado de la mucosa, cauterización del punto que sangra o corrección del tabique cuando es el origen.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Qué hago mientras sangra?",
+     "respuesta": "Siéntate, inclina la cabeza ligeramente hacia adelante y aprieta la parte blanda de la nariz con los dedos durante 10 a 15 minutos sin soltar. No eches la cabeza hacia atrás ni te acuestes."
+    },
+    {
+     "pregunta": "¿Es normal que a mi hijo le sangre la nariz seguido?",
+     "respuesta": "Es frecuente en niños por rascado y resequedad, y casi siempre es benigno. Si se repite mucho o es de un solo lado con la nariz tapada, conviene revisarlo."
+    },
+    {
+     "pregunta": "¿Tengo que dejar mi anticoagulante?",
+     "respuesta": "No lo suspendas por tu cuenta. La Dra. se coordina con tu médico tratante para decidir qué hacer según la causa y la frecuencia del sangrado."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Nosebleed (Epistaxis)",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2020",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "rinitis",
+    "desviacion-de-tabique-nasal"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "amigdalitis",
@@ -212,41 +714,133 @@
    "area": "orl",
    "zona": "garganta",
    "resumen": "Infección o inflamación de las amígdalas. Cuando se repite muchas veces al año o las amígdalas crecen demasiado, se valora el tratamiento quirúrgico.",
+   "html": "<p>Las amígdalas son dos masas de tejido linfático a los lados de la garganta que forman parte de las defensas, sobre todo en los primeros años de vida. La amigdalitis es su infección, casi siempre viral y, en algunos casos, por bacterias como el estreptococo. La mayoría de los episodios se resuelven con tratamiento médico.</p><p>Hay dos situaciones en las que el otorrinolaringólogo valora algo más: cuando las infecciones <strong>se repiten muchas veces al año</strong> y cuando las amígdalas, con o sin infección, <strong>crecen tanto que obstruyen</strong> la respiración al dormir, sobre todo en niños, y provocan ronquido, pausas y mal descanso.</p>",
    "sintomas": [
-    "Dolor de garganta",
-    "Fiebre",
-    "Dificultad para tragar",
-    "Amígdalas grandes o con placas"
+    "Dolor de garganta, a veces intenso al tragar",
+    "Fiebre y malestar general",
+    "Amígdalas grandes, rojas o con placas blancas",
+    "Ganglios inflamados en el cuello",
+    "Mal aliento, voz «de papa caliente» y, en niños, ronquido"
+   ],
+   "causas": [
+    "Virus respiratorios (la causa más común)",
+    "Bacterias, sobre todo estreptococo",
+    "Contacto cercano en guarderías y escuelas",
+    "Crecimiento de amígdalas y adenoides en la infancia"
    ],
    "cuando_consultar": [
-    "Varios episodios al año",
-    "Amígdalas grandes con ronquido en niños",
-    "Dificultad para respirar o tragar"
+    "Varios episodios de amigdalitis en un año",
+    "Amígdalas grandes con ronquido, pausas al dormir o respiración por la boca en niños",
+    "Dificultad para respirar o para tragar",
+    "Dolor de garganta intenso de un solo lado con dificultad para abrir la boca: urgencia",
+    "Placas o fiebre que no mejoran con tratamiento"
+   ],
+   "diagnostico": "<p>La valoración se hace en consultorio con exploración y, cuando hace falta ver la laringe y la faringe por dentro, con una <strong>laringoscopia</strong> o endoscopia flexible, que dura unos minutos y se tolera bien.</p><p>Cuando se valora una cirugía de amígdalas y adenoides, la Dra. indica estudios de imagen solo si hacen falta para ver el tamaño de las adenoides o descartar otra causa de obstrucción. En niños con ronquido, puede sumar un estudio del sueño en casa.</p>",
+   "enfoque_dra": "<p>La Dra. trata la amigdalitis con medicamentos y reserva la cirugía para quien de verdad la necesita: infecciones repetidas que afectan la vida del niño o del adulto, o amígdalas que obstruyen el sueño. Explica a los padres con calma qué esperar antes, durante y después, porque un postoperatorio bien acompañado se lleva mucho mejor.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Cuándo se deben operar las amígdalas?",
+     "respuesta": "Cuando las infecciones son frecuentes y afectan la vida diaria, o cuando las amígdalas obstruyen la respiración durante el sueño. Las guías actuales dan criterios claros y la Dra. los revisa contigo."
+    },
+    {
+     "pregunta": "¿Un niño sin amígdalas se enferma más?",
+     "respuesta": "No. Las amígdalas son una pequeña parte del sistema de defensa; después de la cirugía los niños se defienden igual y, en general, se enferman menos de la garganta."
+    },
+    {
+     "pregunta": "¿Cómo es el postoperatorio de amígdalas?",
+     "respuesta": "Hay dolor de garganta por varios días, que se controla con analgésicos, hidratación y alimentos suaves y fríos. La Dra. entrega indicaciones por escrito y está disponible para dudas."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Tonsillectomy in Children",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2019",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [
     "amigdalas-y-adenoides"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "ronquido",
+    "reflujo-laringofaringeo"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "reflujo-laringofaringeo",
    "titulo": "Reflujo laringofaríngeo",
    "area": "orl",
    "zona": "garganta",
-   "resumen": "El contenido del estómago llega a la garganta y la laringe e irrita la mucosa; a menudo sin acidez. Se le llama reflujo silencioso.",
+   "resumen": "El contenido del estómago llega a la garganta y la laringe e irrita la mucosa, a menudo sin acidez. Se le llama reflujo silencioso.",
+   "html": "<p>En el reflujo laringofaríngeo, pequeñas cantidades de contenido del estómago suben hasta la garganta y las cuerdas vocales, que son mucho más sensibles que el esófago. Por eso puede irritar sin que sientas agruras ni ardor: lo que notas es carraspera, sensación de «algo atorado», ronquera por las mañanas o tos que no se explica.</p><p>Se le llama reflujo silencioso porque muchas personas no se reconocen como pacientes de reflujo. El diagnóstico se apoya en los síntomas y en lo que la Dra. ve en la laringe, y el tratamiento combina cambios de hábitos y, cuando hace falta, medicamentos.</p>",
    "sintomas": [
-    "Carraspera constante",
-    "Sensación de algo en la garganta",
-    "Ronquera",
-    "Tos crónica"
+    "Carraspera constante y necesidad de aclarar la garganta",
+    "Sensación de nudo o de cuerpo extraño en la garganta",
+    "Ronquera, sobre todo al despertar",
+    "Tos crónica y seca",
+    "Moco espeso en la garganta y, a veces, dificultad para tragar"
+   ],
+   "causas": [
+    "Relajación de las válvulas que separan el estómago del esófago y la garganta",
+    "Comidas abundantes, tardías o acostarse poco después de comer",
+    "Café, alcohol, tabaco, grasas, picante y bebidas gaseosas",
+    "Sobrepeso y ropa ajustada",
+    "Estrés y uso excesivo de la voz, que amplifican los síntomas"
    ],
    "cuando_consultar": [
     "Ronquera que dura más de tres semanas",
     "Carraspera o sensación de cuerpo extraño persistentes",
-    "Tos crónica sin causa"
+    "Tos crónica sin causa respiratoria",
+    "Dificultad para tragar o dolor al tragar que no mejora",
+    "Ronquera en fumadores: valoración sin demora"
+   ],
+   "diagnostico": "<p>La valoración se hace en consultorio con exploración y, cuando hace falta ver la laringe y la faringe por dentro, con una <strong>laringoscopia</strong> o endoscopia flexible, que dura unos minutos y se tolera bien.</p><p>La laringoscopia permite ver los signos de irritación en las cuerdas vocales y descartar otras causas de ronquera, que es lo más importante. En casos seleccionados la Dra. se coordina con gastroenterología para estudios del esófago.</p>",
+   "enfoque_dra": "<p>El reflujo silencioso mejora cuando se entiende. La Dra. dedica tiempo a explicarte qué lo provoca en tu caso y a construir un plan realista de hábitos, porque el medicamento sin cambios suele quedarse corto. Y si la voz es tu herramienta de trabajo, cuida ese aspecto con especial atención.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Puedo tener reflujo si no tengo agruras?",
+     "respuesta": "Sí. En el reflujo laringofaríngeo las agruras suelen faltar; los síntomas son de garganta y voz. Por eso muchas personas tardan en identificarlo."
+    },
+    {
+     "pregunta": "¿Tengo que tomar medicamento de por vida?",
+     "respuesta": "No necesariamente. Los medicamentos se usan por un periodo mientras los hábitos hacen su parte; después se reducen según la respuesta."
+    },
+    {
+     "pregunta": "¿La sensación de nudo en la garganta es algo grave?",
+     "respuesta": "Casi siempre se debe a irritación por reflujo o tensión muscular, pero la laringoscopia sirve justamente para confirmarlo y descartar otras causas."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Hoarseness (Dysphonia)",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2018",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "amigdalitis"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "ronquido",
@@ -254,39 +848,151 @@
    "area": "sueno",
    "zona": "sueno",
    "resumen": "El ronquido es el ruido que produce el aire al pasar por una vía aérea estrecha durante el sueño. Puede ser solo molesto o ser el signo visible de una apnea del sueño.",
+   "html": "<p>Roncar no es normal, aunque sea común. El ronquido aparece cuando el aire pasa con dificultad por una vía aérea que se estrecha al dormir: la nariz tapada, el paladar y la campanilla largos, las amígdalas grandes o la lengua que cae hacia atrás hacen vibrar los tejidos y producen el ruido.</p><p>Hay un <strong>ronquido primario</strong>, que es ruido sin pausas en la respiración y afecta sobre todo a quien duerme al lado, y un ronquido que es el síntoma visible de una <strong>apnea obstructiva del sueño</strong>, con pausas, caídas de oxígeno y un descanso que no repara. Saber cuál es el tuyo cambia por completo el tratamiento, y por eso la valoración empieza por ahí.</p>",
    "sintomas": [
-    "Ronquido fuerte y frecuente",
+    "Ronquido fuerte y frecuente, la mayoría de las noches",
     "Pausas en la respiración que otros notan",
-    "Sueño poco reparador",
-    "Boca seca al despertar"
+    "Sueño poco reparador y cansancio al despertar",
+    "Boca seca o dolor de cabeza por la mañana",
+    "Somnolencia durante el día",
+    "En niños: ronquido, respiración por la boca, sudoración nocturna y cambios en la conducta"
+   ],
+   "causas": [
+    "Obstrucción nasal (tabique desviado, rinitis, cornetes grandes)",
+    "Paladar blando y campanilla largos o amígdalas grandes",
+    "Sobrepeso y acumulación de grasa en el cuello",
+    "Dormir boca arriba, alcohol y sedantes por la noche",
+    "En niños: amígdalas y adenoides grandes"
    ],
    "cuando_consultar": [
     "Cuando la pareja o la familia notan pausas en la respiración",
-    "Somnolencia durante el día",
-    "Ronquido en niños"
+    "Somnolencia durante el día o cansancio aunque duermas suficiente",
+    "Ronquido en niños, a cualquier edad",
+    "Ronquido que empezó o empeoró con el aumento de peso",
+    "Presión alta difícil de controlar o despertares con sensación de ahogo"
+   ],
+   "diagnostico": "<p>La Dra. explora la nariz, la boca y la garganta y realiza una endoscopia nasal y de la vía aérea para ver dónde se estrecha el paso del aire. Si sospecha apnea, indica un <strong>estudio del sueño en casa</strong> (poligrafía respiratoria) que ella misma interpreta. En casos seleccionados realiza una endoscopia de sueño (DISE) en quirófano o indica una polisomnografía en laboratorio.</p><p>Cuando la obstrucción es nasal y se plantea cirugía, la Dra. indica una tomografía o resonancia según el caso.</p>",
+   "enfoque_dra": "<p>El tratamiento depende de si hablamos de un ronquido primario o de uno secundario a apnea. Por eso la Dra. no trata «el ruido» sin antes saber qué hay detrás. Con el diagnóstico claro, las opciones van desde medidas y tratamiento nasal hasta cirugía del paladar o de la nariz, CPAP o un dispositivo oral, siempre elegidas según dónde se cierra tu vía aérea y qué estás dispuesto a usar.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Roncar es peligroso?",
+     "respuesta": "El ronquido simple no, pero puede ser la señal de una apnea del sueño, que sí tiene consecuencias para el corazón, la presión y la concentración. Un estudio del sueño en casa lo aclara."
+    },
+    {
+     "pregunta": "¿Existe una cirugía para dejar de roncar?",
+     "respuesta": "Sí, cuando la causa está en la nariz o en el paladar y el estudio lo respalda. No todas las personas son candidatas, y la Dra. es clara en eso desde la primera consulta."
+    },
+    {
+     "pregunta": "¿Los niños deben roncar?",
+     "respuesta": "No. El ronquido frecuente en un niño merece revisión: suele deberse a amígdalas o adenoides grandes y afecta su descanso, su conducta y su crecimiento."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea",
+     "autor": "American Academy of Sleep Medicine (AASM)",
+     "anio": "2017",
+     "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Tonsillectomy in Children",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2019",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [
     "estudio-del-sueno",
-    "cirugia-de-ronquido-y-apnea"
+    "cirugia-de-ronquido-y-apnea",
+    "septoplastia"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "apnea-obstructiva-del-sueno",
+    "desviacion-de-tabique-nasal",
+    "amigdalitis"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "apnea-obstructiva-del-sueno",
    "titulo": "Apnea obstructiva del sueño",
    "area": "sueno",
    "zona": "sueno",
-   "resumen": "Qué es, cómo se diagnostica y qué opciones de tratamiento existen, explicado por una otorrinolaringólogo especialista en sueño.",
+   "resumen": "Qué es, cómo se diagnostica y qué opciones de tratamiento existen, explicado por una otorrinolaringólogo con subespecialidad en desórdenes respiratorios del sueño.",
+   "html": "<p>En la apnea obstructiva del sueño, la vía aérea se cierra una y otra vez mientras duermes. Cada cierre interrumpe la respiración durante unos segundos, baja el oxígeno y obliga al cerebro a despertarte brevemente para volver a respirar. Son despertares que no recuerdas, pero que fragmentan el sueño cientos de veces por noche: por eso te levantas cansado aunque hayas dormido «ocho horas».</p><p>No tratarla tiene consecuencias: presión alta, mayor riesgo cardiovascular, somnolencia al manejar, problemas de concentración y de estado de ánimo. La buena noticia es que se diagnostica con un estudio sencillo que puedes hacer en tu propia cama, y que hoy existen varios tratamientos efectivos que se eligen según la causa de la obstrucción y tus preferencias.</p>",
    "sintomas": [
     "Ronquido fuerte con pausas que otros notan",
     "Sueño no reparador y somnolencia durante el día",
-    "Dolor de cabeza al despertar, boca seca",
-    "Dificultad para concentrarse, irritabilidad"
+    "Dolor de cabeza al despertar y boca seca",
+    "Despertares con sensación de ahogo",
+    "Dificultad para concentrarse, irritabilidad y bajo rendimiento",
+    "Levantarse varias veces a orinar por la noche"
+   ],
+   "causas": [
+    "Estrechez de la vía aérea por anatomía: paladar, lengua, amígdalas, mandíbula pequeña",
+    "Obstrucción nasal",
+    "Sobrepeso y obesidad",
+    "Edad, sexo masculino y menopausia en mujeres",
+    "Alcohol, sedantes y dormir boca arriba, que la empeoran"
    ],
    "cuando_consultar": [
     "Si roncas y alguien ha visto que dejas de respirar",
     "Si te despiertas cansado a pesar de dormir suficiente",
-    "Si tienes presión alta difícil de controlar"
+    "Si tienes presión alta difícil de controlar",
+    "Si te quedas dormido viendo televisión, leyendo o manejando",
+    "Si usas CPAP y no lo toleras: hay alternativas que valorar"
+   ],
+   "diagnostico": "<p>La Dra. explora la nariz, la boca y la garganta y realiza una endoscopia nasal y de la vía aérea para ver dónde se estrecha el paso del aire. Si sospecha apnea, indica un <strong>estudio del sueño en casa</strong> (poligrafía respiratoria) que ella misma interpreta. En casos seleccionados realiza una endoscopia de sueño (DISE) en quirófano o indica una polisomnografía en laboratorio.</p><p>El estudio en casa registra tu respiración, el oxígeno, el ronquido y la posición durante una noche normal, y la Dra. lo interpreta personalmente para explicarte el resultado y graduar la apnea. Con eso, y con lo que vio en la exploración, define el tratamiento.</p>",
+   "enfoque_dra": "<p>La Dra. tiene subespecialidad en desórdenes respiratorios del sueño y aborda la apnea desde las dos vertientes: la médica, con CPAP, dispositivos orales y medidas, y la quirúrgica, con cirugía nasal y del paladar cuando la anatomía lo indica. Su papel es ayudarte a elegir el tratamiento que puedas sostener en el tiempo, porque la apnea se controla con constancia, y acompañarte hasta que duermas bien.</p>",
+   "faq": [
+    {
+     "pregunta": "¿El CPAP es la única opción?",
+     "respuesta": "No. Es el tratamiento más efectivo para la apnea moderada y grave, pero existen alternativas: cirugía nasal o del paladar, dispositivos de avance mandibular, terapia posicional y control de peso. Se eligen según tu caso."
+    },
+    {
+     "pregunta": "¿Puedo hacerme el estudio en casa?",
+     "respuesta": "Sí. La poligrafía respiratoria en casa es el estudio de primera elección en la mayoría de los adultos con sospecha de apnea. La Dra. te presta el equipo, te explica cómo colocarlo y lo interpreta ella misma."
+    },
+    {
+     "pregunta": "¿La apnea se cura?",
+     "respuesta": "Depende de la causa. Cuando es por amígdalas grandes o una obstrucción corregible, la cirugía puede resolverla. En otros casos se controla de forma efectiva con tratamiento continuo, igual que la presión alta."
+    },
+    {
+     "pregunta": "¿Los niños pueden tener apnea?",
+     "respuesta": "Sí, casi siempre por amígdalas y adenoides grandes. La Dra. valora casos pediátricos seleccionados y, cuando conviene, se coordina con pediatría."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea",
+     "autor": "American Academy of Sleep Medicine (AASM)",
+     "anio": "2017",
+     "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Treatment of Adult Obstructive Sleep Apnea with Positive Airway Pressure",
+     "autor": "American Academy of Sleep Medicine (AASM)",
+     "anio": "2019",
+     "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "tratamientos": [
     "estudio-del-sueno",
@@ -294,7 +1000,11 @@
     "cirugia-de-ronquido-y-apnea",
     "dispositivo-de-avance-mandibular"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "ronquido",
+    "desviacion-de-tabique-nasal"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   }
  ],
  "tratamiento": [
@@ -306,13 +1016,57 @@
    "tipo": "cirugia",
    "oferta": "ofrece",
    "resumen": "Cirugía que corrige la desviación del tabique nasal para mejorar el paso del aire. Se realiza por dentro de la nariz, sin cicatrices visibles.",
+   "html": "<p>La septoplastia endereza el tabique nasal. Se trabaja por dentro de la nariz: se levanta la mucosa, se retira o remodela la parte desviada del cartílago y el hueso, y se vuelve a colocar la mucosa en su sitio. No cambia la forma externa de la nariz ni deja cicatrices visibles.</p><p>Con frecuencia se combina con una turbinoplastia, porque el cornete del lado más abierto suele haber crecido para compensar, y con cirugía de los senos paranasales cuando hay sinusitis crónica. Si además quieres mejorar la forma de la nariz, se planea como rinoplastia funcional.</p>",
    "candidatos": [
-    "Obstrucción nasal por tabique desviado que no mejora con tratamiento médico"
+    "Obstrucción nasal por tabique desviado que no mejora con tratamiento médico",
+    "Ronquido o apnea en los que la nariz es parte de la obstrucción",
+    "Sinusitis de repetición favorecida por la desviación",
+    "Sangrados nasales por una zona del tabique expuesta"
+   ],
+   "estudio_previo": "<p>Valoración en consultorio con endoscopia nasal para confirmar que el tabique es la causa y revisar cornetes y senos. Tomografía cuando hace falta ver la anatomía completa o hay sinusitis asociada. Estudios preoperatorios de laboratorio y valoración de anestesia.</p>",
+   "como_se_realiza": "<p>Se realiza en hospital, en quirófano, habitualmente con anestesia general y en un procedimiento ambulatorio o con una noche de estancia según el caso. Al terminar, la Dra. coloca férulas internas blandas o un taponamiento ligero que se retira en consulta a los pocos días.</p>",
+   "recuperacion": "<p>Los primeros días hay congestión y sensación de nariz tapada, que mejora al retirar las férulas. La mayoría de las personas retoma actividades ligeras en pocos días y evita ejercicio intenso y sonarse con fuerza durante las primeras semanas. La Dra. entrega indicaciones por escrito y revisa la cicatrización en consulta.</p>",
+   "riesgos_y_alternativas": "<p>Como toda cirugía, tiene riesgos: sangrado, infección, molestias por la anestesia y la posibilidad de que la mejoría sea parcial o de que haga falta un procedimiento adicional. La Dra. te explica los riesgos específicos de tu caso y las alternativas antes de que decidas, y entrega el consentimiento informado por escrito.</p><p>Alternativas: tratamiento médico de la rinitis asociada, turbinoplastia sola cuando los cornetes son la causa principal, o manejo del ronquido por otras vías si la nariz no es el origen.</p>",
+   "enfoque_dra": "<p>La Dra. decide operar cuando la exploración y los estudios muestran que el tabique es de verdad la causa de la obstrucción, y planea la cirugía como parte de un plan para que respires bien: nariz, cornetes y, cuando aplica, el sueño. Si quieres cambiar también la forma de la nariz, lo conversan desde la primera consulta para planear un solo procedimiento.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Me van a romper la nariz?",
+     "respuesta": "No. La septoplastia se hace por dentro, sin fracturar los huesos nasales. Eso corresponde a la rinoplastia, que es otro procedimiento."
+    },
+    {
+     "pregunta": "¿Duele?",
+     "respuesta": "Las molestias principales son congestión y presión, más que dolor, y se controlan con los analgésicos indicados."
+    },
+    {
+     "pregunta": "¿Cuándo vuelvo a respirar bien?",
+     "respuesta": "La mejoría se nota al retirar las férulas y va aumentando conforme baja la inflamación en las semanas siguientes."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Improving Nasal Form and Function after Rhinoplasty",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2017",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    }
    ],
    "resuelve": [
     "desviacion-de-tabique-nasal"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "turbinoplastia",
+    "rinoplastia",
+    "ronquido"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "turbinoplastia",
@@ -322,13 +1076,56 @@
    "tipo": "cirugia",
    "oferta": "ofrece",
    "resumen": "Reducción de los cornetes nasales cuando crecen y obstruyen la nariz, con frecuencia por rinitis crónica.",
+   "html": "<p>Los cornetes son estructuras dentro de la nariz que calientan y humedecen el aire que respiras. Cuando están inflamados durante mucho tiempo, como en la rinitis crónica, crecen y bloquean el paso del aire aun con tratamiento. La turbinoplastia reduce su tamaño conservando su función: se retira parte del tejido interno y se respeta la mucosa, para que la nariz siga haciendo su trabajo.</p><p>Es un procedimiento conservador, se realiza por dentro de la nariz y con frecuencia se combina con la septoplastia.</p>",
    "candidatos": [
-    "Nariz tapada por cornetes grandes que no responde a medicamentos"
+    "Nariz tapada por cornetes grandes que no responde a medicamentos",
+    "Rinitis crónica con obstrucción persistente",
+    "Dependencia de sprays descongestionantes",
+    "Ronquido en el que la obstrucción nasal es parte del problema"
+   ],
+   "estudio_previo": "<p>Endoscopia nasal en consultorio para confirmar que los cornetes son la causa, y prueba de respuesta al tratamiento médico. Tomografía cuando se combina con septoplastia o hay sinusitis. Estudios preoperatorios y valoración de anestesia.</p>",
+   "como_se_realiza": "<p>En quirófano, con anestesia general o local con sedación según el caso, de forma ambulatoria. La Dra. reduce el cornete con técnica que preserva la mucosa. Cuando se combina con septoplastia, se realiza en el mismo tiempo quirúrgico.</p>",
+   "recuperacion": "<p>Congestión y costras durante las primeras semanas, que se manejan con lavados nasales. Las actividades cotidianas se retoman en pocos días. La Dra. revisa en consulta y limpia la nariz bajo endoscopia cuando hace falta.</p>",
+   "riesgos_y_alternativas": "<p>Como toda cirugía, tiene riesgos: sangrado, infección, molestias por la anestesia y la posibilidad de que la mejoría sea parcial o de que haga falta un procedimiento adicional. La Dra. te explica los riesgos específicos de tu caso y las alternativas antes de que decidas, y entrega el consentimiento informado por escrito.</p><p>Alternativas: continuar con tratamiento médico de la rinitis, inmunoterapia en rinitis alérgica, o septoplastia si el tabique es el problema principal.</p>",
+   "enfoque_dra": "<p>La Dra. prefiere técnicas conservadoras que reduzcan el cornete sin dañar la mucosa, porque una nariz que respira debe seguir humedeciendo y filtrando el aire. Por eso valora primero el tratamiento médico y opera cuando la obstrucción persiste a pesar de él.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Se quitan los cornetes?",
+     "respuesta": "No. Se reduce su tamaño conservando su función. Retirarlos por completo causa problemas de resequedad, y por eso no se hace."
+    },
+    {
+     "pregunta": "¿La rinitis desaparece con la cirugía?",
+     "respuesta": "La obstrucción mejora de forma clara. La tendencia alérgica puede seguir dando estornudos o escurrimiento, que se controlan con tratamiento."
+    },
+    {
+     "pregunta": "¿Puede volver a crecer el cornete?",
+     "respuesta": "Puede recuperar algo de volumen con los años si la inflamación continúa, por eso se acompaña de tratamiento de la rinitis."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Allergic Rhinitis and its Impact on Asthma (ARIA) Guidelines",
+     "autor": "ARIA / OMS",
+     "anio": "2020",
+     "url": "https://www.euforea.eu/aria",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "resuelve": [
     "rinitis"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "septoplastia",
+    "sinusitis"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "amigdalas-y-adenoides",
@@ -338,14 +1135,57 @@
    "tipo": "cirugia",
    "oferta": "ofrece",
    "resumen": "Amigdalectomía y adenoidectomía: retiro de amígdalas y adenoides cuando causan infecciones repetidas u obstruyen la respiración, sobre todo en niños.",
+   "html": "<p>La amigdalectomía retira las amígdalas; la adenoidectomía, las adenoides, que son tejido similar ubicado detrás de la nariz. Se realizan juntas o por separado según lo que cause el problema. Es una de las cirugías más frecuentes en niños y tiene dos indicaciones principales: infecciones de garganta que se repiten demasiado y amígdalas o adenoides grandes que obstruyen la respiración durante el sueño.</p><p>En adultos se indica por amigdalitis de repetición, abscesos o cuando las amígdalas contribuyen a la apnea del sueño.</p>",
    "candidatos": [
-    "Amigdalitis de repetición",
-    "Amígdalas o adenoides grandes con ronquido o apnea en niños"
+    "Amigdalitis de repetición que afecta la vida escolar o laboral",
+    "Amígdalas o adenoides grandes con ronquido, pausas o apnea en niños",
+    "Respiración por la boca constante y otitis de repetición por adenoides",
+    "Absceso periamigdalino previo",
+    "Adultos con apnea del sueño en los que las amígdalas son parte de la obstrucción"
+   ],
+   "estudio_previo": "<p>Valoración en consultorio con exploración de garganta y, cuando hace falta ver las adenoides, endoscopia nasal. Estudio de imagen solo si se requiere. En niños con ronquido, la Dra. puede indicar un estudio del sueño en casa para documentar la apnea. Estudios de laboratorio y valoración de anestesia antes de la cirugía.</p>",
+   "como_se_realiza": "<p>En hospital, bajo anestesia general, en un procedimiento que suele ser ambulatorio o con una noche de observación según la edad y el caso. Se realiza por la boca, sin incisiones externas. La Dra. explica a los padres cada paso y qué esperar al despertar.</p>",
+   "recuperacion": "<p>El dolor de garganta es lo esperado durante una a dos semanas y se controla con analgésicos pautados, buena hidratación y alimentos suaves y fríos. Es normal que la voz suene distinta unos días y que haya mal aliento mientras cicatriza. La Dra. entrega indicaciones por escrito, revisa en consulta y está disponible ante cualquier duda; el sangrado después de la cirugía es poco frecuente pero debe atenderse de inmediato.</p>",
+   "riesgos_y_alternativas": "<p>Como toda cirugía, tiene riesgos: sangrado, infección, molestias por la anestesia y la posibilidad de que la mejoría sea parcial o de que haga falta un procedimiento adicional. La Dra. te explica los riesgos específicos de tu caso y las alternativas antes de que decidas, y entrega el consentimiento informado por escrito.</p><p>Alternativas: tratamiento médico de cada episodio y vigilancia, tratamiento de la rinitis cuando las adenoides se inflaman por alergia, y en apnea leve, observación con seguimiento.</p>",
+   "enfoque_dra": "<p>La Dra. opera amígdalas cuando los criterios se cumplen y no antes. Lo que más le importa es que los padres salgan del consultorio entendiendo por qué sí o por qué no, y que el postoperatorio esté bien acompañado con indicaciones claras.</p>",
+   "faq": [
+    {
+     "pregunta": "¿A qué edad se puede operar?",
+     "respuesta": "No hay una edad mínima fija; depende del motivo. En niños pequeños con apnea por amígdalas grandes, la cirugía puede indicarse temprano. La Dra. lo valora caso por caso."
+    },
+    {
+     "pregunta": "¿Cuántos días falta a la escuela?",
+     "respuesta": "En general entre una y dos semanas, según la recuperación. El ejercicio intenso se retoma cuando la Dra. lo indica."
+    },
+    {
+     "pregunta": "¿Qué puede comer después?",
+     "respuesta": "Alimentos suaves, fríos o tibios y mucha agua. Lo importante es que coma y tome líquidos, aunque sea poco y seguido."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Tonsillectomy in Children",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2019",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "resuelve": [
     "amigdalitis"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "ronquido",
+    "otitis"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "cirugia-endoscopica-nasal",
@@ -354,52 +1194,178 @@
    "zona": "nariz",
    "tipo": "cirugia",
    "oferta": "ofrece",
-   "resumen": "Cirugía de los senos paranasales por vía endoscópica, sin incisiones externas, para sinusitis crónica o pólipos. [PENDIENTE DE CONFIRMACIÓN: la Dra. confirma si la ofrece]",
+   "resumen": "Cirugía de los senos paranasales por vía endoscópica, sin incisiones externas, para sinusitis crónica o pólipos.",
+   "html": "<p>La cirugía endoscópica de senos paranasales se realiza por dentro de la nariz con una cámara y pinzas finas. Abre las vías por las que drenan los senos, retira pólipos y tejido inflamado y permite que los medicamentos y los lavados lleguen a donde deben. No deja cicatrices ni cambia la forma de la nariz.</p><p>Está indicada cuando la sinusitis crónica o los pólipos no responden al tratamiento médico bien llevado. La tomografía previa es el mapa de la cirugía y se revisa contigo antes de operar.</p>",
    "candidatos": [
-    "Sinusitis crónica o pólipos que no mejoran con tratamiento médico"
+    "Sinusitis crónica que persiste a pesar del tratamiento médico",
+    "Pólipos nasales que obstruyen y quitan el olfato",
+    "Sinusitis agudas que se repiten varias veces al año",
+    "Complicaciones o causas anatómicas que bloquean el drenaje"
+   ],
+   "estudio_previo": "<p>Endoscopia nasal en consultorio, tratamiento médico completo previo y tomografía de senos paranasales, indispensable para planear la cirugía. Estudios de laboratorio y valoración de anestesia.</p>",
+   "como_se_realiza": "<p>En hospital, bajo anestesia general. La Dra. trabaja con endoscopio e instrumentos finos dentro de la nariz, abriendo los senos afectados según la tomografía. Con frecuencia se combina con septoplastia o turbinoplastia. Puede ser ambulatoria o con una noche de estancia.</p>",
+   "recuperacion": "<p>Congestión, costras y algo de sangrado ligero los primeros días. Los lavados nasales son la parte más importante de la recuperación, y las limpiezas endoscópicas en consulta ayudan a que cicatrice bien. Actividades ligeras en pocos días; ejercicio intenso y vuelos, cuando la Dra. lo indique.</p>",
+   "riesgos_y_alternativas": "<p>Como toda cirugía, tiene riesgos: sangrado, infección, molestias por la anestesia y la posibilidad de que la mejoría sea parcial o de que haga falta un procedimiento adicional. La Dra. te explica los riesgos específicos de tu caso y las alternativas antes de que decidas, y entrega el consentimiento informado por escrito.</p><p>Por la cercanía con el ojo y la base del cráneo, la cirugía se planea con la tomografía y técnica cuidadosa. Alternativas: continuar con tratamiento médico y lavados, tratamientos biológicos en casos seleccionados de pólipos.</p>",
+   "enfoque_dra": "<p>La Dra. opera cuando el tratamiento médico ya dio lo que podía dar. Después de la cirugía, el seguimiento y el tratamiento de mantenimiento son parte del plan, porque en sinusitis crónica y pólipos la mejoría dura cuando se cuida.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Es una cirugía grande?",
+     "respuesta": "Es una cirugía mayor que se hace por vía mínimamente invasiva: sin incisiones externas y con recuperación en días, no en semanas."
+    },
+    {
+     "pregunta": "¿Volveré a oler?",
+     "respuesta": "En muchos casos el olfato mejora notablemente, sobre todo en pólipos. La Dra. te orienta sobre qué esperar según tu caso."
+    },
+    {
+     "pregunta": "¿Necesito seguir tratamiento después?",
+     "respuesta": "Sí. Los lavados y el tratamiento de mantenimiento ayudan a que el resultado dure y reducen las recaídas."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "European Position Paper on Rhinosinusitis and Nasal Polyps (EPOS 2020)",
+     "autor": "Fokkens WJ et al., Rhinology",
+     "anio": "2020",
+     "url": "https://epos2020.com/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Clinical Practice Guideline: Adult Sinusitis",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2015",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "resuelve": [
     "sinusitis",
     "polipos-nasales"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "septoplastia",
+    "rinitis"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "rinoplastia",
-   "titulo": "Rinoplastia funcional y estética",
+   "titulo": "Rinoplastia funcional",
    "area": "orl",
    "zona": "nariz",
    "tipo": "cirugia",
    "oferta": "ofrece",
-   "resumen": "Valoración y planificación de la cirugía de nariz que mejora la respiración y, cuando se desea, la forma: septoplastia, turbinoplastia y rinoplastia, con un equipo quirúrgico especializado. [PENDIENTE DE CONFIRMACIÓN: redacción final de la Dra. sobre su participación en rinoplastias]",
+   "resumen": "Cirugía de nariz que mejora la respiración y, cuando se desea, la forma. Septoplastia, turbinoplastia y rinoplastia planeadas en un solo procedimiento para que la nariz funcione y se vea bien.",
+   "html": "<p>La rinoplastia funcional corrige la estructura de la nariz para que respires mejor y, al mismo tiempo, atiende la forma cuando así lo deseas. Como otorrinolaringólogo, la Dra. parte de la función: tabique, cornetes y válvula nasal. Sobre esa base se planea el cambio estético, de modo que el resultado se vea natural y la nariz siga respirando bien.</p><p>Es una cirugía que se planea con calma: la Dra. conversa contigo sobre qué te molesta, qué es posible y qué esperar, y lo revisa con fotografías y exploración antes de proponer un plan.</p>",
    "candidatos": [
     "Obstrucción nasal con o sin deseo de cambio estético",
-    "Secuelas de traumatismo nasal",
-    "Rinoplastia previa con problemas para respirar"
+    "Secuelas de golpes o fracturas nasales",
+    "Rinoplastia previa con problemas para respirar",
+    "Nariz que respira mal y cuya forma también quieres mejorar"
+   ],
+   "estudio_previo": "<p>Valoración en consultorio con endoscopia nasal y fotografías, y tomografía cuando hace falta conocer la anatomía interna. Estudios de laboratorio y valoración de anestesia. La Dra. explica con claridad qué cambios son realistas.</p>",
+   "como_se_realiza": "<p>En hospital, bajo anestesia general. Según el caso se trabaja por dentro de la nariz o con una pequeña incisión en la columela. Se corrige el tabique, se reducen los cornetes si es necesario y se remodela la estructura. Al terminar se coloca una férula externa y, en ocasiones, férulas internas.</p>",
+   "recuperacion": "<p>Moretones e hinchazón los primeros días, que ceden en una a dos semanas; la férula se retira en consulta. La forma definitiva se aprecia conforme baja la inflamación a lo largo de los meses. Actividades ligeras en pocos días; deporte y lentes sobre la nariz, cuando la Dra. lo indique.</p>",
+   "riesgos_y_alternativas": "<p>Como toda cirugía, tiene riesgos: sangrado, infección, molestias por la anestesia y la posibilidad de que la mejoría sea parcial o de que haga falta un procedimiento adicional. La Dra. te explica los riesgos específicos de tu caso y las alternativas antes de que decidas, y entrega el consentimiento informado por escrito.</p><p>En rinoplastia es importante saber que el resultado estético final tarda meses en apreciarse y que un pequeño porcentaje de casos puede requerir un retoque. Alternativas: septoplastia y turbinoplastia solas cuando lo que buscas es solo respirar mejor.</p>",
+   "enfoque_dra": "<p>Para la Dra., una nariz bonita que no respira no es un buen resultado. Por eso planea cada rinoplastia desde la función y con expectativas honestas, y te acompaña en una recuperación que requiere paciencia.</p>",
+   "faq": [
+    {
+     "pregunta": "¿La diferencia entre septoplastia y rinoplastia?",
+     "respuesta": "La septoplastia corrige solo el tabique por dentro y no cambia la forma. La rinoplastia modifica la estructura externa de la nariz; la funcional hace ambas cosas en un mismo procedimiento."
+    },
+    {
+     "pregunta": "¿Cuándo se ve el resultado?",
+     "respuesta": "La respiración mejora en semanas. La forma se aprecia de manera progresiva conforme baja la inflamación, y el resultado final tarda varios meses."
+    },
+    {
+     "pregunta": "¿Quedan cicatrices?",
+     "respuesta": "En la técnica cerrada no hay cicatrices visibles. En la abierta queda una pequeña cicatriz en la columela que suele ser poco perceptible con el tiempo."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline: Improving Nasal Form and Function after Rhinoplasty",
+     "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+     "anio": "2017",
+     "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "resuelve": [
     "desviacion-de-tabique-nasal"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "septoplastia",
+    "turbinoplastia"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "estudio-del-sueno",
-   "titulo": "Estudio del sueño",
+   "titulo": "Estudio del sueño en casa",
    "area": "sueno",
    "zona": "sueno",
    "tipo": "estudio",
    "oferta": "ofrece",
-   "resumen": "Poligrafía respiratoria realizada en casa e interpretada por la propia Dra.: registra respiración, oxígeno y ronquido durante la noche para confirmar y graduar la apnea.",
+   "resumen": "Poligrafía respiratoria realizada en tu propia cama e interpretada por la propia Dra.: registra respiración, oxígeno y ronquido durante la noche para confirmar y graduar la apnea.",
+   "html": "<p>El estudio del sueño en casa, o poligrafía respiratoria, registra durante una noche el flujo de aire por la nariz, el esfuerzo respiratorio, el nivel de oxígeno en la sangre, el ronquido, la frecuencia cardiaca y la posición en la que duermes. Es un equipo pequeño que te colocas antes de dormir y que la Dra. te enseña a usar en consulta.</p><p>Es el estudio de primera elección para confirmar la apnea obstructiva del sueño en la mayoría de los adultos, porque mide lo que importa en una noche normal de tu vida, no en un laboratorio. La Dra. lo interpreta personalmente y te explica el resultado.</p>",
    "candidatos": [
-    "Ronquido con pausas",
-    "Somnolencia diurna",
-    "Antes de decidir un tratamiento de ronquido o apnea"
+    "Ronquido con pausas en la respiración",
+    "Somnolencia o cansancio durante el día",
+    "Antes de decidir un tratamiento de ronquido o apnea",
+    "Para verificar el resultado de un tratamiento (CPAP, cirugía, dispositivo oral)",
+    "Presión alta difícil de controlar o diagnóstico previo de arritmias"
+   ],
+   "estudio_previo": "<p>Consulta de valoración con exploración y endoscopia de la vía aérea. La Dra. revisa tus cuestionarios de somnolencia y riesgo, y decide si el estudio en casa es el adecuado o si tu caso requiere polisomnografía en laboratorio, que indica cuando hay sospecha de otros trastornos del sueño o enfermedades asociadas.</p>",
+   "como_se_realiza": "<p>Recoges el equipo en consultorio con instrucciones por escrito, te lo colocas en casa a la hora habitual de dormir y lo devuelves al día siguiente. La Dra. descarga y analiza el registro y te cita para explicarte el resultado y el plan de tratamiento.</p>",
+   "recuperacion": "<p>No hay recuperación: es un estudio sin molestias y sin medicamentos. Al día siguiente haces tu vida normal.</p>",
+   "riesgos_y_alternativas": "<p>Es un estudio seguro. Su limitación es que en algunos casos la noche no es representativa (sensores que se desplazan, insomnio esa noche) y hay que repetirlo, o que el caso requiera polisomnografía completa en laboratorio.</p>",
+   "enfoque_dra": "<p>La Dra. realiza e interpreta el estudio ella misma, sin intermediarios: eso permite que el resultado se traduzca en un plan concreto en la misma consulta de revisión. Y si tu caso necesita un estudio en laboratorio, te lo indica con claridad.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Es lo mismo que una polisomnografía?",
+     "respuesta": "No. La polisomnografía se hace en un laboratorio de sueño con registro de la actividad cerebral. El estudio en casa es más sencillo y registra lo respiratorio; es suficiente para diagnosticar apnea obstructiva en la mayoría de los adultos."
+    },
+    {
+     "pregunta": "¿Duermo igual con el equipo puesto?",
+     "respuesta": "El equipo es ligero y la mayoría de las personas duerme con normalidad. Si una noche no es representativa, se repite."
+    },
+    {
+     "pregunta": "¿Qué pasa después del estudio?",
+     "respuesta": "La Dra. te cita para revisar los resultados y proponer el tratamiento según el grado de apnea y lo que encontró en la exploración."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea",
+     "autor": "American Academy of Sleep Medicine (AASM)",
+     "anio": "2017",
+     "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+     "tipo": "guia"
+    }
    ],
    "resuelve": [
     "ronquido",
     "apnea-obstructiva-del-sueno"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "cpap",
+    "cirugia-de-ronquido-y-apnea"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "cpap",
@@ -408,14 +1374,51 @@
    "zona": "sueno",
    "tipo": "terapia",
    "oferta": "ofrece",
-   "resumen": "Equipo que mantiene abierta la vía aérea con presión de aire durante el sueño. La Dra. indica, titula y da seguimiento para lograr adaptación y uso constante.",
+   "resumen": "Equipo que mantiene abierta la vía aérea con presión de aire durante el sueño. La Dra. lo indica, ajusta la presión y da seguimiento para lograr una buena adaptación y uso constante.",
+   "html": "<p>El CPAP es un equipo pequeño que envía aire a presión suave a través de una mascarilla mientras duermes. Esa presión funciona como una férula de aire que impide que la vía aérea se cierre, elimina las pausas y el ronquido y permite que el sueño por fin sea reparador. Es el tratamiento más efectivo para la apnea obstructiva moderada y grave.</p><p>El reto del CPAP no es que funcione, sino que lo uses. Por eso el acompañamiento en las primeras semanas, la elección de la mascarilla y el ajuste de la presión hacen la diferencia entre un equipo guardado en el clóset y una persona que vuelve a dormir bien.</p>",
    "candidatos": [
-    "Apnea obstructiva del sueño confirmada por estudio"
+    "Apnea obstructiva del sueño confirmada por estudio, moderada o grave",
+    "Apnea leve con síntomas importantes o enfermedades asociadas",
+    "Personas que no son candidatas a cirugía o prefieren un tratamiento no quirúrgico",
+    "Pacientes que ya usan CPAP y no se adaptan: hay mucho que ajustar"
+   ],
+   "estudio_previo": "<p>Estudio del sueño en casa que confirme y gradúe la apnea, y exploración de la nariz y la vía aérea: una nariz obstruida es la causa más frecuente de no tolerar el CPAP y se puede tratar.</p>",
+   "como_se_realiza": "<p>La Dra. indica el tipo de equipo y de mascarilla según tu anatomía y tus hábitos, ajusta la presión (por titulación automática o con estudio) y te cita en las primeras semanas para resolver molestias: fugas, resequedad, presión alta o baja. Los equipos modernos registran el uso y permiten ajustar a distancia.</p>",
+   "recuperacion": "<p>No hay recuperación. La adaptación suele tomar algunas semanas; durante ese tiempo el seguimiento cercano es parte del tratamiento. Muchas personas notan la diferencia en su energía desde las primeras noches de uso completo.</p>",
+   "riesgos_y_alternativas": "<p>El CPAP es seguro. Las molestias habituales son resequedad, marcas de la mascarilla o sensación de presión, y todas tienen solución con ajustes. Alternativas cuando no se tolera: cirugía nasal o del paladar, dispositivo de avance mandibular o terapia posicional, según el estudio y la exploración.</p>",
+   "enfoque_dra": "<p>La Dra. no entrega un equipo y se despide. Acompaña la adaptación, trata la nariz si es lo que impide tolerarlo y, cuando después de intentarlo el CPAP no es para ti, te propone alternativas con la misma honestidad.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Tendré que usarlo toda la vida?",
+     "respuesta": "Mientras la apnea esté presente, sí, igual que un tratamiento para la presión. Si la causa cambia (peso, cirugía), se reevalúa con un nuevo estudio."
+    },
+    {
+     "pregunta": "¿Puedo viajar con el CPAP?",
+     "respuesta": "Sí. Los equipos son compactos y se permiten en cabina. La Dra. te orienta sobre cómo llevarlo."
+    },
+    {
+     "pregunta": "No tolero la mascarilla, ¿qué hago?",
+     "respuesta": "No lo abandones sin consultar. Cambiar de mascarilla, ajustar la presión o tratar la nariz resuelve la mayoría de los problemas de adaptación."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Treatment of Adult Obstructive Sleep Apnea with Positive Airway Pressure",
+     "autor": "American Academy of Sleep Medicine (AASM)",
+     "anio": "2019",
+     "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+     "tipo": "guia"
+    }
    ],
    "resuelve": [
     "apnea-obstructiva-del-sueno"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "estudio-del-sueno",
+    "dispositivo-de-avance-mandibular",
+    "cirugia-de-ronquido-y-apnea"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "cirugia-de-ronquido-y-apnea",
@@ -424,16 +1427,59 @@
    "zona": "sueno",
    "tipo": "cirugia",
    "oferta": "ofrece",
-   "resumen": "Faringoplastia con suturas barbadas y cirugía nasal para ensanchar la vía aérea cuando la anatomía lo indica. La endoscopia de sueño ayuda a localizar dónde se cierra.",
+   "resumen": "Faringoplastia y cirugía nasal para ensanchar la vía aérea cuando la anatomía lo indica. La endoscopia de sueño ayuda a localizar dónde se cierra.",
+   "html": "<p>La cirugía del ronquido y la apnea busca ensanchar y dar firmeza a la parte de la vía aérea que se cierra al dormir. No es una sola operación: puede ser cirugía nasal (septoplastia, turbinoplastia), cirugía del paladar como la <strong>faringoplastia con suturas barbadas</strong>, que reposiciona y tensa el paladar blando sin cortar tejido, retiro de amígdalas, o una combinación de ellas.</p><p>La clave está en elegir bien. Por eso la Dra. realiza una endoscopia de sueño (DISE) en quirófano, bajo sedación, para ver con exactitud dónde y cómo se cierra tu vía aérea mientras duermes, y propone la cirugía solo cuando la anatomía tiene una solución quirúrgica.</p>",
    "candidatos": [
     "Ronquido o apnea con obstrucción localizada en paladar o nariz",
-    "Personas que no toleran el CPAP, según valoración"
+    "Personas que no toleran el CPAP, según valoración",
+    "Amígdalas grandes que contribuyen a la apnea",
+    "Obstrucción nasal que impide usar el CPAP o lo hace ineficaz"
+   ],
+   "estudio_previo": "<p>Estudio del sueño en casa para graduar la apnea, exploración y endoscopia en consultorio, y endoscopia de sueño (DISE) en quirófano para localizar el sitio de obstrucción. Tomografía cuando la nariz es parte del plan. Estudios de laboratorio y valoración de anestesia.</p>",
+   "como_se_realiza": "<p>En hospital, bajo anestesia general. Según el plan, la Dra. corrige la nariz, realiza la faringoplastia con suturas barbadas y, si aplica, retira las amígdalas en el mismo tiempo. La estancia suele ser de una noche.</p>",
+   "recuperacion": "<p>Dolor de garganta durante una a dos semanas en la cirugía del paladar, controlado con analgésicos y alimentación suave; congestión en la cirugía nasal. La Dra. revisa en consulta y, pasados unos meses, repite el estudio del sueño en casa para medir el resultado.</p>",
+   "riesgos_y_alternativas": "<p>Como toda cirugía, tiene riesgos: sangrado, infección, molestias por la anestesia y la posibilidad de que la mejoría sea parcial o de que haga falta un procedimiento adicional. La Dra. te explica los riesgos específicos de tu caso y las alternativas antes de que decidas, y entrega el consentimiento informado por escrito.</p><p>En cirugía de apnea, la mejoría puede ser parcial y en algunos casos se combina con CPAP a menor presión o con un dispositivo oral. Alternativas: CPAP, dispositivo de avance mandibular, terapia posicional y control de peso.</p>",
+   "enfoque_dra": "<p>La Dra. tiene formación específica en cirugía de sueño y es miembro de la Sociedad Iberoamericana de Cirugía de Sueño. Su criterio es claro: operar a quien la anatomía lo permite y decírselo con honestidad a quien no, para que cada persona tenga el tratamiento que de verdad le funcione.</p>",
+   "faq": [
+    {
+     "pregunta": "¿La cirugía cura la apnea?",
+     "respuesta": "En casos bien seleccionados, sobre todo con obstrucción localizada, puede resolverla o reducirla mucho. En otros, mejora el ronquido y facilita tolerar el CPAP. La endoscopia de sueño ayuda a predecir el resultado."
+    },
+    {
+     "pregunta": "¿Qué es la endoscopia de sueño (DISE)?",
+     "respuesta": "Un estudio breve en quirófano en el que, bajo sedación que simula el sueño, la Dra. observa con un endoscopio dónde se cierra tu vía aérea. Es la base para decidir qué operar."
+    },
+    {
+     "pregunta": "¿Puedo operarme si no quiero usar CPAP?",
+     "respuesta": "Depende de tu anatomía y del grado de apnea. La Dra. te dice con claridad si eres candidato después del estudio y la endoscopia de sueño."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Referral of Adults with Obstructive Sleep Apnea for Surgical Consultation",
+     "autor": "American Academy of Sleep Medicine (AASM)",
+     "anio": "2021",
+     "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+     "tipo": "guia"
+    },
+    {
+     "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+     "autor": "SMORL y CCC",
+     "anio": "",
+     "url": "https://smorlccc.org.mx/",
+     "tipo": "sociedad"
+    }
    ],
    "resuelve": [
     "ronquido",
     "apnea-obstructiva-del-sueno"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "septoplastia",
+    "amigdalas-y-adenoides",
+    "cpap"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   },
   {
    "slug": "dispositivo-de-avance-mandibular",
@@ -442,15 +1488,50 @@
    "zona": "sueno",
    "tipo": "terapia",
    "oferta": "refiere",
-   "resumen": "Férula que adelanta la mandíbula durante el sueño para abrir la vía aérea. La Dra. lo indica y lo coordina con un odontólogo especializado.",
+   "resumen": "Férula que adelanta la mandíbula durante el sueño para abrir la vía aérea. La Dra. lo indica cuando conviene y te refiere con una odontóloga especializada en sueño para su fabricación y ajuste.",
+   "html": "<p>El dispositivo de avance mandibular es una férula hecha a medida, parecida a un protector bucal, que mantiene la mandíbula ligeramente adelantada mientras duermes. Al hacerlo, la lengua y el paladar se desplazan hacia adelante y la vía aérea se abre, lo que reduce el ronquido y las apneas.</p><p>Es una alternativa al CPAP en ronquido y apnea leve a moderada, y en personas que no toleran el CPAP. La Dra. valora si eres candidato y, cuando lo indica, te refiere con una odontóloga especializada en sueño que fabrica y ajusta el dispositivo; después, la Dra. verifica el resultado con un estudio del sueño.</p>",
    "candidatos": [
-    "Ronquido o apnea leve a moderada, según valoración"
+    "Ronquido o apnea leve a moderada, según valoración",
+    "Personas que no toleran el CPAP",
+    "Como complemento a otras medidas cuando el estudio lo respalda"
+   ],
+   "estudio_previo": "<p>Estudio del sueño en casa y exploración de la vía aérea por la Dra. para confirmar que el dispositivo es una buena opción. Revisión dental para asegurar que hay dientes y articulación en condiciones de usarlo.</p>",
+   "como_se_realiza": "<p>La odontóloga toma impresiones y fabrica el dispositivo a medida, y lo ajusta de forma progresiva en varias citas hasta encontrar el avance que funciona sin molestias. La Dra. coordina el proceso y, una vez ajustado, repite el estudio del sueño en casa para medir el resultado.</p>",
+   "recuperacion": "<p>No hay recuperación. En las primeras semanas puede haber molestia en los dientes o la mandíbula al despertar, que suele ceder con los ajustes.</p>",
+   "riesgos_y_alternativas": "<p>Es un tratamiento seguro. Con el uso prolongado pueden aparecer cambios leves en la mordida, por lo que el seguimiento dental es parte del plan. Alternativas: CPAP, cirugía nasal o del paladar, terapia posicional.</p>",
+   "enfoque_dra": "<p>La Dra. trabaja en equipo: indica el dispositivo cuando el estudio y la exploración lo respaldan, refiere con una odontóloga especializada en sueño y se queda a cargo de verificar que funcione. Así, el tratamiento no se queda en una férula sino en un resultado medido.</p>",
+   "faq": [
+    {
+     "pregunta": "¿Sirve cualquier férula de farmacia?",
+     "respuesta": "No. Las férulas genéricas no se ajustan ni se gradúan y pueden dañar la mordida. El dispositivo eficaz se fabrica a medida y lo ajusta un profesional."
+    },
+    {
+     "pregunta": "¿Es tan efectivo como el CPAP?",
+     "respuesta": "En apnea leve a moderada puede ser comparable porque se usa más horas. En apnea grave el CPAP sigue siendo el tratamiento de elección."
+    },
+    {
+     "pregunta": "¿Quién lo hace?",
+     "respuesta": "La Dra. te refiere con una odontóloga especializada en sueño. Ella fabrica y ajusta el dispositivo; la Dra. mide el resultado con un nuevo estudio."
+    }
+   ],
+   "fuentes": [
+    {
+     "titulo": "Clinical Practice Guideline for the Treatment of Obstructive Sleep Apnea and Snoring with Oral Appliance Therapy",
+     "autor": "American Academy of Sleep Medicine (AASM)",
+     "anio": "2015",
+     "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+     "tipo": "guia"
+    }
    ],
    "resuelve": [
     "ronquido",
     "apnea-obstructiva-del-sueno"
    ],
-   "nota": "Borrador de muestra pendiente de revisión médica. El texto clínico lo redacta y aprueba la Dra."
+   "relacionados": [
+    "cpap",
+    "estudio-del-sueno"
+   ],
+   "nota": "Borrador redactado a partir del cuestionario de la Dra. (9 de octubre de 2026). Pendiente de su revisión y aprobación médica."
   }
  ]
 }

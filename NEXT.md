@@ -1,10 +1,13 @@
 # NEXT — Siguiente trabajo
 
-Última actualización: 2026-10-08
+Última actualización: 2026-10-09
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] La Dra. responde el cuestionario de fichas en `/briefing/fichas/?t=…` (D-038); al confirmar, Claude redacta las 23 fichas.
+- [x] La Dra. respondió briefing y fichas (2026-10-09). **23 fichas redactadas con todos los campos** (`tools/content/medical-drafts.json`, D-039); tanda pendiente: `setup-medical.sh` + `setup-dra.sh` (cargo HU).
+- [ ] **La Dra. revisa y aprueba cada ficha en wp-admin** (Padecimientos / Tratamientos → estado médico «aprobada»); nada se publica antes. Prioridad sugerida: apnea, ronquido, estudio del sueño, CPAP, cirugía de ronquido, sinusitis, rinitis, tabique, septoplastia.
+- [ ] Fichas fuera del sitemap inicial que la Dra. marcó como OFRECE (perforación timpánica, voz, disfagia, cuello, alergias, somnolencia, insomnio, terapia posicional): Fase 8.1.
+- [ ] Artículos pedidos por la Dra. (oídos, postoperatorio de amígdalas, nariz): esqueletos en borrador; ella dicta el contenido (1–2 al mes).
 - [x] Aviso de Funcionamiento 2026 publicado (2619015036A00445).
 
 - [x] Checkpoint 3 cerrado (D-034): portada Home v2, logotipo completo, foto autorizada; conmutación con `tools/deploy/go-live-home.sh`.
