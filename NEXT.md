@@ -17,7 +17,7 @@
 - [ ] GBP: horario desactualizado → dejar «previa cita» con los días/horarios que la Dra. confirme; mantener WhatsApp y dirección (CAB Medical, consultorio 6, piso 2).
 - [ ] Capturas de 169/170/171/205 con sesión: José inicia sesión en la pestaña wp-login de la sesión local y avisa «ya».
 - [ ] **SSL de otorrino-monterrey.com** (Q-007): hPanel → Seguridad → SSL, instalar certificado para el dominio aparcado y su www; después verificar que https://otorrino-monterrey.com/ → 301 → https://drairinagonzalez.com/.
-- [ ] hPanel → CDN → optimización de imágenes: subir calidad (D-030) y purgar CDN.
+- [x] hPanel → CDN → optimización de imágenes (2026-10-09): escritorio 2400 px / 100 %, móvil 1200 px / 90 %; verificado: hero servido 2400×1600 WebP (1.18 MB) y 1200×800 (54 KB). Pendiente: José decide si baja escritorio a 90–95 % por peso (D-030).
 
 - [x] Checkpoint 2 cerrado (2026-10-08): dirección v2 aprobada; ajustes menores se harán sobre el build real.
 - [x] Adobe Fonts: Iskra carga en /preview/ (kit autorizado).
