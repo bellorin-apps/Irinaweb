@@ -21,6 +21,7 @@ final class MedicalReview {
 
 	public function register(): void {
 		add_action( 'init', [ self::class, 'map_capabilities' ], 5 );
+		add_action( 'init', [ self::class, 'ensure_role' ], 6 ); // Idempotente: solo escribe si falta una capacidad.
 		add_action( 'add_meta_boxes', [ $this, 'meta_box' ] );
 		add_action( 'save_post', [ $this, 'save_state' ], 10, 2 );
 		add_filter( 'wp_insert_post_data', [ $this, 'block_unapproved_publish' ], 10, 2 );
@@ -33,14 +34,19 @@ final class MedicalReview {
 		}
 		$role = get_role( self::ROLE );
 		if ( $role ) {
-			$role->add_cap( self::CAP );
+			if ( ! $role->has_cap( self::CAP ) ) {
+				$role->add_cap( self::CAP );
+			}
 			foreach ( [
 				'condicion'   => 'condiciones',
 				'tratamiento' => 'tratamientos',
 				'recurso'     => 'recursos',
 			] as $s => $p ) {
-				foreach ( [ "edit_$s", "edit_{$p}", "edit_others_{$p}", "edit_published_{$p}", "read_$s", "read_private_{$p}" ] as $cap ) {
-					$role->add_cap( $cap );
+				// edit_private_*: las fichas en estado "private" (p. ej. vista previa) también deben poder revisarse (Q-011).
+				foreach ( [ "edit_$s", "edit_{$p}", "edit_others_{$p}", "edit_published_{$p}", "edit_private_{$p}", "read_$s", "read_private_{$p}" ] as $cap ) {
+					if ( ! $role->has_cap( $cap ) ) {
+						$role->add_cap( $cap );
+					}
 				}
 			}
 		}
