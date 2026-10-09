@@ -4,7 +4,7 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [x] La Dra. respondió briefing y fichas (2026-10-09). **23 fichas redactadas con todos los campos** (`tools/content/medical-drafts.json`, D-039); tanda pendiente: `setup-medical.sh` + `setup-dra.sh` (cargo HU).
+- [x] La Dra. respondió briefing y fichas (2026-10-09). **23 fichas redactadas con todos los campos** (`tools/content/medical-drafts.json`, D-039); cargadas en WP por la sesión local (2026-10-09): condiciones 244–256 y 205, tratamientos 257–264 y 293, recursos 286/319/320, todas en borrador; credencial 287 con el cargo de la Dra.
 - [ ] **La Dra. revisa y aprueba cada ficha en wp-admin** (Padecimientos / Tratamientos → estado médico «aprobada»); nada se publica antes. Prioridad sugerida: apnea, ronquido, estudio del sueño, CPAP, cirugía de ronquido, sinusitis, rinitis, tabique, septoplastia.
 - [ ] Fichas fuera del sitemap inicial que la Dra. marcó como OFRECE (perforación timpánica, voz, disfagia, cuello, alergias, somnolencia, insomnio, terapia posicional): Fase 8.1.
 - [ ] Artículos pedidos por la Dra. (oídos, postoperatorio de amígdalas, nariz): esqueletos en borrador; ella dicta el contenido (1–2 al mes).
