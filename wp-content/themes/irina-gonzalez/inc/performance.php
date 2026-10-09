@@ -81,8 +81,13 @@ function irina_hero_image( int $attachment_id ): string {
 add_filter(
 	'intermediate_image_sizes_advanced',
 	static function ( array $sizes, array $image_meta, int $attachment_id ): array {
+		// Por nombre de archivo: al importar, el slug aún no está asignado cuando se generan los tamaños.
+		$file = basename( (string) ( $image_meta['file'] ?? '' ) );
 		$post = get_post( $attachment_id );
-		return $post && str_starts_with( (string) $post->post_name, 'hero-home' ) ? [] : $sizes;
+		if ( str_starts_with( $file, 'hero-home' ) || ( $post && str_starts_with( (string) $post->post_name, 'hero-home' ) ) ) {
+			return [];
+		}
+		return $sizes;
 	},
 	10,
 	3
