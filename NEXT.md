@@ -6,6 +6,7 @@
 
 - [x] La Dra. respondió briefing y fichas (2026-10-09). **23 fichas redactadas con todos los campos** (`tools/content/medical-drafts.json`, D-039); cargadas en WP por la sesión local (2026-10-09): condiciones 244–256 y 205, tratamientos 257–264 y 293, recursos 286/319/320, todas en borrador; credencial 287 con el cargo de la Dra.
 - [ ] **La Dra. revisa y aprueba cada ficha en la mini app** `/briefing/revision/?t=…` (D-040; desplegar con `deploy-briefing.sh`, requiere usuario `revisor_medico`); nada se publica antes. Tras cada aprobación o nota: la sesión local lee `briefing-privado/revision-latest.json`; las aprobadas se publican con `tools/deploy/publish-approved.sh --yes` (dry-run sin `--yes`; OK de José) y las notas se corrigen en `build-medical.py` + `setup-medical.sh` (que ya no toca aprobadas). Prioridad sugerida: apnea, ronquido, estudio del sueño, CPAP, cirugía de ronquido, sinusitis, rinitis, tabique, septoplastia.
+- [ ] **Publicar Dra., Primera consulta, Contacto y FAQ** (D-044): tanda `go-live-pages.sh` en la sesión local; después José vacía CDN y reenvía el sitemap. Pilares ORL/Sueño: al aprobarse las primeras fichas. Legales: tras 8.6.
 - [ ] Fichas fuera del sitemap inicial que la Dra. marcó como OFRECE (perforación timpánica, voz, disfagia, cuello, alergias, somnolencia, insomnio, terapia posicional): Fase 8.1.
 - [ ] Artículos pedidos por la Dra. (oídos, postoperatorio de amígdalas, nariz): esqueletos en borrador; ella dicta el contenido (1–2 al mes).
 - [x] Aviso de Funcionamiento 2026 publicado (2619015036A00445).

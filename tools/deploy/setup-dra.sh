@@ -32,6 +32,7 @@ rssh "rm -f /tmp/dra-elementor.json"
 w "post meta delete $P_DRA _elementor_css" >/dev/null 2>&1 || true
 # Elementor cachea el HTML de cada elemento en post meta; sin borrarlo, los cambios de _elementor_data no se ven.
 w "post meta delete $P_DRA _elementor_element_cache" >/dev/null 2>&1 || true
-w "post meta update $P_DRA rank_math_robots --format=json '[\"noindex\",\"nofollow\"]'" >/dev/null
+# noindex solo mientras siga en borrador; publicada (go-live-pages.sh) no se vuelve a marcar.
+if [ "$(w "post get $P_DRA --field=post_status")" = "publish" ]; then w "post meta delete $P_DRA rank_math_robots" >/dev/null 2>&1 || true; else w "post meta update $P_DRA rank_math_robots --format=json '[\"noindex\",\"nofollow\"]'" >/dev/null; fi
 w "cache flush" >/dev/null; w "litespeed-purge all" >/dev/null 2>&1 || true
 echo "Página $P_DRA lista (estado: $(w "post get $P_DRA --field=post_status")). Vista previa con sesión iniciada: $SITE_URL/?page_id=$P_DRA&preview=true"
