@@ -50,6 +50,7 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
   color: var(--color-secondary-strong);
   margin-bottom: var(--space-md);
+  line-height: var(--leading-title); /* 1em, como los títulos (propietario, 2026-10-09) */
   display: flex; align-items: center; gap: 0.7rem;
 }
 /* Overline con «lombriz» (propietario, 2026-10-09): onda fina (periodo 8 px, trazo 1.2) en el color del texto, animada muy sutil.
