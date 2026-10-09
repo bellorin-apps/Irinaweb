@@ -19,7 +19,7 @@ p{margin:0 0 10px;line-height:1.3em;max-width:62ch}
 /* eyebrow */
 .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--teal-strong);display:flex;align-items:center;gap:.7rem;margin:0 0 8px}
 .eyebrow--line::before{content:"";width:28px;height:1px;background:currentColor}
-.eyebrow--worm::before{content:"";width:34px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='10' viewBox='0 0 68 10'%3E%3Cpath d='M0 5c4.25-4 8.5-4 12.75 0s8.5 4 12.75 0 8.5-4 12.75 0 8.5 4 12.75 0 8.5-4 12.75 0 8.5 4 12.75 0' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") 0 0/68px 10px repeat-x;animation:worm 1.6s linear infinite}
+.eyebrow--worm::before{content:"";width:22px;height:8px;flex:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='8' viewBox='0 0 22 8'%3E%3Cpath d='M1 4c2.5-3.2 5-3.2 7.5 0s5 3.2 7.5 0 3.5-2.2 5-1' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") center/22px 8px no-repeat}
 @keyframes worm{to{background-position-x:-25.5px}}
 .big{font-family:"iskra",sans-serif;font-weight:600;font-size:2.4rem;line-height:1em;margin:0}
 /* botones */
@@ -28,8 +28,8 @@ p{margin:0 0 10px;line-height:1.3em;max-width:62ch}
 .btn svg{width:18px;height:18px;fill:currentColor}
 .s-wa{background:var(--teal)} .s-ghost{background:transparent;border-color:currentColor}
 .g{backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 6px 20px rgb(30 15 40/.1)}
-.g-wa{background:rgb(60 161 167/.82);border-color:rgb(255 255 255/.22)} .g-ghost{background:rgb(255 255 255/.1);border-color:rgb(255 255 255/.45)}
-.circ{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid currentColor;color:inherit;background:rgb(255 255 255/.1);backdrop-filter:blur(10px)}
+.g-wa{background:rgb(60 161 167/.82);border-color:transparent} .g-ghost{background:rgb(255 255 255/.14);border-color:transparent}
+.circ{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:0;color:inherit;background:rgb(255 255 255/.16);backdrop-filter:blur(10px)}
 .circ svg{width:18px;height:18px;fill:currentColor}
 /* hero móvil */
 .phones{display:flex;flex-wrap:wrap;gap:20px}
@@ -38,7 +38,7 @@ p{margin:0 0 10px;line-height:1.3em;max-width:62ch}
 .phone.zoom img{top:-12%;height:112%;object-position:70% 0}
 .shade{position:absolute;inset:0}
 .shade-a{background:none}
-.shade-b{background:linear-gradient(180deg,rgb(0 0 0/0) 0%,rgb(0 0 0/0) 56%,rgb(20 10 20/.55) 72%,rgb(20 10 20/.88) 100%)}
+.shade-b{background:linear-gradient(180deg,rgb(0 0 0/0) 0%,rgb(0 0 0/0) 58%,rgb(20 10 20/.12) 64%,rgb(20 10 20/.35) 74%,rgb(20 10 20/.58) 86%,rgb(20 10 20/.72) 100%)}
 .shade-c{background:linear-gradient(180deg,rgb(0 0 0/.15) 0%,rgb(0 0 0/0) 25%,rgb(20 10 20/.35) 55%,rgb(20 10 20/.9) 100%)}
 .shade-old{background:linear-gradient(180deg,rgb(0 0 0/.3) 0%,rgb(0 0 0/0) 20%,rgb(20 10 20/.08) 34%,rgb(20 10 20/.82) 50%,rgb(20 10 20/.94) 100%)}
 .txt{position:absolute;left:18px;right:18px;bottom:22px;color:#fff}
@@ -60,24 +60,24 @@ p{margin:0 0 10px;line-height:1.3em;max-width:62ch}
 
 <h2>1. Overline (texto corto sobre el título)</h2>
 <div class="row">
-  <div class="card"><div class="label">A · Sin guion (en producción)</div><p class="eyebrow">Tu otorrino en Monterrey</p><p class="big">Respirar bien,<br>dormir bien.</p></div>
-  <div class="card"><div class="label">B · Lombriz animada</div><p class="eyebrow eyebrow--worm">Tu otorrino en Monterrey</p><p class="big">Respirar bien,<br>dormir bien.</p></div>
+  <div class="card"><div class="label">A · Sin guion</div><p class="eyebrow">Tu otorrino en Monterrey</p><p class="big">Respirar bien,<br>dormir bien.</p></div>
+  <div class="card"><div class="label">B · Lombriz corta, estática, color del texto (en producción)</div><p class="eyebrow eyebrow--worm">Tu otorrino en Monterrey</p><p class="big">Respirar bien,<br>dormir bien.</p></div>
   <div class="card"><div class="label">C · Guion anterior</div><p class="eyebrow eyebrow--line">Tu otorrino en Monterrey</p><p class="big">Respirar bien,<br>dormir bien.</p></div>
 </div>
 
 <h2>2. Botones</h2>
 <div class="row">
   <div class="card" style="padding:0;overflow:hidden"><div class="label" style="padding:14px 16px 0">Sólidos (antes)</div><div class="dark" style="border-radius:0"><a class="btn s-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Agendar por WhatsApp</a><a class="btn s-ghost">Conocer a la Dra. Irina →</a></div></div>
-  <div class="card" style="padding:0;overflow:hidden"><div class="label" style="padding:14px 16px 0">Glass semitransparente (en producción, provisional)</div><div class="dark" style="border-radius:0"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Agendar por WhatsApp</a><a class="btn g g-ghost">Conocer a la Dra. Irina →</a><span class="circ"><svg viewBox="0 0 24 24"><use href="#ig"/></svg></span><span class="circ"><svg viewBox="0 0 24 24"><use href="#tt"/></svg></span><span class="circ"><svg viewBox="0 0 24 24"><use href="#fb"/></svg></span><span class="circ"><svg viewBox="0 0 24 24"><text x="12" y="17.2" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="currentColor">D</text></svg></span></div></div>
+  <div class="card" style="padding:0;overflow:hidden"><div class="label" style="padding:14px 16px 0">Glass semitransparente sin bordes (en producción)</div><div class="dark" style="border-radius:0"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Agendar por WhatsApp</a><a class="btn g g-ghost">Conocer a la Dra. Irina →</a><span class="circ"><svg viewBox="0 0 24 24"><use href="#ig"/></svg></span><span class="circ"><svg viewBox="0 0 24 24"><use href="#tt"/></svg></span><span class="circ"><svg viewBox="0 0 24 24"><use href="#fb"/></svg></span><span class="circ"><svg viewBox="0 0 24 24"><text x="12" y="17.2" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="currentColor">D</text></svg></span></div></div>
 </div>
 <p class="cap" style="width:auto">El círculo «D» de Doctoralia es provisional: hace falta el SVG oficial de la marca.</p>
 
 <h2>3. Hero móvil: encuadre y sombra</h2>
 <p>Encuadre según tu referencia: foto a altura completa, sin zoom, con aire arriba, abajo y a la izquierda del rostro. Cambia solo la sombra para la legibilidad del texto.</p>
 <div class="phones">
-  <div><div class="phone"><img src="https://drairinagonzalez.com/wp-content/uploads/2026/10/hero-home.png" alt=""><div class="shade shade-a"></div><div class="hdr"><div class="logo">Irina González<br>Sáez <small>ORL</small></div><div class="burger">≡</div></div><div class="txt"><p class="eyebrow">Tu otorrino en Monterrey</p><h3>Respirar bien,<br>dormir bien,<br><em>oír bien.</em></h3><p>Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.</p><div class="ctas"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>WhatsApp</a><a class="btn g g-ghost">La Dra. Irina →</a></div></div></div><p class="cap">A · Sin sombra</p></div>
-  <div><div class="phone"><img src="https://drairinagonzalez.com/wp-content/uploads/2026/10/hero-home.png" alt=""><div class="shade shade-b"></div><div class="hdr"><div class="logo">Irina González<br>Sáez <small>ORL</small></div><div class="burger">≡</div></div><div class="txt"><p class="eyebrow">Tu otorrino en Monterrey</p><h3>Respirar bien,<br>dormir bien,<br><em>oír bien.</em></h3><p>Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.</p><div class="ctas"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>WhatsApp</a><a class="btn g g-ghost">La Dra. Irina →</a></div></div></div><p class="cap">B · Sombra solo en la franja del texto (en producción)</p></div>
-  <div><div class="phone"><img src="https://drairinagonzalez.com/wp-content/uploads/2026/10/hero-home.png" alt=""><div class="shade shade-c"></div><div class="hdr"><div class="logo">Irina González<br>Sáez <small>ORL</small></div><div class="burger">≡</div></div><div class="txt"><p class="eyebrow">Tu otorrino en Monterrey</p><h3>Respirar bien,<br>dormir bien,<br><em>oír bien.</em></h3><p>Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.</p><div class="ctas"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>WhatsApp</a><a class="btn g g-ghost">La Dra. Irina →</a></div></div></div><p class="cap">C · Degradado suave completo</p></div>
+  <div><div class="phone"><img src="https://drairinagonzalez.com/wp-content/uploads/2026/10/hero-home.png" alt=""><div class="shade shade-a"></div><div class="hdr"><div class="logo">Irina González<br>Sáez <small>ORL</small></div><div class="burger">≡</div></div><div class="txt"><p class="eyebrow eyebrow--worm">Tu otorrino en Monterrey</p><h3>Respirar bien,<br>dormir bien,<br><em>oír bien.</em></h3><p>Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.</p><div class="ctas"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>WhatsApp</a><a class="btn g g-ghost">La Dra. Irina →</a></div></div></div><p class="cap">A · Sin sombra</p></div>
+  <div><div class="phone"><img src="https://drairinagonzalez.com/wp-content/uploads/2026/10/hero-home.png" alt=""><div class="shade shade-b"></div><div class="hdr"><div class="logo">Irina González<br>Sáez <small>ORL</small></div><div class="burger">≡</div></div><div class="txt"><p class="eyebrow eyebrow--worm">Tu otorrino en Monterrey</p><h3>Respirar bien,<br>dormir bien,<br><em>oír bien.</em></h3><p>Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.</p><div class="ctas"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>WhatsApp</a><a class="btn g g-ghost">La Dra. Irina →</a></div></div></div><p class="cap">B · Sombra desde la mitad del título, más suave y difuminada (en producción)</p></div>
+  <div><div class="phone"><img src="https://drairinagonzalez.com/wp-content/uploads/2026/10/hero-home.png" alt=""><div class="shade shade-c"></div><div class="hdr"><div class="logo">Irina González<br>Sáez <small>ORL</small></div><div class="burger">≡</div></div><div class="txt"><p class="eyebrow eyebrow--worm">Tu otorrino en Monterrey</p><h3>Respirar bien,<br>dormir bien,<br><em>oír bien.</em></h3><p>Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.</p><div class="ctas"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>WhatsApp</a><a class="btn g g-ghost">La Dra. Irina →</a></div></div></div><p class="cap">C · Degradado suave completo</p></div>
   <div><div class="phone zoom"><img src="https://drairinagonzalez.com/wp-content/uploads/2026/10/hero-home.png" alt=""><div class="shade shade-old"></div><div class="hdr"><div class="logo">Irina González<br>Sáez <small>ORL</small></div><div class="burger">≡</div></div><div class="txt"><p class="eyebrow">Tu otorrino en Monterrey</p><h3 style="font-size:2rem">Respirar bien,<br>dormir bien,<br><em>oír bien.</em></h3><p>Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.</p><div class="ctas"><a class="btn g g-wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>WhatsApp</a><a class="btn g g-ghost">La Dra. Irina →</a></div></div></div><p class="cap">Anterior (zoom + sombra fuerte), para comparar</p></div>
 </div>
 

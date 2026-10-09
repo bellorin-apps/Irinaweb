@@ -4,7 +4,8 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] **Tanda 1 (D-046)**: José confirma en `/preview/muestras/` el overline (sin guion / lombriz), los botones glass y la sombra del hero móvil (A/B/C); y entrega el **SVG oficial de Doctoralia** (hoy círculo «D» provisional). Interlineado: títulos 1em y texto 1.3em, ajustar a su gusto.
+- [x] **Tanda 1 (D-046)** confirmada por José (2026-10-09): overline lombriz corta estática en color del texto, botones glass sin bordes, sombra móvil desde la mitad del título más suave. 
+- [ ] José entrega el **SVG oficial de Doctoralia** (hoy círculo «D» provisional) en Recursos (Irina).
 
 - [x] La Dra. respondió briefing y fichas (2026-10-09). **23 fichas redactadas con todos los campos** (`tools/content/medical-drafts.json`, D-039); cargadas en WP por la sesión local (2026-10-09): condiciones 244–256 y 205, tratamientos 257–264 y 293, recursos 286/319/320, todas en borrador; credencial 287 con el cargo de la Dra.
 - [ ] **La Dra. revisa y aprueba cada ficha en la mini app** `/briefing/revision/?t=…` (D-040; desplegar con `deploy-briefing.sh`, requiere usuario `revisor_medico`); nada se publica antes. Tras cada aprobación o nota: la sesión local lee `briefing-privado/revision-latest.json`; las aprobadas se publican con `tools/deploy/publish-approved.sh --yes` (dry-run sin `--yes`; OK de José) y las notas se corrigen en `build-medical.py` + `setup-medical.sh` (que ya no toca aprobadas). Prioridad sugerida: apnea, ronquido, estudio del sueño, CPAP, cirugía de ronquido, sinusitis, rinitis, tabique, septoplastia.
