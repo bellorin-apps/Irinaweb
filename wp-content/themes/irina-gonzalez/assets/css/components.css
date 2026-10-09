@@ -123,8 +123,7 @@ body.menu-open { overflow: hidden; }
   /* Propietario (2026-10-09): empieza a mitad del título, menos oscura y más difuminada. */
   .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0) 0%, rgb(0 0 0 / 0) 58%, rgb(20 10 20 / 0.12) 64%, rgb(20 10 20 / 0.35) 74%, rgb(20 10 20 / 0.58) 86%, rgb(20 10 20 / 0.72) 100%); }
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
-  .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; align-items: flex-start; }
-  .di-bleed .di-eyebrow::before { margin-top: 0.1em; }
+  .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; } /* la lombriz queda centrada verticalmente aunque haya dos líneas */
   /* Salto de línea del overline solo en móvil («|» en el texto del hero): «Tu otorrino / en Monterrey». */
   .di-brm { display: block; height: 0; }
   .di-bleed h1 { font-size: clamp(1.9rem, 8.2vw, 2.3rem); margin-bottom: var(--space-sm); }
