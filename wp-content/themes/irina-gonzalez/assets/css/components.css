@@ -67,6 +67,8 @@ body.menu-open { overflow: hidden; }
 /* Cabeceras a sangre */
 .di-bleed { position: relative; min-height: 100svh; display: flex; align-items: flex-end; color: #fff; overflow: hidden; isolation: isolate; }
 .di-bleed--short { min-height: min(78svh, 760px); }
+/* 404: cabecera más baja; sin foto no hace falta la altura del hero. */
+.error404 .di-bleed--short { min-height: min(56svh, 560px); }
 .di-bleed__bg { position: absolute; inset: -8% 0 0; z-index: -2; will-change: transform; background: linear-gradient(160deg, #4a3350 0%, #8c4eaa 45%, #d8a98a 100%); background-size: cover; background-position: center; }
 .di-bleed__bg--warm { background: linear-gradient(165deg, #3b2a33 0%, #6d4460 35%, #a8707a 65%, #dba67f 100%); }
 .di-bleed__bg--night { background: linear-gradient(170deg, #0f0c1f 0%, #1b1630 45%, #2a2246 80%, #3b5b7a 100%); }
