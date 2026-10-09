@@ -110,7 +110,14 @@ $irina_soc   = array_filter(
 			);
 			?>
 			<span><?php esc_html_e( 'La información de este sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias.', 'irina-gonzalez' ); ?></span>
-			<?php if ( '' !== (string) irina_practice( 'aviso_publicidad' ) ) : ?><span><?php esc_html_e( 'Aviso de Publicidad COFEPRIS n.º', 'irina-gonzalez' ); ?> <?php echo esc_html( (string) irina_practice( 'aviso_publicidad' ) ); ?><?php if ( '' !== (string) irina_practice( 'aviso_funcionamiento' ) ) : ?> · <?php esc_html_e( 'Aviso de Funcionamiento n.º', 'irina-gonzalez' ); ?> <?php echo esc_html( (string) irina_practice( 'aviso_funcionamiento' ) ); ?><?php endif; ?></span><?php endif; ?>
+			<?php
+			if ( '' !== (string) irina_practice( 'aviso_publicidad' ) ) :
+				?>
+				<span><?php esc_html_e( 'Aviso de Publicidad COFEPRIS n.º', 'irina-gonzalez' ); ?> <?php echo esc_html( (string) irina_practice( 'aviso_publicidad' ) ); ?>
+				<?php
+				if ( '' !== (string) irina_practice( 'aviso_funcionamiento' ) ) :
+					?>
+				· <?php esc_html_e( 'Aviso de Funcionamiento n.º', 'irina-gonzalez' ); ?> <?php echo esc_html( (string) irina_practice( 'aviso_funcionamiento' ) ); ?><?php endif; ?></span><?php endif; ?>
 		</div>
 	</div>
 </footer>
