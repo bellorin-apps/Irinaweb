@@ -33,3 +33,4 @@
 - CDN de Hostinger (José, hPanel): optimización de imágenes a 2400 px / 100 % escritorio y 1200 px / 90 % móvil; hero servido a tamaño real (D-030). Mini apps siempre en versión clara (D-041).
 - Hero con fidelidad total (D-042/D-043): sin grano sobre fotos; origen PNG sin pérdida 2400×1600 (adjunto 322, versión con rostro editado por José) servido solo como original, sin srcset ni intermedias; la CDN optimiza por dispositivo (WebP 2400×1600 escritorio, 1200×800 móvil).
 - Dominio aparcado: SSL activo verificado (Q-007 cerrado) y 301 host-based para cualquier ruta en el `.htaccess` del webroot (`parked-redirect.sh`, Q-012).
+- Sitemap de Rank Math reparado (Q-013: la portada volvía a `noindex` por `setup-site.sh`; corregido por la sesión local). QA con sesión de las interiores (Q-015); barra móvil legible en el registro nocturno (Q-014).

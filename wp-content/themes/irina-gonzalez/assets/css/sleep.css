@@ -16,6 +16,9 @@ body.di-dark .di-header.is-scrolled .di-brand__logo--white { display: block; }
 body.di-dark .di-menu-panel { background: var(--color-night); }
 body.di-dark .di-menu-panel li a { color: #fff; border-color: rgb(255 255 255 / 0.15); }
 body.di-dark .di-symptom b { color: #fff; }
+/* Barra móvil: superficie clara también en el registro nocturno; los rótulos no heredan el acento claro (QA 2026-10-09). */
+body.di-dark .di-mobile-bar a { color: var(--color-text); }
+body.di-dark .di-mobile-bar a:first-child { color: var(--color-secondary-strong); }
 body.di-dark .di-symptom__n, body.di-dark .di-symptom small { color: rgb(255 255 255 / 0.6); }
 .di-breath { position: absolute; top: 10%; right: 6%; width: min(42vw, 480px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgb(255 255 255 / 0.18); animation: di-breath 7s ease-in-out infinite; z-index: -1; }
 .di-breath::before { content: ""; position: absolute; inset: 14%; border-radius: 50%; border: 1px solid rgb(255 255 255 / 0.22); }
