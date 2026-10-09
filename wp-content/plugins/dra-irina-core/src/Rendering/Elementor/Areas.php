@@ -38,6 +38,7 @@ final class Areas extends AbstractWidget {
 			$this->lines( $k . '_items', __( 'Temas', 'dra-irina-core' ) );
 			$this->text( $k . '_link', __( 'URL', 'dra-irina-core' ) );
 			$this->text( $k . '_link_label', __( 'Texto del enlace', 'dra-irina-core' ) );
+			$this->image( $k . '_image', __( 'Fotografía de fondo', 'dra-irina-core' ) );
 			$this->end_controls_section();
 		}
 	}
@@ -49,6 +50,7 @@ final class Areas extends AbstractWidget {
 			'items'      => self::to_lines( $s[ $k . '_items' ] ?? '' ),
 			'link'       => (string) ( $s[ $k . '_link' ] ?? '' ),
 			'link_label' => (string) ( $s[ $k . '_link_label' ] ?? '' ),
+			'image_id'   => self::image_id( $s[ $k . '_image' ] ?? null ),
 		];
 		return [
 			'eyebrow' => (string) ( $s['eyebrow'] ?? '' ),

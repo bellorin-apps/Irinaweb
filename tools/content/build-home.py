@@ -31,9 +31,11 @@ data = [
         "orl_eyebrow": "Otorrinolaringología", "orl_title": "Oído, nariz y garganta, desde los 0 meses",
         "orl_items": "Otitis\nHipoacusia\nTinnitus\nVértigo\nRinitis\nSinusitis\nTabique desviado\nAmígdalas\nVoz",
         "orl_link": "/otorrinolaringologia/", "orl_link_label": "Padecimientos y tratamientos",
+        "orl_image": {"id": "__ORL_IMG_ID__", "url": "__ORL_IMG_URL__"},
         "sleep_eyebrow": "Sueño y respiración", "sleep_title": "Ronquido y apnea del sueño, con diagnóstico y tratamiento completos",
         "sleep_items": "Poligrafía en casa\nEndoscopia de sueño\nCPAP\nFaringoplastia\nCirugía nasal",
-        "sleep_link": "/sueno/", "sleep_link_label": "Conocer la ruta de tratamiento"}),
+        "sleep_link": "/sueno/", "sleep_link_label": "Conocer la ruta de tratamiento",
+        "sleep_image": {"id": "__SUENO_IMG_ID__", "url": "__SUENO_IMG_URL__"}}),
     container("motivos", "di-motivos", {
         "eyebrow": "¿Qué estás sintiendo?", "title": "Motivos de consulta <em>frecuentes.</em>",
         "note": "Orientación para encontrar la información adecuada. No sustituye una valoración médica.",

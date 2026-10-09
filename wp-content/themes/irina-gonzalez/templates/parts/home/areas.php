@@ -1,6 +1,7 @@
 <?php
 /**
- * Home · dos paneles de área. $args: eyebrow, title, orl (eyebrow,title,items,link,link_label), sleep (idem).
+ * Home · dos paneles de área. $args: eyebrow, title, orl (eyebrow,title,items,link,link_label,image_id), sleep (idem).
+ * Con image_id el panel lleva la fotografía de fondo (propietario, tanda 2) y texto en blanco sobre un fundido inferior.
  *
  * @package IrinaGonzalez
  */
@@ -17,7 +18,7 @@ $irina_a     = wp_parse_args(
 	]
 );
 $irina_panel = static function ( array $p, string $mod ): void {
-	$p = wp_parse_args(
+	$p         = wp_parse_args(
 		$p,
 		[
 			'eyebrow'    => '',
@@ -25,11 +26,26 @@ $irina_panel = static function ( array $p, string $mod ): void {
 			'items'      => [],
 			'link'       => '',
 			'link_label' => '',
+			'image_id'   => 0,
 		]
 	);
+	$irina_img = (int) $p['image_id'];
 	?>
-	<a class="di-area di-area--<?php echo esc_attr( $mod ); ?> di-reveal" href="<?php echo esc_url( $p['link'] ); ?>">
-		<div class="di-area__fill"></div>
+	<a class="di-area di-area--<?php echo esc_attr( $mod ); ?><?php echo $irina_img ? ' di-area--photo' : ''; ?> di-reveal" href="<?php echo esc_url( $p['link'] ); ?>">
+		<div class="di-area__fill">
+		<?php
+		echo $irina_img ? wp_get_attachment_image(
+			$irina_img,
+			'full',
+			false,
+			[
+				'loading'  => 'lazy',
+				'decoding' => 'async',
+				'sizes'    => '(min-width: 900px) 50vw, 100vw',
+			]
+		) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. 
+		?>
+									</div>
 		<p class="di-eyebrow"><?php echo esc_html( $p['eyebrow'] ); ?></p>
 		<h3><?php echo esc_html( $p['title'] ); ?></h3>
 		<?php
