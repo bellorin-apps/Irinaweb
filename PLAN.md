@@ -138,7 +138,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | TODO | |
 | 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | TODO | |
 | 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
-| 8.7 | 404 útil (noindex), búsqueda interna si procede | 2 | TODO | |
+| 8.7 | 404 útil (noindex), búsqueda interna si procede | 2 | REVIEW | `404.php`: cabecera a sangre, rutas publicadas (omite borradores), WhatsApp, nota para enlaces del dominio viejo; sin buscador (sitio pequeño) |
 | 8.8 | Navegador de síntomas (orientación, no diagnóstico) | 3 | TODO | |
 | 8.9 | Favicon/app icons, OG template | 1 | TODO | |
 
