@@ -27,7 +27,7 @@ $irina_allowed = [
 ];
 ?>
 <section class="di-bleed<?php echo $irina_a['short'] ? ' di-bleed--short' : ''; ?>">
-	<div class="di-bleed__bg di-bleed__bg--<?php echo esc_attr( $irina_a['variant'] ); ?>"><?php echo $irina_a['image_id'] ? wp_get_attachment_image( (int) $irina_a['image_id'], 'full' ) : ''; ?></div>
+	<div class="di-bleed__bg di-bleed__bg--<?php echo esc_attr( $irina_a['variant'] ); ?>"><?php echo $irina_a['image_id'] ? irina_hero_image( (int) $irina_a['image_id'] ) : ''; ?></div>
 	<?php
 	if ( $irina_a['breath'] ) :
 		?>

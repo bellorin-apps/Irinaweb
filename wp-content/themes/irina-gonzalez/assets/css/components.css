@@ -74,6 +74,8 @@ body.menu-open { overflow: hidden; }
 .di-bleed__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 65% 40%; }
 }
 .di-bleed__bg::after { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: 0.28; mix-blend-mode: overlay; }
+/* Sin grano sobre fotografías: la textura resta nitidez a la foto del hero (propietario, 2026-10-09). */
+.di-bleed__bg:has(img)::after { display: none; }
 .di-bleed__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.55) 100%); }
 .di-bleed .di-container { padding-block: clamp(6rem, 14vh, 10rem) clamp(3.5rem, 9vh, 7rem); }
 .di-bleed h1 { color: #fff; max-width: none; }

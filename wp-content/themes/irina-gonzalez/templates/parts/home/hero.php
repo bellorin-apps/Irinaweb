@@ -26,7 +26,7 @@ if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
 }
 ?>
 <section class="di-bleed">
-	<div class="di-bleed__bg di-bleed__bg--warm"><?php echo $irina_a['image_id'] ? wp_get_attachment_image( (int) $irina_a['image_id'], 'full' ) : ''; ?></div>
+	<div class="di-bleed__bg di-bleed__bg--warm"><?php echo $irina_a['image_id'] ? irina_hero_image( (int) $irina_a['image_id'] ) : ''; ?></div>
 	<div class="di-bleed__shade"></div>
 	<div class="di-container">
 		<p class="di-eyebrow"><?php echo esc_html( $irina_a['eyebrow'] ); ?></p>
