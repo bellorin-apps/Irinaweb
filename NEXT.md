@@ -5,7 +5,7 @@
 ## Prioridad 1 — Desbloqueadores (propietario)
 
 - [ ] La Dra. responde el cuestionario de fichas en `/briefing/fichas/?t=…` (D-038); al confirmar, Claude redacta las 23 fichas.
-- [ ] PDF del Aviso de Funcionamiento (no estaba en el Escritorio) → giro, fecha y responsable sanitario.
+- [ ] Aviso de Funcionamiento: elegir qué número publicar (2026: 2619015036A00445, recomendado; o 2025: 2519015036X01373). Al decidir, Claude lo cambia por REST.
 
 - [x] Checkpoint 3 cerrado (D-034): portada Home v2, logotipo completo, foto autorizada; conmutación con `tools/deploy/go-live-home.sh`.
 
