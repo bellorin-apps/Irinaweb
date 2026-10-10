@@ -22,7 +22,7 @@ page = [
     container("dra-enfoque", "di-narrativa", {
         "eyebrow": "Enfoque", "title": "«<b>Escucharte</b> <br class=\"di-brd\">también es parte <br class=\"di-brd\">del <b><em>tratamiento</em></b>»",
         "lead": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad, sin promesas que no se puedan cumplir.",
-        "text": "", "draft": "yes",
+        "text": "", "draft": "",  # Texto confirmado por la Dra. (propietario, 2026-10-10): se retira la marca de borrador (D-058)
         "image": {"id": "__DRA_ENDO_ID__", "url": "__DRA_ENDO_URL__"}, "image_pos": "right", "image_alt": "Cabezal de cámara de endoscopia que la Dra. utiliza en consultorio"}),
     container("dra-creds", "di-credenciales", {
         "eyebrow": "Formación y certificaciones", "title": "Credenciales <em>verificables</em>",
