@@ -209,6 +209,8 @@ body.menu-open { overflow: hidden; }
 @media (min-width: 1024px) { .di-section--doctor-bg .di-doctor__text { padding-bottom: 9rem; } }
 .di-doctor__portrait { align-self: end; line-height: 0; }
 .di-doctor__portrait img { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; object-position: bottom; }
+.di-section--doctor-light { color: var(--color-text); }
+.di-section--doctor-light .di-quote { color: var(--color-text); }
 .di-section--doctor-dark { color: #fff; }
 .di-section--doctor-dark .di-quote, .di-section--doctor-dark .di-creds { color: #fff; }
 .di-section--doctor-dark .di-eyebrow { color: var(--color-accent); }
