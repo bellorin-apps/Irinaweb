@@ -235,7 +235,7 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-btn .di-btn__long { display: none; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; bottom: 0; height: 560px; max-height: 100%; transform: translateX(40%); line-height: 0; }
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; bottom: 0; height: 560px; max-height: 100%; transform: translateX(46%); line-height: 0; }
   .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: right bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
