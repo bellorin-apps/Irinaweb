@@ -101,7 +101,7 @@ body.menu-open { overflow: hidden; }
 .di-bleed__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.55) 100%); }
 .di-bleed .di-container { padding-block: clamp(6rem, 14vh, 10rem) clamp(3.5rem, 9vh, 7rem); }
 .di-bleed h1 { color: #fff; max-width: none; }
-/* Separadores (D-049, propietario 2026-10-10): lombriz estática y sutil SOLO en la línea superior de motivos de consulta (.di-symptoms; entre ítems línea fina), confianza del hero (.di-hero-trust), pasos (.di-step), ruta (.di-path li) y fila legal del pie (.di-footer__legal); el resto, líneas finas. */
+/* Separadores (D-049, propietario 2026-10-10): lombriz estática y sutil SOLO en la línea superior de motivos de consulta (.di-symptoms; entre ítems línea fina), confianza del hero (.di-hero-trust), pasos (.di-step), línea superior de la ruta (.di-path; entre ítems fina) y fila legal del pie (.di-footer__legal); el resto, líneas finas. */
 /* Fondos oscuros: acento turquesa en los tramos de título (D-049). */
 .di-bleed, .di-cta-bleed, .di-footer, .di-section--doctor-dark { --title-accent: var(--color-accent); }
 /* CTA morado: la cursiva va en blanco, sin acento (propietario, 2026-10-10). */
@@ -294,8 +294,8 @@ body.menu-open { overflow: hidden; }
 .di-step h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
 
 /* Ruta numerada (Sueño en Home, tratamientos) */
-.di-path { list-style: none; padding: 0; margin: 0; display: grid; max-width: none; }
-.di-path > li { display: grid; grid-template-columns: 3.5rem 1fr; gap: var(--space-md); padding: 1.2rem 0; background: var(--worm-border) 0 0 / 8px 8px repeat-x; align-items: baseline; }
+.di-path { list-style: none; padding: 0; margin: 0; display: grid; max-width: none; background: var(--worm-border) 0 0 / 8px 8px repeat-x; } /* Lombriz solo encima del primer ítem (propietario, 2026-10-10). */
+.di-path > li { display: grid; grid-template-columns: 3.5rem 1fr; gap: var(--space-md); padding: 1.2rem 0; border-top: 1px solid var(--color-border); align-items: baseline; }
 .di-path > li > b { font-family: var(--font-display); font-weight: 300; font-size: 1.8rem; color: var(--color-secondary-strong); }
 .di-sleep-light { background: linear-gradient(180deg, var(--color-surface) 0%, #e8f1f1 100%); }
 .di-sleep-light__grid { display: grid; gap: var(--space-2xl); align-items: center; }
