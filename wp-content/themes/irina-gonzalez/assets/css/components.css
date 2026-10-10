@@ -231,11 +231,13 @@ body.menu-open { overflow: hidden; }
   /* Texto completo (overline, cita, párrafo, credenciales, botón) en la columna izquierda; el retrato, algo mayor, a la derecha. */
   .di-section--doctor-bg .di-doctor__text { width: 56%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
   .di-section--doctor-bg .di-doctor__lead { font-size: 0.92rem; }
-  .di-section--doctor-bg .di-creds { font-size: 0.86rem; }
+  /* Propietario (2026-10-09): sin la lista de credenciales en móvil (quedan overline, cita, párrafo y botón). */
+  .di-section--doctor-bg .di-creds { display: none; }
   .di-section--doctor-bg .di-btn .di-btn__long { display: none; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; bottom: 0; height: 560px; max-height: 100%; transform: translateX(46%); line-height: 0; }
+  /* Retrato a todo el alto de la sección (puede recortarse por arriba o por la derecha), con ≥16 px de aire respecto al texto. */
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; top: 0; bottom: 0; transform: translateX(50%); line-height: 0; }
   .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: right bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
