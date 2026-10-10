@@ -51,7 +51,7 @@ $irina_a = wp_parse_args(
 			[
 				'loading'  => 'lazy',
 				'decoding' => 'async',
-				'sizes'    => '(min-width: 900px) 40vw, 60vw',
+				'sizes'    => '(min-width: 900px) 40vw, 100vw', // Móvil: el retrato ocupa todo el alto de la columna y su ancho es ~93 % del viewport (334/360 px); con 60vw el navegador pedía 483w y la CDN servía 215 px (borroso en 2×).
 			]
 		) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. 
 		?>
