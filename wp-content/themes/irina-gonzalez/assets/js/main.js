@@ -100,7 +100,7 @@
       items.forEach(function (li, k) {
         var b = document.createElement('button'); b.type = 'button';
         b.setAttribute('aria-label', 'Credencial ' + (k + 1) + ' de ' + items.length);
-        b.innerHTML = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="7.5"/></svg>';
+        b.innerHTML = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="di-ring__track" cx="9" cy="9" r="7.5"/><circle class="di-ring__bar" cx="9" cy="9" r="7.5"/></svg>';
         b.addEventListener('click', function () { show(k, k > idx ? 1 : -1); pauseThenResume(); });
         dots.appendChild(b);
       });
