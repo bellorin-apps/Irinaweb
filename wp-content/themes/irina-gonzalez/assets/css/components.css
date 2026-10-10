@@ -256,6 +256,10 @@ body.menu-open { overflow: hidden; }
 
 .di-section--doctor-light { color: var(--color-text); }
 .di-section--doctor-light .di-quote { color: var(--color-text); }
+/* AA sobre el crema de la foto, más oscuro que --color-surface (auditoría 2026-10-10).
+   Conserva teal y glass; no añade sombras. */
+.di-section--doctor-light .di-eyebrow { color: color-mix(in srgb, var(--color-secondary-strong) 85%, var(--color-text)); }
+.di-section--doctor-light .di-btn--primary { background: color-mix(in srgb, var(--color-primary-strong) 90%, transparent); }
 .di-section--doctor-dark { color: #fff; }
 .di-section--doctor-dark .di-quote, .di-section--doctor-dark .di-creds { color: #fff; }
 .di-section--doctor-dark .di-eyebrow { color: var(--color-accent); }
@@ -290,26 +294,27 @@ body.menu-open { overflow: hidden; }
 .di-section--doctor-dark .di-creds__dots button { background: rgb(255 255 255 / 0.35); }
 .di-section--doctor-dark .di-creds__dots button[aria-current="true"] { background: #fff; }
 .di-section--doctor-dark .di-creds__dots svg circle { stroke: #fff; }
-/* Móvil (propietario, 2026-10-10): texto a la izquierda y la Dra. a la derecha, solo su mitad visible, sin tocar el texto. */
+/* Móvil · auditoría 2026-10-10, variante A: columna legible, gap 16 px y retrato
+   proporcional con tope de ancho. El borde del viewport es el único recorte. */
 @media (max-width: 899px) {
-  .di-section--doctor-bg .di-doctor { display: block; position: relative; min-height: 560px; }
+  .di-section--doctor-bg .di-doctor { display: block; position: relative; min-height: 0; }
   /* Fondo de izquierda a derecha (propietario, 2026-10-10): la foto cubre toda la sección anclada al borde izquierdo e inferior, así los tulipanes
      de la izquierda se ven a tamaño (lo que sobra por la derecha queda bajo el retrato); fundido arriba hacia el crema de la propia foto.
      Propietario: los tulipanes un poco escondidos por la izquierda (la foto se desplaza −8vw). */
   .di-section--doctor-bg { background: #eee2da; }
   .di-section--doctor-bg .di-doctor__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: -8vw bottom; -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); }
   /* Texto completo (overline, cita, párrafo, credenciales, botón) en la columna izquierda; el retrato, algo mayor, a la derecha. */
-  .di-section--doctor-bg .di-doctor__text { width: 56%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
-  .di-section--doctor-bg .di-doctor__lead { font-size: 0.92rem; }
-  .di-section--doctor-bg .di-creds { font-size: 0.86rem; }
+  .di-section--doctor-bg .di-doctor__text { width: 62%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
+  .di-section--doctor-bg .di-doctor__lead { font-size: clamp(0.86rem, 3.5vw, 0.92rem); line-height: var(--leading-body); }
+  .di-section--doctor-bg .di-quote { font-size: clamp(1.4rem, 6vw, 1.8rem); margin-block: var(--space-lg); }
+  .di-section--doctor-bg .di-creds { font-size: 0.86rem; line-height: var(--leading-body); }
   .di-section--doctor-bg .di-btn .di-btn__long { display: none; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
-  /* Retrato a todo el alto de la columna (propietario, 2026-10-10: «que se vea en casi todo el alto, no importa si la cara se esconde un poco»):
-     alto 100 %, ancho automático, silueta natural por la izquierda (a 16 px de la columna de texto) y recortada solo por el borde derecho
-     del viewport (right negativo = gutter): en 360–400 px se recorta parte del rostro, aceptado por el propietario. */
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: calc(-1 * var(--gutter)); top: 0; bottom: 0; height: auto; max-height: none; transform: none; line-height: 0; overflow: hidden; }
-  .di-section--doctor-bg .di-doctor__portrait img { position: absolute; left: 0; bottom: 0; display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: left bottom; }
+  /* Tope proporcional: evita que el alto del párrafo expulse el rostro. Sin translateX.
+     1.55 × espacio visible conserva la silueta y deja el rostro dentro del viewport. */
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(62% + 16px); right: calc(-1 * var(--gutter)); top: 0; bottom: 0; transform: none; line-height: 0; }
+  .di-section--doctor-bg .di-doctor__portrait img { position: absolute; left: 0; bottom: 0; display: block; width: 155%; height: auto; max-height: 100%; max-width: none; object-fit: contain; object-position: left bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }

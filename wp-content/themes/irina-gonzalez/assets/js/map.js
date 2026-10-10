@@ -3,7 +3,7 @@
   'use strict';
   window.diInitMap = function () {
     var el = document.getElementById('di-map');
-    if (!el || !window.google || !google.maps) { return; }
+    if (!el || !window.google || !google.maps || el.querySelector('.gm-style')) { return; }
     var pos = { lat: parseFloat(el.dataset.lat), lng: parseFloat(el.dataset.lng) };
     var map = new google.maps.Map(el, {
       center: pos,

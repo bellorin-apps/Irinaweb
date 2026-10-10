@@ -51,7 +51,7 @@ $irina_a = wp_parse_args(
 			[
 				'loading'  => 'lazy',
 				'decoding' => 'async',
-				'sizes'    => '(min-width: 900px) 40vw, 100vw',
+				'sizes'    => '(min-width: 900px) 40vw, 60vw',
 			]
 		) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. 
 		?>

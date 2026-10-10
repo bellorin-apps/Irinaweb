@@ -78,7 +78,7 @@
     function pauseThenResume() { stop(); clearTimeout(resumeTimer); resumeTimer = setTimeout(start, 8000); }
     // Deslizar con el dedo: umbral 40 px horizontal.
     var sx = 0, sy = 0, swiping = false;
-    creds.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; swiping = true; }, { passive: true });
+    creds.addEventListener('touchstart', function (e) { pauseThenResume(); sx = e.touches[0].clientX; sy = e.touches[0].clientY; swiping = true; }, { passive: true });
     creds.addEventListener('touchend', function (e) {
       if (!swiping) { return; } swiping = false;
       var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
@@ -89,7 +89,8 @@
       // Altura fija = ítem más alto, para que la sección no salte entre ítems.
       var h = 0; items.forEach(function (li) { h = Math.max(h, li.getBoundingClientRect().height); });
       creds.classList.add('di-creds--carousel'); creds.style.minHeight = h ? h + 'px' : '';
-      creds.setAttribute('aria-live', 'polite');
+      // No anunciar cambios automáticos cada cuatro segundos al lector de pantalla.
+      creds.setAttribute('aria-live', 'off');
       dots = document.createElement('div'); dots.className = 'di-creds__dots';
       items.forEach(function (li, k) {
         var b = document.createElement('button'); b.type = 'button';
@@ -102,6 +103,20 @@
       show(0, 1); start();
     }
     setup();
+    function measureCards() {
+      var h = 0;
+      items.forEach(function (li) {
+        var old = li.getAttribute('style');
+        li.style.display = 'flex'; li.style.position = 'absolute'; li.style.visibility = 'hidden';
+        h = Math.max(h, li.getBoundingClientRect().height);
+        if (old === null) { li.removeAttribute('style'); } else { li.setAttribute('style', old); }
+      });
+      creds.style.minHeight = h ? h + 'px' : '';
+    }
+    window.addEventListener('resize', measureCards);
+    if (document.fonts) { document.fonts.ready.then(measureCards); }
+    creds.addEventListener('focusin', stop);
+    if (dots) { dots.addEventListener('focusin', stop); }
   }
 
   // Indicador de scroll del hero: baja hasta el final de la cabecera a sangre.
@@ -120,16 +135,17 @@
     var fields = { name: 'di_name', phone: 'di_phone', email: 'di_email', motivo: 'di_motivo', consent: 'di_consent' };
     function showError(msg, field) {
       status.textContent = msg; status.hidden = false; status.classList.remove('is-ok');
-      form.querySelectorAll('.is-invalid').forEach(function (el) { el.classList.remove('is-invalid'); });
+      form.querySelectorAll('.is-invalid').forEach(function (el) { el.classList.remove('is-invalid'); el.removeAttribute('aria-invalid'); });
       var el = field && fields[field] ? form.querySelector('[name="' + fields[field] + '"]') : null;
-      if (el) { el.classList.add('is-invalid'); el.focus(); }
+      if (el) { el.classList.add('is-invalid'); el.setAttribute('aria-invalid', 'true'); el.focus(); }
     }
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (form.classList.contains('is-sending')) { return; }
       if (!form.checkValidity()) {
         var bad = form.querySelector(':invalid');
         showError(bad && bad.name === 'di_consent' ? 'Necesitamos tu consentimiento para contactarte.' : 'Revisa los campos marcados.', null);
-        if (bad) { bad.classList.add('is-invalid'); bad.focus(); }
+        if (bad) { bad.classList.add('is-invalid'); bad.setAttribute('aria-invalid', 'true'); bad.focus(); }
         return;
       }
       form.classList.add('is-sending');
