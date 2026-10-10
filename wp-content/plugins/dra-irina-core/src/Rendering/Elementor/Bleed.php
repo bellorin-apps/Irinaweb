@@ -46,6 +46,8 @@ final class Bleed extends AbstractWidget {
 			]
 		);
 		$this->image( 'image', __( 'Fotografía de fondo', 'dra-irina-core' ) );
+		$this->text( 'focus', __( 'Encuadre escritorio (object-position, ej. «65% 40%»; vacío = por defecto)', 'dra-irina-core' ) );
+		$this->text( 'focus_mobile', __( 'Encuadre móvil (object-position, ej. «60% 50%»)', 'dra-irina-core' ) );
 		$this->text( 'crumb', __( 'Miga de pan (texto final)', 'dra-irina-core' ) );
 		$this->text( 'whatsapp_label', __( 'Botón WhatsApp · texto (vacío = por defecto)', 'dra-irina-core' ) );
 		$this->text( 'secondary_label', __( 'Botón secundario · texto', 'dra-irina-core' ) );
@@ -67,6 +69,8 @@ final class Bleed extends AbstractWidget {
 			'breath'   => 'night' === ( $s['variant'] ?? '' ),
 			'crumbs'   => '' !== (string) ( $s['crumb'] ?? '' ) ? [ [ (string) $s['crumb'], '' ] ] : [],
 			'image_id' => self::image_id( $s['image'] ?? null ),
+			'focus'    => (string) ( $s['focus'] ?? '' ),
+			'focus_m'  => (string) ( $s['focus_mobile'] ?? '' ),
 			'cta'      => $cta,
 		];
 	}

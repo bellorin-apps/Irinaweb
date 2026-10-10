@@ -112,7 +112,7 @@ body.menu-open { overflow: hidden; }
 .di-bleed.di-bleed--light .di-btn--whatsapp:hover { background: #236468; }
 .di-bleed.di-bleed--light .di-btn--ghost { background: rgb(36 31 35 / 0.08); color: var(--color-text); }
 .di-bleed.di-bleed--light .di-btn--ghost:hover { background: rgb(36 31 35 / 0.14); color: var(--color-text); }
-.di-bleed__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 65% 40%; }
+.di-bleed__bg img { width: 100%; height: 100%; object-fit: cover; object-position: var(--bleed-focus, 65% 40%); } /* encuadre por widget (D-055) */
 }
 .di-bleed__bg::after { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: 0.28; mix-blend-mode: overlay; }
 /* Sin grano sobre fotografías: la textura resta nitidez a la foto del hero (propietario, 2026-10-09). */
@@ -147,7 +147,7 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 899px) {
   /* La foto 3:2 cubre por altura: object-position Y no tiene recorrido. Se recorta el 12 % superior para subir el rostro. */
   /* Tanda 1: foto a altura completa sin zoom, centrada un poco a la izquierda del rostro (aire arriba, abajo y a la izquierda). */
-  .di-bleed__bg img { position: absolute; top: 0; left: 0; height: 100%; object-position: 60% 50%; }
+  .di-bleed__bg img { position: absolute; top: 0; left: 0; height: 100%; object-position: var(--bleed-focus-m, 60% 50%); }
   .di-bleed__bg--light:has(img)::before { background: linear-gradient(180deg, rgb(251 247 242 / 0) 0%, rgb(251 247 242 / 0) 32%, rgb(251 247 242 / 0.86) 52%, rgb(251 247 242 / 0.96) 100%); }
   /* Sombra solo en la franja inferior del texto; el rostro queda limpio. Variantes en /preview/muestras/. */
   /* Propietario (2026-10-09): empieza a mitad del título, menos oscura y más difuminada. */

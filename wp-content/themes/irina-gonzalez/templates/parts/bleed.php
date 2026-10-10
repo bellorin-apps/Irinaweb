@@ -19,6 +19,16 @@ $irina_a       = wp_parse_args(
 		'image_id' => 0,
 		'cta'      => '',
 		'breath'   => false,
+		'focus'    => '',
+		'focus_m'  => '',
+	]
+);
+// Encuadre de la foto por dispositivo (object-position), validado: solo porcentajes/px/palabras.
+$irina_focus = static fn( string $v ): string => preg_match( '/^[a-z0-9%.\s-]{1,40}$/i', trim( $v ) ) ? trim( $v ) : '';
+$irina_style = array_filter(
+	[
+		'' !== $irina_focus( $irina_a['focus'] ) ? '--bleed-focus:' . $irina_focus( $irina_a['focus'] ) : '',
+		'' !== $irina_focus( $irina_a['focus_m'] ) ? '--bleed-focus-m:' . $irina_focus( $irina_a['focus_m'] ) : '',
 	]
 );
 $irina_allowed = [
@@ -27,7 +37,7 @@ $irina_allowed = [
 	'br' => [ 'class' => [] ],
 ];
 ?>
-<section class="di-bleed di-bleed--<?php echo esc_attr( $irina_a['variant'] ); ?><?php echo $irina_a['short'] ? ' di-bleed--short' : ''; ?>">
+<section class="di-bleed di-bleed--<?php echo esc_attr( $irina_a['variant'] ); ?><?php echo $irina_a['short'] ? ' di-bleed--short' : ''; ?>"<?php echo $irina_style ? ' style="' . esc_attr( implode( ';', $irina_style ) ) . '"' : ''; ?>>
 	<div class="di-bleed__bg di-bleed__bg--<?php echo esc_attr( $irina_a['variant'] ); ?>"><?php echo $irina_a['image_id'] ? irina_hero_image( (int) $irina_a['image_id'] ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. ?></div>
 	<?php
 	if ( $irina_a['breath'] ) :
