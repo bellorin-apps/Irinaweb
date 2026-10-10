@@ -471,3 +471,23 @@ body.has-mobile-bar { padding-bottom: 72px; }
 .di-form.is-sending .di-form__submit { opacity: 0.7; pointer-events: none; }
 /* Marcador avanzado (D-059): contorno de foco solo con teclado. */
 gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
+
+/* Cabecera con fotografía entregada por el propietario (2026-10-10, página de la Dra.; clase di-bleed--photo cuando el widget lleva imagen):
+   la foto se ve tal cual, sin sombra ni degradado añadidos, y sin el desplazamiento de parallax arriba (que metía el rostro bajo la cabecera fija).
+   En móvil la estructura cambia: la foto ocupa la parte alta a todo el ancho con la figura entera y el texto va debajo sobre un relleno plano
+   del color de la propia imagen (--bleed-fill, muestreado del fondo de la foto), con texto oscuro para contraste AA. */
+.di-bleed--photo .di-bleed__shade { display: none; }
+.di-bleed--photo .di-bleed__bg { inset: 0; }
+@media (max-width: 899px) {
+  .di-bleed--photo { --di-photo-h: 60svh; --title-accent: var(--color-primary); background: var(--bleed-fill, #d3a98a); color: var(--color-text); }
+  .di-bleed--photo .di-bleed__bg { inset: 0 0 auto 0; height: var(--di-photo-h); background: var(--bleed-fill, #d3a98a); transform: none !important; /* sin parallax: la foto no debe deslizarse sobre el texto */ }
+  .di-bleed--photo .di-container { padding-top: calc(var(--di-photo-h) + var(--space-lg)); }
+  .di-bleed--photo h1 { color: var(--color-text); }
+  .di-bleed--photo .di-eyebrow { color: var(--color-secondary-strong); }
+  .di-bleed--photo .di-lead { color: var(--color-text); }
+  .di-bleed--photo .di-crumbs, .di-bleed--photo .di-crumbs a { color: rgb(36 31 35 / 0.7); }
+  .di-bleed--photo .di-btn--whatsapp { background: var(--color-secondary-strong); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .di-bleed--photo .di-btn--whatsapp:hover { background: #236468; }
+  .di-bleed--photo .di-btn--ghost { background: rgb(36 31 35 / 0.08); color: var(--color-text); }
+  .di-bleed--photo .di-btn--ghost:hover { background: rgb(36 31 35 / 0.14); color: var(--color-text); }
+}
