@@ -174,11 +174,9 @@ body.menu-open { overflow: hidden; }
 .di-area--photo { color: #fff; }
 .di-area--photo:hover { color: #fff; }
 .di-area--photo h3, .di-area--photo .di-area__more { color: #fff; }
-/* Etiquetas en claros de la paleta: lila claro en ORL, teal claro en Sueño. */
-.di-area.di-area--photo ul, .di-area.di-area--photo li { font-weight: 500; }
-.di-area.di-area--orl.di-area--photo ul, .di-area.di-area--orl.di-area--photo li { color: #d2badc; }
-/* Sueño (propietario, 2026-10-10): etiquetas y overline en teal fuerte sobre el azul claro de la foto; título blanco con sombra. */
-.di-area.di-area--sleep.di-area--photo ul, .di-area.di-area--sleep.di-area--photo li, .di-area.di-area--sleep.di-area--photo .di-eyebrow { color: var(--color-secondary-strong); text-shadow: none; }
+/* Opción B (propietario, 2026-10-10): etiquetas tipo cápsula glass (blur) con texto blanco; overline y título blancos con sombra suave. */
+.di-area.di-area--photo ul { gap: 0.4rem; color: #fff; font-weight: 500; }
+.di-area.di-area--photo li { padding: 0.36rem 0.75rem; border-radius: var(--radius-pill); background: rgb(255 255 255 / 0.18); backdrop-filter: blur(10px) saturate(1.2); -webkit-backdrop-filter: blur(10px) saturate(1.2); font-size: 0.82rem; text-shadow: none; }
 .di-area--photo .di-eyebrow { color: #fff; }
 .di-area h3 { max-width: 16ch; }
 .di-area ul { list-style: none; padding: 0; margin: 0 0 var(--space-lg); display: flex; flex-wrap: wrap; gap: 0.45rem 0.9rem; font-size: 0.95rem; color: var(--color-muted); max-width: none; }
