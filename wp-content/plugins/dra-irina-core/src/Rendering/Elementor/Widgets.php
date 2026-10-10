@@ -15,7 +15,7 @@ final class Widgets {
 		add_action(
 			'elementor/widgets/register',
 			static function ( $manager ): void {
-				foreach ( [ Hero::class, Areas::class, Motivos::class, Doctora::class, Pasos::class, Sueno::class, Ubicacion::class, Cta::class, Bleed::class, Narrative::class, Credenciales::class, Timeline::class, Faq::class, Listado::class, Enlaces::class ] as $class ) {
+				foreach ( [ Hero::class, Areas::class, Motivos::class, Doctora::class, Pasos::class, Sueno::class, Ubicacion::class, Cta::class, Formulario::class, Bleed::class, Narrative::class, Credenciales::class, Timeline::class, Faq::class, Listado::class, Enlaces::class ] as $class ) {
 					$manager->register( new $class() );
 				}
 			}

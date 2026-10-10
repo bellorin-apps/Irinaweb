@@ -18,6 +18,8 @@ final class Shortcodes {
 		add_shortcode( 'di_whatsapp', [ $this, 'whatsapp' ] );
 		add_shortcode( 'di_address', [ $this, 'address' ] );
 		add_shortcode( 'di_email', [ $this, 'email' ] );
+		add_shortcode( 'di_arco', [ $this, 'arco' ] );
+		add_shortcode( 'di_responsable', [ $this, 'responsable' ] );
 		add_shortcode( 'di_hours', [ $this, 'hours' ] );
 	}
 
@@ -64,6 +66,21 @@ final class Shortcodes {
 		}
 		$label = $content ? wp_kses_post( $content ) : esc_html( (string) $a['label'] );
 		return sprintf( '<a href="%s" class="%s" target="_blank" rel="noopener" data-di-event="appointment_click">%s</a>', esc_url( $url ), esc_attr( (string) $a['class'] ), $label );
+	}
+
+	/** Correo para derechos ARCO (o el general del consultorio). */
+	public function arco(): string {
+		$mail = (string) PracticeSettings::get( 'correo_arco' );
+		if ( '' === $mail ) {
+			$mail = (string) PracticeSettings::get( 'email' );
+		}
+		return '' === $mail ? '' : sprintf( '<a href="mailto:%1$s">%1$s</a>', esc_attr( $mail ) );
+	}
+
+	/** Nombre del responsable de datos personales (o el nombre profesional). */
+	public function responsable(): string {
+		$name = (string) PracticeSettings::get( 'responsable_datos' );
+		return esc_html( '' !== $name ? $name : (string) PracticeSettings::get( 'nombre_profesional' ) );
 	}
 
 	public function address(): string {

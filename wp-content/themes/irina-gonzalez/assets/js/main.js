@@ -112,6 +112,42 @@
     });
   }
 
+  // Formulario de contacto: envío por fetch a admin-post (acción di_contact); sin JS el servidor redirige igual.
+  var form = document.querySelector('.di-form');
+  if (form && window.fetch) {
+    var status = form.querySelector('.di-form__status');
+    var fields = { name: 'di_name', phone: 'di_phone', email: 'di_email', motivo: 'di_motivo', consent: 'di_consent' };
+    function showError(msg, field) {
+      status.textContent = msg; status.hidden = false; status.classList.remove('is-ok');
+      form.querySelectorAll('.is-invalid').forEach(function (el) { el.classList.remove('is-invalid'); });
+      var el = field && fields[field] ? form.querySelector('[name="' + fields[field] + '"]') : null;
+      if (el) { el.classList.add('is-invalid'); el.focus(); }
+    }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        var bad = form.querySelector(':invalid');
+        showError(bad && bad.name === 'di_consent' ? 'Necesitamos tu consentimiento para contactarte.' : 'Revisa los campos marcados.', null);
+        if (bad) { bad.classList.add('is-invalid'); bad.focus(); }
+        return;
+      }
+      form.classList.add('is-sending');
+      form.querySelector('.di-form__label').hidden = true; form.querySelector('.di-form__sending').hidden = false;
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'X-Requested-With': 'fetch', 'Accept': 'application/json' }, credentials: 'same-origin' })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j && j.ok, j: j }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            if (window.gtag) { window.gtag('event', 'contact_submit', { page_path: location.pathname }); }
+            window.location.assign(form.getAttribute('data-thanks') || '/');
+            return;
+          }
+          showError((res.j && res.j.message) || 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', res.j && res.j.error);
+        })
+        .catch(function () { showError('No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', null); })
+        .finally(function () { form.classList.remove('is-sending'); form.querySelector('.di-form__label').hidden = false; form.querySelector('.di-form__sending').hidden = true; });
+    });
+  }
+
   // Barra móvil: reserva espacio inferior.
   if (document.querySelector('.di-mobile-bar')) { document.body.classList.add('has-mobile-bar'); }
 })();

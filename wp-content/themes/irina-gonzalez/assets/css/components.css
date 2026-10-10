@@ -401,3 +401,27 @@ body.has-mobile-bar { padding-bottom: 72px; }
 .di-links__list .di-btn { width: 100%; justify-content: center; }
 .di-links__list .di-btn--ghost { color: var(--color-text); border-color: var(--color-border); background: #fff; }
 .di-links__list .di-btn--ghost:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+/* Formulario de contacto (PLAN 8.4, D-050): dos columnas en escritorio, campos con borde fino y foco de marca. */
+.di-form__grid { display: grid; gap: var(--space-2xl); align-items: start; }
+@media (min-width: 900px) { .di-form__grid { grid-template-columns: 0.9fr 1.1fr; gap: var(--space-3xl); } }
+.di-form__intro .di-btn { margin-top: var(--space-md); }
+.di-form { display: grid; gap: var(--space-md); padding: clamp(1.4rem, 3vw, 2.2rem); border-radius: var(--radius-lg); background: var(--color-surface); box-shadow: 0 10px 40px rgb(40 20 50 / 0.06); }
+.di-form__row { display: grid; gap: var(--space-md); }
+@media (min-width: 640px) { .di-form__row { grid-template-columns: 1fr 1fr; } }
+.di-field { display: grid; gap: 0.4rem; font-size: 0.92rem; }
+.di-field__label { color: var(--color-muted); font-weight: 500; }
+.di-form input[type="text"], .di-form input[type="tel"], .di-form input[type="email"], .di-form select, .di-form textarea { width: 100%; padding: 0.8rem 0.95rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: #fff; color: var(--color-text); font: inherit; font-size: 1rem; line-height: var(--leading-body); transition: border-color var(--motion-fast), box-shadow var(--motion-fast); }
+.di-form select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23241f23' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.9rem center; padding-right: 2.6rem; }
+.di-form textarea { resize: vertical; min-height: 5.5rem; }
+.di-form input:focus-visible, .di-form select:focus-visible, .di-form textarea:focus-visible { outline: 0; border-color: var(--color-secondary); box-shadow: 0 0 0 3px rgb(60 161 167 / 0.22); }
+.di-form .is-invalid { border-color: #b4474a; box-shadow: 0 0 0 3px rgb(180 71 74 / 0.16); }
+.di-check { display: flex; gap: 0.7rem; align-items: flex-start; font-size: 0.88rem; color: var(--color-muted); }
+.di-check input { flex: none; width: 18px; height: 18px; margin-top: 0.15rem; accent-color: var(--color-primary); }
+.di-check a { color: var(--color-primary); }
+.di-form__note { font-size: 0.8rem; color: var(--color-muted); margin: 0; }
+.di-form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.di-form__status { padding: 0.8rem 1rem; border-radius: var(--radius-md); background: rgb(180 71 74 / 0.08); color: #8d3538; font-size: 0.92rem; }
+.di-form__status.is-ok { background: var(--color-secondary-soft); color: var(--color-secondary-strong); }
+.di-form__submit { justify-self: start; }
+.di-form.is-sending .di-form__submit { opacity: 0.7; pointer-events: none; }

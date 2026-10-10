@@ -7,7 +7,7 @@ SRC="$REPO/tools/content/pages"
 pid(){ w "post list --post_type=page --post_name__in=$1 --post_status=any --field=ID" | head -1; }
 
 echo "→ Páginas Elementor"
-for slug in otorrinolaringologia sueno primera-consulta contacto preguntas-frecuentes links; do
+for slug in otorrinolaringologia sueno primera-consulta contacto preguntas-frecuentes links gracias; do
   ID="$(pid "$slug")"; [ -n "$ID" ] || { echo "  falta $slug (ejecuta setup-site.sh)"; continue; }
   rscp "$SRC/$slug.elementor.json" "$SSH_USER@$SSH_HOST:/tmp/$slug.json"
   # Páginas con plantilla elementor_header_footer: WP-CLI valida la plantilla, por eso el meta va directo.
@@ -21,6 +21,9 @@ for slug in otorrinolaringologia sueno primera-consulta contacto preguntas-frecu
   rssh "rm -f /tmp/$slug.json"
   echo "  $slug ($ID) estado $(w "post get $ID --field=post_status")"
 done
+
+# /gracias/ (destino del formulario): siempre noindex y fuera del sitemap, aunque se publique.
+GID="$(pid gracias)"; [ -n "$GID" ] && { w "post meta update $GID rank_math_robots --format=json '[\"noindex\",\"nofollow\"]'" >/dev/null; echo "  gracias ($GID) noindex"; }
 
 echo "→ Legales (contenido HTML, plantilla por defecto)"
 for slug in aviso-de-privacidad aviso-medico terminos-de-uso; do

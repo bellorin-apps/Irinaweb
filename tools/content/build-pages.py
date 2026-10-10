@@ -85,9 +85,20 @@ pages["contacto"] = [
     container("co-ubic", "di-ubicacion", {"eyebrow": "Cómo llegar", "title": "",
         "facts": rep([("Estacionamiento", "Gratuito"), ("Acceso", "Elevador y acceso para silla de ruedas")], "label", "value"),
         "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.777590213581!2d-100.3765032!3d25.7117869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297c19d8eb1cb%3A0x5c3e8ac4d16be247!2sDra%20Irina%20Gonz%C3%A1lez%20S%C3%A1ez!5e0!3m2!1ses!2smx!4v1791433463370!5m2!1ses!2smx"}),
+    container("co-form", "di-form", {"eyebrow": "Escríbenos", "title": "¿Prefieres que <b>te</b> <em>llamemos</em>?",
+        "lead": "Déjanos tu nombre y teléfono y te contactamos en horario de consultorio. Para agendar más rápido, WhatsApp.", "button": "Enviar solicitud"}),
     container("co-narr", "di-narrativa", {"eyebrow": "Urgencias", "title": "Este sitio <b>no es</b> un <em>canal de urgencias</em>",
         "lead": "Si tienes dificultad para respirar, sangrado nasal que no se detiene o un dolor intenso, acude al servicio de urgencias más cercano. Para citas y dudas, escríbenos por WhatsApp.", "text": ""}),
     container("co-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Agendamos?", "text": "WhatsApp es el canal más rápido para citas.", "message": ""}),
+]
+
+pages["gracias"] = [
+    container("gr-bleed", "di-bleed", {"eyebrow": "Mensaje enviado", "title": "<b>Recibido</b>, <em>gracias</em>",
+        "lead": "Te contactamos en horario de consultorio por teléfono o WhatsApp. Si es urgente, acude al servicio de urgencias más cercano.",
+        "variant": "sand", "crumb": "Gracias"}),
+    container("gr-narr", "di-narrativa", {"eyebrow": "Mientras tanto", "title": "Lo que <b>puedes</b> ir <em>preparando</em>",
+        "lead": "Estudios previos, lista de medicamentos y, si es por ronquido o apnea, lo que te ha contado quien duerme contigo.", "text": ""}),
+    container("gr-cta", "di-cta", {"eyebrow": "¿Prisa?", "title": "Si prefieres, <em>escríbenos ahora</em>", "text": "WhatsApp es el canal más rápido para agendar.", "message": ""}),
 ]
 
 pages["preguntas-frecuentes"] = [
@@ -109,24 +120,11 @@ pages["preguntas-frecuentes"] = [
 
 pages["links"] = [container("links", "di-enlaces", {"title": "", "subtitle": "", "extra": []})]
 
+# Textos legales (PLAN 8.5, D-051): fuente en tools/content/legal/<slug>.html; los shortcodes [di_responsable], [di_address], [di_arco],
+# [di_email], [di_phone] se resuelven en WordPress con los datos del consultorio (fuente única de verdad).
 legal = {}
-legal["aviso-de-privacidad"] = f"""<p><strong>Aviso de privacidad (versión provisional)</strong>. Este texto es un borrador genérico conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y queda sujeto a la versión definitiva de la Dra. y a revisión legal. {PEND}</p>
-<h2>Responsable</h2><p>{PEND}: Dra. Irina González Sáez, con domicilio en Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector, 64610 Monterrey, Nuevo León, es responsable del tratamiento de sus datos personales.</p>
-<h2>Datos que recabamos</h2><p>Datos de identificación y contacto (nombre, teléfono, correo electrónico) que usted proporciona al escribirnos por WhatsApp, por teléfono o por los formularios de este sitio. Los datos de salud que comparta en consulta se tratan en el expediente clínico, con las medidas de seguridad que exige la normativa sanitaria, y no a través de este sitio web.</p>
-<h2>Finalidades</h2><p>Agendar y confirmar citas, dar seguimiento a su atención y responder dudas. No usamos sus datos para fines publicitarios sin su consentimiento.</p>
-<h2>Transferencias</h2><p>No se transfieren datos a terceros salvo obligación legal. Los proveedores tecnológicos del sitio (alojamiento, mensajería) actúan como encargados.</p>
-<h2>Derechos ARCO</h2><p>Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición escribiendo a {PEND} (correo para derechos ARCO). Responderemos en los plazos que marca la ley.</p>
-<h2>Cookies</h2><p>Este sitio usa cookies técnicas necesarias y, si usted lo acepta, cookies de medición anónima. Puede desactivarlas en su navegador.</p>
-<h2>Cambios</h2><p>Cualquier modificación a este aviso se publicará en esta página. Última actualización: {PEND}.</p>"""
-legal["aviso-medico"] = """<p>La información de este sitio tiene fines educativos y de orientación general. No sustituye la consulta médica, el diagnóstico ni el tratamiento indicados por un profesional de la salud que haya valorado su caso.</p>
-<h2>No es un canal de urgencias</h2><p>Si tiene dificultad para respirar, un sangrado que no se detiene, dolor intenso o cualquier situación que considere urgente, acuda al servicio de urgencias más cercano o llame a los servicios de emergencia.</p>
-<h2>Contenido revisado</h2><p>Los contenidos clínicos de este sitio se publican con revisión médica de la Dra. Irina González Sáez y se indican la fecha de revisión y las fuentes consultadas. Los resultados de cualquier tratamiento varían de una persona a otra y se explican individualmente en consulta.</p>
-<h2>Datos regulatorios</h2><p>Consultorio de atención médica especializada en Otorrinolaringología. Aviso de Publicidad COFEPRIS (número de ingreso) 2519012002A00712. Aviso de Funcionamiento 2619015036A00445 (establecimiento operado por CAB Medical, S.A. de C.V.; responsable sanitario: la Dra.). Responsable sanitario: Dra. Irina Nathalia González Sáez, cédula profesional 12438166, cédula de especialidad 15111342. Este sitio no ofrece promociones ni garantías de resultados. [PENDIENTE DE CONFIRMACIÓN: leyenda exacta según la normativa de publicidad sanitaria; revisión legal en Fase 8]</p>"""
-legal["terminos-de-uso"] = """<p>Al usar este sitio usted acepta estos términos. Si no está de acuerdo, le pedimos no utilizarlo.</p>
-<h2>Uso del sitio</h2><p>El contenido es informativo. Está prohibido copiarlo, modificarlo o usarlo con fines comerciales sin autorización escrita. Las marcas, logotipos, textos y fotografías pertenecen a la Dra. Irina González Sáez o a sus autores.</p>
-<h2>Enlaces a terceros</h2><p>Los enlaces a sitios externos (Doctoralia, redes sociales, mapas) se ofrecen como referencia; no somos responsables de su contenido ni de sus políticas.</p>
-<h2>Citas y comunicación</h2><p>Las solicitudes por WhatsApp, teléfono o formulario no constituyen una cita confirmada hasta recibir confirmación del consultorio.</p>
-<h2>Legislación aplicable</h2><p>Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. [PENDIENTE DE CONFIRMACIÓN]: jurisdicción y datos de contacto legal.</p>"""
+for _f in sorted((pathlib.Path(__file__).parent / "legal").glob("*.html")):
+    legal[_f.stem] = _f.read_text(encoding="utf-8")
 
 seo = {
     "inicio-v2": ("Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez", "Otorrinolaringólogo certificado en Monterrey, especialista en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos en Cumbres. Agenda por WhatsApp."),
@@ -139,6 +137,7 @@ seo = {
     "aviso-de-privacidad": ("Aviso de privacidad | Dra. Irina González Sáez", "Cómo tratamos sus datos personales conforme a la LFPDPPP."),
     "aviso-medico": ("Aviso médico | Dra. Irina González Sáez", "La información del sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias."),
     "terminos-de-uso": ("Términos de uso | Dra. Irina González Sáez", "Condiciones de uso del sitio web de la Dra. Irina González Sáez."),
+    "gracias": ("Mensaje recibido | Dra. Irina González Sáez", "Recibimos tu solicitud; te contactamos en horario de consultorio."),
 }
 
 out = pathlib.Path(__file__).parent / "pages"

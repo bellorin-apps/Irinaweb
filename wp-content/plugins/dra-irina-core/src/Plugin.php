@@ -10,6 +10,7 @@ declare( strict_types=1 );
 namespace DraIrina\Core;
 
 use DraIrina\Core\Fields\MetaRegistry;
+use DraIrina\Core\Contact\Form as ContactForm;
 use DraIrina\Core\Ops\Endpoints as OpsEndpoints;
 use DraIrina\Core\PostTypes\Condicion;
 use DraIrina\Core\PostTypes\Credencial;
@@ -59,6 +60,7 @@ final class Plugin {
 			new ElementorWidgets(),
 			new Events(),
 			new OpsEndpoints(),
+			new ContactForm(),
 		];
 	}
 

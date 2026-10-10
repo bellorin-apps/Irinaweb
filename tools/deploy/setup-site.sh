@@ -23,6 +23,7 @@ P_CONTACTO="$(ensure_page contacto 'Contacto')"
 P_PRIV="$(ensure_page aviso-de-privacidad 'Aviso de privacidad')"
 P_MED="$(ensure_page aviso-medico 'Aviso médico')"
 P_TERM="$(ensure_page terminos-de-uso 'Términos de uso')"
+P_GRACIAS="$(ensure_page gracias 'Gracias')"
 
 echo "→ Home v2 (página $P_HOME, noindex hasta CP3)"
 # Foto del hero: adjunto con slug hero-home en la biblioteca (subir con tools/deploy/upload-media.sh). Si no existe, el widget usa el degradado.
