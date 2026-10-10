@@ -476,11 +476,16 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
    la foto se ve tal cual, sin sombra ni degradado añadidos, y sin el desplazamiento de parallax arriba (que metía el rostro bajo la cabecera fija).
    En móvil la estructura cambia: la foto ocupa la parte alta a todo el ancho con la figura entera y el texto va debajo sobre un relleno plano
    del color de la propia imagen (--bleed-fill, muestreado del fondo de la foto), con texto oscuro para contraste AA. */
-.di-bleed--photo .di-bleed__shade { display: none; }
+/* Sombreado solo horizontal y en modo multiplicar (propietario, 2026-10-10): oscurece de izquierda a derecha la zona del texto y
+   se desvanece antes de la figura, sin tocar la fotografía. En móvil no hace falta (el texto va debajo de la foto). */
+.di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(0 0 0 / 0.42) 0%, rgb(0 0 0 / 0.22) 38%, rgb(0 0 0 / 0) 60%); mix-blend-mode: multiply; }
 .di-bleed--photo .di-bleed__bg { inset: 0; }
 @media (max-width: 899px) {
   .di-bleed--photo { --di-photo-h: 60svh; --title-accent: var(--color-primary); background: var(--bleed-fill, #d3a98a); color: var(--color-text); }
   .di-bleed--photo .di-bleed__bg { inset: 0 0 auto 0; height: var(--di-photo-h); background: var(--bleed-fill, #d3a98a); transform: none !important; /* sin parallax: la foto no debe deslizarse sobre el texto */ }
+  .di-bleed--photo .di-bleed__shade { display: none; }
+  /* La foto empieza bajo la cabecera fija (la franja superior queda del color de relleno) para que el rostro no quede tapado. */
+  .di-bleed--photo .di-bleed__bg img { top: var(--di-header-h, 92px); height: calc(100% - var(--di-header-h, 92px)); }
   .di-bleed--photo .di-container { padding-top: calc(var(--di-photo-h) + var(--space-lg)); }
   .di-bleed--photo h1 { color: var(--color-text); }
   .di-bleed--photo .di-eyebrow { color: var(--color-secondary-strong); }
