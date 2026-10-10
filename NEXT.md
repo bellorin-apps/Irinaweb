@@ -1,12 +1,12 @@
 # NEXT — Siguiente trabajo
 
-Última actualización: 2026-10-09 · Convención: las guías paso a paso para José se dan en el chat cloud («Sitio web»); la sesión local deja solo resúmenes.
+Última actualización: 2026-10-10 · Convención: las guías paso a paso para José se dan en el chat cloud («Sitio web»); la sesión local deja solo resúmenes.
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] **Tanda pendiente de despliegue** (sesión local inactiva al cierre del 10-10): e691f76 fondo móvil a todo el ancho con fundido (sección de la Dra.); verificar 390/480 fullPage. Mapa: API habilitada y mapa verificado en vivo (10-10); pendiente desplegar 3a0 language=es (idioma de la interfaz del mapa).
+- [ ] **Tanda pendiente de despliegue** (sesión local inactiva al cierre del 10-10): e691f76 fondo móvil a todo el ancho con fundido (sección de la Dra.); verificar 390/480 fullPage. Mapa: API habilitada y verificado en vivo por ambas sesiones (10-10); pendiente desplegar 5b7d79a (`language=es&region=MX`, interfaz del mapa en español). Sesión local reactivada el 10-10: tanda pedida.
 
-- [ ] **Mapa con estilo (D-048)**: José crea la clave de API de Google Maps (Maps JavaScript API, restringida a drairinagonzalez.com) y la deja en Recursos (Irina)/maps-api-key.txt; la sesión local la carga en el ajuste `maps_api_key` y borra el archivo. Opcional: JSON de Snazzy Maps en `maps_style_json`.
+- [x] **Mapa con estilo (D-048)**: clave cargada por la sesión local (archivo borrado), API habilitada por José y mapa en vivo con la paleta y el pin (2026-10-10). Queda: José confirma en Google Cloud las restricciones de la clave (referente `https://drairinagonzalez.com/*` + solo Maps JavaScript API; Q-021). Opcional: JSON de Snazzy Maps en `maps_style_json`; migrar `google.maps.Marker` → `AdvancedMarkerElement` (requiere `mapId`).
 
 - [x] **Tanda 1 (D-046)** confirmada por José (2026-10-09): overline lombriz corta estática en color del texto, botones glass sin bordes, sombra móvil desde la mitad del título más suave. 
 - [x] CDN: José decide NO apagar la optimización inteligente (2026-10-10): se acepta 1× en móvil para imágenes que no van a sangre (tarjetas, retrato); el hero sigue a 2400/1200 px. Cerrado.
