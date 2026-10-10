@@ -69,7 +69,7 @@ $irina_a = wp_parse_args(
 			<?php
 			if ( '' !== $irina_a['text'] ) :
 				?>
-				<div class="di-reveal di-reveal--d2"><?php echo wp_kses_post( wpautop( $irina_a['text'] ) ); ?></div><?php endif; ?>
+				<div class="di-doctor__lead di-reveal di-reveal--d2"><?php echo wp_kses_post( wpautop( $irina_a['text'] ) ); ?></div><?php endif; ?>
 			<?php
 			if ( $irina_a['creds'] ) :
 				?>

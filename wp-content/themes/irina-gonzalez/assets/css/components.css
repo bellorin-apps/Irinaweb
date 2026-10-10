@@ -210,8 +210,9 @@ body.menu-open { overflow: hidden; }
 /* Retrato a la altura de la sección: la cabeza queda un poco por encima del overline (propietario, 2026-10-10). */
 @media (min-width: 900px) {
   .di-section--doctor-bg .di-doctor { grid-template-columns: 1fr 1fr; }
-  .di-doctor__portrait { align-self: stretch; display: flex; align-items: flex-end; justify-content: flex-start; line-height: 0; margin-top: -1.5rem; }
-  .di-doctor__portrait img { display: block; height: calc(100% + 1.5rem); width: auto; max-width: none; object-fit: contain; object-position: bottom; }
+  /* La altura la dicta el texto; el retrato (absoluto) se ajusta a la fila y asoma 1.5rem por encima del overline. */
+  .di-doctor__portrait { align-self: stretch; position: relative; line-height: 0; min-height: 560px; }
+  .di-doctor__portrait img { position: absolute; left: 0; bottom: 0; height: calc(100% + 1.5rem); width: auto; max-width: none; object-fit: contain; object-position: left bottom; }
 }
 
 .di-section--doctor-light { color: var(--color-text); }
@@ -222,10 +223,12 @@ body.menu-open { overflow: hidden; }
 .di-section--doctor-dark .di-creds .di-icon { color: var(--color-accent); }
 /* Móvil (propietario, 2026-10-10): texto a la izquierda y la Dra. a la derecha, solo su mitad visible, sin tocar el texto. */
 @media (max-width: 899px) {
-  .di-section--doctor-bg .di-doctor { display: block; position: relative; min-height: 560px; }
-  .di-section--doctor-bg .di-doctor__text { width: 58%; padding-bottom: var(--space-2xl); position: relative; z-index: 1; }
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; bottom: 0; height: 64%; transform: translateX(42%); line-height: 0; }
-  .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; object-fit: contain; object-position: bottom; }
+  .di-section--doctor-bg .di-doctor { display: block; position: relative; min-height: 480px; }
+  .di-section--doctor-bg .di-doctor__text { width: 58%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
+  /* En móvil solo overline, cita y botón junto al retrato; el párrafo y las credenciales viven en la página de la Dra. */
+  .di-section--doctor-bg .di-doctor__lead, .di-section--doctor-bg .di-creds { display: none; }
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; bottom: 0; top: 0; transform: translateX(42%); line-height: 0; }
+  .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: right bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }
