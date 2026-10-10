@@ -154,6 +154,8 @@ body.menu-open { overflow: hidden; }
   .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0) 0%, rgb(0 0 0 / 0) 58%, rgb(20 10 20 / 0.12) 64%, rgb(20 10 20 / 0.35) 74%, rgb(20 10 20 / 0.58) 86%, rgb(20 10 20 / 0.72) 100%); }
   .di-bleed--light .di-bleed__shade { display: none; }
   .di-bleed.di-bleed--light { --di-header-h: 92px; }
+  /* El bloque de texto empieza bajo el rostro (la cara ocupa ~2/3 del ancho de alto desde la cabecera). */
+  .di-bleed.di-bleed--light .di-container { padding-top: calc(var(--di-header-h, 92px) + 66vw); }
   .di-bleed.di-bleed--light .di-bleed__bg img { object-position: 78% 0; } /* la variante clara no lleva sombra oscura; usa el velo crema */
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
   .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; } /* la lombriz queda centrada verticalmente aunque haya dos líneas */
