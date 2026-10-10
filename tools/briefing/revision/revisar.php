@@ -30,15 +30,15 @@ $method = (string) ( $_SERVER['REQUEST_METHOD'] ?? 'GET' );
 $raw    = '';
 $body   = [];
 if ( 'POST' === $method ) {
-	$raw = (string) file_get_contents( 'php://input' );
+	$raw = (string) file_get_contents( 'php://input', false, null, 0, 400001 );
 	if ( strlen( $raw ) > 400000 ) {
 		di_out( [ 'error' => 'size' ], 413 );
 	}
 	$body = json_decode( $raw, true );
 	$body = is_array( $body ) ? $body : [];
 }
-$token = 'POST' === $method ? (string) ( $body['token'] ?? '' ) : (string) ( $_GET['token'] ?? '' );
-if ( '' === $token || ! hash_equals( (string) $config['token'], $token ) ) {
+$token = 'POST' === $method ? ( $body['token'] ?? '' ) : ( $_GET['token'] ?? '' );
+if ( ! is_string( $token ) || '' === $token || ! hash_equals( (string) $config['token'], $token ) ) {
 	di_out( [ 'error' => 'token' ], 403 );
 }
 

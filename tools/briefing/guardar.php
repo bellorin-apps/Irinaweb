@@ -1,6 +1,6 @@
 <?php
 /**
- * Receptor del briefing de la Dra. Irina. Sin WordPress: guarda JSON fuera del webroot y avisa por correo.
+ * Receptor del briefing de la Dra. Irina. Sin WordPress: guarda JSON fuera del webroot, sin correos (D-040).
  * El token se define en config.php (generado al desplegar; no versionado).
  */
 
@@ -21,9 +21,9 @@ $config = require $config_file; // ['token' => '...', 'notify' => 'correo@', 'da
 $token = $_SERVER['REQUEST_METHOD'] === 'GET' ? ( $_GET['token'] ?? '' ) : '';
 $body  = null;
 if ( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
-	$raw  = file_get_contents( 'php://input' );
+	$raw  = file_get_contents( 'php://input', false, null, 0, 200001 );
 	$body = json_decode( (string) $raw, true );
-	$token = is_array( $body ) ? (string) ( $body['token'] ?? '' ) : '';
+	$token = is_array( $body ) ? ( $body['token'] ?? '' ) : '';
 }
 if ( ! is_string( $token ) || '' === $token || ! hash_equals( (string) $config['token'], $token ) ) {
 	http_response_code( 403 );
@@ -64,16 +64,11 @@ $record = [
 	'ip_hash'   => hash( 'sha256', (string) ( $_SERVER['REMOTE_ADDR'] ?? '' ) ),
 ];
 $json = json_encode( $record, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT );
-file_put_contents( $latest, $json, LOCK_EX );
+if ( false === file_put_contents( $latest, $json, LOCK_EX ) ) {
+	http_response_code( 500 );
+	echo json_encode( [ 'error' => 'storage' ] );
+	exit;
+}
 file_put_contents( $dir . '/briefing-' . gmdate( 'Ymd-His' ) . '.json', $json, LOCK_EX );
 
-// Aviso cuando la Dra. confirma (última sección) o cada 20 guardados.
-$confirmed = ! empty( $body['answers']['confirmo'] );
-$counter   = $dir . '/.count';
-$n         = is_readable( $counter ) ? (int) file_get_contents( $counter ) + 1 : 1;
-file_put_contents( $counter, (string) $n );
-if ( ! empty( $config['notify'] ) && ( $confirmed || 0 === $n % 20 ) ) {
-	$subject = $confirmed ? 'Briefing Dra. Irina: CONFIRMADO' : 'Briefing Dra. Irina: avance guardado';
-	@mail( (string) $config['notify'], $subject, "Respuestas guardadas en el servidor.\n\n" . $json, "From: briefing@" . ( $_SERVER['SERVER_NAME'] ?? 'drairinagonzalez.com' ) );
-}
 echo json_encode( [ 'ok' => true, 'updatedAt' => $record['updatedAt'] ] );

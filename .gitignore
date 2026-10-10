@@ -44,3 +44,13 @@ tools/node_modules/
 tools/package-lock.json
 tools/briefing/config.php
 tools/deploy/env.sh
+tools/deploy/*.local.txt
+
+# Capturas completas de esta auditoría quedan locales; comparaciones A/B se versionan.
+docs/audit/2026-10-10/page-*.png
+docs/audit/2026-10-10/A-*.png
+docs/audit/2026-10-10/B-*.png
+docs/audit/2026-10-10/baseline-*.png
+!docs/audit/2026-10-10/baseline-360.png
+!docs/audit/2026-10-10/baseline-390.png
+!docs/audit/2026-10-10/baseline-1440.png
