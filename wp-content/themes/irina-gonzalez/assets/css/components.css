@@ -233,10 +233,13 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-doctor__lead { font-size: 0.92rem; }
   /* Propietario (2026-10-09): credenciales como carrusel de un ítem con puntos (JS: di-creds--carousel). */
   .di-section--doctor-bg .di-creds { font-size: 0.86rem; }
-  .di-creds--carousel { position: relative; display: block; }
-  .di-creds--carousel li { display: none; }
-  .di-creds--carousel li.is-active { display: flex; }
-  .di-creds__dots { display: flex; gap: 8px; margin: 0.6rem 0 0; padding: 0; list-style: none; }
+  .di-section--doctor-bg .di-creds.di-creds--carousel { position: relative; display: block; margin-bottom: 0; }
+  .di-section--doctor-bg .di-creds.di-creds--carousel li { display: none; opacity: 0; transform: translateX(10px); transition: opacity 220ms var(--ease-out), transform 220ms var(--ease-out); }
+  .di-section--doctor-bg .di-creds.di-creds--carousel li.is-active { display: flex; }
+  .di-section--doctor-bg .di-creds.di-creds--carousel li.is-in { opacity: 1; transform: none; }
+  .di-section--doctor-bg .di-creds.di-creds--carousel li.is-out-left { transform: translateX(-10px); }
+  @media (prefers-reduced-motion: reduce) { .di-section--doctor-bg .di-creds.di-creds--carousel li { transition: none; } }
+  .di-creds__dots { display: flex; gap: 8px; margin: 0.75rem 0 var(--space-lg); padding: 0; list-style: none; }
   .di-creds__dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgb(36 31 35 / 0.22); cursor: pointer; }
   .di-creds__dots button[aria-current="true"] { background: var(--color-primary); }
   .di-section--doctor-dark .di-creds__dots button { background: rgb(255 255 255 / 0.35); }
@@ -245,8 +248,9 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
   /* Retrato a todo el alto de la sección (puede recortarse por arriba o por la derecha), con ≥16 px de aire respecto al texto. */
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; top: 0; bottom: 0; transform: translateX(50%); line-height: 0; }
-  .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: right bottom; }
+  /* Anclado por la izquierda a 16 px de la columna de texto (56 %); lo que sobre por la derecha se recorta (sección overflow hidden). */
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: auto; top: 0; bottom: 0; transform: none; line-height: 0; }
+  .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: left bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }

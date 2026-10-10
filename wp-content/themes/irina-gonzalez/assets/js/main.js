@@ -56,17 +56,36 @@
   if (creds && creds.children.length > 1) {
     var items = Array.prototype.slice.call(creds.children);
     var dots = null, timer = null, idx = 0;
-    function show(i) {
+    function show(i, dir) {
       idx = (i + items.length) % items.length;
-      items.forEach(function (li, k) { li.classList.toggle('is-active', k === idx); });
+      items.forEach(function (li, k) {
+        var on = k === idx;
+        li.classList.remove('is-in', 'is-out-left');
+        li.classList.toggle('is-active', on);
+        if (on) {
+          if (dir < 0) { li.classList.add('is-out-left'); }
+          // Entrada sutil y rápida (fade + 10 px): se activa en el siguiente frame para que la transición corra.
+          requestAnimationFrame(function () { requestAnimationFrame(function () { li.classList.remove('is-out-left'); li.classList.add('is-in'); }); });
+        }
+      });
       if (dots) { Array.prototype.forEach.call(dots.children, function (b, k) { b.setAttribute('aria-current', k === idx ? 'true' : 'false'); }); }
     }
-    function start() { if (reduce || timer) { return; } timer = setInterval(function () { show(idx + 1); }, 4000); }
+    function start() { if (reduce || timer) { return; } timer = setInterval(function () { show(idx + 1, 1); }, 4000); }
     function stop() { clearInterval(timer); timer = null; }
+    var resumeTimer = null;
+    function pauseThenResume() { stop(); clearTimeout(resumeTimer); resumeTimer = setTimeout(start, 8000); }
+    // Deslizar con el dedo: umbral 40 px horizontal.
+    var sx = 0, sy = 0, swiping = false;
+    creds.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; swiping = true; }, { passive: true });
+    creds.addEventListener('touchend', function (e) {
+      if (!swiping) { return; } swiping = false;
+      var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { show(idx + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); pauseThenResume(); }
+    }, { passive: true });
     function setup() {
       if (!mq.matches) {
         stop(); creds.classList.remove('di-creds--carousel'); creds.style.minHeight = '';
-        items.forEach(function (li) { li.classList.remove('is-active'); });
+        items.forEach(function (li) { li.classList.remove('is-active', 'is-in', 'is-out-left'); });
         if (dots) { dots.remove(); dots = null; }
         return;
       }
@@ -79,13 +98,11 @@
       items.forEach(function (li, k) {
         var b = document.createElement('button'); b.type = 'button';
         b.setAttribute('aria-label', 'Credencial ' + (k + 1) + ' de ' + items.length);
-        b.addEventListener('click', function () { stop(); show(k); });
+        b.addEventListener('click', function () { show(k, k > idx ? 1 : -1); pauseThenResume(); });
         dots.appendChild(b);
       });
       creds.insertAdjacentElement('afterend', dots);
-      creds.addEventListener('touchstart', stop, { passive: true });
-      creds.addEventListener('pointerdown', stop);
-      show(0); start();
+      show(0, 1); start();
     }
     setup();
     if (mq.addEventListener) { mq.addEventListener('change', setup); } else if (mq.addListener) { mq.addListener(setup); }
