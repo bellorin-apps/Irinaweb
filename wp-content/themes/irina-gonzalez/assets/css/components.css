@@ -101,7 +101,7 @@ body.menu-open { overflow: hidden; }
 .di-bleed__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.55) 100%); }
 .di-bleed .di-container { padding-block: clamp(6rem, 14vh, 10rem) clamp(3.5rem, 9vh, 7rem); }
 .di-bleed h1 { color: #fff; max-width: none; }
-/* Separadores (D-049, propietario 2026-10-10): lombriz estática y sutil SOLO en motivos de consulta (.di-symptoms/.di-symptom), confianza del hero (.di-hero-trust), pasos (.di-step), ruta (.di-path li) y fila legal del pie (.di-footer__legal); el resto, líneas finas. */
+/* Separadores (D-049, propietario 2026-10-10): lombriz estática y sutil SOLO en la línea superior de motivos de consulta (.di-symptoms; entre ítems línea fina), confianza del hero (.di-hero-trust), pasos (.di-step), ruta (.di-path li) y fila legal del pie (.di-footer__legal); el resto, líneas finas. */
 /* Fondos oscuros: acento turquesa en los tramos de título (D-049). */
 .di-bleed, .di-cta-bleed, .di-footer, .di-section--doctor-dark { --title-accent: var(--color-accent); }
 /* CTA morado: la cursiva va en blanco, sin acento (propietario, 2026-10-10). */
@@ -198,7 +198,7 @@ body.menu-open { overflow: hidden; }
 /* Motivos de consulta */
 .di-symptoms { list-style: none; padding: 0; margin: var(--space-xl) 0 0; max-width: none; background: var(--worm-border) 0 0 / 8px 8px repeat-x; }
 @media (min-width: 1024px) { .di-symptoms { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--space-2xl); } }
-.di-symptom { display: grid; grid-template-columns: 3.2rem 1fr auto; gap: var(--space-md); align-items: center; padding: 1.3rem 0; background: var(--worm-border) 0 100% / 8px 8px repeat-x; text-decoration: none; color: inherit; transition: padding-left var(--motion-base) var(--ease-out); }
+.di-symptom { display: grid; grid-template-columns: 3.2rem 1fr auto; gap: var(--space-md); align-items: center; padding: 1.3rem 0; border-bottom: 1px solid var(--color-border); text-decoration: none; color: inherit; transition: padding-left var(--motion-base) var(--ease-out); }
 .di-symptom:hover { padding-left: 0.8rem; color: inherit; }
 .di-symptom__n { font-family: var(--font-display); font-weight: 300; font-size: 1.6rem; color: var(--color-muted); }
 .di-symptom b { display: block; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.25rem, 2vw, 1.7rem); letter-spacing: -0.01em; }
