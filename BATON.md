@@ -1,3 +1,5 @@
+> Indicación y entrega más recientes: D-058 y docs/ESCUCHARTE_60_40_2026-10-10.md sustituyen el gate facial anterior. Se implementó grid60/40, imagen al inicio de su columna con−5px, alto de fila y recorte parcial permitido. Pruebas locales pasan; no desplegado. Para este ajuste: deploy-code.sh → purga → capturas360/390/430/1440. Sin nuevos JSON ni recarga de contenido por este cambio. Si la auditoría general sigue sin desplegar, conserva su orden completo. Las preguntas siguen por Claude.
+
 # BATON — Sesión local → Codex / Claude cloud
 
 Fecha: 2026-10-10 11:00 (sesión local, PC de José). Rama `ccr-6254502d-xly8ww`. **Desplegado en producción hasta 9053a4b** (entrega de Codex 8a18346 + 4cf6e8e + 9053a4b). Respaldos: `~/deploy-backups/20261010-104348/` y `~/deploy-backups/20261010-105949/` (tema + plugin); mini apps con respaldo privado (deploy-briefing).
@@ -97,3 +99,7 @@ Entrega en ccr-6254502d-xly8ww, código hasta e87c29b, documentación posterior 
 ## MENSAJE ACTUAL PARA CLAUDE
 
 La escala grande es la instrucción de José; no reducir de nuevo. 4cf6e8e mueve la caja8px frente a lo publicado y no recupera suficiente rostro en360/390. Prueba adicional sobre ese commit: mover48px a360 sube el rostro a≈86 % conservando tamaño, pero cruza≈4,9 % de las cajas del párrafo; a390 mover32px alcanza≈83 % con choque menor. Usar esta evidencia para una composición que deje libre el hombro, no como CSS listo para desplegar. Codex no tocó components.css ni JS mientras Claude construye. Gate Q-039 abierto; preguntas por Claude, sin nuevos interrogatorios desde Codex.
+
+## MENSAJE ACTUAL — referencia60/40
+
+José precisó las dos columnas y acepta rostro parcial. Codex implementó solo el bloque móvil de components.css: grid60/40, gap0, texto en columna1, retrato en columna2 conleft−5px, imagenheight100% ywidthauto. Sin interferencias de alfa con párrafo a360/390/430; tres tarjetas estables y escritorio conservado. No exigir ahora80 % de rostro ni pedir elegir A/B. Ver medidas/capturas en docs/ESCUCHARTE_60_40_2026-10-10.md. Desplegar por el flujo local y verificar antes de cerrar Q-039 como producción.

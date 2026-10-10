@@ -91,3 +91,7 @@ D-019: el aviso por correo queda sustituido por D-040 y el canónico por D-022. 
 2026-10-10: conservar el tamaño del retrato que ve en su teléfono y acercar la figura hacia la izquierda, casi pegada al texto. Sustituye la elección A/B y su reducción de figura. Se permite corregir el posicionamiento anterior; se conserva proporción/anclaje y no se cambian textos, menú, sombras, fondo ni carrusel durante el ajuste. La separación concreta de 8 px es la implementación de Claude en 4cf6e8e, no una aprobación visual nueva de José. Codex revisa su resultado; gate móvil abierto según docs/REVISION_ESCUCHARTE_2026-10-10.md.
 
 Las preguntas pendientes se presentan por Claude, a petición expresa de José; Codex aporta evidencia y hallazgos en el relevo.
+
+## D-058 · composición 60/40 de Escucharte (referencia de José)
+
+2026-10-10, mensaje con división roja y silueta punteada: Texto|Foto60/40, texto a la izquierda, foto alineada al inicio de su columna con ajuste aproximado−2 a−5px. Se acepta rostro parcialmente fuera del viewport; sustituye el requisito anterior≥80 %, la separación positiva y A/B. Implementación móvil en grid60/40 con ajuste−5px, alto natural de la fila, sin tocar fondo, menú, sombras, textos ni carrusel. Medidas y captura local: docs/ESCUCHARTE_60_40_2026-10-10.md. Verificación en producción y revisión de José pendientes; preguntas por Claude.

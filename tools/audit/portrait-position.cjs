@@ -4,6 +4,9 @@ const fs=require('node:fs'),path=require('node:path');
 const sharp=require(process.env.IRINA_SHARP||'sharp');
 const out=path.resolve('docs/audit/2026-10-10/portrait-position');
 const local=process.argv.includes('--local');
+const tag=process.argv.find(x=>x.startsWith('--tag='))?.split('=')[1]||(local?'claude':'live');
+const offsets=(process.argv.find(x=>x.startsWith('--offsets='))?.split('=')[1]||'0,32,48,64').split(',').map(Number);
+if(!/^[a-z0-9-]+$/.test(tag)||offsets.some(x=>!Number.isFinite(x)))throw new Error('Argumentos inválidos');
 const assets=Object.fromEntries(['css/components.css','js/main.js'].map(name=>[name,fs.readFileSync(path.resolve('wp-content/themes/irina-gonzalez/assets',name))]));
 (async()=>{
  fs.mkdirSync(out,{recursive:true});
@@ -22,7 +25,7 @@ const assets=Object.fromEntries(['css/components.css','js/main.js'].map(name=>[n
   const source=await p.locator('.di-doctor__portrait img').evaluate(i=>i.currentSrc);
   const response=await p.request.get(source);
   const alpha=await sharp(await response.body()).ensureAlpha().raw().toBuffer({resolveWithObject:true});
-  for(const offset of [0,32,48,64]){
+  for(const offset of offsets){
    await p.evaluate(x=>{document.querySelector('.di-doctor__portrait img').style.transform=`translateX(-${x}px)`},offset);
    const row=await section.evaluate((s)=>{
     const r=e=>{const t=e.getBoundingClientRect();return {left:t.left,top:t.top,right:t.right,bottom:t.bottom,width:t.width,height:t.height}};
@@ -44,11 +47,11 @@ const assets=Object.fromEntries(['css/components.css','js/main.js'].map(name=>[n
    }
    row.paragraphBoxOverlapPercent=+(100*overlap/total).toFixed(2);delete row.words;
    row.offset=offset;row.localAssets=local;row.faceVisiblePercent=Math.max(0,Math.min(100,(Math.min(width,row.image.left+row.image.width*.65)-Math.max(0,row.image.left+row.image.width*.30))/(row.image.width*.35)*100));
-   results.push(row);await section.screenshot({path:path.join(out,`${local?'claude':'live'}-shift-${offset}-${width}.png`)});
+   results.push(row);await section.screenshot({path:path.join(out,`${tag}-shift-${offset}-${width}.png`)});
   }
   await p.close();
  }
- fs.writeFileSync(path.join(out,`${local?'claude':'live'}-metrics.json`),JSON.stringify(results,null,2)+'\n');
+ fs.writeFileSync(path.join(out,`${tag}-metrics.json`),JSON.stringify(results,null,2)+'\n');
  console.log(results.map(r=>({width:r.width,offset:r.offset,height:r.section.height,imageHeight:r.image.height,imageLeft:r.image.left,face:r.faceVisiblePercent,paragraphOverlap:r.paragraphBoxOverlapPercent})));
  await b.close();
 })().catch(e=>{console.error(e.name);process.exit(1)});

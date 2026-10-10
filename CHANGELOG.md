@@ -72,3 +72,10 @@ Trazabilidad de todos los archivos modificados por Codex (excluye los cuatro HTM
 - Entró el commit de Claude4cf6e8e durante el trabajo; Codex lo conserva y revisa. No cambió components.css ni JS del tema.
 - Harness de posición y alfa a360/390/430, medidas del commit a8anchos y comparaciones añadidos. El rostro aún queda fuera en360/390; mover más introduce hombro detrás del párrafo. Q-039 abierto, no se declara resuelto ni desplegado.
 - Archivos de esta unidad: tools/audit/portrait-position.cjs, .gitignore, docs/REVISION_ESCUCHARTE_2026-10-10.md, docs/audit/2026-10-10/claude-4cf6e8e-* y portrait-position/, DECISIONS, STATUS, NEXT, BATON y QA. PHP/builds sin cambios; prueba visual y node --check del harness.
+
+## 2026-10-10 — Escucharte según referencia60/40
+
+- D-058 de José: dos columnas60/40, foto a la izquierda de su columna con ajuste−2 a−5px, rostro parcial permitido. Sustituye gate80 % y elección A/B.
+- components.css: grid móvil real60/40, gap0, texto alineado a la izquierda, retratoleft−5px y alto de fila; solo viewport recorta. Sin cambios de texto/fondo/menú/sombras/JS ni builds.
+- Harness columns.cjs y opciones de etiqueta/desplazamiento en portrait-position.cjs; capturas/metadatoscolumns-60-40 y prueba de tres credenciales. Sin intersección del alfa con párrafo en360/390/430, sección estable, bottom alineado, sin desbordes/errores y escritorio conservado.
+- Estado/relevo actualizados en STATUS/NEXT/BATON/QA/DECISIONS; informe nuevo docs/ESCUCHARTE_60_40_2026-10-10.md. Preguntas por Claude; sin despliegue. .gitignore limita capturas duplicadas; evidencia seleccionada en docs/audit/2026-10-10/. PHP/builds sin cambios.
