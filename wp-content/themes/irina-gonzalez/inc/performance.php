@@ -152,3 +152,45 @@ add_filter(
 	},
 	100
 );
+
+/**
+ * Imágenes altas (retratos recortados con alfa): la CDN de Hostinger, con la optimización móvil activa, RECORTA las imágenes
+ * verticales en lugar de reescalarlas (dra-escucharte 1024×2170 llegaba a los teléfonos como 1024×1496, sin piernas y con otra
+ * proporción; verificado 2026-10-10 con User-Agent móvil). Con un parámetro de consulta en la URL la CDN sirve el archivo completo
+ * (solo convertido a WebP). Se añade `?v=<id>-<fecha>` a src y srcset de cualquier adjunto cuya altura sea ≥ 1.5 veces su ancho.
+ */
+add_filter(
+	'wp_get_attachment_image',
+	static function ( string $html, int $attachment_id ): string {
+		$meta = wp_get_attachment_metadata( $attachment_id );
+		if ( ! is_array( $meta ) || empty( $meta['width'] ) || empty( $meta['height'] ) || (int) $meta['height'] < 1.5 * (int) $meta['width'] ) {
+			return $html;
+		}
+		$version = 'v=' . $attachment_id . '-' . substr( md5( (string) get_post_modified_time( 'U', true, $attachment_id ) ), 0, 6 );
+		$add     = static function ( string $url ) use ( $version ): string {
+			return str_contains( $url, '?' ) ? $url . '&' . $version : $url . '?' . $version;
+		};
+		$html = (string) preg_replace_callback(
+			'/\ssrc="([^"]+)"/',
+			static fn( array $m ): string => ' src="' . esc_url( $add( $m[1] ) ) . '"',
+			$html
+		);
+		return (string) preg_replace_callback(
+			'/\ssrcset="([^"]+)"/',
+			static function ( array $m ) use ( $add ): string {
+				$parts = array_map(
+					static function ( string $candidate ) use ( $add ): string {
+						$bits = preg_split( '/\s+/', trim( $candidate ), 2 );
+						$bits = is_array( $bits ) && $bits ? $bits : [ $candidate ];
+						return esc_url( $add( $bits[0] ) ) . ( isset( $bits[1] ) ? ' ' . $bits[1] : '' );
+					},
+					explode( ',', $m[1] )
+				);
+				return ' srcset="' . implode( ', ', $parts ) . '"';
+			},
+			$html
+		);
+	},
+	20,
+	2
+);
