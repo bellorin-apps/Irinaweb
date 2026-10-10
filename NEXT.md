@@ -4,7 +4,7 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [x] Contraste del botón de WhatsApp (Q-022): glass sobre fotos y sólido teal sobre crema (D-053), desplegado. Hero de la página de la Dra. con foto (hero-dra 340) en vivo.
+- [x] Contraste del botón de WhatsApp (Q-022): glass sobre fotos y sólido teal sobre crema (D-053), desplegado. Hero de la página de la Dra. con foto (hero-dra 340) en variante clara (D-054), en vivo y verificado.
 - [ ] **GA4 (D-052)**: José crea la propiedad GA4 y pasa el ID de medición (G-…, es público); Claude lo carga en `ga4_id` por REST; verificar en Tiempo real los eventos whatsapp_click/phone_click/directions_click/doctoralia_click/contact_submit; marcarlos como conversiones clave en GA4. Enlazar GA4 con Search Console.
 - [x] **Formulario de contacto (D-050) y legales (D-051)** en vivo (2026-10-10): formulario en /contacto/, /gracias/ publicada noindex, SMTP por constantes `DI_SMTP_*` con contraseña de aplicación de Hostinger (`wp_mail()` true), legales publicadas (175/176/177) con shortcodes resueltos; pruebas JS/sin JS/honeypot/tiempo/origen OK por la sesión local. Pendiente: José confirma la recepción de los 3 correos de prueba en soy@drairinagonzalez.com y lee los legales.
 - [ ] **D-049 (títulos con color + cursiva)**: en código (tema + builds). Separadores lombriz solo en los 5 puntos que marcó José (motivos, confianza del hero, pasos, ruta, fila legal del pie), colores sutiles; el resto líneas finas. Indicador de scroll del hero: botón glass con flecha. Desplegar: `deploy-code.sh` + `setup-site.sh` (Home) + `setup-pages.sh` + `setup-dra.sh` (recargan los títulos con `<b>`), purga; capturas 1440/390 de hero, áreas, Dra., ubicación y pie. José revisa la tabla de reparto palabra a palabra (chat cloud) y ajusta.
