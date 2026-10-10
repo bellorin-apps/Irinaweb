@@ -15,7 +15,7 @@ page = [
         "eyebrow": "Otorrinolaringólogo · Especialista en sueño",
         "title": "<b>Dra. Irina</b><br><em>González Sáez</em>",
         "lead": "Otorrinolaringólogo certificado en Monterrey, con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
-        "variant": "warm", "crumb": "Dra. Irina González Sáez", "image": {"id": "__DRA_HERO_ID__", "url": "__DRA_HERO_URL__"},
+        "variant": "warm", "crumb": "Dra. Irina González Sáez", "image": {"id": "__DRA_HERO_ID__", "url": "__DRA_HERO_URL__"}, "focus": "65% 0%", "focus_mobile": "82% 50%",
         "secondary_label": "Opiniones en Doctoralia", "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"}),
     container("dra-enfoque", "di-narrativa", {
         "eyebrow": "Enfoque", "title": "«<b>Escucharte</b> <br class=\"di-brd\">también es parte <br class=\"di-brd\">del <b><em>tratamiento</em></b>»",
