@@ -85,7 +85,7 @@ function irina_enqueue_map( string $api_key ): void {
 	wp_add_inline_script( 'irina-map', 'window.diMapStyle = ' . $style . '; window.diMapMarker = ' . wp_json_encode( IRINA_THEME_URI . '/assets/brand/map-pin.svg' ) . ';', 'before' );
 	wp_enqueue_script(
 		'google-maps',
-		'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode( $api_key ) . '&loading=async&callback=diInitMap&v=weekly',
+		'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode( $api_key ) . '&loading=async&callback=diInitMap&v=weekly&language=es&region=MX',
 		[ 'irina-map' ],
 		null,
 		[

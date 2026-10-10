@@ -4,7 +4,7 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] **Tanda pendiente de despliegue** (sesión local inactiva al cierre del 10-10): e691f76 fondo móvil a todo el ancho con fundido (sección de la Dra.); verificar 390/480 fullPage. Mapa: José habilita «Maps JavaScript API» en Google Cloud (ApiNotActivatedMapError); después purgar y medir .gm-style/tiles/pin.
+- [ ] **Tanda pendiente de despliegue** (sesión local inactiva al cierre del 10-10): e691f76 fondo móvil a todo el ancho con fundido (sección de la Dra.); verificar 390/480 fullPage. Mapa: API habilitada y mapa verificado en vivo (10-10); pendiente desplegar 3a0 language=es (idioma de la interfaz del mapa).
 
 - [ ] **Mapa con estilo (D-048)**: José crea la clave de API de Google Maps (Maps JavaScript API, restringida a drairinagonzalez.com) y la deja en Recursos (Irina)/maps-api-key.txt; la sesión local la carga en el ajuste `maps_api_key` y borra el archivo. Opcional: JSON de Snazzy Maps en `maps_style_json`.
 
