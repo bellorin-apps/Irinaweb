@@ -249,7 +249,8 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
   /* Retrato a todo el alto de la sección (puede recortarse por arriba o por la derecha), con ≥16 px de aire respecto al texto. */
   /* Anclado por la izquierda a 16 px de la columna de texto (56 %); lo que sobre por la derecha se recorta (sección overflow hidden). */
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: auto; top: 0; bottom: 0; transform: none; line-height: 0; }
+  /* Altura acotada (no toda la sección, que con el texto completo es muy alta y dejaba solo un trozo del brazo): se ve media figura, cara incluida. */
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: auto; top: auto; bottom: 0; height: 600px; max-height: 100%; transform: none; line-height: 0; }
   .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: left bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
