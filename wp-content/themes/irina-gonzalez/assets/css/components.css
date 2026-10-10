@@ -517,7 +517,9 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-logos__rail:hover .di-logos__track { animation-play-state: paused; }
 .di-logos__item { display: block; flex: none; line-height: 0; filter: brightness(0) invert(1); opacity: 0.92; transition: opacity var(--motion-base) var(--ease-out); }
 .di-logos__item:hover, .di-logos__item:focus-visible { opacity: 1; }
-.di-logos__item img { height: 56px; width: auto; max-width: 220px; object-fit: contain; }
+.di-logos__item img { height: 60px; width: auto; max-width: 240px; object-fit: contain; }
+.di-logos__item--emblem img { height: 84px; }
+.di-logos__item--wide img { height: 48px; max-width: 260px; }
 @keyframes di-logos { to { transform: translateX(-50%); } }
-@media (max-width: 899px) { .di-logos { padding-block: clamp(4rem, 10vh, 6rem); } .di-logos__item img { height: 40px; max-width: 160px; } .di-logos__track { gap: 2.75rem; animation-duration: 45s; } }
+@media (max-width: 899px) { .di-logos { padding-block: clamp(4rem, 10vh, 6rem); } .di-logos__item img { height: 44px; max-width: 170px; } .di-logos__item--emblem img { height: 60px; } .di-logos__item--wide img { height: 34px; max-width: 180px; } .di-logos__track { gap: 2.75rem; animation-duration: 45s; } }
 @media (prefers-reduced-motion: reduce) { .di-logos__track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; row-gap: 2rem; } .di-logos__item[aria-hidden="true"] { display: none; } .di-logos__rail { mask-image: none; -webkit-mask-image: none; } }

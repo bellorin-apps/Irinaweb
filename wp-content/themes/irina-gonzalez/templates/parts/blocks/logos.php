@@ -26,10 +26,16 @@ foreach ( (array) $irina_a['items'] as $irina_it ) {
 	foreach ( [ 'svg', 'png', 'webp' ] as $irina_ext ) {
 		$irina_rel = 'assets/brand/logos/' . $irina_slug . '.' . $irina_ext;
 		if ( is_readable( IRINA_THEME_DIR . '/' . $irina_rel ) ) {
+			// Proporción del logo (viewBox del SVG) para equilibrar tamaños: emblemas casi cuadrados más altos, logotipos muy anchos más bajos.
+			$irina_ratio = 2.5;
+			if ( 'svg' === $irina_ext && preg_match( '/viewBox="[-\d.]+ [-\d.]+ ([\d.]+) ([\d.]+)"/', (string) file_get_contents( IRINA_THEME_DIR . '/' . $irina_rel ), $irina_m ) && (float) $irina_m[2] > 0 ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+				$irina_ratio = (float) $irina_m[1] / (float) $irina_m[2];
+			}
 			$irina_logos[] = [
-				'name' => (string) ( $irina_it['name'] ?? $irina_slug ),
-				'url'  => (string) ( $irina_it['url'] ?? '' ),
-				'src'  => IRINA_THEME_URI . '/' . $irina_rel . '?v=' . irina_asset_version( $irina_rel ),
+				'name'  => (string) ( $irina_it['name'] ?? $irina_slug ),
+				'url'   => (string) ( $irina_it['url'] ?? '' ),
+				'src'   => IRINA_THEME_URI . '/' . $irina_rel . '?v=' . irina_asset_version( $irina_rel ),
+				'shape' => $irina_ratio < 1.4 ? 'emblem' : ( $irina_ratio > 3.6 ? 'wide' : 'normal' ),
 			];
 			break;
 		}
@@ -67,7 +73,7 @@ if ( ! $irina_logos ) {
 				$irina_tag  = '' !== $irina_l['url'] ? 'a' : 'span';
 				$irina_attr = '' !== $irina_l['url'] ? ' href="' . esc_url( $irina_l['url'] ) . '" target="_blank" rel="noopener"' : '';
 				?>
-			<<?php echo $irina_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> class="di-logos__item"<?php echo $irina_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><?php echo $irina_copy ? ' aria-hidden="true"' : ' role="listitem"'; ?>><img src="<?php echo esc_url( $irina_l['src'] ); ?>" alt="<?php echo esc_attr( $irina_copy ? '' : $irina_l['name'] ); ?>" loading="lazy" decoding="async" height="56"></<?php echo $irina_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+			<<?php echo $irina_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> class="di-logos__item di-logos__item--<?php echo esc_attr( $irina_l['shape'] ); ?>"<?php echo $irina_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><?php echo $irina_copy ? ' aria-hidden="true"' : ' role="listitem"'; ?>><img src="<?php echo esc_url( $irina_l['src'] ); ?>" alt="<?php echo esc_attr( $irina_copy ? '' : $irina_l['name'] ); ?>" loading="lazy" decoding="async"></<?php echo $irina_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 				<?php
 			endforeach;
 		endforeach;
