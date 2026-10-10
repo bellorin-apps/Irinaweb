@@ -36,6 +36,7 @@ final class PracticeSettings {
 			'maps_url'             => [ 'Enlace de Google Maps', 'url', true ],
 			'maps_api_key'         => [ 'Clave de API de Google Maps (JavaScript; restringida al dominio)', 'text', false ],
 			'maps_style_json'      => [ 'Estilo del mapa (JSON de Snazzy Maps; vacío = estilo de la paleta)', 'json', false ],
+			'maps_map_id'          => [ 'Google Maps: Map ID (estilo en la nube + marcador avanzado; vacío = marcador clásico con el JSON)', 'text', false ],
 			'telefono'             => [ 'Teléfono del consultorio (E.164, ej. +528115695744)', 'text', true ],
 			'whatsapp'             => [ 'WhatsApp (E.164, ej. +528123685381)', 'text', true ],
 			'whatsapp_mensaje'     => [ 'Mensaje prellenado de WhatsApp', 'textarea', true ],

@@ -84,11 +84,13 @@ function irina_enqueue_map( string $api_key ): void {
 	);
 	$decoded = json_decode( $style, true );
 	$style   = wp_json_encode( is_array( $decoded ) ? $decoded : [], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT );
-	wp_add_inline_script( 'irina-map', 'window.diMapStyle = ' . $style . '; window.diMapMarker = ' . wp_json_encode( IRINA_THEME_URI . '/assets/brand/map-pin.svg' ) . ';', 'before' );
+	// Map ID (D-059): con él, Google aplica el estilo gestionado en la nube e ignora `styles`; el marcador pasa a AdvancedMarkerElement.
+	$map_id = preg_replace( '/[^A-Za-z0-9_-]/', '', (string) irina_practice( 'maps_map_id' ) ) ?? '';
+	wp_add_inline_script( 'irina-map', 'window.diMapStyle = ' . $style . '; window.diMapMarker = ' . wp_json_encode( IRINA_THEME_URI . '/assets/brand/map-pin.svg' ) . '; window.diMapId = ' . wp_json_encode( $map_id ) . ';', 'before' );
 	// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Google controla v=weekly; no se agrega versión local.
 	wp_enqueue_script(
 		'google-maps',
-		'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode( $api_key ) . '&loading=async&callback=diInitMap&v=weekly&language=es&region=MX',
+		'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode( $api_key ) . '&loading=async&callback=diInitMap&v=weekly&language=es&region=MX' . ( '' !== $map_id ? '&libraries=marker' : '' ),
 		[ 'irina-map' ],
 		null, // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Google controla v=weekly.
 		[
