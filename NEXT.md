@@ -4,7 +4,7 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
-- [ ] **Tanda pendiente de despliegue** (sesión local inactiva al cierre del 10-10): e691f76 fondo móvil a todo el ancho con fundido (sección de la Dra.); verificar 390/480 fullPage. Mapa: API habilitada y verificado en vivo por ambas sesiones (10-10); pendiente desplegar 5b7d79a (`language=es&region=MX`, interfaz del mapa en español). Sesión local reactivada el 10-10: tanda pedida.
+- [x] **Tanda desplegada (10-10, HEAD 03e01ac):** e691f76 fondo móvil a todo el ancho con fundido (medido 390/480: fondo 390×260 / 480×320, left 0 / right 0, apoyado abajo, mask OK; retrato a 16 px del texto; capturas `/preview/qa/doctora-{390,480}-20261009-2301.png`) y 5b7d79a interfaz del mapa en español (390: «Datos del mapa / Combinaciones de teclas / Términos», consola sin errores). Pendiente: José revisa en su teléfono con caché limpia.
 
 - [x] **Mapa con estilo (D-048)**: clave cargada por la sesión local (archivo borrado), API habilitada por José y mapa en vivo con la paleta y el pin (2026-10-10). Queda: José confirma en Google Cloud las restricciones de la clave (referente `https://drairinagonzalez.com/*` + solo Maps JavaScript API; Q-021). Opcional: JSON de Snazzy Maps en `maps_style_json`; migrar `google.maps.Marker` → `AdvancedMarkerElement` (requiere `mapId`).
 
