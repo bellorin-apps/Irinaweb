@@ -134,7 +134,7 @@ add_filter(
 		$file = basename( (string) ( $image_meta['file'] ?? '' ) );
 		$post = get_post( $attachment_id );
 		if ( str_starts_with( $file, 'hero-' ) || ( $post && str_starts_with( (string) $post->post_name, 'hero-' ) ) ) {
-			return array_intersect_key( $sizes, [ 'irina-movil' => true ] ); // solo la versión para teléfonos (D-064)
+			return array_intersect_key( $sizes, [ 'irina-movil' => true ] ); // Solo la versión para teléfonos (D-064).
 		}
 		return $sizes;
 	},
