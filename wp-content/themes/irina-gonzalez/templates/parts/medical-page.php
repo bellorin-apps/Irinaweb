@@ -147,7 +147,7 @@ irina_part(
 			?>
 			<li><a href="#<?php echo esc_attr( $irina_anchor ); ?>"><?php echo esc_html( $irina_label ); ?></a></li><?php endforeach; ?></ol>
 		<?php
-		$irina_rel = array_filter( array_map( 'intval', (array) $irina_meta( 'relacionados' ) ) );
+		$irina_rel = array_filter( array_map( 'intval', (array) $irina_meta( 'relacionados' ) ), static fn( int $id ): bool => 'publish' === get_post_status( $id ) );
 		if ( $irina_rel ) :
 			?>
 			<p style="margin-top:16px"><b><?php esc_html_e( 'Relacionado', 'irina-gonzalez' ); ?></b><br>

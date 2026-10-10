@@ -9,7 +9,7 @@ rscp "$REPO/tools/content/credenciales.json" "$SSH_USER@$SSH_HOST:/tmp/credencia
 w "eval '
 \$rows = json_decode( file_get_contents( \"/tmp/credenciales.json\" ), true );
 foreach ( \$rows as \$r ) {
-  \$q = get_posts( [ \"post_type\" => \"credencial\", \"name\" => \$r[\"slug\"], \"post_status\" => \"any\", \"posts_per_page\" => 1 ] );
+  \$q = get_posts( [ \"post_type\" => \"credencial\", \"post_name__in\" => [ \$r[\"slug\"] ], \"post_status\" => \"any\", \"posts_per_page\" => 1 ] );
   \$id = \$q ? \$q[0]->ID : wp_insert_post( [ \"post_type\" => \"credencial\", \"post_status\" => \"publish\", \"post_title\" => \$r[\"titulo\"], \"post_name\" => \$r[\"slug\"], \"menu_order\" => (int) \$r[\"orden\"] ] );
   wp_update_post( [ \"ID\" => \$id, \"post_title\" => \$r[\"titulo\"], \"menu_order\" => (int) \$r[\"orden\"] ] );
   foreach ( [ \"tipo\", \"institucion\", \"lugar\", \"anio\" ] as \$k ) { update_post_meta( \$id, \"di_\" . \$k, \$r[\$k] ); }

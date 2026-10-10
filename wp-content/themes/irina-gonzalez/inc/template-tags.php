@@ -30,6 +30,34 @@ function irina_part( string $name, array $args = [] ): void {
 	get_template_part( 'templates/parts/' . $name, null, $args );
 }
 
+/** Evita 404 desde Home mientras los pilares y fichas esperan aprobación médica. */
+function irina_public_content_url( string $url ): string {
+	$path = (string) wp_parse_url( $url, PHP_URL_PATH );
+	$host = wp_parse_url( $url, PHP_URL_HOST );
+	if ( ( $host && wp_parse_url( home_url(), PHP_URL_HOST ) !== $host ) || ! preg_match( '#^/(otorrinolaringologia|sueno|padecimientos|tratamientos)(/|$)#', $path ) ) {
+		return $url;
+	}
+	$slug  = basename( rtrim( $path, '/' ) );
+	$posts = get_posts(
+		[
+			'post_type'      => [ 'page', 'condicion', 'tratamiento' ],
+			'post_name__in'  => [ $slug ],
+			'post_status'    => 'publish',
+			'posts_per_page' => 1,
+		]
+	);
+	if ( $posts ) {
+		return (string) get_permalink( $posts[0] );
+	}
+	foreach ( [ 'primera-consulta', 'contacto' ] as $fallback ) {
+		$page = get_page_by_path( $fallback );
+		if ( $page && 'publish' === $page->post_status ) {
+			return (string) get_permalink( $page );
+		}
+	}
+	return home_url( '/' );
+}
+
 /**
  * Caja "Revisado médicamente por" para contenido clínico.
  */

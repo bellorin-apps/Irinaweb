@@ -48,7 +48,7 @@ $irina_a = wp_parse_args(
 			<?php
 			if ( '' !== $irina_a['link'] ) :
 				?>
-				<a class="di-btn di-btn--primary di-reveal di-reveal--d3" href="<?php echo esc_url( $irina_a['link'] ); ?>"><?php echo esc_html( $irina_a['link_label'] ); ?><?php echo irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a><?php endif; ?>
+				<a class="di-btn di-btn--primary di-reveal di-reveal--d3" href="<?php echo esc_url( irina_public_content_url( (string) $irina_a['link'] ) ); ?>"><?php echo esc_html( $irina_a['link_label'] ); ?><?php echo irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a><?php endif; ?>
 		</div>
 		<?php if ( $irina_a['steps'] ) : ?>
 			<ol class="di-path di-reveal di-reveal--d2">

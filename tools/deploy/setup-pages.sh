@@ -41,7 +41,7 @@ w "eval '
 \$seo = json_decode( file_get_contents( \"/tmp/seo.json\" ), true );
 foreach ( \$seo as \$slug => \$m ) {
   \$p = get_page_by_path( \$slug, OBJECT, \"page\" );
-  if ( ! \$p ) { \$q = get_posts( [ \"post_type\" => \"page\", \"name\" => \$slug, \"post_status\" => \"any\", \"posts_per_page\" => 1 ] ); \$p = \$q ? \$q[0] : null; }
+  if ( ! \$p ) { \$q = get_posts( [ \"post_type\" => \"page\", \"post_name__in\" => [ \$slug ], \"post_status\" => \"any\", \"posts_per_page\" => 1 ] ); \$p = \$q ? \$q[0] : null; }
   if ( ! \$p ) { echo \"  sin página: \$slug\n\"; continue; }
   update_post_meta( \$p->ID, \"rank_math_title\", \$m[\"title\"] );
   update_post_meta( \$p->ID, \"rank_math_description\", \$m[\"description\"] );

@@ -58,7 +58,7 @@ $irina_a = wp_parse_args(
 					continue;
 				} ++$irina_n;
 				?>
-				<li><a class="di-symptom" href="<?php echo esc_url( $irina_i['url'] ); ?>"><span class="di-symptom__n"><?php echo esc_html( sprintf( '%02d', $irina_n ) ); ?></span><span><b><?php echo esc_html( $irina_i['label'] ); ?></b><small><?php echo esc_html( $irina_i['sub'] ); ?></small></span><?php echo irina_icon( 'arrow-right' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a></li>
+				<li><a class="di-symptom" href="<?php echo esc_url( irina_public_content_url( (string) $irina_i['url'] ) ); ?>"><span class="di-symptom__n"><?php echo esc_html( sprintf( '%02d', $irina_n ) ); ?></span><span><b><?php echo esc_html( $irina_i['label'] ); ?></b><small><?php echo esc_html( $irina_i['sub'] ); ?></small></span><?php echo irina_icon( 'arrow-right' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a></li>
 						<?php endforeach; ?>
 		</ul>
 	</div>

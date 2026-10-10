@@ -31,7 +31,7 @@ $irina_panel = static function ( array $p, string $mod ): void {
 	);
 	$irina_img = (int) $p['image_id'];
 	?>
-	<a class="di-area di-area--<?php echo esc_attr( $mod ); ?><?php echo $irina_img ? ' di-area--photo' : ''; ?> di-reveal" href="<?php echo esc_url( $p['link'] ); ?>">
+	<a class="di-area di-area--<?php echo esc_attr( $mod ); ?><?php echo $irina_img ? ' di-area--photo' : ''; ?> di-reveal" href="<?php echo esc_url( irina_public_content_url( (string) $p['link'] ) ); ?>">
 		<div class="di-area__fill">
 		<?php
 		echo $irina_img ? wp_get_attachment_image(
