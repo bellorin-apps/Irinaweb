@@ -35,6 +35,10 @@ final class WebpUpload {
 		if ( ! wp_image_editor_supports( [ 'mime_type' => 'image/webp' ] ) ) {
 			return $upload;
 		}
+		// Imagen para compartir en redes (og-*): se queda en JPEG; Facebook, LinkedIn y WhatsApp no muestran WebP en og:image.
+		if ( str_starts_with( basename( $upload['file'] ), 'og-' ) ) {
+			return $upload;
+		}
 		$size = wp_getimagesize( $upload['file'] );
 		if ( ! $size || (int) $size[0] < self::MIN_WIDTH ) {
 			return $upload;

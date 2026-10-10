@@ -140,7 +140,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
 | 8.7 | 404 útil (noindex), búsqueda interna si procede | 2 | DONE | `404.php`: cabecera a sangre, rutas publicadas (omite borradores), WhatsApp, nota para enlaces del dominio viejo; sin buscador (sitio pequeño) |
 | 8.8 | Navegador de síntomas (orientación, no diagnóstico) | 3 | TODO | |
-| 8.9 | Favicon/app icons, OG template | 1 | TODO | |
+| 8.9 | Favicon/app icons, OG template | 1 | DOING | Favicon/app icons desde D-031; og-default.jpg y setup-og.sh listos (D-067), pendiente de ejecutar en producción |
 
 ## FASE 9 — SEO técnico, schema, analítica, local
 

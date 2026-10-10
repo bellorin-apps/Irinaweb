@@ -105,3 +105,7 @@ Claude local: deploy-code.sh del HEAD de esta entrega y purga; NO setup-site/pag
 
 - Widget `di-logos` (plugin 0.4.4), parte `blocks/logos.php`, CSS `.di-logos` y bloque `dra-logos` en `build-dra.py` tras credenciales; `tags_title` vacío retira las etiquetas de texto. JSON regenerado. D-066.
 - Pendiente: los 9 SVG en `wp-content/themes/irina-gonzalez/assets/brand/logos/` con los slugs del build (los exporta José; la sesión local los copia al repo), `deploy-code.sh` + `setup-dra.sh` + purga.
+
+## 2026-10-10 — Imagen para compartir en redes (sin despliegue)
+
+- `og-default.jpg` (1200×630) en el tema, fuente regenerable en `tools/brand/og/`, `tools/deploy/setup-og.sh` (sube y fija la imagen Open Graph por defecto en Rank Math), `WebpUpload` exime `og-*`. D-067. Favicon/app icons se mantienen (D-031).
