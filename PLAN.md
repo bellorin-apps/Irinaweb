@@ -135,8 +135,8 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 8.1 | Resto de páginas de condición/servicio | 5 | TODO | |
 | 8.2 | Centro de recursos/artículos iniciales | 3 | TODO | |
 | 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | TODO | |
-| 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | DOING | Código listo (D-050); falta desplegar y SMTP (constantes) |
-| 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | REVIEW | Textos definitivos (D-051) en `tools/content/legal/`; revisión del propietario (8.6) |
+| 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | DONE | En vivo 2026-10-10 (D-050); SMTP por constantes con contraseña de aplicación |
+| 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | DONE | Publicados 2026-10-10 (D-051); el propietario puede pedir cambios (8.6) |
 | 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
 | 8.7 | 404 útil (noindex), búsqueda interna si procede | 2 | DONE | `404.php`: cabecera a sangre, rutas publicadas (omite borradores), WhatsApp, nota para enlaces del dominio viejo; sin buscador (sitio pequeño) |
 | 8.8 | Navegador de síntomas (orientación, no diagnóstico) | 3 | TODO | |
