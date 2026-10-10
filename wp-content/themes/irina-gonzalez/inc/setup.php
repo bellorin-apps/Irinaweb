@@ -15,6 +15,8 @@ add_action(
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'editor-styles' );
 		add_image_size( 'irina-hero', 1600, 1000, true );
+		// Versión para teléfonos (D-064): 1600 px de ancho sin recorte; la sirve irina_image_original() con <picture> en ≤899 px.
+		add_image_size( 'irina-movil', 1600, 0, false );
 		add_image_size( 'irina-card', 800, 600, true );
 		add_image_size( 'irina-portrait', 900, 1200, true );
 		register_nav_menus(
