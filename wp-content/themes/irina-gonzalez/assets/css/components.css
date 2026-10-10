@@ -71,6 +71,8 @@ body:not(.has-bleed) { padding-top: 92px; }
 .di-nav { display: none; align-items: center; gap: var(--space-lg); }
 .di-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--space-lg); max-width: none; }
 .di-nav a { color: inherit; text-decoration: none; font-weight: 500; font-size: 0.95rem; position: relative; padding-block: 0.3rem; }
+/* El botón de WhatsApp de la cabecera siempre en blanco, también con la barra desplazada (`.di-nav a` heredaba el color del texto; propietario, 2026-10-10). */
+.di-header .di-nav a.di-btn--whatsapp, .di-header .di-btn--whatsapp { color: #fff; }
 .di-nav li a::after { content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 100%; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform var(--motion-base) var(--ease-out); }
 .di-nav li a:hover::after, .di-nav li.current-menu-item a::after { transform: scaleX(1); transform-origin: left; }
 @media (min-width: 1024px) { .di-nav { display: flex; } }
@@ -479,7 +481,7 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 /* Sombreado solo horizontal y en modo multiplicar (propietario, 2026-10-10): oscurece de izquierda a derecha la zona del texto y
    se desvanece antes de la figura, sin tocar la fotografía. En móvil no hace falta (el texto va debajo de la foto). */
 /* Propietario (2026-10-10): sin gris; oscurecido entre morado y rojizo oscuro de la paleta (#4a2a3e, de la gama del hero warm), en multiplicar y de izquierda a derecha. */
-.di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(74 42 62 / 0.78) 0%, rgb(74 42 62 / 0.5) 34%, rgb(74 42 62 / 0.18) 52%, rgb(74 42 62 / 0) 64%); mix-blend-mode: multiply; }
+.di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(74 42 62 / 0.6) 0%, rgb(74 42 62 / 0.36) 34%, rgb(74 42 62 / 0.12) 52%, rgb(74 42 62 / 0) 64%); mix-blend-mode: multiply; }
 .di-bleed--photo .di-bleed__bg { inset: 0; }
 @media (max-width: 899px) {
   .di-bleed--photo { --di-photo-h: 60svh; --title-accent: var(--color-primary); background: var(--bleed-fill, #d3a98a); color: var(--color-text); }
