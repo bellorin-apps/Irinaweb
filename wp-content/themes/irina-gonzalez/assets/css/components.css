@@ -135,7 +135,7 @@ body.menu-open { overflow: hidden; }
 .di-bleed .di-crumbs, .di-bleed .di-crumbs a { color: rgb(255 255 255 / 0.62); }
 /* En flujo: el contenedor ocupa todo el alto del hero y las migas se centran en el hueco entre la cabecera y el texto (sin solaparse nunca). */
 .di-bleed .di-container:has(.di-crumbs) { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end; }
-.di-bleed .di-crumbs { margin: auto 0 auto; padding-bottom: var(--space-md); font-size: 0.78rem; letter-spacing: 0.01em; }
+.di-bleed .di-crumbs { margin: auto 0 clamp(1.75rem, 4.5vh, 3rem); padding-bottom: 0; font-size: 0.78rem; letter-spacing: 0.01em; } /* Propietario (2026-10-10): aire real entre las migas y el overline/título, también en heros cortos. */
 /* Con migas, el contenido empieza siempre por debajo de la cabecera fija (112 px) aunque el hero sea corto. */
 @media (min-width: 900px) { .di-bleed .di-container:has(.di-crumbs) { padding-top: max(clamp(6rem, 14vh, 10rem), calc(var(--di-header-h, 112px) + 2.5rem)); } }
 .di-hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-2xl); }
@@ -171,7 +171,7 @@ body.menu-open { overflow: hidden; }
   .di-bleed.di-bleed--light .di-bleed__bg img { object-position: 78% 0; } /* la variante clara no lleva sombra oscura; usa el velo crema */
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
   .di-bleed { --di-peek: calc(72px + 3rem); } /* por encima de la barra móvil fija */
-  .di-bleed .di-crumbs { max-width: 40%; font-size: 0.72rem; line-height: 1.35; }
+  .di-bleed .di-crumbs { max-width: 40%; font-size: 0.72rem; line-height: 1.35; margin-bottom: 1.5rem; }
   .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; } /* la lombriz queda centrada verticalmente aunque haya dos líneas */
   /* Salto de línea del overline solo en móvil («|» en el texto del hero): «Tu otorrino / en Monterrey». */
   .di-brm { display: block; height: 0; }
