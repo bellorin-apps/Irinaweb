@@ -207,8 +207,16 @@ body.menu-open { overflow: hidden; }
 .di-section--doctor-bg .di-doctor { align-items: end; }
 .di-section--doctor-bg .di-doctor__text { padding-bottom: var(--space-3xl); }
 @media (min-width: 1024px) { .di-section--doctor-bg .di-doctor__text { padding-bottom: 9rem; } }
-.di-doctor__portrait { align-self: end; line-height: 0; }
-.di-doctor__portrait img { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; object-position: bottom; }
+/* Retrato a la altura de la sección: la cabeza queda un poco por encima del overline (propietario, 2026-10-10). */
+@media (min-width: 900px) {
+  .di-section--doctor-bg .di-doctor { grid-template-columns: 1fr 1fr; }
+  .di-doctor__portrait { align-self: stretch; display: flex; align-items: flex-end; justify-content: flex-start; line-height: 0; margin-top: -4.5rem; }
+  .di-doctor__portrait img { display: block; height: calc(100% + 4.5rem); width: auto; max-width: none; object-fit: contain; object-position: bottom; }
+}
+@media (max-width: 899px) {
+  .di-doctor__portrait { line-height: 0; }
+  .di-doctor__portrait img { display: block; width: 100%; height: auto; object-fit: contain; object-position: bottom; }
+}
 .di-section--doctor-light { color: var(--color-text); }
 .di-section--doctor-light .di-quote { color: var(--color-text); }
 .di-section--doctor-dark { color: #fff; }
