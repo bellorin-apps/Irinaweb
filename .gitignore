@@ -54,3 +54,8 @@ docs/audit/2026-10-10/baseline-*.png
 !docs/audit/2026-10-10/baseline-360.png
 !docs/audit/2026-10-10/baseline-390.png
 !docs/audit/2026-10-10/baseline-1440.png
+docs/audit/2026-10-10/claude-4cf6e8e-*.png
+!docs/audit/2026-10-10/claude-4cf6e8e-360.png
+!docs/audit/2026-10-10/claude-4cf6e8e-390.png
+!docs/audit/2026-10-10/claude-4cf6e8e-430.png
+docs/audit/2026-10-10/portrait-position/*shift-*.png

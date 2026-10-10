@@ -105,3 +105,7 @@ _(Fase 11.)_
 | Q-045 | P2 | MetaRegistry aceptaba 2026-02-30 como fecha por validar solo formato  `wp-content/plugins/dra-irina-core/src/Fields/MetaRegistry.php:235` | FIXED_LOCAL | e87c29b: checkdate; regresión de fecha inválida/válida |
 
 Informe, variantes, límites y preguntas: `docs/AUDITORIA_CODEX_2026-10-10.md`. Datos de rectángulos: `docs/audit/2026-10-10/*-metrics.json`. Relevo: BATON. No se ejecutó ninguna prueba del formulario/SMTP en vivo.
+
+## Revisión posterior de Q-039 · 4cf6e8e
+
+Estado vigente: **OPEN / REVIEW**. La indicación D-057 conserva retrato grande y sustituye A/B. Resultado local de Claude4cf6e8e: gap8px; rostro estimado44,7/56,0 % a360/390. Mover48px adicionales a360 conserva tamaño y alcanza85,7 %, pero el hombro cruza4,9 % de cajas de palabras del párrafo. No se valida esa superposición. Evidencia por ancho y capturas: docs/REVISION_ESCUCHARTE_2026-10-10.md; CSS components.css:316. Codex no modifica el CSS del commit revisado. Sin despliegue ni cambios clínicos.

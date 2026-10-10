@@ -1,3 +1,5 @@
+> Relevo vigente tras la captura de José: D-057 sustituye la elección A/B. Claude implementó 4cf6e8e; Codex lo revisó y el gate móvil sigue abierto en360/390 (rostro≈45/56 %). Ver docs/REVISION_ESCUCHARTE_2026-10-10.md y sus comparaciones. No desplegar el ensayo de desplazamiento sin resolver el choque con el párrafo. Las preguntas al propietario las formula Claude. La entrega anterior se conserva debajo como historial técnico; sus instrucciones de elegir A/B ya no aplican.
+
 # BATON — Codex → sesión local
 
 Fecha: 2026-10-10. Rama: `ccr-6254502d-xly8ww`. Base: `d04e2cd`. Código/contenido hasta `e87c29b`; pruebas/documentación posteriores en HEAD. Sin despliegue por Codex.
@@ -57,3 +59,7 @@ PHP/PHPCS, builds, sintaxis y regresión aislada pasan. WP autenticado, SMTP, ot
 ## MENSAJE PARA EL OTRO AGENTE
 
 Entrega en ccr-6254502d-xly8ww, código hasta e87c29b, documentación posterior en HEAD. Traer rama desde checkout limpio; deploy-code → setup-site → setup-pages → setup-dra → deploy-briefing → purga. Esperar OK de José para A; corte técnico sin ella: b4b0716. Verificar FAQ, horario REST, hero crudo, enlaces y Escucharte. No publicar clínica, tocar CDN/Sensia ni pegar tokens. Devolver SHA y evidencia en QA/BATON.
+
+## MENSAJE ACTUAL PARA CLAUDE
+
+La escala grande es la instrucción de José; no reducir de nuevo. 4cf6e8e mueve la caja8px frente a lo publicado y no recupera suficiente rostro en360/390. Prueba adicional sobre ese commit: mover48px a360 sube el rostro a≈86 % conservando tamaño, pero cruza≈4,9 % de las cajas del párrafo; a390 mover32px alcanza≈83 % con choque menor. Usar esta evidencia para una composición que deje libre el hombro, no como CSS listo para desplegar. Codex no tocó components.css ni JS mientras Claude construye. Gate Q-039 abierto; preguntas por Claude, sin nuevos interrogatorios desde Codex.

@@ -81,3 +81,9 @@ Formato: ID · Fecha · Decisión · Alternativas · Motivo · Estado (Vigente /
 | D-056 | 2026-10-10 | Conservar adjuntos, páginas, plantillas y respaldos; 106/39/79 en borrador | Borrar/reemplazar o papelera | Encargo explícito; sustituye instrucciones antiguas de retirar plantillas a papelera | Vigente |
 
 D-019: el aviso por correo queda sustituido por D-040 y el canónico por D-022. D-013/021: sus menciones de www no prevalecen sobre D-022. D-033: cargo HU confirmado en respuestas posteriores (D-039), no repetir el pendiente antiguo. D-054: light sigue sin uso, sin reactivar. Las variantes de Escucharte son propuestas medidas; no se registran como decisión aprobada por José.
+
+## D-057 · indicación nueva de José sobre Escucharte
+
+2026-10-10: conservar el tamaño del retrato que ve en su teléfono y acercar la figura hacia la izquierda, casi pegada al texto. Sustituye la elección A/B y su reducción de figura. Se permite corregir el posicionamiento anterior; se conserva proporción/anclaje y no se cambian textos, menú, sombras, fondo ni carrusel durante el ajuste. La separación concreta de 8 px es la implementación de Claude en 4cf6e8e, no una aprobación visual nueva de José. Codex revisa su resultado; gate móvil abierto según docs/REVISION_ESCUCHARTE_2026-10-10.md.
+
+Las preguntas pendientes se presentan por Claude, a petición expresa de José; Codex aporta evidencia y hallazgos en el relevo.

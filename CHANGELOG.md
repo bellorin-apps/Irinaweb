@@ -65,3 +65,10 @@ Trazabilidad de todos los archivos modificados por Codex (excluye los cuatro HTM
 
 - 983d10a: evidencia/harness reproducible de auditoría y A/B.
 - e87c29b: ocho títulos por defecto sin punto final (D-049), fechas de revisión con checkdate; sin cambiar textos publicados. Regresión y PHPCS de cambios pasan.
+
+## 2026-10-10 — Revisión de la indicación fotográfica nueva
+
+- José conserva el retrato grande y pide acercarlo al texto; A/B sin elección pendiente. Preguntas canalizadas por Claude (D-057).
+- Entró el commit de Claude4cf6e8e durante el trabajo; Codex lo conserva y revisa. No cambió components.css ni JS del tema.
+- Harness de posición y alfa a360/390/430, medidas del commit a8anchos y comparaciones añadidos. El rostro aún queda fuera en360/390; mover más introduce hombro detrás del párrafo. Q-039 abierto, no se declara resuelto ni desplegado.
+- Archivos de esta unidad: tools/audit/portrait-position.cjs, .gitignore, docs/REVISION_ESCUCHARTE_2026-10-10.md, docs/audit/2026-10-10/claude-4cf6e8e-* y portrait-position/, DECISIONS, STATUS, NEXT, BATON y QA. PHP/builds sin cambios; prueba visual y node --check del harness.

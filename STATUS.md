@@ -12,7 +12,7 @@ Actualizado: 2026-10-10 · Codex · cálculo: PLAN → PROGRESS.
 - Portada, Dra., Primera consulta, FAQ, Contacto, legales, Gracias y Links públicas. Gracias/Links noindex y fuera de sitemap. Cabeceras de seguridad presentes.
 - Pilares y fichas sin destino público. No se modificaron estados clínicos.
 - PHP/PHPCS, builds, sintaxis y regresiones locales pasan; FAQPage y parches de seguridad esperan despliegue.
-- Escucharte A: 668 px a 360 frente a 851 actuales; rostro estimado 98,6 %, gap16, carrusel/anillo. A/B listas para José; no equivalen a aprobación visual.
+- Escucharte: D-057 sustituye A/B. Commit Claude 4cf6e8e revisado: figura grande, pero rostro estimado ≈45/56 % a360/390. Gate móvil abierto; evidencia en docs/REVISION_ESCUCHARTE_2026-10-10.md.
 - Cambios previos de cuatro maquetas HTML preservados fuera de nuestros commits.
 
 ## Gates pendientes
@@ -21,7 +21,7 @@ Actualizado: 2026-10-10 · Codex · cálculo: PLAN → PROGRESS.
 |---|---|---|
 | Despliegue y verificación pública | Pendiente | Claude local, con OK de José |
 | REST/Gutenberg y rol médico en WP completo | Pendiente; tests aislados pasan | Sesión local en copia/staging |
-| Elección A/B y tope proporcional del retrato | Pendiente | José |
+| Composición con figura grande, rostro y párrafo legible | Revisión abierta de 4cf6e8e; A/B sin elección pendiente | Claude construye, Codex verifica; preguntas por Claude |
 | Marcadores de borrador en páginas públicas | Aprobación del bloque por confirmar; Q-043 | Dra./José |
 | Fichas médicas | Revisión/aprobación pendientes | Dra. |
 | GA4, foto definitiva, cobertura GSC | Dependencias conocidas | José/Dra. |
