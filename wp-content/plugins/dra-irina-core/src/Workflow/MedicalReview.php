@@ -25,6 +25,10 @@ final class MedicalReview {
 		add_action( 'add_meta_boxes', [ $this, 'meta_box' ] );
 		add_action( 'save_post', [ $this, 'save_state' ], 10, 2 );
 		add_filter( 'wp_insert_post_data', [ $this, 'block_unapproved_publish' ], 10, 2 );
+		add_action( 'post_updated', [ $this, 'review_changed_post' ], 10, 3 );
+		add_action( 'added_post_meta', [ $this, 'review_changed_meta' ], 10, 3 );
+		add_action( 'updated_post_meta', [ $this, 'review_changed_meta' ], 10, 3 );
+		add_action( 'deleted_post_meta', [ $this, 'review_changed_meta' ], 10, 3 );
 		add_action( 'admin_notices', [ $this, 'notice' ] );
 	}
 
@@ -87,6 +91,37 @@ final class MedicalReview {
 		return in_array( self::state( $post_id ), EstadoMedico::PUBLISHABLE, true );
 	}
 
+	/** La aprobación anterior no autoriza nuevas modificaciones de un editor técnico. */
+	public function review_changed_post( int $post_id, \WP_Post $after, \WP_Post $before ): void {
+		if ( $after->post_title !== $before->post_title || $after->post_content !== $before->post_content || $after->post_excerpt !== $before->post_excerpt ) {
+			$this->require_new_review( $post_id );
+		}
+	}
+
+	/** Los metadatos di_* también contienen texto clínico; excluye registros internos _di_*. */
+	public function review_changed_meta( $meta_id, int $post_id, string $key ): void {
+		if ( str_starts_with( $key, 'di_' ) ) {
+			$this->require_new_review( $post_id );
+		}
+	}
+
+	private function require_new_review( int $post_id ): void {
+		if ( ! in_array( get_post_type( $post_id ), self::CLINICAL, true ) || current_user_can( self::CAP ) || ! self::is_publishable( $post_id ) ) {
+			return;
+		}
+		wp_set_object_terms( $post_id, EstadoMedico::MEDICAL_REVIEW_REQ, EstadoMedico::SLUG, false );
+		delete_post_meta( $post_id, '_di_approved_by' );
+		delete_post_meta( $post_id, '_di_approved_at' );
+		if ( in_array( get_post_status( $post_id ), [ 'publish', 'future' ], true ) ) {
+			wp_update_post(
+				[
+					'ID'          => $post_id,
+					'post_status' => 'pending',
+				]
+			);
+		}
+	}
+
 	public function meta_box(): void {
 		foreach ( self::CLINICAL as $type ) {
 			add_meta_box( 'di-medical-review', __( 'Revisión médica', 'dra-irina-core' ), [ $this, 'render_box' ], $type, 'side', 'high' );
@@ -138,6 +173,9 @@ final class MedicalReview {
 			return;
 		}
 		$new = sanitize_key( (string) wp_unslash( $_POST['di_estado_medico'] ) );
+		if ( ! in_array( $new, [ EstadoMedico::DRAFT, EstadoMedico::TECHNICAL_REVIEW, EstadoMedico::MEDICAL_REVIEW_REQ, EstadoMedico::MEDICALLY_APPROVED, EstadoMedico::READY ], true ) ) {
+			return;
+		}
 		if ( in_array( $new, EstadoMedico::PUBLISHABLE, true ) && ! current_user_can( self::CAP ) ) {
 			return; // Un no-revisor no puede elevar a aprobado.
 		}
@@ -156,7 +194,7 @@ final class MedicalReview {
 	 * @param array $postarr Datos originales.
 	 */
 	public function block_unapproved_publish( array $data, array $postarr ): array {
-		if ( ! in_array( $data['post_type'] ?? '', self::CLINICAL, true ) || 'publish' !== ( $data['post_status'] ?? '' ) ) {
+		if ( ! in_array( $data['post_type'] ?? '', self::CLINICAL, true ) || ! in_array( $data['post_status'] ?? '', [ 'publish', 'future' ], true ) ) {
 			return $data;
 		}
 		$post_id = (int) ( $postarr['ID'] ?? 0 );

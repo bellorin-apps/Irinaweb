@@ -32,7 +32,7 @@ final class Form {
 		'otro'     => 'Otro / no lo sé',
 	];
 
-	private const MIN_SECONDS = 4;
+	private const MIN_SECONDS  = 4;
 	private const MAX_PER_HOUR = 5;
 
 	public function register(): void {
@@ -70,6 +70,15 @@ final class Form {
 	 * @return array{ok:bool,error?:string,message?:string}
 	 */
 	private function process(): array {
+		if ( 'POST' !== sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ?? '' ) ) ) {
+			return $this->invalid( 'form', __( 'Vuelve a cargar el formulario.', 'dra-irina-core' ) );
+		}
+		// Rechazar arrays en campos simples antes de pasar por funciones de texto.
+		foreach ( [ 'di_web', 'di_t', 'di_name', 'di_phone', 'di_email', 'di_motivo', 'di_message', 'di_consent' ] as $field ) {
+			if ( isset( $_POST[ $field ] ) && ! is_string( $_POST[ $field ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- validación de forma; protección sin nonce para caché.
+				return $this->invalid( 'form', __( 'Revisa los campos del formulario.', 'dra-irina-core' ) );
+			}
+		}
 		// phpcs:disable WordPress.Security.NonceVerification.Missing -- sin nonce a propósito (páginas cacheadas); protección por honeypot, tiempo, origen y límite por IP.
 		if ( ! $this->same_origin() ) {
 			return [
@@ -98,13 +107,13 @@ final class Form {
 			];
 		}
 
-		$name    = $this->clean_text( sanitize_text_field( wp_unslash( $_POST['di_name'] ?? '' ) ), 80 );
-		$phone   = preg_replace( '/[^\d+]/', '', sanitize_text_field( wp_unslash( $_POST['di_phone'] ?? '' ) ) ) ?? '';
+		$name     = $this->clean_text( sanitize_text_field( wp_unslash( $_POST['di_name'] ?? '' ) ), 80 );
+		$phone    = preg_replace( '/[^\d+]/', '', sanitize_text_field( wp_unslash( $_POST['di_phone'] ?? '' ) ) ) ?? '';
 		$raw_mail = sanitize_text_field( wp_unslash( $_POST['di_email'] ?? '' ) );
 		$email    = sanitize_email( $raw_mail );
-		$motivo  = sanitize_key( (string) wp_unslash( $_POST['di_motivo'] ?? '' ) );
-		$message = $this->clean_text( sanitize_textarea_field( wp_unslash( $_POST['di_message'] ?? '' ) ), 800, true );
-		$consent = ! empty( $_POST['di_consent'] );
+		$motivo   = sanitize_key( (string) wp_unslash( $_POST['di_motivo'] ?? '' ) );
+		$message  = $this->clean_text( sanitize_textarea_field( wp_unslash( $_POST['di_message'] ?? '' ) ), 800, true );
+		$consent  = ! empty( $_POST['di_consent'] );
 		// phpcs:enable
 
 		$digits = preg_replace( '/\D/', '', $phone ) ?? '';
@@ -237,17 +246,17 @@ final class Form {
 	 * Correo HTML (estilos inline, tablas, sin imágenes externas salvo el icono del sitio) con la identidad del consultorio.
 	 */
 	private function html_mail( string $name, string $phone, string $wa, string $email, string $motivo, string $message, string $page, string $when ): string {
-		$p       = PracticeSettings::public_data();
-		$site    = wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES );
-		$icon    = (string) get_site_icon_url( 96 );
-		$centro  = (string) ( $p['centro'] ?? '' );
-		$addr    = trim( ( $p['calle'] ?? '' ) . ( ! empty( $p['interior'] ) ? ', ' . $p['interior'] : '' ) . ( ! empty( $p['colonia'] ) ? ', ' . $p['colonia'] : '' ) . ( ! empty( $p['ciudad'] ) ? ', ' . $p['ciudad'] : '' ) );
-		$font    = "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;";
-		$label   = 'style="padding:10px 0;border-bottom:1px solid #eee4dc;color:#75696f;font-size:13px;letter-spacing:.02em;vertical-align:top;width:110px;' . $font . '"';
-		$value   = 'style="padding:10px 0;border-bottom:1px solid #eee4dc;color:#241f23;font-size:16px;line-height:1.4;vertical-align:top;' . $font . '"';
-		$link    = 'style="color:#2a787d;text-decoration:none;font-weight:600;"';
-		$esc     = static fn( string $v ): string => esc_html( $v );
-		$rows    = [
+		$p         = PracticeSettings::public_data();
+		$site      = wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES );
+		$icon      = (string) get_site_icon_url( 96 );
+		$centro    = (string) ( $p['centro'] ?? '' );
+		$addr      = trim( ( $p['calle'] ?? '' ) . ( ! empty( $p['interior'] ) ? ', ' . $p['interior'] : '' ) . ( ! empty( $p['colonia'] ) ? ', ' . $p['colonia'] : '' ) . ( ! empty( $p['ciudad'] ) ? ', ' . $p['ciudad'] : '' ) );
+		$font      = "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;";
+		$label     = 'style="padding:10px 0;border-bottom:1px solid #eee4dc;color:#75696f;font-size:13px;letter-spacing:.02em;vertical-align:top;width:110px;' . $font . '"';
+		$value     = 'style="padding:10px 0;border-bottom:1px solid #eee4dc;color:#241f23;font-size:16px;line-height:1.4;vertical-align:top;' . $font . '"';
+		$link      = 'style="color:#2a787d;text-decoration:none;font-weight:600;"';
+		$esc       = static fn( string $v ): string => esc_html( $v );
+		$rows      = [
 			[ 'Nombre', $esc( $name ) ],
 			[ 'Teléfono', sprintf( '<a href="tel:%1$s" %3$s>%2$s</a> &nbsp;·&nbsp; <a href="https://wa.me/%4$s" %3$s>WhatsApp</a>', esc_attr( $phone ), $esc( $phone ), $link, esc_attr( $wa ) ) ],
 			[ 'Motivo', '<span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#efe6f4;color:#6b3a86;font-size:14px;font-weight:600;">' . $esc( $motivo ) . '</span>' ],
@@ -257,7 +266,7 @@ final class Form {
 		foreach ( $rows as [ $k, $v ] ) {
 			$rows_html .= '<tr><td ' . $label . '>' . $esc( $k ) . '</td><td ' . $value . '>' . $v . '</td></tr>';
 		}
-		$msg_html = '' !== $message
+		$msg_html  = '' !== $message
 			? '<div style="margin-top:18px;padding:16px 18px;border-radius:14px;background:#fbf7f2;color:#241f23;font-size:16px;line-height:1.5;' . $font . '">' . nl2br( $esc( $message ) ) . '</div>'
 			: '<p style="margin:18px 0 0;color:#75696f;font-size:14px;' . $font . '">Sin mensaje adicional.</p>';
 		$icon_html = '' !== $icon ? '<img src="' . esc_url( $icon ) . '" width="44" height="44" alt="" style="display:block;border-radius:12px;margin-bottom:12px;">' : '';

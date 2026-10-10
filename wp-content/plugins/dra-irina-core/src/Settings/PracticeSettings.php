@@ -191,6 +191,9 @@ final class PracticeSettings {
 			$out['cedula_medicina']     = self::get( 'cedula_medicina' );
 			$out['cedula_especialidad'] = self::get( 'cedula_especialidad' );
 		}
+		if ( self::get( 'horario_oculto' ) ) {
+			unset( $out['horario'] );
+		}
 		return $out;
 	}
 

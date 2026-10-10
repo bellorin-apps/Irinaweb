@@ -33,6 +33,13 @@ final class EstadoMedico extends AbstractTaxonomy {
 
 	protected function args(): array {
 		return [
+			// REST y editor deben respetar la misma autoridad que la caja de revisión.
+			'capabilities' => [
+				'manage_terms' => 'approve_medical_content',
+				'edit_terms'   => 'approve_medical_content',
+				'delete_terms' => 'approve_medical_content',
+				'assign_terms' => 'approve_medical_content',
+			],
 			'hierarchical' => false,
 			'meta_box_cb'  => false, // La UI la gestiona Workflow\MedicalReview (radio único, con control de capacidad).
 		];

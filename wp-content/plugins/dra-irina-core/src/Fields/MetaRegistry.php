@@ -153,7 +153,7 @@ final class MetaRegistry {
 						'default'           => $def['default'] ?? ( 'array' === $def['type'] ? [] : ( 'boolean' === $def['type'] ? false : ( 'integer' === $def['type'] ? 0 : '' ) ) ),
 						'show_in_rest'      => [ 'schema' => self::rest_schema( $def ) ],
 						'sanitize_callback' => static fn( $value ) => self::sanitize( $value, $def ),
-						'auth_callback'     => static fn(): bool => current_user_can( 'edit_posts' ),
+						'auth_callback'     => static fn( $allowed, $meta_key, $post_id ): bool => current_user_can( 'edit_post', (int) $post_id ),
 					]
 				);
 			}

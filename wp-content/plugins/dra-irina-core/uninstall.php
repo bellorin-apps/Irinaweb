@@ -6,9 +6,11 @@
  * @package DraIrina\Core
  */
 
+declare( strict_types=1 );
+
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
 global $wpdb;
-$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '_transient_di_%' OR option_name LIKE '_transient_timeout_di_%'" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+$wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s", $wpdb->esc_like( '_transient_di_' ) . '%', $wpdb->esc_like( '_transient_timeout_di_' ) . '%' ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
