@@ -213,6 +213,25 @@
     });
   }
 
+  // «Escucharte» con endoscopio (propietario, 2026-10-10): la foto sale de debajo de la tarjeta según el scroll. --endo-p va de 0
+  // (sección asomando por abajo) a 1 (sección a media pantalla); el CSS la traduce a desplazamiento. Sin JS o con reduced-motion: 1.
+  var endo = document.querySelectorAll('.di-narrative--card');
+  if (endo.length && !reduce) {
+    var endoTick = false;
+    function endoUpdate() {
+      endoTick = false;
+      var vh = window.innerHeight || 1;
+      endo.forEach(function (sec) {
+        var r = sec.getBoundingClientRect();
+        var p = (vh - r.top) / (vh * 0.55 + r.height * 0.5);
+        sec.style.setProperty('--endo-p', Math.max(0, Math.min(1, p)).toFixed(3));
+      });
+    }
+    window.addEventListener('scroll', function () { if (!endoTick) { endoTick = true; requestAnimationFrame(endoUpdate); } }, { passive: true });
+    window.addEventListener('resize', endoUpdate);
+    endoUpdate();
+  }
+
   // Logos: el carril se mueve solo y además se puede arrastrar con ratón, dedo o lápiz (propietario, 2026-10-10).
   // Al primer arrastre la animación CSS se congela en su posición y el movimiento pasa a JS: sigue el puntero, suelta con
   // inercia breve y, tras 3 s sin tocarlo, reanuda el autoplay desde donde quedó a la misma velocidad que la animación.

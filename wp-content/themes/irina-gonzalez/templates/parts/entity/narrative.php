@@ -1,9 +1,10 @@
 <?php
 /**
  * Bloque narrativo centrado (ancho de lectura). $args: eyebrow, title, lead, text, draft (bool), image_id (int, opcional), image_alt.
- * Con imagen: el texto no se mueve (misma columna de lectura); la foto entra con animación al hacer scroll en el margen derecho
- * (image_pos=left para el izquierdo) en pantallas anchas y debajo del texto en el resto; se mezcla en multiplicar para que su fondo de
- * estudio se funda con el crema (propietario, 2026-10-10: endoscopio junto a «Escucharte»).
+ * Con imagen (propuesta del propietario, 2026-10-10, «Escucharte» + endoscopio): el texto va en una tarjeta de cristal blanco
+ * desplazada a la derecha y la foto, grande, asoma por su lado izquierdo saliendo de debajo de la tarjeta a medida que se baja
+ * (main.js fija --endo-p 0→1 según el scroll). La foto va en multiplicar y con desvanecido para fundir su fondo de estudio con el
+ * crema. image_pos=left invierte los lados.
  *
  * @package IrinaGonzalez
  */
@@ -29,12 +30,18 @@ $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 		'alt'      => (string) $irina_a['image_alt'],
 		'loading'  => 'lazy',
 		'decoding' => 'async',
-		'sizes'    => '(max-width: 1199px) 60vw, 22vw',
+		'sizes'    => '(max-width: 999px) 80vw, 52vw',
 	]
 ) : '';
 ?>
-<section class="di-section<?php echo '' !== $irina_img ? ' di-narrative--aside di-narrative--img-' . esc_attr( 'left' === $irina_a['image_pos'] ? 'left' : 'right' ) : ''; ?>">
+<section class="di-section<?php echo '' !== $irina_img ? ' di-narrative--card di-narrative--img-' . esc_attr( 'left' === $irina_a['image_pos'] ? 'left' : 'right' ) : ''; ?>">
+	<?php if ( '' !== $irina_img ) : ?>
+	<div class="di-container di-narrative__wrap">
+		<div class="di-narrative__aside"><?php echo $irina_img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+		<div class="di-narrative__card di-reveal">
+	<?php else : ?>
 	<div class="di-container--narrow">
+	<?php endif; ?>
 		<?php
 		if ( '' !== $irina_a['eyebrow'] ) :
 			?>
@@ -66,8 +73,8 @@ $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 		if ( $irina_a['draft'] ) :
 			?>
 			<p class="di-draft di-reveal"><?php esc_html_e( 'Borrador: pendiente de revisión de la Dra.', 'irina-gonzalez' ); ?></p><?php endif; ?>
-	</div>
 	<?php if ( '' !== $irina_img ) : ?>
-	<div class="di-narrative__aside di-reveal" aria-hidden="false"><?php echo $irina_img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+		</div>
 	<?php endif; ?>
+	</div>
 </section>
