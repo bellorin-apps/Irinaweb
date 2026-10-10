@@ -1,3 +1,5 @@
+> Documento histórico: inventario/checkpoint del7–8 de octubre. Para operar hoy consultar STATUS, NEXT y BATON. CP3 cerrado; páginas base y legales públicas, PHP8.4 y SSL/redirección vigentes según evidencia actual. 106/39/79 se conservan en borrador por instrucción del encargo2026-10-10; no enviarlos a papelera ni borrarlos. No ejecutar las listas de pendientes antiguas como instrucciones actuales.
+
 # Checkpoint 3 — Home + sistema visual en WordPress
 
 Preparado la noche del 8 al 9 de octubre de 2026 para la revisión del propietario. Todo lo listado está en producción pero **no es público**: `inicio-v2` con noindex; el resto en borrador (vista previa con sesión iniciada en wp-admin).

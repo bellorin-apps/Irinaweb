@@ -1,3 +1,5 @@
+> Estado 2026-10-10: los addenda y esta nota prevalecen sobre las especificaciones de las maquetas v0.1. Código/QA son la evidencia del comportamiento vigente. CP2/CP3 ya cerrados. Contenedor1320; gutter16–32; padding de sección96 móvil/144 escritorio; barra móvil se oculta a900. Fotos sin grano (D-042); overline estático; logo completo decidido, Doctoralia oficial. WhatsApp sólido sobre claros y glass sobre fotos/oscuros (D-053). No reinterpretar tablas históricas como autorización para cambiar sombras/menús.
+
 # DESIGN_SYSTEM — Dra. Irina González Sáez
 
 Versión 0.2 · 2026-10-08 · Estado: REVIEW (v2 tras la primera ronda del Checkpoint 2; pendiente aprobación final y auditoría Codex)
@@ -119,3 +121,9 @@ Reglas: texto púrpura solo sobre blanco o `surface-soft`; texto blanco sobre `p
 - **Títulos con tres tramos**: base (color del texto; blanco sobre oscuro), `<b>` en el acento (bold, mismo peso) y `<em>` en el acento en cursiva (Iskra italic 700). Acento por fondo con `--title-accent`: morado en claros, turquesa en `.di-bleed`, `.di-cta-bleed`, `.di-footer` y `.di-section--doctor-dark`. Patrón dictado por el propietario (2026-10-10): una palabra en color bold y la última palabra en color cursiva, el resto base. Ejemplo del hero y del pie: «**Respirar** bien, dormir bien, oír ***bien***» (acentos en turquesa). Títulos de dos palabras: solo cursiva. **Sin punto final en ningún título** (propietario, 2026-10-10); se conservan comas internas y signos de interrogación. Los h1 de fichas y títulos de entradas quedan en texto plano.
 - **Separadores**: lombriz estática y sutil (`--worm-border` en claro, blanco al 15–20 % en oscuro; losa 8×8, trazo 1.7) solo en: línea superior de motivos de consulta (entre ítems, fina), confianza del hero, pasos, línea superior de la ruta (entre ítems, fina) y fila legal del pie. Todas las demás líneas siguen finas de 1 px. Utilidad `.di-rule` y variables `--worm-*` (también verticales) para nuevos casos que apruebe el propietario.
 - **Indicador de scroll del hero** (escritorio): botón glass redondo de 48 px con flecha hacia abajo que late (2.4 s) y baja al final del hero al pulsarlo.
+
+## Auditoría móvil 2026-10-10: Escucharte (propuesta implementada A)
+
+Texto62 %, gap16px, retrato natural anclado abajo con ancho155 % del espacio restante y tope de alto100 %. No translateX; no recorte adicional al viewport. Esto limita su alto para mostrar el rostro: aceptación de José pendiente. Cita clamp1.4rem/6vw/1.8rem, párrafo clamp0.86rem/3.5vw/0.92rem, credenciales0.86rem con interlineado1.3em. Fuentes/resize recalculan altura de tarjeta; 4s autoplay, toque pausa8s y reduced motion sin autoplay. Overline teal más oscuro y botón glass con token púrpura fuerte para AA sobre foto crema. Comparaciones y medidas en docs/AUDITORIA_CODEX_2026-10-10.md. Escritorio1440 conserva composición aprobada; sin sombras ni !important nuevos.
+
+La variante light de Bleed está disponible sin uso: conservar según D-054, sin reactivarla. Maquetas/legacy son históricas; no borrar ni archivar sin decisión de José.

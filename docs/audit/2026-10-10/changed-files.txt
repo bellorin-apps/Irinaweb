@@ -69,6 +69,14 @@ tools/legacy/README.md
 tools/preview/README.md
 wp-content/plugins/dra-irina-core/src/Contact/Form.php
 wp-content/plugins/dra-irina-core/src/Fields/MetaRegistry.php
+wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Areas.php
+wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Credenciales.php
+wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Faq.php
+wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Hero.php
+wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Motivos.php
+wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Pasos.php
+wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Sueno.php
+wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Timeline.php
 wp-content/plugins/dra-irina-core/src/Schema/Graph.php
 wp-content/plugins/dra-irina-core/src/Settings/PracticeSettings.php
 wp-content/plugins/dra-irina-core/src/Taxonomies/EstadoMedico.php

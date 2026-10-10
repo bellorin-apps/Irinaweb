@@ -29,13 +29,13 @@ Fuente: `tools/content/pages/seo.json` (se cargan como `rank_math_title` / `rank
 
 ## 4. Técnico
 
-- Canónico `https://drairinagonzalez.com/` (sin www, D-022); `www` y `http` → 301. `otorrino-monterrey.com` (apex y www, http y https) → 301 a la misma ruta en `https://drairinagonzalez.com` en un salto (Q-007 cerrado; regla host-based de `parked-redirect.sh`, Q-012).
+- Canónico `https://drairinagonzalez.com/` (sin www, D-022); `www` y `http` → 301. `otorrino-monterrey.com` (apex y www, http y https) → 301 a la misma ruta en `https://drairinagonzalez.com` en un salto por HTTPS; HTTP pasa primero por HTTPS del borde (Q-007 cerrado; regla host-based de `parked-redirect.sh`, Q-012).
 - Barra final siempre; slugs sin acentos.
 - `noindex`: `/inicio-v2/` (hasta ser portada), `/preview/*`, `/gracias/`, búsqueda, páginas en borrador (no indexables por defecto), `/links/` (D-023).
 - Sitemap: Rank Math (`sitemap_index.xml`); excluye noindex y borradores; enviar en Search Console tras CP3 (1.4).
 - Robots: permitir todo salvo `/wp-admin/`, `/preview/`, `/briefing/`; `/op/` sin indexar (Sensia gestiona su propio noindex: verificar en Fase 9).
 - Open Graph: Rank Math por página; imagen por defecto = retrato (cuando exista la sesión); `og:locale` es_MX.
-- Schema por tipo: Home `Physician`+`MedicalBusiness`; entidad `Physician` (sameAs Doctoralia, GBP, redes); condición `MedicalWebPage`+`MedicalCondition`; tratamiento `MedicalWebPage`+`MedicalProcedure`/`MedicalTherapy`/`MedicalTest`; FAQ `FAQPage` solo donde la FAQ sea visible; migas `BreadcrumbList`.
+- Schema por tipo: Home `Physician` (nodo único observado); entidad `Physician` (sameAs Doctoralia, GBP, redes); condición `MedicalWebPage`+`MedicalCondition`; tratamiento `MedicalWebPage`+`MedicalProcedure`/`MedicalTherapy`/`MedicalTest`; FAQ `FAQPage` solo donde la FAQ sea visible; migas `BreadcrumbList`.
 - Migas visibles por template (`irina_breadcrumbs`); el `BreadcrumbList` lo emite Rank Math (configurado) para no duplicar.
 - Rendimiento como señal: ver `PERFORMANCE.md` (Fase 10).
 
@@ -54,3 +54,7 @@ Search Console registrado; alertas históricas de `noindex` y canónica elegida 
 ## 8. Versión en inglés
 
 Anexo A del MASTER_PROMPT: `/en/`, hreflang recíproco + `x-default` es, keyword map en inglés propio, `inLanguage` en schema. Fase 13; no antes del CP3.
+
+## QA 2026-10-10
+
+Canónicos sin www, noindex Gracias/Links/404 y sitemaps verificados en público. Home no debe re-marcarse noindex al recargar. FAQPage agregado localmente desde los mismos widgets de FAQ, sin duplicarlo en Primera consulta; validar tras despliegue. No confundir JSON parseable con validación clínica/legal. Destinos no publicados de Home tienen salida temporal a Primera consulta, sin abrir el gate médico. GSC requiere revisión de cobertura por el propietario. Inglés después de lanzamiento español, sin fechas inferidas.

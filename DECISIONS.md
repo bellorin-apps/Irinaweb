@@ -71,3 +71,13 @@ Formato: ID · Fecha · Decisión · Alternativas · Motivo · Estado (Vigente /
 | OD-007 | ~~Canónico www / sin www~~ | — | **RESUELTO 2026-10-07:** sin www (D-022) |
 | OD-009 | ~~Rinoplastia~~ **RESUELTO 2026-10-08 (propietario): mencionar desde ahora** con redacción prudente («valoración», «equipo quirúrgico», sin afirmar cirugías independientes); `/tratamientos/rinoplastia/` en borrador hasta que la Dra. apruebe el texto (gate médico) · Original: cómo y cuándo introducirla. Hoy la Dra. es asistente de un cirujano de nariz (OD-004: no nombrar colegas) y aún no opera rinoplastias de forma independiente | (a) No mencionar hasta que opere sola · (b) Mencionar hoy «cirugía funcional de nariz» (septoplastia/turbinoplastia/cluster nasal) y añadir «estética» cuando corresponda · (c) Preparar `/tratamientos/rinoplastia/` en borrador, lista para activar | Recomendación: **(b) + (c)**: el cluster nasal ya existe y es verdadero hoy; la página de rinoplastia se deja en borrador con keyword map propio (rinoplastia Monterrey, rinoplastia funcional, rinoseptoplastia) y no se publica hasta que la Dra. confirme que la realiza de forma independiente (§3) |
 | OD-008 | Herramienta para la versión en inglés (Anexo A) | (a) Nativo en `dra-irina-core`: campo `idioma` + relación es/en por post, rewrite `/en/`, hreflang y schema propios · (b) Polylang (free) · (c) WPML | Recomendación provisional: **(a) nativo** para no añadir un plugin pesado, no tocar Sensia ni duplicar el schema; se decide al cumplirse el criterio de entrada (CP3 + contenido aprobado) |
+
+## Reconciliación del encargo del propietario · 2026-10-10
+
+| ID | Fecha | Decisión | Alternativas | Motivo | Estado |
+|---|---|---|---|---|---|
+| D-045 | 2026-10-10 | No publicar costo de consulta; se confirma al agendar por WhatsApp | Precio público | Instrucción expresa del encargo; actualiza OD-006 histórico | Vigente |
+| D-055 | 2026-10-10 | Progreso: solo DONE suma; REVIEW y demás estados suman cero; cálculo reproducible en PROGRESS desde PLAN | Medio crédito a REVIEW | Método solicitado por el propietario; elimina contradicción de PLAN | Vigente |
+| D-056 | 2026-10-10 | Conservar adjuntos, páginas, plantillas y respaldos; 106/39/79 en borrador | Borrar/reemplazar o papelera | Encargo explícito; sustituye instrucciones antiguas de retirar plantillas a papelera | Vigente |
+
+D-019: el aviso por correo queda sustituido por D-040 y el canónico por D-022. D-013/021: sus menciones de www no prevalecen sobre D-022. D-033: cargo HU confirmado en respuestas posteriores (D-039), no repetir el pendiente antiguo. D-054: light sigue sin uso, sin reactivar. Las variantes de Escucharte son propuestas medidas; no se registran como decisión aprobada por José.

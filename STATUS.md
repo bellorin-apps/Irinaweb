@@ -1,85 +1,31 @@
 # STATUS — Dra. Irina González Sáez
 
-Última actualización: 2026-10-08 (Claude) · Fuente de cálculo: `PLAN.md`
+Actualizado: 2026-10-10 · Codex · cálculo: PLAN → PROGRESS.
 
-```
-PROYECTO — DRA. IRINA
+**26,09 % global español: 66/253 pesos, 25/95 tareas DONE.** Solo DONE suma; inglés aparte (0/19). El 31 % anterior mezclaba crédito parcial y un resumen divergente. No se elevó ninguna tarea por pruebas locales.
 
-Avance global
-██████░░░░░░░░░░░░░░ 31%
+**Estado operativo:** núcleo público en producción; auditoría de seguridad, SEO y móvil preparada en la rama, sin desplegar. Fases 10–11 en revisión; clínica de Fase 7 pendiente de aprobación. Inglés después del lanzamiento español.
 
-Fase actual
-████████░░ 80%
-Fase 6/12 — Núcleo visual (CP3 cerrado; conmutación de portada en curso) · Fase 7 contenido en DOING
+## Evidencia actual
 
-Estado
-🟢 Home v2 publicada como portada (CP3 cerrado); páginas base y 23 fichas médicas redactadas con las respuestas de la Dra. (cuestionario 2026-10-09), en borrador; la Dra. las revisa y aprueba desde la mini app `/briefing/revision/` (D-040, desplegada)
-```
+- Once rutas públicas en 360/390/430/768/1024/1440: diez 200 y 404 propia; un h1/main; sin desbordes ni excepción JS.
+- Portada, Dra., Primera consulta, FAQ, Contacto, legales, Gracias y Links públicas. Gracias/Links noindex y fuera de sitemap. Cabeceras de seguridad presentes.
+- Pilares y fichas sin destino público. No se modificaron estados clínicos.
+- PHP/PHPCS, builds, sintaxis y regresiones locales pasan; FAQPage y parches de seguridad esperan despliegue.
+- Escucharte A: 668 px a 360 frente a 851 actuales; rostro estimado 98,6 %, gap16, carrusel/anillo. A/B listas para José; no equivalen a aprobación visual.
+- Cambios previos de cuatro maquetas HTML preservados fuera de nuestros commits.
 
-## Métricas
+## Gates pendientes
 
-| Métrica | Valor |
-|---|---|
-| Fase | 6/12 |
-| Tareas | 21 / 97 DONE · 15 en REVIEW · 11 DOING |
-| Peso completado | 79 / 253 |
-| En curso | 6 (6.4 página de la Dra., 6.5, 6.6 plantillas; 5.1, 5.2, 5.5) |
-| Bloqueadas | 0 |
-| Pendientes del propietario | 4 (CDN en hPanel, SSL dominio aparcado, sesión para capturas de QA, aviso de privacidad de la Dra.) |
+| Gate | Estado | Responsable |
+|---|---|---|
+| Despliegue y verificación pública | Pendiente | Claude local, con OK de José |
+| REST/Gutenberg y rol médico en WP completo | Pendiente; tests aislados pasan | Sesión local en copia/staging |
+| Elección A/B y tope proporcional del retrato | Pendiente | José |
+| Marcadores de borrador en páginas públicas | Aprobación del bloque por confirmar; Q-043 | Dra./José |
+| Fichas médicas | Revisión/aprobación pendientes | Dra. |
+| GA4, foto definitiva, cobertura GSC | Dependencias conocidas | José/Dra. |
 
-## Estado por área
+No se certifica pre-launch completo: faltan gates autenticados, revisión clínica/legal y dispositivos fuera de Chrome. Sin cambios a CDN, Sensia, SMTP ni servidor.
 
-```
-Discovery        ██████████ 100%
-Auditoría WP     ████░░░░░░  30%
-Investigación    █████░░░░░  46%
-Arquitectura     ████░░░░░░  38%
-Diseño           █████████░  90%
-Desarrollo       ████░░░░░░  40%  (Home, header, footer DONE; Dra. y plantillas en QA)
-Contenido        ░░░░░░░░░░   0%
-SEO              ██░░░░░░░░  20%
-QA               ░░░░░░░░░░   0%
-Launch           ░░░░░░░░░░   0%
-```
-
-## LISTO
-
-- Checkpoint 1 cerrado: briefing de la Dra. confirmado (80 respuestas)
-- WordPress limpio en `drairinagonzalez.com` (canónico sin www); Sensia intacta en `/op`
-- Plugin `dra-irina-core` 0.2.1 y tema `irina-gonzalez` activos; datos del consultorio, cédulas, horario y redes cargados; Physician JSON-LD en vivo
-- Rank Math configurado; Elementor + Pro instalados; PHP 8.4; Adobe Fonts (Iskra) en el tema
-- Estrategia, sitemap, keywords, arquitectura y plugins v0.1 (REVIEW)
-- Sistema visual: tokens, componentes, sub-marca Sueño y `DESIGN_SYSTEM.md` v0.1 (REVIEW)
-- Maquetas Home, Dra. Irina, página médica (apnea) y artículo, responsive, en `tools/preview/`
-
-## AHORA
-
-- Propietario (mañana): CDN en hPanel (D-030), SSL de otorrino-monterrey.com (Q-007), sesión para capturas de 169/205, elección de cabecera (logotipo completo vs isotipo+texto)
-- Claude: QA de todas las páginas base con capturas; preparar Checkpoint 3
-- Codex: auditorías pendientes según `BATON.md`
-
-## FALTA
-
-- Fase 5: meta boxes con repetidores, widgets Elementor, pruebas en WP real, auditoría Codex
-- Fase 6: header/footer/Home/templates reales en WordPress (tras CP2)
-- Contenido médico, SEO on-page, legal, performance, QA, launch
-
-## Bloqueos
-
-| ID | Bloqueo | Tipo | Desbloquea |
-|---|---|---|---|
-| — | Ninguno activo | | |
-
-## Riesgo de entrega
-
-🟡 Medio — falta la sesión fotográfica profesional (2 a 4 semanas) y la licencia de Elementor Pro sin conectar; el resto de dependencias está cubierto.
-
-## Entrega estimada
-
-Núcleo visual en WordPress (Checkpoint 3) en 2 a 3 semanas desde la aprobación del CP2; sitio completo listo para pre-launch en 6 a 8 semanas, condicionado a fotos y revisión médica. Confianza: Media.
-
-## Dependencias externas (no cuentan como trabajo técnico)
-
-- Sesión fotográfica profesional
-- Aviso de privacidad y Aviso de Publicidad de la Dra.
-- Revisión médica de contenidos (Fase 7)
+Próximo paso: NEXT. Entrega: BATON. Evidencia: QA y `docs/AUDITORIA_CODEX_2026-10-10.md`.

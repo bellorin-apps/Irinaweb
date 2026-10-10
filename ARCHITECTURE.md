@@ -107,7 +107,7 @@ Página de ajustes "Consultorio" en el admin: nombre profesional, especialidad, 
 
 ### 4.6 Workflow médico
 
-- Las capacidades `publish_condicion` y `publish_tratamiento` solo se conceden si `estado_medico = medically_approved` o superior; el intento de publicar sin aprobación devuelve un aviso en el editor.
+- Administradores/editores tienen capacidades de publicar CPT, pero `wp_insert_post_data` convierte publish/future en pending sin estado médico aprobado. La taxonomía exige approve_medical_content al asignar por REST/editor; un editor técnico que modifica texto/meta aprobado fuerza nueva revisión. La revisora conserva su autoridad. Ver Workflow\MedicalReview y Q-024; pruebas completas en WP pendientes.
 - `medically_approved` solo lo puede asignar un usuario con rol `revisor_medico` (la Dra.). Los administradores técnicos no pueden autoasignarlo.
 - Registro de quién y cuándo aprobó (post meta + nota en revisiones).
 
@@ -162,3 +162,7 @@ No se emiten `aggregateRating` ni `review` propios (las opiniones viven en Docto
 ## 10. Desviaciones respecto al MASTER_PROMPT
 
 Ninguna. Decisiones técnicas propias registradas en `DECISIONS.md` (D-013 URLs, D-014 campos nativos sin ACF Pro, D-015 emisor único de schema).
+
+## Estado verificado 2026-10-10
+
+Contacto: Contact\Form con admin-post, sin almacenamiento de mensajes ni nonce por caché, antiabuso y SMTP por constantes privadas. Tracking\Events carga GA4 solo con ID válido; ID vacío en producción según encargo. Graph emite FAQPage solo en FAQ desde widgets almacenados; Physician es el nodo observado en Home, sin segundo MedicalBusiness explícito. Los widgets leen ajustes por defecto/datos de builds; repeticiones NAP aún pendientes Q-042. Meta boxes de repetidores no están implementadas: no tratarlas como entregadas.

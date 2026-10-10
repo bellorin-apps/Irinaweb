@@ -91,3 +91,7 @@ Se completa en Fase 1.4 cuando se conozcan las URLs existentes en el WordPress a
 | `/padecimientos/*`, `/tratamientos/*`, `/sueno/*` | CPT `condicion` / `tratamiento` con prefijo de URL por área | TODO · cada una OFRECE/NO OFRECE por confirmar |
 | `/primera-consulta/`, `/preguntas-frecuentes/`, `/contacto/`, legales | Página | TODO |
 | `/recursos/*` | CPT `recurso` (o `post` renombrado) | TODO · fase posterior |
+
+## Estado actual 2026-10-10 (sustituye TODO de la tabla histórica)
+
+Home, Dra., Primera consulta, FAQ, Contacto, tres legales, Links y Gracias: públicas, verificadas200. Links/Gracias noindex y fuera de sitemap. Pilares ORL/Sueño y fichas clínicas: no públicas (destinos404), pendientes de aprobación y flujo de publicación; no se cambian estados por la auditoría. Recursos no publicados. Menús omiten borradores; Home ahora tiene salida pública temporal para sus enlaces clínicos. Navegación proyectada de §3 no debe confundirse con el menú vigente.

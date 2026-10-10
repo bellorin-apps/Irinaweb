@@ -47,3 +47,21 @@
 - 2026-10-10 (noche, 3): **GA4 sin plugin (D-052)**: ajuste `ga4_id`, gtag con privacidad en `Tracking\Events`, conversión `contact_submit` en /gracias/; schema Physician con `image` (hero) y validación de los nodos en vivo (9.3); aviso de privacidad con la medición declarada.
 - 2026-10-10 (noche, 4): accesibilidad (Q-022): `<main>` en plantillas Elementor header/footer, teal fuerte a 4.9:1, área táctil de los puntos, enlaces del pie; cabeceras de seguridad desde el plugin (Q-023). Medidas de rendimiento en vivo: TTFB 0.32 s con caché, home 115 KB HTML.
 - 2026-10-10 (madrugada): **formulario de contacto en vivo** (con corrección de `form.action` sombreado y del alto del botón frente al kit de Elementor), /gracias/ noindex, SMTP configurado por constantes, **legales publicadas**, botón de WhatsApp en dos contextos (D-053), cabeceras de seguridad y `<main>` verificados en producción, cabecera de la página de la Dra. con fotografía (hero-dra).
+
+## 2026-10-10 — Auditoría integral de Codex (sin despliegue)
+
+- Base d04e2cd, rama ccr-6254502d-xly8ww; cuatro HTML modificados previamente en tools/preview preservados fuera de commits. Identidad de commits local Codex, sin cambiar configuración global de Git.
+- b2f718b: protege asignación de aprobación por REST, publicación programada y cambios técnicos de clínica aprobada; meta por ID, horario oculto fuera de REST, POST/escalares en contacto, uninstall acotado y strict.
+- 7c622b1: FAQPage solo en FAQ publicada desde los nueve ítems reales; JSON seguro, parser oficial para atributos de carga duplicados, calidad100 y PHPCS sin warnings.
+- f8a58dd: medios conservados/importación primero, nombre con segundos, invalidación del caché Physician; dos consultas name+any corregidas; diez destinos404 de Home con salida pública temporal y sidebar sin borradores.
+- b4b0716: mini apps sin correos aunque notify antiguo exista; cuerpos acotados, tokens tipados y error de almacenamiento; respaldo briefing, URLs privadas en archivo ignorado, sin imprimir respuestas/tokens.
+- 03db275: Escucharte A: texto62 %, tope proporcional del retrato, gap16, anclaje inferior; contraste AA en muestra360 conservando glass; carrusel remide tras fuentes/resize, pausa al tocar, no anuncia autoplay; aria-invalid/guard de envío y mapa sin doble inicialización. Sin menús, sombras nuevas ni cambios de textos.
+- 344ff4c: JSON Elementor indentado y regenerado desde tres builds; contenido semántico idéntico al commit base.
+- Harness público11rutas×6anchos, variantes8anchos, interacción, contraste y regresión PHP añadidos. Chrome local sí accede a producción; la herramienta web no. No se enviaron correos ni se publicaron fichas.
+- Normalización documental: PROGRESS calculado desde95tareas/253pesos; solo DONE suma:25tareas/66pesos,26,09 %. STATUS/NEXT/BATON/QA actualizados; decisiones D-045/D-055/D-056 reconciliadas desde el encargo, sin inventar elección A/B. PLUGINS/arquitectura/SEO/diseño/sitemap/deploy actualizados; inventario/CP3 y maquetas/legacy identificados como históricos.
+- Evidencia y límites en docs/AUDITORIA_CODEX_2026-10-10.md. Elección visual, bloque draft=yes público, permisos WP reales, SMTP, dispositivos adicionales y revisión médico/legal quedan pendientes de sus responsables.
+
+Trazabilidad de todos los archivos modificados por Codex (excluye los cuatro HTML previos del usuario): `docs/audit/2026-10-10/changed-files.txt`.
+
+- 983d10a: evidencia/harness reproducible de auditoría y A/B.
+- e87c29b: ocho títulos por defecto sin punto final (D-049), fechas de revisión con checkdate; sin cambiar textos publicados. Regresión y PHPCS de cambios pasan.

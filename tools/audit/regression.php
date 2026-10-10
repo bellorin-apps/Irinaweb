@@ -43,6 +43,9 @@ require $root . '/wp-content/plugins/dra-irina-core/src/Taxonomies/EstadoMedico.
 require $root . '/wp-content/plugins/dra-irina-core/src/Workflow/MedicalReview.php';
 require $root . '/wp-content/plugins/dra-irina-core/src/Schema/Graph.php';
 require $root . '/wp-content/plugins/dra-irina-core/src/Contact/Form.php';
+require $root . '/wp-content/plugins/dra-irina-core/src/Fields/MetaRegistry.php';
+check(DraIrina\Core\Fields\MetaRegistry::sanitize('2026-02-30',['type'=>'string','format'=>'date'])==='', 'fecha de revisión inexistente rechazada');
+check(DraIrina\Core\Fields\MetaRegistry::sanitize('2026-02-28',['type'=>'string','format'=>'date'])==='2026-02-28', 'fecha válida conservada');
 require $root . '/wp-content/themes/irina-gonzalez/inc/template-tags.php';
 check(irina_public_content_url('https://other.test/sueno/')==='https://other.test/sueno/','enlace externo conservado');
 check(irina_public_content_url('/sueno/ronquido/')==='https://example.test/primera-consulta/', 'destino clínico no publicado usa salida pública');

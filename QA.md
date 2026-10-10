@@ -1,13 +1,13 @@
 # QA — Hallazgos y resolución
 
-Clasificación: BLOCKER · CRITICAL · HIGH · MEDIUM · LOW · SUGGESTION
-Estados: OPEN · FIXING · FIXED · VERIFIED · WONTFIX (con motivo)
+Clasificación vigente: P0 bloquea · P1 importante · P2 mejora. Las severidades anteriores se conservan como historial.
+Estados: OPEN · REVIEW · OWNER · FIXED_LOCAL (probado, sin desplegar) · VERIFIED (producción) · WONTFIX (decisión explícita). FIXED histórico no implica nueva verificación.
 
 ## Auditorías de Codex
 
 | # | Fecha | Alcance | Hallazgos | Estado |
 |---|---|---|---|---|
-| — | — | Pendiente primera auditoría (ver `BATON.md`) | — | — |
+| 1 | 2026-10-10 | Tema, core, builds, scripts, mini apps, docs y 11 rutas públicas en seis anchos | Q-024–Q-045 y Q-018 | Correcciones locales; despliegue y gates autenticados pendientes |
 
 ## Hallazgos
 
@@ -48,3 +48,60 @@ _(Fase 6 en adelante.)_
 
 _(Fase 11.)_
 
+
+## Reconciliación de Q-001–Q-023 · Codex, 2026-10-10
+
+| ID | Estado real actual | Evidencia / límite |
+|---|---|---|
+| Q-001 | OPEN | Search Console necesita revisión del propietario; no se atribuye cobertura a una petición HTTP |
+| Q-002 | WONTFIX | Género masculino dictado por OD-001; no es error por corregir |
+| Q-003 | OWNER | Hay fotos autorizadas en vivo; sigue pendiente foto definitiva del hero Dra. |
+| Q-004 | VERIFIED | Canónico sin www y 301 HTTPS por ruta/query del dominio antiguo; D-022 sustituye la nota antigua de www |
+| Q-005 | FIXED histórico | Callback público y Ops sin sesión 401; no se ejecutó Ops autenticado |
+| Q-006 | VERIFIED histórico / ampliado localmente | Prueba local del gate en tres CPT, publish/future; permisos completos en staging pendientes (Q-024) |
+| Q-007 | VERIFIED | HTTPS apex/www antiguo responden 301, sin fallo TLS |
+| Q-008 | FIXED_LOCAL ampliado | Setup-site/medical corregidos previamente; dos consultas remanentes en Dra./SEO ahora usan post_name__in (Q-036) |
+| Q-009 | WONTFIX en este entorno | Chrome local accede; no modificar WAF/CDN por limitaciones de cloud |
+| Q-010 | REVIEW | Backend revisado, cuerpos acotados y token tipado; sin token 403; guardar/aprobar requiere prueba autenticada local |
+| Q-011 | FIXED histórico | Capacidades privadas presentes; no se operó el usuario real |
+| Q-012 | VERIFIED | HTTPS 301 conserva ruta/query en un salto; HTTP tiene salto previo de borde |
+| Q-013 | VERIFIED | Ambos sitemaps 200; Home indexable; setup-site conserva guard de portada |
+| Q-014 | FIXED histórico | Regla sleep existe; pilar en borrador, sin nueva captura autenticada |
+| Q-015 | REVIEW | Capturas privadas históricas conservadas; no se autentica esta sesión |
+| Q-016 | VERIFIED | Cero enlaces ?page_id= en las rutas públicas; destinos clínicos 404 por otro mecanismo: Q-025 |
+| Q-017 | VERIFIED | Costo por WhatsApp y sin [PENDIENTE] en público; marcadores draft=yes pendientes distintos: Q-043 |
+| Q-018 | FIXED_LOCAL | FAQPage desde datos del widget, solo FAQ publicada; pendiente validar tras desplegar |
+| Q-019 | VERIFIED parcial / histórico | Sprite oficial Doctoralia presente; no queda solicitud de SVG provisional; no se reasigna aprobación visual completa |
+| Q-020 | WONTFIX para nitidez 1× | Decisión de mantener CDN de José; fotos/cápsulas en vivo; no cambiar CDN |
+| Q-021 | VERIFIED público | REST no expone clave; script Google es su uso público esperado. Restricciones confirmadas por José en encargo; Cloud no inspeccionado independientemente |
+| Q-022 | VERIFIED parcial | Un main/h1 en 11 rutas; CSS conserva foco y área de puntos. Contraste Escucharte tratado en Q-038, no certificación WCAG completa |
+| Q-023 | VERIFIED | Cinco cabeceras presentes en las 11 rutas públicas |
+
+## Nuevos hallazgos · código corregido pendiente de despliegue
+
+| ID | Severidad | Evidencia | Estado | Acción / commit |
+|---|---|---|---|---|
+| Q-024 | P1 | `Taxonomies/EstadoMedico.php::args`, `Workflow/MedicalReview.php`, `Fields/MetaRegistry.php`; capacidades genéricas, scheduled y aprobación reutilizable | FIXED_LOCAL | `b2f718b`: aprobación por capacidad, publish/future, revocación ante cambio técnico y edit_post por ID; probar REST en staging |
+| Q-025 | P1 | `docs/audit/2026-10-10/home-links.json`: diez destinos clínicos/pilares 404 | FIXED_LOCAL | `f8a58dd`: fallback público de Home y omitir sidebar de borradores; no publicar |
+| Q-026 | P2 | `public.json` duplicateHero=true en / y Dra.; atributo repetido en HTML, no en DOM normalizado por navegador | FIXED_LOCAL | `7c622b1`: parser HTML en hero/Elementor; API real de WP probada; purga y comprobar HTML crudo |
+| Q-027 | P2 | `inc/performance.php`, filtro 94 después de 100 | FIXED_LOCAL | `7c622b1`: retirar contradicción con calidad aprobada |
+| Q-028 | P1 | `tools/deploy/upload-media.sh`, post delete antes de import | FIXED_LOCAL | `f8a58dd`: conservar original/ID, importar primero, versionar en segundos; sintaxis probada, ensayo remoto pendiente |
+| Q-029 | P1 | `public.json` hiddenHoursExposed=true; PracticeSettings::public_data | FIXED_LOCAL | `b2f718b`: horario oculto fuera de REST; Maps/Bcc ya privados |
+| Q-030 | P2 | builds home/pages/dra y JSON en una línea | FIXED_LOCAL | `344ff4c`: indent=2, regeneración y igualdad semántica comprobada |
+| Q-031 | P2 | STATUS 31 %, PLAN resumen divergente, BATON inicial sin código, NEXT CP3 pendiente | FIXED_LOCAL | PROGRESS reproducible; estado y relevo actuales; no subir estados sin evidencia |
+| Q-032 | P2 | `assets/js/main.js`, medida de tarjetas anterior a fuentes y sin resize; touch sin swipe no pausaba | FIXED_LOCAL | `03db275`: medida tras fuentes/resize, pausa al tocar y aria-live off; interaction.json PASS |
+| Q-033 | P2 | `Contact/Form.php::process`, `main.js::showError` | FIXED_LOCAL | `b2f718b` + `03db275`: POST/escalares, aria-invalid, impedir doble envío; sin envío real |
+| Q-034 | P2 | `inc/enqueue.php`, `Schema/Graph.php::output` | FIXED_LOCAL | `7c622b1`: JSON recodificado/HEX evita salir del script |
+| Q-035 | P2 | guardar.php/fichas; deploy-briefing conservaba config notify y mostraba token/answers | FIXED_LOCAL | `b4b0716`: sin correos, entrada acotada, respaldo; URLs privadas ignoradas, salida sin respuestas |
+| Q-036 | P2 | setup-dra y fallback SEO en setup-pages, consultas name+any | FIXED_LOCAL | `f8a58dd`: post_name__in; verificar idempotencia en copia WP |
+| Q-037 | P2 | uninstall.php, LIKE con underscores y sin strict | FIXED_LOCAL | `b2f718b`: esc_like/prepare; sin eliminación de contenido/ajustes |
+| Q-038 | P2 | contrast.json; overline anterior 4,1:1 sobre foto | FIXED_LOCAL | `03db275`: tokens más oscuros, glass conservado; overline 4,9 y botón 6,46 |
+| Q-039 | P1 | baseline-360.png, 851 px y retrato 40,5 % visible | FIXED_LOCAL / OWNER | `03db275`: A 668 px, gap16, rostro estimado 98,6 %; elección y producción pendientes |
+| Q-040 | P2 | Ops/Endpoints.php::DENY: superficie de opciones extensa para admin | OPEN | Propuesta técnica: inventariar consumidores y pasar a allowlist; permiso manage_options y veto de secretos ya activos |
+| Q-041 | P2 | assets/js/map.js, Marker obsoleto | OWNER | Mantener hasta mapId; guard contra mapa duplicado corregido en `03db275` |
+| Q-042 | P2 | NAP/horarios/hospitales repetidos en builds/defaults; fuente central existe | OPEN | Migración a datos centrales al renderizar como próxima unidad técnica, sin cambiar textos aprobados |
+| Q-043 | P1 | build-pages.py pc-narr y build-dra.py narrativa draft=yes; marcas visibles en Dra./Primera consulta | OWNER | Confirmar aprobación antes de retirar marca en build; no ocultar ni publicar por inferencia |
+| Q-044 | P2 | Ocho defaults de títulos Elementor conservaban punto final en em, contrario a D-049 | FIXED_LOCAL | e87c29b: retirar solo el punto; sin cambiar textos publicados ni reparto de acentos |
+| Q-045 | P2 | MetaRegistry aceptaba 2026-02-30 como fecha por validar solo formato | FIXED_LOCAL | e87c29b: checkdate; regresión de fecha inválida/válida |
+
+Informe, variantes, límites y preguntas: `docs/AUDITORIA_CODEX_2026-10-10.md`. Datos de rectángulos: `docs/audit/2026-10-10/*-metrics.json`. Relevo: BATON. No se ejecutó ninguna prueba del formulario/SMTP en vivo.

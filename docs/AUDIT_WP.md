@@ -1,3 +1,5 @@
+> Documento histórico: inventario/checkpoint del7–8 de octubre. Para operar hoy consultar STATUS, NEXT y BATON. CP3 cerrado; páginas base y legales públicas, PHP8.4 y SSL/redirección vigentes según evidencia actual. 106/39/79 se conservan en borrador por instrucción del encargo2026-10-10; no enviarlos a papelera ni borrarlos. No ejecutar las listas de pendientes antiguas como instrucciones actuales.
+
 # AUDITORÍA DEL WORDPRESS — drairinagonzalez.com
 
 Inventario de producción: `docs/audit/inventory-20261007-174227.txt` (solo lectura, ejecutado por la sesión local "Irinaweb" el 2026-10-07 por SSH + WP-CLI). Backup completo descargado el mismo día a las 16:41 antes de cualquier cambio.

@@ -1,89 +1,28 @@
-# NEXT — Siguiente trabajo
+# NEXT — Próximo trabajo
 
-Última actualización: 2026-10-10 · Convención: las guías paso a paso para José se dan en el chat cloud («Sitio web»); la sesión local deja solo resúmenes.
+Actualizado: 2026-10-10 · Codex. Estado/progreso: STATUS/PROGRESS. Evidencia: QA. Despliegue: BATON.
 
-## Prioridad 1 — Desbloqueadores (propietario)
+## NOW
 
-- [x] Contraste del botón de WhatsApp (Q-022): glass sobre fotos y sólido teal sobre crema (D-053), desplegado. Hero de la página de la Dra. con foto (hero-dra 340) en variante warm (texto blanco); la variante clara (D-054) se probó y José la descartó. Pendiente opcional: recorte de hero-irina.png con más aire sobre la cabeza para que el rostro no quede bajo la barra fija.
-- [ ] **GA4 (D-052)**: José crea la propiedad GA4 y pasa el ID de medición (G-…, es público); Claude lo carga en `ga4_id` por REST; verificar en Tiempo real los eventos whatsapp_click/phone_click/directions_click/doctoralia_click/contact_submit; marcarlos como conversiones clave en GA4. Enlazar GA4 con Search Console.
-- [x] **Formulario de contacto (D-050) y legales (D-051)** en vivo (2026-10-10): formulario en /contacto/, /gracias/ publicada noindex, SMTP por constantes `DI_SMTP_*` con contraseña de aplicación de Hostinger (`wp_mail()` true), legales publicadas (175/176/177) con shortcodes resueltos; pruebas JS/sin JS/honeypot/tiempo/origen OK por la sesión local. Pendiente: José confirma la recepción de los 3 correos de prueba en soy@drairinagonzalez.com y lee los legales.
-- [ ] **D-049 (títulos con color + cursiva)**: en código (tema + builds). Separadores lombriz solo en los 5 puntos que marcó José (motivos, confianza del hero, pasos, ruta, fila legal del pie), colores sutiles; el resto líneas finas. Indicador de scroll del hero: botón glass con flecha. Desplegar: `deploy-code.sh` + `setup-site.sh` (Home) + `setup-pages.sh` + `setup-dra.sh` (recargan los títulos con `<b>`), purga; capturas 1440/390 de hero, áreas, Dra., ubicación y pie. José revisa la tabla de reparto palabra a palabra (chat cloud) y ajusta.
-- [x] **Tanda desplegada (10-10, HEAD 03e01ac):** e691f76 fondo móvil a todo el ancho con fundido (medido 390/480: fondo 390×260 / 480×320, left 0 / right 0, apoyado abajo, mask OK; retrato a 16 px del texto; capturas `/preview/qa/doctora-{390,480}-20261009-2301.png`) y 5b7d79a interfaz del mapa en español (390: «Datos del mapa / Combinaciones de teclas / Términos», consola sin errores). José (teléfono ≈360 px): franja clara a la derecha, rostro fuera de pantalla y tulipanes diminutos → corregido en código (retrato dimensionado por ancho hasta el borde del viewport, fondo cover anclado a la izquierda servido solo como original, puntos alineados con el texto, anillo de progreso del autoplay); desplegado y medido por la sesión local en 360/390/430/483 (ea4497f). José: «queda mucho espacio arriba» → retrato a todo el alto de la columna; José (captura de referencia) → silueta natural por la izquierda, recortada solo por el borde derecho del viewport (en 360–390 se esconde parte del rostro, aceptado) y tulipanes un poco escondidos por la izquierda (−8vw). **Desplegado 2026-10-10 (CSS ver=1791609429) y verificado en vivo a 360/390/483** por la sesión cloud; José sobre capturas reales: «no veo el cargador» (anillo aplastado por `svg { max-width:100% }` de base.css → corregido, 20 px, trazo 2 px, con pista) y credenciales como mini tarjetas glass blancas (como las etiquetas de las cards de área); José: en escritorio igual, una a una con puntos y anillo → carrusel en todos los anchos, tarjeta al 50 % en escritorio; cards de área con la foto anclada al borde derecho. **Todo desplegado el 2026-10-10 (hasta 808de60) y verificado en vivo** (1440/390) por ambas sesiones. Nota de rendimiento de la sesión local (no bloqueante): el retrato `dra-escucharte` (PNG con alfa, 966×2048 vía CDN) tarda en cargar al entrar en la sección; opcional: WebP con alfa en origen o `fetchpriority` al acercarse.
+1. José elige A/B de Escucharte y acepta el retrato proporcional con tope; A está implementada. Ver `docs/audit/2026-10-10/AB-360.png` y `AB-390.png`.
+2. Sesión local despliega con OK del propietario siguiendo BATON. Si la elección visual espera, el corte `b4b0716` incluye seguridad, schema y enlaces antes del cambio visual; usar checkout limpio separado.
+3. Repetir capturas/medidas, FAQ única, HTML de hero sin duplicados, horario oculto fuera de REST y enlaces Home sin 404. No publicar clínica.
+4. Probar roles, REST/Gutenberg, nueva revisión e idempotencia en copia/staging. No usar fichas de producción para ensayos de estado.
+5. Confirmar aprobación con la Dra. de bloques marcados borrador en Dra./Primera consulta; entonces retirar draft=yes del build y regenerar JSON. No inferir aprobación porque la página esté publicada.
 
-- [x] **Mapa con estilo (D-048)**: clave cargada por la sesión local (archivo borrado), API habilitada por José y mapa en vivo con la paleta y el pin (2026-10-10). Queda: José confirma en Google Cloud las restricciones de la clave (referente `https://drairinagonzalez.com/*` + solo Maps JavaScript API; Q-021). Opcional: JSON de Snazzy Maps en `maps_style_json`; migrar `google.maps.Marker` → `AdvancedMarkerElement` (requiere `mapId`).
+## AFTER técnico
 
-- [x] **Tanda 1 (D-046)** confirmada por José (2026-10-09): overline lombriz corta estática en color del texto, botones glass sin bordes, sombra móvil desde la mitad del título más suave. 
-- [x] CDN: José decide NO apagar la optimización inteligente (2026-10-10): se acepta 1× en móvil para imágenes que no van a sangre (tarjetas, retrato); el hero sigue a 2400/1200 px. Cerrado.
-- [x] Fotos de tarjeta a 2040×2040 subidas tal cual (area-orl 329, area-sueno 330; 2026-10-10).
-- [x] Isotipo oficial de Doctoralia integrado en el sprite (2026-10-10). Original: (hoy círculo «D» provisional) en Recursos (Irina).
+- Inventariar consumidores de Ops antes de allowlist (Q-040).
+- Consolidar NAP/horarios/hospitales repetidos con PracticeSettings, preservando textos aprobados (Q-042).
+- Evaluar WebP lossless del retrato por el pipeline: 2,61 MB → 1,36 MB en ensayo local; no tocar CDN ni borrar adjuntos.
+- Cerrar QA Safari/iOS/Android/Firefox, CWV/Lighthouse, teclado completo y staging protegido; Chrome no sustituye esos gates.
+- MapId/AdvancedMarker cuando José decida; Marker funciona, aviso documentado.
+- Archivar maquetas/legacy sin borrar cuando José decida. Variante light conservada sin uso (D-054).
 
-- [x] La Dra. respondió briefing y fichas (2026-10-09). **23 fichas redactadas con todos los campos** (`tools/content/medical-drafts.json`, D-039); cargadas en WP por la sesión local (2026-10-09): condiciones 244–256 y 205, tratamientos 257–264 y 293, recursos 286/319/320, todas en borrador; credencial 287 con el cargo de la Dra.
-- [ ] **La Dra. revisa y aprueba cada ficha en la mini app** `/briefing/revision/?t=…` (D-040; desplegar con `deploy-briefing.sh`, requiere usuario `revisor_medico`); nada se publica antes. Tras cada aprobación o nota: la sesión local lee `briefing-privado/revision-latest.json`; las aprobadas se publican con `tools/deploy/publish-approved.sh --yes` (dry-run sin `--yes`; OK de José) y las notas se corrigen en `build-medical.py` + `setup-medical.sh` (que ya no toca aprobadas). Prioridad sugerida: apnea, ronquido, estudio del sueño, CPAP, cirugía de ronquido, sinusitis, rinitis, tabique, septoplastia.
-- [x] **Publicadas Dra., Primera consulta, Contacto y FAQ** (D-044, 2026-10-09). CDN vaciada, sitemap reenviado e indexación solicitada de las cuatro páginas por José (2026-10-09); revisar cobertura en Search Console en unos días. Costo de la consulta: la Dra. no quiere publicarlo; José valora (OD-006 → D-045 al confirmar). Pilares ORL/Sueño: al aprobarse las primeras fichas. Legales: tras 8.6.
-- [ ] Fichas fuera del sitemap inicial que la Dra. marcó como OFRECE (perforación timpánica, voz, disfagia, cuello, alergias, somnolencia, insomnio, terapia posicional): Fase 8.1.
-- [ ] Artículos pedidos por la Dra. (oídos, postoperatorio de amígdalas, nariz): esqueletos en borrador; ella dicta el contenido (1–2 al mes).
-- [x] Aviso de Funcionamiento 2026 publicado (2619015036A00445).
+## Dependencias de José / Dra.
 
-- [x] Checkpoint 3 cerrado (D-034): portada Home v2, logotipo completo, foto autorizada; conmutación con `tools/deploy/go-live-home.sh`.
+Aprobaciones en mini app; foto definitiva Dra.; GA4; revisión legal/regulatoria; horario GBP; cobertura Search Console. Maps ya restringida según el encargo: no se pide confirmar otra vez; inspección independiente en Cloud fuera de esta sesión.
 
-- [x] OD-009 resuelto: mencionar rinoplastia desde ahora (borrador prudente). Cargo HU recibido. Segunda publicación: pendiente de la Dra.
+## Inglés
 
-- [ ] GBP: horario desactualizado → lo actualiza la Dra. cuando pueda (José, 2026-10-09): «previa cita» con los días/horarios que confirme; mantener WhatsApp y dirección (CAB Medical, consultorio 6, piso 2).
-- [x] Capturas de 169/170/171/205 con sesión (2026-10-09, `/preview/qa/`): correctas; corregido contraste de la barra móvil en Sueño (Q-014).
-- [x] Search Console: `sitemap_index.xml` ya enviado (7 ago 2026, Correcto, 2 páginas; última lectura 3 oct). Portada indexada por HTTPS; indexación solicitada el 2026-10-09 tras la reparación (Q-013). Cerrado.
-- [x] **SSL de otorrino-monterrey.com** (Q-007): activo (Lifetime SSL); https apex y www → 301 al sitio (verificado 2026-10-09 por ambas sesiones; Q-007 FIXED). Rutas profundas del dominio viejo → 301 a la misma ruta: aplicado y verificado (Q-012 FIXED). Search Console del dominio viejo (2026-10-09): propiedad https://otorrino-monterrey.com/ con cambio de dirección a drairinagonzalez.com ya registrado, 1 página indexada, 8 no indexadas, 0 clics en 90 días; pendiente ver la lista de Páginas y el sitemap de la propiedad nueva. Original:: hPanel → Seguridad → SSL, instalar certificado para el dominio aparcado y su www; después verificar que https://otorrino-monterrey.com/ → 301 → https://drairinagonzalez.com/.
-- [x] Hero: CDN optimiza, WordPress no (D-043). hPanel → CDN → optimización de imágenes (2026-10-09): escritorio 2400 px / 100 %, móvil 1200 px / 90 %; verificado: hero servido 2400×1600 WebP (1.18 MB) y 1200×800 (54 KB). José sigue viendo pérdida → D-042: tema sin grano sobre foto + original completo en escritorio; D-043: la CDN optimiza (interruptores ACTIVOS, 2400/100 % y 1200/90 %) y WordPress no toca nada: CERRADO 2026-10-09: PNG editado (adjunto 322) como origen, CDN vaciada por José; servido WebP 2400×1600 (1.40 MB) escritorio y 1200×800 (67 KB) móvil, detalle del rostro íntegro al 100 % de zoom. Pendiente: José vacía la caché del CDN.
-
-- [x] Checkpoint 2 cerrado (2026-10-08): dirección v2 aprobada; ajustes menores se harán sobre el build real.
-- [x] Adobe Fonts: Iskra carga en /preview/ (kit autorizado).
-
-- [x] Briefing confirmado por la Dra. (2026-10-08).
-- [x] Horario, hospitales, redes y Doctoralia confirmados (2026-10-08); sin laboratorio externo.
-- [ ] Pendiente de la Dra.: aviso de privacidad actual y número/constancia del Aviso de Publicidad (no urgente).
-- [x] Licencia de Elementor Pro activada (2026-10-08).
-
-- [x] Reset ejecutado según `docs/RUNBOOK_RESET.md` (2026-10-07/08).
-- [x] Adobe Fonts kit `nlo5pss` configurado en el tema.
-
-- [x] Lotes de discovery respondidos; red del entorno ampliada; secreto de red REST configurado; despliegue de código por `tools/deploy/deploy-code.sh` desde la sesión local.
-- [x] Briefing desplegado en `/briefing/` (sesión local, 2026-10-07). Enviar la URL con token a la Dra.
-- [x] Links se conserva (D-023); canónico sin www (D-022); Site Kit fuera (D-024).
-- [x] PHP 8.4 activo; /op verificado (D-025).
-- [x] OD-004, OD-005, OD-006 y dominio canónico (D-020) decididos.
-
-## Prioridad 2 — Claude (sin dependencias del propietario)
-
-- [x] Plantillas 39/79 excluidas de la Home v2 (D-029); /inicio-v2/ con header/footer del tema y QA visual OK.
-- [ ] QA de la página de la Dra. (169) y la condición de muestra (205) tras setup-dra.sh; capturas 5 tamaños (6.7, 6.8).
-- [x] `maps_url`, `gbp_url` y coordenadas cargados por REST (2026-10-08); iframe del mapa en home-elementor.json (pendiente recargar 168).
-- [ ] Checkpoint 3: presentar Home, Dra. y apnea al propietario; al aprobarse, publicar páginas, Home como portada y retirar 39/79.
-
-- [x] `docs/REFERENCE_RESEARCH.md` (2.1) — en REVIEW.
-- [x] `docs/COMPETITION_MONTERREY.md` (2.2) — en REVIEW.
-- [x] `KEYWORDS.md` (2.3) — en REVIEW.
-- [x] `STRATEGY.md` (2.5), `SITEMAP.md` (3.1), `ARCHITECTURE.md` (3.3–3.5), `PLUGINS.md` (3.6) — en REVIEW.
-- [ ] `SEO.md` (3.2): consolidar keyword map, titles y reglas técnicas.
-- [x] Scaffold de `wp-content/plugins/dra-irina-core` y `wp-content/themes/irina-gonzalez` con PHPCS (5.1, 5.2, 5.5 en DOING).
-- [ ] Meta boxes con repetidores (FAQ, fuentes, síntomas) en `Fields/MetaBoxes.php`.
-- [ ] Probar plugin y tema en un WordPress local del contenedor (wp-env o descarga directa si la red lo permite) antes de staging.
-- [x] Sistema visual (4.1–4.4, 4.6) en REVIEW; maquetas (4.5) en despliegue.
-- [ ] Exportar favicon y logo SVG desde `Logo-Favicon.ai` (tras CP2).
-- [ ] Tras CP2: Fase 6 en WordPress (header, footer, Home con datos del core, templates).
-
-## Prioridad 3 — Fase 1 restante
-
-- [ ] 1.3 auditoría pública (robots, sitemap, headers, CWV baseline) y 1.4 Search Console (sitemap sin www).
-- [ ] 1.7 staging protegido (evaluar si `/preview/` + Elementor en borrador basta hasta Fase 6).
-- [ ] Codex: auditoría de seguridad del estado actual.
-
-## Codex — próxima auditoría solicitada
-
-- Auditar `DESIGN_SYSTEM.md` y `tools/preview/` (contraste, semántica, jerarquía, coherencia con tokens del tema).
-
-- Revisar `PLAN.md` (ponderación y Definition of Done) y `DISCOVERY.md` (que no se haya inventado ningún dato: todo debe tener fuente).
-- Auditar `docs/REFERENCE_RESEARCH.md`, `docs/COMPETITION_MONTERREY.md` y `KEYWORDS.md`: verificar que ninguna afirmación sin fuente se presente como hecho, que no haya volúmenes inventados y que las propuestas de URL no canibalicen.
-
-## AFTER — Versión en inglés (Anexo A, Fase 13)
-
-- Decisión del propietario (D-034): la versión en inglés va **después del lanzamiento en español**. Propuesta de fecha: **inicio cuatro semanas después del launch español** (si el launch es la semana del 3 de noviembre de 2026, la fase inglesa arranca la semana del 1 de diciembre de 2026). El propietario confirma. Estimación: si CP3 cierra la semana del 13 de octubre y CP4 base la del 27 de octubre de 2026, la fase inglesa arrancaría la semana del 10 de noviembre de 2026. El propietario confirma la fecha.
-- Antes de arrancar: OD-008 (herramienta), `docs/GLOSSARY_EN.md`, keyword map en inglés.
+Después del lanzamiento español y fecha elegida por José. Se retiran fechas hipotéticas contradictorias; no iniciar ahora.

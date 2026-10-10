@@ -1,3 +1,5 @@
+OK fecha de revisión inexistente rechazada
+OK fecha válida conservada
 OK enlace externo conservado
 OK destino clínico no publicado usa salida pública
 OK destino publicado resuelto por permalink

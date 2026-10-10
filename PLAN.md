@@ -8,7 +8,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 - Avance global = Σ(peso de tareas DONE) / Σ(peso total).
 - Una tarea está DONE solo si cumple: IMPLEMENTED + TESTED + REVIEWED (Codex cuando aplica) + FIXED + VERIFIED.
 - Estados: `TODO` · `DOING` · `BLOCKED` · `OWNER` (OWNER_DECISION_REQUIRED / depende del propietario) · `REVIEW` (implementado y verificado por Claude, pendiente de auditoría Codex) · `DONE`.
-- Una tarea en `REVIEW` cuenta la mitad de su peso; `DONE` cuenta el peso completo. Nada más suma.
+- Solo `DONE` suma el peso completo. `REVIEW` y todos los demás estados suman cero (encargo del propietario, 2026-10-10).
 - "Trabajo técnico" excluye las tareas marcadas `ext` (dependencias externas: aprobación médica, fotos, documentos, legal).
 
 ## Checkpoints con el propietario
@@ -199,24 +199,8 @@ Criterio de entrada: contenido español base aprobado por la Dra. + CP3 superado
 
 ---
 
-## Resumen de pesos
+## Resumen reproducible
 
-| Fase | Peso total | Peso DONE |
-|---|---|---|
-| 0 | 23 | 23 |
-| 1 | 20 | 6 (DONE 3 + REVIEW ×0.5) |
-| 2 | 14 | 6.5 (REVIEW ×0.5) |
-| 3 | 20 | 7.5 (REVIEW ×0.5) |
-| 4 | 20 | 11 (DONE 2 + REVIEW ×0.5) |
-| 5 | 23 | 0 |
-| 6 | 33 | 5 (REVIEW ×0.5) |
-| 7 | 22 | 5 (DONE 7.2) |
-| 8 | 26 | 0 |
-| 9 | 13 | 0 |
-| 10 | 14 | 0 |
-| 11 | 13 | 0 |
-| 12 | 12 | 0 |
-| 13 (EN, aparte) | 19 | 0 — no suma al total del sitio en español |
-| **Total** | **253** | **64** |
+Ver `PROGRESS.md`, generado por `python tools/audit/progress.py`. La Fase 13 cuenta aparte. Se retiró el resumen manual porque sus filas no coincidían con las 95 tareas y 253 pesos reales del plan español.
 
-Avance global: 79 / 253 = **31%** · Tareas: 22 / 97 DONE · 17 en REVIEW · 11 DOING (la Fase 13 EN cuenta aparte).
+Normalización 2026-10-10: solo DONE suma; no se cambian estados clínicos ni se da por verificado un despliegue pendiente. Las notas históricas «borrador», «falta CP3» o «scaffold» se interpretan con el estado operativo actual en STATUS; no son instrucciones de despliegue.
