@@ -1,8 +1,9 @@
 <?php
 /**
  * Bloque narrativo centrado (ancho de lectura). $args: eyebrow, title, lead, text, draft (bool), image_id (int, opcional), image_alt.
- * Con imagen: dos columnas en escritorio (foto a la derecha por defecto, image_pos=left para la izquierda) y foto arriba en móvil; la foto se mezcla en
- * multiplicar para que un fondo blanco de producto se funda con el crema (propietario, 2026-10-10: endoscopio junto a «Escucharte»).
+ * Con imagen: el texto no se mueve (misma columna de lectura); la foto entra con animación al hacer scroll en el margen derecho
+ * (image_pos=left para el izquierdo) en pantallas anchas y debajo del texto en el resto; se mezcla en multiplicar para que su fondo de
+ * estudio se funda con el crema (propietario, 2026-10-10: endoscopio junto a «Escucharte»).
  *
  * @package IrinaGonzalez
  */
@@ -28,18 +29,12 @@ $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 		'alt'      => (string) $irina_a['image_alt'],
 		'loading'  => 'lazy',
 		'decoding' => 'async',
-		'sizes'    => '(max-width: 899px) 70vw, 40vw',
+		'sizes'    => '(max-width: 1199px) 60vw, 22vw',
 	]
 ) : '';
 ?>
-<section class="di-section<?php echo '' !== $irina_img ? ' di-narrative--split di-narrative--img-' . esc_attr( 'left' === $irina_a['image_pos'] ? 'left' : 'right' ) : ''; ?>">
-	<?php if ( '' !== $irina_img ) : ?>
-	<div class="di-container di-narrative__grid">
-		<div class="di-narrative__media di-reveal"><?php echo $irina_img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
-		<div class="di-narrative__body">
-	<?php else : ?>
+<section class="di-section<?php echo '' !== $irina_img ? ' di-narrative--aside di-narrative--img-' . esc_attr( 'left' === $irina_a['image_pos'] ? 'left' : 'right' ) : ''; ?>">
 	<div class="di-container--narrow">
-	<?php endif; ?>
 		<?php
 		if ( '' !== $irina_a['eyebrow'] ) :
 			?>
@@ -71,8 +66,8 @@ $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 		if ( $irina_a['draft'] ) :
 			?>
 			<p class="di-draft di-reveal"><?php esc_html_e( 'Borrador: pendiente de revisión de la Dra.', 'irina-gonzalez' ); ?></p><?php endif; ?>
-	<?php if ( '' !== $irina_img ) : ?>
-		</div>
-	<?php endif; ?>
 	</div>
+	<?php if ( '' !== $irina_img ) : ?>
+	<div class="di-narrative__aside di-reveal" aria-hidden="false"><?php echo $irina_img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+	<?php endif; ?>
 </section>
