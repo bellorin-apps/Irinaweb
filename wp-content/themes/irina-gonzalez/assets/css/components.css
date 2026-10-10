@@ -250,8 +250,9 @@ body.menu-open { overflow: hidden; }
   /* Retrato a todo el alto de la sección (puede recortarse por arriba o por la derecha), con ≥16 px de aire respecto al texto. */
   /* Anclado por la izquierda a 16 px de la columna de texto (56 %); lo que sobre por la derecha se recorta (sección overflow hidden). */
   /* Altura acotada (no toda la sección, que con el texto completo es muy alta y dejaba solo un trozo del brazo): se ve media figura, cara incluida. */
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: auto; top: auto; bottom: 0; height: 600px; max-height: 100%; transform: none; line-height: 0; }
-  .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: left bottom; }
+  /* El retrato ocupa la columna derecha (desde el texto + 16 px hasta el borde) como ventana centrada en la figura: se ve la cara y el torso, recorte simétrico a los lados. */
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: 0; top: auto; bottom: 0; height: 600px; max-height: 100%; transform: none; line-height: 0; }
+  .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: 100%; max-width: none; object-fit: cover; object-position: center bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }
