@@ -85,6 +85,7 @@ if ( ! $irina_rows ) {
 				$irina_a['title'],
 				[
 					'em' => [],
+					'b'  => [],
 					'br' => [],
 				]
 			);

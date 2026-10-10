@@ -12,7 +12,7 @@ $irina_a      = wp_parse_args(
 	$args ?? [],
 	[
 		'eyebrow'    => __( 'Formación y certificaciones', 'irina-gonzalez' ),
-		'title'      => 'Credenciales <em>verificables.</em>',
+		'title'      => '<b>Credenciales</b> <em>verificables.</em>',
 		'tags_title' => __( 'Membresías y hospitales', 'irina-gonzalez' ),
 		'extra_tags' => [],
 	]
@@ -65,6 +65,7 @@ if ( ! $irina_cards && ! $irina_tags ) {
 			$irina_a['title'],
 			[
 				'em' => [],
+				'b'  => [],
 				'br' => [],
 			]
 		);

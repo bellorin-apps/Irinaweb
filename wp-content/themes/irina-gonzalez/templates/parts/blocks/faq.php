@@ -36,6 +36,7 @@ if ( ! $irina_items ) {
 				$irina_a['title'],
 				[
 					'em' => [],
+					'b'  => [],
 					'br' => [],
 				]
 			);

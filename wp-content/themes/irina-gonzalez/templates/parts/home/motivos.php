@@ -32,6 +32,7 @@ $irina_a = wp_parse_args(
 				$irina_a['title'],
 				[
 					'em' => [],
+					'b'  => [],
 					'br' => [],
 				]
 			);

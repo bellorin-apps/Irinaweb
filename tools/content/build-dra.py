@@ -13,19 +13,19 @@ def container(key, widget, settings):
 page = [
     container("dra-bleed", "di-bleed", {
         "eyebrow": "Otorrinolaringólogo · Especialista en sueño",
-        "title": "Dra. Irina<br><em>González Sáez</em>",
+        "title": "<b>Dra. Irina</b><br><em>González Sáez</em>",
         "lead": "Otorrinolaringólogo certificado en Monterrey, con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
         "variant": "sand", "crumb": "Dra. Irina González Sáez",
         "secondary_label": "Opiniones en Doctoralia", "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"}),
     container("dra-enfoque", "di-narrativa", {
-        "eyebrow": "Enfoque", "title": "«Escucharte también es parte del <em>tratamiento.</em>»",
+        "eyebrow": "Enfoque", "title": "«Escucharte <b>también</b> es parte del <em>tratamiento.</em>»",
         "lead": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad, sin promesas que no se puedan cumplir.",
         "text": "", "draft": "yes"}),
     container("dra-creds", "di-credenciales", {
-        "eyebrow": "Formación y certificaciones", "title": "Credenciales <em>verificables.</em>",
+        "eyebrow": "Formación y certificaciones", "title": "<b>Credenciales</b> <em>verificables.</em>",
         "tags_title": "Membresías y hospitales",
         "extra_tags": ""}),
-    container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "Formación continua en <em>cirugía de sueño.</em>"}),
+    container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "Formación <b>continua</b> en <em>cirugía de sueño.</em>"}),
     container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu primera consulta",
         "text": "30 minutos para escucharte, explorar y proponerte un plan.", "message": ""}),
 ]

@@ -23,6 +23,7 @@ $irina_a       = wp_parse_args(
 );
 $irina_allowed = [
 	'em' => [],
+	'b'  => [],
 	'br' => [],
 ];
 ?>

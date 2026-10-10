@@ -20,7 +20,18 @@ $irina_cedul = irina_practice( 'publicar_cedulas' ) ? trim( (string) irina_pract
 ?>
 <footer class="di-footer" id="di-footer">
 	<div class="di-container">
-		<p class="di-footer__big di-reveal"><?php echo esc_html( apply_filters( 'irina_footer_claim', __( 'Respirar bien, dormir bien, oír bien.', 'irina-gonzalez' ) ) ); ?></p>
+		<p class="di-footer__big di-reveal">
+		<?php
+		echo wp_kses(
+			apply_filters( 'irina_footer_claim', __( 'Respirar bien, <b>dormir bien,</b> <em>oír bien.</em>', 'irina-gonzalez' ) ),
+			[
+				'b'  => [],
+				'em' => [],
+				'br' => [],
+			]
+		);
+		?>
+		</p>
 		<div class="di-footer__cols">
 			<div>
 				<div class="di-footer__brand">

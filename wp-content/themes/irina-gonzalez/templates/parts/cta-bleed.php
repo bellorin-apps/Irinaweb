@@ -24,7 +24,18 @@ $irina_a = wp_parse_args(
 		if ( '' !== $irina_a['eyebrow'] ) :
 			?>
 			<p class="di-eyebrow di-reveal"><?php echo esc_html( $irina_a['eyebrow'] ); ?></p><?php endif; ?>
-		<h2 class="di-reveal di-reveal--d1"><?php echo esc_html( $irina_a['title'] ); ?></h2>
+		<h2 class="di-reveal di-reveal--d1">
+		<?php
+		echo wp_kses(
+			$irina_a['title'],
+			[
+				'b'  => [],
+				'em' => [],
+				'br' => [],
+			]
+		);
+		?>
+		</h2>
 		<?php
 		if ( '' !== $irina_a['text'] ) :
 			?>

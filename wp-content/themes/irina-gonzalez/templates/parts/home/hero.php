@@ -11,7 +11,7 @@ $irina_a   = wp_parse_args(
 	$args ?? [],
 	[
 		'eyebrow'         => __( 'Tu otorrino|en Monterrey', 'irina-gonzalez' ), // «|» = salto de línea solo en móvil.
-		'title'           => __( 'Respirar bien,<br>dormir bien,<br><em>oír bien.</em>', 'irina-gonzalez' ),
+		'title'           => __( 'Respirar bien,<br><b>dormir bien,</b><br><em>oír bien.</em>', 'irina-gonzalez' ),
 		'lead'            => '',
 		'lead_mobile'     => '',
 		'image_id'        => 0,
@@ -37,6 +37,7 @@ if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
 			$irina_a['title'],
 			[
 				'em' => [],
+				'b'  => [],
 				'br' => [],
 			]
 		);

@@ -64,7 +64,18 @@ $irina_a = wp_parse_args(
 			<?php
 			if ( '' !== $irina_a['quote'] ) :
 				?>
-				<p class="di-quote di-reveal di-reveal--d1"><?php echo esc_html( $irina_a['quote'] ); ?></p><?php endif; ?>
+				<p class="di-quote di-reveal di-reveal--d1">
+				<?php
+				echo wp_kses(
+					$irina_a['quote'],
+					[
+						'b'  => [],
+						'em' => [],
+						'br' => [],
+					]
+				);
+				?>
+															</p><?php endif; ?>
 			<?php
 			if ( '' !== $irina_a['text'] ) :
 				?>

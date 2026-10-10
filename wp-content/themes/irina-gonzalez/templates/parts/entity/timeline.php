@@ -12,7 +12,7 @@ $irina_a    = wp_parse_args(
 	$args ?? [],
 	[
 		'eyebrow' => __( 'Trayectoria', 'irina-gonzalez' ),
-		'title'   => 'Formación continua en <em>cirugía de sueño.</em>',
+		'title'   => 'Formación <b>continua</b> en <em>cirugía de sueño.</em>',
 	]
 );
 $irina_q    = get_posts(
@@ -59,6 +59,7 @@ usort( $irina_rows, static fn( array $x, array $y ): int => strcmp( $y[0], $x[0]
 			$irina_a['title'],
 			[
 				'em' => [],
+				'b'  => [],
 				'br' => [],
 			]
 		);
