@@ -10,8 +10,9 @@ w(){ rssh "$WP $*"; }
 ID="$(w "post list --post_type=attachment --post_name__in=og-default --post_status=any --field=ID" | head -1)"
 URL="$(w "post get $ID --field=guid")"
 case "$URL" in *.jpg|*.jpeg) ;; *) echo "La imagen no quedó en JPEG ($URL): revisar WebpUpload (prefijo og-)"; exit 1;; esac
-w "option patch update rank-math-options-titles open_graph_image '$URL'" >/dev/null
-w "option patch update rank-math-options-titles open_graph_image_id $ID" >/dev/null
+# patch update falla si la clave aún no existe en el array de Rank Math (2026-10-10): insert como alternativa.
+w "option patch update rank-math-options-titles open_graph_image '$URL'" >/dev/null 2>&1 || w "option patch insert rank-math-options-titles open_graph_image '$URL'" >/dev/null
+w "option patch update rank-math-options-titles open_graph_image_id $ID" >/dev/null 2>&1 || w "option patch insert rank-math-options-titles open_graph_image_id $ID" >/dev/null
 echo "og-default: ID=$ID url=$URL"
 echo "Rank Math: open_graph_image=$(w "option pluck rank-math-options-titles open_graph_image") id=$(w "option pluck rank-math-options-titles open_graph_image_id")"
 echo "Después: purga (tools/deploy) y comprobar: curl -s https://drairinagonzalez.com/ | grep -o '<meta property=\"og:image[^>]*>'"
