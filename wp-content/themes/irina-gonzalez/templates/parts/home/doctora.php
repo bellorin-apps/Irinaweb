@@ -28,17 +28,16 @@ $irina_a = wp_parse_args(
 	<?php if ( $irina_bg ) : ?>
 		<div class="di-doctor__bg">
 		<?php
-		echo wp_get_attachment_image(
+		// Solo el original (sin srcset): en móvil se recorta en cover y la CDN debe servirlo a 1200 px, no al ancho del viewport.
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- irina_image_original devuelve wp_get_attachment_image (escapado).
+		echo irina_image_original(
 			$irina_bg,
-			'full',
-			false,
 			[
 				'loading'  => 'lazy',
 				'decoding' => 'async',
-				'sizes'    => '100vw',
 				'alt'      => '',
 			]
-		); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. 
+		); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida.
 		?>
 									</div>
 	<?php endif; ?>

@@ -228,9 +228,10 @@ body.menu-open { overflow: hidden; }
 /* Móvil (propietario, 2026-10-10): texto a la izquierda y la Dra. a la derecha, solo su mitad visible, sin tocar el texto. */
 @media (max-width: 899px) {
   .di-section--doctor-bg .di-doctor { display: block; position: relative; min-height: 560px; }
-  /* Fondo de izquierda a derecha (propietario, 2026-10-10): la foto a todo el ancho, apoyada abajo, fundida arriba hacia el color crema de la propia foto. */
+  /* Fondo de izquierda a derecha (propietario, 2026-10-10): la foto cubre toda la sección anclada al borde izquierdo e inferior, así los tulipanes
+     de la izquierda se ven a tamaño (lo que sobra por la derecha queda bajo el retrato); fundido arriba hacia el crema de la propia foto. */
   .di-section--doctor-bg { background: #eee2da; }
-  .di-section--doctor-bg .di-doctor__bg img { position: absolute; left: 0; right: 0; bottom: 0; top: auto; width: 100%; height: auto; object-fit: contain; object-position: center bottom; -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 28%); mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 28%); }
+  .di-section--doctor-bg .di-doctor__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left bottom; -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); }
   /* Texto completo (overline, cita, párrafo, credenciales, botón) en la columna izquierda; el retrato, algo mayor, a la derecha. */
   .di-section--doctor-bg .di-doctor__text { width: 56%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
   .di-section--doctor-bg .di-doctor__lead { font-size: 0.92rem; }
@@ -242,20 +243,28 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-creds.di-creds--carousel li.is-in { opacity: 1; transform: none; }
   .di-section--doctor-bg .di-creds.di-creds--carousel li.is-out-left { transform: translateX(-10px); }
   @media (prefers-reduced-motion: reduce) { .di-section--doctor-bg .di-creds.di-creds--carousel li { transition: none; } }
-  .di-creds__dots { display: flex; gap: 8px; margin: 0.75rem 0 var(--space-lg); padding: 0; list-style: none; }
-  .di-creds__dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgb(36 31 35 / 0.22); cursor: pointer; }
+  /* Puntos alineados con el texto de la credencial (icono 1.2em + hueco 0.7rem), no con el icono (propietario, 2026-10-10). */
+  .di-creds__dots { display: flex; gap: 12px; margin: 0.75rem 0 var(--space-lg) calc(1.2em + 0.7rem); padding: 0; list-style: none; font-size: 0.86rem; }
+  .di-creds__dots button { position: relative; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgb(36 31 35 / 0.22); cursor: pointer; overflow: visible; }
   .di-creds__dots button[aria-current="true"] { background: var(--color-primary); }
+  /* Cargador de tiempo: anillo sutil alrededor del punto activo que se completa en los 4 s del autoplay; se oculta al pausar (toque/deslizar). */
+  .di-creds__dots svg { position: absolute; inset: -5px; width: 18px; height: 18px; transform: rotate(-90deg); opacity: 0; pointer-events: none; }
+  .di-creds__dots svg circle { fill: none; stroke: var(--color-primary); stroke-opacity: 0.4; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 47.1; stroke-dashoffset: 47.1; }
+  .di-creds__dots.is-playing button[aria-current="true"] svg { opacity: 1; }
+  .di-creds__dots.is-playing button[aria-current="true"] svg circle { animation: di-ring 4s linear forwards; }
+  @keyframes di-ring { from { stroke-dashoffset: 47.1; } to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { .di-creds__dots svg { display: none; } }
   .di-section--doctor-dark .di-creds__dots button { background: rgb(255 255 255 / 0.35); }
   .di-section--doctor-dark .di-creds__dots button[aria-current="true"] { background: #fff; }
+  .di-section--doctor-dark .di-creds__dots svg circle { stroke: #fff; }
   .di-section--doctor-bg .di-btn .di-btn__long { display: none; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
-  /* Retrato a todo el alto de la sección (puede recortarse por arriba o por la derecha), con ≥16 px de aire respecto al texto. */
-  /* Anclado por la izquierda a 16 px de la columna de texto (56 %); lo que sobre por la derecha se recorta (sección overflow hidden). */
-  /* Altura acotada (no toda la sección, que con el texto completo es muy alta y dejaba solo un trozo del brazo): se ve media figura, cara incluida. */
-  /* Propietario: la foto pegada al texto (empieza a 16 px de la columna) y recortada por el borde derecho; altura acotada para que se vea el rostro. */
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: 0; top: auto; bottom: 0; height: 600px; max-height: 100%; transform: none; line-height: 0; overflow: hidden; }
-  .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: left bottom; }
+  /* Retrato dimensionado por el ANCHO disponible (de la columna de texto + 16 px al borde del viewport), no por un alto fijo: así el rostro,
+     que está en el tercio izquierdo del recorte, siempre queda dentro en cualquier ancho (360–899); por la derecha solo se recorta el brazo (+64 px).
+     Propietario (2026-10-10): sin franja clara a la derecha (right negativo = margen lateral del contenedor). */
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: calc(-1 * var(--gutter)); top: auto; bottom: 0; height: auto; max-height: 100%; transform: none; line-height: 0; overflow: hidden; }
+  .di-section--doctor-bg .di-doctor__portrait img { display: block; width: calc(100% + 64px); height: auto; max-width: none; max-height: 100%; object-fit: contain; object-position: left bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }

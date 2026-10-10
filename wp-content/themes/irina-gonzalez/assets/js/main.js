@@ -70,8 +70,10 @@
       });
       if (dots) { Array.prototype.forEach.call(dots.children, function (b, k) { b.setAttribute('aria-current', k === idx ? 'true' : 'false'); }); }
     }
-    function start() { if (reduce || timer) { return; } timer = setInterval(function () { show(idx + 1, 1); }, 4000); }
-    function stop() { clearInterval(timer); timer = null; }
+    // Anillo de progreso (CSS di-ring, 4 s): visible solo mientras corre el autoplay; se reinicia en cada arranque forzando un reflow.
+    function ring(on) { if (!dots) { return; } dots.classList.remove('is-playing'); if (on) { void dots.offsetWidth; dots.classList.add('is-playing'); } }
+    function start() { if (reduce || timer) { return; } timer = setInterval(function () { show(idx + 1, 1); }, 4000); ring(true); }
+    function stop() { clearInterval(timer); timer = null; ring(false); }
     var resumeTimer = null;
     function pauseThenResume() { stop(); clearTimeout(resumeTimer); resumeTimer = setTimeout(start, 8000); }
     // Deslizar con el dedo: umbral 40 px horizontal.
@@ -98,6 +100,7 @@
       items.forEach(function (li, k) {
         var b = document.createElement('button'); b.type = 'button';
         b.setAttribute('aria-label', 'Credencial ' + (k + 1) + ' de ' + items.length);
+        b.innerHTML = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="7.5"/></svg>';
         b.addEventListener('click', function () { show(k, k > idx ? 1 : -1); pauseThenResume(); });
         dots.appendChild(b);
       });

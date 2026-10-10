@@ -74,18 +74,28 @@ add_filter( 'wp_img_tag_add_auto_sizes', '__return_false' );
  * dispositivo a partir de ese original sin pérdida.
  */
 function irina_hero_image( int $attachment_id ): string {
-	$none = static fn(): array => [];
-	add_filter( 'wp_calculate_image_srcset', $none, 10, 0 );
-	$html = wp_get_attachment_image(
+	return irina_image_original(
 		$attachment_id,
-		'full',
-		false,
 		[
 			'loading'       => 'eager',
 			'fetchpriority' => 'high',
 			'decoding'      => 'async',
 		]
 	);
+}
+
+/**
+ * Imagen servida solo como archivo original (sin srcset ni «sizes»): la CDN decide el ancho por dispositivo (2400/1200 px),
+ * no el ancho del viewport. Para fondos recortados en móvil (object-fit: cover) evita que llegue una versión al ancho de pantalla
+ * que luego se amplíe borrosa.
+ *
+ * @param int                  $attachment_id Adjunto.
+ * @param array<string,string> $attrs         Atributos del <img>.
+ */
+function irina_image_original( int $attachment_id, array $attrs = [] ): string {
+	$none = static fn(): array => [];
+	add_filter( 'wp_calculate_image_srcset', $none, 10, 0 );
+	$html = wp_get_attachment_image( $attachment_id, 'full', false, $attrs );
 	remove_filter( 'wp_calculate_image_srcset', $none, 10 );
 	return $html;
 }
