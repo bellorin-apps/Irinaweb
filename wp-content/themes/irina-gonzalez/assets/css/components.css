@@ -508,6 +508,14 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
   .di-bleed .di-container:has(.di-crumbs) .di-crumbs { margin-bottom: 2.25rem; }
 }
 
+/* Bloque narrativo con imagen (propietario, 2026-10-10): endoscopio a la izquierda de «Escucharte». Escritorio 5/7 columnas; móvil foto arriba. La foto va en multiplicar: su fondo blanco se funde con el crema sin recortes ni sombras añadidas (D-053). */
+.di-narrative__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.di-narrative__media { line-height: 0; }
+.di-narrative__media img { width: 100%; height: auto; mix-blend-mode: multiply; -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 58%, transparent 100%); } /* El fondo de estudio no es blanco puro: el desvanecido elíptico oculta el borde del recuadro. */
+.di-narrative__body { max-width: 62ch; }
+.di-narrative__body h2 { max-width: none; }
+@media (max-width: 899px) { .di-narrative__grid { grid-template-columns: 1fr; gap: var(--space-lg); } .di-narrative__media { max-width: 72%; margin-inline: auto; } .di-narrative__body { max-width: none; } }
+
 /* Tooltip estándar (propietario, 2026-10-10): cualquier elemento con .di-tip y data-tip muestra ese texto encima al pasar el cursor o al enfocar (teclado y toque). Solo CSS; colores ajustables por sección con --tip-bg/--tip-fg. */
 .di-tip { --tip-bg: #2b1c34; --tip-fg: #fff; position: relative; }
 .di-tip::after, .di-tip::before { position: absolute; left: 50%; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity var(--motion-fast) var(--ease-out), transform var(--motion-fast) var(--ease-out), visibility 0s linear var(--motion-fast); z-index: 6; }

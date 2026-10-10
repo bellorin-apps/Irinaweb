@@ -24,8 +24,9 @@ P_DRA="$(w "post list --post_type=page --post_name__in=dra-irina-gonzalez-saez -
 [ -n "$P_DRA" ] || { echo "No existe la página dra-irina-gonzalez-saez; ejecuta setup-site.sh antes."; exit 1; }
 # Foto de cabecera: adjunto con slug hero-dra (upload-media.sh <archivo> hero-dra "Dra. Irina González Sáez"). Sin ella, la cabecera usa el degradado cálido.
 HERO_DRA_ID="$(w "post list --post_type=attachment --post_name__in=hero-dra --post_status=any --field=ID" | head -1)"; HERO_DRA_URL=""; [ -n "$HERO_DRA_ID" ] && HERO_DRA_URL="$(w "post get $HERO_DRA_ID --field=guid")"
-sed -e "s#__DRA_HERO_ID__#${HERO_DRA_ID}#g" -e "s#__DRA_HERO_URL__#${HERO_DRA_URL}#g" "$REPO/tools/content/dra-elementor.json" > /tmp/dra-elementor.json
-echo "  hero-dra: ${HERO_DRA_ID:-sin foto}"
+ENDO_ID="$(w "post list --post_type=attachment --post_name__in=dra-endoscopio --post_status=any --field=ID" | head -1)"; ENDO_URL=""; [ -n "$ENDO_ID" ] && ENDO_URL="$(w "post get $ENDO_ID --field=guid")"
+sed -e "s#__DRA_HERO_ID__#${HERO_DRA_ID}#g" -e "s#__DRA_HERO_URL__#${HERO_DRA_URL}#g" -e "s#__DRA_ENDO_ID__#${ENDO_ID}#g" -e "s#__DRA_ENDO_URL__#${ENDO_URL}#g" "$REPO/tools/content/dra-elementor.json" > /tmp/dra-elementor.json
+echo "  hero-dra: ${HERO_DRA_ID:-sin foto} · dra-endoscopio: ${ENDO_ID:-sin foto}"
 rscp /tmp/dra-elementor.json "$SSH_USER@$SSH_HOST:/tmp/dra-elementor.json"; rm -f /tmp/dra-elementor.json
 w "post meta update $P_DRA _wp_page_template elementor_header_footer" >/dev/null
 w "post meta update $P_DRA _elementor_edit_mode builder" >/dev/null

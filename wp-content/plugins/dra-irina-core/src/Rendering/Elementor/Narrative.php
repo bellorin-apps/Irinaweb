@@ -37,6 +37,8 @@ final class Narrative extends AbstractWidget {
 				'type'  => Controls_Manager::WYSIWYG,
 			]
 		);
+		$this->image( 'image', __( 'Imagen a la izquierda (opcional; escritorio dos columnas, móvil arriba)', 'dra-irina-core' ) );
+		$this->text( 'image_alt', __( 'Texto alternativo de la imagen', 'dra-irina-core' ) );
 		$this->add_control(
 			'draft',
 			[
@@ -50,11 +52,13 @@ final class Narrative extends AbstractWidget {
 
 	protected function args( array $s ): array {
 		return [
-			'eyebrow' => (string) ( $s['eyebrow'] ?? '' ),
-			'title'   => (string) ( $s['title'] ?? '' ),
-			'lead'    => (string) ( $s['lead'] ?? '' ),
-			'text'    => (string) ( $s['text'] ?? '' ),
-			'draft'   => 'yes' === ( $s['draft'] ?? '' ),
+			'eyebrow'   => (string) ( $s['eyebrow'] ?? '' ),
+			'title'     => (string) ( $s['title'] ?? '' ),
+			'lead'      => (string) ( $s['lead'] ?? '' ),
+			'text'      => (string) ( $s['text'] ?? '' ),
+			'draft'     => 'yes' === ( $s['draft'] ?? '' ),
+			'image_id'  => self::image_id( $s['image'] ?? null ),
+			'image_alt' => (string) ( $s['image_alt'] ?? '' ),
 		];
 	}
 }
