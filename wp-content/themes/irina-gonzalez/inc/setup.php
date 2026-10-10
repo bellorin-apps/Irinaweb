@@ -111,7 +111,7 @@ add_filter(
 	'body_class',
 	static function ( array $classes ): array {
 		$irina_plain_elementor = is_page() && ! is_front_page() && 'builder' === get_post_meta( get_queried_object_id(), '_elementor_edit_mode', true ) && 'elementor_header_footer' !== get_page_template_slug();
-		if ( ! $irina_plain_elementor && ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) || is_post_type_archive( [ 'condicion', 'tratamiento' ] ) || is_front_page() || is_page() ) ) {
+		if ( ! $irina_plain_elementor && ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) || is_post_type_archive( [ 'condicion', 'tratamiento', 'recurso' ] ) || is_front_page() || is_page() ) ) {
 			$classes[] = 'has-bleed';
 		}
 		// Registro nocturno de la sub-marca Sueño en el pilar (las hijas lo aplican en su template).
