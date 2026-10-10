@@ -511,7 +511,6 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 /* Logos de hospitales y membresías (propietario, 2026-10-10): sección morada de la paleta, logos en blanco con aire, carrusel lento y continuo; respiración grande arriba y abajo. */
 .di-logos { background: var(--color-primary); color: #fff; padding-block: clamp(5rem, 12vh, 8.5rem); --title-accent: var(--color-accent); }
 .di-logos h2 { color: #fff; margin: 0 0 clamp(3rem, 7vh, 5rem); }
-.di-logos h2 em { color: inherit; }
 .di-logos .di-eyebrow { color: var(--color-accent); }
 .di-logos__rail { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
 .di-logos__track { display: flex; align-items: center; gap: clamp(3.5rem, 7vw, 7rem); width: max-content; padding-inline: clamp(1.5rem, 3vw, 3rem); animation: di-logos 70s linear infinite; }

@@ -14,8 +14,8 @@ def container(key, widget, settings):
 
 page = [
     container("dra-bleed", "di-bleed", {
-        "eyebrow": "Otorrinolaringólogo · Especialista en sueño",
-        "title": "<b>Dra. Irina</b><br><em>González Sáez</em>",
+        "eyebrow": "Tu Otorrino Especialista en Sueño",
+        "title": "<b>Dra.</b> Irina<br>González <em>Sáez</em>",
         "lead": "Otorrinolaringólogo certificado en Monterrey, con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
         "variant": "warm", "crumb": "Dra. Irina González Sáez", "image": {"id": "__DRA_HERO_ID__", "url": "__DRA_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "92% 8%", "secondary_short": "Doctoralia",
         "secondary_label": "Opiniones en Doctoralia", "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"}),
@@ -24,11 +24,11 @@ page = [
         "lead": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad, sin promesas que no se puedan cumplir.",
         "text": "", "draft": "yes"}),
     container("dra-creds", "di-credenciales", {
-        "eyebrow": "Formación y certificaciones", "title": "<b>Credenciales</b> <em>verificables</em>",
+        "eyebrow": "Formación y certificaciones", "title": "Credenciales <em>verificables</em>",
         "tags_title": "",  # vacío: membresías y hospitales van en la sección de logos (di-logos)
         "extra_tags": ""}),
     container("dra-logos", "di-logos", {
-        "eyebrow": "", "title": "Membresías y hospitales",
+        "eyebrow": "", "title": "Membresías y <em>hospitales</em>",
         "items": rep([
             ("Christus Muguerza", "christus-muguerza", ""),
             ("Hospital Zambrano Hellion", "zambrano-hellion", ""),
@@ -40,8 +40,8 @@ page = [
             ("Sociedad Iberoamericana de Cirugía de Sueño", "sociedad-iberoamericana-sueno", ""),
             ("Colegio de Otorrinolaringología de Nuevo León", "colegio-orl-nl", ""),
         ], "name", "slug", "url")}),
-    container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "Formación <b>continua</b> en <em>cirugía de sueño</em>"}),
-    container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu primera consulta",
+    container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "<b>Formación</b> continua en <em>cirugía de sueño</em>"}),
+    container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu<br>primera <em>consulta</em>",
         "text": "30 minutos para escucharte, explorar y proponerte un plan.", "message": ""}),
 ]
 # slug, título, tipo, institucion, lugar, anio, mostrar, orden. Fuente: DISCOVERY.md §Credenciales (CV, títulos, briefing confirmado).

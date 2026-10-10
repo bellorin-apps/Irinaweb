@@ -12,7 +12,7 @@ $irina_a      = wp_parse_args(
 	$args ?? [],
 	[
 		'eyebrow'    => __( 'Formación y certificaciones', 'irina-gonzalez' ),
-		'title'      => '<b>Credenciales</b> <em>verificables</em>',
+		'title'      => 'Credenciales <em>verificables</em>',
 		'tags_title' => __( 'Membresías y hospitales', 'irina-gonzalez' ),
 		'extra_tags' => [],
 	]

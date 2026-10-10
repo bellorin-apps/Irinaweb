@@ -29,8 +29,8 @@
         "elType": "widget",
         "widgetType": "di-bleed",
         "settings": {
-          "eyebrow": "Otorrinolaringólogo · Especialista en sueño",
-          "title": "<b>Dra. Irina</b><br><em>González Sáez</em>",
+          "eyebrow": "Tu Otorrino Especialista en Sueño",
+          "title": "<b>Dra.</b> Irina<br>González <em>Sáez</em>",
           "lead": "Otorrinolaringólogo certificado en Monterrey, con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
           "variant": "warm",
           "crumb": "Dra. Irina González Sáez",
@@ -119,7 +119,7 @@
         "widgetType": "di-credenciales",
         "settings": {
           "eyebrow": "Formación y certificaciones",
-          "title": "<b>Credenciales</b> <em>verificables</em>",
+          "title": "Credenciales <em>verificables</em>",
           "tags_title": "",
           "extra_tags": ""
         },
@@ -158,7 +158,7 @@
         "widgetType": "di-logos",
         "settings": {
           "eyebrow": "",
-          "title": "Membresías y hospitales",
+          "title": "Membresías y <em>hospitales</em>",
           "items": [
             {
               "name": "Christus Muguerza",
@@ -251,7 +251,7 @@
         "widgetType": "di-trayectoria",
         "settings": {
           "eyebrow": "Trayectoria",
-          "title": "Formación <b>continua</b> en <em>cirugía de sueño</em>"
+          "title": "<b>Formación</b> continua en <em>cirugía de sueño</em>"
         },
         "elements": []
       }
@@ -288,7 +288,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "Agenda tu primera consulta",
+          "title": "Agenda tu<br>primera <em>consulta</em>",
           "text": "30 minutos para escucharte, explorar y proponerte un plan.",
           "message": ""
         },

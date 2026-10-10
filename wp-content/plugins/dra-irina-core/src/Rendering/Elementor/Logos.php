@@ -27,7 +27,7 @@ final class Logos extends AbstractWidget {
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Contenido', 'dra-irina-core' ) ] );
 		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), '' );
-		$this->text( 'title', __( 'Título (HTML: b, em, br)', 'dra-irina-core' ), __( 'Membresías y hospitales', 'dra-irina-core' ), true );
+		$this->text( 'title', __( 'Título (HTML: b, em, br)', 'dra-irina-core' ), __( 'Membresías y <em>hospitales</em>', 'dra-irina-core' ), true );
 		$this->repeater(
 			'items',
 			__( 'Logos', 'dra-irina-core' ),
