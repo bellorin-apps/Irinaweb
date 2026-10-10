@@ -261,10 +261,10 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
   /* Retrato a todo el alto de la columna (propietario, 2026-10-10: «que se vea en casi todo el alto, no importa si la cara se esconde un poco»):
-     alto 100 %, ancho automático, desplazado un 20 % de su ancho hacia la izquierda para que la ventana (de la columna de texto + 16 px al
-     borde del viewport) muestre el rostro: se recortan el hombro izquierdo y el brazo derecho. Sin franja clara (right negativo = gutter). */
+     alto 100 %, ancho automático, silueta natural por la izquierda (a 16 px de la columna de texto) y recortada solo por el borde derecho
+     del viewport (right negativo = gutter): en 360–400 px se recorta parte del rostro, aceptado por el propietario. */
   .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: calc(-1 * var(--gutter)); top: 0; bottom: 0; height: auto; max-height: none; transform: none; line-height: 0; overflow: hidden; }
-  .di-section--doctor-bg .di-doctor__portrait img { position: absolute; left: 0; bottom: 0; display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: left bottom; transform: translateX(-20%); }
+  .di-section--doctor-bg .di-doctor__portrait img { position: absolute; left: 0; bottom: 0; display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: left bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }
