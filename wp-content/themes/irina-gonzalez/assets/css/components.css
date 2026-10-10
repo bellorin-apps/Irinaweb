@@ -199,6 +199,21 @@ body.menu-open { overflow: hidden; }
 /* Doctora */
 .di-doctor { display: grid; gap: var(--space-2xl); align-items: center; }
 @media (min-width: 900px) { .di-doctor { grid-template-columns: 0.85fr 1.15fr; } }
+/* Sección de la Dra. con fondo fotográfico y retrato recortado pegado al borde inferior (propietario, 2026-10-10). */
+.di-section--doctor { position: relative; overflow: hidden; }
+.di-section--doctor-bg { padding-bottom: 0; isolation: isolate; }
+.di-doctor__bg { position: absolute; inset: 0; z-index: -1; }
+.di-doctor__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.di-section--doctor-bg .di-doctor { align-items: end; }
+.di-section--doctor-bg .di-doctor__text { padding-bottom: var(--space-3xl); }
+@media (min-width: 1024px) { .di-section--doctor-bg .di-doctor__text { padding-bottom: 9rem; } }
+.di-doctor__portrait { align-self: end; line-height: 0; }
+.di-doctor__portrait img { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; object-position: bottom; }
+.di-section--doctor-dark { color: #fff; }
+.di-section--doctor-dark .di-quote, .di-section--doctor-dark .di-creds { color: #fff; }
+.di-section--doctor-dark .di-eyebrow { color: var(--color-accent); }
+.di-section--doctor-dark .di-creds .di-icon { color: var(--color-accent); }
+@media (max-width: 899px) { .di-section--doctor-bg .di-doctor { gap: var(--space-xl); } .di-section--doctor-bg .di-doctor__text { order: 1; padding-bottom: 0; } .di-doctor__portrait { order: 2; } .di-doctor__portrait img { max-height: 70vh; } }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }
 .di-creds .di-icon { color: var(--color-secondary-strong); margin-top: 0.25rem; }

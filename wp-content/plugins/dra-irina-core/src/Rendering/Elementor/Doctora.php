@@ -29,7 +29,20 @@ final class Doctora extends AbstractWidget {
 		$this->text( 'quote', __( 'Cita', 'dra-irina-core' ), '', true );
 		$this->text( 'text', __( 'Texto', 'dra-irina-core' ), '', true );
 		$this->lines( 'creds', __( 'Credenciales', 'dra-irina-core' ) );
-		$this->image( 'image', __( 'Retrato', 'dra-irina-core' ) );
+		$this->image( 'image', __( 'Retrato (recorte, pegado al borde inferior)', 'dra-irina-core' ) );
+		$this->image( 'bg', __( 'Fotografía de fondo de la sección', 'dra-irina-core' ) );
+		$this->add_control(
+			'bg_tone',
+			[
+				'label'   => __( 'Tono del fondo', 'dra-irina-core' ),
+				'type'    => \Elementor\Controls_Manager::SELECT,
+				'default' => 'dark',
+				'options' => [
+					'dark'  => __( 'Oscuro (texto blanco)', 'dra-irina-core' ),
+					'light' => __( 'Claro (texto oscuro)', 'dra-irina-core' ),
+				],
+			]
+		);
 		$this->text( 'link', __( 'URL del botón', 'dra-irina-core' ), '/dra-irina-gonzalez-saez/' );
 		$this->text( 'link_label', __( 'Texto del botón', 'dra-irina-core' ), __( 'Conocer a la Dra. Irina', 'dra-irina-core' ) );
 		$this->end_controls_section();
@@ -42,6 +55,8 @@ final class Doctora extends AbstractWidget {
 			'text'       => (string) ( $s['text'] ?? '' ),
 			'creds'      => self::to_lines( $s['creds'] ?? '' ),
 			'image_id'   => self::image_id( $s['image'] ?? null ),
+			'bg_id'      => self::image_id( $s['bg'] ?? null ),
+			'bg_tone'    => (string) ( $s['bg_tone'] ?? 'dark' ),
 			'link'       => (string) ( $s['link'] ?? '' ),
 			'link_label' => (string) ( $s['link_label'] ?? '' ),
 		];

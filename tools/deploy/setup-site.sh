@@ -31,8 +31,11 @@ HERO_URL=""; [ -n "$HERO_ID" ] && HERO_URL="$(w "post get $HERO_ID --field=guid"
 # Fotos de los paneles de área: adjuntos con slug area-orl y area-sueno (upload-media.sh). Sin ellos, el panel usa el degradado.
 ORL_ID="$(w "post list --post_type=attachment --post_name__in=area-orl --post_status=any --field=ID" | head -1)"; ORL_URL=""; [ -n "$ORL_ID" ] && ORL_URL="$(w "post get $ORL_ID --field=guid")"
 SUENO_ID="$(w "post list --post_type=attachment --post_name__in=area-sueno --post_status=any --field=ID" | head -1)"; SUENO_URL=""; [ -n "$SUENO_ID" ] && SUENO_URL="$(w "post get $SUENO_ID --field=guid")"
-sed -e "s#__HERO_ID__#${HERO_ID}#g" -e "s#__HERO_URL__#${HERO_URL}#g" -e "s#__ORL_IMG_ID__#${ORL_ID}#g" -e "s#__ORL_IMG_URL__#${ORL_URL}#g" -e "s#__SUENO_IMG_ID__#${SUENO_ID}#g" -e "s#__SUENO_IMG_URL__#${SUENO_URL}#g" "$REPO/tools/content/home-elementor.json" > /tmp/home-elementor.json
-echo "  hero-home: ${HERO_ID:-sin foto} · area-orl: ${ORL_ID:-sin foto} · area-sueno: ${SUENO_ID:-sin foto}"
+# Sección de la Dra.: retrato recortado (dra-escucharte) y fondo (dra-escucharte-bg).
+DRA_ID="$(w "post list --post_type=attachment --post_name__in=dra-escucharte --post_status=any --field=ID" | head -1)"; DRA_URL=""; [ -n "$DRA_ID" ] && DRA_URL="$(w "post get $DRA_ID --field=guid")"
+DRABG_ID="$(w "post list --post_type=attachment --post_name__in=dra-escucharte-bg --post_status=any --field=ID" | head -1)"; DRABG_URL=""; [ -n "$DRABG_ID" ] && DRABG_URL="$(w "post get $DRABG_ID --field=guid")"
+sed -e "s#__HERO_ID__#${HERO_ID}#g" -e "s#__HERO_URL__#${HERO_URL}#g" -e "s#__ORL_IMG_ID__#${ORL_ID}#g" -e "s#__ORL_IMG_URL__#${ORL_URL}#g" -e "s#__SUENO_IMG_ID__#${SUENO_ID}#g" -e "s#__SUENO_IMG_URL__#${SUENO_URL}#g" -e "s#__DRA_IMG_ID__#${DRA_ID}#g" -e "s#__DRA_IMG_URL__#${DRA_URL}#g" -e "s#__DRA_BG_ID__#${DRABG_ID}#g" -e "s#__DRA_BG_URL__#${DRABG_URL}#g" "$REPO/tools/content/home-elementor.json" > /tmp/home-elementor.json
+echo "  hero-home: ${HERO_ID:-sin foto} · area-orl: ${ORL_ID:-sin foto} · area-sueno: ${SUENO_ID:-sin foto} · dra-escucharte: ${DRA_ID:-sin foto} · bg: ${DRABG_ID:-sin foto}"
 rscp /tmp/home-elementor.json "$SSH_USER@$SSH_HOST:/tmp/home-elementor.json"; rm -f /tmp/home-elementor.json
 w "post meta update $P_HOME _wp_page_template elementor_header_footer" >/dev/null
 w "post meta update $P_HOME _elementor_edit_mode builder" >/dev/null

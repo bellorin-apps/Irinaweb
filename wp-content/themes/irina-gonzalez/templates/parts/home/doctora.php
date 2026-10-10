@@ -1,6 +1,7 @@
 <?php
 /**
- * Home · bloque de la Dra. $args: eyebrow, quote, text, creds (array), image_id, link, link_label.
+ * Home · bloque de la Dra. $args: eyebrow, quote, text, creds (array), image_id, bg_id, bg_tone (dark|light), link, link_label.
+ * Con bg_id la sección lleva una fotografía de fondo; el retrato (image_id) va sin tarjeta, pegado al borde inferior (propietario, 2026-10-10).
  *
  * @package IrinaGonzalez
  */
@@ -15,15 +16,48 @@ $irina_a = wp_parse_args(
 		'text'       => '',
 		'creds'      => [],
 		'image_id'   => 0,
+		'bg_id'      => 0,
+		'bg_tone'    => 'dark',
 		'link'       => home_url( '/dra-irina-gonzalez-saez/' ),
 		'link_label' => __( 'Conocer a la Dra. Irina', 'irina-gonzalez' ),
 	]
 );
 ?>
-<section class="di-section di-section--soft">
+<?php $irina_bg = (int) $irina_a['bg_id']; ?>
+<section class="di-section di-section--doctor<?php echo $irina_bg ? ' di-section--doctor-bg di-section--doctor-' . esc_attr( 'light' === $irina_a['bg_tone'] ? 'light' : 'dark' ) : ' di-section--soft'; ?>">
+	<?php if ( $irina_bg ) : ?>
+		<div class="di-doctor__bg">
+		<?php
+		echo wp_get_attachment_image(
+			$irina_bg,
+			'full',
+			false,
+			[
+				'loading'  => 'lazy',
+				'decoding' => 'async',
+				'sizes'    => '100vw',
+				'alt'      => '',
+			]
+		); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. 
+		?>
+									</div>
+	<?php endif; ?>
 	<div class="di-container di-doctor">
-		<div class="di-photo di-photo--portrait di-reveal"><?php echo $irina_a['image_id'] ? wp_get_attachment_image( (int) $irina_a['image_id'], 'irina-portrait' ) : '<span>' . esc_html__( 'Retrato (sesión fotográfica pendiente)', 'irina-gonzalez' ) . '</span>'; ?></div>
-		<div>
+		<div class="di-doctor__portrait di-reveal">
+		<?php
+		echo $irina_a['image_id'] ? wp_get_attachment_image(
+			(int) $irina_a['image_id'],
+			'full',
+			false,
+			[
+				'loading'  => 'lazy',
+				'decoding' => 'async',
+				'sizes'    => '(min-width: 900px) 40vw, 100vw',
+			]
+		) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. 
+		?>
+		</div>
+		<div class="di-doctor__text">
 			<?php
 			if ( '' !== $irina_a['eyebrow'] ) :
 				?>
