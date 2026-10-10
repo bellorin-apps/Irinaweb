@@ -26,7 +26,7 @@ final class Credenciales extends AbstractWidget {
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Contenido (las credenciales se editan en Credenciales → marcar «mostrar»)', 'dra-irina-core' ) ] );
 		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), __( 'Formación y certificaciones', 'dra-irina-core' ) );
-		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Credenciales <em>verificables.</em>', true );
+		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Credenciales <em>verificables</em>', true );
 		$this->text( 'tags_title', __( 'Título de etiquetas', 'dra-irina-core' ), __( 'Membresías y hospitales', 'dra-irina-core' ) );
 		$this->lines( 'extra_tags', __( 'Etiquetas adicionales (hospitales)', 'dra-irina-core' ) );
 		$this->end_controls_section();

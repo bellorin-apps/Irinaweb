@@ -28,7 +28,7 @@ final class Faq extends AbstractWidget {
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Contenido', 'dra-irina-core' ) ] );
 		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ) );
-		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Preguntas <em>frecuentes.</em>', true );
+		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Preguntas <em>frecuentes</em>', true );
 		$this->repeater(
 			'items',
 			__( 'Preguntas', 'dra-irina-core' ),

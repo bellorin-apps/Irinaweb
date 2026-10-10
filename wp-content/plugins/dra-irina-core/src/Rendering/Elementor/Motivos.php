@@ -26,7 +26,7 @@ final class Motivos extends AbstractWidget {
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Contenido', 'dra-irina-core' ) ] );
 		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), __( '¿Qué estás sintiendo?', 'dra-irina-core' ) );
-		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Motivos de consulta <em>frecuentes.</em>', true );
+		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Motivos de consulta <em>frecuentes</em>', true );
 		$this->text( 'note', __( 'Nota', 'dra-irina-core' ), __( 'Orientación para encontrar la información adecuada. No sustituye una valoración médica.', 'dra-irina-core' ), true );
 		$this->repeater(
 			'items',

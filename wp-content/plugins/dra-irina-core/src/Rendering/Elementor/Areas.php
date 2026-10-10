@@ -26,7 +26,7 @@ final class Areas extends AbstractWidget {
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Encabezado', 'dra-irina-core' ) ] );
 		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), __( 'Áreas de atención', 'dra-irina-core' ) );
-		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Dos áreas,<br>una misma forma de <em>atender.</em>', true );
+		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Dos áreas,<br>una misma forma de <em>atender</em>', true );
 		$this->end_controls_section();
 		foreach ( [
 			'orl'   => __( 'Panel ORL', 'dra-irina-core' ),

@@ -26,7 +26,7 @@ final class Pasos extends AbstractWidget {
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Contenido', 'dra-irina-core' ) ] );
 		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), __( 'Cómo trabajamos', 'dra-irina-core' ) );
-		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Qué esperar en <em>tu consulta.</em>', true );
+		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Qué esperar en <em>tu consulta</em>', true );
 		$this->repeater(
 			'steps',
 			__( 'Pasos', 'dra-irina-core' ),

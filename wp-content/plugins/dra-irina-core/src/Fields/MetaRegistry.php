@@ -229,7 +229,10 @@ final class MetaRegistry {
 				}
 				if ( ( $def['format'] ?? '' ) === 'date' ) {
 					$v = sanitize_text_field( (string) $value );
-					return preg_match( '/^\d{4}-\d{2}-\d{2}$/', $v ) ? $v : '';
+					if ( ! preg_match( '/^(\d{4})-(\d{2})-(\d{2})$/', $v, $date ) ) {
+						return '';
+					}
+					return checkdate( (int) $date[2], (int) $date[3], (int) $date[1] ) ? $v : '';
 				}
 				return wp_kses_post( (string) $value );
 		}

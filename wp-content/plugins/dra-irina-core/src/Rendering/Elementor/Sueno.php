@@ -26,7 +26,7 @@ final class Sueno extends AbstractWidget {
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Contenido', 'dra-irina-core' ) ] );
 		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), __( 'Especialización en sueño', 'dra-irina-core' ) );
-		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Del ronquido al descanso, <em>en un solo lugar.</em>', true );
+		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Del ronquido al descanso, <em>en un solo lugar</em>', true );
 		$this->text( 'lead', __( 'Texto', 'dra-irina-core' ), '', true );
 		$this->text( 'link', __( 'URL del botón', 'dra-irina-core' ), '/sueno/' );
 		$this->text( 'link_label', __( 'Texto del botón', 'dra-irina-core' ), __( 'Explorar la ruta de tratamiento', 'dra-irina-core' ) );

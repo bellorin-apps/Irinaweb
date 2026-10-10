@@ -26,7 +26,7 @@ final class Timeline extends AbstractWidget {
 	protected function register_controls(): void {
 		$this->start_controls_section( 'c', [ 'label' => __( 'Contenido', 'dra-irina-core' ) ] );
 		$this->text( 'eyebrow', __( 'Eyebrow', 'dra-irina-core' ), __( 'Trayectoria', 'dra-irina-core' ) );
-		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Formación continua en <em>cirugía de sueño.</em>', true );
+		$this->text( 'title', __( 'Título', 'dra-irina-core' ), 'Formación continua en <em>cirugía de sueño</em>', true );
 		$this->end_controls_section();
 	}
 
