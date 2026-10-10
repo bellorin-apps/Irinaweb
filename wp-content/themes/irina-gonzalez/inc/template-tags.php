@@ -222,3 +222,11 @@ function irina_hours_note(): string {
 function irina_hospitals(): array {
 	return array_values( array_filter( array_map( 'trim', (array) preg_split( '/\r\n|\r|\n/', (string) irina_practice( 'hospitales' ) ) ) ) );
 }
+
+/**
+ * Las páginas con la plantilla «Elementor Header/Footer» no pasan por page.php: el tema abre/cierra <main> en header.php y footer.php
+ * para que exista el punto de referencia y funcione el enlace «Ir al contenido» (PLAN 10.4).
+ */
+function irina_elementor_main(): bool {
+	return is_singular() && 'elementor_header_footer' === get_page_template_slug( get_queried_object_id() );
+}

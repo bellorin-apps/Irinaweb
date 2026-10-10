@@ -159,8 +159,8 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | TODO | |
 | 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | TODO | |
-| 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | TODO | |
-| 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | TODO | |
+| 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | DOING | Cabeceras de seguridad en el plugin (Q-023); resto pendiente |
+| 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | DOING | Auditoría en vivo y correcciones (Q-022); falta decisión sobre el contraste del botón de WhatsApp |
 | 10.5 | Codex: QA performance + seguridad + accesibilidad | 3 | TODO | |
 
 ## FASE 11 — QA integral y pre-launch

@@ -12,6 +12,7 @@ namespace DraIrina\Core;
 use DraIrina\Core\Fields\MetaRegistry;
 use DraIrina\Core\Contact\Form as ContactForm;
 use DraIrina\Core\Ops\Endpoints as OpsEndpoints;
+use DraIrina\Core\Security\Headers as SecurityHeaders;
 use DraIrina\Core\PostTypes\Condicion;
 use DraIrina\Core\PostTypes\Credencial;
 use DraIrina\Core\PostTypes\Recurso;
@@ -61,6 +62,7 @@ final class Plugin {
 			new Events(),
 			new OpsEndpoints(),
 			new ContactForm(),
+			new SecurityHeaders(),
 		];
 	}
 

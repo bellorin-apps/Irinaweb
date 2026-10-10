@@ -16,7 +16,7 @@
   --color-primary-strong: #6f3a8b;
   --color-primary-soft: #f1e8f4;
   --color-secondary: #3ca1a7;
-  --color-secondary-strong: #2d8186;
+  --color-secondary-strong: #2a787d; /* AA 4.9:1 sobre crema (antes #2d8186, 4.3:1); PLAN 10.4 */
   --color-secondary-soft: #e4f3f4;
   --color-accent: #9cced1;
   --color-surface: #fbf7f2;        /* crema cálida (v2, D-026) */

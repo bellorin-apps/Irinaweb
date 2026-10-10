@@ -248,6 +248,8 @@ body.menu-open { overflow: hidden; }
 .di-creds__dots { display: flex; gap: 14px; margin: 0.85rem 0 var(--space-lg) 0.85rem; padding: 0; list-style: none; font-size: 0.86rem; }
 .di-creds__dots button { position: relative; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgb(36 31 35 / 0.22); cursor: pointer; overflow: visible; }
 .di-creds__dots button[aria-current="true"] { background: var(--color-primary); }
+/* Área táctil de 24 px (WCAG 2.5.8) sin cambiar el punto de 8 px. */
+.di-creds__dots button::before { content: ""; position: absolute; inset: -8px; border-radius: 50%; }
 /* Cargador de tiempo: anillo sutil alrededor del punto activo que se completa en los 4 s del autoplay; se oculta al pausar (toque/deslizar). */
 /* max-width: none anula «img, svg { max-width:100% }» de base.css (el botón mide 8 px y aplastaba el anillo). */
 .di-creds__dots button svg { position: absolute; left: -6px; top: -6px; width: 20px; height: 20px; max-width: none; transform: rotate(-90deg); opacity: 0; pointer-events: none; overflow: visible; }
@@ -337,6 +339,7 @@ body.menu-open { overflow: hidden; }
 .di-footer h4 { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(255 255 255 / 0.5); margin-bottom: var(--space-sm); }
 .di-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem; }
 .di-footer a { color: #fff; text-decoration: none; }
+.di-footer ul a { display: inline-block; padding-block: 0.15rem; } /* objetivo táctil ≥ 24 px (PLAN 10.4) */
 .di-footer a:hover { text-decoration: underline; color: #fff; }
 .di-footer .di-brand { color: #fff; margin-bottom: 0; }
 /* Marca del pie (propietario, 2026-10-10): logotipo a la izquierda, barra vertical y el copy a la derecha; cédulas y consejo más apagados. */

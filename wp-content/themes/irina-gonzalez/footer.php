@@ -17,6 +17,9 @@ $irina_wa    = (string) irina_practice( 'whatsapp' );
 $irina_mail  = (string) irina_practice( 'email' );
 $irina_rows  = irina_hours_rows();
 $irina_cedul = irina_practice( 'publicar_cedulas' ) ? trim( (string) irina_practice( 'cedula_medicina' ) . ' · ' . (string) irina_practice( 'cedula_especialidad' ), ' ·' ) : '';
+if ( irina_elementor_main() ) {
+	echo '</main>';
+}
 ?>
 <footer class="di-footer" id="di-footer">
 	<div class="di-container">

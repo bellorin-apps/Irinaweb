@@ -60,3 +60,6 @@ if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_loca
 	echo irina_social_circles( 'di-social di-social--panel' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	?>
 </div>
+<?php if ( irina_elementor_main() ) : ?>
+<main id="content" class="di-main">
+<?php endif; ?>
