@@ -87,6 +87,7 @@
             "id": "__DRA_ENDO_ID__",
             "url": "__DRA_ENDO_URL__"
           },
+          "image_pos": "right",
           "image_alt": "Cabezal de cámara de endoscopia que la Dra. utiliza en consultorio"
         },
         "elements": []

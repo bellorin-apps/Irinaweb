@@ -1,7 +1,7 @@
 <?php
 /**
  * Bloque narrativo centrado (ancho de lectura). $args: eyebrow, title, lead, text, draft (bool), image_id (int, opcional), image_alt.
- * Con imagen: dos columnas en escritorio (foto a la izquierda, texto a la derecha) y foto arriba en móvil; la foto se mezcla en
+ * Con imagen: dos columnas en escritorio (foto a la derecha por defecto, image_pos=left para la izquierda) y foto arriba en móvil; la foto se mezcla en
  * multiplicar para que un fondo blanco de producto se funda con el crema (propietario, 2026-10-10: endoscopio junto a «Escucharte»).
  *
  * @package IrinaGonzalez
@@ -19,6 +19,7 @@ $irina_a   = wp_parse_args(
 		'draft'     => false,
 		'image_id'  => 0,
 		'image_alt' => '',
+		'image_pos' => 'right',
 	]
 );
 $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
@@ -31,7 +32,7 @@ $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 	]
 ) : '';
 ?>
-<section class="di-section<?php echo '' !== $irina_img ? ' di-narrative--split' : ''; ?>">
+<section class="di-section<?php echo '' !== $irina_img ? ' di-narrative--split di-narrative--img-' . esc_attr( 'left' === $irina_a['image_pos'] ? 'left' : 'right' ) : ''; ?>">
 	<?php if ( '' !== $irina_img ) : ?>
 	<div class="di-container di-narrative__grid">
 		<div class="di-narrative__media di-reveal"><?php echo $irina_img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>

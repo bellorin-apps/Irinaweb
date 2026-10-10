@@ -37,7 +37,19 @@ final class Narrative extends AbstractWidget {
 				'type'  => Controls_Manager::WYSIWYG,
 			]
 		);
-		$this->image( 'image', __( 'Imagen a la izquierda (opcional; escritorio dos columnas, móvil arriba)', 'dra-irina-core' ) );
+		$this->image( 'image', __( 'Imagen (opcional; escritorio dos columnas, móvil arriba del texto)', 'dra-irina-core' ) );
+		$this->add_control(
+			'image_pos',
+			[
+				'label'   => __( 'Lado de la imagen en escritorio', 'dra-irina-core' ),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 'right',
+				'options' => [
+					'right' => __( 'Derecha', 'dra-irina-core' ),
+					'left'  => __( 'Izquierda', 'dra-irina-core' ),
+				],
+			]
+		);
 		$this->text( 'image_alt', __( 'Texto alternativo de la imagen', 'dra-irina-core' ) );
 		$this->add_control(
 			'draft',
@@ -59,6 +71,7 @@ final class Narrative extends AbstractWidget {
 			'draft'     => 'yes' === ( $s['draft'] ?? '' ),
 			'image_id'  => self::image_id( $s['image'] ?? null ),
 			'image_alt' => (string) ( $s['image_alt'] ?? '' ),
+			'image_pos' => 'left' === ( $s['image_pos'] ?? '' ) ? 'left' : 'right',
 		];
 	}
 }
