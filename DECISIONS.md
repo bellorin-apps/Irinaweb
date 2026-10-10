@@ -95,3 +95,8 @@ Las preguntas pendientes se presentan por Claude, a petición expresa de José; 
 ## D-061 · composición 60/40 de Escucharte (referencia de José)
 
 2026-10-10, mensaje con división roja y silueta punteada: Texto|Foto60/40, texto a la izquierda, foto alineada al inicio de su columna con ajuste aproximado−2 a−5px. Se acepta rostro parcialmente fuera del viewport; sustituye el requisito anterior≥80 %, la separación positiva y A/B. Implementación móvil en grid60/40 con ajuste−5px, alto natural de la fila, sin tocar fondo, menú, sombras, textos ni carrusel. Medidas y captura local: docs/ESCUCHARTE_60_40_2026-10-10.md. Verificación en producción y revisión de José pendientes; preguntas por Claude.
+
+## Ajuste de altura móvil autorizado · 2026-10-10
+José autorizó corregir la dependencia entre renglones y escala del retrato. En <=430px, max-height: clamp(600px,164vw,640px) limita la imagen; mantiene altura100% cuando la fila es menor, proporción, fondo, texto, grid60/40, offset−5 y anclaje inferior. A360 pasa de708 a600px; a390 normal conserva639px. Esta reducción limitada en vistas estrechas sustituye el alto literal de D-057/D-061 por la autorización más reciente; no introduce las variantes A/B anteriores.
+Pruebas: columns.cjs (tres tarjetas,360/390/430/768/1440), portrait-cap.cjs (320/360/390/430 y raíz tipográfica20px). Evidencia: docs/audit/2026-10-10/portrait-cap.json y portrait-cap-360.png. HTML público con CSS local: no demuestra despliegue ni el comportamiento del teléfono real. Q-039 continúa abierto hasta revisión real.
+Claude local: desplegar solo código con tools/deploy/deploy-code.sh, purgar y verificar teléfono; no regenerar contenido por este CSS. Codex no despliega. Preguntas por Claude.

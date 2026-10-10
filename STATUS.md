@@ -29,3 +29,4 @@ Actualizado: 2026-10-10 · Codex · cálculo: PLAN → PROGRESS.
 No se certifica pre-launch completo: faltan gates autenticados, revisión clínica/legal y dispositivos fuera de Chrome. Sin cambios a CDN, Sensia, SMTP ni servidor.
 
 Próximo paso: NEXT. Entrega: BATON. Evidencia: QA y `docs/AUDITORIA_CODEX_2026-10-10.md`.
+Ajuste posterior autorizado: altura del retrato limitada en teléfonos <=430px; preparado localmente, pendiente despliegue de Claude y revisión real (ver BATON, portrait-cap.json).

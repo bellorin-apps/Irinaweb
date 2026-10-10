@@ -115,3 +115,8 @@ Se conservaron los commits9053a4b (sizes100vw para nitidez) y a1b6b83 (despliegu
 ## MENSAJE ACTUAL — resultado del teléfono
 
 No asumir CSS viejo por el informe de José: la geometría nueva a360 es casi idéntica a la anterior. La captura390 mejoraba por la menor altura de la figura, no por moverla a la izquierda. Se verificó producción con perfil móvil/DPR2 y se dejó una propuesta concreta deleft−17px a≤360, actualmente fuera del tema. Claude consulta esa desviación de−2/−5 con José y coordina la comparación en su ancho/zoom real. No desplegar narrow-position-proposal.css como si estuviera aprobado. Las tres tarjetas pasan en producción; el problema sigue siendo la composición percibida.
+
+## Ajuste de altura móvil autorizado · 2026-10-10
+José autorizó corregir la dependencia entre renglones y escala del retrato. En <=430px, max-height: clamp(600px,164vw,640px) limita la imagen; mantiene altura100% cuando la fila es menor, proporción, fondo, texto, grid60/40, offset−5 y anclaje inferior. A360 pasa de708 a600px; a390 normal conserva639px. Esta reducción limitada en vistas estrechas sustituye el alto literal de D-057/D-061 por la autorización más reciente; no introduce las variantes A/B anteriores.
+Pruebas: columns.cjs (tres tarjetas,360/390/430/768/1440), portrait-cap.cjs (320/360/390/430 y raíz tipográfica20px). Evidencia: docs/audit/2026-10-10/portrait-cap.json y portrait-cap-360.png. HTML público con CSS local: no demuestra despliegue ni el comportamiento del teléfono real. Q-039 continúa abierto hasta revisión real.
+Claude local: desplegar solo código con tools/deploy/deploy-code.sh, purgar y verificar teléfono; no regenerar contenido por este CSS. Codex no despliega. Preguntas por Claude.

@@ -85,3 +85,8 @@ Trazabilidad de todos los archivos modificados por Codex (excluye los cuatro HTM
 - Verificado CSS60/40 en producción sin interceptar assets; perfiles móviles/DPR2 y tres tarjetas pasan. En360 el retrato se movió solo0,125px y no cambió de altura; explica por qué la sección puede verse casi igual. La captura390 no representaba ese resultado.
 - Q-039 abierto según informe de José. Propuesta aislada de12px extra a≤360, sin cambiar tema ni desplegar; revisión de la desviación de D-061 por Claude/José.
 - columns.cjs incorpora --live y perfil móvil; narrow-position-proposal.css no se encola. Capturas/metadatos de producción y ensayo añadido, informe ESCUCHARTE_DISCREPANCIA_MOVIL, STATUS/NEXT/BATON/QA actualizados. PHP/builds sin cambios.
+
+## Ajuste de altura móvil autorizado · 2026-10-10
+José autorizó corregir la dependencia entre renglones y escala del retrato. En <=430px, max-height: clamp(600px,164vw,640px) limita la imagen; mantiene altura100% cuando la fila es menor, proporción, fondo, texto, grid60/40, offset−5 y anclaje inferior. A360 pasa de708 a600px; a390 normal conserva639px. Esta reducción limitada en vistas estrechas sustituye el alto literal de D-057/D-061 por la autorización más reciente; no introduce las variantes A/B anteriores.
+Pruebas: columns.cjs (tres tarjetas,360/390/430/768/1440), portrait-cap.cjs (320/360/390/430 y raíz tipográfica20px). Evidencia: docs/audit/2026-10-10/portrait-cap.json y portrait-cap-360.png. HTML público con CSS local: no demuestra despliegue ni el comportamiento del teléfono real. Q-039 continúa abierto hasta revisión real.
+Claude local: desplegar solo código con tools/deploy/deploy-code.sh, purgar y verificar teléfono; no regenerar contenido por este CSS. Codex no despliega. Preguntas por Claude.

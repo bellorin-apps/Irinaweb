@@ -1,13 +1,15 @@
 [
   {
     "width": 360,
+    "live": false,
+    "deviceScaleFactor": 2,
     "cards": [
       {
         "sectionHeight": 803.75,
         "textPercent": 59.99904725609756,
         "photoPercent": 39.99618902439025,
         "offset": -5.003124999999983,
-        "imageHeight": 707.75,
+        "imageHeight": 600,
         "bottomGap": 0,
         "cardHeight": 108.640625,
         "oneActive": true,
@@ -19,7 +21,7 @@
         "textPercent": 59.99904725609756,
         "photoPercent": 39.99618902439025,
         "offset": -5.003124999999983,
-        "imageHeight": 707.75,
+        "imageHeight": 600,
         "bottomGap": 0,
         "cardHeight": 108.640625,
         "oneActive": true,
@@ -31,7 +33,7 @@
         "textPercent": 59.99904725609756,
         "photoPercent": 39.99618902439025,
         "offset": -5.003124999999983,
-        "imageHeight": 707.75,
+        "imageHeight": 600,
         "bottomGap": 0,
         "cardHeight": 126.53125,
         "oneActive": true,
@@ -44,6 +46,8 @@
   },
   {
     "width": 390,
+    "live": false,
+    "deviceScaleFactor": 2,
     "cards": [
       {
         "sectionHeight": 734.96875,
@@ -87,6 +91,8 @@
   },
   {
     "width": 430,
+    "live": false,
+    "deviceScaleFactor": 2,
     "cards": [
       {
         "sectionHeight": 694.984375,
@@ -130,6 +136,8 @@
   },
   {
     "width": 768,
+    "live": false,
+    "deviceScaleFactor": 2,
     "cards": [
       {
         "sectionHeight": 590.484375,
@@ -173,6 +181,8 @@
   },
   {
     "width": 1440,
+    "live": false,
+    "deviceScaleFactor": 1,
     "cards": [
       {
         "sectionHeight": 849.015625,

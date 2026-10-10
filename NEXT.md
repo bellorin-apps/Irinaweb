@@ -27,3 +27,4 @@ Aprobaciones en mini app; foto definitiva Dra.; GA4; revisión legal/regulatoria
 ## Inglés
 
 Después del lanzamiento español y fecha elegida por José. Se retiran fechas hipotéticas contradictorias; no iniciar ahora.
+Prioridad actual Escucharte: Claude despliega el límite de altura móvil autorizado y compara en teléfono real; sustituye la propuesta aislada de desplazamiento−12px, que no se incorpora.

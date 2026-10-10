@@ -316,6 +316,11 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-doctor__portrait { grid-column: 2; grid-row: 1; position: relative; left: -5px; right: auto; top: auto; bottom: auto; min-width: 0; height: auto; max-height: none; transform: none; line-height: 0; overflow: visible; }
   .di-section--doctor-bg .di-doctor__portrait img { position: absolute; left: 0; bottom: 0; display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: left bottom; }
 }
+/* Teléfonos: los renglones adicionales no amplían el retrato indefinidamente.
+   Conserva su proporción, el anclaje inferior y el inicio de la columna 40%. */
+@media (max-width: 430px) {
+  .di-section--doctor-bg .di-doctor__portrait img { max-height: clamp(600px, 164vw, 640px); }
+}
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }
 .di-creds .di-icon { color: var(--color-secondary-strong); margin-top: 0.25rem; }
