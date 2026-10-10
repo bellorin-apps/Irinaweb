@@ -61,9 +61,9 @@ add_action(
 
 // Calidad 100 % en todo lo que genere WordPress (JPEG y WebP), por decisión del propietario (tanda 1, 2026-10-09): las fotos son
 // profesionales y la CDN se encarga del peso por dispositivo. Los originales se conservan sin reescalar (abajo).
-// Calidad 95 (D-064, propietario 2026-10-10): indistinguible a la vista y ~6× más ligera que 100 en WebP.
-add_filter( 'jpeg_quality', static fn(): int => 95 );
-add_filter( 'wp_editor_set_quality', static fn(): int => 95 );
+// Calidad 100 en todo lo que genere WordPress (D-064, propietario 2026-10-10: vio la comparativa 100/95 y mantiene 100).
+add_filter( 'jpeg_quality', static fn(): int => 100 );
+add_filter( 'wp_editor_set_quality', static fn(): int => 100 );
 // El original subido se conserva como tamaño "full" (WordPress no lo reescala a 2560 px): la foto del hero se sirve tal cual.
 add_filter( 'big_image_size_threshold', '__return_false' );
 // Sin «sizes=auto» en imágenes diferidas: con «auto» el navegador pedía la versión del ancho CSS a 1× (borrosa en 2×). Q-020.
@@ -118,7 +118,7 @@ function irina_image_original( int $attachment_id, array $attrs = [] ): string {
 	add_filter( 'wp_calculate_image_srcset', $none, 10, 0 );
 	$html = wp_get_attachment_image( $attachment_id, 'full', false, $attrs );
 	remove_filter( 'wp_calculate_image_srcset', $none, 10 );
-	// Teléfonos (≤899 px): versión de 1600 px generada por WordPress a calidad 95 (D-064); escritorio recibe el archivo completo.
+	// Teléfonos (≤899 px): versión de 1600 px generada por WordPress a calidad 100 (D-064); escritorio recibe el archivo completo.
 	$movil = wp_get_attachment_image_src( $attachment_id, 'irina-movil' );
 	if ( '' !== $html && $movil && ! empty( $movil[3] ) ) {
 		$html = '<picture><source media="(max-width: 899px)" srcset="' . esc_url( $movil[0] ) . '">' . $html . '</picture>';

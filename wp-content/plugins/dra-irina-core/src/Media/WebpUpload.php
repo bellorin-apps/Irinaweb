@@ -1,11 +1,11 @@
 <?php
 /**
- * Fotografías en WebP calidad 95 al subirlas (D-064, revisada por el propietario el 2026-10-10).
+ * Fotografías en WebP calidad 100 al subirlas (D-064; el propietario revisó la comparativa y mantiene 100).
  *
  * Regla del propietario (D-063): la calidad de las fotos no baja y nadie las reescala. Con la optimización de la CDN apagada,
  * los PNG originales de 4–5 MB llegaban tal cual a los teléfonos. Esta clase convierte en el momento de la subida cualquier
- * PNG/JPEG de 1200 px o más a WebP con calidad 95 (sin reescalar; conserva la transparencia): indistinguible del original a la
- * vista y ~6× más ligero que el PNG (hero de la Dra.: 4 082 KB → ~730 KB). Las versiones para móvil (1600 px) las genera WordPress. El archivo original no se conserva en el servidor: el propietario guarda los originales en Recursos.
+ * PNG/JPEG de 1200 px o más a WebP con calidad 100 (sin reescalar; conserva la transparencia): ~¼ del peso del PNG sin pérdida
+ * visible (hero de la Dra.: 4 082 KB → 1 033 KB). Las versiones para móvil (1600 px) las genera WordPress. El archivo original no se conserva en el servidor: el propietario guarda los originales en Recursos.
  *
  * @package DraIrina\Core
  */
@@ -17,7 +17,7 @@ namespace DraIrina\Core\Media;
 final class WebpUpload {
 
 	private const MIN_WIDTH = 1200;
-	public const QUALITY    = 95;
+	public const QUALITY    = 100;
 
 	public function register(): void {
 		add_filter( 'wp_handle_upload', [ $this, 'convert' ], 10, 2 );
