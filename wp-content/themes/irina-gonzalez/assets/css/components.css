@@ -474,28 +474,14 @@ body.has-mobile-bar { padding-bottom: 72px; }
 /* Marcador avanzado (D-059): contorno de foco solo con teclado. */
 gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 
-/* Cabecera con fotografía entregada por el propietario (2026-10-10, página de la Dra.; clase di-bleed--photo cuando el widget lleva imagen):
-   la foto se ve tal cual, sin sombra ni degradado añadidos, y sin el desplazamiento de parallax arriba (que metía el rostro bajo la cabecera fija).
-   En móvil la estructura cambia: la foto ocupa la parte alta a todo el ancho con la figura entera y el texto va debajo sobre un relleno plano
-   del color de la propia imagen (--bleed-fill, muestreado del fondo de la foto), con texto oscuro para contraste AA. */
-/* Sombreado solo horizontal y en modo multiplicar (propietario, 2026-10-10): oscurece de izquierda a derecha la zona del texto y
-   se desvanece antes de la figura, sin tocar la fotografía. En móvil no hace falta (el texto va debajo de la foto). */
-/* Propietario (2026-10-10): sin gris; oscurecido entre morado y rojizo oscuro de la paleta (#4a2a3e, de la gama del hero warm), en multiplicar y de izquierda a derecha. */
+/* Cabecera con fotografía (clase di-bleed--photo cuando el widget lleva imagen; hoy la página de la Dra.). Propietario (2026-10-10):
+   tratarla como el hero de la home en fondo y posiciones: misma altura (100svh), foto a sangre con parallax, texto blanco abajo a la
+   izquierda; oscurecido en morado rojizo de la paleta (#4a2a3e) en multiplicar, nunca gris: en escritorio de izquierda a derecha,
+   en móvil desde abajo como en la home. CTAs 50/50 con etiquetas cortas en móvil. */
+.di-bleed--photo.di-bleed--short { min-height: 100svh; }
 .di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(74 42 62 / 0.6) 0%, rgb(74 42 62 / 0.36) 34%, rgb(74 42 62 / 0.12) 52%, rgb(74 42 62 / 0) 64%); mix-blend-mode: multiply; }
-.di-bleed--photo .di-bleed__bg { inset: 0; }
+@media (min-width: 900px) { .di-bleed--photo .di-container { padding-top: 9rem; } }
 @media (max-width: 899px) {
-  .di-bleed--photo { --di-photo-h: 60svh; --title-accent: var(--color-primary); background: var(--bleed-fill, #d3a98a); color: var(--color-text); }
-  .di-bleed--photo .di-bleed__bg { inset: 0 0 auto 0; height: var(--di-photo-h); background: var(--bleed-fill, #d3a98a); transform: none !important; /* sin parallax: la foto no debe deslizarse sobre el texto */ }
-  .di-bleed--photo .di-bleed__shade { display: none; }
-  /* La foto empieza bajo la cabecera fija (la franja superior queda del color de relleno) para que el rostro no quede tapado. */
-  .di-bleed--photo .di-bleed__bg img { top: var(--di-header-h, 92px); height: calc(100% - var(--di-header-h, 92px)); }
-  .di-bleed--photo .di-container { padding-top: calc(var(--di-photo-h) + var(--space-lg)); }
-  .di-bleed--photo h1 { color: var(--color-text); }
-  .di-bleed--photo .di-eyebrow { color: var(--color-secondary-strong); }
-  .di-bleed--photo .di-lead { color: var(--color-text); }
-  .di-bleed--photo .di-crumbs, .di-bleed--photo .di-crumbs a { color: rgb(36 31 35 / 0.7); }
-  .di-bleed--photo .di-btn--whatsapp { background: var(--color-secondary-strong); backdrop-filter: none; -webkit-backdrop-filter: none; }
-  .di-bleed--photo .di-btn--whatsapp:hover { background: #236468; }
-  .di-bleed--photo .di-btn--ghost { background: rgb(36 31 35 / 0.08); color: var(--color-text); }
-  .di-bleed--photo .di-btn--ghost:hover { background: rgb(36 31 35 / 0.14); color: var(--color-text); }
+  .di-bleed--photo .di-bleed__shade { display: block; background: linear-gradient(180deg, rgb(74 42 62 / 0) 0%, rgb(74 42 62 / 0) 38%, rgb(74 42 62 / 0.38) 52%, rgb(74 42 62 / 0.7) 68%, rgb(74 42 62 / 0.9) 100%); mix-blend-mode: multiply; }
+  .di-bleed--photo .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
 }

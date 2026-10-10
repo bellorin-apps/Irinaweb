@@ -52,13 +52,16 @@ final class Bleed extends AbstractWidget {
 		$this->text( 'whatsapp_label', __( 'Botón WhatsApp · texto (vacío = por defecto)', 'dra-irina-core' ) );
 		$this->text( 'secondary_label', __( 'Botón secundario · texto', 'dra-irina-core' ) );
 		$this->text( 'secondary_url', __( 'Botón secundario · URL', 'dra-irina-core' ) );
+		$this->text( 'secondary_short', __( 'Botón secundario · texto corto para móvil (vacío = el mismo)', 'dra-irina-core' ) );
 		$this->end_controls_section();
 	}
 
 	protected function args( array $s ): array {
-		$cta = function_exists( 'irina_whatsapp_button' ) ? irina_whatsapp_button( (string) ( $s['whatsapp_label'] ?? '' ), '', 'di-btn ' . ( 'night' === ( $s['variant'] ?? '' ) ? 'di-btn--light' : 'di-btn--whatsapp' ) ) : '';
+		// Como en el hero de la home: etiquetas cortas en móvil (botones 50/50).
+		$cta = function_exists( 'irina_whatsapp_button' ) ? irina_whatsapp_button( (string) ( $s['whatsapp_label'] ?? '' ), '', 'di-btn ' . ( 'night' === ( $s['variant'] ?? '' ) ? 'di-btn--light' : 'di-btn--whatsapp' ), __( 'WhatsApp', 'dra-irina-core' ) ) : '';
 		if ( '' !== (string) ( $s['secondary_label'] ?? '' ) && '' !== (string) ( $s['secondary_url'] ?? '' ) ) {
-			$cta .= sprintf( '<a class="di-btn di-btn--ghost" href="%s" rel="noopener">%s%s</a>', esc_url( (string) $s['secondary_url'] ), esc_html( (string) $s['secondary_label'] ), function_exists( 'irina_icon' ) ? irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ) : '' );
+			$short = '' !== (string) ( $s['secondary_short'] ?? '' ) ? (string) $s['secondary_short'] : (string) $s['secondary_label'];
+			$cta  .= sprintf( '<a class="di-btn di-btn--ghost" href="%s" rel="noopener"><span class="di-btn__long">%s</span><span class="di-btn__short">%s</span>%s</a>', esc_url( (string) $s['secondary_url'] ), esc_html( (string) $s['secondary_label'] ), esc_html( $short ), function_exists( 'irina_icon' ) ? irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ) : '' );
 		}
 		return [
 			'eyebrow'  => (string) ( $s['eyebrow'] ?? '' ),

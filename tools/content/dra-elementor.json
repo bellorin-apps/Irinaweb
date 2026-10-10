@@ -39,7 +39,8 @@
             "url": "__DRA_HERO_URL__"
           },
           "focus": "50% 0%",
-          "focus_mobile": "95% 50%",
+          "focus_mobile": "92% 8%",
+          "secondary_short": "Doctoralia",
           "secondary_label": "Opiniones en Doctoralia",
           "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"
         },
