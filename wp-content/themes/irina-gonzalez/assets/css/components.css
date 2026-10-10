@@ -19,8 +19,12 @@
 .di-btn { backdrop-filter: blur(14px) saturate(1.3); -webkit-backdrop-filter: blur(14px) saturate(1.3); box-shadow: 0 6px 20px rgb(30 15 40 / 0.1); }
 .di-btn--primary { background: rgb(140 78 170 / 0.82); color: #fff; border-color: transparent; }
 .di-btn--primary:hover { background: rgb(123 61 154 / 0.92); color: #fff; }
-.di-btn--whatsapp { background: rgb(60 161 167 / 0.82); color: #fff; border-color: transparent; }
-.di-btn--whatsapp:hover { background: rgb(45 129 134 / 0.92); color: #fff; }
+/* WhatsApp (D-053, propietario 2026-10-10): sólido teal fuerte sobre fondos claros (AA 4.9:1) y glass turquesa sobre fotos y fondos oscuros
+   (hero, CTA, cabecera transparente sobre el hero, páginas nocturnas). */
+.di-btn--whatsapp { background: var(--color-secondary-strong); color: #fff; border-color: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.di-btn--whatsapp:hover { background: #236468; color: #fff; }
+.di-bleed .di-btn--whatsapp, .di-cta-bleed .di-btn--whatsapp, .di-header:not(.is-scrolled):not(.is-open) .di-btn--whatsapp, .di-dark .di-btn--whatsapp, .di-section--doctor-dark .di-btn--whatsapp { background: rgb(60 161 167 / 0.82); backdrop-filter: blur(14px) saturate(1.3); -webkit-backdrop-filter: blur(14px) saturate(1.3); }
+.di-bleed .di-btn--whatsapp:hover, .di-cta-bleed .di-btn--whatsapp:hover, .di-header:not(.is-scrolled):not(.is-open) .di-btn--whatsapp:hover, .di-dark .di-btn--whatsapp:hover, .di-section--doctor-dark .di-btn--whatsapp:hover { background: rgb(45 129 134 / 0.92); }
 .di-btn--ghost { background: rgb(255 255 255 / 0.14); color: inherit; border-color: transparent; }
 .di-btn--ghost:hover { background: rgb(255 255 255 / 0.18); color: inherit; }
 .di-btn--light { background: rgb(255 255 255 / 0.82); color: var(--color-night); border-color: transparent; }
