@@ -49,6 +49,7 @@ final class PracticeSettings {
 			'tiktok'               => [ 'TikTok (URL)', 'url', true ],
 			'doctoralia_url'       => [ 'Perfil de Doctoralia (URL)', 'url', true ],
 			'gbp_url'              => [ 'Ficha de Google (URL)', 'url', true ],
+			'ga4_id'               => [ 'Google Analytics 4: ID de medición (G-XXXXXXX; vacío = sin medición)', 'text', true ],
 			'cedula_medicina'      => [ 'Cédula profesional (medicina)', 'text', false ],
 			'cedula_especialidad'  => [ 'Cédula de especialidad', 'text', false ],
 			'publicar_cedulas'     => [ 'Publicar cédulas en el sitio', 'checkbox', false ],

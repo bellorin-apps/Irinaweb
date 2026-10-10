@@ -137,7 +137,6 @@
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j && j.ok, j: j }; }); })
         .then(function (res) {
           if (res.ok) {
-            if (window.gtag) { window.gtag('event', 'contact_submit', { page_path: location.pathname }); }
             window.location.assign(form.getAttribute('data-thanks') || '/');
             return;
           }

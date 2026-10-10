@@ -132,3 +132,32 @@ add_action(
 	},
 	2
 );
+
+/**
+ * Imagen del nodo Physician del schema (PLAN 9.3): la foto del hero (adjunto con slug hero-home), si existe.
+ * Cacheada una semana para no consultar la biblioteca en cada petición.
+ */
+add_filter(
+	'dra_irina_physician_image_id',
+	static function ( int $id ): int {
+		if ( $id > 0 ) {
+			return $id;
+		}
+		$cached = get_transient( 'irina_physician_image_id' );
+		if ( false !== $cached ) {
+			return (int) $cached;
+		}
+		$found = get_posts(
+			[
+				'post_type'      => 'attachment',
+				'post_status'    => 'inherit',
+				'name'           => 'hero-home',
+				'posts_per_page' => 1,
+				'fields'         => 'ids',
+			]
+		);
+		$found = $found ? (int) $found[0] : 0;
+		set_transient( 'irina_physician_image_id', $found, WEEK_IN_SECONDS );
+		return $found;
+	}
+);

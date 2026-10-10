@@ -148,8 +148,8 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 9.1 | On-page completo: titles, metas, H1, canonicals, OG por página | 3 | DOING | Base de Rank Math configurada (2026-10-08) |
 | 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | DOING | Sitemap restringido a tipos públicos; 301 del dominio viejo |
-| 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | TODO | |
-| 9.4 | GA4 + Search Console + eventos de conversión | 2 | TODO | |
+| 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | DOING | Physician/WebSite/WebPage/ProfilePage/ContactPage validados en vivo (2026-10-10); `image` añadida; Article/Breadcrumb al publicar fichas |
+| 9.4 | GA4 + Search Console + eventos de conversión | 2 | DOING | gtag + 6 eventos en código (D-052); falta el ID de medición de José |
 | 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | Requiere acceso |
 | 9.6 | Codex: QA SEO | 2 | TODO | |
 
