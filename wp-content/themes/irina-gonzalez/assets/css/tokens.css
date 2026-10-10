@@ -3,7 +3,7 @@
 :root {
   /* Títulos (D-049): color del tramo en <b> y del tramo en cursiva <em>; morado en fondos claros, turquesa en oscuros. */
   --title-accent: var(--color-primary);
-  /* Separadores con trazo lombriz (D-049): mismo trazo que el overline, estático; una variable por color de línea. Losa 8×8 px. */
+  /* Trazo lombriz estático del overline como background (losa 8×8 px), una variable por color: solo para `.di-rule` en casos puntuales (D-049: el propietario descartó generalizarlo). */
   --worm-border: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M0 4c1.3-2.6 2.7-2.6 4 0s2.7 2.6 4 0' fill='none' stroke='%23e6dcd3' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
   --worm-text: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M0 4c1.3-2.6 2.7-2.6 4 0s2.7 2.6 4 0' fill='none' stroke='%23241f23' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
   --worm-white-35: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M0 4c1.3-2.6 2.7-2.6 4 0s2.7 2.6 4 0' fill='none' stroke='%23fff' stroke-opacity='.35' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
