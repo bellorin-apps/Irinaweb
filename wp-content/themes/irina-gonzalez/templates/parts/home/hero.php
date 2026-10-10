@@ -60,7 +60,7 @@ if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
 				<li><?php echo irina_icon( 'check-circle' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><?php echo esc_html( (string) $irina_t ); ?></li><?php endforeach; ?></ul>
 		<?php endif; ?>
 	</div>
-	<div class="di-scroll-hint" aria-hidden="true"></div>
+	<button type="button" class="di-scroll-cue" aria-label="<?php esc_attr_e( 'Bajar a la siguiente sección', 'irina-gonzalez' ); ?>"><?php echo irina_icon( 'arrow-down' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
 </section>
 <?php if ( ! empty( $irina_a['ticker'] ) ) : ?>
 	<div class="di-ticker" aria-hidden="true"><div class="di-ticker__track">

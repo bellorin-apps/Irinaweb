@@ -103,6 +103,15 @@
     setup();
   }
 
+  // Indicador de scroll del hero: baja hasta el final de la cabecera a sangre.
+  var cue = document.querySelector('.di-scroll-cue');
+  if (cue) {
+    cue.addEventListener('click', function () {
+      var hero = cue.closest('.di-bleed') || cue.parentElement;
+      window.scrollTo({ top: hero.getBoundingClientRect().bottom + window.scrollY, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  }
+
   // Barra móvil: reserva espacio inferior.
   if (document.querySelector('.di-mobile-bar')) { document.body.classList.add('has-mobile-bar'); }
 })();
