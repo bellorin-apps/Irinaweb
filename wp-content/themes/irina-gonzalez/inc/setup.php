@@ -106,6 +106,18 @@ add_filter(
 	}
 );
 
+// /recursos/ sin artículos publicados: noindex también en Rank Math, que emite su propia meta robots y sustituye la de WordPress
+// (la plantilla archive-recurso.php solo cubre wp_robots). En cuanto haya un recurso publicado vuelve a index.
+add_filter(
+	'rank_math/frontend/robots',
+	static function ( array $robots ): array {
+		if ( is_post_type_archive( 'recurso' ) && empty( $GLOBALS['wp_query']->post_count ) ) {
+			$robots['index'] = 'noindex';
+		}
+		return $robots;
+	}
+);
+
 // Clase de body cuando la página abre con cabecera a sangre (evita salto de layout antes del JS).
 add_filter(
 	'body_class',
