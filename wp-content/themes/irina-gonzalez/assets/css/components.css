@@ -497,3 +497,13 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
   .di-bleed--photo .di-bleed__shade { display: block; background: linear-gradient(180deg, rgb(74 42 62 / 0) 0%, rgb(74 42 62 / 0) 42%, rgb(74 42 62 / 0.26) 56%, rgb(74 42 62 / 0.5) 72%, rgb(74 42 62 / 0.66) 100%); mix-blend-mode: multiply; }
   .di-bleed--photo .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* Heros con migas (páginas interiores), propietario 2026-10-10: el bloque overline + título + copy baja pegado a los botones
+   y el aire sobrante queda entre las migas y el overline (el contenedor es flex-column y las migas llevan margin auto). */
+.di-bleed .di-container:has(.di-crumbs) .di-lead { margin-bottom: 0; }
+.di-bleed .di-container:has(.di-crumbs) .di-hero-cta { margin-top: var(--space-md); }
+.di-bleed .di-container:has(.di-crumbs) .di-crumbs { margin-bottom: clamp(2.5rem, 7vh, 4.5rem); }
+@media (max-width: 899px) {
+  .di-bleed .di-container:has(.di-crumbs) .di-hero-cta { margin-top: var(--space-xs); }
+  .di-bleed .di-container:has(.di-crumbs) .di-crumbs { margin-bottom: 2.25rem; }
+}
