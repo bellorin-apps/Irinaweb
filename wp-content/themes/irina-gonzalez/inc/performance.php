@@ -100,14 +100,14 @@ function irina_image_original( int $attachment_id, array $attrs = [] ): string {
 	return $html;
 }
 
-// La foto del hero (slug hero-home) no genera tamaños intermedios: el original es la única versión en disco.
+// Las fotos de cabecera (slug hero-*: hero-home, hero-dra…) no generan tamaños intermedios: el original es la única versión en disco.
 add_filter(
 	'intermediate_image_sizes_advanced',
 	static function ( array $sizes, array $image_meta, int $attachment_id ): array {
 		// Por nombre de archivo: al importar, el slug aún no está asignado cuando se generan los tamaños.
 		$file = basename( (string) ( $image_meta['file'] ?? '' ) );
 		$post = get_post( $attachment_id );
-		if ( str_starts_with( $file, 'hero-home' ) || ( $post && str_starts_with( (string) $post->post_name, 'hero-home' ) ) ) {
+		if ( str_starts_with( $file, 'hero-' ) || ( $post && str_starts_with( (string) $post->post_name, 'hero-' ) ) ) {
 			return [];
 		}
 		return $sizes;
