@@ -260,11 +260,11 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-btn .di-btn__long { display: none; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
-  /* Retrato dimensionado por el ANCHO disponible (de la columna de texto + 16 px al borde del viewport), no por un alto fijo: así el rostro,
-     que está en el tercio izquierdo del recorte, siempre queda dentro en cualquier ancho (360–899); por la derecha solo se recorta el brazo (+64 px).
-     Propietario (2026-10-10): sin franja clara a la derecha (right negativo = margen lateral del contenedor). */
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: calc(-1 * var(--gutter)); top: auto; bottom: 0; height: auto; max-height: 100%; transform: none; line-height: 0; overflow: hidden; }
-  .di-section--doctor-bg .di-doctor__portrait img { display: block; width: calc(100% + 64px); height: auto; max-width: none; max-height: 100%; object-fit: contain; object-position: left bottom; }
+  /* Retrato a todo el alto de la columna (propietario, 2026-10-10: «que se vea en casi todo el alto, no importa si la cara se esconde un poco»):
+     alto 100 %, ancho automático, desplazado un 20 % de su ancho hacia la izquierda para que la ventana (de la columna de texto + 16 px al
+     borde del viewport) muestre el rostro: se recortan el hombro izquierdo y el brazo derecho. Sin franja clara (right negativo = gutter). */
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 16px); right: calc(-1 * var(--gutter)); top: 0; bottom: 0; height: auto; max-height: none; transform: none; line-height: 0; overflow: hidden; }
+  .di-section--doctor-bg .di-doctor__portrait img { position: absolute; left: 0; bottom: 0; display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: left bottom; transform: translateX(-20%); }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }
