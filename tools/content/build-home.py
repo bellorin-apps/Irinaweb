@@ -27,7 +27,7 @@ data = [
         "secondary_label": "Conocer a la Dra. Irina", "secondary_url": "/dra-irina-gonzalez-saez/",
         "ticker": "Ronquido y apnea\nNariz tapada\nSinusitis\nOído tapado\nHipoacusia y tinnitus\nVértigo\nAmígdalas y adenoides\nVoz y reflujo"}),
     container("areas", "di-areas", {
-        "eyebrow": "Áreas de atención", "title": "Dos especialidades,<br>una misma forma de <em>atender.</em>",
+        "eyebrow": "Áreas de atención", "title": "Dos áreas,<br>una misma forma de <em>atender.</em>",
         "orl_eyebrow": "Otorrinolaringología", "orl_title": "Oído, nariz y garganta, desde los 0 meses",
         "orl_items": "Otitis\nHipoacusia\nTinnitus\nVértigo\nRinitis\nSinusitis\nTabique desviado\nAmígdalas\nVoz",
         "orl_link": "/otorrinolaringologia/", "orl_link_label": "Padecimientos y tratamientos",
