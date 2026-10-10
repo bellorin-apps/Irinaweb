@@ -439,12 +439,15 @@ body.has-mobile-bar { padding-bottom: 72px; }
 .di-sources { font-size: 0.9rem; color: var(--color-muted); margin-top: var(--space-2xl); }
 .di-sources ol { padding-left: 1.2rem; }
 .di-inline-cta { display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center; justify-content: space-between; padding: var(--space-xl); border-radius: var(--radius-lg); background: var(--color-surface-soft); margin: var(--space-2xl) 0; }
-.di-cred-grid { display: grid; gap: var(--space-xl); max-width: none; margin-top: var(--space-2xl); }
+/* Credenciales: una sola lombriz a todo el ancho encima de las dos columnas; las tarjetas no llevan línea propia (propietario, 2026-10-10; D-049 acotada como en motivos y ruta). */
+.di-cred-grid { display: grid; gap: var(--space-xl); max-width: none; margin-top: var(--space-2xl); background: var(--worm-border) 0 0 / 8px 8px repeat-x; padding-top: var(--space-md); }
 @media (min-width: 700px) { .di-cred-grid { grid-template-columns: 1fr 1fr; } }
-.di-cred { border-top: 1px solid var(--color-text); padding-top: var(--space-md); }
+.di-cred { border-top: 0; padding-top: 0; }
 .di-cred h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
-.di-timeline { list-style: none; padding: 0; margin: var(--space-2xl) 0 0; display: grid; max-width: none; }
+/* Trayectoria: lombriz a todo el ancho solo en la línea superior; entre filas, línea fina (propietario, 2026-10-10). */
+.di-timeline { list-style: none; padding: 0; margin: var(--space-2xl) 0 0; display: grid; max-width: none; background: var(--worm-border) 0 0 / 8px 8px repeat-x; }
 .di-timeline li { display: grid; grid-template-columns: 110px 1fr; gap: var(--space-lg); padding: var(--space-lg) 0; border-top: 1px solid var(--color-border); font-size: 1.05rem; }
+.di-timeline li:first-child { border-top: 0; }
 .di-timeline__y { font-family: var(--font-display); font-weight: 300; font-size: 1.8rem; line-height: 1; color: var(--color-secondary-strong); font-variant-numeric: tabular-nums; }
 .di-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0; max-width: none; }
 .di-tags li { font-size: 0.9rem; padding: 0.4rem 0.9rem; border-radius: var(--radius-pill); border: 1px solid var(--color-border); }
