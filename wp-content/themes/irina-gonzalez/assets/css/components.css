@@ -479,9 +479,9 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
    izquierda; oscurecido en morado rojizo de la paleta (#4a2a3e) en multiplicar, nunca gris: en escritorio de izquierda a derecha,
    en móvil desde abajo como en la home. CTAs 50/50 con etiquetas cortas en móvil. */
 .di-bleed--photo.di-bleed--short { min-height: 100svh; }
-.di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(74 42 62 / 0.6) 0%, rgb(74 42 62 / 0.36) 34%, rgb(74 42 62 / 0.12) 52%, rgb(74 42 62 / 0) 64%); mix-blend-mode: multiply; }
+.di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(74 42 62 / 0.42) 0%, rgb(74 42 62 / 0.24) 34%, rgb(74 42 62 / 0.08) 52%, rgb(74 42 62 / 0) 64%); mix-blend-mode: multiply; }
 @media (min-width: 900px) { .di-bleed--photo .di-container { padding-top: 9rem; } }
 @media (max-width: 899px) {
-  .di-bleed--photo .di-bleed__shade { display: block; background: linear-gradient(180deg, rgb(74 42 62 / 0) 0%, rgb(74 42 62 / 0) 38%, rgb(74 42 62 / 0.38) 52%, rgb(74 42 62 / 0.7) 68%, rgb(74 42 62 / 0.9) 100%); mix-blend-mode: multiply; }
+  .di-bleed--photo .di-bleed__shade { display: block; background: linear-gradient(180deg, rgb(74 42 62 / 0) 0%, rgb(74 42 62 / 0) 42%, rgb(74 42 62 / 0.26) 56%, rgb(74 42 62 / 0.5) 72%, rgb(74 42 62 / 0.66) 100%); mix-blend-mode: multiply; }
   .di-bleed--photo .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
 }
