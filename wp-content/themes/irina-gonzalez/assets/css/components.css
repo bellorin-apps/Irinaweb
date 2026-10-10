@@ -521,9 +521,13 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-logos { background: var(--color-primary); color: #fff; padding-block: clamp(5rem, 12vh, 8.5rem); --title-accent: var(--color-accent); }
 .di-logos h2 { color: #fff; margin: 0 0 clamp(1rem, 3vh, 2rem); /* el carril añade 4rem arriba para el tooltip */ }
 .di-logos .di-eyebrow { color: var(--color-accent); }
-.di-logos__rail { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
+.di-logos__rail { overflow: hidden; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
 .di-logos__track { display: flex; align-items: center; gap: clamp(3.5rem, 7vw, 7rem); width: max-content; padding: 4rem clamp(1.5rem, 3vw, 3rem) 0.5rem; /* arriba: sitio para el tooltip dentro del carril con overflow oculto */ animation: di-logos 70s linear infinite; }
 .di-logos__rail:hover .di-logos__track { animation-play-state: paused; }
+.di-logos__rail.is-dragging { cursor: grabbing; }
+/* Tras el primer arrastre el movimiento lo lleva main.js (translateX inline); la animación CSS se apaga. */
+.di-logos__track.is-manual { animation: none; }
+.di-logos__item img { -webkit-user-drag: none; }
 .di-logos__item { display: block; flex: none; line-height: 0; opacity: 0.92; transition: opacity var(--motion-base) var(--ease-out); --tip-bg: #2b1c34; }
 .di-logos__item img { filter: brightness(0) invert(1); }
 .di-logos__item:hover, .di-logos__item:focus-visible { opacity: 1; }

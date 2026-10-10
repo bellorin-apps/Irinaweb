@@ -213,6 +213,74 @@
     });
   }
 
+  // Logos: el carril se mueve solo y además se puede arrastrar con ratón, dedo o lápiz (propietario, 2026-10-10).
+  // Al primer arrastre la animación CSS se congela en su posición y el movimiento pasa a JS: sigue el puntero, suelta con
+  // inercia breve y, tras 3 s sin tocarlo, reanuda el autoplay desde donde quedó a la misma velocidad que la animación.
+  // Bucle infinito: el desplazamiento se mantiene en [-ciclo, 0), donde ciclo = distancia entre la primera copia y la segunda.
+  // Con prefers-reduced-motion la lista es estática y envuelta (CSS), así que no hay arrastre.
+  if (!reduce) {
+    Array.prototype.forEach.call(document.querySelectorAll('.di-logos__rail'), function (rail) {
+      var track = rail.querySelector('.di-logos__track');
+      var items = track ? track.querySelectorAll('.di-logos__item') : [];
+      if (!track || items.length < 2 || items.length % 2) { return; }
+      var n = items.length / 2, x = 0, cycle = 0, speed = 0, manual = false, dragging = false, hovering = false;
+      var startX = 0, lastX = 0, lastT = 0, vel = 0, moved = false, raf = 0, prevT = 0, idle = 0, pid = null;
+      Array.prototype.forEach.call(track.querySelectorAll('img'), function (img) { img.draggable = false; });
+      function measure() {
+        cycle = items[n].offsetLeft - items[0].offsetLeft;
+        var dur = parseFloat(getComputedStyle(track).animationDuration) || 70; // s; la misma velocidad que la animación CSS.
+        speed = cycle / dur;
+      }
+      function wrap(v) { return cycle ? ((v % cycle) + cycle) % cycle - cycle : v; }
+      function apply() { track.style.transform = 'translateX(' + x + 'px)'; }
+      function freeze() {
+        if (manual) { return; }
+        measure();
+        var m = getComputedStyle(track).transform, tx = 0, p = m && m !== 'none' ? m.match(/matrix\(([^)]+)\)/) : null;
+        if (p) { tx = parseFloat(p[1].split(',')[4]) || 0; }
+        x = wrap(tx); track.classList.add('is-manual'); apply(); manual = true;
+        prevT = 0; raf = requestAnimationFrame(tick);
+      }
+      function tick(t) {
+        var dt = prevT ? Math.min((t - prevT) / 1000, 0.05) : 0; prevT = t;
+        if (!dragging) {
+          if (Math.abs(vel) > 8) { x += vel * dt; vel *= Math.pow(0.08, dt); } // inercia: decae a ~8 % por segundo.
+          else { vel = 0; if (idle <= 0 && !hovering) { x -= speed * dt; } else { idle -= dt; } }
+          x = wrap(x); apply();
+        }
+        raf = requestAnimationFrame(tick);
+      }
+      rail.addEventListener('pointerdown', function (e) {
+        if (e.button && e.button !== 0) { return; }
+        freeze(); dragging = true; moved = false; pid = e.pointerId; startX = lastX = e.clientX; lastT = e.timeStamp; vel = 0;
+        rail.classList.add('is-dragging');
+      });
+      rail.addEventListener('pointermove', function (e) {
+        if (!dragging || e.pointerId !== pid) { return; }
+        var dx = e.clientX - lastX;
+        if (!moved && Math.abs(e.clientX - startX) < 6) { return; } // umbral: un toque o clic no arrastra.
+        if (!moved) { moved = true; try { rail.setPointerCapture(pid); } catch (err) { /* sin captura */ } }
+        var dt = (e.timeStamp - lastT) / 1000; if (dt > 0) { vel = 0.8 * vel + 0.2 * (dx / dt); }
+        lastX = e.clientX; lastT = e.timeStamp; x = wrap(x + dx); apply();
+      });
+      function release(e) {
+        if (!dragging || (e && e.pointerId !== pid)) { return; }
+        dragging = false; pid = null; rail.classList.remove('is-dragging');
+        if (e && e.timeStamp - lastT > 80) { vel = 0; } // se soltó quieto: sin inercia.
+        if (Math.abs(vel) > 2000) { vel = vel > 0 ? 2000 : -2000; }
+        idle = 3; // 3 s sin tocar antes de reanudar el autoplay.
+      }
+      rail.addEventListener('pointerup', release); rail.addEventListener('pointercancel', release);
+      rail.addEventListener('lostpointercapture', function () { if (dragging) { release(null); } });
+      // Un arrastre no debe contar como clic sobre un logo enlazado.
+      rail.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+      // En escritorio, al pasar el ratón el carril se detiene (como la animación CSS); con el dedo no aplica.
+      rail.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hovering = true; } });
+      rail.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hovering = false; } });
+      window.addEventListener('resize', function () { if (manual) { measure(); x = wrap(x); apply(); } });
+    });
+  }
+
   // Barra móvil: reserva espacio inferior.
   if (document.querySelector('.di-mobile-bar')) { document.body.classList.add('has-mobile-bar'); }
 })();
