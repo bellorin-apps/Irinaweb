@@ -59,6 +59,7 @@ final class PracticeSettings {
 			'aviso_funcionamiento' => [ 'Aviso de Funcionamiento (número)', 'text', true ],
 			'responsable_datos'    => [ 'Responsable de datos personales', 'text', true ],
 			'correo_arco'          => [ 'Correo para derechos ARCO', 'email', true ],
+			'contacto_copia'       => [ 'Formulario: copia oculta (Bcc) de cada solicitud a este correo (vacío = sin copia)', 'email', false ],
 		];
 	}
 

@@ -205,6 +205,10 @@ final class Form {
 		if ( '' !== $email ) {
 			$headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
 		}
+		$copy = sanitize_email( (string) PracticeSettings::get( 'contacto_copia' ) );
+		if ( '' !== $copy && is_email( $copy ) && strtolower( $copy ) !== strtolower( $to ) ) {
+			$headers[] = 'Bcc: ' . $copy;
+		}
 		return wp_mail( $to, $subject, implode( "\n", $lines ), $headers );
 	}
 
