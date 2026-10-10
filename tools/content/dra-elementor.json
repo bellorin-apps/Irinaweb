@@ -161,13 +161,13 @@
           "title": "Membresías y <em>hospitales</em>",
           "items": [
             {
-              "name": "Christus Muguerza",
+              "name": "CHRISTUS MUGUERZA Sistema de Salud",
               "slug": "christus-muguerza",
               "url": "",
               "_id": "528a870"
             },
             {
-              "name": "Hospital Zambrano Hellion",
+              "name": "Hospital Zambrano Hellion · TecSalud",
               "slug": "zambrano-hellion",
               "url": "",
               "_id": "ffcf0f8"
@@ -179,7 +179,7 @@
               "_id": "1c4c1f7"
             },
             {
-              "name": "Hospital Universitario Dr. José Eleuterio González",
+              "name": "Hospital Universitario «Dr. José Eleuterio González», UANL",
               "slug": "hospital-universitario",
               "url": "",
               "_id": "bfae639"
@@ -191,7 +191,7 @@
               "_id": "85d2ed7"
             },
             {
-              "name": "Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello",
+              "name": "Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello, A.C. (CMORL y CCC)",
               "slug": "consejo-orl",
               "url": "",
               "_id": "4ed1a22"
@@ -203,7 +203,7 @@
               "_id": "f7170ea"
             },
             {
-              "name": "Sociedad Iberoamericana de Cirugía de Sueño",
+              "name": "Sociedad Iberoamericana de Cirugía de Sueño (SIBECS)",
               "slug": "sociedad-iberoamericana-sueno",
               "url": "",
               "_id": "f1d794f"

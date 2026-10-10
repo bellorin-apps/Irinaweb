@@ -114,3 +114,4 @@ Claude local: deploy-code.sh del HEAD de esta entrega y purga; NO setup-site/pag
 ## 2026-10-10 — Centro de recursos (borradores, sin publicar)
 
 - `templates/archive-recurso.php` (hub `/recursos/`, lista numerada con resumen; noindex mientras no haya artículos publicados) registrado en `inc/setup.php`. Tres artículos completos en `build-medical.py` → `recursos-drafts.json` (oídos, postoperatorio de amígdalas, lavados nasales) con fuentes AAO-HNS/SMORL y área ORL; `setup-medical.sh` los crea o actualiza solo mientras sigan en borrador con la marca «Borrador pendiente de revisión médica». Publicación solo con revisión de la Dra. (PLAN 8.2 DOING).
+- Tooltip estándar `.di-tip[data-tip]` (solo CSS, colores por `--tip-bg/--tip-fg`, cursor/teclado/toque) y aplicado a cada logo con el nombre completo del hospital o membresía; el filtro blanco pasa a la imagen. Nombres completos en `build-dra.py` (JSON regenerado), pendientes de confirmar por el propietario.
