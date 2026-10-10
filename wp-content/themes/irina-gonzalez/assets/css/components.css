@@ -227,6 +227,9 @@ body.menu-open { overflow: hidden; }
   .di-section--doctor-bg .di-doctor__text { width: 58%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
   /* En móvil solo overline, cita y botón junto al retrato; el párrafo y las credenciales viven en la página de la Dra. */
   .di-section--doctor-bg .di-doctor__lead, .di-section--doctor-bg .di-creds { display: none; }
+  .di-section--doctor-bg .di-btn .di-btn__long { display: none; }
+  .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
+  .di-section--doctor-bg .di-btn { padding-inline: 1.1rem; font-size: 0.9rem; white-space: nowrap; }
   .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; bottom: 0; top: 0; transform: translateX(42%); line-height: 0; }
   .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; max-width: none; object-fit: contain; object-position: right bottom; }
 }

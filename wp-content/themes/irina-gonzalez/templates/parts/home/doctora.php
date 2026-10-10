@@ -81,7 +81,7 @@ $irina_a = wp_parse_args(
 			<?php
 			if ( '' !== $irina_a['link'] ) :
 				?>
-				<a class="di-btn di-btn--primary di-reveal di-reveal--d4" href="<?php echo esc_url( $irina_a['link'] ); ?>"><?php echo esc_html( $irina_a['link_label'] ); ?><?php echo irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a><?php endif; ?>
+				<a class="di-btn di-btn--primary di-reveal di-reveal--d4" href="<?php echo esc_url( $irina_a['link'] ); ?>"><span class="di-btn__long"><?php echo esc_html( $irina_a['link_label'] ); ?></span><span class="di-btn__short"><?php esc_html_e( 'Conocer a la Dra.', 'irina-gonzalez' ); ?></span><?php echo irina_icon( 'arrow-right', 'di-icon di-icon--arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a><?php endif; ?>
 		</div>
 	</div>
 </section>
