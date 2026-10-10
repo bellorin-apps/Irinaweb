@@ -478,7 +478,8 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
    del color de la propia imagen (--bleed-fill, muestreado del fondo de la foto), con texto oscuro para contraste AA. */
 /* Sombreado solo horizontal y en modo multiplicar (propietario, 2026-10-10): oscurece de izquierda a derecha la zona del texto y
    se desvanece antes de la figura, sin tocar la fotografía. En móvil no hace falta (el texto va debajo de la foto). */
-.di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(0 0 0 / 0.42) 0%, rgb(0 0 0 / 0.22) 38%, rgb(0 0 0 / 0) 60%); mix-blend-mode: multiply; }
+/* Propietario (2026-10-10): sin gris; oscurecido entre morado y rojizo oscuro de la paleta (#4a2a3e, de la gama del hero warm), en multiplicar y de izquierda a derecha. */
+.di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(74 42 62 / 0.78) 0%, rgb(74 42 62 / 0.5) 34%, rgb(74 42 62 / 0.18) 52%, rgb(74 42 62 / 0) 64%); mix-blend-mode: multiply; }
 .di-bleed--photo .di-bleed__bg { inset: 0; }
 @media (max-width: 899px) {
   .di-bleed--photo { --di-photo-h: 60svh; --title-accent: var(--color-primary); background: var(--bleed-fill, #d3a98a); color: var(--color-text); }
