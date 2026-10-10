@@ -5,6 +5,8 @@
 ## Prioridad 1 — Desbloqueadores (propietario)
 
 - [x] **Tanda 1 (D-046)** confirmada por José (2026-10-09): overline lombriz corta estática en color del texto, botones glass sin bordes, sombra móvil desde la mitad del título más suave. 
+- [ ] Nitidez de las fotos de tarjeta en móvil 2×: la CDN reescala al ancho del viewport sin DPR (Q-020). José decide: aceptar 1× o apagar «Optimización de imágenes inteligentes» en la CDN dejando solo WebP.
+- [ ] Fotos de tarjeta a mayor resolución (hoy 1024 px): si José tiene 2048 px, re-subir con el mismo slug.
 - [ ] José entrega el **SVG oficial de Doctoralia** (hoy círculo «D» provisional) en Recursos (Irina).
 
 - [x] La Dra. respondió briefing y fichas (2026-10-09). **23 fichas redactadas con todos los campos** (`tools/content/medical-drafts.json`, D-039); cargadas en WP por la sesión local (2026-10-09): condiciones 244–256 y 205, tratamientos 257–264 y 293, recursos 286/319/320, todas en borrador; credencial 287 con el cargo de la Dra.
