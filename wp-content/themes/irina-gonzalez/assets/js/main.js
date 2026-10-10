@@ -133,7 +133,8 @@
       }
       form.classList.add('is-sending');
       form.querySelector('.di-form__label').hidden = true; form.querySelector('.di-form__sending').hidden = false;
-      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'X-Requested-With': 'fetch', 'Accept': 'application/json' }, credentials: 'same-origin' })
+      // getAttribute: el campo oculto name="action" (exigido por admin-post) sombrea la propiedad form.action.
+      fetch(form.getAttribute('action'), { method: 'POST', body: new FormData(form), headers: { 'X-Requested-With': 'fetch', 'Accept': 'application/json' }, credentials: 'same-origin' })
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j && j.ok, j: j }; }); })
         .then(function (res) {
           if (res.ok) {
