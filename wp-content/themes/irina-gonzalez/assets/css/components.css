@@ -99,6 +99,9 @@ body.menu-open { overflow: hidden; }
 .di-bleed__bg--sand { background: linear-gradient(165deg, #4e3644 0%, #8c6670 45%, #e6c3a4 100%); }
 /* Variante clara (propietario, 2026-10-10; página de la Dra.): foto clara con texto oscuro y velo crema tras la columna de texto. */
 .di-bleed__bg--light { background: linear-gradient(165deg, #f3eae2 0%, #ece0d8 100%); }
+/* La foto empieza bajo la cabecera fija del sitio (112 px escritorio / 92 px móvil) y se ancla arriba: el rostro, que en la foto va pegado al borde superior, queda libre. Tras la cabecera se ve el degradado crema. */
+.di-bleed.di-bleed--light .di-bleed__bg { inset: 0; }
+.di-bleed.di-bleed--light .di-bleed__bg img { position: absolute; top: var(--di-header-h, 112px); left: 0; height: calc(100% - var(--di-header-h, 112px)); object-position: 68% 0; }
 .di-bleed__bg--light:has(img)::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(251 247 242 / 0.94) 0%, rgb(251 247 242 / 0.8) 34%, rgb(251 247 242 / 0) 60%); }
 .di-bleed.di-bleed--light { color: var(--color-text); --title-accent: var(--color-primary); }
 .di-bleed.di-bleed--light h1 { color: var(--color-text); }
@@ -149,7 +152,9 @@ body.menu-open { overflow: hidden; }
   /* Sombra solo en la franja inferior del texto; el rostro queda limpio. Variantes en /preview/muestras/. */
   /* Propietario (2026-10-09): empieza a mitad del título, menos oscura y más difuminada. */
   .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0) 0%, rgb(0 0 0 / 0) 58%, rgb(20 10 20 / 0.12) 64%, rgb(20 10 20 / 0.35) 74%, rgb(20 10 20 / 0.58) 86%, rgb(20 10 20 / 0.72) 100%); }
-  .di-bleed--light .di-bleed__shade { display: none; } /* la variante clara no lleva sombra oscura; usa el velo crema */
+  .di-bleed--light .di-bleed__shade { display: none; }
+  .di-bleed.di-bleed--light { --di-header-h: 92px; }
+  .di-bleed.di-bleed--light .di-bleed__bg img { object-position: 78% 0; } /* la variante clara no lleva sombra oscura; usa el velo crema */
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
   .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; } /* la lombriz queda centrada verticalmente aunque haya dos líneas */
   /* Salto de línea del overline solo en móvil («|» en el texto del hero): «Tu otorrino / en Monterrey». */
@@ -159,7 +164,10 @@ body.menu-open { overflow: hidden; }
   .di-bleed .di-lead--desktop:has(+ .di-lead--mobile) { display: none; }
   .di-bleed .di-lead--mobile { display: block; }
   .di-bleed .di-hero-cta { margin-top: var(--space-md); gap: var(--space-xs); flex-wrap: wrap; }
-  .di-bleed .di-hero-cta { flex-wrap: nowrap; }
+  .di-bleed .di-hero-cta:has(.di-btn__short) { flex-wrap: nowrap; }
+  /* Sin etiquetas cortas (páginas interiores): botones apilados a ancho completo para que los textos no se pisen. */
+  .di-bleed .di-hero-cta:not(:has(.di-btn__short)) { flex-wrap: wrap; }
+  .di-bleed .di-hero-cta:not(:has(.di-btn__short)) .di-btn { flex: 1 1 100%; justify-content: center; }
   .di-bleed .di-hero-cta .di-btn { flex: 1 1 0; min-width: 0; min-height: 46px; padding: 0.6rem 0.8rem; font-size: 0.88rem; white-space: nowrap; justify-content: center; }
   .di-bleed .di-hero-cta .di-btn__long { display: none; }
   .di-bleed .di-hero-cta .di-btn__short { display: inline; }
