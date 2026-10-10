@@ -290,7 +290,12 @@ body.menu-open { overflow: hidden; }
 .di-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem; }
 .di-footer a { color: #fff; text-decoration: none; }
 .di-footer a:hover { text-decoration: underline; color: #fff; }
-.di-footer .di-brand { color: #fff; margin-bottom: 12px; }
+.di-footer .di-brand { color: #fff; margin-bottom: 0; }
+/* Marca del pie (propietario, 2026-10-10): logotipo a la izquierda, barra vertical y el copy a la derecha; cédulas y consejo más apagados. */
+.di-footer__brand { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-md); }
+.di-footer__brand .di-brand { flex: none; }
+.di-footer__tag { margin: 0; padding-left: var(--space-md); border-left: 1px solid rgb(255 255 255 / 0.35); font-size: 0.9rem; line-height: var(--leading-body); color: rgb(255 255 255 / 0.9); max-width: 26ch; }
+.di-footer__creds { font-size: 0.82rem; color: rgb(255 255 255 / 0.45); max-width: 44ch; }
 .di-footer .di-hours th, .di-footer .di-hours td { border-color: rgb(255 255 255 / 0.15); }
 .di-footer__legal { margin-top: var(--space-2xl); padding-top: var(--space-lg); border-top: 1px solid rgb(255 255 255 / 0.15); color: rgb(255 255 255 / 0.55); display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: space-between; font-size: 0.82rem; }
 .di-footer__legal ul { display: flex; gap: var(--space-sm); }

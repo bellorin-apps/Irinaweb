@@ -31,10 +31,12 @@ $irina_soc   = array_filter(
 		<p class="di-footer__big di-reveal"><?php echo esc_html( apply_filters( 'irina_footer_claim', __( 'Respirar bien, dormir bien, oír bien.', 'irina-gonzalez' ) ) ); ?></p>
 		<div class="di-footer__cols">
 			<div>
-				<a class="di-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo irina_brand_block( 'footer' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-				<p><?php echo esc_html( (string) irina_practice( 'subespecialidad' ) ); ?></p>
+				<div class="di-footer__brand">
+					<a class="di-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo irina_brand_block( 'footer' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<p class="di-footer__tag"><?php echo esc_html( (string) irina_practice( 'subespecialidad' ) ); ?></p>
+				</div>
 				<?php if ( '' !== $irina_cedul ) : ?>
-					<p><?php esc_html_e( 'Cédulas:', 'irina-gonzalez' ); ?> <?php echo esc_html( $irina_cedul ); ?><br><?php echo esc_html( (string) irina_practice( 'consejo_certificado' ) ); ?></p>
+					<p class="di-footer__creds"><?php esc_html_e( 'Cédulas:', 'irina-gonzalez' ); ?> <?php echo esc_html( $irina_cedul ); ?><br><?php echo esc_html( (string) irina_practice( 'consejo_certificado' ) ); ?></p>
 				<?php endif; ?>
 			</div>
 			<div>
