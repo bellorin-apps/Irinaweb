@@ -235,7 +235,7 @@ Confirmados por la sesión local (corrígelos o justifica por qué no):
 10. `upload-media.sh` ahora nombra `<slug>-v<AAAAMMDDHHMM>.<ext>` para que la URL cambie; comprueba
     que ningún script o widget dependa del nombre de archivo (deben resolver por **slug** del adjunto).
 11. Comprueba la coherencia de nombres y datos en todo el sitio: «CAB Medical Headquarters» (nombre
-    comercial) vs «CAB Medical, S.A. de C.V.» (razón social, solo en el aviso médico), dirección
+    comercial del consultorio; los legales no citan ninguna razón social y no debes introducir una), dirección
     completa (Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector, 64610
     Monterrey, N. L.), teléfonos, correos, horario «Previa cita. Agenda por WhatsApp», hospitales
     («Atiende en Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente, Hospital Universitario y
