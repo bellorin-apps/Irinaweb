@@ -91,8 +91,9 @@ body:not(.has-bleed) { padding-top: 92px; }
 body.menu-open { overflow: hidden; }
 
 /* Cabeceras a sangre */
-.di-bleed { position: relative; min-height: 100svh; display: flex; align-items: flex-end; color: #fff; overflow: hidden; isolation: isolate; }
-.di-bleed--short { min-height: min(78svh, 760px); }
+/* Propietario (2026-10-10): los heros no ocupan todo el alto; dejan asomar la sección siguiente (--di-peek) para invitar al scroll. */
+.di-bleed { --di-peek: 4.5rem; position: relative; min-height: calc(100svh - var(--di-peek)); display: flex; align-items: flex-end; color: #fff; overflow: hidden; isolation: isolate; }
+.di-bleed--short { min-height: min(calc(78svh - var(--di-peek)), 720px); }
 /* 404: cabecera más baja; sin foto no hace falta la altura del hero. */
 .error404 .di-bleed--short { min-height: min(56svh, 560px); }
 .di-bleed__bg { position: absolute; inset: -8% 0 0; z-index: -2; will-change: transform; background: linear-gradient(160deg, #4a3350 0%, #8c4eaa 45%, #d8a98a 100%); background-size: cover; background-position: center; }
@@ -130,7 +131,11 @@ body.menu-open { overflow: hidden; }
 .di-bleed .di-eyebrow { color: var(--color-accent); }
 .di-bleed .di-lead { color: rgb(255 255 255 / 0.86); }
 .di-bleed .di-lead--mobile { display: none; }
-.di-bleed .di-crumbs, .di-bleed .di-crumbs a { color: rgb(255 255 255 / 0.75); }
+/* Migas de pan (propietario, 2026-10-10): sutiles y a media altura entre la cabecera y el bloque de texto, no pegadas a la cabecera. */
+.di-bleed .di-crumbs, .di-bleed .di-crumbs a { color: rgb(255 255 255 / 0.62); }
+/* En flujo: el contenedor ocupa todo el alto del hero y las migas se centran en el hueco entre la cabecera y el texto (sin solaparse nunca). */
+.di-bleed .di-container:has(.di-crumbs) { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end; }
+.di-bleed .di-crumbs { margin: auto 0 auto; padding-bottom: var(--space-md); font-size: 0.78rem; letter-spacing: 0.01em; }
 .di-hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-2xl); }
 .di-hero-trust { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-xl); margin-top: var(--space-3xl); font-size: 0.9rem; color: rgb(255 255 255 / 0.8); background: var(--worm-white-25) 0 0 / 8px 8px repeat-x; padding-top: var(--space-lg); list-style: none; padding-left: 0; max-width: none; }
 .di-hero-trust li { display: inline-flex; align-items: center; gap: 0.5rem; }
@@ -160,6 +165,8 @@ body.menu-open { overflow: hidden; }
   .di-bleed.di-bleed--light .di-container { padding-top: calc(var(--di-header-h, 92px) + 66vw); }
   .di-bleed.di-bleed--light .di-bleed__bg img { object-position: 78% 0; } /* la variante clara no lleva sombra oscura; usa el velo crema */
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
+  .di-bleed { --di-peek: calc(72px + 3rem); } /* por encima de la barra móvil fija */
+  .di-bleed .di-crumbs { max-width: 40%; font-size: 0.72rem; line-height: 1.35; }
   .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; } /* la lombriz queda centrada verticalmente aunque haya dos líneas */
   /* Salto de línea del overline solo en móvil («|» en el texto del hero): «Tu otorrino / en Monterrey». */
   .di-brm { display: block; height: 0; }
@@ -478,7 +485,7 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
    tratarla como el hero de la home en fondo y posiciones: misma altura (100svh), foto a sangre con parallax, texto blanco abajo a la
    izquierda; oscurecido en morado rojizo de la paleta (#4a2a3e) en multiplicar, nunca gris: en escritorio de izquierda a derecha,
    en móvil desde abajo como en la home. CTAs 50/50 con etiquetas cortas en móvil. */
-.di-bleed--photo.di-bleed--short { min-height: 100svh; }
+.di-bleed--photo.di-bleed--short { min-height: calc(100svh - var(--di-peek)); }
 .di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(74 42 62 / 0.42) 0%, rgb(74 42 62 / 0.24) 34%, rgb(74 42 62 / 0.08) 52%, rgb(74 42 62 / 0) 64%); mix-blend-mode: multiply; }
 @media (min-width: 900px) { .di-bleed--photo .di-container { padding-top: 9rem; } }
 @media (max-width: 899px) {
