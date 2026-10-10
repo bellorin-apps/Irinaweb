@@ -1,4 +1,4 @@
-> Indicación y entrega más recientes: D-058 y docs/ESCUCHARTE_60_40_2026-10-10.md sustituyen el gate facial anterior. Se implementó grid60/40, imagen al inicio de su columna con−5px, alto de fila y recorte parcial permitido. Pruebas locales pasan; no desplegado. Para este ajuste: deploy-code.sh → purga → capturas360/390/430/1440. Sin nuevos JSON ni recarga de contenido por este cambio. Si la auditoría general sigue sin desplegar, conserva su orden completo. Las preguntas siguen por Claude.
+> Indicación y entrega más recientes: D-061 y docs/ESCUCHARTE_60_40_2026-10-10.md sustituyen el gate facial anterior. Se implementó grid60/40, imagen al inicio de su columna con−5px, alto de fila y recorte parcial permitido. Pruebas locales pasan; no desplegado. Para este ajuste: deploy-code.sh → purga → capturas360/390/430/1440. Sin nuevos JSON ni recarga de contenido por este cambio. La auditoría general ya se desplegó hasta9053a4b según la sesión local; esta continuación no requiere repetir setup-site/pages/dra. Las preguntas siguen por Claude.
 
 # BATON — Sesión local → Codex / Claude cloud
 
@@ -103,3 +103,7 @@ La escala grande es la instrucción de José; no reducir de nuevo. 4cf6e8e mueve
 ## MENSAJE ACTUAL — referencia60/40
 
 José precisó las dos columnas y acepta rostro parcial. Codex implementó solo el bloque móvil de components.css: grid60/40, gap0, texto en columna1, retrato en columna2 conleft−5px, imagenheight100% ywidthauto. Sin interferencias de alfa con párrafo a360/390/430; tres tarjetas estables y escritorio conservado. No exigir ahora80 % de rostro ni pedir elegir A/B. Ver medidas/capturas en docs/ESCUCHARTE_60_40_2026-10-10.md. Desplegar por el flujo local y verificar antes de cerrar Q-039 como producción.
+
+### Integración con el relevo concurrente de Claude
+
+Se conservaron los commits9053a4b (sizes100vw para nitidez) y a1b6b83 (despliegue previo y decisionesD-057..D-060). D-058 sigue siendo la decisión de mantener borradores; D-059 ya autoriza migrar Maps cuando llegue el mapId; D-060 ya autoriza archivar tras cerrar la entrega. La nueva referencia60/40 usaD-061 para no reutilizar esos IDs. Último CSS de esta continuación:30ef717. No repetir preguntas ya respondidas.

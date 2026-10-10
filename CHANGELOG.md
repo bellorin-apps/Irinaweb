@@ -75,7 +75,7 @@ Trazabilidad de todos los archivos modificados por Codex (excluye los cuatro HTM
 
 ## 2026-10-10 — Escucharte según referencia60/40
 
-- D-058 de José: dos columnas60/40, foto a la izquierda de su columna con ajuste−2 a−5px, rostro parcial permitido. Sustituye gate80 % y elección A/B.
+- D-061 de José: dos columnas60/40, foto a la izquierda de su columna con ajuste−2 a−5px, rostro parcial permitido. Sustituye gate80 % y elección A/B.
 - components.css: grid móvil real60/40, gap0, texto alineado a la izquierda, retratoleft−5px y alto de fila; solo viewport recorta. Sin cambios de texto/fondo/menú/sombras/JS ni builds.
 - Harness columns.cjs y opciones de etiqueta/desplazamiento en portrait-position.cjs; capturas/metadatoscolumns-60-40 y prueba de tres credenciales. Sin intersección del alfa con párrafo en360/390/430, sección estable, bottom alineado, sin desbordes/errores y escritorio conservado.
 - Estado/relevo actualizados en STATUS/NEXT/BATON/QA/DECISIONS; informe nuevo docs/ESCUCHARTE_60_40_2026-10-10.md. Preguntas por Claude; sin despliegue. .gitignore limita capturas duplicadas; evidencia seleccionada en docs/audit/2026-10-10/. PHP/builds sin cambios.

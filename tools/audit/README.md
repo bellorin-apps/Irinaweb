@@ -13,4 +13,4 @@ Node requiere Playwright y sharp; `IRINA_PLAYWRIGHT`/`IRINA_SHARP` pueden apunta
 
 La estimación facial usa intervalo x30–65 % del PNG, marcado visualmente sin cabello. No confundir rostro con ancho total del retrato. Las capturas A/B no demuestran despliegue: el servidor entrega todavía su versión anterior. No guardar HTML ni URLs Google con clave ni respuestas/token de mini apps.
 
-Composición60/40: columns.cjs comprueba dimensiones,−5px y las tres tarjetas. portrait-position.cjs acepta --tag y --offsets para conservar resultados anteriores. El criterio facial≥80 % ya no aplica a D-058; no interpretar faceVisiblePercent como gate actual.
+Composición60/40: columns.cjs comprueba dimensiones,−5px y las tres tarjetas. portrait-position.cjs acepta --tag y --offsets para conservar resultados anteriores. El criterio facial≥80 % ya no aplica a D-061; no interpretar faceVisiblePercent como gate actual.
