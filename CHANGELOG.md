@@ -110,3 +110,7 @@ Claude local: deploy-code.sh del HEAD de esta entrega y purga; NO setup-site/pag
 
 - `og-default.jpg` (1200×630) en el tema, fuente regenerable en `tools/brand/og/`, `tools/deploy/setup-og.sh` (sube y fija la imagen Open Graph por defecto en Rank Math), `WebpUpload` exime `og-*`. D-067. Favicon/app icons se mantienen (D-031).
 - Logos: viewBox de los 9 SVG recortado al contenido real con `tools/brand/logos-fit.cjs` (salían diminutos por la mesa de trabajo 178×100); tamaño por forma (emblema 84 px, normal 60, ancho 48; móvil 60/44/34). Pendiente: `fesormex.svg` llega como arte lineal con marco; José revisa el positivo en Illustrator.
+
+## 2026-10-10 — Centro de recursos (borradores, sin publicar)
+
+- `templates/archive-recurso.php` (hub `/recursos/`, lista numerada con resumen; noindex mientras no haya artículos publicados) registrado en `inc/setup.php`. Tres artículos completos en `build-medical.py` → `recursos-drafts.json` (oídos, postoperatorio de amígdalas, lavados nasales) con fuentes AAO-HNS/SMORL y área ORL; `setup-medical.sh` los crea o actualiza solo mientras sigan en borrador con la marca «Borrador pendiente de revisión médica». Publicación solo con revisión de la Dra. (PLAN 8.2 DOING).

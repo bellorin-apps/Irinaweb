@@ -360,14 +360,63 @@ out = {"condicion": cond, "tratamiento": trat}
 pathlib.Path(__file__).with_name("medical-drafts.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
 print("ok", len(cond), "condiciones", len(trat), "tratamientos")
 
-# Recursos (artículos) solicitados por la Dra. en el briefing; esqueleto para que ella dicte el contenido.
+# Recursos (artículos) solicitados por la Dra. en el briefing. Borradores completos con fuentes; se publican solo con su revisión
+# (estado_medico=medical_review_required). setup-medical.sh los crea y actualiza el texto mientras conserven la marca de borrador.
+BORRADOR = "<p><strong>Borrador pendiente de revisión médica.</strong></p>"
 rec = [
- dict(slug="como-limpiar-los-oidos", titulo="Cómo limpiar los oídos sin lastimarlos", excerpt="El cerumen no es suciedad: protege el conducto auditivo. El problema aparece cuando intentamos sacarlo con cotonetes.",
-  html="<h2>Qué hace el cerumen</h2><p>Texto pendiente de la Dra.</p><h2>Por qué los cotonetes empeoran el tapón</h2><p>Texto pendiente de la Dra.</p><h2>Qué sí puedes hacer en casa</h2><p>Texto pendiente de la Dra.</p><p><strong>Borrador pendiente de revisión médica.</strong></p>"),
- dict(slug="postoperatorio-de-amigdalas", titulo="Cómo es el postoperatorio de amígdalas", excerpt="Qué esperar día a día después de una cirugía de amígdalas y adenoides, y cómo ayudar a tu hijo a pasarlo mejor.",
-  html="<h2>Los primeros días</h2><p>Texto pendiente de la Dra.</p><h2>Qué comer y qué evitar</h2><p>Texto pendiente de la Dra.</p><h2>Señales para llamar</h2><p>Texto pendiente de la Dra.</p><p><strong>Borrador pendiente de revisión médica.</strong></p>"),
- dict(slug="como-limpiar-la-nariz", titulo="Cómo limpiar la nariz: lavados nasales bien hechos", excerpt="El lavado nasal es una de las medidas más efectivas y seguras para rinitis y sinusitis, siempre que se haga bien.",
-  html="<h2>Qué necesitas</h2><p>Texto pendiente de la Dra.</p><h2>Paso a paso</h2><p>Texto pendiente de la Dra.</p><h2>Errores frecuentes</h2><p>Texto pendiente de la Dra.</p><p><strong>Borrador pendiente de revisión médica.</strong></p>"),
+ dict(slug="como-limpiar-los-oidos", titulo="Cómo limpiar los oídos sin lastimarlos", area="orl",
+  excerpt="El cerumen no es suciedad: protege el conducto auditivo. El problema aparece cuando intentamos sacarlo con cotonetes.",
+  html="<h2>Qué hace el cerumen</h2>"
+       "<p>El cerumen (la cerilla) lo produce la piel del conducto auditivo y tiene una función: atrapa polvo y partículas, mantiene la piel lubricada y, por su acidez, ayuda a frenar bacterias y hongos. El oído se limpia solo: los movimientos de la mandíbula al hablar y masticar empujan el cerumen hacia afuera poco a poco, y cae sin que lo notes.</p>"
+       "<p>Por eso, en condiciones normales, el oído no necesita que nadie lo limpie por dentro. Solo hace falta limpiar la parte visible de la oreja.</p>"
+       "<h2>Por qué los cotonetes empeoran el tapón</h2>"
+       "<p>El cotonete saca una parte pequeña del cerumen y empuja el resto hacia el fondo, donde se compacta contra el tímpano. Con el tiempo se forma un tapón que ya no sale solo y que provoca sensación de oído tapado, baja de audición, zumbido o dolor. Además, la piel del conducto es muy delgada: los cotonetes la irritan, favorecen infecciones (otitis externa) y, en un mal movimiento, pueden perforar el tímpano.</p>"
+       "<p>Lo mismo aplica a llaves, pasadores, pinzas o las llamadas velas de oído, que no tienen respaldo científico y han causado quemaduras.</p>"
+       "<h2>Qué sí puedes hacer en casa</h2>"
+       "<ul><li><strong>Limpia solo la parte externa</strong> de la oreja con una toalla o un paño húmedo después del baño.</li>"
+       "<li><strong>Deja que el agua de la regadera entre y salga</strong>; no intentes secar el conducto con nada que entre en él.</li>"
+       "<li>Si tiendes a formar tapones, la Dra. puede indicarte <strong>gotas para ablandar el cerumen</strong> (aceite mineral o soluciones de venta en farmacia) unos días, con la frecuencia que ella te señale. No las uses si has tenido perforación del tímpano, cirugía de oído o tienes dolor o secreción.</li>"
+       "<li>Si usas auxiliares auditivos o tapones con frecuencia, revisa tus oídos con la Dra. de forma periódica: el cerumen se acumula más.</li></ul>"
+       "<h2>Cuándo consultar</h2>"
+       "<p>Acude si sientes el oído tapado, escuchas menos, tienes zumbido, dolor, comezón persistente o salida de líquido, o si ya intentaste limpiarlo y la molestia aumentó. En consultorio, la Dra. ve el conducto con un otoscopio o endoscopio y retira el tapón de forma segura, con instrumental o aspiración, en unos minutos. Nunca intentes sacarlo tú con objetos.</p>"
+       "<p>En niños, la regla es la misma: nada dentro del conducto. Si hay secreción, dolor o fiebre, es motivo de consulta, no de limpieza.</p>" + BORRADOR,
+  fuentes=[AAO("Earwax (Cerumen Impaction)", "2017")]),
+ dict(slug="postoperatorio-de-amigdalas", titulo="Cómo es el postoperatorio de amígdalas", area="orl",
+  excerpt="Qué esperar día a día después de una cirugía de amígdalas y adenoides, y cómo ayudar a tu hijo a pasarlo mejor.",
+  html="<h2>Los primeros días</h2>"
+       "<p>La cirugía de amígdalas (amigdalectomía), con o sin adenoides, es de las más frecuentes en niños y la recuperación sigue un patrón bastante predecible. Lo normal es dolor de garganta durante una a dos semanas, que suele ser más intenso entre el tercer y el séptimo día, cuando se desprende la capa blanquecina que cubre la herida. Ese color blanco o grisáceo en el fondo de la garganta es parte de la cicatrización, no una infección. También es común dolor de oído (reflejo de la garganta), mal aliento, voz nasal, ronquido los primeros días y febrícula.</p>"
+       "<p>El dolor se controla mejor si el analgésico se da con horario, no solo cuando ya duele, tal como la Dra. lo indique en la receta. Evita medicamentos que no estén en ella, sobre todo ácido acetilsalicílico (aspirina) y antiinflamatorios no indicados, porque aumentan el riesgo de sangrado.</p>"
+       "<h2>Qué comer y qué evitar</h2>"
+       "<ul><li><strong>Líquidos, muchos y seguido.</strong> Beber bien es lo más importante: agua, suero oral, gelatina, paletas de hielo, jugos no ácidos. Si tu hijo bebe poco porque le duele, adelanta el analgésico media hora antes de las bebidas y comidas.</li>"
+       "<li><strong>Comida suave y fresca o tibia</strong> los primeros días: puré, yogur, helado, sopa tibia, huevo, pasta bien cocida.</li>"
+       "<li><strong>Evita</strong> lo muy caliente, lo ácido (cítricos, salsas), lo picante y lo duro o con bordes (totopos, galletas, pan tostado) por unas dos semanas, porque raspan la herida.</li>"
+       "<li>Reposo en casa de 7 a 10 días, sin escuela, deporte ni viajes. Nada de alberca hasta que la Dra. lo autorice.</li></ul>"
+       "<h2>Señales para llamar</h2>"
+       "<p>Comunícate de inmediato con la Dra. o acude a urgencias si observas: <strong>sangrado rojo brillante por la boca o la nariz</strong>, aunque sea poco, o vómito con sangre (el riesgo mayor es entre el día 5 y el 10); fiebre de 38.5 °C o más que no baja; que no beba nada en 8 horas o que orine muy poco; dificultad para respirar; o dolor que no cede con el esquema indicado. Un sangrado después de amigdalectomía siempre se valora, aunque se haya detenido.</p>"
+       "<h2>La cita de revisión</h2>"
+       "<p>La Dra. te citará en consulta para revisar la cicatrización, habitualmente entre la primera y la segunda semana. Después de la recuperación, la mayoría de los niños respira, duerme y come mejor que antes; ese es justamente el objetivo de la cirugía.</p>" + BORRADOR,
+  fuentes=[AAO("Tonsillectomy in Children (Update)", "2019"), SMORL]),
+ dict(slug="como-limpiar-la-nariz", titulo="Cómo limpiar la nariz: lavados nasales bien hechos", area="orl",
+  excerpt="El lavado nasal es una de las medidas más efectivas y seguras para rinitis y sinusitis, siempre que se haga bien.",
+  html="<h2>Para qué sirve</h2>"
+       "<p>El lavado nasal con solución salina arrastra moco, alérgenos, polvo y contaminantes, humedece la mucosa y ayuda a que los cilios (los pelitos microscópicos que mueven el moco) trabajen mejor. Es un complemento con evidencia en rinitis alérgica, sinusitis crónica, resfriados y en el postoperatorio de cirugía nasal, y lo pueden usar adultos, embarazadas y niños.</p>"
+       "<h2>Qué necesitas</h2>"
+       "<ul><li><strong>Solución salina</strong>: de farmacia (isotónica al 0.9 %, o hipertónica cuando la Dra. la indique) o preparada en casa.</li>"
+       "<li><strong>Agua segura</strong> si la preparas tú: hervida y enfriada, destilada o embotellada. Nunca agua directa de la llave: aunque sea potable puede contener microorganismos que no deben entrar a la nariz.</li>"
+       "<li>Un <strong>dispositivo</strong>: jeringa sin aguja de 10 a 20 ml, botella de lavado nasal o lota. Aerosoles de salina sirven para humedecer, pero no lavan igual.</li></ul>"
+       "<p>Receta casera habitual: 1 litro de agua segura tibia, 1 cucharadita rasa de sal sin yodo y ½ cucharadita de bicarbonato. Prepárala cada día y desecha lo que sobre.</p>"
+       "<h2>Paso a paso</h2>"
+       "<ol><li>Lávate las manos y usa la solución a temperatura tibia, nunca fría ni caliente.</li>"
+       "<li>Inclínate sobre el lavabo con la cabeza un poco hacia adelante y de lado, con la boca abierta y respirando por ella.</li>"
+       "<li>Introduce la punta del dispositivo en la fosa nasal que queda arriba, sin forzar, y deja entrar la solución con suavidad. Saldrá por la otra fosa, y a veces algo por la boca: es normal.</li>"
+       "<li>Repite del otro lado. Al terminar, suénate con suavidad, una fosa a la vez, sin tapar ninguna por completo.</li>"
+       "<li>Lava el dispositivo con agua y jabón, enjuágalo y déjalo secar al aire; cámbialo cada pocos meses.</li></ol>"
+       "<p>En bebés y niños pequeños se usan gotas o aerosol de salina y aspiración suave, no lavado a presión; la Dra. te enseña cómo.</p>"
+       "<h2>Errores frecuentes</h2>"
+       "<ul><li>Usar agua de la llave sin hervir o solución fría.</li><li>Echar el líquido con fuerza o con la cabeza hacia atrás (termina en la garganta o en el oído).</li><li>Sonarse con las dos fosas tapadas después del lavado.</li><li>Hacerlo justo antes de acostarse: la solución residual puede gotear; mejor una hora antes.</li><li>Suspenderlo a los dos días porque «ya no hay moco»: en rinitis y sinusitis crónica lo útil es la constancia, con la frecuencia que la Dra. indique.</li></ul>"
+       "<h2>Cuándo consultar</h2>"
+       "<p>Si tienes dolor de oído, sangrado, obstrucción de un solo lado, secreción con mal olor o síntomas de más de 10 días, no lo resuelvas solo con lavados: la Dra. revisa la nariz con endoscopia y te indica el tratamiento.</p>" + BORRADOR,
+  fuentes=[AAO("Adult Sinusitis (Update)", "2015"), AAO("Allergic Rhinitis", "2015")]),
 ]
 pathlib.Path(__file__).with_name("recursos-drafts.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
 print("ok recursos", len(rec))

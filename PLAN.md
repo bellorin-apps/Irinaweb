@@ -133,7 +133,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 8.1 | Resto de páginas de condición/servicio | 5 | TODO | |
-| 8.2 | Centro de recursos/artículos iniciales | 3 | TODO | |
+| 8.2 | Centro de recursos/artículos iniciales | 3 | DOING | Hub `/recursos/` + 3 artículos en borrador con fuentes (2026-10-10); falta revisión de la Dra. y publicación |
 | 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | TODO | |
 | 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | DONE | En vivo 2026-10-10 (D-050); SMTP por constantes con contraseña de aplicación |
 | 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | DONE | Publicados 2026-10-10 (D-051); el propietario puede pedir cambios (8.6) |

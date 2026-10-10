@@ -43,9 +43,21 @@ rscp "$REPO/tools/content/recursos-drafts.json" "$SSH_USER@$SSH_HOST:/tmp/recurs
 w "eval '
 foreach ( json_decode( file_get_contents( \"/tmp/recursos-drafts.json\" ), true ) as \$r ) {
   \$q = get_posts( [ \"post_type\" => \"recurso\", \"post_name__in\" => [ \$r[\"slug\"] ], \"post_status\" => \"any\", \"posts_per_page\" => 1, \"orderby\" => \"ID\", \"order\" => \"ASC\" ] );
-  if ( \$q ) { echo \"  existe \" . \$r[\"slug\"] . \" (\" . \$q[0]->ID . \")\n\"; continue; }
+  if ( \$q ) {
+    \$p = \$q[0];
+    // Solo se actualiza el texto si sigue siendo borrador sin revisar (conserva la marca «Borrador pendiente» o el esqueleto); nunca un texto ya revisado o publicado.
+    if ( \"draft\" === \$p->post_status && ( str_contains( \$p->post_content, \"Texto pendiente de la Dra.\" ) || str_contains( \$p->post_content, \"Borrador pendiente de revisión médica\" ) ) ) {
+      wp_update_post( [ \"ID\" => \$p->ID, \"post_title\" => \$r[\"titulo\"], \"post_excerpt\" => \$r[\"excerpt\"], \"post_content\" => wp_slash( \$r[\"html\"] ) ] );
+      update_post_meta( \$p->ID, \"di_fuentes\", \$r[\"fuentes\"] ?? [] );
+      if ( ! empty( \$r[\"area\"] ) ) { wp_set_object_terms( \$p->ID, \$r[\"area\"], \"area\" ); }
+      echo \"  actualizado \" . \$r[\"slug\"] . \" (\" . \$p->ID . \") draft\n\";
+    } else { echo \"  existe \" . \$r[\"slug\"] . \" (\" . \$p->ID . \", \" . \$p->post_status . \") sin cambios\n\"; }
+    continue;
+  }
   \$id = wp_insert_post( [ \"post_type\" => \"recurso\", \"post_status\" => \"draft\", \"post_title\" => \$r[\"titulo\"], \"post_name\" => \$r[\"slug\"], \"post_excerpt\" => \$r[\"excerpt\"], \"post_content\" => wp_slash( \$r[\"html\"] ) ] );
   wp_set_object_terms( \$id, \"medical_review_required\", \"estado_medico\" );
+  update_post_meta( \$id, \"di_fuentes\", \$r[\"fuentes\"] ?? [] );
+  if ( ! empty( \$r[\"area\"] ) ) { wp_set_object_terms( \$id, \$r[\"area\"], \"area\" ); }
   echo \"  creado \" . \$r[\"slug\"] . \" (\" . \$id . \") draft\n\";
 }'"
 rssh "rm -f /tmp/recursos-drafts.json"

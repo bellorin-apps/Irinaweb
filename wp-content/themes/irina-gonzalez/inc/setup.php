@@ -55,6 +55,9 @@ add_filter(
 		if ( is_post_type_archive( 'tratamiento' ) && is_readable( IRINA_THEME_DIR . '/templates/archive-tratamiento.php' ) ) {
 			return IRINA_THEME_DIR . '/templates/archive-tratamiento.php';
 		}
+		if ( is_post_type_archive( 'recurso' ) && is_readable( IRINA_THEME_DIR . '/templates/archive-recurso.php' ) ) {
+			return IRINA_THEME_DIR . '/templates/archive-recurso.php';
+		}
 		return $template;
 	}
 );
