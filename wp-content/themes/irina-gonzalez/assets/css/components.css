@@ -518,9 +518,9 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-narrative--img-left .di-narrative__card { margin-left: 0; margin-right: auto; }
 .di-narrative__card h2 { max-width: none; }
 .di-narrative__card .di-draft { margin-bottom: 0; }
-.di-narrative__aside { position: absolute; z-index: 1; left: 0; top: 50%; width: 52%; line-height: 0; transform: translate(calc((1 - var(--endo-p)) * 34%), -50%); will-change: transform; }
+.di-narrative__aside { position: absolute; z-index: 1; left: 0; top: 50%; width: 52%; line-height: 0; transform: translate(calc((1 - var(--endo-p)) * 34%), -50%); will-change: transform; mix-blend-mode: multiply; } /* El multiplicar va en el elemento transformado: con transform crea su propio contexto de apilamiento y un multiply en la <img> no llegaría al crema de la página (se veía un recuadro blanco). */
 .di-narrative--img-left .di-narrative__aside { left: auto; right: 0; transform: translate(calc((1 - var(--endo-p)) * -34%), -50%); }
-.di-narrative__aside img { width: 100%; height: auto; mix-blend-mode: multiply; -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 58%, transparent 100%); }
+.di-narrative__aside img { width: 100%; height: auto; -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 58%, transparent 100%); }
 @media (max-width: 999px) {
   /* Móvil: la foto, grande, sobre la tarjeta (el aparato ocupa el tramo central de la foto: la parte alta de la imagen es fondo vacío), saliendo de debajo de ella al bajar. */
   .di-narrative__wrap { padding-top: 60vw; } /* padding, no margen en la tarjeta: un margen colapsaría con el contenedor y arrastraría la foto absoluta. */
