@@ -101,7 +101,7 @@ body.menu-open { overflow: hidden; }
 .di-bleed__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.55) 100%); }
 .di-bleed .di-container { padding-block: clamp(6rem, 14vh, 10rem) clamp(3.5rem, 9vh, 7rem); }
 .di-bleed h1 { color: #fff; max-width: none; }
-/* Separadores: líneas finas (el propietario descartó la lombriz generalizada el 2026-10-10; `.di-rule` queda como utilidad para casos puntuales). */
+/* Separadores (D-049, propietario 2026-10-10): lombriz estática y sutil SOLO en motivos de consulta (.di-symptoms/.di-symptom), confianza del hero (.di-hero-trust), pasos (.di-step), ruta (.di-path li) y fila legal del pie (.di-footer__legal); el resto, líneas finas. */
 /* Fondos oscuros: acento turquesa en los tramos de título (D-049). */
 .di-bleed, .di-cta-bleed, .di-footer, .di-section--doctor-dark { --title-accent: var(--color-accent); }
 /* CTA morado: la cursiva va en blanco, sin acento (propietario, 2026-10-10). */
@@ -111,7 +111,7 @@ body.menu-open { overflow: hidden; }
 .di-bleed .di-lead--mobile { display: none; }
 .di-bleed .di-crumbs, .di-bleed .di-crumbs a { color: rgb(255 255 255 / 0.75); }
 .di-hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-2xl); }
-.di-hero-trust { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-xl); margin-top: var(--space-3xl); font-size: 0.9rem; color: rgb(255 255 255 / 0.8); border-top: 1px solid rgb(255 255 255 / 0.2); padding-top: var(--space-lg); list-style: none; padding-left: 0; max-width: none; }
+.di-hero-trust { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-xl); margin-top: var(--space-3xl); font-size: 0.9rem; color: rgb(255 255 255 / 0.8); background: var(--worm-white-25) 0 0 / 8px 8px repeat-x; padding-top: var(--space-lg); list-style: none; padding-left: 0; max-width: none; }
 .di-hero-trust li { display: inline-flex; align-items: center; gap: 0.5rem; }
 /* Indicador de scroll del hero (propietario, 2026-10-10): botón glass redondo con flecha que late; al tocarlo baja a la siguiente sección (JS). */
 /* Especificidad .di-bleed + clase para ganar al kit de Elementor (`.elementor-kit-N button { padding; font-size }`). */
@@ -196,9 +196,9 @@ body.menu-open { overflow: hidden; }
 .di-area:hover .di-area__more .di-icon { transform: translateX(6px); }
 
 /* Motivos de consulta */
-.di-symptoms { list-style: none; padding: 0; margin: var(--space-xl) 0 0; max-width: none; border-top: 1px solid var(--color-border); }
+.di-symptoms { list-style: none; padding: 0; margin: var(--space-xl) 0 0; max-width: none; background: var(--worm-border) 0 0 / 8px 8px repeat-x; }
 @media (min-width: 1024px) { .di-symptoms { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--space-2xl); } }
-.di-symptom { display: grid; grid-template-columns: 3.2rem 1fr auto; gap: var(--space-md); align-items: center; padding: 1.3rem 0; border-bottom: 1px solid var(--color-border); text-decoration: none; color: inherit; transition: padding-left var(--motion-base) var(--ease-out); }
+.di-symptom { display: grid; grid-template-columns: 3.2rem 1fr auto; gap: var(--space-md); align-items: center; padding: 1.3rem 0; background: var(--worm-border) 0 100% / 8px 8px repeat-x; text-decoration: none; color: inherit; transition: padding-left var(--motion-base) var(--ease-out); }
 .di-symptom:hover { padding-left: 0.8rem; color: inherit; }
 .di-symptom__n { font-family: var(--font-display); font-weight: 300; font-size: 1.6rem; color: var(--color-muted); }
 .di-symptom b { display: block; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.25rem, 2vw, 1.7rem); letter-spacing: -0.01em; }
@@ -289,13 +289,13 @@ body.menu-open { overflow: hidden; }
 /* Pasos */
 .di-steps { display: grid; gap: var(--space-xl); counter-reset: di-s; max-width: none; margin-top: var(--space-2xl); padding: 0; list-style: none; }
 @media (min-width: 900px) { .di-steps { grid-template-columns: repeat(4, 1fr); } }
-.di-step { counter-increment: di-s; border-top: 1px solid var(--color-text); padding-top: var(--space-md); }
+.di-step { counter-increment: di-s; background: var(--worm-border) 0 0 / 8px 8px repeat-x; padding-top: var(--space-md); }
 .di-step::before { content: "0" counter(di-s); font-family: var(--font-display); font-weight: 300; font-size: clamp(3rem, 6vw, 5rem); line-height: 1; color: var(--color-secondary-strong); display: block; margin-bottom: var(--space-md); }
 .di-step h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
 
 /* Ruta numerada (Sueño en Home, tratamientos) */
 .di-path { list-style: none; padding: 0; margin: 0; display: grid; max-width: none; }
-.di-path > li { display: grid; grid-template-columns: 3.5rem 1fr; gap: var(--space-md); padding: 1.2rem 0; border-top: 1px solid var(--color-border); align-items: baseline; }
+.di-path > li { display: grid; grid-template-columns: 3.5rem 1fr; gap: var(--space-md); padding: 1.2rem 0; background: var(--worm-border) 0 0 / 8px 8px repeat-x; align-items: baseline; }
 .di-path > li > b { font-family: var(--font-display); font-weight: 300; font-size: 1.8rem; color: var(--color-secondary-strong); }
 .di-sleep-light { background: linear-gradient(180deg, var(--color-surface) 0%, #e8f1f1 100%); }
 .di-sleep-light__grid { display: grid; gap: var(--space-2xl); align-items: center; }
@@ -344,7 +344,7 @@ body.menu-open { overflow: hidden; }
 .di-footer__tag { margin: 0; padding-left: var(--space-md); border-left: 1px solid rgb(255 255 255 / 0.35); font-size: 0.9rem; line-height: var(--leading-body); color: rgb(255 255 255 / 0.9); max-width: 26ch; }
 .di-footer__creds { font-size: 0.82rem; color: rgb(255 255 255 / 0.45); max-width: 44ch; }
 .di-footer .di-hours th, .di-footer .di-hours td { border-color: rgb(255 255 255 / 0.15); }
-.di-footer__legal { margin-top: var(--space-2xl); padding-top: var(--space-lg); border-top: 1px solid rgb(255 255 255 / 0.15); color: rgb(255 255 255 / 0.55); display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: space-between; font-size: 0.82rem; }
+.di-footer__legal { margin-top: var(--space-2xl); padding-top: var(--space-lg); background: var(--worm-white-15) 0 0 / 8px 8px repeat-x; color: rgb(255 255 255 / 0.55); display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: space-between; font-size: 0.82rem; }
 .di-footer__legal ul { display: flex; gap: var(--space-sm); }
 
 /* Barra inferior móvil */
