@@ -171,7 +171,7 @@ body.menu-open { overflow: hidden; }
 .di-area--sleep .di-area__fill { background: linear-gradient(160deg, #dcefef 0%, #bfe0e1 55%, #cbb8dc 100%); }
 .di-area__fill::after { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: 0.22; mix-blend-mode: multiply; }
 /* Paneles con fotografía (tanda 2): foto a cubrir, fundido inferior para el texto, sin grano. */
-.di-area__fill img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.di-area__fill img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; } /* Propietario (2026-10-10): la foto anclada al borde derecho de la card; se recorta por la izquierda. */
 /* Propietario (2026-10-10): sin degradado oscuro; la foto tiene el fondo despejado a la izquierda. Legibilidad por sombra de texto suave. */
 .di-area--photo .di-area__fill::after { display: none; }
 .di-area--photo h3, .di-area--photo .di-eyebrow, .di-area--photo ul, .di-area--photo .di-area__more { text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); }
