@@ -25,4 +25,8 @@
       marker.addListener('click', function () { window.open(el.dataset.url, '_blank', 'noopener'); });
     }
   };
+  // Guarda: si la API ya cargó antes que este script (orden de carga), inicializa ahora.
+  if (window.google && window.google.maps && document.getElementById('di-map') && !document.querySelector('#di-map .gm-style')) {
+    window.diInitMap();
+  }
 })();

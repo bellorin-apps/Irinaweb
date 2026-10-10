@@ -89,7 +89,7 @@ function irina_enqueue_map( string $api_key ): void {
 		[ 'irina-map' ],
 		null,
 		[
-			'strategy'  => 'async',
+			'strategy'  => 'defer', // Defer: se ejecuta tras map.js (mismo grupo, en orden), así el callback diInitMap ya existe.
 			'in_footer' => true,
 		]
 	); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- versión gestionada por Google.
