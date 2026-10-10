@@ -1,0 +1,52 @@
+{
+  "before": {
+    "index": 0,
+    "playing": true,
+    "height": 108.640625,
+    "ringSize": "20px",
+    "ringAnimation": "di-ring"
+  },
+  "auto": {
+    "index": 1,
+    "playing": true,
+    "height": 108.640625,
+    "ringSize": "20px",
+    "ringAnimation": "di-ring"
+  },
+  "touch": {
+    "index": 2,
+    "playing": false,
+    "height": 108.640625,
+    "ringSize": "20px",
+    "ringAnimation": "none"
+  },
+  "resume": {
+    "index": 2,
+    "playing": true,
+    "height": 108.640625,
+    "ringSize": "20px",
+    "ringAnimation": "di-ring"
+  },
+  "resize": {
+    "index": 2,
+    "playing": true,
+    "height": 90.75,
+    "ringSize": "20px",
+    "ringAnimation": "di-ring"
+  },
+  "reduced": {
+    "index": 0,
+    "playing": false,
+    "height": 90.75,
+    "ringSize": "20px",
+    "ringAnimation": "none"
+  },
+  "reducedAfter": {
+    "index": 0,
+    "playing": false,
+    "height": 90.75,
+    "ringSize": "20px",
+    "ringAnimation": "none"
+  },
+  "pass": true
+}

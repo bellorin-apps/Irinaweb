@@ -1,0 +1,68 @@
+[
+  {
+    "selector": ".di-eyebrow",
+    "color": "color(srgb 0.161176 0.418235 0.437255)",
+    "left": 16,
+    "top": 96,
+    "width": 203.359375,
+    "height": 25.59375,
+    "size": "12.8px",
+    "minimumContrast": 4.9,
+    "method": "mínimo conservador de caja, paso 3 px; botón: región central para excluir esquinas fuera de la cápsula"
+  },
+  {
+    "selector": ".di-quote",
+    "color": "rgb(36, 31, 35)",
+    "left": 16,
+    "top": 145.5953369140625,
+    "width": 193.890625,
+    "height": 67.21875,
+    "size": "22.4px",
+    "minimumContrast": 12.96,
+    "method": "mínimo conservador de caja, paso 3 px; botón: región central para excluir esquinas fuera de la cápsula"
+  },
+  {
+    "selector": ".di-quote b",
+    "color": "rgb(140, 78, 170)",
+    "left": 29.203125,
+    "top": 141.59521484375,
+    "width": 105.9375,
+    "height": 30,
+    "size": "22.4px",
+    "minimumContrast": 4.44,
+    "method": "mínimo conservador de caja, paso 3 px; botón: región central para excluir esquinas fuera de la cápsula"
+  },
+  {
+    "selector": ".di-doctor__lead p",
+    "color": "rgb(36, 31, 35)",
+    "left": 16,
+    "top": 236.89630126953125,
+    "width": 203.359375,
+    "height": 143.125,
+    "size": "13.76px",
+    "minimumContrast": 7.42,
+    "method": "mínimo conservador de caja, paso 3 px; botón: región central para excluir esquinas fuera de la cápsula"
+  },
+  {
+    "selector": ".di-creds li.is-active",
+    "color": "rgb(36, 31, 35)",
+    "left": 16,
+    "top": 404.2476806640625,
+    "width": 203.359375,
+    "height": 108.640625,
+    "size": "13.76px",
+    "minimumContrast": 7.24,
+    "method": "mínimo conservador de caja, paso 3 px; botón: región central para excluir esquinas fuera de la cápsula"
+  },
+  {
+    "selector": ".di-btn",
+    "color": "rgb(255, 255, 255)",
+    "left": 16,
+    "top": 576.7738037109375,
+    "width": 187.15625,
+    "height": 52,
+    "size": "15.2px",
+    "minimumContrast": 6.46,
+    "method": "mínimo conservador de caja, paso 3 px; botón: región central para excluir esquinas fuera de la cápsula"
+  }
+]

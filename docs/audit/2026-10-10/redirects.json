@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://otorrino-monterrey.com/ruta-de-auditoria/?x=1",
+    "status": 301,
+    "location": "https://drairinagonzalez.com/ruta-de-auditoria/?x=1"
+  },
+  {
+    "url": "https://www.otorrino-monterrey.com/ruta-de-auditoria/?x=1",
+    "status": 301,
+    "location": "https://drairinagonzalez.com/ruta-de-auditoria/?x=1"
+  },
+  {
+    "url": "http://otorrino-monterrey.com/ruta-de-auditoria/?x=1",
+    "status": 301,
+    "location": "https://otorrino-monterrey.com/ruta-de-auditoria/?x=1"
+  }
+]

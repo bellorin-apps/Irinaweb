@@ -1,0 +1,731 @@
+{
+  "rows": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "canonical": "https://drairinagonzalez.com/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "WebSite",
+        "WebPage",
+        "Physician"
+      ],
+      "duplicateHero": true,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            {},
+            {}
+          ]
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            {},
+            {},
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            {},
+            {},
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "title": "Dra. Irina González Sáez, otorrinolaringólogo especialista en sueño",
+      "h1": 1,
+      "main": 1,
+      "canonical": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList",
+        "Physician",
+        "ProfilePage"
+      ],
+      "duplicateHero": true,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/primera-consulta/",
+      "status": 200,
+      "title": "Primera consulta con la Dra. Irina González Sáez | Qué esperar",
+      "h1": 1,
+      "main": 1,
+      "canonical": "https://drairinagonzalez.com/primera-consulta/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "title": "Preguntas frecuentes | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "canonical": "https://drairinagonzalez.com/preguntas-frecuentes/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "title": "Contacto y ubicación | Dra. Irina González Sáez, Cumbres",
+      "h1": 1,
+      "main": 1,
+      "canonical": "https://drairinagonzalez.com/contacto/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList",
+        "Physician",
+        "ContactPage"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/gracias/",
+      "status": 200,
+      "title": "Mensaje recibido | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "robots": "nofollow, noindex",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/aviso-de-privacidad/",
+      "status": 200,
+      "title": "Aviso de privacidad | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "canonical": "https://drairinagonzalez.com/aviso-de-privacidad/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/aviso-medico/",
+      "status": 200,
+      "title": "Aviso médico | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "canonical": "https://drairinagonzalez.com/aviso-medico/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/terminos-de-uso/",
+      "status": 200,
+      "title": "Términos de uso | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "canonical": "https://drairinagonzalez.com/terminos-de-uso/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/links/",
+      "status": 200,
+      "title": "Links | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "robots": "nofollow, noindex",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "BreadcrumbList"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/auditoria-404-no-existe/",
+      "status": 404,
+      "title": "Page Not Found | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "robots": "follow, noindex",
+      "unlabelledImages": 0,
+      "markers": false,
+      "draftLinks": 0,
+      "schema": [
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "duplicateHero": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      },
+      "sizes": [
+        {
+          "width": 360,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 430,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "overflowElements": []
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "overflowElements": []
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "endpoints": {
+    "practiceStatus": 200,
+    "mapsKeyExposed": false,
+    "hiddenHoursExposed": true,
+    "/robots.txt": 200,
+    "/sitemap_index.xml": 200,
+    "/sitemap_index.xml-excluded": true,
+    "/page-sitemap.xml": 200,
+    "/page-sitemap.xml-excluded": true,
+    "/wp-json/dra-irina/v1/ops/info": 401,
+    "/briefing/config.php": 403,
+    "/briefing/revision/revisar.php": 403
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "path": "/dra-irina-gonzalez-saez/",
+    "status": 200
+  },
+  {
+    "path": "/otorrinolaringologia/",
+    "status": 404
+  },
+  {
+    "path": "/sueno/",
+    "status": 404
+  },
+  {
+    "path": "/sueno/ronquido/",
+    "status": 404
+  },
+  {
+    "path": "/padecimientos/desviacion-de-tabique-nasal/",
+    "status": 404
+  },
+  {
+    "path": "/padecimientos/sinusitis/",
+    "status": 404
+  },
+  {
+    "path": "/padecimientos/otitis/",
+    "status": 404
+  },
+  {
+    "path": "/padecimientos/hipoacusia/",
+    "status": 404
+  },
+  {
+    "path": "/padecimientos/rinitis/",
+    "status": 404
+  },
+  {
+    "path": "/padecimientos/amigdalitis/",
+    "status": 404
+  },
+  {
+    "path": "/padecimientos/reflujo-laringofaringeo/",
+    "status": 404
+  }
+]

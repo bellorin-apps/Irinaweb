@@ -1,0 +1,394 @@
+[
+  {
+    "width": 360,
+    "section": {
+      "left": 0,
+      "right": 360,
+      "width": 360,
+      "height": 672.84375,
+      "bottom": 888.5
+    },
+    "text": {
+      "left": 16,
+      "right": 212.796875,
+      "width": 196.796875,
+      "height": 576.84375,
+      "bottom": 888.5
+    },
+    "image": {
+      "left": 228.796875,
+      "right": 419.03125,
+      "width": 190.234375,
+      "height": 403.3125,
+      "bottom": 888.5238037109375
+    },
+    "gap": 16,
+    "visibleImagePercent": 68.96919917864476,
+    "quoteLines": 3,
+    "paragraphLines": 8,
+    "card": {
+      "left": 16,
+      "right": 212.796875,
+      "width": 196.796875,
+      "height": 108.640625,
+      "bottom": 733.8678588867188
+    },
+    "dots": 3,
+    "active": 1,
+    "ring": true,
+    "button": {
+      "left": 16,
+      "right": 203.15625,
+      "width": 187.15625,
+      "height": 52,
+      "bottom": 850.1685791015625
+    },
+    "overflow": false,
+    "faceVisiblePercent": 100,
+    "bottomGap": -0.0238037109375,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "section": {
+      "left": 0,
+      "right": 390,
+      "width": 390,
+      "height": 638.75,
+      "bottom": 871.53125
+    },
+    "text": {
+      "left": 16,
+      "right": 230.796875,
+      "width": 214.796875,
+      "height": 542.75,
+      "bottom": 871.53125
+    },
+    "image": {
+      "left": 246.796875,
+      "right": 454.4375,
+      "width": 207.640625,
+      "height": 440.203125,
+      "bottom": 871.5415649414062
+    },
+    "gap": 16,
+    "visibleImagePercent": 68.96681465874032,
+    "quoteLines": 3,
+    "paragraphLines": 7,
+    "card": {
+      "left": 16,
+      "right": 230.796875,
+      "width": 214.796875,
+      "height": 90.75,
+      "bottom": 716.873046875
+    },
+    "dots": 3,
+    "active": 1,
+    "ring": true,
+    "button": {
+      "left": 16,
+      "right": 203.15625,
+      "width": 187.15625,
+      "height": 52,
+      "bottom": 833.1240844726562
+    },
+    "overflow": false,
+    "faceVisiblePercent": 99.99999999999996,
+    "bottomGap": -0.01031494140625,
+    "errors": []
+  },
+  {
+    "width": 414,
+    "section": {
+      "left": 0,
+      "right": 414,
+      "width": 414,
+      "height": 632.078125,
+      "bottom": 867.765625
+    },
+    "text": {
+      "left": 16.5625,
+      "right": 245.078125,
+      "width": 228.515625,
+      "height": 536.078125,
+      "bottom": 867.765625
+    },
+    "image": {
+      "left": 261.078125,
+      "right": 482.78125,
+      "width": 221.703125,
+      "height": 470.015625,
+      "bottom": 867.7759399414062
+    },
+    "gap": 16,
+    "visibleImagePercent": 68.97596729861161,
+    "quoteLines": 3,
+    "paragraphLines": 7,
+    "card": {
+      "left": 16.5625,
+      "right": 245.078125,
+      "width": 228.515625,
+      "height": 90.75,
+      "bottom": 731.0086669921875
+    },
+    "dots": 3,
+    "active": 1,
+    "ring": true,
+    "button": {
+      "left": 16.5625,
+      "right": 203.71875,
+      "width": 187.15625,
+      "height": 52,
+      "bottom": 829.3876342773438
+    },
+    "overflow": false,
+    "faceVisiblePercent": 99.99999999999997,
+    "bottomGap": -0.01031494140625,
+    "errors": []
+  },
+  {
+    "width": 430,
+    "section": {
+      "left": 0,
+      "right": 430,
+      "width": 430,
+      "height": 637.203125,
+      "bottom": 870.890625
+    },
+    "text": {
+      "left": 17.203125,
+      "right": 254.546875,
+      "width": 237.34375,
+      "height": 541.203125,
+      "bottom": 870.890625
+    },
+    "image": {
+      "left": 270.546875,
+      "right": 501.71875,
+      "width": 231.171875,
+      "height": 490.0937805175781,
+      "bottom": 870.9010009765625
+    },
+    "gap": 16,
+    "visibleImagePercent": 68.97600540723218,
+    "quoteLines": 3,
+    "paragraphLines": 7,
+    "card": {
+      "left": 17.203125,
+      "right": 254.546875,
+      "width": 237.34375,
+      "height": 90.75,
+      "bottom": 734.1328125
+    },
+    "dots": 3,
+    "active": 1,
+    "ring": true,
+    "button": {
+      "left": 17.203125,
+      "right": 204.359375,
+      "width": 187.15625,
+      "height": 51.99993896484375,
+      "bottom": 832.5111083984375
+    },
+    "overflow": false,
+    "faceVisiblePercent": 100,
+    "bottomGap": -0.0103759765625,
+    "errors": []
+  },
+  {
+    "width": 483,
+    "section": {
+      "left": 0,
+      "right": 483,
+      "width": 483,
+      "height": 610.375,
+      "bottom": 855.28125
+    },
+    "text": {
+      "left": 19.3125,
+      "right": 285.921875,
+      "width": 266.609375,
+      "height": 514.375,
+      "bottom": 855.28125
+    },
+    "image": {
+      "left": 301.921875,
+      "right": 564.453125,
+      "width": 262.53125,
+      "height": 514.375,
+      "bottom": 855.2915954589844
+    },
+    "gap": 16,
+    "visibleImagePercent": 68.97393167480062,
+    "quoteLines": 3,
+    "paragraphLines": 6,
+    "card": {
+      "left": 19.3125,
+      "right": 285.921875,
+      "width": 266.609375,
+      "height": 72.859375,
+      "bottom": 700.4957275390625
+    },
+    "dots": 3,
+    "active": 1,
+    "ring": true,
+    "button": {
+      "left": 19.3125,
+      "right": 206.46875,
+      "width": 187.15625,
+      "height": 52,
+      "bottom": 816.661865234375
+    },
+    "overflow": false,
+    "faceVisiblePercent": 100,
+    "bottomGap": -0.010345458984375,
+    "errors": []
+  },
+  {
+    "width": 768,
+    "section": {
+      "left": 0,
+      "right": 768,
+      "width": 768,
+      "height": 536.3125,
+      "bottom": 818.421875
+    },
+    "text": {
+      "left": 30.71875,
+      "right": 454.640625,
+      "width": 423.921875,
+      "height": 440.3125,
+      "bottom": 818.421875
+    },
+    "image": {
+      "left": 470.640625,
+      "right": 901.78125,
+      "width": 431.140625,
+      "height": 440.3125305175781,
+      "bottom": 818.4244384765625
+    },
+    "gap": 16,
+    "visibleImagePercent": 68.9703910412061,
+    "quoteLines": 3,
+    "paragraphLines": 4,
+    "card": {
+      "left": 30.71875,
+      "right": 454.640625,
+      "width": 423.921875,
+      "height": 54.96875,
+      "bottom": 681.52587890625
+    },
+    "dots": 3,
+    "active": 1,
+    "ring": true,
+    "button": {
+      "left": 30.71875,
+      "right": 217.875,
+      "width": 187.15625,
+      "height": 52,
+      "bottom": 779.8005981445312
+    },
+    "overflow": false,
+    "faceVisiblePercent": 99.99999999999997,
+    "bottomGap": -0.0025634765625,
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "section": {
+      "left": 0,
+      "right": 1024,
+      "width": 1024,
+      "height": 849.46875,
+      "bottom": 974.796875
+    },
+    "text": {
+      "left": 499.1875,
+      "right": 992,
+      "width": 492.8125,
+      "height": 705.46875,
+      "bottom": 974.796875
+    },
+    "image": {
+      "left": 91.125,
+      "right": 435.1875,
+      "width": 344.0625,
+      "height": 729.46875,
+      "bottom": 974.8072204589844
+    },
+    "gap": -900.875,
+    "visibleImagePercent": 100,
+    "quoteLines": 3,
+    "paragraphLines": 4,
+    "card": {
+      "left": 499.1875,
+      "right": 745.59375,
+      "width": 246.40625,
+      "height": 129.65625,
+      "bottom": 734.0396118164062
+    },
+    "dots": 3,
+    "active": 1,
+    "ring": true,
+    "button": {
+      "left": 499.1875,
+      "right": 734.859375,
+      "width": 235.671875,
+      "height": 52,
+      "bottom": 832.4183349609375
+    },
+    "overflow": false,
+    "faceVisiblePercent": 100,
+    "bottomGap": -0.010345458984375,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "section": {
+      "left": 0,
+      "right": 1440,
+      "width": 1440,
+      "height": 849.015625,
+      "bottom": 974.234375
+    },
+    "text": {
+      "left": 689.1875,
+      "right": 1380,
+      "width": 690.8125,
+      "height": 705.015625,
+      "bottom": 974.234375
+    },
+    "image": {
+      "left": 281.09375,
+      "right": 625.1875,
+      "width": 344.09375,
+      "height": 729.015625,
+      "bottom": 974.2447052001953
+    },
+    "gap": -1098.90625,
+    "visibleImagePercent": 100,
+    "quoteLines": 3,
+    "paragraphLines": 3,
+    "card": {
+      "left": 689.1875,
+      "right": 971.5,
+      "width": 282.3125,
+      "height": 107.5625,
+      "bottom": 733.3163452148438
+    },
+    "dots": 3,
+    "active": 1,
+    "ring": true,
+    "button": {
+      "left": 689.1875,
+      "right": 924.859375,
+      "width": 235.671875,
+      "height": 52,
+      "bottom": 831.5529174804688
+    },
+    "overflow": false,
+    "faceVisiblePercent": 100,
+    "bottomGap": -0.0103302001953125,
+    "errors": []
+  }
+]

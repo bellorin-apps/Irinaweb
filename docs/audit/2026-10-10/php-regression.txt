@@ -1,0 +1,27 @@
+OK enlace externo conservado
+OK destino clínico no publicado usa salida pública
+OK destino publicado resuelto por permalink
+OK REST omite clave, Bcc y horario oculto
+OK horario público al desmarcar oculto
+OK asignación REST exige aprobación médica
+OK condicion publish sin aprobación queda pending
+OK condicion publish aprobado conserva estado
+OK condicion future sin aprobación queda pending
+OK condicion future aprobado conserva estado
+OK tratamiento publish sin aprobación queda pending
+OK tratamiento publish aprobado conserva estado
+OK tratamiento future sin aprobación queda pending
+OK tratamiento future aprobado conserva estado
+OK recurso publish sin aprobación queda pending
+OK recurso publish aprobado conserva estado
+OK recurso future sin aprobación queda pending
+OK recurso future aprobado conserva estado
+OK editar clínica aprobada sin autoridad médica exige nueva revisión
+OK edición de revisora conserva autoridad médica
+OK FAQ única, desde widgets y shortcodes visibles
+OK FAQ no se emite fuera de Preguntas frecuentes
+OK nueve FAQ reales del build sin contenido duplicado
+OK JSON-LD no puede cerrar el elemento script
+OK campo array rechazado sin enviar correo
+OK GET rechazado sin enviar correo
+OK atributos duplicados normalizados con API real de WordPress
