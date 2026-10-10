@@ -60,7 +60,7 @@ usort( $irina_rows, static fn( array $x, array $y ): int => strcmp( $y[0], $x[0]
 			[
 				'em' => [],
 				'b'  => [],
-				'br' => [],
+				'br' => [ 'class' => [] ],
 			]
 		);
 		?>

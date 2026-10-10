@@ -104,6 +104,8 @@ body.menu-open { overflow: hidden; }
 /* Separadores: líneas finas (el propietario descartó la lombriz generalizada el 2026-10-10; `.di-rule` queda como utilidad para casos puntuales). */
 /* Fondos oscuros: acento turquesa en los tramos de título (D-049). */
 .di-bleed, .di-cta-bleed, .di-footer, .di-section--doctor-dark { --title-accent: var(--color-accent); }
+/* CTA morado: la cursiva va en blanco, sin acento (propietario, 2026-10-10). */
+.di-cta-bleed h2 em { color: inherit; }
 .di-bleed .di-eyebrow { color: var(--color-accent); }
 .di-bleed .di-lead { color: rgb(255 255 255 / 0.86); }
 .di-bleed .di-lead--mobile { display: none; }

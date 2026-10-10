@@ -24,7 +24,7 @@ $irina_a       = wp_parse_args(
 $irina_allowed = [
 	'em' => [],
 	'b'  => [],
-	'br' => [],
+	'br' => [ 'class' => [] ],
 ];
 ?>
 <section class="di-bleed<?php echo $irina_a['short'] ? ' di-bleed--short' : ''; ?>">

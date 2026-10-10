@@ -77,7 +77,7 @@ $irina_panel = static function ( array $p, string $mod ): void {
 				[
 					'em' => [],
 					'b'  => [],
-					'br' => [],
+					'br' => [ 'class' => [] ],
 				]
 			);
 			?>

@@ -66,7 +66,7 @@ if ( ! $irina_cards && ! $irina_tags ) {
 			[
 				'em' => [],
 				'b'  => [],
-				'br' => [],
+				'br' => [ 'class' => [] ],
 			]
 		);
 		?>

@@ -32,7 +32,7 @@ $irina_a = wp_parse_args(
 				[
 					'em' => [],
 					'b'  => [],
-					'br' => [],
+					'br' => [ 'class' => [] ],
 				]
 			);
 			?>

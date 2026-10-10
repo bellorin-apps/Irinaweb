@@ -31,6 +31,11 @@ h4 { font-size: 1.15rem; font-weight: 600; letter-spacing: 0; }
 /* Regla de títulos (propietario, 2026-10-10; D-049): un tramo en color de acento en bold (<b>) y otro en el acento en cursiva (<em>). */
 h1 em, h2 em, h3 em, .di-quote em, .di-footer__big em { font-style: italic; color: var(--title-accent); }
 h1 b, h2 b, h3 b, .di-quote b, .di-footer__big b { font-weight: inherit; color: var(--title-accent); }
+/* Cursiva dentro del tramo en color (p. ej. «oír <em>bien</em>» dentro de <b>): hereda acento y peso. */
+h1 b em, h2 b em, h3 b em, .di-quote b em, .di-footer__big b em { color: inherit; font-weight: inherit; }
+/* Salto de línea solo en escritorio (los saltos que dicta el propietario); en móvil el texto fluye. */
+.di-brd { display: none; }
+@media (min-width: 900px) { .di-brd { display: inline; } }
 /* Separador con trazo lombriz (D-049): utilidad para líneas sueltas; los componentes lo aplican como background. */
 .di-rule { height: 8px; border: 0; margin: var(--space-lg) 0; background: var(--worm-border) 0 0 / 8px 8px repeat-x; }
 p, ul, ol { margin: 0 0 var(--space-md); max-width: var(--measure); }
