@@ -18,14 +18,14 @@ page = [
         "variant": "sand", "crumb": "Dra. Irina González Sáez",
         "secondary_label": "Opiniones en Doctoralia", "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"}),
     container("dra-enfoque", "di-narrativa", {
-        "eyebrow": "Enfoque", "title": "«<b>Escucharte</b> <br class=\"di-brd\">también es parte <br class=\"di-brd\">del <b><em>tratamiento.</em></b>»",
+        "eyebrow": "Enfoque", "title": "«<b>Escucharte</b> <br class=\"di-brd\">también es parte <br class=\"di-brd\">del <b><em>tratamiento</em></b>»",
         "lead": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad, sin promesas que no se puedan cumplir.",
         "text": "", "draft": "yes"}),
     container("dra-creds", "di-credenciales", {
-        "eyebrow": "Formación y certificaciones", "title": "<b>Credenciales</b> <em>verificables.</em>",
+        "eyebrow": "Formación y certificaciones", "title": "<b>Credenciales</b> <em>verificables</em>",
         "tags_title": "Membresías y hospitales",
         "extra_tags": ""}),
-    container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "Formación <b>continua</b> en <em>cirugía de sueño.</em>"}),
+    container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "Formación <b>continua</b> en <em>cirugía de sueño</em>"}),
     container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu primera consulta",
         "text": "30 minutos para escucharte, explorar y proponerte un plan.", "message": ""}),
 ]

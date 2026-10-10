@@ -12,7 +12,7 @@ $irina_a    = wp_parse_args(
 	$args ?? [],
 	[
 		'eyebrow' => __( 'Trayectoria', 'irina-gonzalez' ),
-		'title'   => 'Formación <b>continua</b> en <em>cirugía de sueño.</em>',
+		'title'   => 'Formación <b>continua</b> en <em>cirugía de sueño</em>',
 	]
 );
 $irina_q    = get_posts(

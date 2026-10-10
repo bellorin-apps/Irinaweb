@@ -13,7 +13,7 @@ echo '<main id="content" class="di-main">';
 irina_part(
 	'bleed',
 	[
-		'title'   => __( 'Esta página <em>no existe</em>.', 'irina-gonzalez' ),
+		'title'   => __( 'Esta página <em>no existe</em>', 'irina-gonzalez' ),
 		'eyebrow' => __( 'Error 404', 'irina-gonzalez' ),
 		'lead'    => __( 'Puede que el enlace haya cambiado o que tenga un error. Aquí tienes los caminos más útiles.', 'irina-gonzalez' ),
 		'variant' => 'sand',

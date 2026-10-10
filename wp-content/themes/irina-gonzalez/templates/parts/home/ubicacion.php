@@ -22,7 +22,7 @@ $irina_fac = array_merge( [ [ __( 'Dirección', 'irina-gonzalez' ), irina_addres
 $irina_centro = trim( (string) irina_practice( 'centro' ) );
 $irina_words  = preg_split( '/\s+/', $irina_centro );
 $irina_last   = (string) array_pop( $irina_words );
-$irina_title  = '' !== $irina_a['title'] ? $irina_a['title'] : trim( implode( ' ', $irina_words ) . ',<br><em>' . $irina_last . '.</em>' );
+$irina_title  = '' !== $irina_a['title'] ? $irina_a['title'] : trim( implode( ' ', $irina_words ) . ',<br><em>' . $irina_last . '</em>' );
 ?>
 <section class="di-section" id="ubicacion">
 	<div class="di-container di-location">
