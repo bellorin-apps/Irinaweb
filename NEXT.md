@@ -4,11 +4,12 @@ Actualizado: 2026-10-10 · Codex. Estado/progreso: STATUS/PROGRESS. Evidencia: Q
 
 ## NOW
 
-1. Claude continúa Escucharte con la indicación D-057: retrato grande desplazado hacia el texto; A/B quedan como antecedentes. Codex revisó 4cf6e8e: aún muestra solo ≈45/56 % del rostro en 360/390. Ver docs/REVISION_ESCUCHARTE_2026-10-10.md para el conflicto entre rostro y párrafo. Claude gestiona las preguntas con José.
-2. Sesión local despliega con OK del propietario siguiendo BATON. Si la elección visual espera, el corte `b4b0716` incluye seguridad, schema y enlaces antes del cambio visual; usar checkout limpio separado.
-3. Repetir capturas/medidas, FAQ única, HTML de hero sin duplicados, horario oculto fuera de REST y enlaces Home sin 404. No publicar clínica.
-4. Probar roles, REST/Gutenberg, nueva revisión e idempotencia en copia/staging. No usar fichas de producción para ensayos de estado.
-5. Confirmar aprobación con la Dra. de bloques marcados borrador en Dra./Primera consulta; entonces retirar draft=yes del build y regenerar JSON. No inferir aprobación porque la página esté publicada.
+1. **Desplegado 2026-10-10 (sesión local)**: entrega de Codex hasta 8a18346 + ajuste del propietario de «Escucharte» (4cf6e8e, D-057) + corrección de `sizes` del retrato (9053a4b, 100vw en móvil). Producción verificada: páginas 200 con un h1/main y sin avisos PHP; REST sin `maps_api_key`/`contacto_copia`/`horario`; FAQPage único en FAQ (9 preguntas), ninguno en Primera consulta; Home sin enlaces a borradores; mini apps 403 sin token y noindex; plugin 0.4.1. Abierto: el hero sigue con `fetchpriority` duplicado en el HTML (una copia la añade WordPress a la primera imagen; `loading` ya va una vez): Codex/cloud deciden si se retira la del tema.
+2. **Escucharte (D-057)**: medido en vivo con la silueta a 9 px del texto: rostro visible 49 % (360), 57 % (390), 80 % (430); la figura no tapa el texto; escritorio sin cambios. Con la escala actual, el rostro completo no cabe en 360–390 px sin invadir la columna de texto: el propietario decide si lo acepta así o elige otra vía (opciones presentadas en el chat local).
+3. **Maps (D-059)**: José crea el Map ID en Google Cloud (Google Maps Platform → Map Management → Create Map ID, tipo JavaScript, con el estilo asociado); la sesión cloud migra `map.js` a `AdvancedMarkerElement` y añade el ajuste `maps_map_id`; la sesión local lo carga y despliega.
+4. **Borradores (D-058)**: confirmar con la Dra. la aprobación de los bloques marcados «Borrador» en Dra./Primera consulta; solo entonces retirar `draft=yes` del build y regenerar JSON.
+5. **Archivo (D-060)**: tras cerrar esta entrega, mover `tools/preview/` y `tools/legacy/` a `docs/archive/` con enlaces actualizados (sin borrar).
+6. Probar roles, REST/Gutenberg, nueva revisión e idempotencia en copia/staging. No usar fichas de producción para ensayos de estado.
 
 ## AFTER técnico
 

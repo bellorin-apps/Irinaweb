@@ -1,3 +1,37 @@
+# BATON — Sesión local → Codex / Claude cloud
+
+Fecha: 2026-10-10 11:00 (sesión local, PC de José). Rama `ccr-6254502d-xly8ww`. **Desplegado en producción hasta 9053a4b** (entrega de Codex 8a18346 + 4cf6e8e + 9053a4b). Respaldos: `~/deploy-backups/20261010-104348/` y `~/deploy-backups/20261010-105949/` (tema + plugin); mini apps con respaldo privado (deploy-briefing).
+
+## Qué se hizo
+
+- `deploy-code.sh` → `setup-site.sh` (168: 13 645 bytes, JSON legible de Codex) → `setup-pages.sh` → `setup-dra.sh` (169) → `deploy-briefing.sh` (mismo token, sin correo) → purga LiteSpeed. Lint PHP OK en los 28 archivos tocados por Codex.
+- Decisiones del propietario registradas: D-057 (Escucharte: escala actual, silueta a 8 px, sin A/B), D-058 (borradores se mantienen), D-059 (migrar Maps con mapId), D-060 (archivar maquetas/legacy tras esta entrega).
+- `4cf6e8e`: CSS móvil de Escucharte según D-057 (columna 56 %, retrato a todo el alto, `left: calc(56% + 8px)`, textos como en la versión aprobada). `9053a4b`: `sizes` del retrato a 100vw en móvil (con 60vw la CDN servía 215×457 px: borroso en 2×).
+
+## Verificación en producción (2026-10-10)
+
+- Páginas /, Dra., Primera consulta, Contacto, FAQ, Gracias, Aviso de privacidad → 200, un `h1` y un `main`, 0 avisos PHP. Plugin 0.4.1.
+- REST `dra-irina/v1/practice`: sin `maps_api_key`, `contacto_copia` ni `horario`. FAQ: 1 `FAQPage` con 9 `Question`; 0 en Primera consulta. Home: 0 enlaces `?page_id=`. Mini apps: `guardar.php`/`revisar.php` sin token 403, `config.php` 403, `X-Robots-Tag: noindex, nofollow`.
+- Hero: `loading` ×1, **`fetchpriority` ×2** en el HTML (abierto: una la añade WordPress a la primera imagen; el navegador ignora la repetida).
+- Escucharte (D-057), silueta a 9 px del texto, sin translateX, retrato al fondo, figura sin tapar el texto, consola limpia:
+
+| ancho | sección | columna texto | retrato (l–r, w×h) | rostro visible | captura |
+|---|---|---|---|---|---|
+| 360 | 804 | 16–200 (56 %) | 208–542, 334×708 | 49 % | `/preview/qa/escucharte-360-20261010-1100.png` |
+| 390 | 804 | 16–216 | 224–558, 334×708 | 57 % | `escucharte-390-20261010-1100.png` |
+| 430 | 735 | 17–239 | 247–548, 302×639 | 80 % | `escucharte-430-20261010-1100.png` |
+| 1440 | 849 | sin cambios | 273–617, 344×729 | 100 % | `escucharte-1440-20261010-1055.png` |
+
+Geometría: el PNG del retrato tiene el rostro entre el 22 % y el 70 % de su ancho y los brazos cruzados en el borde izquierdo del archivo (x ≈ 0). Con la escala actual (alto = columna), el rostro completo solo cabría en 360–390 px si la figura invadiera la columna de texto ≈ 100 px; por eso queda parcialmente fuera. Decisión pendiente del propietario.
+
+## Para Codex / cloud
+
+- No tocar `components.css` (bloque móvil de la Dra.), `doctora.php` ni el carrusel sin leer D-057.
+- Abierto: `fetchpriority` duplicado en el hero (decidir si se retira el del tema en `irina_hero_image`); D-059 (migración Maps al recibir el Map ID); D-060 (archivo de maquetas) después de esta entrega.
+- Pendientes de José/Dra.: foto definitiva del hero de la Dra., GA4 (`ga4_id`), Map ID, aprobación de fichas y de los bloques «Borrador», horario GBP.
+
+---
+
 > Relevo vigente tras la captura de José: D-057 sustituye la elección A/B. Claude implementó 4cf6e8e; Codex lo revisó y el gate móvil sigue abierto en360/390 (rostro≈45/56 %). Ver docs/REVISION_ESCUCHARTE_2026-10-10.md y sus comparaciones. No desplegar el ensayo de desplazamiento sin resolver el choque con el párrafo. Las preguntas al propietario las formula Claude. La entrega anterior se conserva debajo como historial técnico; sus instrucciones de elegir A/B ya no aplican.
 
 # BATON — Codex → sesión local
