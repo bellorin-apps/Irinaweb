@@ -97,6 +97,18 @@ body.menu-open { overflow: hidden; }
 .di-bleed__bg--warm { background: linear-gradient(165deg, #3b2a33 0%, #6d4460 35%, #a8707a 65%, #dba67f 100%); }
 .di-bleed__bg--night { background: linear-gradient(170deg, #0f0c1f 0%, #1b1630 45%, #2a2246 80%, #3b5b7a 100%); }
 .di-bleed__bg--sand { background: linear-gradient(165deg, #4e3644 0%, #8c6670 45%, #e6c3a4 100%); }
+/* Variante clara (propietario, 2026-10-10; página de la Dra.): foto clara con texto oscuro y velo crema tras la columna de texto. */
+.di-bleed__bg--light { background: linear-gradient(165deg, #f3eae2 0%, #ece0d8 100%); }
+.di-bleed__bg--light:has(img)::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(251 247 242 / 0.94) 0%, rgb(251 247 242 / 0.8) 34%, rgb(251 247 242 / 0) 60%); }
+.di-bleed.di-bleed--light { color: var(--color-text); --title-accent: var(--color-primary); }
+.di-bleed.di-bleed--light h1 { color: var(--color-text); }
+.di-bleed.di-bleed--light .di-eyebrow { color: var(--color-secondary-strong); }
+.di-bleed.di-bleed--light .di-lead { color: var(--color-text); }
+.di-bleed.di-bleed--light .di-crumbs, .di-bleed.di-bleed--light .di-crumbs a { color: rgb(36 31 35 / 0.7); }
+.di-bleed.di-bleed--light .di-btn--whatsapp { background: var(--color-secondary-strong); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.di-bleed.di-bleed--light .di-btn--whatsapp:hover { background: #236468; }
+.di-bleed.di-bleed--light .di-btn--ghost { background: rgb(36 31 35 / 0.08); color: var(--color-text); }
+.di-bleed.di-bleed--light .di-btn--ghost:hover { background: rgb(36 31 35 / 0.14); color: var(--color-text); }
 .di-bleed__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 65% 40%; }
 }
 .di-bleed__bg::after { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: 0.28; mix-blend-mode: overlay; }
@@ -133,9 +145,11 @@ body.menu-open { overflow: hidden; }
   /* La foto 3:2 cubre por altura: object-position Y no tiene recorrido. Se recorta el 12 % superior para subir el rostro. */
   /* Tanda 1: foto a altura completa sin zoom, centrada un poco a la izquierda del rostro (aire arriba, abajo y a la izquierda). */
   .di-bleed__bg img { position: absolute; top: 0; left: 0; height: 100%; object-position: 60% 50%; }
+  .di-bleed__bg--light:has(img)::before { background: linear-gradient(180deg, rgb(251 247 242 / 0) 0%, rgb(251 247 242 / 0) 32%, rgb(251 247 242 / 0.86) 52%, rgb(251 247 242 / 0.96) 100%); }
   /* Sombra solo en la franja inferior del texto; el rostro queda limpio. Variantes en /preview/muestras/. */
   /* Propietario (2026-10-09): empieza a mitad del título, menos oscura y más difuminada. */
   .di-bleed__shade { background: linear-gradient(180deg, rgb(0 0 0 / 0) 0%, rgb(0 0 0 / 0) 58%, rgb(20 10 20 / 0.12) 64%, rgb(20 10 20 / 0.35) 74%, rgb(20 10 20 / 0.58) 86%, rgb(20 10 20 / 0.72) 100%); }
+  .di-bleed--light .di-bleed__shade { display: none; } /* la variante clara no lleva sombra oscura; usa el velo crema */
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
   .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; } /* la lombriz queda centrada verticalmente aunque haya dos líneas */
   /* Salto de línea del overline solo en móvil («|» en el texto del hero): «Tu otorrino / en Monterrey». */

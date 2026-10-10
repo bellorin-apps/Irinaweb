@@ -27,7 +27,8 @@
     var y = window.scrollY || window.pageYOffset;
     if (header) {
       header.classList.toggle('is-scrolled', y > 40);
-      if (bleed) { header.classList.toggle('di-on-dark', y < bleed.offsetHeight - 84); }
+      // Sobre una cabecera clara (variante light) la cabecera nunca va en blanco.
+      if (bleed) { header.classList.toggle('di-on-dark', !bleed.classList.contains('di-bleed--light') && y < bleed.offsetHeight - 84); }
     }
     if (!reduce) { bgs.forEach(function (b) { b.style.transform = 'translateY(' + (y * 0.25) + 'px)'; }); }
   }

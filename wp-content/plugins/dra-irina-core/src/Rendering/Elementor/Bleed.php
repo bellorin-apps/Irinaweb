@@ -41,6 +41,7 @@ final class Bleed extends AbstractWidget {
 					'sand'    => __( 'Arena', 'dra-irina-core' ),
 					'default' => __( 'Púrpura', 'dra-irina-core' ),
 					'night'   => __( 'Noche (Sueño)', 'dra-irina-core' ),
+					'light'   => __( 'Claro (foto clara, texto oscuro)', 'dra-irina-core' ),
 				],
 			]
 		);
