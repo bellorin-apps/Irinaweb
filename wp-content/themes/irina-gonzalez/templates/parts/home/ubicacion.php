@@ -18,7 +18,11 @@ $irina_a     = wp_parse_args(
 );
 $irina_tel   = (string) irina_practice( 'telefono' );
 $irina_fac   = array_merge( [ [ __( 'Dirección', 'irina-gonzalez' ), irina_address_line() ] ], (array) $irina_a['facts'], '' !== $irina_tel ? [ [ __( 'Teléfono', 'irina-gonzalez' ), irina_phone_label( $irina_tel ) ] ] : [] );
-$irina_title = '' !== $irina_a['title'] ? $irina_a['title'] : trim( (string) irina_practice( 'centro' ) . ', <em>' . (string) irina_practice( 'colonia' ) . '.</em>' );
+// Título = nombre del centro (la última palabra en énfasis); la colonia es dirección, no nombre (propietario, 2026-10-10).
+$irina_centro = trim( (string) irina_practice( 'centro' ) );
+$irina_words  = preg_split( '/\s+/', $irina_centro );
+$irina_last   = (string) array_pop( $irina_words );
+$irina_title  = '' !== $irina_a['title'] ? $irina_a['title'] : trim( implode( ' ', $irina_words ) . ' <em>' . $irina_last . '.</em>' );
 ?>
 <section class="di-section" id="ubicacion">
 	<div class="di-container di-location">

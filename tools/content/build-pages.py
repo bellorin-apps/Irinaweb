@@ -73,14 +73,14 @@ pages["primera-consulta"] = [
         ("¿Cómo puedo pagar?", "Efectivo, tarjeta y transferencia. Facturación disponible."),
         ("¿Hay consulta en línea?", "Solo para seguimiento de pacientes ya valorados en consultorio."),
         ("¿Atienden niños?", "Sí, desde los 0 meses."),
-        ("¿Dónde está el consultorio y hay estacionamiento?", "CAB Medical, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector, Monterrey. Estacionamiento gratuito; elevador y acceso para silla de ruedas."),
+        ("¿Dónde está el consultorio y hay estacionamiento?", "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector, Monterrey. Estacionamiento gratuito; elevador y acceso para silla de ruedas."),
     ], "pregunta", "text")}),
     container("pc-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu primera consulta", "text": "Escríbenos por WhatsApp y te confirmamos horario.", "message": ""}),
 ]
 
 pages["contacto"] = [
     container("co-bleed", "di-bleed", {"eyebrow": "Contacto", "title": "Consultorio en<br><em>Cumbres, Monterrey.</em>",
-        "lead": "CAB Medical, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Consulta previa cita: agenda por WhatsApp.",
+        "lead": "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Consulta previa cita: agenda por WhatsApp.",
         "variant": "sand", "crumb": "Contacto"}),
     container("co-ubic", "di-ubicacion", {"eyebrow": "Cómo llegar", "title": "",
         "facts": rep([("Estacionamiento", "Gratuito"), ("Acceso", "Elevador y acceso para silla de ruedas")], "label", "value"),
@@ -134,7 +134,7 @@ seo = {
     "otorrinolaringologia": ("Otorrinolaringología en Monterrey: oído, nariz y garganta", "Padecimientos y tratamientos de oído, nariz y garganta en niños y adultos. Cuándo acudir al otorrino y qué esperar. Dra. Irina González Sáez, Cumbres."),
     "sueno": ("Especialista en ronquido y apnea del sueño en Monterrey", "Otorrinolaringólogo especialista en desórdenes respiratorios del dormir: estudio del sueño, CPAP y cirugía de ronquido y apnea. Dra. Irina González Sáez."),
     "primera-consulta": ("Primera consulta con la Dra. Irina González Sáez | Qué esperar", "Cómo es la consulta de otorrinolaringología: 30 minutos, exploración completa y plan claro. Qué llevar, costos y seguros."),
-    "contacto": ("Contacto y ubicación | Dra. Irina González Sáez, Cumbres", "Consultorio en CAB Medical, Av. Paseo de los Leones 2341, Cumbres 2.º Sector, Monterrey. Horario, mapa, estacionamiento y WhatsApp."),
+    "contacto": ("Contacto y ubicación | Dra. Irina González Sáez, Cumbres", "Consultorio en CAB Medical Headquarters, Av. Paseo de los Leones 2341, Cumbres 2.º Sector, Monterrey. Horario, mapa, estacionamiento y WhatsApp."),
     "preguntas-frecuentes": ("Preguntas frecuentes | Dra. Irina González Sáez", "Horario, costo de consulta, seguros, atención a niños y hospitales. Respuestas de servicio del consultorio de la Dra. Irina González Sáez."),
     "aviso-de-privacidad": ("Aviso de privacidad | Dra. Irina González Sáez", "Cómo tratamos sus datos personales conforme a la LFPDPPP."),
     "aviso-medico": ("Aviso médico | Dra. Irina González Sáez", "La información del sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias."),
