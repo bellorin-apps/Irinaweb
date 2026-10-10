@@ -294,26 +294,26 @@ body.menu-open { overflow: hidden; }
 .di-section--doctor-dark .di-creds__dots button { background: rgb(255 255 255 / 0.35); }
 .di-section--doctor-dark .di-creds__dots button[aria-current="true"] { background: #fff; }
 .di-section--doctor-dark .di-creds__dots svg circle { stroke: #fff; }
-/* Móvil · propietario 2026-10-10 (prevalece sobre las variantes A/B de la auditoría): el retrato conserva la escala
-   y el anclaje inferior de la versión aprobada (todo el alto de la columna) y se desplaza a la izquierda hasta que la
-   silueta visible (los brazos cruzados, en el borde izquierdo del PNG) queda a 8 px de la columna de texto; el rostro
-   entra cuanto permite esa distancia sin que la figura tape el texto. Sin translateX; recorte solo por el viewport. */
+/* Móvil · referencia 60/40 del propietario (2026-10-10): texto a la izquierda,
+   retrato al inicio de su columna, 5 px antes de la división. Se acepta recorte
+   parcial del rostro; no se reduce la figura para cumplir un porcentaje facial. */
 @media (max-width: 899px) {
-  .di-section--doctor-bg .di-doctor { display: block; position: relative; min-height: 0; }
+  .di-section--doctor-bg .di-doctor { display: grid; grid-template-columns: minmax(0, 60%) minmax(0, 40%); gap: 0; align-items: stretch; position: relative; min-height: 0; }
   /* Fondo de izquierda a derecha (propietario, 2026-10-10): la foto cubre toda la sección anclada al borde izquierdo e inferior, así los tulipanes
      de la izquierda se ven a tamaño (lo que sobra por la derecha queda bajo el retrato); fundido arriba hacia el crema de la propia foto.
      Propietario: los tulipanes un poco escondidos por la izquierda (la foto se desplaza −8vw). */
   .di-section--doctor-bg { background: #eee2da; }
   .di-section--doctor-bg .di-doctor__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: -8vw bottom; -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); }
   /* Texto completo (overline, cita, párrafo, credenciales, botón) en la columna izquierda; el retrato, algo mayor, a la derecha. */
-  .di-section--doctor-bg .di-doctor__text { width: 56%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
+  .di-section--doctor-bg .di-doctor__text { grid-column: 1; grid-row: 1; width: auto; min-width: 0; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
   .di-section--doctor-bg .di-doctor__lead { font-size: 0.92rem; }
   .di-section--doctor-bg .di-creds { font-size: 0.86rem; line-height: var(--leading-body); }
   .di-section--doctor-bg .di-btn .di-btn__long { display: none; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }
-  /* Silueta a 8 px del texto (medido sobre el alfa del PNG: a la altura de los brazos la figura empieza en x≈0 del archivo). */
-  .di-section--doctor-bg .di-doctor__portrait { position: absolute; left: calc(56% + 8px); right: calc(-1 * var(--gutter)); top: 0; bottom: 0; height: auto; max-height: none; transform: none; line-height: 0; overflow: hidden; }
+  /* El retrato conserva el alto de la columna y su proporción. La sección recorta
+     lo que sale por la derecha; su propia columna no recorta el ajuste de -5 px. */
+  .di-section--doctor-bg .di-doctor__portrait { grid-column: 2; grid-row: 1; position: relative; left: -5px; right: auto; top: auto; bottom: auto; min-width: 0; height: auto; max-height: none; transform: none; line-height: 0; overflow: visible; }
   .di-section--doctor-bg .di-doctor__portrait img { position: absolute; left: 0; bottom: 0; display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: left bottom; }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
