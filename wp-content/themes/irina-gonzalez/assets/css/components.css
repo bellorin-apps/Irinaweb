@@ -56,7 +56,9 @@
 .di-header.di-on-dark:not(.is-scrolled):not(.is-open) .di-brand__logo--white, .di-footer .di-brand__logo--white { display: block; }
 .di-header.di-on-dark { color: #fff; }
 .di-header.is-scrolled { background: rgb(251 247 242 / 0.68); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); box-shadow: 0 10px 30px rgb(40 20 50 / 0.08), 0 1px 0 rgb(0 0 0 / 0.04); color: var(--color-text); }
-.di-header.is-open { background: var(--color-surface); box-shadow: 0 1px 0 var(--color-border); color: var(--color-text); }
+.di-header.is-open { background: var(--color-surface); color: var(--color-text); }
+/* Línea inferior de la cabecera abierta como lombriz (D-049, propietario 2026-10-10). */
+.di-header.is-open::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px; background: var(--worm-border) 0 0 / 8px 8px repeat-x; pointer-events: none; }
 body:not(.has-bleed) { padding-top: 92px; }
 .di-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
 .di-brand:hover { color: inherit; }
@@ -79,7 +81,7 @@ body:not(.has-bleed) { padding-top: 92px; }
 .admin-bar .di-menu-panel { top: calc(84px + 46px); }
 .di-menu-panel.is-open { display: block; }
 .di-menu-panel ul { list-style: none; padding: 0; margin: 0 0 var(--space-xl); max-width: none; }
-.di-menu-panel li a { display: block; font-family: var(--font-display); font-size: clamp(1.8rem, 7vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; text-decoration: none; color: var(--color-text); padding: 0.4rem 0; border-bottom: 1px solid var(--color-border); }
+.di-menu-panel li a { display: block; font-family: var(--font-display); font-size: clamp(1.8rem, 7vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; text-decoration: none; color: var(--color-text); padding: 0.4rem 0; background: var(--worm-border) 0 100% / 8px 8px repeat-x; }
 .di-menu-panel .sub-menu li a { font-size: 1.1rem; font-weight: 400; padding-left: var(--space-md); border: 0; color: var(--color-muted); }
 @media (min-width: 1024px) { .di-menu-panel { display: none !important; } }
 body.menu-open { overflow: hidden; }
@@ -343,7 +345,7 @@ body.menu-open { overflow: hidden; }
 .di-footer__legal ul { display: flex; gap: var(--space-sm); }
 
 /* Barra inferior móvil */
-.di-mobile-bar { position: fixed; inset-inline: 0; bottom: 0; z-index: 60; display: grid; grid-template-columns: repeat(3, 1fr); background: rgb(251 247 242 / 0.96); backdrop-filter: blur(10px); border-top: 1px solid var(--color-border); padding: 0.4rem 0.4rem calc(0.4rem + env(safe-area-inset-bottom, 0px)); }
+.di-mobile-bar { position: fixed; inset-inline: 0; bottom: 0; z-index: 60; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--worm-border) 0 0 / 8px 8px repeat-x, rgb(251 247 242 / 0.96); backdrop-filter: blur(10px); padding: 0.4rem 0.4rem calc(0.4rem + env(safe-area-inset-bottom, 0px)); }
 .di-mobile-bar a { display: grid; justify-items: center; gap: 2px; font-size: 0.78rem; font-weight: 600; text-decoration: none; color: var(--color-text); padding: 0.4rem; }
 .di-mobile-bar a:first-child { color: var(--color-secondary-strong); }
 @media (min-width: 900px) { .di-mobile-bar { display: none; } }
