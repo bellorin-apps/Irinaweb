@@ -229,9 +229,10 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 899px) {
   .di-section--doctor-bg .di-doctor { display: block; position: relative; min-height: 560px; }
   /* Fondo de izquierda a derecha (propietario, 2026-10-10): la foto cubre toda la sección anclada al borde izquierdo e inferior, así los tulipanes
-     de la izquierda se ven a tamaño (lo que sobra por la derecha queda bajo el retrato); fundido arriba hacia el crema de la propia foto. */
+     de la izquierda se ven a tamaño (lo que sobra por la derecha queda bajo el retrato); fundido arriba hacia el crema de la propia foto.
+     Propietario: los tulipanes un poco escondidos por la izquierda (la foto se desplaza −8vw). */
   .di-section--doctor-bg { background: #eee2da; }
-  .di-section--doctor-bg .di-doctor__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left bottom; -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); }
+  .di-section--doctor-bg .di-doctor__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: -8vw bottom; -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0) 0, #000 22%); }
   /* Texto completo (overline, cita, párrafo, credenciales, botón) en la columna izquierda; el retrato, algo mayor, a la derecha. */
   .di-section--doctor-bg .di-doctor__text { width: 56%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
   .di-section--doctor-bg .di-doctor__lead { font-size: 0.92rem; }
