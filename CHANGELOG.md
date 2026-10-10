@@ -79,3 +79,9 @@ Trazabilidad de todos los archivos modificados por Codex (excluye los cuatro HTM
 - components.css: grid móvil real60/40, gap0, texto alineado a la izquierda, retratoleft−5px y alto de fila; solo viewport recorta. Sin cambios de texto/fondo/menú/sombras/JS ni builds.
 - Harness columns.cjs y opciones de etiqueta/desplazamiento en portrait-position.cjs; capturas/metadatoscolumns-60-40 y prueba de tres credenciales. Sin intersección del alfa con párrafo en360/390/430, sección estable, bottom alineado, sin desbordes/errores y escritorio conservado.
 - Estado/relevo actualizados en STATUS/NEXT/BATON/QA/DECISIONS; informe nuevo docs/ESCUCHARTE_60_40_2026-10-10.md. Preguntas por Claude; sin despliegue. .gitignore limita capturas duplicadas; evidencia seleccionada en docs/audit/2026-10-10/. PHP/builds sin cambios.
+
+## 2026-10-10 — diferencia entre captura390 y teléfono estrecho
+
+- Verificado CSS60/40 en producción sin interceptar assets; perfiles móviles/DPR2 y tres tarjetas pasan. En360 el retrato se movió solo0,125px y no cambió de altura; explica por qué la sección puede verse casi igual. La captura390 no representaba ese resultado.
+- Q-039 abierto según informe de José. Propuesta aislada de12px extra a≤360, sin cambiar tema ni desplegar; revisión de la desviación de D-061 por Claude/José.
+- columns.cjs incorpora --live y perfil móvil; narrow-position-proposal.css no se encola. Capturas/metadatos de producción y ensayo añadido, informe ESCUCHARTE_DISCREPANCIA_MOVIL, STATUS/NEXT/BATON/QA actualizados. PHP/builds sin cambios.

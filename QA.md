@@ -113,3 +113,7 @@ Estado vigente: **OPEN / REVIEW**. La indicación D-057 conserva retrato grande 
 ## Q-039 · cierre local con la referencia60/40 de José (D-061)
 
 **FIXED_LOCAL; producción pendiente.** D-061 acepta rostro parcial y sustituye el mínimo80 %. Columnas60/40, foto−5px de la división y alto completo de fila. Medidos360/390/414/430/483/768/1024/1440; párrafo sin intersección de alfa en360/390/430; tres tarjetas sin salto de sección, sin desbordes ni errores de consola/JS en360/390/430/768/1440. Desktop1440 sigue849px. Fuente: components.css, bloque móvil60/40; docs/ESCUCHARTE_60_40_2026-10-10.md y columns-carousel.json. No se cambian textos, fondo, menú, sombras ni JS. Repetir en producción antes de VERIFIED; preguntas por Claude.
+
+## Q-039 · reabierto por el resultado en teléfono
+
+**OPEN.** José observa casi lo mismo aun en incógnito. Muestras de producción móvil360/390 sí cargan60/40 (CSSver1791651570). En360:left anterior207,672px → actual207,797px, height707,750px en ambos. La implementación geométrica no produjo el acercamiento visible esperado. Propuesta adicional12px a360 conserva tamaño y arroja0 % de intersección de alfa con cajas del párrafo, pero su offset total−17 requiere revisión por Claude/José frente a D-061. Sin cambios del tema ni despliegue por Codex. Evidencia: docs/ESCUCHARTE_DISCREPANCIA_MOVIL_2026-10-10.md; live-phone-css.json y narrow-position-metrics.json. No certificar el teléfono de José desde la emulación.

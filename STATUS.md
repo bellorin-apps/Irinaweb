@@ -12,7 +12,7 @@ Actualizado: 2026-10-10 · Codex · cálculo: PLAN → PROGRESS.
 - Portada, Dra., Primera consulta, FAQ, Contacto, legales, Gracias y Links públicas. Gracias/Links noindex y fuera de sitemap. Cabeceras de seguridad presentes.
 - Pilares y fichas sin destino público. No se modificaron estados clínicos.
 - PHP/PHPCS, builds, sintaxis y regresiones locales pasan; sesión local verificó FAQPage y datos ocultos en producción. Fetchpriority duplicado sigue abierto.
-- Escucharte: D-061 establece60/40 y foto−5px respecto de la división; rostro parcial aceptado. CSS implementado, pruebas locales de columnas/texto/tres tarjetas pasan; sin desplegar. Evidencia en docs/ESCUCHARTE_60_40_2026-10-10.md.
+- Escucharte60/40 verificado en producción en muestras360/390. José sigue viendo poco cambio: a360 el retrato se desplazó apenas0,125px respecto de la versión anterior. Q-039 abierto; propuesta estrecha aislada, sin aplicarla al tema. Evidencia en docs/ESCUCHARTE_DISCREPANCIA_MOVIL_2026-10-10.md.
 - Cambios previos de cuatro maquetas HTML preservados fuera de nuestros commits.
 
 ## Gates pendientes
@@ -21,7 +21,7 @@ Actualizado: 2026-10-10 · Codex · cálculo: PLAN → PROGRESS.
 |---|---|---|
 | Despliegue y verificación pública del nuevo60/40 | Pendiente; auditoría general ya desplegada | Claude local |
 | REST/Gutenberg y rol médico en WP completo | Pendiente; tests aislados pasan | Sesión local en copia/staging |
-| Composición60/40 con figura grande y párrafo legible | FIXED_LOCAL según D-061; producción/revisión visual pendientes | Claude local despliega; José revisa; preguntas por Claude |
+| Composición móvil satisfactoria en teléfono real | CSS60/40 público, pero resultado estrecho sigue abierto; propuesta−12px pendiente de revisión | Preguntas por Claude; prueba real por sesión local/José |
 | Marcadores de borrador en páginas públicas | Aprobación del bloque por confirmar; Q-043 | Dra./José |
 | Fichas médicas | Revisión/aprobación pendientes | Dra. |
 | GA4, foto definitiva, cobertura GSC | Dependencias conocidas | José/Dra. |

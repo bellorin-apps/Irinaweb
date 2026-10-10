@@ -1,0 +1,86 @@
+[
+  {
+    "width": 360,
+    "display": "grid",
+    "columns": "196.797px 131.188px",
+    "grid": {
+      "left": 16,
+      "width": 328,
+      "height": 707.75,
+      "bottom": 951.40625
+    },
+    "text": {
+      "left": 16,
+      "width": 196.796875,
+      "height": 707.75,
+      "bottom": 951.40625
+    },
+    "portrait": {
+      "left": 207.796875,
+      "width": 131.1875,
+      "height": 707.75,
+      "bottom": 951.40625
+    },
+    "image": {
+      "left": 207.796875,
+      "width": 334.046875,
+      "height": 707.75,
+      "bottom": 951.40625
+    },
+    "css": [
+      "https://drairinagonzalez.com/wp-content/themes/irina-gonzalez/assets/css/components.css?ver=1791651570"
+    ],
+    "cssStatus": 200,
+    "hasNewGrid": true,
+    "hasOldLeft": false,
+    "cacheHeaders": {
+      "cache-control": "public, max-age=604800",
+      "last-modified": "Sat, 10 Oct 2026 16:59:30 GMT",
+      "etag": "\"bb9c-6aca6ef2-9aa764f5597bdde5;br\"",
+      "age": "2",
+      "x-hcdn-cache-status": "MISS"
+    }
+  },
+  {
+    "width": 390,
+    "display": "grid",
+    "columns": "214.797px 143.188px",
+    "grid": {
+      "left": 16,
+      "width": 358,
+      "height": 638.96875,
+      "bottom": 917.75
+    },
+    "text": {
+      "left": 16,
+      "width": 214.796875,
+      "height": 638.96875,
+      "bottom": 917.75
+    },
+    "portrait": {
+      "left": 225.796875,
+      "width": 143.1875,
+      "height": 638.96875,
+      "bottom": 917.75
+    },
+    "image": {
+      "left": 225.796875,
+      "width": 301.375,
+      "height": 638.96875,
+      "bottom": 917.75
+    },
+    "css": [
+      "https://drairinagonzalez.com/wp-content/themes/irina-gonzalez/assets/css/components.css?ver=1791651570"
+    ],
+    "cssStatus": 200,
+    "hasNewGrid": true,
+    "hasOldLeft": false,
+    "cacheHeaders": {
+      "cache-control": "public, max-age=604800",
+      "last-modified": "Sat, 10 Oct 2026 16:59:30 GMT",
+      "etag": "\"bb9c-6aca6ef2-9aa764f5597bdde5;br\"",
+      "age": "3",
+      "x-hcdn-cache-status": "HIT"
+    }
+  }
+]

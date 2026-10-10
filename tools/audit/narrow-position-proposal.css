@@ -1,0 +1,5 @@
+/* PROPUESTA, no se encola ni despliega. Fuera del margen -2/-5 solicitado:
+   Claude presenta el ajuste a José antes de incorporarlo al tema. */
+@media (max-width: 360px) {
+  .di-section--doctor-bg .di-doctor__portrait { left: -17px; }
+}

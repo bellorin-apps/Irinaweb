@@ -1,0 +1,227 @@
+[
+  {
+    "width": 360,
+    "live": true,
+    "deviceScaleFactor": 2,
+    "cards": [
+      {
+        "sectionHeight": 803.75,
+        "textPercent": 59.99904725609756,
+        "photoPercent": 39.99618902439025,
+        "offset": -5.003124999999983,
+        "imageHeight": 707.75,
+        "bottomGap": 0,
+        "cardHeight": 108.640625,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 803.75,
+        "textPercent": 59.99904725609756,
+        "photoPercent": 39.99618902439025,
+        "offset": -5.003124999999983,
+        "imageHeight": 707.75,
+        "bottomGap": 0,
+        "cardHeight": 108.640625,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 803.75,
+        "textPercent": 59.99904725609756,
+        "photoPercent": 39.99618902439025,
+        "offset": -5.003124999999983,
+        "imageHeight": 707.75,
+        "bottomGap": 0,
+        "cardHeight": 126.53125,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "sectionHeightStable": true
+  },
+  {
+    "width": 390,
+    "live": true,
+    "deviceScaleFactor": 2,
+    "cards": [
+      {
+        "sectionHeight": 734.96875,
+        "textPercent": 59.99912709497207,
+        "photoPercent": 39.99650837988827,
+        "offset": -5.003124999999983,
+        "imageHeight": 638.96875,
+        "bottomGap": 0,
+        "cardHeight": 90.75,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 734.96875,
+        "textPercent": 59.99912709497207,
+        "photoPercent": 39.99650837988827,
+        "offset": -5.003124999999983,
+        "imageHeight": 638.96875,
+        "bottomGap": 0,
+        "cardHeight": 90.75,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 734.96875,
+        "textPercent": 59.99912709497207,
+        "photoPercent": 39.99650837988827,
+        "offset": -5.003124999999983,
+        "imageHeight": 638.96875,
+        "bottomGap": 0,
+        "cardHeight": 108.640625,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "sectionHeightStable": true
+  },
+  {
+    "width": 430,
+    "live": true,
+    "deviceScaleFactor": 2,
+    "cards": [
+      {
+        "sectionHeight": 694.984375,
+        "textPercent": 59.996840192748245,
+        "photoPercent": 39.99921004818706,
+        "offset": -5.012499999999989,
+        "imageHeight": 598.984375,
+        "bottomGap": 0,
+        "cardHeight": 90.75,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 694.984375,
+        "textPercent": 59.996840192748245,
+        "photoPercent": 39.99921004818706,
+        "offset": -5.012499999999989,
+        "imageHeight": 598.984375,
+        "bottomGap": 0,
+        "cardHeight": 72.859375,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 694.984375,
+        "textPercent": 59.996840192748245,
+        "photoPercent": 39.99921004818706,
+        "offset": -5.012499999999989,
+        "imageHeight": 598.984375,
+        "bottomGap": 0,
+        "cardHeight": 90.75,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "sectionHeightStable": true
+  },
+  {
+    "width": 768,
+    "live": true,
+    "deviceScaleFactor": 2,
+    "cards": [
+      {
+        "sectionHeight": 590.484375,
+        "textPercent": 59.999115416086156,
+        "photoPercent": 39.99867312412924,
+        "offset": -5.006249999999966,
+        "imageHeight": 494.484375,
+        "bottomGap": 0,
+        "cardHeight": 54.96875,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 590.484375,
+        "textPercent": 59.999115416086156,
+        "photoPercent": 39.99867312412924,
+        "offset": -5.006249999999966,
+        "imageHeight": 494.484375,
+        "bottomGap": 0,
+        "cardHeight": 54.96875,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 590.484375,
+        "textPercent": 59.999115416086156,
+        "photoPercent": 39.99867312412924,
+        "offset": -5.006249999999966,
+        "imageHeight": 494.484375,
+        "bottomGap": 0,
+        "cardHeight": 54.96875,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "sectionHeightStable": true
+  },
+  {
+    "width": 1440,
+    "live": true,
+    "deviceScaleFactor": 1,
+    "cards": [
+      {
+        "sectionHeight": 849.015625,
+        "textPercent": 52.334280303030305,
+        "photoPercent": 42.81723484848485,
+        "offset": -570.90625,
+        "imageHeight": 729.015625,
+        "bottomGap": 0,
+        "cardHeight": 107.5625,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 849.015625,
+        "textPercent": 52.334280303030305,
+        "photoPercent": 42.81723484848485,
+        "offset": -570.90625,
+        "imageHeight": 729.015625,
+        "bottomGap": 0,
+        "cardHeight": 85.46875,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      },
+      {
+        "sectionHeight": 849.015625,
+        "textPercent": 52.334280303030305,
+        "photoPercent": 42.81723484848485,
+        "offset": -570.90625,
+        "imageHeight": 729.015625,
+        "bottomGap": 0,
+        "cardHeight": 107.5625,
+        "oneActive": true,
+        "dots": 3,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "sectionHeightStable": true
+  }
+]
