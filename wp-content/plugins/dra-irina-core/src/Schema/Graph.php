@@ -220,9 +220,15 @@ final class Graph {
 	/** Grafo por tipo de página. */
 	public function graph(): array {
 		$nodes = [];
+		if ( is_page( 'preguntas-frecuentes' ) && 'publish' === get_post_status( get_queried_object_id() ) ) {
+			$faq = $this->faq_page( get_queried_object_id() );
+			if ( $faq ) {
+				$nodes[] = $faq;
+			}
+		}
 		// Sin nombre profesional confirmado en Ajustes → Consultorio no se emite schema médico (MASTER_PROMPT §3, §40).
 		if ( '' === trim( (string) PracticeSettings::get( 'nombre_profesional' ) ) ) {
-			return apply_filters( 'dra_irina_schema_graph', [] );
+			return apply_filters( 'dra_irina_schema_graph', $nodes );
 		}
 		if ( is_front_page() ) {
 			$nodes[] = self::physician();
@@ -245,6 +251,52 @@ final class Graph {
 			];
 		}
 		return apply_filters( 'dra_irina_schema_graph', $nodes );
+	}
+
+	/** FAQ desde los mismos widgets y respuestas que se muestran, sin duplicar contenido. */
+	private function faq_page( int $post_id ): array {
+		$data = json_decode( (string) get_post_meta( $post_id, '_elementor_data', true ), true );
+		if ( ! is_array( $data ) ) {
+			return [];
+		}
+		$questions = [];
+		$walk      = static function ( array $elements ) use ( &$walk, &$questions ): void {
+			foreach ( $elements as $element ) {
+				if ( ! is_array( $element ) ) {
+					continue;
+				}
+				if ( 'di-faq' === ( $element['widgetType'] ?? '' ) ) {
+					foreach ( (array) ( $element['settings']['items'] ?? [] ) as $item ) {
+						if ( ! is_array( $item ) ) {
+							continue;
+						}
+						$name = trim( wp_strip_all_tags( (string) ( $item['pregunta'] ?? '' ) ) );
+						$text = trim( wp_strip_all_tags( do_shortcode( (string) ( $item['text'] ?? '' ) ) ) );
+						if ( '' !== $name && '' !== $text ) {
+							$questions[] = [
+								'@type'          => 'Question',
+								'name'           => $name,
+								'acceptedAnswer' => [
+									'@type' => 'Answer',
+									'text'  => $text,
+								],
+							];
+						}
+					}
+				}
+				if ( ! empty( $element['elements'] ) && is_array( $element['elements'] ) ) {
+					$walk( $element['elements'] );
+				}
+			}
+		};
+		$walk( $data );
+		return $questions ? [
+			'@type'      => 'FAQPage',
+			'@id'        => get_permalink( $post_id ) . '#faq',
+			'url'        => get_permalink( $post_id ),
+			'inLanguage' => 'es-MX',
+			'mainEntity' => $questions,
+		] : [];
 	}
 
 	private function medical_web_page( int $post_id ): array {
@@ -325,7 +377,7 @@ final class Graph {
 				'@context' => 'https://schema.org',
 				'@graph'   => $nodes,
 			],
-			JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+			JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT
 		) . '</script>' . "\n";
 	}
 

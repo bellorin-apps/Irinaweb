@@ -74,15 +74,35 @@ add_filter( 'wp_img_tag_add_auto_sizes', '__return_false' );
  * dispositivo a partir de ese original sin pérdida.
  */
 function irina_hero_image( int $attachment_id ): string {
-	return irina_image_original(
-		$attachment_id,
-		[
-			'loading'       => 'eager',
-			'fetchpriority' => 'high',
-			'decoding'      => 'async',
-		]
+	return irina_normalize_image_attributes(
+		irina_image_original(
+			$attachment_id,
+			[
+				'loading'       => 'eager',
+				'fetchpriority' => 'high',
+				'decoding'      => 'async',
+			]
+		)
 	);
 }
+
+/** Normaliza atributos de carga incluso si un optimizador añadió una segunda copia. */
+function irina_normalize_image_attributes( string $html ): string {
+	$processor = new \WP_HTML_Tag_Processor( $html );
+	while ( $processor->next_tag( 'IMG' ) ) {
+		foreach ( [ 'loading', 'fetchpriority' ] as $name ) {
+			$value = $processor->get_attribute( $name );
+			if ( is_string( $value ) ) {
+				$processor->remove_attribute( $name );
+				$processor->set_attribute( $name, $value );
+			}
+		}
+	}
+	return $processor->get_updated_html();
+}
+
+// Elementor puede optimizar imágenes después de renderizar el widget.
+add_filter( 'elementor/frontend/the_content', 'irina_normalize_image_attributes', 999 );
 
 /**
  * Imagen servida solo como archivo original (sin srcset ni «sizes»): la CDN decide el ancho por dispositivo (2400/1200 px),
@@ -115,4 +135,3 @@ add_filter(
 	10,
 	3
 );
-add_filter( 'wp_editor_set_quality', static fn(): int => 94 );

@@ -44,7 +44,7 @@ if ( post_type_exists( (string) $irina_a['post_type'] ) ) {
 			'posts_per_page' => 40,
 			'orderby'        => 'menu_order title',
 			'order'          => 'ASC',
-			'tax_query'      => $irina_tax,
+			'tax_query'      => $irina_tax, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- lista acotada de 40 fichas por área.
 		]
 	); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
 	foreach ( $irina_q as $irina_p ) {

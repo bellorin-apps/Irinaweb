@@ -82,12 +82,15 @@ function irina_enqueue_map( string $api_key ): void {
 			'in_footer' => true,
 		]
 	);
+	$decoded = json_decode( $style, true );
+	$style   = wp_json_encode( is_array( $decoded ) ? $decoded : [], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT );
 	wp_add_inline_script( 'irina-map', 'window.diMapStyle = ' . $style . '; window.diMapMarker = ' . wp_json_encode( IRINA_THEME_URI . '/assets/brand/map-pin.svg' ) . ';', 'before' );
+	// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Google controla v=weekly; no se agrega versión local.
 	wp_enqueue_script(
 		'google-maps',
 		'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode( $api_key ) . '&loading=async&callback=diInitMap&v=weekly&language=es&region=MX',
 		[ 'irina-map' ],
-		null,
+		null, // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Google controla v=weekly.
 		[
 			'strategy'  => 'defer', // Defer: se ejecuta tras map.js (mismo grupo, en orden), así el callback diInitMap ya existe.
 			'in_footer' => true,

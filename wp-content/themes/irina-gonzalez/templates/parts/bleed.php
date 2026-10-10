@@ -7,7 +7,7 @@
 
 declare( strict_types=1 );
 
-$irina_a       = wp_parse_args(
+$irina_a = wp_parse_args(
 	$args ?? [],
 	[
 		'title'    => '',
@@ -24,8 +24,8 @@ $irina_a       = wp_parse_args(
 	]
 );
 // Encuadre de la foto por dispositivo (object-position), validado: solo porcentajes/px/palabras.
-$irina_focus = static fn( string $v ): string => preg_match( '/^[a-z0-9%.\s-]{1,40}$/i', trim( $v ) ) ? trim( $v ) : '';
-$irina_style = array_filter(
+$irina_focus   = static fn( string $v ): string => preg_match( '/^[a-z0-9%.\s-]{1,40}$/i', trim( $v ) ) ? trim( $v ) : '';
+$irina_style   = array_filter(
 	[
 		'' !== $irina_focus( $irina_a['focus'] ) ? '--bleed-focus:' . $irina_focus( $irina_a['focus'] ) : '',
 		'' !== $irina_focus( $irina_a['focus_m'] ) ? '--bleed-focus-m:' . $irina_focus( $irina_a['focus_m'] ) : '',

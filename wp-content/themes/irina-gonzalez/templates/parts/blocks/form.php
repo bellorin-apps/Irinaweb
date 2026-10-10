@@ -27,13 +27,13 @@ $irina_priv    = get_page_by_path( 'aviso-de-privacidad', OBJECT, 'page' );
 $irina_priv_ur = $irina_priv ? (string) get_permalink( $irina_priv ) : home_url( '/aviso-de-privacidad/' );
 $irina_error   = isset( $_GET['di_error'] ) ? sanitize_key( wp_unslash( $_GET['di_error'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- solo para mostrar un aviso tras la redirección sin JS.
 $irina_errors  = [
-	'name'   => __( 'Escribe tu nombre.', 'irina-gonzalez' ),
-	'phone'  => __( 'Escribe un teléfono válido de 10 dígitos.', 'irina-gonzalez' ),
-	'email'  => __( 'El correo no parece válido. Puedes dejarlo vacío.', 'irina-gonzalez' ),
-	'motivo' => __( 'Elige el motivo de tu consulta.', 'irina-gonzalez' ),
+	'name'    => __( 'Escribe tu nombre.', 'irina-gonzalez' ),
+	'phone'   => __( 'Escribe un teléfono válido de 10 dígitos.', 'irina-gonzalez' ),
+	'email'   => __( 'El correo no parece válido. Puedes dejarlo vacío.', 'irina-gonzalez' ),
+	'motivo'  => __( 'Elige el motivo de tu consulta.', 'irina-gonzalez' ),
 	'consent' => __( 'Necesitamos tu consentimiento para contactarte.', 'irina-gonzalez' ),
-	'rate'   => __( 'Hemos recibido varios mensajes desde tu conexión. Espera unos minutos o escríbenos por WhatsApp.', 'irina-gonzalez' ),
-	'mail'   => __( 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp y te atendemos enseguida.', 'irina-gonzalez' ),
+	'rate'    => __( 'Hemos recibido varios mensajes desde tu conexión. Espera unos minutos o escríbenos por WhatsApp.', 'irina-gonzalez' ),
+	'mail'    => __( 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp y te atendemos enseguida.', 'irina-gonzalez' ),
 ];
 if ( ! $irina_core ) {
 	return;
