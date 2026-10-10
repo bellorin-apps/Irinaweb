@@ -135,3 +135,20 @@ add_filter(
 	10,
 	3
 );
+
+/**
+ * Último seguro contra atributos duplicados en las imágenes del contenido (p. ej. `fetchpriority` añadido dos veces por
+ * la optimización de carga de WordPress/Elementor sobre un <img> que ya lo traía): conserva la última aparición.
+ */
+add_filter(
+	'wp_content_img_tag',
+	static function ( string $img ): string {
+		foreach ( [ 'fetchpriority', 'loading', 'decoding' ] as $name ) {
+			if ( preg_match_all( '/\s' . $name . '="[^"]*"/', $img, $m ) && count( $m[0] ) > 1 ) {
+				$img = (string) preg_replace( '/\s' . $name . '="[^"]*"/', '', $img, count( $m[0] ) - 1 );
+			}
+		}
+		return $img;
+	},
+	100
+);
