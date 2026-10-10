@@ -50,9 +50,8 @@
     });
   }
 
-  // Credenciales de la sección de la Dra. en móvil: un ítem a la vez, rotación automática y puntos (propietario, 2026-10-09).
+  // Credenciales de la sección de la Dra.: un ítem a la vez, rotación automática, puntos y anillo, en todos los anchos (propietario, 2026-10-09/10).
   var creds = document.querySelector('.di-section--doctor-bg .di-creds');
-  var mq = window.matchMedia('(max-width: 899px)');
   if (creds && creds.children.length > 1) {
     var items = Array.prototype.slice.call(creds.children);
     var dots = null, timer = null, idx = 0;
@@ -85,12 +84,6 @@
       if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { show(idx + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); pauseThenResume(); }
     }, { passive: true });
     function setup() {
-      if (!mq.matches) {
-        stop(); creds.classList.remove('di-creds--carousel'); creds.style.minHeight = '';
-        items.forEach(function (li) { li.classList.remove('is-active', 'is-in', 'is-out-left'); });
-        if (dots) { dots.remove(); dots = null; }
-        return;
-      }
       if (creds.classList.contains('di-creds--carousel')) { return; }
       // Altura fija = ítem más alto, para que la sección no salte entre ítems.
       var h = 0; items.forEach(function (li) { h = Math.max(h, li.getBoundingClientRect().height); });
@@ -108,7 +101,6 @@
       show(0, 1); start();
     }
     setup();
-    if (mq.addEventListener) { mq.addEventListener('change', setup); } else if (mq.addListener) { mq.addListener(setup); }
   }
 
   // Barra móvil: reserva espacio inferior.
