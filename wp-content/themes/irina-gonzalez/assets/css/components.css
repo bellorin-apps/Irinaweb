@@ -231,8 +231,16 @@ body.menu-open { overflow: hidden; }
   /* Texto completo (overline, cita, párrafo, credenciales, botón) en la columna izquierda; el retrato, algo mayor, a la derecha. */
   .di-section--doctor-bg .di-doctor__text { width: 56%; padding-bottom: var(--space-xl); position: relative; z-index: 1; }
   .di-section--doctor-bg .di-doctor__lead { font-size: 0.92rem; }
-  /* Propietario (2026-10-09): sin la lista de credenciales en móvil (quedan overline, cita, párrafo y botón). */
-  .di-section--doctor-bg .di-creds { display: none; }
+  /* Propietario (2026-10-09): credenciales como carrusel de un ítem con puntos (JS: di-creds--carousel). */
+  .di-section--doctor-bg .di-creds { font-size: 0.86rem; }
+  .di-creds--carousel { position: relative; display: block; }
+  .di-creds--carousel li { display: none; }
+  .di-creds--carousel li.is-active { display: flex; }
+  .di-creds__dots { display: flex; gap: 8px; margin: 0.6rem 0 0; padding: 0; list-style: none; }
+  .di-creds__dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgb(36 31 35 / 0.22); cursor: pointer; }
+  .di-creds__dots button[aria-current="true"] { background: var(--color-primary); }
+  .di-section--doctor-dark .di-creds__dots button { background: rgb(255 255 255 / 0.35); }
+  .di-section--doctor-dark .di-creds__dots button[aria-current="true"] { background: #fff; }
   .di-section--doctor-bg .di-btn .di-btn__long { display: none; }
   .di-section--doctor-bg .di-btn .di-btn__short { display: inline; }
   .di-section--doctor-bg .di-btn { width: auto; padding: 0.8rem 1.3rem; font-size: 0.95rem; white-space: nowrap; }

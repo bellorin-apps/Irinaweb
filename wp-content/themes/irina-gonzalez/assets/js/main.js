@@ -50,6 +50,47 @@
     });
   }
 
+  // Credenciales de la sección de la Dra. en móvil: un ítem a la vez, rotación automática y puntos (propietario, 2026-10-09).
+  var creds = document.querySelector('.di-section--doctor-bg .di-creds');
+  var mq = window.matchMedia('(max-width: 899px)');
+  if (creds && creds.children.length > 1) {
+    var items = Array.prototype.slice.call(creds.children);
+    var dots = null, timer = null, idx = 0;
+    function show(i) {
+      idx = (i + items.length) % items.length;
+      items.forEach(function (li, k) { li.classList.toggle('is-active', k === idx); });
+      if (dots) { Array.prototype.forEach.call(dots.children, function (b, k) { b.setAttribute('aria-current', k === idx ? 'true' : 'false'); }); }
+    }
+    function start() { if (reduce || timer) { return; } timer = setInterval(function () { show(idx + 1); }, 4000); }
+    function stop() { clearInterval(timer); timer = null; }
+    function setup() {
+      if (!mq.matches) {
+        stop(); creds.classList.remove('di-creds--carousel'); creds.style.minHeight = '';
+        items.forEach(function (li) { li.classList.remove('is-active'); });
+        if (dots) { dots.remove(); dots = null; }
+        return;
+      }
+      if (creds.classList.contains('di-creds--carousel')) { return; }
+      // Altura fija = ítem más alto, para que la sección no salte entre ítems.
+      var h = 0; items.forEach(function (li) { h = Math.max(h, li.getBoundingClientRect().height); });
+      creds.classList.add('di-creds--carousel'); creds.style.minHeight = h ? h + 'px' : '';
+      creds.setAttribute('aria-live', 'polite');
+      dots = document.createElement('div'); dots.className = 'di-creds__dots';
+      items.forEach(function (li, k) {
+        var b = document.createElement('button'); b.type = 'button';
+        b.setAttribute('aria-label', 'Credencial ' + (k + 1) + ' de ' + items.length);
+        b.addEventListener('click', function () { stop(); show(k); });
+        dots.appendChild(b);
+      });
+      creds.insertAdjacentElement('afterend', dots);
+      creds.addEventListener('touchstart', stop, { passive: true });
+      creds.addEventListener('pointerdown', stop);
+      show(0); start();
+    }
+    setup();
+    if (mq.addEventListener) { mq.addEventListener('change', setup); } else if (mq.addListener) { mq.addListener(setup); }
+  }
+
   // Barra móvil: reserva espacio inferior.
   if (document.querySelector('.di-mobile-bar')) { document.body.classList.add('has-mobile-bar'); }
 })();
