@@ -507,3 +507,18 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
   .di-bleed .di-container:has(.di-crumbs) .di-hero-cta { margin-top: var(--space-xs); }
   .di-bleed .di-container:has(.di-crumbs) .di-crumbs { margin-bottom: 2.25rem; }
 }
+
+/* Logos de hospitales y membresías (propietario, 2026-10-10): sección morada de la paleta, logos en blanco con aire, carrusel lento y continuo; respiración grande arriba y abajo. */
+.di-logos { background: var(--color-primary); color: #fff; padding-block: clamp(5rem, 12vh, 8.5rem); --title-accent: var(--color-accent); }
+.di-logos h2 { color: #fff; margin: 0 0 clamp(3rem, 7vh, 5rem); }
+.di-logos h2 em { color: inherit; }
+.di-logos .di-eyebrow { color: var(--color-accent); }
+.di-logos__rail { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
+.di-logos__track { display: flex; align-items: center; gap: clamp(3.5rem, 7vw, 7rem); width: max-content; padding-inline: clamp(1.5rem, 3vw, 3rem); animation: di-logos 70s linear infinite; }
+.di-logos__rail:hover .di-logos__track { animation-play-state: paused; }
+.di-logos__item { display: block; flex: none; line-height: 0; filter: brightness(0) invert(1); opacity: 0.92; transition: opacity var(--motion-base) var(--ease-out); }
+.di-logos__item:hover, .di-logos__item:focus-visible { opacity: 1; }
+.di-logos__item img { height: 56px; width: auto; max-width: 220px; object-fit: contain; }
+@keyframes di-logos { to { transform: translateX(-50%); } }
+@media (max-width: 899px) { .di-logos { padding-block: clamp(4rem, 10vh, 6rem); } .di-logos__item img { height: 40px; max-width: 160px; } .di-logos__track { gap: 2.75rem; animation-duration: 45s; } }
+@media (prefers-reduced-motion: reduce) { .di-logos__track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; row-gap: 2rem; } .di-logos__item[aria-hidden="true"] { display: none; } .di-logos__rail { mask-image: none; -webkit-mask-image: none; } }

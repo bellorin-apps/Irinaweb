@@ -120,8 +120,101 @@
         "settings": {
           "eyebrow": "Formación y certificaciones",
           "title": "<b>Credenciales</b> <em>verificables</em>",
-          "tags_title": "Membresías y hospitales",
+          "tags_title": "",
           "extra_tags": ""
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "d76675b",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "101a993",
+        "elType": "widget",
+        "widgetType": "di-logos",
+        "settings": {
+          "eyebrow": "",
+          "title": "Membresías y hospitales",
+          "items": [
+            {
+              "name": "Christus Muguerza",
+              "slug": "christus-muguerza",
+              "url": "",
+              "_id": "528a870"
+            },
+            {
+              "name": "Hospital Zambrano Hellion",
+              "slug": "zambrano-hellion",
+              "url": "",
+              "_id": "ffcf0f8"
+            },
+            {
+              "name": "Hospital Ángeles Valle Oriente",
+              "slug": "angeles-valle-oriente",
+              "url": "",
+              "_id": "1c4c1f7"
+            },
+            {
+              "name": "Hospital Universitario Dr. José Eleuterio González",
+              "slug": "hospital-universitario",
+              "url": "",
+              "_id": "bfae639"
+            },
+            {
+              "name": "Hospitaria",
+              "slug": "hospitaria",
+              "url": "",
+              "_id": "85d2ed7"
+            },
+            {
+              "name": "Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello",
+              "slug": "consejo-orl",
+              "url": "",
+              "_id": "4ed1a22"
+            },
+            {
+              "name": "Federación Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (FESORMEX)",
+              "slug": "fesormex",
+              "url": "",
+              "_id": "f7170ea"
+            },
+            {
+              "name": "Sociedad Iberoamericana de Cirugía de Sueño",
+              "slug": "sociedad-iberoamericana-sueno",
+              "url": "",
+              "_id": "f1d794f"
+            },
+            {
+              "name": "Colegio de Otorrinolaringología de Nuevo León",
+              "slug": "colegio-orl-nl",
+              "url": "",
+              "_id": "4287320"
+            }
+          ]
         },
         "elements": []
       }

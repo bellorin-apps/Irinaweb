@@ -3,6 +3,8 @@
 import json, hashlib, pathlib
 
 def eid(s): return hashlib.md5(s.encode()).hexdigest()[:7]
+def rep(items, *keys):
+    return [dict(zip(keys, it), _id=eid("r-" + it[1])) for it in items]
 def container(key, widget, settings):
     return {"id": eid("c-" + key), "elType": "container", "isInner": False,
             "settings": {"content_width": "full", "flex_direction": "column",
@@ -23,8 +25,21 @@ page = [
         "text": "", "draft": "yes"}),
     container("dra-creds", "di-credenciales", {
         "eyebrow": "Formación y certificaciones", "title": "<b>Credenciales</b> <em>verificables</em>",
-        "tags_title": "Membresías y hospitales",
+        "tags_title": "",  # vacío: membresías y hospitales van en la sección de logos (di-logos)
         "extra_tags": ""}),
+    container("dra-logos", "di-logos", {
+        "eyebrow": "", "title": "Membresías y hospitales",
+        "items": rep([
+            ("Christus Muguerza", "christus-muguerza", ""),
+            ("Hospital Zambrano Hellion", "zambrano-hellion", ""),
+            ("Hospital Ángeles Valle Oriente", "angeles-valle-oriente", ""),
+            ("Hospital Universitario Dr. José Eleuterio González", "hospital-universitario", ""),
+            ("Hospitaria", "hospitaria", ""),
+            ("Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello", "consejo-orl", ""),
+            ("Federación Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (FESORMEX)", "fesormex", ""),
+            ("Sociedad Iberoamericana de Cirugía de Sueño", "sociedad-iberoamericana-sueno", ""),
+            ("Colegio de Otorrinolaringología de Nuevo León", "colegio-orl-nl", ""),
+        ], "name", "slug", "url")}),
     container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "Formación <b>continua</b> en <em>cirugía de sueño</em>"}),
     container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu primera consulta",
         "text": "30 minutos para escucharte, explorar y proponerte un plan.", "message": ""}),

@@ -100,3 +100,8 @@ Claude local: deploy-code.sh del HEAD de esta entrega y purga; NO setup-site/pag
 - 2026-10-10 (mediodía): causa raíz de «Escucharte» en teléfonos (Q-024): la CDN recortaba el retrato alto con UA móvil; parámetro de versión en imágenes altas. Mapa con Map ID y marcador avanzado (D-059); correo HTML del formulario; copia Bcc al propietario. Confirmado por el propietario en Samsung e iPhone.
 - 2026-10-10 (tarde): GA4 activo (G-5961XX8QZ7, propiedad existente del dominio anterior reutilizada); Map ID con diseño asociado por el propietario (propagación pendiente); hero de la Dra. como el de la home; regla D-063 de calidad (CDN móvil a 2400/100 pendiente en hPanel).
 - 2026-10-10 (tarde, 2): fotos resubidas en WebP q100 con versión móvil de 1600 px (D-064; portada 8,6 MB escritorio / 8,7 MB móvil, antes 13 MB en móvil con q100 sin versión móvil); mapa con estilo embebido y comercios ocultos (D-065); heros que dejan asomar la sección siguiente (título limitado a 10vh, home con menos aire, fila de confianza oculta en pantallas bajas) y migas de pan sutiles a media altura (40 % de ancho en móvil); GA4 activo; clave de Maps restringida (Q-021 cerrada).
+
+## 2026-10-10 — Logos de hospitales y membresías (sección morada, sin despliegue)
+
+- Widget `di-logos` (plugin 0.4.4), parte `blocks/logos.php`, CSS `.di-logos` y bloque `dra-logos` en `build-dra.py` tras credenciales; `tags_title` vacío retira las etiquetas de texto. JSON regenerado. D-066.
+- Pendiente: los 9 SVG en `wp-content/themes/irina-gonzalez/assets/brand/logos/` con los slugs del build (los exporta José; la sesión local los copia al repo), `deploy-code.sh` + `setup-dra.sh` + purga.
