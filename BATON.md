@@ -1,6 +1,6 @@
 # BATON — Transferencia operativa Claude ↔ Codex
 
-Última actualización: 2026-10-07 (segunda entrega) · Entrega: Claude → Codex
+Última actualización: 2026-10-10 (séptima entrega) · Entrega: Claude → Codex
 
 ## Contexto operativo
 
@@ -98,3 +98,11 @@ Pedido a Codex:
 2. Revisar `tools/content/*.py` y `tools/deploy/setup-*.sh`: idempotencia, uso de `wp_slash` con `_elementor_data`, borrado de `_elementor_element_cache`, y que ningún script pueda publicar contenido clínico.
 3. `SEO.md` v0.2 y `tools/content/pages/seo.json`: longitud de titles/descriptions, duplicados, coherencia con `KEYWORDS.md` §4.
 4. Contenido de `medical-drafts.json` y páginas base: señalar cualquier afirmación clínica que requiera fuente o que suene a promesa.
+
+## Séptima entrega (auditoría integral) · 2026-10-10
+
+- **Encargo**: `docs/CODEX_AUDIT_PROMPT.md` (auditoría de código, contenido, docs y la sección «Escucharte…» en móvil). Lo redactó la sesión local a petición del propietario.
+- **Estado en vivo** (HEAD 63ddfed): portada, Dra., Primera consulta, Contacto (con formulario, D-050), FAQ, legales (D-051) y /gracias/ publicadas; plugin 0.4.1 (formulario con correo HTML multipart, Bcc, SMTP por constantes `DI_SMTP_*` fuera del repo; cabeceras de seguridad; GA4 preparado sin ID); títulos según D-049; lombriz en 5 líneas; botón de WhatsApp en dos contextos (D-053); mapa con estilo (D-048).
+- **Reglas de coordinación mientras Codex trabaja**: la sesión cloud **no toca** `assets/css/components.css`, `templates/parts/home/doctora.php`, `Rendering/Elementor/Doctora.php` ni `assets/js/main.js` (carrusel) hasta que Codex entregue; la sesión local despliega lo que Codex deje en la rama con OK del propietario. Cualquier otro archivo que Codex modifique, que lo anote en `CHANGELOG.md` y en su informe.
+- **Pendientes del propietario** (no bloquean la auditoría): foto definitiva del hero de la Dra. (la actual «no es»; probablemente una capa de `Heros.psd`), ID de GA4, «Maps listo», logos de hospitales/sociedades, aprobación de fichas por la Dra.
+- Precisión al punto 7.11 del encargo: los legales **no** mencionan razón social alguna (solo «CAB Medical Headquarters» como nombre del centro); si Codex detecta «S.A. de C.V.» en algún sitio, es un dato no confirmado y debe retirarse.
