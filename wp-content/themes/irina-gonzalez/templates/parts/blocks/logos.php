@@ -73,7 +73,7 @@ if ( ! $irina_logos ) {
 				$irina_tag  = '' !== $irina_l['url'] ? 'a' : 'span';
 				$irina_attr = '' !== $irina_l['url'] ? ' href="' . esc_url( $irina_l['url'] ) . '" target="_blank" rel="noopener"' : '';
 				?>
-			<<?php echo $irina_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> class="di-logos__item di-logos__item--<?php echo esc_attr( $irina_l['shape'] ); ?>"<?php echo $irina_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><?php echo $irina_copy ? ' aria-hidden="true"' : ' role="listitem"'; ?>><img src="<?php echo esc_url( $irina_l['src'] ); ?>" alt="<?php echo esc_attr( $irina_copy ? '' : $irina_l['name'] ); ?>" loading="lazy" decoding="async"></<?php echo $irina_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+			<<?php echo $irina_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> class="di-logos__item di-logos__item--<?php echo esc_attr( $irina_l['shape'] ); ?> di-tip" data-tip="<?php echo esc_attr( $irina_l['name'] ); ?>"<?php echo 'a' === $irina_tag ? '' : ' tabindex="0"'; ?><?php echo $irina_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><?php echo $irina_copy ? ' aria-hidden="true"' : ' role="listitem"'; ?>><img src="<?php echo esc_url( $irina_l['src'] ); ?>" alt="<?php echo esc_attr( $irina_copy ? '' : $irina_l['name'] ); ?>" loading="lazy" decoding="async"></<?php echo $irina_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 				<?php
 			endforeach;
 		endforeach;

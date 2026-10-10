@@ -508,14 +508,24 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
   .di-bleed .di-container:has(.di-crumbs) .di-crumbs { margin-bottom: 2.25rem; }
 }
 
+/* Tooltip estándar (propietario, 2026-10-10): cualquier elemento con .di-tip y data-tip muestra ese texto encima al pasar el cursor o al enfocar (teclado y toque). Solo CSS; colores ajustables por sección con --tip-bg/--tip-fg. */
+.di-tip { --tip-bg: #2b1c34; --tip-fg: #fff; position: relative; }
+.di-tip::after, .di-tip::before { position: absolute; left: 50%; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity var(--motion-fast) var(--ease-out), transform var(--motion-fast) var(--ease-out), visibility 0s linear var(--motion-fast); z-index: 6; }
+.di-tip::after { content: attr(data-tip); bottom: calc(100% + 0.8rem); transform: translate(-50%, 4px); width: max-content; max-width: min(20rem, 80vw); padding: 0.5rem 0.8rem; border-radius: var(--radius-md); background: var(--tip-bg); color: var(--tip-fg); font: 500 0.78rem/1.35 var(--font-body); letter-spacing: 0.01em; text-align: center; white-space: normal; }
+.di-tip::before { content: ""; bottom: calc(100% + 0.8rem - 6px); transform: translate(-50%, 4px); border: 6px solid transparent; border-top-color: var(--tip-bg); border-bottom: 0; }
+.di-tip:hover::after, .di-tip:hover::before, .di-tip:focus-visible::after, .di-tip:focus-visible::before, .di-tip:focus::after, .di-tip:focus::before { opacity: 1; visibility: visible; transform: translate(-50%, 0); transition-delay: 0s; }
+.di-tip:focus { outline: none; }
+.di-tip:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 6px; }
+
 /* Logos de hospitales y membresías (propietario, 2026-10-10): sección morada de la paleta, logos en blanco con aire, carrusel lento y continuo; respiración grande arriba y abajo. */
 .di-logos { background: var(--color-primary); color: #fff; padding-block: clamp(5rem, 12vh, 8.5rem); --title-accent: var(--color-accent); }
-.di-logos h2 { color: #fff; margin: 0 0 clamp(3rem, 7vh, 5rem); }
+.di-logos h2 { color: #fff; margin: 0 0 clamp(1rem, 3vh, 2rem); /* el carril añade 4rem arriba para el tooltip */ }
 .di-logos .di-eyebrow { color: var(--color-accent); }
 .di-logos__rail { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
-.di-logos__track { display: flex; align-items: center; gap: clamp(3.5rem, 7vw, 7rem); width: max-content; padding-inline: clamp(1.5rem, 3vw, 3rem); animation: di-logos 70s linear infinite; }
+.di-logos__track { display: flex; align-items: center; gap: clamp(3.5rem, 7vw, 7rem); width: max-content; padding: 4rem clamp(1.5rem, 3vw, 3rem) 0.5rem; /* arriba: sitio para el tooltip dentro del carril con overflow oculto */ animation: di-logos 70s linear infinite; }
 .di-logos__rail:hover .di-logos__track { animation-play-state: paused; }
-.di-logos__item { display: block; flex: none; line-height: 0; filter: brightness(0) invert(1); opacity: 0.92; transition: opacity var(--motion-base) var(--ease-out); }
+.di-logos__item { display: block; flex: none; line-height: 0; opacity: 0.92; transition: opacity var(--motion-base) var(--ease-out); --tip-bg: #2b1c34; }
+.di-logos__item img { filter: brightness(0) invert(1); }
 .di-logos__item:hover, .di-logos__item:focus-visible { opacity: 1; }
 .di-logos__item img { height: 60px; width: auto; max-width: 240px; object-fit: contain; }
 .di-logos__item--emblem img { height: 84px; }
