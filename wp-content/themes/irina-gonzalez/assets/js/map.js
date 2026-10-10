@@ -23,7 +23,7 @@
       // Marcador avanzado con el pin de la marca como contenido (sin aviso de obsolescencia).
       var pin = document.createElement('img');
       pin.src = window.diMapMarker || ''; pin.width = 48; pin.height = 60; pin.alt = ''; pin.style.display = 'block'; pin.style.transform = 'translateY(2px)';
-      var adv = new google.maps.marker.AdvancedMarkerElement({ map: map, position: pos, title: el.dataset.title || '', content: window.diMapMarker ? pin : undefined });
+      var adv = new google.maps.marker.AdvancedMarkerElement({ map: map, position: pos, title: el.dataset.title || '', content: window.diMapMarker ? pin : undefined, gmpClickable: true });
       adv.addEventListener('gmp-click', open);
     } else {
       var marker = new google.maps.Marker({
