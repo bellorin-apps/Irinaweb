@@ -213,17 +213,20 @@ body.menu-open { overflow: hidden; }
   .di-doctor__portrait { align-self: stretch; display: flex; align-items: flex-end; justify-content: flex-start; line-height: 0; margin-top: -4.5rem; }
   .di-doctor__portrait img { display: block; height: calc(100% + 4.5rem); width: auto; max-width: none; object-fit: contain; object-position: bottom; }
 }
-@media (max-width: 899px) {
-  .di-doctor__portrait { line-height: 0; }
-  .di-doctor__portrait img { display: block; width: 100%; height: auto; object-fit: contain; object-position: bottom; }
-}
+
 .di-section--doctor-light { color: var(--color-text); }
 .di-section--doctor-light .di-quote { color: var(--color-text); }
 .di-section--doctor-dark { color: #fff; }
 .di-section--doctor-dark .di-quote, .di-section--doctor-dark .di-creds { color: #fff; }
 .di-section--doctor-dark .di-eyebrow { color: var(--color-accent); }
 .di-section--doctor-dark .di-creds .di-icon { color: var(--color-accent); }
-@media (max-width: 899px) { .di-section--doctor-bg .di-doctor { gap: var(--space-xl); } .di-section--doctor-bg .di-doctor__text { order: 1; padding-bottom: 0; } .di-doctor__portrait { order: 2; } .di-doctor__portrait img { max-height: 70vh; } }
+/* Móvil (propietario, 2026-10-10): texto a la izquierda y la Dra. a la derecha, solo su mitad visible, sin tocar el texto. */
+@media (max-width: 899px) {
+  .di-section--doctor-bg .di-doctor { display: block; position: relative; min-height: 560px; }
+  .di-section--doctor-bg .di-doctor__text { width: 58%; padding-bottom: var(--space-2xl); position: relative; z-index: 1; }
+  .di-section--doctor-bg .di-doctor__portrait { position: absolute; right: 0; bottom: 0; height: 64%; transform: translateX(42%); line-height: 0; }
+  .di-section--doctor-bg .di-doctor__portrait img { display: block; height: 100%; width: auto; object-fit: contain; object-position: bottom; }
+}
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }
 .di-creds li { display: flex; gap: 0.7rem; align-items: flex-start; }
 .di-creds .di-icon { color: var(--color-secondary-strong); margin-top: 0.25rem; }
