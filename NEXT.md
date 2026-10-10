@@ -4,6 +4,8 @@
 
 ## Prioridad 1 — Desbloqueadores (propietario)
 
+- [ ] **Mapa con estilo (D-048)**: José crea la clave de API de Google Maps (Maps JavaScript API, restringida a drairinagonzalez.com) y la deja en Recursos (Irina)/maps-api-key.txt; la sesión local la carga en el ajuste `maps_api_key` y borra el archivo. Opcional: JSON de Snazzy Maps en `maps_style_json`.
+
 - [x] **Tanda 1 (D-046)** confirmada por José (2026-10-09): overline lombriz corta estática en color del texto, botones glass sin bordes, sombra móvil desde la mitad del título más suave. 
 - [x] CDN: José decide NO apagar la optimización inteligente (2026-10-10): se acepta 1× en móvil para imágenes que no van a sangre (tarjetas, retrato); el hero sigue a 2400/1200 px. Cerrado.
 - [x] Fotos de tarjeta a 2040×2040 subidas tal cual (area-orl 329, area-sueno 330; 2026-10-10).

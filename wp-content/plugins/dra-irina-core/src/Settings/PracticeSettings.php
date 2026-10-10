@@ -34,6 +34,8 @@ final class PracticeSettings {
 			'geo_lat'              => [ 'Latitud', 'text', true ],
 			'geo_lng'              => [ 'Longitud', 'text', true ],
 			'maps_url'             => [ 'Enlace de Google Maps', 'url', true ],
+			'maps_api_key'         => [ 'Clave de API de Google Maps (JavaScript; restringida al dominio)', 'text', false ],
+			'maps_style_json'      => [ 'Estilo del mapa (JSON de Snazzy Maps; vacío = estilo de la paleta)', 'json', false ],
 			'telefono'             => [ 'Teléfono del consultorio (E.164, ej. +528115695744)', 'text', true ],
 			'whatsapp'             => [ 'WhatsApp (E.164, ej. +528123685381)', 'text', true ],
 			'whatsapp_mensaje'     => [ 'Mensaje prellenado de WhatsApp', 'textarea', true ],
@@ -112,6 +114,10 @@ final class PracticeSettings {
 				case 'textarea':
 					$out[ $key ] = sanitize_textarea_field( (string) $raw );
 					break;
+				case 'json':
+					$decoded     = json_decode( (string) $raw, true );
+					$out[ $key ] = is_array( $decoded ) ? (string) wp_json_encode( $decoded ) : '';
+					break;
 				default:
 					$out[ $key ] = sanitize_text_field( (string) $raw );
 			}
@@ -142,7 +148,7 @@ final class PracticeSettings {
 								$name = self::OPTION . '[' . $key . ']';
 								$val  = $values[ $key ] ?? '';
 								?>
-								<?php if ( 'textarea' === $type ) : ?>
+								<?php if ( 'textarea' === $type || 'json' === $type ) : ?>
 									<textarea id="di-<?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( $name ); ?>" rows="4" class="large-text"><?php echo esc_textarea( (string) $val ); ?></textarea>
 								<?php elseif ( 'checkbox' === $type ) : ?>
 									<input type="checkbox" id="di-<?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( $name ); ?>" value="1" <?php checked( (bool) $val ); ?> />

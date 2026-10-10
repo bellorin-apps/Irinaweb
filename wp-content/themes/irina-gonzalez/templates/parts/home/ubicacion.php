@@ -7,7 +7,7 @@
 
 declare( strict_types=1 );
 
-$irina_a     = wp_parse_args(
+$irina_a   = wp_parse_args(
 	$args ?? [],
 	[
 		'eyebrow'   => __( 'Consultorio', 'irina-gonzalez' ),
@@ -16,8 +16,8 @@ $irina_a     = wp_parse_args(
 		'map_embed' => '',
 	]
 );
-$irina_tel   = (string) irina_practice( 'telefono' );
-$irina_fac   = array_merge( [ [ __( 'Dirección', 'irina-gonzalez' ), irina_address_line() ] ], (array) $irina_a['facts'], '' !== $irina_tel ? [ [ __( 'Teléfono', 'irina-gonzalez' ), irina_phone_label( $irina_tel ) ] ] : [] );
+$irina_tel = (string) irina_practice( 'telefono' );
+$irina_fac = array_merge( [ [ __( 'Dirección', 'irina-gonzalez' ), irina_address_line() ] ], (array) $irina_a['facts'], '' !== $irina_tel ? [ [ __( 'Teléfono', 'irina-gonzalez' ), irina_phone_label( $irina_tel ) ] ] : [] );
 // Título = nombre del centro (la última palabra en énfasis); la colonia es dirección, no nombre (propietario, 2026-10-10).
 $irina_centro = trim( (string) irina_practice( 'centro' ) );
 $irina_words  = preg_split( '/\s+/', $irina_centro );
@@ -67,7 +67,16 @@ $irina_title  = '' !== $irina_a['title'] ? $irina_a['title'] : trim( implode( ' 
 		</div>
 		<div class="di-map di-reveal di-reveal--d1">
 		<?php
-		if ( '' !== $irina_a['map_embed'] ) :
+		$irina_key = (string) irina_practice( 'maps_api_key' );
+		$irina_lat = (string) irina_practice( 'geo_lat' );
+		$irina_lng = (string) irina_practice( 'geo_lng' );
+		if ( '' !== $irina_key && '' !== $irina_lat && '' !== $irina_lng ) :
+			// Mapa con estilo propio (D-048): Maps JavaScript API + JSON de estilo (Snazzy Maps o paleta por defecto).
+			irina_enqueue_map( $irina_key );
+			?>
+			<div class="di-map__canvas" id="di-map" data-lat="<?php echo esc_attr( $irina_lat ); ?>" data-lng="<?php echo esc_attr( $irina_lng ); ?>" data-zoom="16" data-title="<?php echo esc_attr( (string) irina_practice( 'centro' ) ); ?>" data-url="<?php echo esc_attr( (string) irina_practice( 'maps_url' ) ); ?>" role="img" aria-label="<?php esc_attr_e( 'Mapa del consultorio', 'irina-gonzalez' ); ?>"></div>
+			<?php
+		elseif ( '' !== $irina_a['map_embed'] ) :
 			?>
 			<iframe src="<?php echo esc_url( $irina_a['map_embed'] ); ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="<?php esc_attr_e( 'Mapa del consultorio', 'irina-gonzalez' ); ?>"></iframe>
 			<?php

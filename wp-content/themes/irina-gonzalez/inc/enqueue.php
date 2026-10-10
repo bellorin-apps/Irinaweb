@@ -56,3 +56,41 @@ add_action(
 	},
 	1
 );
+
+/**
+ * Mapa con estilo propio (D-048): carga el script del tema y la Maps JavaScript API con la clave del consultorio.
+ * El estilo viene del ajuste «maps_style_json» (Snazzy Maps) o, si está vacío, del estilo de la paleta en assets/map-style.json.
+ */
+function irina_enqueue_map( string $api_key ): void {
+	static $done = false;
+	if ( $done ) {
+		return;
+	}
+	$done  = true;
+	$style = (string) irina_practice( 'maps_style_json' );
+	if ( '' === $style ) {
+		$file  = IRINA_THEME_DIR . '/assets/map-style.json';
+		$style = is_readable( $file ) ? (string) file_get_contents( $file ) : '[]'; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- archivo del tema.
+	}
+	wp_enqueue_script(
+		'irina-map',
+		IRINA_THEME_URI . '/assets/js/map.js',
+		[],
+		irina_asset_version( 'assets/js/map.js' ),
+		[
+			'strategy'  => 'defer',
+			'in_footer' => true,
+		]
+	);
+	wp_add_inline_script( 'irina-map', 'window.diMapStyle = ' . $style . '; window.diMapMarker = ' . wp_json_encode( IRINA_THEME_URI . '/assets/brand/map-pin.svg' ) . ';', 'before' );
+	wp_enqueue_script(
+		'google-maps',
+		'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode( $api_key ) . '&loading=async&callback=diInitMap&v=weekly',
+		[ 'irina-map' ],
+		null,
+		[
+			'strategy'  => 'async',
+			'in_footer' => true,
+		]
+	); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- versión gestionada por Google.
+}
