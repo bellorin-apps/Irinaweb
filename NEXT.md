@@ -4,16 +4,16 @@ Actualizado: 2026-10-10 · Codex. Estado/progreso: STATUS/PROGRESS. Evidencia: Q
 
 ## NOW
 
-0d. **Lighthouse (Q-025/046/047)**: medido el 2026-10-10; el LCP móvil (10 s) depende del peso del hero q100: decisión del propietario (mantener q100 o pasar a q95). Mejoras sin tocar calidad: gtag en idle, encaje alfa diferido, kit de fuentes (Q-046). Reportes en el scratchpad de la sesión cloud, no versionados.
-0c. **Centro de recursos (8.2)** · OK de José 2026-10-10: sesión local: `deploy-code.sh` + `setup-medical.sh` (actualiza los 3 borradores de recurso; no toca fichas revisadas) y comprobar `/recursos/` (200, noindex mientras no haya publicados). La Dra. revisa los 3 artículos en wp-admin → Recursos y marca la revisión; solo entonces se publican.
-0b. **og:image (D-067)** · OK de José 2026-10-10: sesión local: `deploy-code.sh` (plugin con la exención `og-*`), `tools/deploy/setup-og.sh`, purga y comprobar `og:image`/`twitter:image` en portada y Dra.; probar la vista previa en WhatsApp/LinkedIn (debuggers de Facebook/LinkedIn si la caché muestra la antigua).
-0. **Logos (D-066)**: en producción con viewBox ajustado y tooltips (D-068); nombres confirmados; Fesormex se queda como se entregó. Pendiente solo el redespliegue de 7a8fe3f (setup-dra por los nombres). Histórico: José exporta los 9 SVG (fill blanco, sin texto en vivo) con estos nombres: `christus-muguerza`, `zambrano-hellion`, `angeles-valle-oriente`, `hospital-universitario`, `hospitaria`, `consejo-orl`, `fesormex`, `sociedad-iberoamericana-sueno`, `colegio-orl-nl` (+ `.svg`). La sesión local los copia a `wp-content/themes/irina-gonzalez/assets/brand/logos/`, hace commit aparte, `deploy-code.sh`, `setup-dra.sh` (JSON ya regenerado) y purga; capturas de escritorio y móvil con UA real (D-062). Cloud revisa aire, velocidad y contraste con los logos reales.
-1. **Desplegado 2026-10-10 (sesión local)**: entrega de Codex hasta 8a18346 + ajuste del propietario de «Escucharte» (4cf6e8e, D-057) + corrección de `sizes` del retrato (9053a4b, 100vw en móvil). Producción verificada: páginas 200 con un h1/main y sin avisos PHP; REST sin `maps_api_key`/`contacto_copia`/`horario`; FAQPage único en FAQ (9 preguntas), ninguno en Primera consulta; Home sin enlaces a borradores; mini apps 403 sin token y noindex; plugin 0.4.1. Abierto: el hero sigue con `fetchpriority` duplicado en el HTML (una copia la añade WordPress a la primera imagen; `loading` ya va una vez): Codex/cloud deciden si se retira la del tema.
-2. **Escucharte en teléfono**: CSS60/40 ya observado en producción; en360 el inicio de foto apenas cambió0,125px y la altura sigue707,75px. Q-039 abierto por el resultado real. Claude presenta la propuesta aislada de12px adicionales a≤360 (offset total−17, fuera del margen D-061), conservando tamaño; sesión local compara el mismo ancho/zoom. Ver docs/ESCUCHARTE_DISCREPANCIA_MOVIL_2026-10-10.md.
-3. **Maps (D-059)**: José crea el Map ID en Google Cloud (Google Maps Platform → Map Management → Create Map ID, tipo JavaScript, con el estilo asociado); la sesión cloud migra `map.js` a `AdvancedMarkerElement` y añade el ajuste `maps_map_id`; la sesión local lo carga y despliega.
-4. **Borradores (D-058)**: «Escucharte» confirmado por la Dra. (2026-10-10, marca retirada). Pendientes los demás bloques marcados «Borrador» en Dra./Primera consulta; solo con su aprobación se retira `draft=yes` del build y se regenera el JSON.
-5. **Archivo (D-060)**: tras cerrar esta entrega, mover `tools/preview/` y `tools/legacy/` a `docs/archive/` con enlaces actualizados (sin borrar).
-6. Probar roles, REST/Gutenberg, nueva revisión e idempotencia en copia/staging. No usar fichas de producción para ensayos de estado.
+Cierre del 2026-10-10 (cloud). Producción en HEAD 3b78ece (sesión local, BATON). Próxima sesión: lunes 2026-10-12.
+
+**En producción hoy**: logos con viewBox ajustado, tooltips (D-068) y arrastre; títulos de la Dra. dictados; og:image por defecto (D-067); hub `/recursos/` en noindex con 3 artículos en borrador (8.2); «Escucharte» con tarjeta de cristal crema y endoscopio según el scroll (D-069, texto confirmado por la Dra.); lombrices acotadas en credenciales y trayectoria.
+
+1. **Decisiones de José**: (a) calidad del hero para el LCP móvil, mantener q100 (D-064) o pasar a q95 (Q-025); (b) OK para GA4 en ocioso y encaje alfa diferido (Q-047), sin tocar calidad; (c) opcional: kit de fuentes bloqueante o `font-display: optional` para el CLS bajo red lenta (Q-046).
+2. **Dra.**: revisar los 3 artículos de recursos (wp-admin → Recursos) y los bloques que siguen marcados «Borrador» en su página y en Primera consulta (D-058); solo con su aprobación se publican y se retira `draft=yes` del build.
+3. **José en su teléfono**: probar el arrastre de los logos (la emulación entrega pocos eventos) y el endoscopio saliendo por debajo de la tarjeta.
+4. **Técnico (cloud, próxima sesión)**: fetchpriority duplicado del hero (NEXT histórico); Q-040/Q-042; Fesormex queda con el SVG entregado por decisión de José.
+5. **Maps**: cerrado con D-065 (estilo embebido, sin Map ID); no hay acción.
+6. **Archivo (D-060)**: mover `tools/preview/` y `tools/legacy/` a `docs/archive/` al cerrar la entrega, sin borrar.
 
 ## AFTER técnico
 

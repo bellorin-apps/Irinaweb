@@ -1,10 +1,12 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado: 2026-10-10 · Codex · cálculo: PLAN → PROGRESS.
+Actualizado: 2026-10-10 (cierre) · Claude cloud · cálculo: PLAN → PROGRESS.
 
 **26,09 % global español: 66/253 pesos, 25/95 tareas DONE.** Solo DONE suma; inglés aparte (0/19). El 31 % anterior mezclaba crédito parcial y un resumen divergente. No se elevó ninguna tarea por pruebas locales.
 
-**Estado operativo:** núcleo público y auditoría general desplegados hasta9053a4b según el relevo de Claude local; nuevo ajuste móvil60/40 preparado y probado localmente, sin despliegue por Codex. Fases 10–11 en revisión; clínica de Fase 7 pendiente de aprobación. Inglés después del lanzamiento español.
+**Cierre 2026-10-10:** producción en 3b78ece (BATON). Hoy: logos (D-066/D-068) con arrastre, títulos de la Dra., og:image (D-067), hub de recursos en noindex con 3 borradores (8.2 DOING), «Escucharte» con tarjeta de cristal y endoscopio (D-069), lombrices acotadas, Lighthouse medido (Q-025/046/047). Pendientes en NEXT §NOW.
+
+**Estado operativo (histórico):** núcleo público y auditoría general desplegados hasta9053a4b según el relevo de Claude local; nuevo ajuste móvil60/40 preparado y probado localmente, sin despliegue por Codex. Fases 10–11 en revisión; clínica de Fase 7 pendiente de aprobación. Inglés después del lanzamiento español.
 
 ## Evidencia actual
 
