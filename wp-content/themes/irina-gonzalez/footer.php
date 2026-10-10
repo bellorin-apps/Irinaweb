@@ -17,14 +17,6 @@ $irina_wa    = (string) irina_practice( 'whatsapp' );
 $irina_mail  = (string) irina_practice( 'email' );
 $irina_rows  = irina_hours_rows();
 $irina_cedul = irina_practice( 'publicar_cedulas' ) ? trim( (string) irina_practice( 'cedula_medicina' ) . ' · ' . (string) irina_practice( 'cedula_especialidad' ), ' ·' ) : '';
-$irina_soc   = array_filter(
-	[
-		'Instagram'  => (string) irina_practice( 'instagram' ),
-		'Facebook'   => (string) irina_practice( 'facebook' ),
-		'TikTok'     => (string) irina_practice( 'tiktok' ),
-		'Doctoralia' => (string) irina_practice( 'doctoralia_url' ),
-	]
-);
 ?>
 <footer class="di-footer" id="di-footer">
 	<div class="di-container">
@@ -87,16 +79,7 @@ $irina_soc   = array_filter(
 						?>
 						<tr><th scope="row"><?php echo esc_html( $irina_day ); ?></th><td><?php echo esc_html( $irina_h ); ?></td></tr><?php endforeach; ?></table>
 				<?php endif; ?>
-				<?php if ( $irina_soc ) : ?>
-					<p style="margin-top:12px">
-					<?php
-					$irina_links = [];
-					foreach ( $irina_soc as $irina_name => $irina_url ) {
-						$irina_links[] = sprintf( '<a href="%s" rel="noopener" target="_blank"%s>%s</a>', esc_url( $irina_url ), 'Doctoralia' === $irina_name ? ' data-di-event="doctoralia_click"' : '', esc_html( $irina_name ) );
-					} echo implode( ' · ', $irina_links ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado arriba. 
-					?>
-					</p>
-				<?php endif; ?>
+				<?php echo irina_social_circles( 'di-social di-social--footer' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado en la función (redes como logos, propietario 2026-10-10). ?>
 			</div>
 		</div>
 		<div class="di-footer__legal">

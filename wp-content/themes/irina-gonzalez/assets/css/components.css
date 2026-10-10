@@ -35,6 +35,9 @@
 .di-social__btn:hover { opacity: 1; transform: translateY(-2px); color: inherit; background: rgb(255 255 255 / 0.16); }
 .di-social__btn .di-icon { width: 18px; height: 18px; }
 .di-social--panel { margin: var(--space-lg) 0 0; gap: 12px; }
+.di-social--footer { margin: var(--space-md) 0 0; gap: 10px; }
+.di-social--footer .di-social__btn { background: rgb(255 255 255 / 0.12); color: #fff; }
+.di-social--footer .di-social__btn:hover { background: rgb(255 255 255 / 0.22); }
 .di-social--panel .di-social__btn { width: 46px; height: 46px; background: rgb(0 0 0 / 0.06); }
 @media (max-width: 1199px) { .di-nav .di-social { display: none; } }
 
