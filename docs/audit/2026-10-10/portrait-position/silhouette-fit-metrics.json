@@ -1,0 +1,188 @@
+[
+  {
+    "width": 320,
+    "section": {
+      "left": 0,
+      "top": 116.84375,
+      "right": 320,
+      "bottom": 982.671875,
+      "width": 320,
+      "height": 865.828125
+    },
+    "image": {
+      "left": 154.796875,
+      "top": 382.671875,
+      "right": 437.796875,
+      "bottom": 982.671875,
+      "width": 283,
+      "height": 600
+    },
+    "text": {
+      "left": 16,
+      "top": 212.84375,
+      "right": 188.796875,
+      "bottom": 982.671875,
+      "width": 172.796875,
+      "height": 769.828125
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 81.07332155477035
+  },
+  {
+    "width": 360,
+    "section": {
+      "left": 0,
+      "top": 147.65625,
+      "right": 360,
+      "bottom": 951.40625,
+      "width": 360,
+      "height": 803.75
+    },
+    "image": {
+      "left": 175.796875,
+      "top": 351.40625,
+      "right": 458.796875,
+      "bottom": 951.40625,
+      "width": 283,
+      "height": 600
+    },
+    "text": {
+      "left": 16,
+      "top": 243.65625,
+      "right": 212.796875,
+      "bottom": 951.40625,
+      "width": 196.796875,
+      "height": 707.75
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 100
+  },
+  {
+    "width": 390,
+    "section": {
+      "left": 0,
+      "top": 171.78125,
+      "right": 390,
+      "bottom": 928.84375,
+      "width": 390,
+      "height": 757.0625
+    },
+    "image": {
+      "left": 188.796875,
+      "top": 289.25,
+      "right": 490.46875,
+      "bottom": 928.84375,
+      "width": 301.671875,
+      "height": 639.59375
+    },
+    "text": {
+      "left": 16,
+      "top": 267.78125,
+      "right": 230.796875,
+      "bottom": 928.84375,
+      "width": 214.796875,
+      "height": 661.0625
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 100
+  },
+  {
+    "width": 393,
+    "section": {
+      "left": 0,
+      "top": 171.78125,
+      "right": 393,
+      "bottom": 928.84375,
+      "width": 393,
+      "height": 757.0625
+    },
+    "image": {
+      "left": 188.59375,
+      "top": 288.84375,
+      "right": 490.46875,
+      "bottom": 928.84375,
+      "width": 301.875,
+      "height": 640
+    },
+    "text": {
+      "left": 16,
+      "top": 267.78125,
+      "right": 232.59375,
+      "bottom": 928.84375,
+      "width": 216.59375,
+      "height": 661.0625
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 100
+  },
+  {
+    "width": 412,
+    "section": {
+      "left": 0,
+      "top": 171.6875,
+      "right": 412,
+      "bottom": 928.75,
+      "width": 412,
+      "height": 757.0625
+    },
+    "image": {
+      "left": 195.890625,
+      "top": 288.75,
+      "right": 497.765625,
+      "bottom": 928.75,
+      "width": 301.875,
+      "height": 640
+    },
+    "text": {
+      "left": 16.484375,
+      "top": 267.6875,
+      "right": 243.890625,
+      "bottom": 928.75,
+      "width": 227.40625,
+      "height": 661.0625
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 100
+  },
+  {
+    "width": 430,
+    "section": {
+      "left": 0,
+      "top": 191.6875,
+      "right": 430,
+      "bottom": 908.765625,
+      "width": 430,
+      "height": 717.078125
+    },
+    "image": {
+      "left": 229.546875,
+      "top": 287.6875,
+      "right": 522.484375,
+      "bottom": 908.765625,
+      "width": 292.9375,
+      "height": 621.078125
+    },
+    "text": {
+      "left": 17.203125,
+      "top": 287.6875,
+      "right": 254.546875,
+      "bottom": 908.765625,
+      "width": 237.34375,
+      "height": 621.078125
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 100
+  }
+]

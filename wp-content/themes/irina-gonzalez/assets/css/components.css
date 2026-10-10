@@ -319,6 +319,8 @@ body.menu-open { overflow: hidden; }
 /* Teléfonos: los renglones adicionales no amplían el retrato indefinidamente.
    Conserva su proporción, el anclaje inferior y el inicio de la columna 40%. */
 @media (max-width: 430px) {
+  /* Reserva junto al párrafo para acercar la figura sin cubrir sus palabras. */
+  .di-section--doctor-bg .di-doctor__lead { padding-right: 24px; }
   .di-section--doctor-bg .di-doctor__portrait img { max-height: clamp(600px, 164vw, 640px); }
 }
 .di-creds { list-style: none; padding: 0; margin: var(--space-lg) 0; display: grid; gap: 0.7rem; }

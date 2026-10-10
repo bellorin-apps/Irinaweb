@@ -23,5 +23,5 @@ const assets=Object.fromEntries(['css/components.css','js/main.js'].map(n=>[n,fs
   await p.close();
  }
  fs.writeFileSync(`docs/audit/2026-10-10/columns-carousel${live?'-live':''}.json`,JSON.stringify(rows,null,2)+'\n');console.log(rows);
- await b.close();if(rows.some(r=>r.errors.length||!r.sectionHeightStable||r.cards.some(c=>!c.oneActive||c.dots!==3||c.overflow||Math.abs(c.bottomGap)>1)||(r.width<900&&r.cards.some(c=>Math.abs(c.textPercent-60)>.1||Math.abs(c.photoPercent-40)>.1||Math.abs(c.offset+5)>.1))))process.exit(1);
+ await b.close();if(rows.some(r=>r.errors.length||!r.sectionHeightStable||r.cards.some(c=>!c.oneActive||c.dots!==3||c.overflow||Math.abs(c.bottomGap)>1)||(r.width<900&&r.cards.some(c=>Math.abs(c.textPercent-60)>.1||Math.abs(c.photoPercent-40)>.1))))process.exit(1);
 })().catch(e=>{console.error(e.name);process.exit(1)});

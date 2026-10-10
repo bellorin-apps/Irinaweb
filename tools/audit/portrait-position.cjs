@@ -12,7 +12,7 @@ const assets=Object.fromEntries(['css/components.css','js/main.js'].map(name=>[n
  fs.mkdirSync(out,{recursive:true});
  const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
  const results=[];
- for(const width of [360,390,430]){
+ for(const width of [320,360,390,393,412,430]){
   const p=await b.newPage({viewport:{width,height:1100}});
   if(local)await p.route('**/themes/irina-gonzalez/assets/**',r=>{
    const name=new URL(r.request().url()).pathname.split('/assets/')[1];
@@ -20,11 +20,21 @@ const assets=Object.fromEntries(['css/components.css','js/main.js'].map(name=>[n
   });
   await p.goto('https://drairinagonzalez.com/',{waitUntil:'networkidle'});
   await p.evaluate(()=>document.fonts.ready);
+  if(process.argv.includes('--large-text'))await p.addStyleTag({content:'html{font-size:20px!important}'});
   const section=p.locator('.di-section--doctor');await section.scrollIntoViewIfNeeded();await p.waitForTimeout(900);
   await p.addStyleTag({content:'.di-section--doctor .di-reveal{opacity:1;transform:none;transition:none}.di-section--doctor .di-doctor__portrait{overflow:visible}'});
+  await p.evaluate(()=>window.dispatchEvent(new Event('resize')));await p.waitForTimeout(300);
   const source=await p.locator('.di-doctor__portrait img').evaluate(i=>i.currentSrc);
   const response=await p.request.get(source);
   const alpha=await sharp(await response.body()).ensureAlpha().raw().toBuffer({resolveWithObject:true});
+  if(process.argv.includes('--profile')) {
+   const profile=Array.from({length:128},(_,band)=>{
+    let left=alpha.info.width;
+    for(let y=Math.floor(band*alpha.info.height/128);y<Math.ceil((band+1)*alpha.info.height/128);y++)for(let x=0;x<left;x++)if(alpha.data[(y*alpha.info.width+x)*4+3]>16){left=x;break;}
+    return Math.floor(left/alpha.info.width*1000)/1000;
+   });
+   fs.writeFileSync('tmp/portrait-profile.json',JSON.stringify(profile));
+  }
   for(const offset of offsets){
    await p.evaluate(x=>{document.querySelector('.di-doctor__portrait img').style.transform=`translateX(-${x}px)`},offset);
    const row=await section.evaluate((s)=>{

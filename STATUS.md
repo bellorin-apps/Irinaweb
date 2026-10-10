@@ -30,3 +30,4 @@ No se certifica pre-launch completo: faltan gates autenticados, revisión clíni
 
 Próximo paso: NEXT. Entrega: BATON. Evidencia: QA y `docs/AUDITORIA_CODEX_2026-10-10.md`.
 Ajuste posterior autorizado: altura del retrato limitada en teléfonos <=430px; preparado localmente, pendiente despliegue de Claude y revisión real (ver BATON, portrait-cap.json).
+Entrega posterior vigente: silueta calculada contra texto real, sin reducción adicional; CSS/JS listos localmente. Ver BATON. Q-039 abierto hasta despliegue de Claude y revisión en ambos teléfonos.

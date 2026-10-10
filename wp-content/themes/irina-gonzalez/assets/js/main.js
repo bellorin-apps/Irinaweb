@@ -119,6 +119,54 @@
     if (dots) { dots.addEventListener('focusin', stop); }
   }
 
+  // Encaje móvil del PNG actual: borde alfa por bandas, no borde transparente del archivo.
+  // Perfil conservador (alfa >16, mínimo de cada banda) del retrato 1024×2170.
+  // Otra proporción conserva el posicionamiento CSS y exige revisar el perfil.
+  var doctorImage = document.querySelector('.di-section--doctor-bg .di-doctor__portrait img');
+  if (doctorImage) {
+    var doctorEdge = [0.405,0.37,0.347,0.333,0.32,0.306,0.296,0.287,0.283,0.277,0.269,0.262,0.252,0.244,0.238,0.233,0.229,0.225,0.221,0.219,0.215,0.215,0.209,0.204,0.198,0.192,0.182,0.169,0.159,0.151,0.149,0.146,0.144,0.151,0.151,0.12,0.105,0.093,0.084,0.076,0.07,0.064,0.053,0.037,0.022,0.004,0,0,0,0.004,0.01,0.016,0.024,0.031,0.037,0.035,0.033,0.033,0.031,0.031,0.033,0.031,0.031,0.033,0.033,0.033,0.035,0.035,0.037,0.039,0.041,0.045,0.049,0.06,0.078,0.097,0.093,0.093,0.091,0.089,0.086,0.084,0.08,0.08,0.078,0.076,0.078,0.086,0.093,0.165,0.165,0.159,0.136,0.13,0.128,0.109,0.095,0.084,0.078,0.074,0.074,0.076,0.08,0.084,0.091,0.091,0.086,0.082,0.076,0.072,0.066,0.062,0.055,0.049,0.045,0.043,0.041,0.033,0.024,0.02,0.018,0.016,0.014,0.004,0.002,0.008,0.002,0];
+    var doctorFrame = 0;
+    function fitDoctor() {
+      doctorFrame = 0;
+      if (window.innerWidth > 430 || !doctorImage.naturalWidth || Math.abs(doctorImage.naturalWidth / doctorImage.naturalHeight - 1024 / 2170) > 0.01) { doctorImage.style.left = ''; return; }
+      var imageBox = doctorImage.getBoundingClientRect();
+      if (!imageBox.height) { return; }
+      var baseLeft = imageBox.left - (parseFloat(doctorImage.style.left) || 0);
+      var requiredLeft = -Infinity;
+      var text = doctorImage.closest('.di-doctor').querySelector('.di-doctor__text');
+      // Tarjetas y botón tienen fondo propio y quedan por encima del retrato.
+      text.querySelectorAll('.di-eyebrow, .di-quote, .di-doctor__lead').forEach(function (block) {
+        var walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+        while (walker.nextNode()) {
+          var node = walker.currentNode;
+          var matches = node.textContent.matchAll(/\S+/g);
+          for (var match of matches) {
+            var range = document.createRange(); range.setStart(node, match.index); range.setEnd(node, match.index + match[0].length);
+            Array.from(range.getClientRects()).forEach(function (rect) {
+              var first = Math.max(0, Math.floor((rect.top - imageBox.top) / imageBox.height * 128));
+              var last = Math.min(127, Math.floor((rect.bottom - imageBox.top) / imageBox.height * 128));
+              for (var band = first; band <= last; band++) {
+                requiredLeft = Math.max(requiredLeft, rect.right + 4 - doctorEdge[band] * imageBox.width);
+              }
+            });
+          }
+        }
+      });
+      if (Number.isFinite(requiredLeft)) { doctorImage.style.left = Math.ceil(requiredLeft - baseLeft) + 'px'; }
+    }
+    function queueDoctorFit() { if (!doctorFrame) { doctorFrame = window.requestAnimationFrame(fitDoctor); } }
+    doctorImage.addEventListener('load', queueDoctorFit);
+    doctorImage.closest('.di-doctor').addEventListener('transitionend', queueDoctorFit);
+    window.addEventListener('resize', queueDoctorFit);
+    if (document.fonts) { document.fonts.ready.then(queueDoctorFit); }
+    if (window.ResizeObserver) {
+      var doctorResize = new ResizeObserver(queueDoctorFit);
+      doctorResize.observe(doctorImage.closest('.di-doctor'));
+      doctorResize.observe(doctorImage);
+    }
+    queueDoctorFit();
+  }
+
   // Indicador de scroll del hero: baja hasta el final de la cabecera a sangre.
   var cue = document.querySelector('.di-scroll-cue');
   if (cue) {

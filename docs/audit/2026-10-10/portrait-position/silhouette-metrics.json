@@ -1,0 +1,95 @@
+[
+  {
+    "width": 360,
+    "section": {
+      "left": 0,
+      "top": 147.65625,
+      "right": 360,
+      "bottom": 951.40625,
+      "width": 360,
+      "height": 803.75
+    },
+    "image": {
+      "left": 207.796875,
+      "top": 351.40625,
+      "right": 490.796875,
+      "bottom": 951.40625,
+      "width": 283,
+      "height": 600
+    },
+    "text": {
+      "left": 16,
+      "top": 243.65625,
+      "right": 212.796875,
+      "bottom": 951.40625,
+      "width": 196.796875,
+      "height": 707.75
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 67.94863705199397
+  },
+  {
+    "width": 390,
+    "section": {
+      "left": 0,
+      "top": 182.78125,
+      "right": 390,
+      "bottom": 917.75,
+      "width": 390,
+      "height": 734.96875
+    },
+    "image": {
+      "left": 225.796875,
+      "top": 278.78125,
+      "right": 527.171875,
+      "bottom": 917.75,
+      "width": 301.375,
+      "height": 638.96875
+    },
+    "text": {
+      "left": 16,
+      "top": 278.78125,
+      "right": 230.796875,
+      "bottom": 917.75,
+      "width": 214.796875,
+      "height": 638.96875
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 69.95615334478875
+  },
+  {
+    "width": 430,
+    "section": {
+      "left": 0,
+      "top": 202.6875,
+      "right": 430,
+      "bottom": 897.671875,
+      "width": 430,
+      "height": 694.984375
+    },
+    "image": {
+      "left": 249.546875,
+      "top": 298.6875,
+      "right": 532.0625,
+      "bottom": 897.671875,
+      "width": 282.515625,
+      "height": 598.984375
+    },
+    "text": {
+      "left": 17.203125,
+      "top": 298.6875,
+      "right": 254.546875,
+      "bottom": 897.671875,
+      "width": 237.34375,
+      "height": 598.984375
+    },
+    "paragraphBoxOverlapPercent": 0,
+    "offset": 0,
+    "localAssets": true,
+    "faceVisiblePercent": 96.78194158034876
+  }
+]

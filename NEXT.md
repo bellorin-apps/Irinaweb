@@ -28,3 +28,4 @@ Aprobaciones en mini app; foto definitiva Dra.; GA4; revisión legal/regulatoria
 
 Después del lanzamiento español y fecha elegida por José. Se retiran fechas hipotéticas contradictorias; no iniciar ahora.
 Prioridad actual Escucharte: Claude despliega el límite de altura móvil autorizado y compara en teléfono real; sustituye la propuesta aislada de desplazamiento−12px, que no se incorpora.
+Prioridad vigente: Claude despliega el encaje de silueta del HEAD posterior a db8d1a8 y comprueba ambos teléfonos. No aplicar la propuesta aislada−12px. Ver última entrega BATON.
