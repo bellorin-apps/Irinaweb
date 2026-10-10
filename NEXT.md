@@ -5,7 +5,7 @@
 ## Prioridad 1 — Desbloqueadores (propietario)
 
 - [x] **Tanda 1 (D-046)** confirmada por José (2026-10-09): overline lombriz corta estática en color del texto, botones glass sin bordes, sombra móvil desde la mitad del título más suave. 
-- [ ] José apaga en la CDN «Optimización de imágenes inteligentes» (deja «Compresión WebP») y vacía caché (decisión 2026-10-10, Q-020); después verificar hero y tarjetas en 1440/390 @2×.
+- [x] CDN: José decide NO apagar la optimización inteligente (2026-10-10): se acepta 1× en móvil para imágenes que no van a sangre (tarjetas, retrato); el hero sigue a 2400/1200 px. Cerrado.
 - [x] Fotos de tarjeta a 2040×2040 subidas tal cual (area-orl 329, area-sueno 330; 2026-10-10).
 - [x] Isotipo oficial de Doctoralia integrado en el sprite (2026-10-10). Original: (hoy círculo «D» provisional) en Recursos (Irina).
 
