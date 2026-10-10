@@ -65,6 +65,8 @@ add_filter( 'jpeg_quality', static fn(): int => 100 );
 add_filter( 'wp_editor_set_quality', static fn(): int => 100 );
 // El original subido se conserva como tamaño "full" (WordPress no lo reescala a 2560 px): la foto del hero se sirve tal cual.
 add_filter( 'big_image_size_threshold', '__return_false' );
+// Sin «sizes=auto» en imágenes diferidas: con «auto» el navegador pedía la versión del ancho CSS a 1× (borrosa en 2×). Q-020.
+add_filter( 'wp_img_tag_add_auto_sizes', '__return_false' );
 
 /**
  * Imagen de cabecera a pantalla completa (D-042/D-043): se entrega ÚNICAMENTE el archivo original, sin srcset ni tamaños
