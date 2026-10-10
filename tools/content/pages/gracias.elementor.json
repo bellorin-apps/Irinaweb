@@ -1,1 +1,120 @@
-[{"id":"141c202","elType":"container","isInner":false,"settings":{"content_width":"full","flex_direction":"column","padding":{"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true},"margin":{"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true}},"elements":[{"id":"c30750e","elType":"widget","widgetType":"di-bleed","settings":{"eyebrow":"Mensaje enviado","title":"<b>Recibido</b>, <em>gracias</em>","lead":"Te contactamos en horario de consultorio por teléfono o WhatsApp. Si es urgente, acude al servicio de urgencias más cercano.","variant":"sand","crumb":"Gracias"},"elements":[]}]},{"id":"881667b","elType":"container","isInner":false,"settings":{"content_width":"full","flex_direction":"column","padding":{"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true},"margin":{"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true}},"elements":[{"id":"52aedd5","elType":"widget","widgetType":"di-narrativa","settings":{"eyebrow":"Mientras tanto","title":"Lo que <b>puedes</b> ir <em>preparando</em>","lead":"Estudios previos, lista de medicamentos y, si es por ronquido o apnea, lo que te ha contado quien duerme contigo.","text":""},"elements":[]}]},{"id":"405d8c8","elType":"container","isInner":false,"settings":{"content_width":"full","flex_direction":"column","padding":{"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true},"margin":{"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true}},"elements":[{"id":"6f9e14c","elType":"widget","widgetType":"di-cta","settings":{"eyebrow":"¿Prisa?","title":"Si prefieres, <em>escríbenos ahora</em>","text":"WhatsApp es el canal más rápido para agendar.","message":""},"elements":[]}]}]
+[
+  {
+    "id": "141c202",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "c30750e",
+        "elType": "widget",
+        "widgetType": "di-bleed",
+        "settings": {
+          "eyebrow": "Mensaje enviado",
+          "title": "<b>Recibido</b>, <em>gracias</em>",
+          "lead": "Te contactamos en horario de consultorio por teléfono o WhatsApp. Si es urgente, acude al servicio de urgencias más cercano.",
+          "variant": "sand",
+          "crumb": "Gracias"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "881667b",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "52aedd5",
+        "elType": "widget",
+        "widgetType": "di-narrativa",
+        "settings": {
+          "eyebrow": "Mientras tanto",
+          "title": "Lo que <b>puedes</b> ir <em>preparando</em>",
+          "lead": "Estudios previos, lista de medicamentos y, si es por ronquido o apnea, lo que te ha contado quien duerme contigo.",
+          "text": ""
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "405d8c8",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "6f9e14c",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "¿Prisa?",
+          "title": "Si prefieres, <em>escríbenos ahora</em>",
+          "text": "WhatsApp es el canal más rápido para agendar.",
+          "message": ""
+        },
+        "elements": []
+      }
+    ]
+  }
+]

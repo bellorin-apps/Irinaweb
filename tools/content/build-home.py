@@ -77,6 +77,6 @@ data = [
         "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": ""}),
 ]
 out = pathlib.Path(__file__).with_name("home-elementor.json")
-s = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+s = json.dumps(data, ensure_ascii=False, indent=2)
 out.write_text(s, encoding="utf-8")
 print(out, len(s), "bytes")

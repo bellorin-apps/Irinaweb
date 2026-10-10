@@ -50,6 +50,6 @@ creds = [
     ("docencia-pregrado", "Profesora de otorrinolaringología de pregrado en UNEFM, ULA y UNERG", "experiencia", "", "Venezuela", "", 1, 70),
 ]
 here = pathlib.Path(__file__).parent
-(here / "dra-elementor.json").write_text(json.dumps(page, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+(here / "dra-elementor.json").write_text(json.dumps(page, ensure_ascii=False, indent=2), encoding="utf-8")
 (here / "credenciales.json").write_text(json.dumps([dict(zip(["slug","titulo","tipo","institucion","lugar","anio","mostrar","orden"], c)) for c in creds], ensure_ascii=False, indent=1), encoding="utf-8")
 print("ok", len(page), "bloques,", len(creds), "credenciales")

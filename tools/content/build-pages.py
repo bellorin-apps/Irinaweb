@@ -143,7 +143,7 @@ seo = {
 out = pathlib.Path(__file__).parent / "pages"
 out.mkdir(exist_ok=True)
 for slug, data in pages.items():
-    (out / f"{slug}.elementor.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (out / f"{slug}.elementor.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 for slug, html in legal.items():
     (out / f"{slug}.html").write_text(html.strip() + "\n", encoding="utf-8")
 (out / "seo.json").write_text(json.dumps({k: {"title": v[0], "description": v[1]} for k, v in seo.items()}, ensure_ascii=False, indent=1), encoding="utf-8")
