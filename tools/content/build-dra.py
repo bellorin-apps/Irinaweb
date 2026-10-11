@@ -14,7 +14,7 @@ def container(key, widget, settings):
 
 page = [
     container("dra-bleed", "di-bleed", {
-        "eyebrow": "Tu Otorrino Especialista en Sueño",
+        "eyebrow": "Tu Otorrino | Especialista en Sueño",
         "title": "<b>Dra.</b> Irina<br>González <em>Sáez</em>",
         "lead": "Otorrinolaringólogo certificado en Monterrey, con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
         "variant": "warm", "crumb": "Dra. Irina González Sáez", "image": {"id": "__DRA_HERO_ID__", "url": "__DRA_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "92% 8%", "secondary_short": "Doctoralia",

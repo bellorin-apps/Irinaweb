@@ -56,7 +56,7 @@ else :
 		<?php
 		if ( '' !== $irina_a['eyebrow'] ) :
 			?>
-			<p class="di-eyebrow di-reveal is-visible"><?php echo esc_html( $irina_a['eyebrow'] ); ?></p><?php endif; ?>
+			<p class="di-eyebrow di-reveal is-visible"><span class="di-eyebrow__t"><?php echo str_replace( '|', '<span class="di-brm"></span> ', esc_html( $irina_a['eyebrow'] ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado antes del reemplazo; «|» = salto solo en móvil, como en el hero de la portada. ?></span></p><?php endif; ?>
 		<h1 class="di-reveal di-reveal--d1 is-visible"><?php echo wp_kses( $irina_a['title'], $irina_allowed ); ?></h1>
 		<?php
 		if ( '' !== $irina_a['lead'] ) :
