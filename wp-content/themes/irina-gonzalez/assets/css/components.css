@@ -171,6 +171,7 @@ body.menu-open { overflow: hidden; }
   .di-bleed.di-bleed--light .di-bleed__bg img { object-position: 78% 0; } /* la variante clara no lleva sombra oscura; usa el velo crema */
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: 1.75rem; } /* Propietario (2026-10-11): el contenido va pegado al borde inferior del hero; la barra móvil ya queda fuera gracias a --di-peek, no hace falta reservar su alto. */
   .di-bleed { --di-peek: calc(72px + 3rem); } /* por encima de la barra móvil fija */
+  .di-bleed .di-container { padding-bottom: 1.75rem; } /* Propietario (2026-10-11): en todos los heros el contenido va al borde inferior; solo las migas van arriba. */
   .di-bleed .di-crumbs { max-width: 40%; font-size: 0.72rem; line-height: 1.35; margin-bottom: 1.5rem; }
   .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; } /* la lombriz queda centrada verticalmente aunque haya dos líneas */
   /* Salto de línea del overline solo en móvil («|» en el texto del hero): «Tu otorrino / en Monterrey». */
