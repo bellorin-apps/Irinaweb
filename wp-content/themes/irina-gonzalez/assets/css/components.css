@@ -498,7 +498,7 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 @media (min-width: 900px) { .di-bleed--photo .di-container { padding-top: 9rem; } }
 @media (max-width: 899px) {
   .di-bleed--photo .di-bleed__shade { display: block; background: linear-gradient(180deg, rgb(74 42 62 / 0) 0%, rgb(74 42 62 / 0) 42%, rgb(74 42 62 / 0.26) 56%, rgb(74 42 62 / 0.5) 72%, rgb(74 42 62 / 0.66) 100%); mix-blend-mode: multiply; }
-  .di-bleed--photo .di-container { padding-top: 6rem; padding-bottom: calc(1.25rem + 72px + env(safe-area-inset-bottom, 0px)); }
+  .di-bleed--photo .di-container { padding-top: 6rem; padding-bottom: 1.75rem; } /* Propietario (2026-10-11): contenido al borde inferior; la barra móvil queda fuera por --di-peek. */
 }
 
 /* Heros con migas (páginas interiores), propietario 2026-10-10: el bloque overline + título + copy baja pegado a los botones
