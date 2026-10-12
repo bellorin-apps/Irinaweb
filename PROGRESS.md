@@ -10,8 +10,8 @@ Español: **66/253 pesos = 26.09%** · 25/95 tareas DONE.
 |---|---:|
 | DONE | 25 |
 | REVIEW | 17 |
-| DOING | 15 |
-| TODO | 32 |
+| DOING | 17 |
+| TODO | 30 |
 | OWNER | 6 |
 | BLOCKED | 0 |
 

@@ -1,8 +1,10 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado: 2026-10-10 (cierre) · Claude cloud · cálculo: PLAN → PROGRESS.
+Actualizado: 2026-10-12 (cierre) · Claude local · cálculo: PLAN → PROGRESS.
 
 **26,09 % global español: 66/253 pesos, 25/95 tareas DONE.** Solo DONE suma; inglés aparte (0/19). El 31 % anterior mezclaba crédito parcial y un resumen divergente. No se elevó ninguna tarea por pruebas locales.
+
+**Cierre 2026-10-12:** producción en 0b7781d (BATON). Hoy: migas en franja y «Conóceme» (D-071), menú Inicio + Conóceme (D-072), «Escucharte» con tarjeta beige y endoscopio nuevo, retrato y endoscopio en WebP sin pérdida (plugin 0.4.5), logos con inercia nativa y relevo continuo. Ninguna tarea cambia a DONE. Pendientes en NEXT §NOW.
 
 **Cierre 2026-10-10:** producción en 3b78ece (BATON). Hoy: logos (D-066/D-068) con arrastre, títulos de la Dra., og:image (D-067), hub de recursos en noindex con 3 borradores (8.2 DOING), «Escucharte» con tarjeta de cristal y endoscopio (D-069), lombrices acotadas, Lighthouse medido (Q-025/046/047). Pendientes en NEXT §NOW.
 

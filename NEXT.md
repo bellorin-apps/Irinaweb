@@ -1,19 +1,18 @@
 # NEXT — Próximo trabajo
 
-Actualizado: 2026-10-10 · Codex. Estado/progreso: STATUS/PROGRESS. Evidencia: QA. Despliegue: BATON.
+Actualizado: 2026-10-12 · Claude local. Estado/progreso: STATUS/PROGRESS. Evidencia: QA. Despliegue: BATON.
 
 ## NOW
 
-Cierre del 2026-10-10 (cloud). Producción en HEAD 3b78ece (sesión local, BATON). Próxima sesión: lunes 2026-10-12.
+Cierre del 2026-10-12 (sesión local). Producción en 0b7781d (BATON). Progreso sin cambios: 25/95 tareas DONE (PROGRESS).
 
-**En producción hoy**: logos con viewBox ajustado, tooltips (D-068) y arrastre; títulos de la Dra. dictados; og:image por defecto (D-067); hub `/recursos/` en noindex con 3 artículos en borrador (8.2); «Escucharte» con tarjeta de cristal crema y endoscopio según el scroll (D-069, texto confirmado por la Dra.); lombrices acotadas en credenciales y trayectoria.
+**En producción hoy**: migas en franja bajo el hero y «Conóceme» (D-071); menú Inicio + Conóceme (D-072); «Escucharte» con tarjeta beige translúcida y endoscopio nuevo tapado y con recorrido en móvil; retrato y endoscopio en WebP sin pérdida (plugin 0.4.5); carrusel de logos con inercia nativa, fricción 0,4 y relevo continuo al autoplay.
 
-1. **Decisiones de José**: (a) calidad del hero para el LCP móvil, mantener q100 (D-064) o pasar a q95 (Q-025); (b) OK para GA4 en ocioso y encaje alfa diferido (Q-047), sin tocar calidad; (c) opcional: kit de fuentes bloqueante o `font-display: optional` para el CLS bajo red lenta (Q-046).
-2. **Dra.**: revisar los 3 artículos de recursos (wp-admin → Recursos) y los bloques que siguen marcados «Borrador» en su página y en Primera consulta (D-058); solo con su aprobación se publican y se retira `draft=yes` del build.
-3. **José en su teléfono**: probar el arrastre de los logos (la emulación entrega pocos eventos) y el endoscopio saliendo por debajo de la tarjeta.
-4. **Técnico (cloud, próxima sesión)**: fetchpriority duplicado del hero (NEXT histórico); Q-040/Q-042; Fesormex queda con el SVG entregado por decisión de José.
-5. **Maps**: cerrado con D-065 (estilo embebido, sin Map ID); no hay acción.
-6. **Archivo (D-060)**: mover `tools/preview/` y `tools/legacy/` a `docs/archive/` al cerrar la entrega, sin borrar.
+1. **José en su Samsung**: probar el deslizamiento de los logos y el endoscopio de «Escucharte». Si el carril aún se siente frenado, el siguiente escalón es fricción 0,5.
+2. **Decisiones de José**: (a) calidad del hero para el LCP móvil, q100 (D-064) o q95 (Q-025); (b) OK para GA4 en ocioso y encaje alfa diferido (Q-047); (c) opcional: fuentes (Q-046); (d) opcional: exportar el endoscopio a 2048 px para más nitidez; (e) horario de la ficha de Google (GBP).
+3. **Dra.**: revisar los 3 artículos de recursos y las fichas en la mini app, y los bloques «Borrador» de su página y de Primera consulta (D-058). Solo con su aprobación se publica.
+4. **Técnico (cloud/Codex)**: fetchpriority duplicado del hero; Q-040 (allowlist de Ops); Q-042 (NAP centralizado).
+5. **Archivo (D-060)**: mover `tools/preview/` y `tools/legacy/` a `docs/archive/` al cerrar la entrega, sin borrar.
 
 ## AFTER técnico
 
