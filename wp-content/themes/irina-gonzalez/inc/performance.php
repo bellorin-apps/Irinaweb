@@ -128,16 +128,26 @@ function irina_image_original( int $attachment_id, array $attrs = [] ): string {
 	add_filter( 'wp_calculate_image_srcset', $none, 10, 0 );
 	$html = wp_get_attachment_image( $attachment_id, 'full', false, $attrs );
 	remove_filter( 'wp_calculate_image_srcset', $none, 10 );
-	// Teléfonos (≤899 px): versión de 1600 px generada por WordPress a calidad 100 (D-064); escritorio recibe el archivo completo.
+	// Teléfonos (≤899 px): versión de 1600 px (irina-movil, calidad 95 desde D-073); escritorio recibe el archivo completo.
+	return irina_movil_picture( $attachment_id, $html );
+}
+
+/**
+ * Envuelve una <img> en <picture> con la versión para teléfonos (irina-movil, 1600 px a calidad 95, D-073) para ≤899 px.
+ * El escritorio conserva la <img> tal cual (archivo completo o su srcset). La URL lleva ?m=<fecha del archivo>: al regenerar la
+ * versión móvil cambia y ni la CDN ni el navegador sirven la copia anterior.
+ *
+ * @param int    $attachment_id Adjunto.
+ * @param string $html          <img> ya generada.
+ */
+function irina_movil_picture( int $attachment_id, string $html ): string {
 	$movil = wp_get_attachment_image_src( $attachment_id, 'irina-movil' );
-	if ( '' !== $html && $movil && ! empty( $movil[3] ) ) {
-		// Versión según la fecha del archivo: al regenerar la versión móvil (p. ej. al pasar a calidad 95, D-073) cambia la URL y
-		// ni la CDN ni el navegador sirven la copia anterior.
-		$file = dirname( (string) get_attached_file( $attachment_id ) ) . '/' . wp_basename( (string) $movil[0] );
-		$src  = file_exists( $file ) ? add_query_arg( 'm', (string) filemtime( $file ), $movil[0] ) : $movil[0];
-		$html = '<picture><source media="(max-width: 899px)" srcset="' . esc_url( $src ) . '">' . $html . '</picture>';
+	if ( '' === $html || ! $movil || empty( $movil[3] ) ) {
+		return $html;
 	}
-	return $html;
+	$file = dirname( (string) get_attached_file( $attachment_id ) ) . '/' . wp_basename( (string) $movil[0] );
+	$src  = file_exists( $file ) ? add_query_arg( 'm', (string) filemtime( $file ), $movil[0] ) : $movil[0];
+	return '<picture><source media="(max-width: 899px)" srcset="' . esc_url( $src ) . '">' . $html . '</picture>';
 }
 
 // Las fotos de cabecera (slug hero-*: hero-home, hero-dra…) solo generan la versión para teléfonos (irina-movil); el original es el resto.

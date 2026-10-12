@@ -34,15 +34,19 @@ $irina_panel = static function ( array $p, string $mod ): void {
 	<a class="di-area di-area--<?php echo esc_attr( $mod ); ?><?php echo $irina_img ? ' di-area--photo' : ''; ?> di-reveal" href="<?php echo esc_url( irina_public_content_url( (string) $p['link'] ) ); ?>">
 		<div class="di-area__fill">
 		<?php
-		echo $irina_img ? wp_get_attachment_image(
+		// Teléfonos: versión irina-movil a calidad 95 (D-073, propietario 2026-10-12); escritorio: srcset a calidad 100.
+		echo $irina_img ? irina_movil_picture( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- envuelve wp_get_attachment_image (escapado) con una URL esc_url.
 			$irina_img,
-			'full',
-			false,
-			[
-				'loading'  => 'lazy',
-				'decoding' => 'async',
-				'sizes'    => '(min-width: 900px) 50vw, 100vw',
-			]
+			wp_get_attachment_image(
+				$irina_img,
+				'full',
+				false,
+				[
+					'loading'  => 'lazy',
+					'decoding' => 'async',
+					'sizes'    => '(min-width: 900px) 50vw, 100vw',
+				]
+			)
 		) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida. 
 		?>
 									</div>
