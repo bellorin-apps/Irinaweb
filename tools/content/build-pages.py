@@ -56,19 +56,19 @@ pages["sueno"] = [
 ]
 
 pages["primera-consulta"] = [
-    container("pc-bleed", "di-bleed", {"eyebrow": "Primera consulta", "title": "<b>Qué esperar</b><br><em>en tu consulta</em>",
+    container("pc-bleed", "di-bleed", {"eyebrow": "Primera consulta", "title": "<b>Qué</b> esperar<br>en tu <em>consulta</em>",
         "lead": "Alrededor de 30 minutos para escucharte, explorar y proponerte un plan. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
         # Foto de cabecera como la de «Conóceme» (propietario, 2026-10-12): adjunto hero-primera (hero-irina3.png), sustituido por setup-pages.sh.
         "variant": "warm", "crumb": "Primera consulta", "image": {"id": "__PC_HERO_ID__", "url": "__PC_HERO_URL__"}, "focus": "50% 6%", "focus_mobile": "85% 20%"}),
-    container("pc-pasos", "di-pasos", {"eyebrow": "Paso a paso", "title": "<b>Así es</b> <em>la consulta</em>", "steps": rep([
+    container("pc-pasos", "di-pasos", {"eyebrow": "Paso a paso", "title": "<b>Así</b> es la <em>consulta</em>", "steps": rep([
         ("Escuchar", "Tus síntomas, desde cuándo y cómo afectan tu día."),
         ("Explorar", "Oído, nariz y garganta; endoscopia nasal o laringoscopia en el consultorio cuando hace falta."),
         ("Diagnosticar", "Si el problema es de sueño, estudio en casa realizado e interpretado por la propia Dra."),
         ("Acompañar", "Plan claro con opciones médicas y quirúrgicas, y seguimiento."),
     ], "title", "text")}),
-    container("pc-narr", "di-narrativa", {"eyebrow": "Qué llevar", "title": "Llega con <b>lo que</b> <em>ya tienes</em>",
+    container("pc-narr", "di-narrativa", {"eyebrow": "Qué llevar", "title": "<b>Llega</b> con lo que <em>ya tienes</em>",
         "text": "<ul><li>Identificación.</li><li>Estudios previos (audiometría, tomografía, estudio del sueño) si los tienes.</li><li>Lista de medicamentos que tomas.</li><li>Referencia médica, si la tienes.</li><li>Si vienes por ronquido o apnea: lo que tu pareja o familia ha notado al dormir.</li><li>Para niños: cartilla y antecedentes de infecciones de oído o garganta.</li></ul>", "draft": "yes"}),
-    container("pc-faq", "di-faq", {"eyebrow": "Preguntas frecuentes", "title": "Costo, <b>pagos</b> y <em>seguros</em>", "items": rep([
+    container("pc-faq", "di-faq", {"eyebrow": "Preguntas frecuentes", "title": "<b>Costo,</b> pagos y <em>seguros</em>", "items": rep([
         ("¿Cuánto cuesta la consulta?", "Te confirmamos el costo al agendar por WhatsApp. Cirugías y estudios se cotizan después de la valoración."),
         ("¿Aceptan seguros de gastos médicos?", "Atención a pacientes particulares y reembolso de seguros de gastos médicos; la Dra. entrega la documentación para tu aseguradora."),
         ("¿Cómo puedo pagar?", "Efectivo, tarjeta y transferencia. Facturación disponible."),
@@ -76,7 +76,7 @@ pages["primera-consulta"] = [
         ("¿Atienden niños?", "Sí, desde los 0 meses."),
         ("¿Dónde está el consultorio y hay estacionamiento?", "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector, Monterrey. Estacionamiento gratuito; elevador y acceso para silla de ruedas."),
     ], "pregunta", "text")}),
-    container("pc-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu primera consulta", "text": "Escríbenos por WhatsApp y te confirmamos horario.", "message": ""}),
+    container("pc-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu<br><em>primera consulta</em>", "text": "Escríbenos por WhatsApp y te confirmamos horario.", "message": ""}),
 ]
 
 pages["contacto"] = [

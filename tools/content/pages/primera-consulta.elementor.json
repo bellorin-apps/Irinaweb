@@ -30,7 +30,7 @@
         "widgetType": "di-bleed",
         "settings": {
           "eyebrow": "Primera consulta",
-          "title": "<b>Qué esperar</b><br><em>en tu consulta</em>",
+          "title": "<b>Qué</b> esperar<br>en tu <em>consulta</em>",
           "lead": "Alrededor de 30 minutos para escucharte, explorar y proponerte un plan. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
           "variant": "warm",
           "crumb": "Primera consulta",
@@ -76,7 +76,7 @@
         "widgetType": "di-pasos",
         "settings": {
           "eyebrow": "Paso a paso",
-          "title": "<b>Así es</b> <em>la consulta</em>",
+          "title": "<b>Así</b> es la <em>consulta</em>",
           "steps": [
             {
               "_id": "2cb291b",
@@ -135,7 +135,7 @@
         "widgetType": "di-narrativa",
         "settings": {
           "eyebrow": "Qué llevar",
-          "title": "Llega con <b>lo que</b> <em>ya tienes</em>",
+          "title": "<b>Llega</b> con lo que <em>ya tienes</em>",
           "text": "<ul><li>Identificación.</li><li>Estudios previos (audiometría, tomografía, estudio del sueño) si los tienes.</li><li>Lista de medicamentos que tomas.</li><li>Referencia médica, si la tienes.</li><li>Si vienes por ronquido o apnea: lo que tu pareja o familia ha notado al dormir.</li><li>Para niños: cartilla y antecedentes de infecciones de oído o garganta.</li></ul>",
           "draft": "yes"
         },
@@ -174,7 +174,7 @@
         "widgetType": "di-faq",
         "settings": {
           "eyebrow": "Preguntas frecuentes",
-          "title": "Costo, <b>pagos</b> y <em>seguros</em>",
+          "title": "<b>Costo,</b> pagos y <em>seguros</em>",
           "items": [
             {
               "_id": "12a0084",
@@ -243,7 +243,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "Agenda tu primera consulta",
+          "title": "Agenda tu<br><em>primera consulta</em>",
           "text": "Escríbenos por WhatsApp y te confirmamos horario.",
           "message": ""
         },
