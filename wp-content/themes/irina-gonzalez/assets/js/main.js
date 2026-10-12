@@ -264,10 +264,10 @@
       function tick(t) {
         var dt = prevT ? Math.min((t - prevT) / 1000, 0.05) : 0; prevT = t;
         if (!dragging) {
-          // Inercia con fricción tipo iOS (0,998 por ms ≈ 13 % de la velocidad tras 1 s). Cuando se acaba, empalma con el
-          // autoplay sin pausa: la velocidad automática entra en rampa (0,8 s) desde cero, así no hay frenazo ni salto.
-          if (Math.abs(vel) > speed) { x += vel * dt; vel *= Math.pow(0.135, dt); }
-          else { vel = 0; if (idle <= 0 && !hovering) { ramp = Math.min(1, ramp + dt / 0.8); x -= speed * ramp * dt; } else { idle -= dt; } }
+          // Inercia «suelta» (propietario, 2026-10-12): fricción baja, queda el 30 % de la velocidad tras 1 s. Si la inercia va en el
+          // sentido del autoplay le pasa el relevo a velocidad plena; si va al revés, el autoplay entra en rampa (0,8 s) desde cero.
+          if (Math.abs(vel) > speed) { x += vel * dt; vel *= Math.pow(0.3, dt); }
+          else { if (vel < 0) { ramp = 1; } vel = 0; if (idle <= 0 && !hovering) { ramp = Math.min(1, ramp + dt / 0.8); x -= speed * ramp * dt; } else { idle -= dt; } }
           x = wrap(x); apply();
         }
         raf = requestAnimationFrame(tick);
@@ -289,18 +289,18 @@
           try { rail.setPointerCapture(pid); } catch (err) { /* sin captura */ }
         }
         samples.push({ t: e.timeStamp, x: e.clientX });
-        while (samples.length > 2 && e.timeStamp - samples[0].t > 100) { samples.shift(); } // ventana de los últimos 100 ms
+        while (samples.length > 2 && e.timeStamp - samples[0].t > 70) { samples.shift(); } // ventana de los últimos 70 ms
         lastX = e.clientX; lastT = e.timeStamp; x = wrap(x + dx); apply();
       });
       function release(e) {
         if (!dragging || (e && e.pointerId !== pid)) { return; }
         var wasDrag = moved; dragging = false; pid = null; rail.classList.remove('is-dragging');
         if (!wasDrag) { return; } // toque o scroll vertical: el autoplay no se interrumpe.
-        // Velocidad de salida = recorrido de los últimos 100 ms del gesto. Si el dedo se quedó quieto antes de soltar
-        // (más de 120 ms sin moverse), no hay inercia.
+        // Velocidad de salida = recorrido de los últimos 70 ms del gesto. Si el dedo se quedó quieto antes de soltar
+        // (más de 150 ms sin moverse), no hay inercia.
         var now = e ? e.timeStamp : lastT, first = samples[0], span = (lastT - first.t) / 1000;
-        vel = (now - lastT > 120 || span <= 0) ? 0 : (lastX - first.x) / span;
-        if (Math.abs(vel) > 3000) { vel = vel > 0 ? 3000 : -3000; }
+        vel = (now - lastT > 150 || span <= 0) ? 0 : (lastX - first.x) / span;
+        if (Math.abs(vel) > 5000) { vel = vel > 0 ? 5000 : -5000; }
         idle = 0; ramp = 0; // sin pausa: tras la inercia, el autoplay arranca desde cero y acelera suave.
       }
       rail.addEventListener('pointerup', release); rail.addEventListener('pointercancel', release);
