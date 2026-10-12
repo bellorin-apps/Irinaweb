@@ -38,9 +38,14 @@ final class Events {
 			return;
 		}
 		$thanks = is_page( 'gracias' ) ? "gtag('event','contact_submit',{page_path:location.pathname});" : '';
-		$script = "if(navigator.doNotTrack!=='1'&&window.doNotTrack!=='1'){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id={$id}';document.head.appendChild(s);"
+		// Q-047 (OK del propietario, 2026-10-12): la cola dataLayer y gtag() existen desde el principio (ningún evento se pierde),
+		// pero gtag.js se descarga después de «load» y en tiempo ocioso, para no bloquear el primer pintado en móvil.
+		$script = "if(navigator.doNotTrack!=='1'&&window.doNotTrack!=='1'){"
 			. "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());"
-			. "gtag('config','{$id}',{anonymize_ip:true,allow_google_signals:false,allow_ad_personalization_signals:false,transport_type:'beacon'});{$thanks}}";
+			. "gtag('config','{$id}',{anonymize_ip:true,allow_google_signals:false,allow_ad_personalization_signals:false,transport_type:'beacon'});{$thanks}"
+			. "var diGa=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id={$id}';document.head.appendChild(s);};"
+			. "var diIdle=function(){if('requestIdleCallback' in window){requestIdleCallback(diGa,{timeout:3000});}else{setTimeout(diGa,1);}};"
+			. "if(document.readyState==='complete'){diIdle();}else{window.addEventListener('load',diIdle,{once:true});}}";
 		wp_print_inline_script_tag( $script, [ 'id' => 'di-ga4' ] );
 	}
 

@@ -62,8 +62,18 @@ add_action(
 // Calidad 100 % en todo lo que genere WordPress (JPEG y WebP), por decisión del propietario (tanda 1, 2026-10-09): las fotos son
 // profesionales y la CDN se encarga del peso por dispositivo. Los originales se conservan sin reescalar (abajo).
 // Calidad 100 en todo lo que genere WordPress (D-064, propietario 2026-10-10: vio la comparativa 100/95 y mantiene 100).
+// Excepción (D-073, propietario 2026-10-12): la versión para teléfonos (irina-movil, 1600 px de ancho) va a calidad 95 para que la
+// foto principal cargue en 3–4 s con 4G en vez de ~10 s; el escritorio y el original siguen a 100. WordPress pasa al filtro las
+// medidas del tamaño que genera (desde WP 6.8).
 add_filter( 'jpeg_quality', static fn(): int => 100 );
-add_filter( 'wp_editor_set_quality', static fn(): int => 100 );
+add_filter(
+	'wp_editor_set_quality',
+	static function ( $quality, $mime_type = '', $size = [] ): int {
+		return ( is_array( $size ) && IRINA_MOVIL_WIDTH === (int) ( $size['width'] ?? 0 ) ) ? 95 : 100;
+	},
+	10,
+	3
+);
 // El original subido se conserva como tamaño "full" (WordPress no lo reescala a 2560 px): la foto del hero se sirve tal cual.
 add_filter( 'big_image_size_threshold', '__return_false' );
 // Sin «sizes=auto» en imágenes diferidas: con «auto» el navegador pedía la versión del ancho CSS a 1× (borrosa en 2×). Q-020.
@@ -121,7 +131,11 @@ function irina_image_original( int $attachment_id, array $attrs = [] ): string {
 	// Teléfonos (≤899 px): versión de 1600 px generada por WordPress a calidad 100 (D-064); escritorio recibe el archivo completo.
 	$movil = wp_get_attachment_image_src( $attachment_id, 'irina-movil' );
 	if ( '' !== $html && $movil && ! empty( $movil[3] ) ) {
-		$html = '<picture><source media="(max-width: 899px)" srcset="' . esc_url( $movil[0] ) . '">' . $html . '</picture>';
+		// Versión según la fecha del archivo: al regenerar la versión móvil (p. ej. al pasar a calidad 95, D-073) cambia la URL y
+		// ni la CDN ni el navegador sirven la copia anterior.
+		$file = dirname( (string) get_attached_file( $attachment_id ) ) . '/' . wp_basename( (string) $movil[0] );
+		$src  = file_exists( $file ) ? add_query_arg( 'm', (string) filemtime( $file ), $movil[0] ) : $movil[0];
+		$html = '<picture><source media="(max-width: 899px)" srcset="' . esc_url( $src ) . '">' . $html . '</picture>';
 	}
 	return $html;
 }

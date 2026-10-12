@@ -154,7 +154,16 @@
       });
       if (Number.isFinite(requiredLeft)) { doctorImage.style.left = Math.ceil(requiredLeft - baseLeft) + 'px'; }
     }
-    function queueDoctorFit() { if (!doctorFrame) { doctorFrame = window.requestAnimationFrame(fitDoctor); } }
+    // Q-047 (OK del propietario, 2026-10-12): el cálculo recorre cada palabra del texto; se hace solo cuando la sección está a
+    // menos de 800 px de la pantalla, no durante la carga de la página (bloqueaba ~0,3 s en móvil).
+    var doctorNear = !('IntersectionObserver' in window);
+    function queueDoctorFit() { if (doctorNear && !doctorFrame) { doctorFrame = window.requestAnimationFrame(fitDoctor); } }
+    if (!doctorNear) {
+      var doctorSeen = new IntersectionObserver(function (entries) {
+        if (entries.some(function (en) { return en.isIntersecting; })) { doctorNear = true; doctorSeen.disconnect(); queueDoctorFit(); }
+      }, { rootMargin: '800px 0px' });
+      doctorSeen.observe(doctorImage.closest('.di-doctor'));
+    }
     doctorImage.addEventListener('load', queueDoctorFit);
     doctorImage.closest('.di-doctor').addEventListener('transitionend', queueDoctorFit);
     window.addEventListener('resize', queueDoctorFit);
