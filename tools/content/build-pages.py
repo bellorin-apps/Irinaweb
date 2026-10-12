@@ -67,7 +67,8 @@ pages["primera-consulta"] = [
         ("Acompañar", "Plan claro con opciones médicas y quirúrgicas, y seguimiento."),
     ], "title", "text")}),
     container("pc-narr", "di-narrativa", {"eyebrow": "Qué llevar", "title": "<b>Llega</b> con lo que <em>ya tienes</em>",
-        "text": "<ul><li>Identificación.</li><li>Estudios previos (audiometría, tomografía, estudio del sueño) si los tienes.</li><li>Lista de medicamentos que tomas.</li><li>Referencia médica, si la tienes.</li><li>Si vienes por ronquido o apnea: lo que tu pareja o familia ha notado al dormir.</li><li>Para niños: cartilla y antecedentes de infecciones de oído o garganta.</li></ul>", "draft": "yes"}),
+        # «Qué llevar» aprobado (propietario, 2026-10-12, captura del bloque): se retira la marca de borrador (D-058, Q-043).
+        "text": "<ul><li>Identificación.</li><li>Estudios previos (audiometría, tomografía, estudio del sueño) si los tienes.</li><li>Lista de medicamentos que tomas.</li><li>Referencia médica, si la tienes.</li><li>Si vienes por ronquido o apnea: lo que tu pareja o familia ha notado al dormir.</li><li>Para niños: cartilla y antecedentes de infecciones de oído o garganta.</li></ul>", "draft": ""}),
     container("pc-faq", "di-faq", {"eyebrow": "Preguntas frecuentes", "title": "<b>Costo,</b> pagos y <em>seguros</em>", "items": rep([
         ("¿Cuánto cuesta la consulta?", "Te confirmamos el costo al agendar por WhatsApp. Cirugías y estudios se cotizan después de la valoración."),
         ("¿Aceptan seguros de gastos médicos?", "Atención a pacientes particulares y reembolso de seguros de gastos médicos; la Dra. entrega la documentación para tu aseguradora."),
