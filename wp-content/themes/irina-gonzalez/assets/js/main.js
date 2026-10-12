@@ -251,7 +251,8 @@
         speed = cycle / dur;
       }
       function wrap(v) { return cycle ? ((v % cycle) + cycle) % cycle - cycle : v; }
-      function apply() { track.style.transform = 'translateX(' + x + 'px)'; }
+      var ramp = 1;
+      function apply() { track.style.transform = 'translate3d(' + x + 'px,0,0)'; }
       function freeze() {
         if (manual) { return; }
         measure();
@@ -264,30 +265,36 @@
         var dt = prevT ? Math.min((t - prevT) / 1000, 0.05) : 0; prevT = t;
         if (!dragging) {
           if (Math.abs(vel) > 8) { x += vel * dt; vel *= Math.pow(0.08, dt); } // inercia: decae a ~8 % por segundo.
-          else { vel = 0; if (idle <= 0 && !hovering) { x -= speed * dt; } else { idle -= dt; } }
+          else { vel = 0; if (idle <= 0 && !hovering) { ramp = Math.min(1, ramp + dt / 0.6); x -= speed * ramp * dt; } else { idle -= dt; } }
           x = wrap(x); apply();
         }
         raf = requestAnimationFrame(tick);
       }
+      var startY = 0;
       rail.addEventListener('pointerdown', function (e) {
         if (e.button && e.button !== 0) { return; }
-        freeze(); dragging = true; moved = false; pid = e.pointerId; startX = lastX = e.clientX; lastT = e.timeStamp; vel = 0;
-        rail.classList.add('is-dragging');
+        // Sin congelar todavía: si el dedo va en vertical (scroll de la página) el carril sigue moviéndose solo.
+        dragging = true; moved = false; pid = e.pointerId; startX = lastX = e.clientX; startY = e.clientY; lastT = e.timeStamp; vel = 0;
       });
       rail.addEventListener('pointermove', function (e) {
         if (!dragging || e.pointerId !== pid) { return; }
         var dx = e.clientX - lastX;
-        if (!moved && Math.abs(e.clientX - startX) < 6) { return; } // umbral: un toque o clic no arrastra.
-        if (!moved) { moved = true; try { rail.setPointerCapture(pid); } catch (err) { /* sin captura */ } }
+        if (!moved) {
+          var ax = Math.abs(e.clientX - startX), ay = Math.abs(e.clientY - startY);
+          if (ax < 6 || ax < ay) { return; } // umbral: un toque, un clic o un gesto vertical no arrastran.
+          moved = true; freeze(); rail.classList.add('is-dragging'); dx = e.clientX - lastX;
+          try { rail.setPointerCapture(pid); } catch (err) { /* sin captura */ }
+        }
         var dt = (e.timeStamp - lastT) / 1000; if (dt > 0) { vel = 0.8 * vel + 0.2 * (dx / dt); }
         lastX = e.clientX; lastT = e.timeStamp; x = wrap(x + dx); apply();
       });
       function release(e) {
         if (!dragging || (e && e.pointerId !== pid)) { return; }
-        dragging = false; pid = null; rail.classList.remove('is-dragging');
+        var wasDrag = moved; dragging = false; pid = null; rail.classList.remove('is-dragging');
+        if (!wasDrag) { return; } // toque o scroll vertical: el autoplay no se interrumpe.
         if (e && e.timeStamp - lastT > 80) { vel = 0; } // se soltó quieto: sin inercia.
         if (Math.abs(vel) > 2000) { vel = vel > 0 ? 2000 : -2000; }
-        idle = 3; // 3 s sin tocar antes de reanudar el autoplay.
+        idle = 1.2; ramp = 0; // reanuda pronto y acelera suave hasta la velocidad normal.
       }
       rail.addEventListener('pointerup', release); rail.addEventListener('pointercancel', release);
       rail.addEventListener('lostpointercapture', function () { if (dragging) { release(null); } });

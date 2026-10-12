@@ -511,7 +511,7 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 /* Bloque narrativo con tarjeta de cristal y foto detrás (propuesta del propietario, 2026-10-10: «Escucharte» + endoscopio). El texto va en una tarjeta glass del mismo crema desplazada a la derecha; la foto, grande (68 % del contenedor), asoma por el lado izquierdo saliendo de debajo de la tarjeta según el scroll (--endo-p 0→1 desde main.js). Multiplicar + desvanecido elíptico para fundir el fondo de estudio con el crema; sin sombras (D-053). image_pos=left invierte los lados. */
 .di-narrative--card { --endo-p: 1; }
 .di-narrative__wrap { position: relative; }
-.di-narrative__card { position: relative; z-index: 2; width: 54%; margin-left: auto; padding: clamp(1.75rem, 4vw, 3.25rem); border-radius: var(--radius-lg); background: rgb(251 247 242 / 0.55); border: 1px solid rgb(255 255 255 / 0.6); backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2); } /* Cristal del mismo crema de la sección (propietario, 2026-10-10), no blanco. */
+.di-narrative__card { position: relative; z-index: 2; width: 54%; margin-left: auto; padding: clamp(1.75rem, 4vw, 3.25rem); border-radius: var(--radius-lg); background: rgb(233 217 200 / 0.5); border: 1px solid rgb(255 255 255 / 0.55); /* beige arena translúcido (propietario, 2026-10-12): se distingue del crema de la página */ backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2); } /* Cristal del mismo crema de la sección (propietario, 2026-10-10), no blanco. */
 .di-narrative--img-left .di-narrative__card { margin-left: 0; margin-right: auto; }
 .di-narrative__card h2 { max-width: none; }
 .di-narrative__card .di-draft { margin-bottom: 0; }
@@ -520,9 +520,9 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-narrative__aside img { width: 100%; height: auto; } /* Foto recortada con transparencia (endoscopio2, 2026-10-12): sin máscara, que desvanecía el cable y los pétalos del borde; el multiplicar del contenedor se mantiene por si vuelve una foto con fondo blanco. */
 @media (max-width: 999px) {
   /* Móvil (propietario): la foto sale por DEBAJO de la tarjeta, grande, descendiendo al bajar; el aparato ocupa el tramo central de la foto, así que su parte alta queda bajo la tarjeta. */
-  .di-narrative__wrap { padding-bottom: 52vw; } /* padding, no margen en la tarjeta: un margen colapsaría con el contenedor y arrastraría la foto absoluta. */
+  .di-narrative__wrap { padding-bottom: 40vw; } /* padding, no margen en la tarjeta: un margen colapsaría con el contenedor y arrastraría la foto absoluta. */
   .di-narrative__card, .di-narrative--img-left .di-narrative__card { width: 100%; margin: 0; padding: clamp(1.5rem, 6vw, 2.5rem); }
-  .di-narrative__aside, .di-narrative--img-left .di-narrative__aside { top: auto; bottom: -2vw; left: 0; right: auto; width: 100%; transform: translate(0, calc((1 - var(--endo-p)) * -22%)); } /* La foto recortada llena su encuadre: al 100 % no se corta el cable ni los pétalos. */
+  .di-narrative__aside, .di-narrative--img-left .di-narrative__aside { top: auto; bottom: -2vw; left: 0; right: auto; width: 100%; transform: translate(0, calc((1 - var(--endo-p)) * -45%)); } /* Propietario (2026-10-12): tapada en parte por la tarjeta y con movimiento visible al hacer scroll. */ /* La foto recortada llena su encuadre: al 100 % no se corta el cable ni los pétalos. */
 }
 @media (prefers-reduced-motion: reduce) { .di-narrative--card { --endo-p: 1 !important; } }
 
@@ -541,7 +541,7 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-logos .di-eyebrow { color: var(--color-accent); }
 .di-logos__rail { overflow: hidden; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
 .di-logos__track { display: flex; align-items: center; gap: clamp(3.5rem, 7vw, 7rem); width: max-content; padding: 4rem clamp(1.5rem, 3vw, 3rem) 0.5rem; /* arriba: sitio para el tooltip dentro del carril con overflow oculto */ animation: di-logos 70s linear infinite; }
-.di-logos__rail:hover .di-logos__track { animation-play-state: paused; }
+@media (hover: hover) and (pointer: fine) { .di-logos__rail:hover .di-logos__track { animation-play-state: paused; } }
 .di-logos__rail.is-dragging { cursor: grabbing; }
 /* Tras el primer arrastre el movimiento lo lleva main.js (translateX inline); la animación CSS se apaga. */
 .di-logos__track.is-manual { animation: none; }
