@@ -6,10 +6,15 @@ w(){ rssh "$WP $*"; }
 SRC="$REPO/tools/content/pages"
 pid(){ w "post list --post_type=page --post_name__in=$1 --post_status=any --field=ID" | head -1; }
 
+# Fotos de cabecera por página (upload-media.sh <archivo> hero-primera "…"); sin adjunto, la cabecera usa el degradado cálido.
+PC_HERO_ID="$(w "post list --post_type=attachment --post_name__in=hero-primera --post_status=any --field=ID" | head -1)"; PC_HERO_URL=""; [ -n "$PC_HERO_ID" ] && PC_HERO_URL="$(w "post get $PC_HERO_ID --field=guid")"
+echo "  hero-primera: ${PC_HERO_ID:-sin foto}"
+
 echo "→ Páginas Elementor"
 for slug in otorrinolaringologia sueno primera-consulta contacto preguntas-frecuentes links gracias; do
   ID="$(pid "$slug")"; [ -n "$ID" ] || { echo "  falta $slug (ejecuta setup-site.sh)"; continue; }
-  rscp "$SRC/$slug.elementor.json" "$SSH_USER@$SSH_HOST:/tmp/$slug.json"
+  sed -e "s#__PC_HERO_ID__#${PC_HERO_ID}#g" -e "s#__PC_HERO_URL__#${PC_HERO_URL}#g" "$SRC/$slug.elementor.json" > "/tmp/$slug.local.json"
+  rscp "/tmp/$slug.local.json" "$SSH_USER@$SSH_HOST:/tmp/$slug.json"; rm -f "/tmp/$slug.local.json"
   # Páginas con plantilla elementor_header_footer: WP-CLI valida la plantilla, por eso el meta va directo.
   w "post meta update $ID _wp_page_template elementor_header_footer" >/dev/null
   w "post meta update $ID _elementor_edit_mode builder" >/dev/null

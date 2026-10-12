@@ -33,7 +33,13 @@
           "title": "<b>Qué esperar</b><br><em>en tu consulta</em>",
           "lead": "Alrededor de 30 minutos para escucharte, explorar y proponerte un plan. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
           "variant": "warm",
-          "crumb": "Primera consulta"
+          "crumb": "Primera consulta",
+          "image": {
+            "id": "__PC_HERO_ID__",
+            "url": "__PC_HERO_URL__"
+          },
+          "focus": "50% 15%",
+          "focus_mobile": "85% 20%"
         },
         "elements": []
       }
