@@ -59,7 +59,7 @@ pages["primera-consulta"] = [
     container("pc-bleed", "di-bleed", {"eyebrow": "Primera consulta", "title": "<b>Qué esperar</b><br><em>en tu consulta</em>",
         "lead": "Alrededor de 30 minutos para escucharte, explorar y proponerte un plan. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
         # Foto de cabecera como la de «Conóceme» (propietario, 2026-10-12): adjunto hero-primera (hero-irina3.png), sustituido por setup-pages.sh.
-        "variant": "warm", "crumb": "Primera consulta", "image": {"id": "__PC_HERO_ID__", "url": "__PC_HERO_URL__"}, "focus": "50% 15%", "focus_mobile": "85% 20%"}),
+        "variant": "warm", "crumb": "Primera consulta", "image": {"id": "__PC_HERO_ID__", "url": "__PC_HERO_URL__"}, "focus": "50% 6%", "focus_mobile": "85% 20%"}),
     container("pc-pasos", "di-pasos", {"eyebrow": "Paso a paso", "title": "<b>Así es</b> <em>la consulta</em>", "steps": rep([
         ("Escuchar", "Tus síntomas, desde cuándo y cómo afectan tu día."),
         ("Explorar", "Oído, nariz y garganta; endoscopia nasal o laringoscopia en el consultorio cuando hace falta."),

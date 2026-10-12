@@ -38,7 +38,7 @@
             "id": "__PC_HERO_ID__",
             "url": "__PC_HERO_URL__"
           },
-          "focus": "50% 15%",
+          "focus": "50% 6%",
           "focus_mobile": "85% 20%"
         },
         "elements": []
