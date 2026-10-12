@@ -110,7 +110,6 @@ body.menu-open { overflow: hidden; }
 .di-bleed.di-bleed--light h1 { color: var(--color-text); }
 .di-bleed.di-bleed--light .di-eyebrow { color: var(--color-secondary-strong); }
 .di-bleed.di-bleed--light .di-lead { color: var(--color-text); }
-.di-bleed.di-bleed--light .di-crumbs, .di-bleed.di-bleed--light .di-crumbs a { color: rgb(36 31 35 / 0.7); }
 .di-bleed.di-bleed--light .di-btn--whatsapp { background: var(--color-secondary-strong); backdrop-filter: none; -webkit-backdrop-filter: none; }
 .di-bleed.di-bleed--light .di-btn--whatsapp:hover { background: #236468; }
 .di-bleed.di-bleed--light .di-btn--ghost { background: rgb(36 31 35 / 0.08); color: var(--color-text); }
@@ -131,13 +130,8 @@ body.menu-open { overflow: hidden; }
 .di-bleed .di-eyebrow { color: var(--color-accent); }
 .di-bleed .di-lead { color: rgb(255 255 255 / 0.86); }
 .di-bleed .di-lead--mobile { display: none; }
-/* Migas de pan (propietario, 2026-10-10): sutiles y a media altura entre la cabecera y el bloque de texto, no pegadas a la cabecera. */
-.di-bleed .di-crumbs, .di-bleed .di-crumbs a { color: rgb(255 255 255 / 0.62); }
-/* En flujo: el contenedor ocupa todo el alto del hero y las migas se centran en el hueco entre la cabecera y el texto (sin solaparse nunca). */
-.di-bleed .di-container:has(.di-crumbs) { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end; }
-.di-bleed .di-crumbs { margin: auto 0 clamp(1.75rem, 4.5vh, 3rem); padding-bottom: 0; font-size: 0.78rem; letter-spacing: 0.01em; } /* Propietario (2026-10-10): aire real entre las migas y el overline/título, también en heros cortos. */
-/* Con migas, el contenido empieza siempre por debajo de la cabecera fija (112 px) aunque el hero sea corto. */
-@media (min-width: 900px) { .di-bleed .di-container:has(.di-crumbs) { padding-top: max(clamp(6rem, 14vh, 10rem), calc(var(--di-header-h, 112px) + 2.5rem)); } }
+/* Heros cortos (páginas interiores): el contenido empieza siempre por debajo de la cabecera fija (112 px). */
+@media (min-width: 900px) { .di-bleed--short .di-container { padding-top: max(clamp(6rem, 14vh, 10rem), calc(var(--di-header-h, 112px) + 2.5rem)); } }
 .di-hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-2xl); }
 .di-hero-trust { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-xl); margin-top: var(--space-3xl); font-size: 0.9rem; color: rgb(255 255 255 / 0.8); background: var(--worm-white-25) 0 0 / 8px 8px repeat-x; padding-top: var(--space-lg); list-style: none; padding-left: 0; max-width: none; }
 .di-hero-trust li { display: inline-flex; align-items: center; gap: 0.5rem; }
@@ -172,7 +166,6 @@ body.menu-open { overflow: hidden; }
   .di-bleed:not(.di-bleed--short) .di-container { padding-top: 6rem; padding-bottom: 1.75rem; } /* Propietario (2026-10-11): el contenido va pegado al borde inferior del hero; la barra móvil ya queda fuera gracias a --di-peek, no hace falta reservar su alto. */
   .di-bleed { --di-peek: calc(72px + 3rem); } /* por encima de la barra móvil fija */
   .di-bleed .di-container { padding-bottom: 1.75rem; } /* Propietario (2026-10-11): en todos los heros el contenido va al borde inferior; solo las migas van arriba. */
-  .di-bleed .di-crumbs { max-width: 40%; font-size: 0.72rem; line-height: 1.35; margin-bottom: 1.5rem; }
   .di-bleed .di-eyebrow { margin-bottom: var(--space-xs); font-size: 0.72rem; } /* la lombriz queda centrada verticalmente aunque haya dos líneas */
   /* Salto de línea del overline solo en móvil («|» en el texto del hero): «Tu otorrino / en Monterrey». */
   .di-brm { display: block; height: 0; }
@@ -502,15 +495,18 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
   .di-bleed--photo .di-container { padding-top: 6rem; padding-bottom: 1.75rem; } /* Propietario (2026-10-11): contenido al borde inferior; la barra móvil queda fuera por --di-peek. */
 }
 
-/* Heros con migas (páginas interiores), propietario 2026-10-10: el bloque overline + título + copy baja pegado a los botones
-   y el aire sobrante queda entre las migas y el overline (el contenedor es flex-column y las migas llevan margin auto). */
-.di-bleed .di-container:has(.di-crumbs) .di-lead { margin-bottom: 0; }
-.di-bleed .di-container:has(.di-crumbs) .di-hero-cta { margin-top: var(--space-md); }
-.di-bleed .di-container:has(.di-crumbs) .di-crumbs { margin-bottom: clamp(2.5rem, 7vh, 4.5rem); }
-@media (max-width: 899px) {
-  .di-bleed .di-container:has(.di-crumbs) .di-hero-cta { margin-top: var(--space-xs); }
-  .di-bleed .di-container:has(.di-crumbs) .di-crumbs { margin-bottom: 2.25rem; }
-}
+/* Heros interiores (propietario, 2026-10-10): overline + título + copy pegados a los botones. */
+.di-bleed--short .di-lead { margin-bottom: 0; }
+.di-bleed--short .di-hero-cta { margin-top: var(--space-md); }
+@media (max-width: 899px) { .di-bleed--short .di-hero-cta { margin-top: var(--space-xs); } }
+
+/* Migas de pan en franja propia bajo el hero (propietario, 2026-10-12, D-071): crema arena, texto apagado, alineadas al contenedor. */
+.di-crumbs-bar { background: var(--color-surface-soft); border-bottom: 1px solid var(--color-border); }
+.di-crumbs-bar .di-crumbs { margin: 0; padding-block: 0.85rem; font-size: 0.8rem; letter-spacing: 0.01em; color: var(--color-muted); }
+.di-crumbs-bar .di-crumbs a { color: var(--color-muted); }
+.di-crumbs-bar .di-crumbs a:hover, .di-crumbs-bar .di-crumbs a:focus-visible { color: var(--color-text); text-decoration: underline; text-underline-offset: 3px; }
+.di-crumbs-bar .di-crumbs [aria-current="page"] { color: var(--color-text); }
+@media (max-width: 899px) { .di-crumbs-bar .di-crumbs { padding-block: 0.7rem; font-size: 0.76rem; } }
 
 /* Bloque narrativo con tarjeta de cristal y foto detrás (propuesta del propietario, 2026-10-10: «Escucharte» + endoscopio). El texto va en una tarjeta glass del mismo crema desplazada a la derecha; la foto, grande (68 % del contenedor), asoma por el lado izquierdo saliendo de debajo de la tarjeta según el scroll (--endo-p 0→1 desde main.js). Multiplicar + desvanecido elíptico para fundir el fondo de estudio con el crema; sin sombras (D-053). image_pos=left invierte los lados. */
 .di-narrative--card { --endo-p: 1; }

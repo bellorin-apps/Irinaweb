@@ -49,11 +49,6 @@ else :
 		<div class="di-bleed__shade"></div><?php endif; ?>
 	<div class="di-container">
 		<?php
-		if ( $irina_a['crumbs'] ) {
-			echo irina_breadcrumbs( (array) $irina_a['crumbs'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado en la función.
-		}
-		?>
-		<?php
 		if ( '' !== $irina_a['eyebrow'] ) :
 			?>
 			<p class="di-eyebrow di-reveal is-visible"><span class="di-eyebrow__t"><?php echo str_replace( '|', '<span class="di-brm"></span> ', esc_html( $irina_a['eyebrow'] ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado antes del reemplazo; «|» = salto solo en móvil, como en el hero de la portada. ?></span></p><?php endif; ?>
@@ -68,3 +63,9 @@ else :
 			<div class="di-hero-cta di-reveal di-reveal--d3 is-visible"><?php echo $irina_a['cta']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- HTML construido con helpers escapados. ?></div><?php endif; ?>
 	</div>
 </section>
+<?php
+// Migas de pan en una franja propia bajo el hero (propietario, 2026-10-12, D-071): el hero queda limpio como el de la portada.
+if ( $irina_a['crumbs'] ) :
+	?>
+<div class="di-crumbs-bar"><div class="di-container"><?php echo irina_breadcrumbs( (array) $irina_a['crumbs'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado en la función. ?></div></div>
+<?php endif; ?>
