@@ -62,7 +62,14 @@ ensure_menu(){ w "menu list --fields=slug --format=csv" | grep -qx "$1" || w "me
 ensure_menu principal Principal; ensure_menu pie-de-pagina 'Pie de página'; ensure_menu legal Legal
 menu_items(){ w "menu item list $1 --fields=object_id --format=csv" | tail -n +2; }
 add_items(){ local menu="$1"; shift; local have; have="$(menu_items "$menu")"; for id in "$@"; do echo "$have" | grep -qx "$id" || w "menu item add-post $menu $id" >/dev/null; done; }
-add_items principal "$P_ORL" "$P_SUENO" "$P_DRA" "$P_PRIMERA" "$P_CONTACTO"
+add_items principal "$P_HOME" "$P_ORL" "$P_SUENO" "$P_DRA" "$P_PRIMERA" "$P_CONTACTO"
+# Menú principal (propietario, 2026-10-12, D-072): «Inicio» siempre primero y la página de la Dra. como «Conóceme».
+# Orden y etiqueta explícitos por elemento (idempotente); los borradores (ORL, Sueño) los oculta el filtro del tema.
+menu_set(){ local menu="$1" obj="$2" pos="$3" title="${4:-}" id
+  id="$(w "menu item list $menu --fields=db_id,object_id --format=csv" | awk -F, -v o="$obj" '$2==o{print $1; exit}')"
+  [ -n "$id" ] && w "menu item update $id --position=$pos ${title:+--title='$title'}" >/dev/null; }
+menu_set principal "$P_HOME" 1 'Inicio'; menu_set principal "$P_ORL" 2; menu_set principal "$P_SUENO" 3
+menu_set principal "$P_DRA" 4 'Conóceme'; menu_set principal "$P_PRIMERA" 5; menu_set principal "$P_CONTACTO" 6
 add_items pie-de-pagina "$P_ORL" "$P_SUENO" "$P_PRIMERA" "$P_FAQ" "$P_CONTACTO"
 add_items legal "$P_PRIV" "$P_MED" "$P_TERM"
 w "menu location assign principal primary" >/dev/null; w "menu location assign pie-de-pagina footer" >/dev/null; w "menu location assign legal legal" >/dev/null
