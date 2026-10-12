@@ -123,3 +123,7 @@ Claude local: deploy-code.sh del HEAD de esta entrega y purga; NO setup-site/pag
 - «Escucharte»: en escritorio la foto nunca sale del todo de la tarjeta (cable y conector quedan bajo el cristal en reposo); en móvil sale por debajo de la tarjeta, descendiendo al bajar (propietario).
 - Franja de migas (D-071) en el registro nocturno de Sueño (`sleep.css`): fondo `--color-night-2`, texto blanco al 62 % y actual en blanco; la portada y las páginas claras no cambian. Sin desplegar: Sueño y sus fichas siguen en borrador.
 - «Escucharte»: con la foto recortada del endoscopio (PNG con transparencia, adjunto 367) se retira el desvanecido elíptico, que borraba el cable y los pétalos del borde; se mantiene el multiplicar. En móvil la foto va al 100 % (antes 120 %, cortaba cable y pétalos) y su borde superior queda bajo la tarjeta en reposo.
+
+## 2026-10-12 — PNG con transparencia a WebP sin pérdida (plugin 0.4.5, sin desplegar)
+
+- `WebpUpload`: los PNG con alfa desde 800 px se convierten al subirlos a WebP sin pérdida (Imagick exacto; GD con alfa ±1/255 en bordes). Medido con los archivos en producción: retrato 2 451 → 1 318 KB, endoscopio 1 024 → 352 KB. Decisión del propietario: solo el retrato sin pérdida; las tarjetas de área siguen igual (D-063). Para que aplique hay que volver a subir los PNG con `upload-media.sh` (se conserva el adjunto anterior).
