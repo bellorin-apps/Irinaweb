@@ -264,17 +264,20 @@
       function tick(t) {
         var dt = prevT ? Math.min((t - prevT) / 1000, 0.05) : 0; prevT = t;
         if (!dragging) {
-          if (Math.abs(vel) > 8) { x += vel * dt; vel *= Math.pow(0.08, dt); } // inercia: decae a ~8 % por segundo.
-          else { vel = 0; if (idle <= 0 && !hovering) { ramp = Math.min(1, ramp + dt / 0.6); x -= speed * ramp * dt; } else { idle -= dt; } }
+          // Inercia con fricción tipo iOS (0,998 por ms ≈ 13 % de la velocidad tras 1 s). Cuando se acaba, empalma con el
+          // autoplay sin pausa: la velocidad automática entra en rampa (0,8 s) desde cero, así no hay frenazo ni salto.
+          if (Math.abs(vel) > speed) { x += vel * dt; vel *= Math.pow(0.135, dt); }
+          else { vel = 0; if (idle <= 0 && !hovering) { ramp = Math.min(1, ramp + dt / 0.8); x -= speed * ramp * dt; } else { idle -= dt; } }
           x = wrap(x); apply();
         }
         raf = requestAnimationFrame(tick);
       }
-      var startY = 0;
+      var startY = 0, samples = [];
       rail.addEventListener('pointerdown', function (e) {
         if (e.button && e.button !== 0) { return; }
         // Sin congelar todavía: si el dedo va en vertical (scroll de la página) el carril sigue moviéndose solo.
         dragging = true; moved = false; pid = e.pointerId; startX = lastX = e.clientX; startY = e.clientY; lastT = e.timeStamp; vel = 0;
+        samples = [{ t: e.timeStamp, x: e.clientX }];
       });
       rail.addEventListener('pointermove', function (e) {
         if (!dragging || e.pointerId !== pid) { return; }
@@ -285,16 +288,20 @@
           moved = true; freeze(); rail.classList.add('is-dragging'); dx = e.clientX - lastX;
           try { rail.setPointerCapture(pid); } catch (err) { /* sin captura */ }
         }
-        var dt = (e.timeStamp - lastT) / 1000; if (dt > 0) { vel = 0.8 * vel + 0.2 * (dx / dt); }
+        samples.push({ t: e.timeStamp, x: e.clientX });
+        while (samples.length > 2 && e.timeStamp - samples[0].t > 100) { samples.shift(); } // ventana de los últimos 100 ms
         lastX = e.clientX; lastT = e.timeStamp; x = wrap(x + dx); apply();
       });
       function release(e) {
         if (!dragging || (e && e.pointerId !== pid)) { return; }
         var wasDrag = moved; dragging = false; pid = null; rail.classList.remove('is-dragging');
         if (!wasDrag) { return; } // toque o scroll vertical: el autoplay no se interrumpe.
-        if (e && e.timeStamp - lastT > 80) { vel = 0; } // se soltó quieto: sin inercia.
-        if (Math.abs(vel) > 2000) { vel = vel > 0 ? 2000 : -2000; }
-        idle = 1.2; ramp = 0; // reanuda pronto y acelera suave hasta la velocidad normal.
+        // Velocidad de salida = recorrido de los últimos 100 ms del gesto. Si el dedo se quedó quieto antes de soltar
+        // (más de 120 ms sin moverse), no hay inercia.
+        var now = e ? e.timeStamp : lastT, first = samples[0], span = (lastT - first.t) / 1000;
+        vel = (now - lastT > 120 || span <= 0) ? 0 : (lastX - first.x) / span;
+        if (Math.abs(vel) > 3000) { vel = vel > 0 ? 3000 : -3000; }
+        idle = 0; ramp = 0; // sin pausa: tras la inercia, el autoplay arranca desde cero y acelera suave.
       }
       rail.addEventListener('pointerup', release); rail.addEventListener('pointercancel', release);
       rail.addEventListener('lostpointercapture', function () { if (dragging) { release(null); } });
