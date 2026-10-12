@@ -264,9 +264,9 @@
       function tick(t) {
         var dt = prevT ? Math.min((t - prevT) / 1000, 0.05) : 0; prevT = t;
         if (!dragging) {
-          // Inercia «suelta» (propietario, 2026-10-12): fricción baja, queda el 30 % de la velocidad tras 1 s. Si la inercia va en el
+          // Inercia «suelta» (propietario, 2026-10-12): fricción baja, queda el 40 % de la velocidad tras 1 s (un punto más fluido, 2026-10-12). Si la inercia va en el
           // sentido del autoplay le pasa el relevo a velocidad plena; si va al revés, el autoplay entra en rampa (0,8 s) desde cero.
-          if (Math.abs(vel) > speed) { x += vel * dt; vel *= Math.pow(0.3, dt); }
+          if (Math.abs(vel) > speed) { x += vel * dt; vel *= Math.pow(0.4, dt); }
           else { if (vel < 0) { ramp = 1; } vel = 0; if (idle <= 0 && !hovering) { ramp = Math.min(1, ramp + dt / 0.8); x -= speed * ramp * dt; } else { idle -= dt; } }
           x = wrap(x); apply();
         }
