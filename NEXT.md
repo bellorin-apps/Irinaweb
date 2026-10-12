@@ -4,14 +4,14 @@ Actualizado: 2026-10-12 · Claude local. Estado/progreso: STATUS/PROGRESS. Evide
 
 ## NOW
 
-Cierre del 2026-10-12 (sesión local). Producción en 0b7781d (BATON). Progreso sin cambios: 25/95 tareas DONE (PROGRESS).
+Cierre del 2026-10-12 (sesión local). Producción en 9a9329a (BATON). Progreso sin cambios: 25/95 tareas DONE (PROGRESS).
 
 **En producción hoy**: migas en franja bajo el hero y «Conóceme» (D-071); menú Inicio + Conóceme (D-072); «Escucharte» con tarjeta beige translúcida y endoscopio nuevo tapado y con recorrido en móvil; retrato y endoscopio en WebP sin pérdida (plugin 0.4.5); carrusel de logos con inercia nativa, fricción 0,4 y relevo continuo al autoplay.
 
 1. **José en su Samsung**: probar el deslizamiento de los logos y el endoscopio de «Escucharte». Si el carril aún se siente frenado, el siguiente escalón es fricción 0,5.
-2. **Decisiones de José**: (a) calidad del hero para el LCP móvil, q100 (D-064) o q95 (Q-025); (b) OK para GA4 en ocioso y encaje alfa diferido (Q-047); (c) opcional: fuentes (Q-046); (d) opcional: exportar el endoscopio a 2048 px para más nitidez; (e) horario de la ficha de Google (GBP).
+2. **Decisiones de José**: (a) y (b) resueltas en D-073 (móvil q95, GA4 y encaje diferidos); (c) fuentes sin cambios; pendiente: (d) opcional, exportar el endoscopio a 2048 px; (e) horario de la ficha de Google (GBP); (f) si el fondo de «Escucharte» y las tarjetas de área también pasan a q95 en móvil (hoy siguen a 100).
 3. **Dra.**: revisar los 3 artículos de recursos y las fichas en la mini app, y los bloques «Borrador» de su página y de Primera consulta (D-058). Solo con su aprobación se publica.
-4. **Técnico (cloud/Codex)**: fetchpriority duplicado del hero; Q-040 (allowlist de Ops); Q-042 (NAP centralizado).
+4. **Codex**: auditar las 17 tareas REVIEW y la entrega de hoy con `docs/CODEX_REVIEW_PROMPT.md` (José se lo pasa). **Técnico (cloud/Codex)**: fetchpriority duplicado del hero; Q-040 (allowlist de Ops); Q-042 (NAP centralizado).
 5. **Archivo (D-060)**: mover `tools/preview/` y `tools/legacy/` a `docs/archive/` al cerrar la entrega, sin borrar.
 
 ## AFTER técnico
