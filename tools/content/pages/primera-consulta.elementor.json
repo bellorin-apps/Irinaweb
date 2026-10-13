@@ -79,27 +79,27 @@
           "title": "<b>Así</b> es la <em>consulta</em>",
           "steps": [
             {
-              "_id": "f36ce77",
+              "_id": "8d9516f",
               "title": "Escuchar",
-              "text": "Tus síntomas, desde cuándo y cómo afectan tu día.",
+              "text": "Tus síntomas, desde cuándo empezaron y cómo afectan tu día y tu descanso.",
               "img": "paso-escuchar"
             },
             {
-              "_id": "3bf7ae1",
+              "_id": "6ff882c",
               "title": "Explorar",
-              "text": "Oído, nariz y garganta; endoscopia nasal o laringoscopia en el consultorio cuando hace falta.",
+              "text": "Oído, nariz y garganta, con endoscopia nasal o laringoscopia cuando hace falta.",
               "img": "paso-explorar"
             },
             {
-              "_id": "e436960",
+              "_id": "b60f180",
               "title": "Diagnosticar",
-              "text": "Si el problema es de sueño, estudio en casa realizado e interpretado por la propia Dra.",
+              "text": "Si el problema es de sueño, un estudio en casa interpretado por la propia Dra.",
               "img": "paso-diagnosticar"
             },
             {
-              "_id": "38eb00b",
+              "_id": "e7ad916",
               "title": "Acompañar",
-              "text": "Plan claro con opciones médicas y quirúrgicas, y seguimiento.",
+              "text": "Un plan claro con opciones médicas y quirúrgicas, y un seguimiento cercano.",
               "img": "paso-acompanar"
             }
           ]

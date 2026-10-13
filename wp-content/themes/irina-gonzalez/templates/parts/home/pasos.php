@@ -1,7 +1,8 @@
 <?php
 /**
  * Home · pasos de la consulta. $args: eyebrow, title, steps (array de [title, text, img]).
- * img (opcional): slug de un adjunto; se pinta bajo el texto como ilustración decorativa (propietario, 2026-10-12).
+ * img (opcional): slug de un adjunto; ilustración decorativa ENCIMA del paso, y debajo lombriz, número, título y texto
+ * (propietario, 2026-10-12/13).
  *
  * @package IrinaGonzalez
  */
@@ -69,8 +70,9 @@ $irina_a = wp_parse_args(
 				);
 				$irina_img = $irina_imgs[ sanitize_title( (string) $irina_s['img'] ) ] ?? 0;
 				?>
-				<li class="di-step di-reveal di-reveal--d<?php echo esc_attr( (string) min( 4, $irina_d++ ) ); ?>"><h4><?php echo esc_html( $irina_s['title'] ); ?></h4><p class="di-muted"><?php echo esc_html( $irina_s['text'] ); ?></p>
+				<li class="di-step<?php echo $irina_img ? ' di-step--img' : ''; ?> di-reveal di-reveal--d<?php echo esc_attr( (string) min( 4, $irina_d++ ) ); ?>">
 				<?php
+				// Con ilustración (propietario, 2026-10-13): ilustración, lombriz, número, título y texto, en ese orden.
 				if ( $irina_img ) :
 					?>
 					<div class="di-step__img" aria-hidden="true">
@@ -88,6 +90,9 @@ $irina_a = wp_parse_args(
 					);
 					?>
 					</div>
+					<div class="di-step__body"><h4><?php echo esc_html( $irina_s['title'] ); ?></h4><p class="di-muted"><?php echo esc_html( $irina_s['text'] ); ?></p></div>
+				<?php else : ?>
+					<h4><?php echo esc_html( $irina_s['title'] ); ?></h4><p class="di-muted"><?php echo esc_html( $irina_s['text'] ); ?></p>
 				<?php endif; ?>
 				</li>
 			<?php endforeach; ?>
