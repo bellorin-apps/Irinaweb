@@ -13,7 +13,7 @@ $irina_a     = wp_parse_args(
 	$args ?? [],
 	[
 		'eyebrow' => '',
-		'title'   => __( '<b>Membresías</b> y <em>hospitales</em>', 'irina-gonzalez' ),
+		'title'   => __( 'Membresías y <em>hospitales</em>', 'irina-gonzalez' ),
 		'items'   => [],
 	]
 );

@@ -164,7 +164,7 @@
         "widgetType": "di-logos",
         "settings": {
           "eyebrow": "",
-          "title": "<b>Membresías</b> y <em>hospitales</em>",
+          "title": "Membresías y <em>hospitales</em>",
           "items": [
             {
               "name": "CHRISTUS MUGUERZA Sistema de Salud",
@@ -294,7 +294,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "<b>Agenda</b> tu<br>primera <em>consulta</em>",
+          "title": "Agenda tu<br>primera <em>consulta</em>",
           "text": "30 minutos para escucharte, explorar y proponerte un plan.",
           "message": ""
         },

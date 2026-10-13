@@ -153,3 +153,4 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Auditoría 6.4/7.3/8.9/9.4/10.1: DONE, evidencia y límites en docs/REVISION_CINCO_TAREAS_2026-10-13.md; 118/253 (46,64%). 1.2 sigue REVIEW.
 - Teclado de logos, títulos D-049 de Dra., manifest y exclusión del listener GA4 corregidos localmente; PHPCS alineación sin cambios funcionales. Build/JSON solo dos títulos; mismas palabras.
 - QA/PLAN/PROGRESS/STATUS/NEXT/BATON actualizados. Sin despliegue ni SMTP; relevo a Claude con scripts y verificación pública.
+- Se restauran dos títulos de la página de la Dra. tal como los dictó José el 2026-10-10 («Membresías y *hospitales*» y «Agenda tu / primera *consulta*», sin tramo en color al inicio): la auditoría 6de05a3 les había aplicado la regla general D-049, pero el dictado específico del propietario prevalece (AGENTS.md). El resto de la entrega de Codex se conserva.
