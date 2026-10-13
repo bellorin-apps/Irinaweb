@@ -60,12 +60,13 @@ pages["primera-consulta"] = [
         "lead": "Alrededor de 30 minutos para escucharte, explorar y proponerte un plan. Niños desde los 0 meses, adolescentes, adultos y adultos mayores.",
         # Foto de cabecera como la de «Conóceme» (propietario, 2026-10-12): adjunto hero-primera (hero-irina3.png), sustituido por setup-pages.sh.
         "variant": "warm", "crumb": "Primera consulta", "image": {"id": "__PC_HERO_ID__", "url": "__PC_HERO_URL__"}, "focus": "50% 6%", "focus_mobile": "85% 20%"}),
+    # Ilustración sutil bajo cada paso (propietario, 2026-10-12): adjuntos paso-* (Recursos (Irina)/800w/img-*.png).
     container("pc-pasos", "di-pasos", {"eyebrow": "Paso a paso", "title": "<b>Así</b> es la <em>consulta</em>", "steps": rep([
-        ("Escuchar", "Tus síntomas, desde cuándo y cómo afectan tu día."),
-        ("Explorar", "Oído, nariz y garganta; endoscopia nasal o laringoscopia en el consultorio cuando hace falta."),
-        ("Diagnosticar", "Si el problema es de sueño, estudio en casa realizado e interpretado por la propia Dra."),
-        ("Acompañar", "Plan claro con opciones médicas y quirúrgicas, y seguimiento."),
-    ], "title", "text")}),
+        ("Escuchar", "Tus síntomas, desde cuándo y cómo afectan tu día.", "paso-escuchar"),
+        ("Explorar", "Oído, nariz y garganta; endoscopia nasal o laringoscopia en el consultorio cuando hace falta.", "paso-explorar"),
+        ("Diagnosticar", "Si el problema es de sueño, estudio en casa realizado e interpretado por la propia Dra.", "paso-diagnosticar"),
+        ("Acompañar", "Plan claro con opciones médicas y quirúrgicas, y seguimiento.", "paso-acompanar"),
+    ], "title", "text", "img")}),
     container("pc-narr", "di-narrativa", {"eyebrow": "Qué llevar", "title": "<b>Llega</b> con lo que <em>ya tienes</em>",
         "bg_image": {"id": "__PC_BG_ID__", "url": "__PC_BG_URL__"},  # foto de fondo (propietario, 2026-10-13)
         # «Qué llevar» aprobado (propietario, 2026-10-12, captura del bloque): se retira la marca de borrador (D-058, Q-043).

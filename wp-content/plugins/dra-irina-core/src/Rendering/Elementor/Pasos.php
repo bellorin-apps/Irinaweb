@@ -33,6 +33,7 @@ final class Pasos extends AbstractWidget {
 			[
 				'title' => __( 'Título', 'dra-irina-core' ),
 				'text'  => __( 'Texto', 'dra-irina-core' ),
+				'img'   => __( 'Ilustración (slug del adjunto, opcional)', 'dra-irina-core' ),
 			]
 		);
 		$this->end_controls_section();
