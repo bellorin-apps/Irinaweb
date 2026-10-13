@@ -212,3 +212,22 @@ Fuente: docs/audit/2026-10-13/inventario-produccion.md. Detalle: docs/audit/2026
 | 10.1 | DONE | DONE: políticas de optimización aprobadas verificadas con UA Galaxy/iPhone/desktop y pesos registrados. Móvil 1600/q95, escritorio q100, alfa lossless y diferidos. No certifica CWV ni todos los presupuestos antiguos; informe integral en 10.2. |
 
 Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md. Evidencias five-public/local/visual/summary.json y capturas en docs/audit/2026-10-13/. Los correctivos de logos, títulos, manifest y listener GA4 quedan FIXED_LOCAL, pendientes de despliegue y comprobación pública por Claude. PHP 77, PHPCS sin errores/avisos, JS/bash 18 y regresiones pasan. Emulación Chromium con UA, no Safari nativo; sin SMTP ni eventos reales enviados a Google. Abandonar antes de cargar gtag puede perder un evento (D-073). Fondo PNG de Primera consulta 774 KiB, fallback existente menor de 1200 px; oportunidad en 10.2. 1.2 sigue REVIEW.
+
+## Despliegue D-076 · sitio corto (sesión local, 2026-10-13 18:00)
+
+Desplegados 0679222, f21bed0 y 063ba34: deploy-code (backup `~/deploy-backups/20261013-173450/`), setup-pages, setup-site, deploy-briefing y purga.
+
+| Comprobación | Resultado |
+|---|---|
+| ORL (170) y Sueño (171) | Siguen en borrador. Público: 404. Render del servidor sin sesión: anclas oido/nariz/garganta/procedimientos y atiendo/ruta; sin «Borrador», sin FAQ, sin enlaces a fichas ni flechas. |
+| Portada | 16 enlaces internos con 200. Tarjetas de área, motivos y ruta llevan a /primera-consulta/ mientras ORL y Sueño estén en borrador. |
+| /padecimientos/, /tratamientos/, /recursos/ | 404 |
+| /briefing/guia/ | 200 con X-Robots-Tag noindex, nofollow. En iPhone/Galaxy: «0 de 2 aprobadas» con las dos páginas. No se pulsaron botones. |
+| /briefing/guia/paginas.json | 403 |
+| /briefing/revision/ | Aviso «Revisar Otorrinolaringología y Sueño»; `?id=205` abre la ficha. |
+| Consola | Limpia, salvo el /favicon.ico 404 ya existente |
+
+**Q-046b · VERIFIED (local, f21bed0):** `revisar.php?action=pages` respondía 405 porque el bloque GET de D-076 iba después del filtro de solo POST, y la guía no cargaba. Se movió delante del filtro.
+
+**Límites:** la vista visual de ORL y Sueño en borrador (anclas bajo la cabecera fija) necesita sesión iniciada y no se verificó en navegador; se comprobó la estructura renderizada en el servidor. Durante la depuración, el token del briefing apareció en la salida de consola de la sesión local; no está en el repositorio ni en documentos. José decide si se rota.
+
