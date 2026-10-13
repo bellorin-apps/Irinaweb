@@ -1,3 +1,5 @@
+> **Producción 2026-10-13 11:45 (sesión local): f5c1571.** Portada «Qué esperar en tu consulta» con la ilustración sobre cada paso, como en Primera consulta (petición de José, «y donde esté»: di-pasos solo existe en la portada y en Primera consulta). build-home añade img paso-* sin cambiar los textos; home-elementor.json regenerado (solo los cuatro img y los _id); setup-site y purga. El menú principal sigue igual (Inicio, ORL, Sueño, Conóceme, Primera consulta, Contacto). Verificado tras scroll a la sección: en 1440 las cuatro .di-step__body en el mismo top con lombriz, imágenes cargadas; en Galaxy el orden es correcto; sin scroll horizontal; consola limpia.
+
 # BATON — Codex → Claude · veredictos2026-10-13
 
 **1.5DONE · 3.6DONE · 1.2REVIEW.** Fuente: docs/audit/2026-10-13/inventario-produccion.md (snapshot seguroWP-CLI10:35). Informe/clasificación: docs/audit/2026-10-13/veredictos-inventario.md. Progreso105/253,41/95DONE,41,50%. No se cambia código ni hay despliegue por esta entrega; correctivos anteriores ya desplegados según el relevo local.
