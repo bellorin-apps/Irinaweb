@@ -30,7 +30,7 @@
         "widgetType": "di-bleed",
         "settings": {
           "eyebrow": "Contacto",
-          "title": "<b>Consultorio</b> en<br><em>Cumbres, Monterrey</em>",
+          "title": "<b>Consultorio</b> en<br>Cumbres, <em>Monterrey</em>",
           "lead": "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Consulta previa cita: agenda por WhatsApp.",
           "variant": "warm",
           "crumb": "Contacto",
@@ -76,7 +76,7 @@
         "widgetType": "di-ubicacion",
         "settings": {
           "eyebrow": "Cómo llegar",
-          "title": "",
+          "title": "<b>CAB</b> Medical,<br><em>Headquarters</em>",
           "facts": [
             {
               "_id": "7576ada",
@@ -126,7 +126,7 @@
         "widgetType": "di-form",
         "settings": {
           "eyebrow": "Escríbenos",
-          "title": "¿Prefieres que <b>te</b> <em>llamemos</em>?",
+          "title": "¿<b>Prefieres</b> que<br>te <em>llamemos</em>?",
           "lead": "Déjanos tu nombre y teléfono y te contactamos en horario de consultorio. Para agendar más rápido, WhatsApp.",
           "button": "Enviar solicitud"
         },
@@ -165,7 +165,7 @@
         "widgetType": "di-narrativa",
         "settings": {
           "eyebrow": "Urgencias",
-          "title": "Este sitio <b>no es</b> un <em>canal de urgencias</em>",
+          "title": "<b>Este sitio</b> no es un<br>canal de <em>urgencias</em>",
           "lead": "Si tienes dificultad para respirar, sangrado nasal que no se detiene o un dolor intenso, acude al servicio de urgencias más cercano. Para citas y dudas, escríbenos por WhatsApp.",
           "text": ""
         },
@@ -204,7 +204,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "¿Agendamos?",
+          "title": "¿<em>Agendamos</em>?",
           "text": "WhatsApp es el canal más rápido para citas.",
           "message": ""
         },
