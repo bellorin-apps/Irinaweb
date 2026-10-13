@@ -157,3 +157,18 @@ Fuente: docs/audit/2026-10-12/public-review.json, código/builds y documentos co
 | 2.5 | DONE | FIX documental: CAB Medical, pediatría desde0meses y no publicar precios; mensaje publicado respirar/dormir/oír y agenda WhatsApp. Se retiran hipótesis presentadas como exclusividad. |
 
 Fuente: docs/audit/2026-10-12/public-review.json, código/builds y documentos contrastados. No se consultaron secretos, ni se publicó clínica, ni se enviaron formularios. DONE documental no acredita staging ni gates clínicos. Ver docs/REVISION_2026-10-12.md para pruebas y entrega.
+
+
+## Auditoría REVIEW · grupo3 · 2026-10-12
+
+| ID | Veredicto final | Evidencia / límite |
+|---|---|---|
+| 3.1 | DONE | FIX sitemap vigente y menu D-072; recursos200 noindex; pilares y muestra clínica404. Catálogo real23 fichas y3 recursos documentado sin publicar. |
+| 3.2 | DONE | FIX reglas actuales:9 titles/descriptions públicos coinciden con seo.json, canonicals y robots;8 URLs en sitemap. Longitudes son guía, no edición de marca. Redirecciones/GSC con límites explícitos. |
+| 3.3 | DONE | FIX modelo documentado frente a MetaRegistry::definitions: cuatro CPT, prefijo di_, revisor_id, menu_order, estudio_previo texto y sin falsa UI. Implementación UI sigue5.2. |
+| 3.4 | DONE | FIX mapa de tipos publicado: HomePhysician, ConócemeProfilePage+Physician, ContactoContactPage+Physician, FAQPage9 preguntas solo FAQ, recursosCollectionPage. CPT descritos desde Graph, no certificados públicamente. |
+| 3.5 | DONE | FIX inventario de capas real (IIFEJS, CSS único, versión por filemtime, Adobe Fonts, header/footerPHP). NAP repetido Q-042 y UI pendientes no se presentan como entregados. |
+| 3.6 | REVIEW | Tabla de decisiones separada de inventario. Assets prueban Elementor/Pro; Rank Math por sitemap y schema, no inventario completo. Falta listado actual de plugins activos/MU sin secretos. |
+| 3.7 | DONE | WhatsApp/teléfono/Maps/Doctoralia con destinos publicados. Eventos allowlist solo page_path; fixtures cola antesload y DNT incluso con gtag ajeno. Salida antes de descargarGA4 puede perder clic: límite declarado. |
+
+Fuente: docs/audit/2026-10-12/public-review.json, código/builds y documentos contrastados. No se consultaron secretos, ni se publicó clínica, ni se enviaron formularios. DONE documental no acredita staging ni gates clínicos. Ver docs/REVISION_2026-10-12.md para pruebas y entrega.

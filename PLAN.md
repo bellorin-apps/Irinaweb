@@ -68,13 +68,13 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 3.1 | `SITEMAP.md`: URLs, intención por página, clusters ORL y Sueño | 3 | REVIEW | v0.1; páginas OFRECE por confirmar |
-| 3.2 | `SEO.md`: keyword map, titles, canonicals, internal linking, mapa 301 | 3 | REVIEW | v0.2: keyword→URL, titles en seo.json, técnico, schema, enlazado |
-| 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | REVIEW | `ARCHITECTURE.md` §4 |
-| 3.4 | Schema map por tipo de página | 2 | REVIEW | `ARCHITECTURE.md` §5 |
-| 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | REVIEW | v0.1 |
-| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | REVIEW | v0.1 |
-| 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | REVIEW | WhatsApp principal (D-011); varias personas responden |
+| 3.1 | `SITEMAP.md`: URLs, intención por página, clusters ORL y Sueño | 3 | DONE | Auditoría2026-10-12: FIX sitemap vigente y menu D-072; recursos200 noindex; pilares y muestra clínica404. Catálogo real23 fichas y3 recursos documentado sin publicar. |
+| 3.2 | `SEO.md`: keyword map, titles, canonicals, internal linking, mapa 301 | 3 | DONE | Auditoría2026-10-12: FIX reglas actuales:9 titles/descriptions públicos coinciden con seo.json, canonicals y robots;8 URLs en sitemap. Longitudes son guía, no edición de marca. Redirecciones/GSC con límites explícitos. |
+| 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | DONE | Auditoría2026-10-12: FIX modelo documentado frente a MetaRegistry::definitions: cuatro CPT, prefijo di_, revisor_id, menu_order, estudio_previo texto y sin falsa UI. Implementación UI sigue5.2. |
+| 3.4 | Schema map por tipo de página | 2 | DONE | Auditoría2026-10-12: FIX mapa de tipos publicado: HomePhysician, ConócemeProfilePage+Physician, ContactoContactPage+Physician, FAQPage9 preguntas solo FAQ, recursosCollectionPage. CPT descritos desde Graph, no certificados públicamente. |
+| 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | DONE | Auditoría2026-10-12: FIX inventario de capas real (IIFEJS, CSS único, versión por filemtime, Adobe Fonts, header/footerPHP). NAP repetido Q-042 y UI pendientes no se presentan como entregados. |
+| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | REVIEW | Auditoría2026-10-12: Tabla de decisiones separada de inventario. Assets prueban Elementor/Pro; Rank Math por sitemap y schema, no inventario completo. Falta listado actual de plugins activos/MU sin secretos. |
+| 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | DONE | Auditoría2026-10-12: WhatsApp/teléfono/Maps/Doctoralia con destinos publicados. Eventos allowlist solo page_path; fixtures cola antesload y DNT incluso con gtag ajeno. Salida antes de descargarGA4 puede perder clic: límite declarado. |
 | 3.8 | Codex: auditoría de arquitectura contra MASTER_PROMPT | 2 | TODO | |
 
 ## FASE 4 — Design System y dirección visual

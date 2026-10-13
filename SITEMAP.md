@@ -1,3 +1,37 @@
+## Mapa vigente auditado · 2026-10-12
+Publicadas: `/`, `/dra-irina-gonzalez-saez/`, `/primera-consulta/`, `/contacto/`, `/preguntas-frecuentes/`, `/aviso-de-privacidad/`, `/aviso-medico/`, `/terminos-de-uso/`. Las ocho aparecen en page-sitemap.xml. `/links/` y `/gracias/` públicas noindex; `/recursos/` es hub público noindex, aún sin artículos aprobados. Pilares ORL/Sueño y muestra otitis devuelven404 al visitante; no se publican para probarlos.
+Menú D-072: Inicio · Conóceme · Primera consulta · Contacto · WhatsApp; ORL/Sueño se añaden solo cuando tengan destino publicado. URL de Conóceme permanece `/dra-irina-gonzalez-saez/`. Migas D-071 en franja bajo hero: Inicio › Conóceme. La navegación histórica de abajo no es el menú actual. Home usa salida temporal Primera consulta para destinos clínicos aún privados.
+Catálogo real del build (23 fichas,3 recursos). Los hubs `/padecimientos/`, `/tratamientos/`, una página DISE independiente y `/politica-de-cookies/` son propuestas, no URLs comprobadas ni entregadas.
+
+| URL prevista | Tipo | Estado |
+|---|---|---|
+| /padecimientos/otitis/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/tapon-de-cerumen/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/hipoacusia/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/tinnitus/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/vertigo/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/rinitis/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/sinusitis/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/desviacion-de-tabique-nasal/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/polipos-nasales/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/epistaxis/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/amigdalitis/ | condicion | Build en borrador; publicación médica pendiente |
+| /padecimientos/reflujo-laringofaringeo/ | condicion | Build en borrador; publicación médica pendiente |
+| /sueno/ronquido/ | condicion | Build en borrador; publicación médica pendiente |
+| /sueno/apnea-obstructiva-del-sueno/ | condicion | Build en borrador; publicación médica pendiente |
+| /tratamientos/septoplastia/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /tratamientos/turbinoplastia/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /tratamientos/amigdalas-y-adenoides/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /tratamientos/cirugia-endoscopica-nasal/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /tratamientos/rinoplastia/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /sueno/estudio-del-sueno/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /sueno/cpap/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /sueno/cirugia-de-ronquido-y-apnea/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /sueno/dispositivo-de-avance-mandibular/ | tratamiento | Build en borrador; publicación médica pendiente |
+| /recursos/como-limpiar-los-oidos/ | recurso | Build en borrador; revisión pendiente |
+| /recursos/postoperatorio-de-amigdalas/ | recurso | Build en borrador; revisión pendiente |
+| /recursos/como-limpiar-la-nariz/ | recurso | Build en borrador; revisión pendiente |
+
 # SITEMAP — Arquitectura de información
 
 Versión 0.1 · 2026-10-07 · Estado: REVIEW. Deriva de `KEYWORDS.md`. Cada URL tiene una sola intención. Las páginas de servicio se publican únicamente si la Dra. confirma OFRECE.
