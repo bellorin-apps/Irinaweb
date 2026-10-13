@@ -1,6 +1,6 @@
 <?php
 /**
- * Preguntas frecuentes. $args: eyebrow, title, items (array de [pregunta, respuesta]), narrow (bool).
+ * Preguntas frecuentes. $args: eyebrow, title, items (array de [pregunta, respuesta]), narrow (bool), bg_id (foto de fondo al lado derecho).
  *
  * @package IrinaGonzalez
  */
@@ -14,6 +14,7 @@ $irina_a     = wp_parse_args(
 		'title'   => '',
 		'items'   => [],
 		'narrow'  => true,
+		'bg_id'   => 0,
 	]
 );
 $irina_items = array_filter( (array) $irina_a['items'], static fn( $i ): bool => ! empty( $i['pregunta'] ) );
@@ -21,7 +22,9 @@ if ( ! $irina_items ) {
 	return;
 }
 ?>
-<section class="di-section di-section--tight">
+<?php $irina_bg = irina_section_photo( (int) $irina_a['bg_id'] ); ?>
+<section class="di-section di-section--tight<?php echo '' !== $irina_bg ? ' di-section--photo' : ''; ?>">
+	<?php echo $irina_bg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- irina_section_photo: wp_get_attachment_image escapado. ?>
 	<div class="<?php echo $irina_a['narrow'] ? 'di-container--narrow' : 'di-container'; ?>">
 		<?php
 		if ( '' !== $irina_a['eyebrow'] ) :
