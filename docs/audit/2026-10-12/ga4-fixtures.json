@@ -1,0 +1,13 @@
+[
+  {
+    "dnt": false,
+    "queuedBeforeLoad": true,
+    "idleLoadsOnce": true,
+    "unknownBlocked": true,
+    "noPersonalData": true
+  },
+  {
+    "dnt": true,
+    "blocked": true
+  }
+]

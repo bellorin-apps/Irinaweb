@@ -182,3 +182,6 @@ Fuente: docs/audit/2026-10-12/public-review.json, código/builds y documentos co
 | 4.6 | DONE | FIX addendum vigente de tokens, títulos D-049, separadores, migas D-071, logos y tarjeta beige; propuestas A/B quedan históricas. Sin cambiar tipografía/paleta aprobadas. |
 
 Fuente: docs/audit/2026-10-12/public-review.json, código/builds y documentos contrastados. No se consultaron secretos, ni se publicó clínica, ni se enviaron formularios. DONE documental no acredita staging ni gates clínicos. Ver docs/REVISION_2026-10-12.md para pruebas y entrega.
+
+## Entrega técnica 2026-10-12 · Codex
+FIXED_LOCAL: calidad95 ligada al derivado metadata y originales1600 a100; Do Not Track en listener; cancelación/puntero secundario y cambio reduced-motion en logos; PHPCS5errores/3avisos corregidos. PHP77, JS aplicación2 + harnesses, bash18 pasan. PHPCS completo0/0. Fixtures de GA4,logos,metadata,editorGD real y hero sin adjunto pasan. Detalle y límites: docs/REVISION_2026-10-12.md y docs/audit/2026-10-12/. No despliegue, SMTP, datos privados ni publicación médica. GD aislado6.8.3 no equivale a WP autenticado7.1.3 ni Imagick. Idempotencia DB de setup-pages requiere staging. La cola GA4 no garantiza entrega si se abandona antes de cargar proveedor; no se cambia D-073.
