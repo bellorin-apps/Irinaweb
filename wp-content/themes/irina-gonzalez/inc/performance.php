@@ -63,17 +63,39 @@ add_action(
 // profesionales y la CDN se encarga del peso por dispositivo. Los originales se conservan sin reescalar (abajo).
 // Calidad 100 en todo lo que genere WordPress (D-064, propietario 2026-10-10: vio la comparativa 100/95 y mantiene 100).
 // Excepción (D-073, propietario 2026-10-12): la versión para teléfonos (irina-movil, 1600 px de ancho) va a calidad 95 para que la
-// foto principal cargue en 3–4 s con 4G en vez de ~10 s; el escritorio y el original siguen a 100. WordPress pasa al filtro las
-// medidas del tamaño que genera (desde WP 6.8).
+// reducir su peso; escritorio y original siguen a 100. El filtro de calidad recibe dimensiones, no el nombre del tamaño:
+// q95 se aplica abajo al archivo identificado en metadata, después de generar los tamaños a q100.
 add_filter( 'jpeg_quality', static fn(): int => 100 );
 add_filter(
 	'wp_editor_set_quality',
-	static function ( $quality, $mime_type = '', $size = [] ): int {
-		return ( is_array( $size ) && IRINA_MOVIL_WIDTH === (int) ( $size['width'] ?? 0 ) ) ? 95 : 100;
-	},
+	static fn(): int => 100,
 	10,
 	3
 );
+/** Solo el archivo derivado identificado por su nombre de tamaño recibe q95, nunca un original de 1600 px. */
+function irina_mobile_metadata_quality( array $metadata, int $attachment_id ): array {
+	$mobile = $metadata['sizes']['irina-movil'] ?? [];
+	if ( empty( $mobile['file'] ) || ! empty( $mobile['irina_quality_95'] ) || ! in_array( $mobile['mime-type'] ?? '', [ 'image/webp', 'image/jpeg' ], true ) ) {
+		return $metadata;
+	}
+	$original = (string) get_attached_file( $attachment_id );
+	$file     = dirname( $original ) . '/' . wp_basename( (string) $mobile['file'] );
+	if ( wp_normalize_path( $file ) === wp_normalize_path( $original ) || ! is_file( $file ) ) {
+		return $metadata;
+	}
+	$editor = wp_get_image_editor( $file );
+	if ( is_wp_error( $editor ) || is_wp_error( $editor->set_quality( 95 ) ) ) {
+		return $metadata;
+	}
+	$saved = $editor->save( $file, $mobile['mime-type'] );
+	if ( ! is_wp_error( $saved ) ) {
+		clearstatcache( true, $file );
+		$metadata['sizes']['irina-movil']['filesize']         = filesize( $file );
+		$metadata['sizes']['irina-movil']['irina_quality_95'] = true;
+	}
+	return $metadata;
+}
+add_filter( 'wp_generate_attachment_metadata', 'irina_mobile_metadata_quality', 20, 2 );
 // El original subido se conserva como tamaño "full" (WordPress no lo reescala a 2560 px): la foto del hero se sirve tal cual.
 add_filter( 'big_image_size_threshold', '__return_false' );
 // Sin «sizes=auto» en imágenes diferidas: con «auto» el navegador pedía la versión del ancho CSS a 1× (borrosa en 2×). Q-020.
@@ -200,7 +222,7 @@ add_filter(
 		$add     = static function ( string $url ) use ( $version ): string {
 			return str_contains( $url, '?' ) ? $url . '&' . $version : $url . '?' . $version;
 		};
-		$html = (string) preg_replace_callback(
+		$html    = (string) preg_replace_callback(
 			'/\ssrc="([^"]+)"/',
 			static fn( array $m ): string => ' src="' . esc_url( $add( $m[1] ) ) . '"',
 			$html

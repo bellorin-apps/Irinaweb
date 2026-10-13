@@ -93,3 +93,7 @@ Inventario de producción: `docs/audit/inventory-20261007-174227.txt` (solo lect
 4. Elementor Pro: subir zip (propietario, una vez) y activar licencia.
 5. 2FA para el administrador.
 6. Página 106 "Inicio" se sustituye cuando exista la nueva Home (Fase 6).
+
+
+## Límite del inventario · revisión2026-10-12
+La clasificación anterior pertenece al inventario histórico. REMOVE no autoriza borrar: páginas106/39/79 se conservan como borradores (D-056); tampoco se elimina ningún medio/plantilla/respaldo. La auditoría anónima ve tema irina-gonzalez y assets Elementor/Pro, pero no certifica todos los plugins/MU, menús de BD ni la biblioteca de medios. Tareas1.2/1.5 permanecen REVIEW. Claude local entrega un inventario actual con clasificación y destino, excluyendo datos privados; confirma solo idioma, formatos y booleanos de hardening, sin leer/imprimir wp-config en esta auditoría.

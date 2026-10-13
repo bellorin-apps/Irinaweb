@@ -1,3 +1,5 @@
+> **Reglas vigentes auditadas2026-10-12:** nueve páginas públicas con entrada en seo.json coinciden exactamente en title/description. Longitudes60/155 son guía editorial; los títulos aprobados de Home/Conóceme/Primera consulta tienen62/71/65 caracteres y no se recortan automáticamente. Canónicos sinwww, sitemap ocho páginas, Links/Gracias/Recursos noindex. Home ya es portada indexable; `/inicio-v2/` identifica el registro WP, no una segunda landing a indexar. OG por defecto `og-default.jpg` (D-067), no un retrato por generar. Horario no publicado; atención Previa cita. Datos de GSC y selección canónica de Google quedan OWNER. Redirecciones registradas en BATON/DEPLOY son evidencia anterior, no ensayo de servidor en esta revisión. Schema actual se detalla en ARCHITECTURE addendum2026-10-12.
+
 # SEO — Arquitectura y reglas
 
 Versión 0.2 · 2026-10-08 · Estado: REVIEW. Deriva de `KEYWORDS.md` (keyword map y canibalización), `SITEMAP.md` (URLs) y `ARCHITECTURE.md` (schema). Nada de volúmenes de búsqueda: no se han medido.

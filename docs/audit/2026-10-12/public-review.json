@@ -1,0 +1,1355 @@
+{
+  "rows": [
+    {
+      "route": "/",
+      "status": 200,
+      "lang": "es",
+      "title": "Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez",
+      "description": "Otorrinolaringólogo certificado en Monterrey, especialista en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos en Cumbres. Agenda por WhatsApp.",
+      "canonical": "https://drairinagonzalez.com/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "WebSite",
+        "ImageObject",
+        "WebPage",
+        "Physician"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [
+        "Ronco o me dicen que dejo de respirar",
+        "Nariz tapada todo el tiempo",
+        "Sinusitis que no se quita",
+        "Dolor u oído tapado",
+        "Escucho menos o me zumba el oído",
+        "Estornudos y alergia",
+        "Dolor de garganta frecuente",
+        "Ronquera o cambios en la voz"
+      ],
+      "pluginAssets": [
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor-pro",
+        "elementor-pro"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "lang": "es",
+      "title": "Dra. Irina González Sáez, otorrinolaringólogo especialista en sueño",
+      "description": "Formación en dos países, certificación del Consejo Mexicano de ORL y CCC y subespecialización en desórdenes respiratorios del dormir. Consultorio en Cumbres, Monterrey.",
+      "canonical": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList",
+        "Physician",
+        "ProfilePage"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nConóceme",
+      "pluginAssets": [
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor-pro",
+        "elementor-pro"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/primera-consulta/",
+      "status": 200,
+      "lang": "es",
+      "title": "Primera consulta con la Dra. Irina González Sáez | Qué esperar",
+      "description": "Cómo es la consulta de otorrinolaringología: 30 minutos, exploración completa y plan claro. Qué llevar, costos y seguros.",
+      "canonical": "https://drairinagonzalez.com/primera-consulta/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nPrimera consulta",
+      "pluginAssets": [
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor-pro",
+        "elementor-pro"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "lang": "es",
+      "title": "Contacto y ubicación | Dra. Irina González Sáez, Cumbres",
+      "description": "Consultorio en CAB Medical Headquarters, Av. Paseo de los Leones 2341, Cumbres 2.º Sector, Monterrey. Horario, mapa, estacionamiento y WhatsApp.",
+      "canonical": "https://drairinagonzalez.com/contacto/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList",
+        "Physician",
+        "ContactPage"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nContacto",
+      "pluginAssets": [
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor-pro",
+        "elementor-pro"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "lang": "es",
+      "title": "Preguntas frecuentes | Dra. Irina González Sáez",
+      "description": "Horario, costo de consulta, seguros, atención a niños y hospitales. Respuestas de servicio del consultorio de la Dra. Irina González Sáez.",
+      "canonical": "https://drairinagonzalez.com/preguntas-frecuentes/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "faqCount": [
+        9
+      ],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nPreguntas frecuentes",
+      "pluginAssets": [
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor-pro",
+        "elementor-pro"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/links/",
+      "status": 200,
+      "lang": "es",
+      "title": "Links | Dra. Irina González Sáez",
+      "description": "Facebook Twitter Youtube",
+      "robots": "nofollow, noindex",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "pluginAssets": [
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor-pro",
+        "elementor-pro"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/gracias/",
+      "status": 200,
+      "lang": "es",
+      "title": "Mensaje recibido | Dra. Irina González Sáez",
+      "description": "Recibimos tu solicitud; te contactamos en horario de consultorio.",
+      "robots": "nofollow, noindex",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nGracias",
+      "pluginAssets": [
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor",
+        "elementor-pro",
+        "elementor-pro"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/aviso-de-privacidad/",
+      "status": 200,
+      "lang": "es",
+      "title": "Aviso de privacidad | Dra. Irina González Sáez",
+      "description": "Cómo tratamos sus datos personales conforme a la LFPDPPP.",
+      "canonical": "https://drairinagonzalez.com/aviso-de-privacidad/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nAviso de privacidad",
+      "pluginAssets": [
+        "elementor"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/aviso-medico/",
+      "status": 200,
+      "lang": "es",
+      "title": "Aviso médico | Dra. Irina González Sáez",
+      "description": "La información del sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias.",
+      "canonical": "https://drairinagonzalez.com/aviso-medico/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nAviso médico",
+      "pluginAssets": [
+        "elementor"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/terminos-de-uso/",
+      "status": 200,
+      "lang": "es",
+      "title": "Términos de uso | Dra. Irina González Sáez",
+      "description": "Condiciones de uso del sitio web de la Dra. Irina González Sáez.",
+      "canonical": "https://drairinagonzalez.com/terminos-de-uso/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nTérminos de uso",
+      "pluginAssets": [
+        "elementor"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/recursos/",
+      "status": 200,
+      "lang": "es",
+      "title": "Recursos Archive | Dra. Irina González Sáez",
+      "description": "Recursos Archive | Dra. Irina González Sáez",
+      "robots": "noindex, follow",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nRecursos",
+      "pluginAssets": [
+        "elementor"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/otorrinolaringologia/",
+      "status": 404,
+      "lang": "es",
+      "title": "Page Not Found | Dra. Irina González Sáez",
+      "robots": "follow, noindex",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nPágina no encontrada",
+      "pluginAssets": [
+        "elementor"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/sueno/",
+      "status": 404,
+      "lang": "es",
+      "title": "Page Not Found | Dra. Irina González Sáez",
+      "robots": "follow, noindex",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nPágina no encontrada",
+      "pluginAssets": [
+        "elementor"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/padecimientos/otitis/",
+      "status": 404,
+      "lang": "es",
+      "title": "Page Not Found | Dra. Irina González Sáez",
+      "robots": "follow, noindex",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nPágina no encontrada",
+      "pluginAssets": [
+        "elementor"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/review-no-existe/",
+      "status": 404,
+      "lang": "es",
+      "title": "Page Not Found | Dra. Irina González Sáez",
+      "robots": "follow, noindex",
+      "h1": 1,
+      "main": 1,
+      "ogImage": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "schemas": [
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "faqCount": [],
+      "nav": [
+        {
+          "text": "Inicio",
+          "path": "/"
+        },
+        {
+          "text": "Conóceme",
+          "path": "/dra-irina-gonzalez-saez/"
+        },
+        {
+          "text": "Primera consulta",
+          "path": "/primera-consulta/"
+        },
+        {
+          "text": "Contacto",
+          "path": "/contacto/"
+        },
+        {
+          "text": "Agendar por WhatsAppWhatsApp",
+          "path": "/528123685381"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl/"
+        },
+        {
+          "text": "",
+          "path": "/@drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/drairinagonzalezorl"
+        },
+        {
+          "text": "",
+          "path": "/perfil/irina-gonzalez-saez"
+        }
+      ],
+      "motivos": [],
+      "crumb": "Inicio\nPágina no encontrada",
+      "pluginAssets": [
+        "elementor"
+      ],
+      "duplicateImageAttributes": false,
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "root": {
+    "status": 200,
+    "timezone": "America/Monterrey",
+    "gmtOffset": -6,
+    "practicePrivateFieldsPresent": [],
+    "sitemapStatus": 200,
+    "sitemapPaths": [
+      "/",
+      "/terminos-de-uso/",
+      "/aviso-medico/",
+      "/aviso-de-privacidad/",
+      "/preguntas-frecuentes/",
+      "/contacto/",
+      "/primera-consulta/",
+      "/dra-irina-gonzalez-saez/"
+    ]
+  },
+  "devices": [
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "position": "85% 20%",
+      "naturalWidth": 1600,
+      "naturalHeight": 1102,
+      "mobileVersion": true,
+      "loading": "eager",
+      "fetchpriority": "high"
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "position": "85% 20%",
+      "naturalWidth": 1600,
+      "naturalHeight": 1102,
+      "mobileVersion": true,
+      "loading": "eager",
+      "fetchpriority": "high"
+    }
+  ]
+}

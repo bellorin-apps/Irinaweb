@@ -26,7 +26,7 @@ $irina_a   = wp_parse_args(
 		'bg_id'     => 0,
 	]
 );
-$irina_bg = irina_section_photo( (int) $irina_a['bg_id'] );
+$irina_bg  = irina_section_photo( (int) $irina_a['bg_id'] );
 $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 	(int) $irina_a['image_id'],
 	[

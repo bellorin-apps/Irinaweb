@@ -19,6 +19,6 @@ lines += ["", "| Fase | Peso DONE | Peso total |", "|---|---:|---:|"]
 for phase in range(14):
     group = [row for row in rows if row[0].split(".")[0] == str(phase)]
     lines.append(f"| {phase}{' (EN, aparte)' if phase == 13 else ''} | {sum(r[1] for r in group if r[2] == 'DONE')} | {sum(r[1] for r in group)} |")
-lines += ["", "Los DONE heredados conservan la evidencia referida por PLAN; este cálculo no equivale a certificar todos los gates. Auditoría actual y límites: `docs/AUDITORIA_CODEX_2026-10-10.md`. No se elevan tareas a DONE por terminar una revisión local.", ""]
+lines += ["", "Los DONE conservan la evidencia referida por PLAN; este cálculo no equivale a certificar todos los gates. Auditorías y límites: `QA.md`, `BATON.md`, `docs/AUDITORIA_CODEX_2026-10-10.md` y `docs/REVISION_2026-10-12.md`. La revisión documental no certifica staging, despliegue ni aprobación clínica.", ""]
 (root / "PROGRESS.md").write_text("\n".join(lines), encoding="utf-8")
 print(f"{done}/{total} pesos; {states['DONE']}/{len(es)} DONE; {done / total:.2%}")

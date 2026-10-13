@@ -284,6 +284,7 @@
       }
       var startY = 0, samples = [];
       rail.addEventListener('pointerdown', function (e) {
+        if (dragging || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) { return; }
         if (e.button && e.button !== 0) { return; }
         // Sin congelar todavía: si el dedo va en vertical (scroll de la página) el carril sigue moviéndose solo.
         dragging = true; moved = false; pid = e.pointerId; startX = lastX = e.clientX; startY = e.clientY; lastT = e.timeStamp; vel = 0;
@@ -309,7 +310,7 @@
         // Velocidad de salida = recorrido de los últimos 70 ms del gesto. Si el dedo se quedó quieto antes de soltar
         // (más de 150 ms sin moverse), no hay inercia.
         var now = e ? e.timeStamp : lastT, first = samples[0], span = (lastT - first.t) / 1000;
-        vel = (now - lastT > 150 || span <= 0) ? 0 : (lastX - first.x) / span;
+        vel = (!e || e.type === 'pointercancel' || now - lastT > 150 || span <= 0) ? 0 : (lastX - first.x) / span;
         if (Math.abs(vel) > 5000) { vel = vel > 0 ? 5000 : -5000; }
         idle = 0; ramp = 0; // sin pausa: tras la inercia, el autoplay arranca desde cero y acelera suave.
       }
@@ -321,6 +322,14 @@
       rail.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hovering = true; } });
       rail.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hovering = false; } });
       window.addEventListener('resize', function () { if (manual) { measure(); x = wrap(x); apply(); } });
+      var logoMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      function stopLogoMotion(e) {
+        if (!e.matches) { return; }
+        cancelAnimationFrame(raf); raf = 0; manual = false; dragging = false; pid = null; vel = 0;
+        track.style.transform = ''; track.classList.remove('is-manual'); rail.classList.remove('is-dragging');
+      }
+      if (logoMotion.addEventListener) { logoMotion.addEventListener('change', stopLogoMotion); }
+      else if (logoMotion.addListener) { logoMotion.addListener(stopLogoMotion); }
     });
   }
 

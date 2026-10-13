@@ -1,3 +1,5 @@
+> **Vigencia2026-10-12:** keyword research preliminar, sin volumen/ranking medido. GSC, GBP y SERP México quedan OWNER; no bloquean la entrega documental2.3. URLs desplegadas/borradores se consultan en SITEMAP.md. OFRECE/REFIERE y edad ya confirmados en DISCOVERY §0b/D-039 prevalecen sobre «por confirmar» histórico; eso no sustituye aprobación de textos. Sin precios públicos (D-054).
+
 # KEYWORDS — Investigación preliminar de palabras clave
 
 Proyecto: drairinagonzalez.com · Dra. Irina González Sáez · Otorrinolaringólogo · Monterrey, N.L.

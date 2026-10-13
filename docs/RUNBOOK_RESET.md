@@ -1,3 +1,5 @@
+> **ARCHIVO HISTÓRICO — NO EJECUTAR.** Auditoría2026-10-12: este reset es de una arquitectura anterior y contiene destinos www/raíz retirados e instrucciones de borrado anuladas por D-056. Procedimiento vigente: docs/DEPLOY.md y BATON.md. Ninguna operación de reset está autorizada por esta revisión.
+
 # RUNBOOK — Reinicio desde cero EN SITIO, conservando Sensia en /op
 
 Fecha: 2026-10-07 · Decisión D-021 (revisada: Sensia permanece en `drairinagonzalez.com/op`).

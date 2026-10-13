@@ -1,37 +1,22 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado: 2026-10-12 (cierre) · Claude local · cálculo: PLAN → PROGRESS.
+Actualizado:2026-10-12 · Codex · encargo docs/CODEX_REVIEW_PROMPT.md.
 
-**26,09 % global español: 66/253 pesos, 25/95 tareas DONE.** Solo DONE suma; inglés aparte (0/19). El 31 % anterior mezclaba crédito parcial y un resumen divergente. No se elevó ninguna tarea por pruebas locales.
+**39,92% español:101/253 pesos,39/95 tareas DONE.** Revisión completa de17 tareas:14DONE y3REVIEW. Inglés separado,0/19. PLAN→PROGRESS; sin crédito parcial.
 
-**Cierre 2026-10-12:** producción en edfa4f0 (BATON). Hoy: migas en franja y «Conóceme» (D-071), menú Inicio + Conóceme (D-072), «Escucharte» con tarjeta beige y endoscopio nuevo, retrato y endoscopio en WebP sin pérdida (plugin 0.4.5), logos con inercia nativa y relevo continuo. Después: hero de Primera consulta con foto (como «Conóceme») y D-073 (móvil q95, GA4 y encaje diferidos). Encargo para Codex de las 17 tareas REVIEW en `docs/CODEX_REVIEW_PROMPT.md`. D-074 (fondo y áreas a q95 en móvil). José verificó en su Samsung (Q-039) y aprobó «Qué llevar» (Q-043). Ninguna tarea cambia a DONE. Pendientes en NEXT §NOW.
+Producción declarada por Claude local:edfa4f0. Auditoría sobre fdb04d0. Código correctivo local:8b2375c, aún sin despliegue por Codex. Incluye calidad móvil por metadata (original1600q100), DNT en clics, cancelación/punteros/reduced-motion de logos y PHPCS. Se conservan textos de marca, menús, sombras y cuatroHTML locales de José.
 
-**Cierre 2026-10-10:** producción en 3b78ece (BATON). Hoy: logos (D-066/D-068) con arrastre, títulos de la Dra., og:image (D-067), hub de recursos en noindex con 3 borradores (8.2 DOING), «Escucharte» con tarjeta de cristal y endoscopio (D-069), lombrices acotadas, Lighthouse medido (Q-025/046/047). Pendientes en NEXT §NOW.
+Quedan REVIEW:1.2 inventario completo actual,1.5 configuración interna no verificable anónimamente,3.6 plugins activos/MU. Se requiere informe permitido de Claude local; no leer/imprimir secretos. No se simula evidencia.
 
-**Estado operativo (histórico):** núcleo público y auditoría general desplegados hasta9053a4b según el relevo de Claude local; nuevo ajuste móvil60/40 preparado y probado localmente, sin despliegue por Codex. Fases 10–11 en revisión; clínica de Fase 7 pendiente de aprobación. Inglés después del lanzamiento español.
+## Verificación y gates
 
-## Evidencia actual
+- Quince rutas públicas y cinco anchos sin overflow/excepción JS;11rutas200 y cuatro404 esperados. Menú D-072 y migas D-071; FAQPage9 preguntas soloFAQ;8URLs en sitemap;9paresSEO coinciden con build. Recursos público noindex; clínica aún privada.
+- Hero Primera consulta con UA Galaxy/iPhone:1600×1102, eager/high, foco85%20%; fallback cálido sin adjunto probado en fixture. Q-039 aprobado por José en Samsung y Q-043 Qué llevar aprobado, según BATON. No se repiten esas decisiones.
+- PHP77/PHPCS0errores0avisos, JS/bash18 y regresiones pasan. GD real6.8.3 aislado confirma original1600intacto y derivado95; no equivale a WordPress autenticado/Imagick.
+- GA4 conserva carga diferida y cola; abandonar antes de cargar proveedor puede perder clic. No se añade demora a navegación.
+- Primera lectura de caché normal mostró dos acentos antiguos; petición fresca y build correctos. Claude purga y verifica URL limpia.
+- Gates pendientes:despliegue correctivo, inventario/configuración, idempotencia WP en staging, Safari/iOS nativo, GSC/GBP, revisión médica/legal. La Dra. aún debe aprobar fichas,recursos y ORL/Sueño.
 
-- Once rutas públicas en 360/390/430/768/1024/1440: diez 200 y 404 propia; un h1/main; sin desbordes ni excepción JS.
-- Portada, Dra., Primera consulta, FAQ, Contacto, legales, Gracias y Links públicas. Gracias/Links noindex y fuera de sitemap. Cabeceras de seguridad presentes.
-- Pilares y fichas sin destino público. No se modificaron estados clínicos.
-- PHP/PHPCS, builds, sintaxis y regresiones locales pasan; sesión local verificó FAQPage y datos ocultos en producción. Fetchpriority duplicado sigue abierto.
-- Escucharte60/40 verificado en producción en muestras360/390. José sigue viendo poco cambio: a360 el retrato se desplazó apenas0,125px respecto de la versión anterior. Q-039 abierto; propuesta estrecha aislada, sin aplicarla al tema. Evidencia en docs/ESCUCHARTE_DISCREPANCIA_MOVIL_2026-10-10.md.
-- Cambios previos de cuatro maquetas HTML preservados fuera de nuestros commits.
+Próximo paso:NEXT. Entrega:BATON. Informe:docs/REVISION_2026-10-12.md. No SMTP, despliegue, clínica nueva ni cambios a aplicaciones privadas por esta revisión.
 
-## Gates pendientes
-
-| Gate | Estado | Responsable |
-|---|---|---|
-| Despliegue y verificación pública del nuevo60/40 | Pendiente; auditoría general ya desplegada | Claude local |
-| REST/Gutenberg y rol médico en WP completo | Pendiente; tests aislados pasan | Sesión local en copia/staging |
-| Composición móvil satisfactoria en teléfono real | CSS60/40 público, pero resultado estrecho sigue abierto; propuesta−12px pendiente de revisión | Preguntas por Claude; prueba real por sesión local/José |
-| Marcadores de borrador en páginas públicas | Aprobación del bloque por confirmar; Q-043 | Dra./José |
-| Fichas médicas | Revisión/aprobación pendientes | Dra. |
-| GA4, foto definitiva, cobertura GSC | Dependencias conocidas | José/Dra. |
-
-No se certifica pre-launch completo: faltan gates autenticados, revisión clínica/legal y dispositivos fuera de Chrome. Sin cambios a CDN, Sensia, SMTP ni servidor.
-
-Próximo paso: NEXT. Entrega: BATON. Evidencia: QA y `docs/AUDITORIA_CODEX_2026-10-10.md`.
-Ajuste posterior autorizado: altura del retrato limitada en teléfonos <=430px; preparado localmente, pendiente despliegue de Claude y revisión real (ver BATON, portrait-cap.json).
-Entrega posterior vigente: silueta calculada contra texto real, sin reducción adicional; CSS/JS listos localmente. Ver BATON. Q-039 abierto hasta despliegue de Claude y revisión en ambos teléfonos.
+Integración posterior:9ad3a67 de Claude (fondo de Qué llevar/FAQ) preservado; PHP/PHPCS/bash y build revisados. Foto real/contraste y activación de ese fondo pendientes de Claude; capturas anteriores no lo muestran.

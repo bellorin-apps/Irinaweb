@@ -44,37 +44,37 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 1.1 | Canal técnico: red amplia del entorno + Application Password del WordPress NUEVO (REST); SSH solo desde la PC | 2 | OWNER | D-018, D-021 |
-| 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | REVIEW | `docs/audit/`, `docs/AUDIT_WP.md` |
+| 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | REVIEW | Auditoría2026-10-12: Inventario del7–8/10 histórico. HTML no enumera plugins sin assets, borradores, menús internos ni medios completos; falta inventario actual de Claude local sin datos privados. |
 | 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | TODO | |
 | 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | TODO | Alertas existentes: noindex + canónica duplicada |
-| 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | REVIEW | Ejecutado 2026-10-07/08 por REST + sesión local |
+| 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | REVIEW | Auditoría2026-10-12: HTML es y REST America/Monterrey, UTC−6 verificados. es_MX, formatos, ausencia completa de Astra/Site Kit y constantes de hardening necesitan informe local de valores permitidos, sin abrir wp-config. |
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | DONE | Manual 2026-10-07 16:41 descargado; semanal automático activo |
 | 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | TODO | |
-| 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | REVIEW | `docs/DEPLOY.md`, `docs/RUNBOOK_RESET.md` |
+| 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | DONE | Auditoría2026-10-12: FIX documental: rollback vigente según deploy-code.sh (~/deploy-backups/<ts>); runbook de reset marcado histórico y no ejecutable; sin credenciales. |
 | 1.9 | Codex: auditoría de seguridad del estado actual | 2 | TODO | |
 
 ## FASE 2 — Investigación y estrategia
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 2.1 | `docs/REFERENCE_RESEARCH.md`: Stanford Sleep, Mayo, Cleveland, Johns Hopkins, Sleep Doctor, ENT privados, referentes UX | 3 | REVIEW | Basado en snippets: todos los dominios bloqueados por la red del entorno; incluye checklist de verificación visual |
-| 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | REVIEW | `docs/COMPETITION_MONTERREY.md`; ítems "no verificado" por bloqueo de red |
-| 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | REVIEW | Sin volúmenes; evidencia SERP; pendiente cruzar con Search Console |
-| 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | REVIEW | 11 motivos reales de la Dra. (DISCOVERY §0b) |
-| 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | REVIEW | v0.1; audiencias por validar con briefing |
+| 2.1 | `docs/REFERENCE_RESEARCH.md`: Stanford Sleep, Mayo, Cleveland, Johns Hopkins, Sleep Doctor, ENT privados, referentes UX | 3 | DONE | Auditoría2026-10-12: Referentes identifican snippets/inferencias y bloqueo de lectura; checklist visual separado. Investigación preliminar útil, sin certificar UX ajena. |
+| 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | DONE | Auditoría2026-10-12: FIX documental: oportunidades son hipótesis de muestra, sin afirmar ausencia universal de competidores; precios/horarios se subordinan a D-054/D-032. |
+| 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | DONE | Auditoría2026-10-12: Keyword map sin volúmenes inventados, limitaciones de SERP declaradas; coherencia con slugs del build. GSC/GBP quedan OWNER. |
+| 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | DONE | Auditoría2026-10-12: DISCOVERY §0b contiene11 motivos confirmados; ocho filas del build agrupan los11 (ronquido/apnea, oído/cerumen, amígdalas/niños). Sito fresco y estrategia coherentes. |
+| 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | DONE | Auditoría2026-10-12: FIX documental: CAB Medical, pediatría desde0meses y no publicar precios; mensaje publicado respirar/dormir/oír y agenda WhatsApp. Se retiran hipótesis presentadas como exclusividad. |
 | 2.6 | Codex: revisión de estrategia y keyword map | 1 | TODO | |
 
 ## FASE 3 — Arquitectura (información, SEO, WordPress)
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 3.1 | `SITEMAP.md`: URLs, intención por página, clusters ORL y Sueño | 3 | REVIEW | v0.1; páginas OFRECE por confirmar |
-| 3.2 | `SEO.md`: keyword map, titles, canonicals, internal linking, mapa 301 | 3 | REVIEW | v0.2: keyword→URL, titles en seo.json, técnico, schema, enlazado |
-| 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | REVIEW | `ARCHITECTURE.md` §4 |
-| 3.4 | Schema map por tipo de página | 2 | REVIEW | `ARCHITECTURE.md` §5 |
-| 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | REVIEW | v0.1 |
-| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | REVIEW | v0.1 |
-| 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | REVIEW | WhatsApp principal (D-011); varias personas responden |
+| 3.1 | `SITEMAP.md`: URLs, intención por página, clusters ORL y Sueño | 3 | DONE | Auditoría2026-10-12: FIX sitemap vigente y menu D-072; recursos200 noindex; pilares y muestra clínica404. Catálogo real23 fichas y3 recursos documentado sin publicar. |
+| 3.2 | `SEO.md`: keyword map, titles, canonicals, internal linking, mapa 301 | 3 | DONE | Auditoría2026-10-12: FIX reglas actuales:9 titles/descriptions públicos coinciden con seo.json, canonicals y robots;8 URLs en sitemap. Longitudes son guía, no edición de marca. Redirecciones/GSC con límites explícitos. |
+| 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | DONE | Auditoría2026-10-12: FIX modelo documentado frente a MetaRegistry::definitions: cuatro CPT, prefijo di_, revisor_id, menu_order, estudio_previo texto y sin falsa UI. Implementación UI sigue5.2. |
+| 3.4 | Schema map por tipo de página | 2 | DONE | Auditoría2026-10-12: FIX mapa de tipos publicado: HomePhysician, ConócemeProfilePage+Physician, ContactoContactPage+Physician, FAQPage9 preguntas solo FAQ, recursosCollectionPage. CPT descritos desde Graph, no certificados públicamente. |
+| 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | DONE | Auditoría2026-10-12: FIX inventario de capas real (IIFEJS, CSS único, versión por filemtime, Adobe Fonts, header/footerPHP). NAP repetido Q-042 y UI pendientes no se presentan como entregados. |
+| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | REVIEW | Auditoría2026-10-12: Tabla de decisiones separada de inventario. Assets prueban Elementor/Pro; Rank Math por sitemap y schema, no inventario completo. Falta listado actual de plugins activos/MU sin secretos. |
+| 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | DONE | Auditoría2026-10-12: WhatsApp/teléfono/Maps/Doctoralia con destinos publicados. Eventos allowlist solo page_path; fixtures cola antesload y DNT incluso con gtag ajeno. Salida antes de descargarGA4 puede perder clic: límite declarado. |
 | 3.8 | Codex: auditoría de arquitectura contra MASTER_PROMPT | 2 | TODO | |
 
 ## FASE 4 — Design System y dirección visual
@@ -83,10 +83,10 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 4.1 | Derivar sistema digital de la identidad existente (paleta, tipografía, logo, favicon) | 3 | DONE | `DESIGN_SYSTEM.md` §2–3; favicon pendiente de exportar |
 | 4.2 | Tokens globales (color, tipo, espacio, radio, sombra, motion) | 3 | DONE | `assets/css/tokens.css` |
-| 4.3 | Componentes base: botones, inputs, cards, badges, iconografía Lucide | 3 | REVIEW | `tools/preview/preview.css`; inputs pendientes (Fase 8) |
+| 4.3 | Componentes base: botones, inputs, cards, badges, iconografía Lucide | 3 | DONE | Auditoría2026-10-12: Botones D-053, cards, badges y sprite Lucide en código; sin alterar sombras. Inputs tienen tarea propia Fase8; responsive público cinco anchos sin desbordes. |
 | 4.4 | Concepto visual "Sleep experience" dentro de la marca | 2 | DONE | `DESIGN_SYSTEM.md` §6; aplicado en maquetas |
 | 4.5 | Mockups/prototipos: Home, Dra. Irina, página médica, artículo, móvil | 5 | DONE | Publicadas 2026-10-08 en `/preview/` (200 ×4, noindex) |
-| 4.6 | `DESIGN_SYSTEM.md` | 2 | REVIEW | v0.1 |
+| 4.6 | `DESIGN_SYSTEM.md` | 2 | DONE | Auditoría2026-10-12: FIX addendum vigente de tokens, títulos D-049, separadores, migas D-071, logos y tarjeta beige; propuestas A/B quedan históricas. Sin cambiar tipografía/paleta aprobadas. |
 | 4.7 | CHECKPOINT 2: dirección visual aprobada | 2 | DONE | 2026-10-08: v2 aprobada por el propietario («ciertos cambios los haremos después»); D-026 |
 
 ## FASE 5 — Infraestructura de código

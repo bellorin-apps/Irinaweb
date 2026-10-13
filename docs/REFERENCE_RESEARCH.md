@@ -475,3 +475,7 @@ Para cada referente principal (Stanford Sleep, Mayo OSA, Cleveland Health Librar
 - E-E-A-T y schema: lseo.com ("Reviewed by" tag), seo-day.de, tygartmedia.com (guía YMYL para consultorios en WordPress), schema.org (`lastReviewed`, `reviewedBy`), plantilla WAX (MedicalWebPage con reviewedBy).
 - WhatsApp y agenda: guías de proveedores (Aurora Inbox, Medesk, GuruSup) — tratadas como afirmaciones comerciales, no como evidencia.
 - Directorios locales: Doctoralia México y TopDoctors México (listados de ORL en Monterrey con ronquido/apnea).
+
+
+## Veredicto documental · 2026-10-12
+2.1 DONE: evidencia [S]/[I], bloqueo de lectura y pendientes visuales están identificados. Afirmaciones históricas de terceros no se actualizan ni se reutilizan como promesas propias. La certificación de UX móvil ajena queda fuera de este documento preliminar.

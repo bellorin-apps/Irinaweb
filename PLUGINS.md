@@ -1,3 +1,7 @@
+## Inventario y decisiones · revisión2026-10-12
+La tabla siguiente es de decisiones/propuestas. No es un listado de plugins activos y por eso3.6 sigue REVIEW. La muestra pública confirma assets de Elementor y ElementorPro, sitemap/schema RankMath y tema irina-gonzalez. El informe histórico confirma LiteSpeed y core; la lista completa actual (incluidos plugins sin assets y MU) requiere inventario de Claude local. No se consultan aplicaciones privadas.
+WebpUpload del core convierte fotografías; el tema selecciona `<picture>` móvil1600. D-073/D-074 usan q95 solo en versión móvil; originales/escritorio q100 y recortes alfa lossless. «LiteSpeed» en la fila imágenes no describe el conversor actual. SafeSVG/Two-Factor/QueryMonitor son opciones, no instalaciones certificadas; no hay que instalarlos por esta tabla. Formularios/SMTP/GA4 son propios del core. Consumidores y allowlist Ops siguen Q-040.
+
 # PLUGINS — Decisiones
 
 Versión 0.1 · 2026-10-07 · Estado: REVIEW. Principio: menos plugins, mejores plugins. Se instala en staging, se valida y luego se despliega.

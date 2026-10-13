@@ -35,6 +35,7 @@ final class WebpUpload {
 	 * @return array{file:string,url:string,type:string}
 	 */
 	public function convert( array $upload, string $context ): array {
+		unset( $context ); // Firma del filtro de WordPress: upload y sideload usan la misma política.
 		if ( ! in_array( $upload['type'] ?? '', [ 'image/png', 'image/jpeg' ], true ) ) {
 			return $upload;
 		}

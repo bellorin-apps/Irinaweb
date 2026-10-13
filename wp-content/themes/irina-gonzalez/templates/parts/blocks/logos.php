@@ -9,7 +9,7 @@
 
 declare( strict_types=1 );
 
-$irina_a = wp_parse_args(
+$irina_a     = wp_parse_args(
 	$args ?? [],
 	[
 		'eyebrow' => '',

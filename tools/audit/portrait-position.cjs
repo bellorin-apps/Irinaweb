@@ -2,7 +2,9 @@
 const {chromium}=require(process.env.IRINA_PLAYWRIGHT||'playwright');
 const fs=require('node:fs'),path=require('node:path');
 const sharp=require(process.env.IRINA_SHARP||'sharp');
-const out=path.resolve('docs/audit/2026-10-10/portrait-position');
+const date=process.argv.find(x=>x.startsWith('--date='))?.split('=')[1]||'2026-10-10';
+if(!/^\d{4}-\d{2}-\d{2}$/.test(date))throw new Error('Fecha inválida');
+const out=path.resolve(`docs/audit/${date}/portrait-position`);
 const local=process.argv.includes('--local');
 const tag=process.argv.find(x=>x.startsWith('--tag='))?.split('=')[1]||(local?'claude':'live');
 const offsets=(process.argv.find(x=>x.startsWith('--offsets='))?.split('=')[1]||'0,32,48,64').split(',').map(Number);
@@ -13,12 +15,14 @@ const assets=Object.fromEntries(['css/components.css','js/main.js'].map(name=>[n
  const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
  const results=[];
  for(const width of [320,360,390,393,412,430]){
-  const p=await b.newPage({viewport:{width,height:1100}});
+  const mobile=process.argv.includes('--mobile-ua');
+  const p=await b.newPage({viewport:{width,height:1100},...(mobile?{isMobile:true,deviceScaleFactor:2,hasTouch:true,userAgent:width<390?'Mozilla/5.0 (Linux; Android 13; SM-S901B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36':'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'}:{})});
   if(local)await p.route('**/themes/irina-gonzalez/assets/**',r=>{
    const name=new URL(r.request().url()).pathname.split('/assets/')[1];
    return assets[name]?r.fulfill({body:assets[name],contentType:name.endsWith('.css')?'text/css':'application/javascript'}):r.continue();
   });
   await p.goto('https://drairinagonzalez.com/',{waitUntil:'networkidle'});
+  const initialOffset=await p.locator('.di-doctor__portrait img').evaluate(i=>i.style.left);
   await p.evaluate(()=>document.fonts.ready);
   if(process.argv.includes('--large-text'))await p.addStyleTag({content:'html{font-size:20px!important}'});
   const section=p.locator('.di-section--doctor');await section.scrollIntoViewIfNeeded();await p.waitForTimeout(900);
@@ -56,7 +60,7 @@ const assets=Object.fromEntries(['css/components.css','js/main.js'].map(name=>[n
     if(sx>=0&&sx<alpha.info.width&&sy>=0&&sy<alpha.info.height&&alpha.data[(sy*alpha.info.width+sx)*4+3]>64)overlap++;
    }
    row.paragraphBoxOverlapPercent=+(100*overlap/total).toFixed(2);delete row.words;
-   row.offset=offset;row.localAssets=local;row.faceVisiblePercent=Math.max(0,Math.min(100,(Math.min(width,row.image.left+row.image.width*.65)-Math.max(0,row.image.left+row.image.width*.30))/(row.image.width*.35)*100));
+   row.offset=offset;row.localAssets=local;row.mobileUA=mobile;row.initialOffset=initialOffset;row.faceVisiblePercent=Math.max(0,Math.min(100,(Math.min(width,row.image.left+row.image.width*.65)-Math.max(0,row.image.left+row.image.width*.30))/(row.image.width*.35)*100));
    results.push(row);await section.screenshot({path:path.join(out,`${tag}-shift-${offset}-${width}.png`)});
   }
   await p.close();

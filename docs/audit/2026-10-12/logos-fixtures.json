@@ -1,0 +1,8 @@
+{
+  "secondPointerIgnored": true,
+  "cancelNoFling": true,
+  "lostCaptureReleased": true,
+  "oneAnimationLoop": true,
+  "reducedMotionStopsLoop": true,
+  "touchAction": "pan-y"
+}

@@ -1,3 +1,5 @@
+> **Alcance auditado2026-10-12:** la investigación del7/10 es una muestra de snippets, no un censo ni una revisión visual. «Nadie», «ningún», «no existe» o «supera a todos» en conclusiones históricas son hipótesis de oportunidad; no prueban ausencia de oferta. Los precios/horarios sugeridos en §Oportunidades NO se aplican: D-054 prohíbe precio público y D-032 mantiene Previa cita. No se publica contenido médico con esta auditoría.
+
 # Competencia local — ORL y medicina del sueño en Monterrey
 
 **Proyecto:** sitio de la Dra. Irina González Sáez (drairinagonzalez.com) — ORL, trastornos respiratorios del sueño.

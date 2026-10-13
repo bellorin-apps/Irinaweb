@@ -38,7 +38,7 @@ final class Events {
 			return;
 		}
 		$thanks = is_page( 'gracias' ) ? "gtag('event','contact_submit',{page_path:location.pathname});" : '';
-		// Q-047 (OK del propietario, 2026-10-12): la cola dataLayer y gtag() existen desde el principio (ningún evento se pierde),
+		// Q-047: la cola existe desde el principio; una salida antes de descargar gtag.js todavía puede perder eventos.
 		// pero gtag.js se descarga después de «load» y en tiempo ocioso, para no bloquear el primer pintado en móvil.
 		$script = "if(navigator.doNotTrack!=='1'&&window.doNotTrack!=='1'){"
 			. "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());"
@@ -51,7 +51,7 @@ final class Events {
 
 	public function inline_script(): void {
 		$allowed = wp_json_encode( self::ALLOWED );
-		$script  = "document.addEventListener('click',function(e){var a=e.target.closest('[data-di-event]');if(!a)return;var n=a.getAttribute('data-di-event');if({$allowed}.indexOf(n)<0)return;if(typeof window.gtag==='function'){window.gtag('event',n,{page_path:location.pathname});}});";
+		$script  = "document.addEventListener('click',function(e){if(navigator.doNotTrack==='1'||window.doNotTrack==='1')return;var a=e.target.closest('[data-di-event]');if(!a)return;var n=a.getAttribute('data-di-event');if({$allowed}.indexOf(n)<0)return;if(typeof window.gtag==='function'){window.gtag('event',n,{page_path:location.pathname});}});";
 		wp_print_inline_script_tag( $script, [ 'id' => 'di-events' ] );
 	}
 }
