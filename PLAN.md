@@ -83,10 +83,10 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 4.1 | Derivar sistema digital de la identidad existente (paleta, tipografía, logo, favicon) | 3 | DONE | `DESIGN_SYSTEM.md` §2–3; favicon pendiente de exportar |
 | 4.2 | Tokens globales (color, tipo, espacio, radio, sombra, motion) | 3 | DONE | `assets/css/tokens.css` |
-| 4.3 | Componentes base: botones, inputs, cards, badges, iconografía Lucide | 3 | REVIEW | `tools/preview/preview.css`; inputs pendientes (Fase 8) |
+| 4.3 | Componentes base: botones, inputs, cards, badges, iconografía Lucide | 3 | DONE | Auditoría2026-10-12: Botones D-053, cards, badges y sprite Lucide en código; sin alterar sombras. Inputs tienen tarea propia Fase8; responsive público cinco anchos sin desbordes. |
 | 4.4 | Concepto visual "Sleep experience" dentro de la marca | 2 | DONE | `DESIGN_SYSTEM.md` §6; aplicado en maquetas |
 | 4.5 | Mockups/prototipos: Home, Dra. Irina, página médica, artículo, móvil | 5 | DONE | Publicadas 2026-10-08 en `/preview/` (200 ×4, noindex) |
-| 4.6 | `DESIGN_SYSTEM.md` | 2 | REVIEW | v0.1 |
+| 4.6 | `DESIGN_SYSTEM.md` | 2 | DONE | Auditoría2026-10-12: FIX addendum vigente de tokens, títulos D-049, separadores, migas D-071, logos y tarjeta beige; propuestas A/B quedan históricas. Sin cambiar tipografía/paleta aprobadas. |
 | 4.7 | CHECKPOINT 2: dirección visual aprobada | 2 | DONE | 2026-10-08: v2 aprobada por el propietario («ciertos cambios los haremos después»); D-026 |
 
 ## FASE 5 — Infraestructura de código
