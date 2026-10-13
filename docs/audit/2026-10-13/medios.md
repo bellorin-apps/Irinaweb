@@ -52,3 +52,4 @@ REMOVE: 8 favicon, 151 favicon2, 322 hero-home-archivo-322, 329 area-orl-archivo
 
 Nada se borra sin aprobación explícita de José. Si la da: respaldo previo de `wp-content/uploads` (tar en `~/deploy-backups/`), borrado por WP-CLI solo de los IDs aprobados (`wp post delete <ID> --force` borra adjunto y archivos), purga y verificación de que ninguna página pública cambia (mismas URLs de imagen servidas). El pie: ORL y Sueño enlazan páginas en borrador, que WordPress oculta a visitantes hasta su publicación; no requiere acción.
 
+**Aprobado por José el 2026-10-13** («Sí, retira los 18», D-075). Ejecuta la sesión local con respaldo previo.
