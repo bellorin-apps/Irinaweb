@@ -7,7 +7,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 - Cada tarea tiene un **peso** (1 = pequeña, 2 = media, 3 = grande, 5 = crítica/estructural).
 - Avance global = Σ(peso de tareas DONE) / Σ(peso total).
 - Una tarea está DONE solo si cumple: IMPLEMENTED + TESTED + REVIEWED (Codex cuando aplica) + FIXED + VERIFIED.
-- Estados: `TODO` · `DOING` · `BLOCKED` · `OWNER` (OWNER_DECISION_REQUIRED / depende del propietario) · `REVIEW` (implementado y verificado por Claude, pendiente de auditoría Codex) · `DONE`.
+- Estados: `TODO` · `DOING` · `BLOCKED` · `OWNER` (OWNER_DECISION_REQUIRED / depende del propietario) · `REVIEW` (implementado y verificado por Claude, pendiente de auditoría Codex) · `DONE` · `DESCOPED` (fuera de alcance por decisión del propietario; no entra en el total de PROGRESS y se informa aparte, D-076).
 - Solo `DONE` suma el peso completo. `REVIEW` y todos los demás estados suman cero (encargo del propietario, 2026-10-10).
 - "Trabajo técnico" excluye las tareas marcadas `ext` (dependencias externas: aprobación médica, fotos, documentos, legal).
 
@@ -120,26 +120,26 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | DOING | Cargados en WP (borrador) con marcadores [PENDIENTE DE CONFIRMACIÓN]; enfoque de la Dra. en borrador |
-| 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | DONE | 14 condiciones + 9 tratamientos redactados con las respuestas de la Dra. (D-039); en borrador hasta su aprobación |
+| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | DOING | Home y Dra. publicadas. D-076: ORL y Sueño reescritas como páginas cortas (qué atiendo con una línea por motivo, cómo trabajo, CTA), sin marcadores ni FAQ, en borrador hasta 7.6; despliegue pendiente |
+| 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | DONE | 14 condiciones + 9 tratamientos redactados con las respuestas de la Dra. (D-039); D-076: archivados en borrador, sin enlaces, menú ni archivo público (404) |
 | 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | DONE | DONE: Primera consulta/Contacto/FAQ 200, sin Borrador; títulos, FAQPage, fondo continuo y cuatro pasos verificados. Pacientes cubierto por Primera consulta + FAQ. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 7.4 | Bibliografía verificable por página | 2 | DOING | Fuentes propuestas por ficha (SMORL, AAO-HNS, AASM, EPOS, ARIA); la Dra. valida |
+| 7.4 | Bibliografía verificable por página | 2 | DOING | Fuentes propuestas por ficha (SMORL, AAO-HNS, AASM, EPOS, ARIA), archivadas con las fichas. D-076: las páginas cortas no hacen afirmaciones que requieran cita; Codex decide si se cierra |
 | 7.5 | Revisión técnica/SEO de drafts | 2 | TODO | |
-| 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | OWNER | ext |
+| 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | OWNER | D-076: solo ORL y Sueño cortas, en la app `/briefing/guia/` (aprobar o pedir cambios; nunca publica) |
 | 7.7 | CHECKPOINT 4 | 1 | OWNER | ext |
 
 ## FASE 8 — Escalado del sitio
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 8.1 | Resto de páginas de condición/servicio | 5 | TODO | |
-| 8.2 | Centro de recursos/artículos iniciales | 3 | DOING | Hub `/recursos/` + 3 artículos en borrador con fuentes (2026-10-10); falta revisión de la Dra. y publicación |
+| 8.1 | Resto de páginas de condición/servicio | 5 | DESCOPED | D-076: sitio corto; las 26 fichas quedan en borrador, sin borrarse |
+| 8.2 | Centro de recursos/artículos iniciales | 3 | DESCOPED | D-076: `/recursos/` responde 404; los 3 artículos siguen en borrador con fuentes |
 | 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | TODO | |
 | 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | DONE | En vivo 2026-10-10 (D-050); SMTP por constantes con contraseña de aplicación |
 | 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | DONE | Publicados 2026-10-10 (D-051); el propietario puede pedir cambios (8.6) |
 | 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
 | 8.7 | 404 útil (noindex), búsqueda interna si procede | 2 | DONE | `404.php`: cabecera a sangre, rutas publicadas (omite borradores), WhatsApp, nota para enlaces del dominio viejo; sin buscador (sitio pequeño) |
-| 8.8 | Navegador de síntomas (orientación, no diagnóstico) | 3 | TODO | |
+| 8.8 | Navegador de síntomas (orientación, no diagnóstico) | 3 | DESCOPED | D-076: la portada enlaza los motivos a las anclas de ORL y Sueño |
 | 8.9 | Favicon/app icons, OG template | 1 | DONE | FIX→DONE: JPEG OG/Twitter 1200×630 e iconos públicos verificados en once rutas; manifest e integración con site icon preparados y probados localmente. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
 
 ## FASE 9 — SEO técnico, schema, analítica, local

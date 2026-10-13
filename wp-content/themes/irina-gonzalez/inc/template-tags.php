@@ -47,7 +47,8 @@ function irina_public_content_url( string $url ): string {
 		]
 	);
 	if ( $posts ) {
-		return (string) get_permalink( $posts[0] );
+		$frag = (string) wp_parse_url( $url, PHP_URL_FRAGMENT );
+		return (string) get_permalink( $posts[0] ) . ( '' !== $frag ? '#' . rawurlencode( $frag ) : '' );
 	}
 	foreach ( [ 'primera-consulta', 'contacto' ] as $fallback ) {
 		$page = get_page_by_path( $fallback );

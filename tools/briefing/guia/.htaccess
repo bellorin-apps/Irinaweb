@@ -4,3 +4,8 @@ Options -Indexes
   Require all denied
 </Files>
 Header set X-Robots-Tag "noindex, nofollow"
+
+# D-076: el texto de las páginas lo sirve revisar.php con token; el JSON no se sirve directo.
+<Files "paginas.json">
+  Require all denied
+</Files>

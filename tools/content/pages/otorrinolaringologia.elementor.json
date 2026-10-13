@@ -31,49 +31,9 @@
         "settings": {
           "eyebrow": "Otorrinolaringología",
           "title": "Oído, <b>nariz y garganta,</b><br><em>desde los 0 meses</em>",
-          "lead": "Diagnóstico y tratamiento de los padecimientos de oído, nariz y garganta en niños y adultos: con exploración completa en consultorio, endoscopia cuando hace falta y un plan explicado con claridad.",
+          "lead": "Consulta de oído, nariz y garganta para niños, adolescentes, adultos y adultos mayores en Monterrey.",
           "variant": "sand",
           "crumb": "Otorrinolaringología"
-        },
-        "elements": []
-      }
-    ]
-  },
-  {
-    "id": "11b2929",
-    "elType": "container",
-    "isInner": false,
-    "settings": {
-      "content_width": "full",
-      "flex_direction": "column",
-      "padding": {
-        "unit": "px",
-        "top": "0",
-        "right": "0",
-        "bottom": "0",
-        "left": "0",
-        "isLinked": true
-      },
-      "margin": {
-        "unit": "px",
-        "top": "0",
-        "right": "0",
-        "bottom": "0",
-        "left": "0",
-        "isLinked": true
-      }
-    },
-    "elements": [
-      {
-        "id": "5ad91c0",
-        "elType": "widget",
-        "widgetType": "di-narrativa",
-        "settings": {
-          "eyebrow": "¿Cuándo acudir al otorrino?",
-          "title": "Si un síntoma de <b>oído, nariz o garganta</b> <em>no se va</em>",
-          "lead": "Dolor u oído tapado que dura más de unos días, nariz tapada todo el tiempo, sinusitis que se repite, ronquera que no mejora, dolor de garganta frecuente, mareo o zumbido: son motivos para una valoración especializada en lugar de seguir con remedios caseros.",
-          "text": "",
-          "draft": "yes"
         },
         "elements": []
       }
@@ -110,40 +70,39 @@
         "widgetType": "di-listado",
         "settings": {
           "eyebrow": "Oído",
-          "title": "<b>Padecimientos</b> <em>del oído</em>",
-          "post_type": "condicion",
-          "area": "orl",
-          "zona": "oido",
+          "title": "<b>Lo que</b> atiendo <em>del oído</em>",
+          "post_type": "",
+          "anchor": "oido",
           "items": [
             {
-              "_id": "6009b45",
+              "_id": "936282b",
               "label": "Otitis",
-              "sub": "Dolor e infección de oído",
-              "url": "/padecimientos/otitis/"
+              "sub": "Infección o inflamación del oído",
+              "url": ""
             },
             {
-              "_id": "50b17be",
+              "_id": "3d4864d",
               "label": "Tapón de cerumen",
-              "sub": "Oído tapado por cera; limpieza en consultorio",
-              "url": "/padecimientos/tapon-de-cerumen/"
+              "sub": "Oído tapado por cerilla",
+              "url": ""
             },
             {
-              "_id": "b3b58f6",
+              "_id": "0adc337",
               "label": "Hipoacusia",
               "sub": "Pérdida de audición",
-              "url": "/padecimientos/hipoacusia/"
+              "url": ""
             },
             {
-              "_id": "3458649",
+              "_id": "3769d86",
               "label": "Tinnitus",
               "sub": "Zumbido o pitido en el oído",
-              "url": "/padecimientos/tinnitus/"
+              "url": ""
             },
             {
-              "_id": "561b556",
+              "_id": "4ae3e5a",
               "label": "Vértigo",
-              "sub": "Mareo de origen en el oído",
-              "url": "/padecimientos/vertigo/"
+              "sub": "Mareo o sensación de giro",
+              "url": ""
             }
           ]
         },
@@ -182,41 +141,40 @@
         "widgetType": "di-listado",
         "settings": {
           "eyebrow": "Nariz",
-          "title": "<b>Padecimientos</b> <em>de la nariz</em>",
-          "post_type": "condicion",
-          "area": "orl",
-          "zona": "nariz",
+          "title": "<b>Lo que</b> atiendo <em>de la nariz</em>",
+          "post_type": "",
+          "anchor": "nariz",
           "tight": "yes",
           "items": [
             {
-              "_id": "ed55ed9",
+              "_id": "5e00d88",
               "label": "Rinitis",
-              "sub": "Nariz tapada, estornudos y alergia",
-              "url": "/padecimientos/rinitis/"
+              "sub": "Nariz tapada, estornudos o escurrimiento frecuentes",
+              "url": ""
             },
             {
-              "_id": "6035363",
+              "_id": "1f8c2bb",
               "label": "Sinusitis",
-              "sub": "Aguda y crónica",
-              "url": "/padecimientos/sinusitis/"
+              "sub": "Inflamación de los senos paranasales",
+              "url": ""
             },
             {
-              "_id": "151f01d",
+              "_id": "d0d55a5",
               "label": "Desviación del tabique nasal",
-              "sub": "Obstrucción de un lado o de ambos",
-              "url": "/padecimientos/desviacion-de-tabique-nasal/"
+              "sub": "Dificultad para respirar por la nariz",
+              "url": ""
             },
             {
-              "_id": "15a7a2a",
+              "_id": "1df6033",
               "label": "Pólipos nasales",
-              "sub": "Obstrucción y pérdida de olfato",
-              "url": "/padecimientos/polipos-nasales/"
+              "sub": "Crecimientos dentro de la nariz",
+              "url": ""
             },
             {
-              "_id": "1f4f065",
-              "label": "Sangrado nasal (epistaxis)",
-              "sub": "Causas y cuándo acudir",
-              "url": "/padecimientos/epistaxis/"
+              "_id": "c5a5a0c",
+              "label": "Sangrado nasal",
+              "sub": "Epistaxis",
+              "url": ""
             }
           ]
         },
@@ -255,23 +213,22 @@
         "widgetType": "di-listado",
         "settings": {
           "eyebrow": "Garganta y voz",
-          "title": "<b>Padecimientos</b> <em>de la garganta</em>",
-          "post_type": "condicion",
-          "area": "orl",
-          "zona": "garganta",
+          "title": "<b>Lo que</b> atiendo <em>de la garganta</em>",
+          "post_type": "",
+          "anchor": "garganta",
           "tight": "yes",
           "items": [
             {
-              "_id": "3e6d9dc",
+              "_id": "8ce80c6",
               "label": "Amigdalitis",
-              "sub": "Dolor de garganta frecuente; amígdalas en niños",
-              "url": "/padecimientos/amigdalitis/"
+              "sub": "Dolor de garganta frecuente",
+              "url": ""
             },
             {
-              "_id": "d57a18a",
-              "label": "Reflujo laringofaríngeo",
-              "sub": "Carraspera, ronquera y sensación de algo en la garganta",
-              "url": "/padecimientos/reflujo-laringofaringeo/"
+              "_id": "9a284d2",
+              "label": "Ronquera y cambios en la voz",
+              "sub": "Incluye reflujo laringofaríngeo",
+              "url": ""
             }
           ]
         },
@@ -280,7 +237,7 @@
     ]
   },
   {
-    "id": "904a816",
+    "id": "d009797",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -305,41 +262,93 @@
     },
     "elements": [
       {
-        "id": "cd3a500",
+        "id": "040a1ee",
         "elType": "widget",
         "widgetType": "di-listado",
         "settings": {
-          "eyebrow": "Tratamientos",
-          "title": "<b>Procedimientos</b> y <em>cirugías</em>",
-          "post_type": "tratamiento",
-          "area": "orl",
-          "note": "Toda cirugía se indica tras una valoración; en la consulta se explican opciones, recuperación y alternativas.",
+          "eyebrow": "Procedimientos",
+          "title": "<b>Consultorio</b> y <em>cirugía</em>",
+          "post_type": "",
+          "anchor": "procedimientos",
+          "tight": "yes",
+          "note": "Toda cirugía se indica después de una valoración, en la que se explican opciones y alternativas.",
           "items": [
             {
-              "_id": "8a86340",
+              "_id": "5ae403e",
+              "label": "Endoscopia nasal y laringoscopia",
+              "sub": "En el consultorio, cuando hace falta",
+              "url": ""
+            },
+            {
+              "_id": "29fd1b6",
               "label": "Septoplastia",
               "sub": "Cirugía del tabique nasal",
-              "url": "/tratamientos/septoplastia/"
+              "url": ""
             },
             {
-              "_id": "745e712",
+              "_id": "cb279f5",
               "label": "Turbinoplastia",
-              "sub": "Reducción de cornetes",
-              "url": "/tratamientos/turbinoplastia/"
+              "sub": "Cirugía de los cornetes",
+              "url": ""
             },
             {
-              "_id": "9e13cd4",
+              "_id": "ac284d8",
               "label": "Amígdalas y adenoides",
-              "sub": "Amigdalectomía y adenoidectomía",
-              "url": "/tratamientos/amigdalas-y-adenoides/"
+              "sub": "Cirugía en niños y adultos",
+              "url": ""
             },
             {
-              "_id": "8be79b6",
-              "label": "Rinoplastia funcional y estética",
-              "sub": "Respirar y verse bien: valoración con equipo quirúrgico",
-              "url": "/tratamientos/rinoplastia/"
+              "_id": "5d3306c",
+              "label": "Cirugía endoscópica nasal",
+              "sub": "Cirugía de senos paranasales",
+              "url": ""
+            },
+            {
+              "_id": "58695a4",
+              "label": "Rinoplastia funcional",
+              "sub": "Cirugía de la nariz para respirar",
+              "url": ""
             }
           ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "0256f59",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "bb95ea9",
+        "elType": "widget",
+        "widgetType": "di-narrativa",
+        "settings": {
+          "eyebrow": "Cómo trabajo",
+          "title": "<b>Primero</b> escucharte, luego <em>explorar</em>",
+          "lead": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad. Si tu caso necesita a otro especialista, te lo digo y te refiero.",
+          "text": ""
         },
         "elements": []
       }
@@ -376,7 +385,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "¿Un síntoma que no se va?",
+          "title": "¿Un <b>síntoma</b> que <em>no se va</em>?",
           "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.",
           "message": "Hola, quisiera agendar una consulta de otorrinolaringología con la Dra. Irina González Sáez."
         },

@@ -406,7 +406,15 @@ async function loadList(){
     $("#count").textContent = "";
   }
 }
+// D-076 (propietario, 2026-10-13): el sitio se queda corto y las fichas no se publican. La Dra. revisa solo dos páginas en la guía.
+const SCOPE_PAGES = true;
 if (!TOKEN){ $("#list").innerHTML = `<div class="note warn">Este enlace no trae la clave de acceso. Pide a José el enlace completo.</div>`; $("#count").textContent = ""; }
+else if (SCOPE_PAGES){
+  $("#title").textContent = "Revisión médica";
+  $("#intro").textContent = "Ya no hace falta revisar fichas: el sitio se quedó corto. Solo necesitamos tu visto bueno en dos páginas.";
+  $("#count").textContent = ""; $("#filters").innerHTML = "";
+  $("#list").innerHTML = `<a class="item" href="../guia/?t=${encodeURIComponent(TOKEN)}"><span><span class="t">Revisar Otorrinolaringología y Sueño</span><br><span class="m">Dos páginas cortas · unos minutos</span></span><span class="pill pending">Abrir</span></a>`;
+}
 else loadList();
 })();
 </script>

@@ -337,6 +337,69 @@ if ( 'save' === $action ) {
 	di_out( [ 'ok' => true, 'changed' => $changed, 'modified' => $p->post_modified_gmt, 'state' => di_state( $p->ID ) ] );
 }
 
+// ---- D-076: revisión de las dos páginas cortas (Otorrinolaringología y Sueño) ----
+// El texto lo genera tools/content/build-pages.py en ../guia/paginas.json (no servible: .htaccess). La decisión de la Dra. se guarda
+// como meta de la página (_di_page_approved_at/_by o _di_page_review_note + _di_page_review_at) y en el registro; nunca publica.
+$di_pages = [ 'otorrinolaringologia', 'sueno' ];
+function di_page_state( string $slug ): array {
+	$pg = get_page_by_path( $slug, OBJECT, 'page' );
+	if ( ! $pg ) {
+		return [ 'exists' => false ];
+	}
+	$approved = (string) get_post_meta( $pg->ID, '_di_page_approved_at', true );
+	$note     = (string) get_post_meta( $pg->ID, '_di_page_review_note', true );
+	return [
+		'exists'      => true,
+		'id'          => $pg->ID,
+		'status'      => $pg->post_status,
+		'state'       => '' !== $approved ? 'approved' : ( '' !== $note ? 'changes' : 'pending' ),
+		'approved_at' => $approved,
+		'note'        => $note,
+		'review_at'   => (string) get_post_meta( $pg->ID, '_di_page_review_at', true ),
+	];
+}
+if ( 'GET' === $method && 'pages' === $action ) {
+	$file = dirname( __DIR__ ) . '/guia/paginas.json';
+	$data = is_readable( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null;
+	if ( ! is_array( $data ) ) {
+		di_out( [ 'error' => 'pages' ], 500 );
+	}
+	$out = [];
+	foreach ( $di_pages as $slug ) {
+		if ( isset( $data[ $slug ] ) ) {
+			$out[] = array_merge( [ 'slug' => $slug ], $data[ $slug ], [ 'review' => di_page_state( $slug ) ] );
+		}
+	}
+	di_out( [ 'reviewer' => $reviewer->display_name, 'pages' => $out ] );
+}
+if ( 'POST' === $method && 'page_review' === $action ) {
+	$slug = (string) ( $body['page'] ?? '' );
+	$to   = (string) ( $body['decision'] ?? '' );
+	$note = sanitize_textarea_field( (string) ( $body['note'] ?? '' ) );
+	if ( ! in_array( $slug, $di_pages, true ) || ! in_array( $to, [ 'approve', 'changes' ], true ) ) {
+		di_out( [ 'error' => 'page' ], 400 );
+	}
+	if ( 'changes' === $to && '' === $note ) {
+		di_out( [ 'error' => 'note', 'hint' => 'Escribe qué quieres cambiar.' ], 400 );
+	}
+	$pg = get_page_by_path( $slug, OBJECT, 'page' );
+	if ( ! $pg ) {
+		di_out( [ 'error' => 'not_found' ], 404 );
+	}
+	if ( 'approve' === $to ) {
+		update_post_meta( $pg->ID, '_di_page_approved_at', current_time( 'mysql' ) );
+		update_post_meta( $pg->ID, '_di_page_approved_by', (int) $reviewer->ID );
+		delete_post_meta( $pg->ID, '_di_page_review_note' );
+	} else {
+		update_post_meta( $pg->ID, '_di_page_review_note', wp_slash( $note ) );
+		delete_post_meta( $pg->ID, '_di_page_approved_at' );
+		delete_post_meta( $pg->ID, '_di_page_approved_by' );
+	}
+	update_post_meta( $pg->ID, '_di_page_review_at', current_time( 'mysql' ) );
+	di_log( $data_dir, [ 'event' => 'page_' . $to, 'id' => $pg->ID, 'slug' => $slug, 'note' => $note, 'by' => $reviewer->user_login ] );
+	di_out( [ 'ok' => true, 'review' => di_page_state( $slug ) ] );
+}
+
 // ---- POST state: aprobar / pedir cambios / no publicar ----
 if ( 'state' === $action ) {
 	$p    = di_load_post( (int) ( $body['id'] ?? 0 ), $clinical );

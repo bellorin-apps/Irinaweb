@@ -1,7 +1,8 @@
 <?php
 /**
- * Listado numerado de condiciones/tratamientos. $args: eyebrow, title, note, post_type, area, zona, items (manual: [label, sub, url]), tight (bool).
- * Si hay entradas publicadas del CPT con esa área/zona, se listan; si no, los items manuales (enlaces a URLs futuras).
+ * Listado numerado de condiciones/tratamientos. $args: eyebrow, title, note, post_type, area, zona, items (manual: [label, sub, url]), tight (bool), anchor.
+ * Si hay entradas publicadas del CPT con esa área/zona, se listan; si no, los items manuales. Con post_type vacío solo se usa la lista
+ * manual, y un ítem sin url se pinta como texto, sin enlace (D-076: sitio corto, sin fichas públicas).
  *
  * @package IrinaGonzalez
  */
@@ -19,10 +20,11 @@ $irina_a    = wp_parse_args(
 		'zona'      => '',
 		'items'     => [],
 		'tight'     => false,
+		'anchor'    => '',
 	]
 );
 $irina_rows = [];
-if ( post_type_exists( (string) $irina_a['post_type'] ) ) {
+if ( '' !== (string) $irina_a['post_type'] && post_type_exists( (string) $irina_a['post_type'] ) ) {
 	$irina_tax = [];
 	if ( '' !== $irina_a['area'] ) {
 		$irina_tax[] = [
@@ -58,7 +60,7 @@ if ( ! $irina_rows ) {
 			[
 				'label' => '',
 				'sub'   => '',
-				'url'   => '#',
+				'url'   => '',
 			]
 		);
 		if ( '' !== $irina_i['label'] ) {
@@ -70,7 +72,7 @@ if ( ! $irina_rows ) {
 	return;
 }
 ?>
-<section class="di-section<?php echo $irina_a['tight'] ? ' di-section--tight' : ''; ?>">
+<section class="di-section<?php echo $irina_a['tight'] ? ' di-section--tight' : ''; ?>"<?php echo '' !== $irina_a['anchor'] ? ' id="' . esc_attr( sanitize_html_class( (string) $irina_a['anchor'] ) ) . '"' : ''; ?>>
 	<div class="di-container">
 		<?php
 		if ( '' !== $irina_a['eyebrow'] ) :
@@ -101,11 +103,12 @@ if ( ! $irina_rows ) {
 			foreach ( $irina_rows as [ $irina_l, $irina_s, $irina_u ] ) :
 				++$irina_n;
 				?>
-				<li><a class="di-symptom" href="<?php echo esc_url( (string) $irina_u ); ?>"><span class="di-symptom__n"><?php echo esc_html( sprintf( '%02d', $irina_n ) ); ?></span><span><b><?php echo esc_html( (string) $irina_l ); ?></b>
+				<?php $irina_link = '' !== (string) $irina_u; ?>
+				<li><<?php echo $irina_link ? 'a' : 'div'; ?> class="di-symptom<?php echo $irina_link ? '' : ' di-symptom--static'; ?>"<?php echo $irina_link ? ' href="' . esc_url( (string) $irina_u ) . '"' : ''; ?>><span class="di-symptom__n"><?php echo esc_html( sprintf( '%02d', $irina_n ) ); ?></span><span><b><?php echo esc_html( (string) $irina_l ); ?></b>
 				<?php
 				if ( '' !== (string) $irina_s ) :
 					?>
-					<small><?php echo esc_html( (string) $irina_s ); ?></small><?php endif; ?></span><?php echo irina_icon( 'arrow-right' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a></li>
+					<small><?php echo esc_html( (string) $irina_s ); ?></small><?php endif; ?></span><?php echo $irina_link ? irina_icon( 'arrow-right' ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></<?php echo $irina_link ? 'a' : 'div'; ?>></li>
 			<?php endforeach; ?>
 		</ul>
 	</div>

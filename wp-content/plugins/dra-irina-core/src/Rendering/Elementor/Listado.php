@@ -39,6 +39,7 @@ final class Listado extends AbstractWidget {
 				'options' => [
 					'condicion'   => __( 'Padecimientos', 'dra-irina-core' ),
 					'tratamiento' => __( 'Tratamientos', 'dra-irina-core' ),
+					''            => __( 'Solo la lista manual, sin enlaces a fichas (D-076)', 'dra-irina-core' ),
 				],
 			]
 		);
@@ -80,6 +81,7 @@ final class Listado extends AbstractWidget {
 				'url'   => __( 'URL', 'dra-irina-core' ),
 			]
 		);
+		$this->text( 'anchor', __( 'Ancla (id de la sección, p. ej. nariz)', 'dra-irina-core' ) );
 		$this->add_control(
 			'tight',
 			[
@@ -101,6 +103,7 @@ final class Listado extends AbstractWidget {
 			'zona'      => (string) ( $s['zona'] ?? '' ),
 			'items'     => (array) ( $s['items'] ?? [] ),
 			'tight'     => 'yes' === ( $s['tight'] ?? '' ),
+			'anchor'    => sanitize_html_class( (string) ( $s['anchor'] ?? '' ) ),
 		];
 	}
 }

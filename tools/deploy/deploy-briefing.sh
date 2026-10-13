@@ -25,7 +25,7 @@ rscp "$SRC/revision/index.html" "$SRC/revision/revisar.php" "$SRC/revision/.htac
 
 echo "→ Subiendo guía de revisión (guia/)"
 rssh "mkdir -p '$DEST/guia'"
-rscp "$SRC/guia/index.html" "$SRC/guia/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/guia/"
+rscp "$SRC/guia/index.html" "$SRC/guia/paginas.json" "$SRC/guia/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/guia/"
 
 echo "→ Token y config.php (se conserva el token existente si ya hay config.php; sin correo por decisión del propietario 2026-10-09)"
 TOKEN="$(rssh "if [ -f '$DEST/config.php' ]; then php -r 'echo (require \"$DEST/config.php\")[\"token\"];'; fi")"

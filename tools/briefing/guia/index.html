@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Guía de revisión · Dra. Irina</title>
+<title>Revisión de páginas · Dra. Irina</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
-/* Mini app «Guía de revisión» (propietario, 2026-10-13): cómo revisar, qué mirar y la lista por prioridad con el estado real de
-   cada ficha (lo lee de revision/revisar.php con el mismo token). Mismo sistema visual que revision/ (D-040, D-041). */
+/* Mini app «Revisión de páginas» (D-076, propietario 2026-10-13): la Dra. revisa y aprueba solo dos páginas cortas, Otorrinolaringología
+   y Sueño. El texto y el estado los sirve revision/revisar.php con el mismo token. Mismo sistema visual que revision/ (D-040, D-041). */
 :root{
   --bg:#f7f5fa; --surface:#ffffff; --fg:#2b2730; --muted:#6d6577; --line:#e4dfea;
   --purple:#8c4eaa; --purple-soft:#f1e8f4; --teal:#3ca1a7; --teal-soft:#e4f3f4;
@@ -74,6 +74,22 @@ ul.check li::before{content:"";width:.6rem;height:.6rem;margin-top:.55rem;border
 .after b{color:var(--purple)}
 .note.warn{background:var(--warn-soft);color:var(--warn);border-radius:12px;padding:12px 14px;font-weight:600}
 .foot{font-size:.85rem;color:var(--muted);padding-top:16px}
+.page{display:grid;gap:14px}
+.page header{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.blk{display:grid;gap:6px;padding-block:10px;border-top:1px dashed var(--line)}
+.blk:first-of-type{border-top:0}
+.blk .t{font-weight:800;font-size:1.05rem}
+.blk ul{margin:0;padding-left:1.1rem;display:grid;gap:4px}
+.blk li b{font-weight:700}
+.blk li span{color:var(--muted)}
+.actions{display:grid;gap:10px;padding-top:6px}
+.actions .row{display:flex;flex-wrap:wrap;gap:8px}
+.btn{border:0;border-radius:12px;padding:12px 16px;font:inherit;font-weight:700;cursor:pointer}
+.btn.ok{background:var(--ok);color:#fff}
+.btn.alt{background:var(--surface);border:1.5px solid var(--line);color:var(--fg)}
+.btn:disabled{opacity:.6;cursor:default}
+textarea{width:100%;min-height:96px;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;background:var(--surface);color:var(--fg)}
+.msg{font-size:.88rem;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.bar > i{transition:none}}
 </style>
 </head>
@@ -84,90 +100,83 @@ ul.check li::before{content:"";width:.6rem;height:.6rem;margin-top:.55rem;border
       <svg class="mark" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 37 83 130"><path fill="currentColor" d="M41.31 83.83v-.07a5.16 5.16 0 0 1 8.81-3.65c.93.93 1.51 2.22 1.51 3.65v.07a5.16 5.16 0 1 1-10.32 0m-5.9 17.41c-6.09-3.86-10.02-10.82-9.57-18.67.59-10.34 8.94-18.74 19.27-19.4 6.87-.44 13.08 2.49 17.14 7.29 1.95 2.3 5.44 2.44 7.58.31 1.9-1.9 2.03-4.94.29-6.99-5.89-6.95-14.79-11.27-24.69-10.95-16.09.53-29.23 13.54-29.91 29.63-.55 13.23 7.2 24.72 18.46 29.68 1.02.45 2.16-.28 2.16-1.39v-8.2c0-.53-.29-1.02-.74-1.31Zm11.06 49.67a5.16 5.16 0 0 0 5.16-5.16V99.28c0-1.43-.58-2.72-1.51-3.65a5.14 5.14 0 0 0-3.65-1.51 5.16 5.16 0 0 0-5.16 5.16v46.47a5.16 5.16 0 0 0 5.16 5.16m34.55-98.2c-8.61-9.57-21.15-15.55-35.08-15.39C20.9 37.61.39 58.01 0 83.05c-.31 20.06 12.09 37.26 29.66 44.08q2.22.87 4.56 1.5c.97.26 1.92-.48 1.92-1.48v-7.61c0-.66-.43-1.23-1.05-1.44-14.68-4.86-25.18-18.88-24.75-35.28.49-18.82 15.63-34.28 34.44-35.14 11.35-.52 21.61 4.2 28.57 11.95 1.96 2.18 5.37 2.24 7.45.17 1.93-1.93 2.04-5.05.21-7.08Zm-5.01 25.92H61.96c-1.42 0-2.71.58-3.65 1.51-.94.94-1.51 2.22-1.51 3.65a5.16 5.16 0 0 0 5.16 5.16h4.53a20.7 20.7 0 0 1-8.98 12.31c-.44.28-.7.78-.7 1.3v8.18c0 1.11 1.14 1.84 2.16 1.39 9.38-4.14 16.32-12.79 18.06-23.19.29-1.68.43-3.4.43-5.16 0-1.41-.09-2.8-.28-4.16-.08-.57-.58-.99-1.16-.99Zm-16.87 45.06c-1.01-.65-2.34.1-2.34 1.3v9.96c0 .32.1.62.28.88 1.45 2.09 2.3 4.62 2.3 7.35 0 7.09-5.72 12.84-12.79 12.9-2.68.02-5.01 2.01-5.26 4.67a5.16 5.16 0 0 0 5.14 5.65c8.05 0 15.15-4.1 19.32-10.32 2.47-3.69 3.92-8.13 3.92-12.91 0-6.22-2.45-11.88-6.43-16.04-1.24-1.3-2.63-2.45-4.14-3.44"/></svg>
       <div>
         <p class="eyebrow">Sitio web · drairinagonzalez.com</p>
-        <h1>Guía de revisión médica</h1>
+        <h1>Revisión de dos páginas</h1>
       </div>
     </div>
-    <p class="muted" id="intro">Todo el contenido clínico del sitio está escrito y espera tu visto bueno. Nada se publica sin tu aprobación. Puedes hacerlo por partes: cada cambio se guarda solo.</p>
+    <p class="muted" id="intro">El sitio se quedó corto: un lugar para que los pacientes te conozcan, sin fichas médicas largas. Solo necesitamos tu visto bueno en estas dos páginas. Nada se publica sin tu aprobación.</p>
     <div class="progress"><div class="bar"><i id="bar"></i></div><div class="status" id="count">Cargando…</div></div>
-    <a class="cta" id="openApp" href="../revision/">Abrir la app de revisión</a>
   </header>
 
   <section>
-    <h2>Cómo revisar</h2>
-    <ol class="steps">
-      <li><div><b>Abre la app de revisión</b><p class="muted">Con el botón de arriba o tocando cualquier ficha de la lista. Funciona en el celular y no necesitas entrar a WordPress.</p></div></li>
-      <li><div><b>Lee la ficha por secciones</b><p class="muted">Corrige el texto directamente si hace falta. Las listas van una línea por punto. Se guarda solo mientras escribes.</p></div></li>
-      <li><div><b>Decide al terminar cada ficha</b><div class="btns"><span class="ok">Aprobar ficha</span><span>Pedir cambios</span><span>No publicar</span></div><p class="muted">Si pides cambios o no quieres publicarla, deja una nota corta con el motivo.</p></div></li>
-      <li><div><b>Vuelve aquí para ver tu avance</b><p class="muted">La lista de abajo muestra el estado real de cada ficha.</p></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>Qué mirar en cada ficha</h2>
+    <h2>Qué mirar</h2>
     <ul class="check">
-      <li><span>Que lo médico sea correcto: síntomas, causas, estudios, cuándo operar y cuándo no.</span></li>
-      <li><span>Que diga bien lo que haces en consultorio y lo que refieres a otro especialista.</span></li>
-      <li><span>Riesgos y alternativas completos, sin prometer resultados.</span></li>
-      <li><span>Que las fuentes citadas sean las que tú respaldas.</span></li>
-      <li><span>Que suene a ti: claro, cercano y sin alarmar.</span></li>
+      <li><span>Que estén los padecimientos y procedimientos que atiendes, y que no sobre ninguno.</span></li>
+      <li><span>Que cada línea corta sea correcta y no prometa resultados.</span></li>
+      <li><span>Que «Cómo trabajo» suene a ti.</span></li>
     </ul>
+    <p class="muted">Si algo no te convence, toca «Pedir cambios» y escribe qué cambiarías. Lo corregimos y te lo volvemos a mostrar.</p>
   </section>
 
-  <section>
-    <h2>Lista por prioridad</h2>
-    <p class="muted">Empieza por sueño, tu subespecialidad, y por lo que más buscan los pacientes. Toca una ficha para abrirla.</p>
-    <div id="groups"></div>
-  </section>
-
-  <section>
-    <h2>Dos textos de página</h2>
-    <p class="muted">Estos dos bloques no están en la app. Léelos y contesta a José por WhatsApp con «OK» o con tu corrección.</p>
-    <div class="card quote"><span class="eyebrow">Página Otorrinolaringología</span><b>Si un síntoma de oído, nariz o garganta no se va</b><p class="muted">Dolor u oído tapado que dura más de unos días, nariz tapada todo el tiempo, sinusitis que se repite, ronquera que no mejora, dolor de garganta frecuente, mareo o zumbido: son motivos para una valoración especializada en lugar de seguir con remedios caseros.</p></div>
-    <div class="card quote"><span class="eyebrow">Página Sueño</span><b>El ronquido y la apnea empiezan en la vía aérea</b><p class="muted">Nariz, paladar, amígdalas y lengua: el otorrinolaringólogo es el especialista que explora directamente dónde se estrecha la vía aérea durante el sueño y puede tratar esa causa, de forma médica o quirúrgica. En Monterrey muchas personas pasan por varios especialistas antes de llegar a esta valoración.</p></div>
-  </section>
-
-  <section>
-    <h2>Qué pasa después</h2>
-    <div class="after">
-      <div><b>Apruebas</b><span>La ficha queda lista. El equipo la publica y la enlaza desde la página de su área.</span></div>
-      <div><b>Pides cambios</b><span>Se corrige según tu nota y vuelve a tu lista para un segundo vistazo.</span></div>
-      <div><b>No publicar</b><span>La ficha se queda guardada en borrador, fuera del sitio.</span></div>
-    </div>
-    <p class="foot">Si algo no abre o no se guarda, avisa a José.</p>
-  </section>
+  <div id="pages"></div>
+  <p class="foot">Si algo no abre o no se guarda, avisa a José.</p>
 </div>
 <script>
 (function(){
 "use strict";
 const $ = s => document.querySelector(s);
 const TOKEN = new URLSearchParams(location.search).get("t") || "";
-const FIRST = ["apnea-obstructiva-del-sueno","ronquido","estudio-del-sueno","cpap","cirugia-de-ronquido-y-apnea","sinusitis","rinitis","desviacion-de-tabique-nasal","septoplastia"];
-function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
-function pill(it){ if (it.published) return ["published","Publicada"]; if (it.state === "medically_approved" || it.state === "ready_to_publish") return ["approved","Aprobada"]; if (it.state === "technical_review" || it.state === "draft") return ["changes", it.state_label || "Con cambios"]; return ["pending","Pendiente"]; }
-function typeLabel(t){ return { condicion: "Padecimiento", tratamiento: "Tratamiento", recurso: "Artículo" }[t] || t; }
-const appUrl = id => "../revision/?" + new URLSearchParams(Object.assign({ t: TOKEN }, id ? { id: String(id) } : {}));
-function row(it){ const [c, l] = pill(it); return `<a class="item" href="${esc(appUrl(it.id))}"><span><span class="t">${esc(it.title)}</span><br><span class="m">${typeLabel(it.type)}${it.area ? " · " + esc(it.area) : ""}</span></span><span class="pill ${c}">${esc(l)}</span></a>`; }
-function group(title, list){ return list.length ? `<div class="group"><h3>${title}</h3><div class="list">${list.map(row).join("")}</div></div>` : ""; }
+const API = "../revision/revisar.php";
+let pages = [];
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function pill(r){ if (!r || !r.exists) return ["changes","No encontrada"]; if (r.state === "approved") return ["approved","Aprobada"]; if (r.state === "changes") return ["changes","Con cambios pedidos"]; return ["pending","Pendiente"]; }
+function block(b){
+  const items = (b.items || []).filter(i => i[0]);
+  return `<div class="blk">${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}${b.titulo ? `<span class="t">${esc(b.titulo)}</span>` : ""}${b.texto ? `<p>${esc(b.texto)}</p>` : ""}${b.nota ? `<p class="muted">${esc(b.nota)}</p>` : ""}${items.length ? `<ul>${items.map(i => `<li><b>${esc(i[0])}</b>${i[1] ? ` <span>· ${esc(i[1])}</span>` : ""}</li>`).join("")}</ul>` : ""}</div>`;
+}
+function render(){
+  const ok = pages.filter(p => p.review && p.review.state === "approved").length;
+  $("#bar").style.width = (pages.length ? Math.round(ok / pages.length * 100) : 0) + "%";
+  $("#count").textContent = ok + " de " + pages.length + " aprobadas";
+  $("#pages").innerHTML = pages.map(p => { const [c, l] = pill(p.review); const r = p.review || {};
+    return `<section><div class="card page" data-slug="${esc(p.slug)}">
+      <header><h2>${esc(p.nombre)}</h2><span class="pill ${c}">${esc(l)}</span></header>
+      ${(p.bloques || []).map(block).join("")}
+      ${r.note ? `<p class="note warn">Tu nota: ${esc(r.note)}</p>` : ""}
+      <div class="actions">
+        <div class="row"><button class="btn ok" type="button" data-act="approve">Aprobar página</button><button class="btn alt" type="button" data-act="open">Pedir cambios</button></div>
+        <div class="chg" hidden><label class="msg" for="n-${esc(p.slug)}">¿Qué cambiarías?</label><textarea id="n-${esc(p.slug)}"></textarea><div class="row"><button class="btn alt" type="button" data-act="changes">Enviar cambios</button></div></div>
+        <p class="msg" aria-live="polite"></p>
+      </div></div></section>`; }).join("");
+  document.querySelectorAll(".page").forEach(card => {
+    const slug = card.dataset.slug, msg = card.querySelector(".msg[aria-live]");
+    card.querySelector('[data-act="open"]').onclick = () => { card.querySelector(".chg").hidden = false; card.querySelector("textarea").focus(); };
+    card.querySelectorAll('[data-act="approve"],[data-act="changes"]').forEach(b => b.onclick = async () => {
+      const decision = b.dataset.act, note = card.querySelector("textarea").value.trim();
+      if (decision === "changes" && !note){ msg.textContent = "Escribe qué quieres cambiar."; return; }
+      card.querySelectorAll("button").forEach(x => x.disabled = true); msg.textContent = "Guardando…";
+      try {
+        const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ token: TOKEN, action: "page_review", page: slug, decision, note }) });
+        const d = await r.json().catch(() => null);
+        if (!r.ok || !d || !d.ok) throw new Error((d && (d.hint || d.error)) || ("HTTP " + r.status));
+        pages.find(p => p.slug === slug).review = d.review; render();
+      } catch (e) { msg.textContent = "No se pudo guardar: " + e.message; card.querySelectorAll("button").forEach(x => x.disabled = false); }
+    });
+  });
+}
 async function load(){
-  $("#openApp").href = appUrl(0);
   try {
-    const r = await fetch("../revision/revisar.php?" + new URLSearchParams({ token: TOKEN, action: "list" }), { cache: "no-store" });
+    const r = await fetch(API + "?" + new URLSearchParams({ token: TOKEN, action: "pages" }), { cache: "no-store" });
     const d = await r.json().catch(() => null);
     if (!r.ok || !d) throw Object.assign(new Error("HTTP " + r.status), { status: r.status });
-    const items = d.items || [];
-    if (d.reviewer) $("#intro").textContent = "Hola, " + d.reviewer + ". Todo el contenido clínico del sitio está escrito y espera tu visto bueno. Nada se publica sin tu aprobación. Puedes hacerlo por partes: cada cambio se guarda solo.";
-    const ok = items.filter(i => i.published || i.state === "medically_approved" || i.state === "ready_to_publish").length;
-    $("#bar").style.width = (items.length ? Math.round(ok / items.length * 100) : 0) + "%";
-    $("#count").textContent = ok + " de " + items.length + " aprobadas";
-    const first = FIRST.map(s => items.find(i => i.slug === s)).filter(Boolean);
-    const rest = items.filter(i => !FIRST.includes(i.slug));
-    $("#groups").innerHTML = group("Primero", first) + group("Resto de padecimientos", rest.filter(i => i.type === "condicion")) + group("Resto de tratamientos", rest.filter(i => i.type === "tratamiento")) + group("Artículos para pacientes", rest.filter(i => i.type === "recurso"));
+    pages = d.pages || [];
+    if (d.reviewer) $("#intro").textContent = "Hola, " + d.reviewer + ". El sitio se quedó corto: un lugar para que los pacientes te conozcan, sin fichas médicas largas. Solo necesitamos tu visto bueno en estas dos páginas. Nada se publica sin tu aprobación.";
+    render();
   } catch (e) {
-    $("#groups").innerHTML = `<div class="note warn">${e.status === 403 ? "Este enlace no es válido. Pide a José el enlace correcto." : "No se pudo cargar la lista. Vuelve a intentarlo en un momento."}</div>`;
+    $("#pages").innerHTML = `<div class="note warn">${e.status === 403 ? "Este enlace no es válido. Pide a José el enlace correcto." : "No se pudieron cargar las páginas. Vuelve a intentarlo en un momento."}</div>`;
     $("#count").textContent = "";
   }
 }
-if (!TOKEN){ $("#groups").innerHTML = `<div class="note warn">Este enlace no trae la clave de acceso. Pide a José el enlace completo.</div>`; $("#count").textContent = ""; $("#openApp").hidden = true; }
+if (!TOKEN){ $("#pages").innerHTML = `<div class="note warn">Este enlace no trae la clave de acceso. Pide a José el enlace completo.</div>`; $("#count").textContent = ""; }
 else load();
 })();
 </script>

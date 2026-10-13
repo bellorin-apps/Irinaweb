@@ -16,43 +16,42 @@ PEND = "[PENDIENTE DE CONFIRMACIÓN]"
 
 pages = {}
 
+# D-076 (propietario, 2026-10-13): sitio corto, punto de encuentro con la Dra. Otorrinolaringología y Sueño son dos páginas cortas
+# (una pantalla o poco más): qué atiende (nombres con una línea simple), cómo trabaja la Dra. y el CTA. Sin enlaces a fichas, sin
+# explicaciones clínicas extensas ni afirmaciones de eficacia. Las 26 fichas quedan archivadas en borrador. La Dra. revisa solo estas
+# dos páginas en /briefing/guia/ (se exportan a tools/briefing/guia/paginas.json al final de este script).
 pages["otorrinolaringologia"] = [
     container("orl-bleed", "di-bleed", {"eyebrow": "Otorrinolaringología", "title": "Oído, <b>nariz y garganta,</b><br><em>desde los 0 meses</em>",
-        "lead": "Diagnóstico y tratamiento de los padecimientos de oído, nariz y garganta en niños y adultos: con exploración completa en consultorio, endoscopia cuando hace falta y un plan explicado con claridad.",
+        "lead": "Consulta de oído, nariz y garganta para niños, adolescentes, adultos y adultos mayores en Monterrey.",
         "variant": "sand", "crumb": "Otorrinolaringología"}),
-    container("orl-narr", "di-narrativa", {"eyebrow": "¿Cuándo acudir al otorrino?", "title": "Si un síntoma de <b>oído, nariz o garganta</b> <em>no se va</em>",
-        "lead": "Dolor u oído tapado que dura más de unos días, nariz tapada todo el tiempo, sinusitis que se repite, ronquera que no mejora, dolor de garganta frecuente, mareo o zumbido: son motivos para una valoración especializada en lugar de seguir con remedios caseros.",
-        "text": "", "draft": "yes"}),
-    container("orl-oido", "di-listado", {"eyebrow": "Oído", "title": "<b>Padecimientos</b> <em>del oído</em>", "post_type": "condicion", "area": "orl", "zona": "oido",
-        "items": rep([("Otitis", "Dolor e infección de oído", "/padecimientos/otitis/"), ("Tapón de cerumen", "Oído tapado por cera; limpieza en consultorio", "/padecimientos/tapon-de-cerumen/"), ("Hipoacusia", "Pérdida de audición", "/padecimientos/hipoacusia/"), ("Tinnitus", "Zumbido o pitido en el oído", "/padecimientos/tinnitus/"), ("Vértigo", "Mareo de origen en el oído", "/padecimientos/vertigo/")], "label", "sub", "url")}),
-    container("orl-nariz", "di-listado", {"eyebrow": "Nariz", "title": "<b>Padecimientos</b> <em>de la nariz</em>", "post_type": "condicion", "area": "orl", "zona": "nariz", "tight": "yes",
-        "items": rep([("Rinitis", "Nariz tapada, estornudos y alergia", "/padecimientos/rinitis/"), ("Sinusitis", "Aguda y crónica", "/padecimientos/sinusitis/"), ("Desviación del tabique nasal", "Obstrucción de un lado o de ambos", "/padecimientos/desviacion-de-tabique-nasal/"), ("Pólipos nasales", "Obstrucción y pérdida de olfato", "/padecimientos/polipos-nasales/"), ("Sangrado nasal (epistaxis)", "Causas y cuándo acudir", "/padecimientos/epistaxis/")], "label", "sub", "url")}),
-    container("orl-garganta", "di-listado", {"eyebrow": "Garganta y voz", "title": "<b>Padecimientos</b> <em>de la garganta</em>", "post_type": "condicion", "area": "orl", "zona": "garganta", "tight": "yes",
-        "items": rep([("Amigdalitis", "Dolor de garganta frecuente; amígdalas en niños", "/padecimientos/amigdalitis/"), ("Reflujo laringofaríngeo", "Carraspera, ronquera y sensación de algo en la garganta", "/padecimientos/reflujo-laringofaringeo/")], "label", "sub", "url")}),
-    container("orl-trat", "di-listado", {"eyebrow": "Tratamientos", "title": "<b>Procedimientos</b> y <em>cirugías</em>", "post_type": "tratamiento", "area": "orl",
-        "note": "Toda cirugía se indica tras una valoración; en la consulta se explican opciones, recuperación y alternativas.",
-        "items": rep([("Septoplastia", "Cirugía del tabique nasal", "/tratamientos/septoplastia/"), ("Turbinoplastia", "Reducción de cornetes", "/tratamientos/turbinoplastia/"), ("Amígdalas y adenoides", "Amigdalectomía y adenoidectomía", "/tratamientos/amigdalas-y-adenoides/"), ("Rinoplastia funcional y estética", "Respirar y verse bien: valoración con equipo quirúrgico", "/tratamientos/rinoplastia/")], "label", "sub", "url")}),
-    container("orl-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Un síntoma que no se va?", "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": "Hola, quisiera agendar una consulta de otorrinolaringología con la Dra. Irina González Sáez."}),
+    container("orl-oido", "di-listado", {"eyebrow": "Oído", "title": "<b>Lo que</b> atiendo <em>del oído</em>", "post_type": "", "anchor": "oido",
+        "items": rep([("Otitis", "Infección o inflamación del oído", ""), ("Tapón de cerumen", "Oído tapado por cerilla", ""), ("Hipoacusia", "Pérdida de audición", ""), ("Tinnitus", "Zumbido o pitido en el oído", ""), ("Vértigo", "Mareo o sensación de giro", "")], "label", "sub", "url")}),
+    container("orl-nariz", "di-listado", {"eyebrow": "Nariz", "title": "<b>Lo que</b> atiendo <em>de la nariz</em>", "post_type": "", "anchor": "nariz", "tight": "yes",
+        "items": rep([("Rinitis", "Nariz tapada, estornudos o escurrimiento frecuentes", ""), ("Sinusitis", "Inflamación de los senos paranasales", ""), ("Desviación del tabique nasal", "Dificultad para respirar por la nariz", ""), ("Pólipos nasales", "Crecimientos dentro de la nariz", ""), ("Sangrado nasal", "Epistaxis", "")], "label", "sub", "url")}),
+    container("orl-garganta", "di-listado", {"eyebrow": "Garganta y voz", "title": "<b>Lo que</b> atiendo <em>de la garganta</em>", "post_type": "", "anchor": "garganta", "tight": "yes",
+        "items": rep([("Amigdalitis", "Dolor de garganta frecuente", ""), ("Ronquera y cambios en la voz", "Incluye reflujo laringofaríngeo", "")], "label", "sub", "url")}),
+    container("orl-proc", "di-listado", {"eyebrow": "Procedimientos", "title": "<b>Consultorio</b> y <em>cirugía</em>", "post_type": "", "anchor": "procedimientos", "tight": "yes",
+        "note": "Toda cirugía se indica después de una valoración, en la que se explican opciones y alternativas.",
+        "items": rep([("Endoscopia nasal y laringoscopia", "En el consultorio, cuando hace falta", ""), ("Septoplastia", "Cirugía del tabique nasal", ""), ("Turbinoplastia", "Cirugía de los cornetes", ""), ("Amígdalas y adenoides", "Cirugía en niños y adultos", ""), ("Cirugía endoscópica nasal", "Cirugía de senos paranasales", ""), ("Rinoplastia funcional", "Cirugía de la nariz para respirar", "")], "label", "sub", "url")}),
+    container("orl-como", "di-narrativa", {"eyebrow": "Cómo trabajo", "title": "<b>Primero</b> escucharte, luego <em>explorar</em>",
+        "lead": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad. Si tu caso necesita a otro especialista, te lo digo y te refiero.",
+        "text": ""}),
+    container("orl-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Un <b>síntoma</b> que <em>no se va</em>?", "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": "Hola, quisiera agendar una consulta de otorrinolaringología con la Dra. Irina González Sáez."}),
 ]
 
 pages["sueno"] = [
     container("su-bleed", "di-bleed", {"eyebrow": "Sueño y respiración", "title": "Del <b>ronquido</b><br><em>al descanso</em>",
-        "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir: valoración de la vía aérea, estudio del sueño interpretado por la propia Dra. y una ruta de tratamiento completa, desde el CPAP hasta la cirugía de paladar y nariz.",
+        "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología.",
         "variant": "night", "crumb": "Sueño", "whatsapp_label": "Agendar valoración de ronquido y apnea"}),
-    container("su-narr", "di-narrativa", {"eyebrow": "Por qué un otorrino", "title": "El ronquido y la apnea <b>empiezan</b> en la <em>vía aérea</em>",
-        "lead": "Nariz, paladar, amígdalas y lengua: el otorrinolaringólogo es el especialista que explora directamente dónde se estrecha la vía aérea durante el sueño y puede tratar esa causa, de forma médica o quirúrgica. En Monterrey muchas personas pasan por varios especialistas antes de llegar a esta valoración.",
-        "text": "", "draft": "yes"}),
-    container("su-cond", "di-listado", {"eyebrow": "Padecimientos", "title": "<b>Lo que</b> <em>tratamos</em>", "post_type": "condicion", "area": "sueno",
-        "items": rep([("Ronquido", "Causas, cuándo preocuparse y tratamiento", "/sueno/ronquido/"), ("Apnea obstructiva del sueño", "Síntomas, diagnóstico y opciones", "/sueno/apnea-obstructiva-del-sueno/")], "label", "sub", "url")}),
-    container("su-trat", "di-listado", {"eyebrow": "Diagnóstico y tratamientos", "title": "La <em>ruta</em>", "post_type": "tratamiento", "area": "sueno", "tight": "yes",
-        "note": "El tratamiento depende de dónde está la obstrucción y de su gravedad; se decide con el estudio en la mano.",
-        "items": rep([("Estudio del sueño", "Poligrafía respiratoria en casa, interpretada por la Dra.", "/sueno/estudio-del-sueno/"), ("CPAP", "Indicación, titulación y seguimiento", "/sueno/cpap/"), ("Cirugía de ronquido y apnea", "Faringoplastia con suturas barbadas y cirugía nasal", "/sueno/cirugia-de-ronquido-y-apnea/"), ("Dispositivo de avance mandibular", "Se indica y se coordina con odontología", "/sueno/dispositivo-de-avance-mandibular/")], "label", "sub", "url")}),
-    container("su-faq", "di-faq", {"eyebrow": "Dudas frecuentes", "title": "<b>Antes</b> de <em>consultar</em>", "items": rep([
-        ("¿Necesito ir a una clínica del sueño?", "La valoración y el estudio en casa se coordinan desde el consultorio; la Dra. realiza e interpreta el estudio. Texto pendiente de revisión de la Dra."),
-        ("¿Apnea del sueño: otorrino o neumólogo?", "Cuando la causa está en la vía aérea superior (nariz, paladar, amígdalas), el otorrinolaringólogo puede diagnosticar y tratar la obstrucción. Texto pendiente de revisión de la Dra."),
-        ("¿Hay tratamiento sin CPAP?", "Según el caso: cirugía de paladar o nasal, terapia posicional, dispositivo de avance mandibular. Se decide con el estudio del sueño. Texto pendiente de revisión de la Dra."),
-    ], "pregunta", "text")}),
-    container("su-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Hablamos de lo que te está quitando el descanso?", "text": "Una valoración de 30 minutos define si necesitas un estudio.", "message": "Hola, quisiera agendar una valoración de ronquido o apnea con la Dra. Irina González Sáez."}),
+    container("su-cond", "di-listado", {"eyebrow": "Qué atiendo", "title": "<b>Ronquido</b> y <em>apnea</em>", "post_type": "", "anchor": "atiendo",
+        "items": rep([("Ronquido", "En adultos y en niños", ""), ("Apnea obstructiva del sueño", "Pausas en la respiración al dormir", "")], "label", "sub", "url")}),
+    container("su-ruta", "di-listado", {"eyebrow": "Estudios y tratamientos", "title": "<b>La</b> ruta <em>completa</em>", "post_type": "", "anchor": "ruta", "tight": "yes",
+        "note": "El tratamiento se decide con el estudio en la mano y según dónde se estrecha la vía aérea.",
+        "items": rep([("Estudio del sueño en casa", "Poligrafía respiratoria interpretada por la propia Dra.", ""), ("Endoscopia de sueño", "Muestra dónde se cierra la vía aérea al dormir", ""), ("CPAP", "Indicación, ajuste y seguimiento", ""), ("Cirugía de ronquido y apnea", "Nariz, paladar o amígdalas, según el caso", ""), ("Dispositivo de avance mandibular", "Con una odontóloga especializada en sueño", "")], "label", "sub", "url")}),
+    container("su-como", "di-narrativa", {"eyebrow": "Cómo trabajo", "title": "<b>Un</b> otorrino para la <em>vía aérea</em>",
+        "lead": "Nariz, paladar, amígdalas y lengua: como otorrinolaringólogo exploro directamente dónde se estrecha la vía aérea durante el sueño. La valoración empieza en el consultorio; con el estudio en la mano te explico las opciones y decidimos juntos el tratamiento.",
+        "text": ""}),
+    container("su-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Hablamos de lo que te <b>quita</b> el <em>descanso</em>?", "text": "Una valoración de 30 minutos define si necesitas un estudio.", "message": "Hola, quisiera agendar una valoración de ronquido o apnea con la Dra. Irina González Sáez."}),
 ]
 
 pages["primera-consulta"] = [
@@ -155,3 +154,18 @@ for slug, html in legal.items():
     (out / f"{slug}.html").write_text(html.strip() + "\n", encoding="utf-8")
 (out / "seo.json").write_text(json.dumps({k: {"title": v[0], "description": v[1]} for k, v in seo.items()}, ensure_ascii=False, indent=1), encoding="utf-8")
 print("ok", len(pages), "elementor,", len(legal), "legales,", len(seo), "seo")
+
+# D-076: lo que la Dra. revisa en /briefing/guia/ (texto plano de las dos páginas cortas, en el orden en que se ven).
+import re as _re
+def _plain(h): return _re.sub(r"<br[^>]*>", " ", _re.sub(r"<(?!br)[^>]+>", "", h or "")).strip()
+_review = {}
+for _slug, _name in (("otorrinolaringologia", "Otorrinolaringología"), ("sueno", "Sueño")):
+    _blocks = []
+    for _c in pages[_slug]:
+        _w = _c["elements"][0]; _st = _w["settings"]
+        _b = {"tipo": _w["widgetType"], "eyebrow": _st.get("eyebrow", ""), "titulo": _plain(_st.get("title", "")),
+              "texto": _st.get("lead") or _st.get("text") or "", "nota": _st.get("note", ""),
+              "items": [[it.get("label", ""), it.get("sub", "")] for it in _st.get("items", []) if isinstance(it, dict)]}
+        _blocks.append(_b)
+    _review[_slug] = {"nombre": _name, "url": "/" + _slug + "/", "bloques": _blocks}
+pathlib.Path(__file__).resolve().parents[1].joinpath("briefing", "guia", "paginas.json").write_text(json.dumps(_review, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -31,50 +31,10 @@
         "settings": {
           "eyebrow": "Sueño y respiración",
           "title": "Del <b>ronquido</b><br><em>al descanso</em>",
-          "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir: valoración de la vía aérea, estudio del sueño interpretado por la propia Dra. y una ruta de tratamiento completa, desde el CPAP hasta la cirugía de paladar y nariz.",
+          "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología.",
           "variant": "night",
           "crumb": "Sueño",
           "whatsapp_label": "Agendar valoración de ronquido y apnea"
-        },
-        "elements": []
-      }
-    ]
-  },
-  {
-    "id": "f9a22e1",
-    "elType": "container",
-    "isInner": false,
-    "settings": {
-      "content_width": "full",
-      "flex_direction": "column",
-      "padding": {
-        "unit": "px",
-        "top": "0",
-        "right": "0",
-        "bottom": "0",
-        "left": "0",
-        "isLinked": true
-      },
-      "margin": {
-        "unit": "px",
-        "top": "0",
-        "right": "0",
-        "bottom": "0",
-        "left": "0",
-        "isLinked": true
-      }
-    },
-    "elements": [
-      {
-        "id": "744769c",
-        "elType": "widget",
-        "widgetType": "di-narrativa",
-        "settings": {
-          "eyebrow": "Por qué un otorrino",
-          "title": "El ronquido y la apnea <b>empiezan</b> en la <em>vía aérea</em>",
-          "lead": "Nariz, paladar, amígdalas y lengua: el otorrinolaringólogo es el especialista que explora directamente dónde se estrecha la vía aérea durante el sueño y puede tratar esa causa, de forma médica o quirúrgica. En Monterrey muchas personas pasan por varios especialistas antes de llegar a esta valoración.",
-          "text": "",
-          "draft": "yes"
         },
         "elements": []
       }
@@ -110,22 +70,22 @@
         "elType": "widget",
         "widgetType": "di-listado",
         "settings": {
-          "eyebrow": "Padecimientos",
-          "title": "<b>Lo que</b> <em>tratamos</em>",
-          "post_type": "condicion",
-          "area": "sueno",
+          "eyebrow": "Qué atiendo",
+          "title": "<b>Ronquido</b> y <em>apnea</em>",
+          "post_type": "",
+          "anchor": "atiendo",
           "items": [
             {
-              "_id": "c78a187",
+              "_id": "1dc399c",
               "label": "Ronquido",
-              "sub": "Causas, cuándo preocuparse y tratamiento",
-              "url": "/sueno/ronquido/"
+              "sub": "En adultos y en niños",
+              "url": ""
             },
             {
-              "_id": "cadf10f",
+              "_id": "0ac5d3f",
               "label": "Apnea obstructiva del sueño",
-              "sub": "Síntomas, diagnóstico y opciones",
-              "url": "/sueno/apnea-obstructiva-del-sueno/"
+              "sub": "Pausas en la respiración al dormir",
+              "url": ""
             }
           ]
         },
@@ -134,7 +94,7 @@
     ]
   },
   {
-    "id": "9df0572",
+    "id": "14f5aa3",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -159,40 +119,46 @@
     },
     "elements": [
       {
-        "id": "e33ca2c",
+        "id": "7eed2ad",
         "elType": "widget",
         "widgetType": "di-listado",
         "settings": {
-          "eyebrow": "Diagnóstico y tratamientos",
-          "title": "La <em>ruta</em>",
-          "post_type": "tratamiento",
-          "area": "sueno",
+          "eyebrow": "Estudios y tratamientos",
+          "title": "<b>La</b> ruta <em>completa</em>",
+          "post_type": "",
+          "anchor": "ruta",
           "tight": "yes",
-          "note": "El tratamiento depende de dónde está la obstrucción y de su gravedad; se decide con el estudio en la mano.",
+          "note": "El tratamiento se decide con el estudio en la mano y según dónde se estrecha la vía aérea.",
           "items": [
             {
-              "_id": "7a8746a",
-              "label": "Estudio del sueño",
-              "sub": "Poligrafía respiratoria en casa, interpretada por la Dra.",
-              "url": "/sueno/estudio-del-sueno/"
+              "_id": "d9067e5",
+              "label": "Estudio del sueño en casa",
+              "sub": "Poligrafía respiratoria interpretada por la propia Dra.",
+              "url": ""
             },
             {
-              "_id": "5d5e4bf",
+              "_id": "1917825",
+              "label": "Endoscopia de sueño",
+              "sub": "Muestra dónde se cierra la vía aérea al dormir",
+              "url": ""
+            },
+            {
+              "_id": "ae96bcf",
               "label": "CPAP",
-              "sub": "Indicación, titulación y seguimiento",
-              "url": "/sueno/cpap/"
+              "sub": "Indicación, ajuste y seguimiento",
+              "url": ""
             },
             {
-              "_id": "ab99a15",
+              "_id": "3e8b76b",
               "label": "Cirugía de ronquido y apnea",
-              "sub": "Faringoplastia con suturas barbadas y cirugía nasal",
-              "url": "/sueno/cirugia-de-ronquido-y-apnea/"
+              "sub": "Nariz, paladar o amígdalas, según el caso",
+              "url": ""
             },
             {
-              "_id": "746f4da",
+              "_id": "35a4e2f",
               "label": "Dispositivo de avance mandibular",
-              "sub": "Se indica y se coordina con odontología",
-              "url": "/sueno/dispositivo-de-avance-mandibular/"
+              "sub": "Con una odontóloga especializada en sueño",
+              "url": ""
             }
           ]
         },
@@ -201,7 +167,7 @@
     ]
   },
   {
-    "id": "c63416a",
+    "id": "a51362c",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -226,29 +192,14 @@
     },
     "elements": [
       {
-        "id": "3cf8148",
+        "id": "430f38f",
         "elType": "widget",
-        "widgetType": "di-faq",
+        "widgetType": "di-narrativa",
         "settings": {
-          "eyebrow": "Dudas frecuentes",
-          "title": "<b>Antes</b> de <em>consultar</em>",
-          "items": [
-            {
-              "_id": "997faa8",
-              "pregunta": "¿Necesito ir a una clínica del sueño?",
-              "text": "La valoración y el estudio en casa se coordinan desde el consultorio; la Dra. realiza e interpreta el estudio. Texto pendiente de revisión de la Dra."
-            },
-            {
-              "_id": "220b718",
-              "pregunta": "¿Apnea del sueño: otorrino o neumólogo?",
-              "text": "Cuando la causa está en la vía aérea superior (nariz, paladar, amígdalas), el otorrinolaringólogo puede diagnosticar y tratar la obstrucción. Texto pendiente de revisión de la Dra."
-            },
-            {
-              "_id": "7b81796",
-              "pregunta": "¿Hay tratamiento sin CPAP?",
-              "text": "Según el caso: cirugía de paladar o nasal, terapia posicional, dispositivo de avance mandibular. Se decide con el estudio del sueño. Texto pendiente de revisión de la Dra."
-            }
-          ]
+          "eyebrow": "Cómo trabajo",
+          "title": "<b>Un</b> otorrino para la <em>vía aérea</em>",
+          "lead": "Nariz, paladar, amígdalas y lengua: como otorrinolaringólogo exploro directamente dónde se estrecha la vía aérea durante el sueño. La valoración empieza en el consultorio; con el estudio en la mano te explico las opciones y decidimos juntos el tratamiento.",
+          "text": ""
         },
         "elements": []
       }
@@ -285,7 +236,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "¿Hablamos de lo que te está quitando el descanso?",
+          "title": "¿Hablamos de lo que te <b>quita</b> el <em>descanso</em>?",
           "text": "Una valoración de 30 minutos define si necesitas un estudio.",
           "message": "Hola, quisiera agendar una valoración de ronquido o apnea con la Dra. Irina González Sáez."
         },

@@ -1,8 +1,10 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado: 2026-10-13 · Codex · auditoría de cinco tareas sobre 79d24ff.
+Actualizado: 2026-10-13 · Claude cloud · D-076 (sitio corto); antes, Codex · auditoría de cinco tareas sobre 79d24ff.
 
-**46,64% español: 118/253 pesos, 46/95 tareas DONE.** Solo DONE suma; inglés aparte. PLAN → PROGRESS.
+**48,76% español: 118/242 pesos, 46/92 tareas DONE.** Solo DONE suma; inglés aparte; 8.1, 8.2 y 8.8 fuera de alcance por D-076 (estado DESCOPED, D-077: 11 pesos fuera del total). PLAN → PROGRESS.
+
+D-076 implementado en la rama, pendiente de despliegue por Claude local: ORL y Sueño cortas (en borrador hasta que la Dra. apruebe), motivos de la portada hacia sus anclas, archivos de fichas/recursos en 404 y `/briefing/guia/` como revisión de dos páginas. La Dra. ya no revisa fichas.
 
 6.4, 7.3, 8.9, 9.4 y 10.1 DONE tras revisión y correcciones. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md. Producción previa reportada por Claude: f5c1571. Las correcciones nuevas de teclado de logos, dos títulos de Dra., manifest y exclusión de editores en GA4 están probadas localmente, pendientes de despliegue. Codex no desplegó.
 

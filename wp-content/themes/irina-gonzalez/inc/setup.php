@@ -106,6 +106,20 @@ add_filter(
 	}
 );
 
+// D-076 (propietario, 2026-10-13): sitio corto, sin fichas ni recursos públicos. Los archivos /padecimientos/, /tratamientos/ y
+// /recursos/ responden 404 aunque algún día haya entradas publicadas por error; las fichas siguen archivadas en borrador.
+add_action(
+	'template_redirect',
+	static function (): void {
+		if ( is_post_type_archive( [ 'condicion', 'tratamiento', 'recurso' ] ) ) {
+			global $wp_query;
+			$wp_query->set_404();
+			status_header( 404 );
+			nocache_headers();
+		}
+	}
+);
+
 // /recursos/ sin artículos publicados: noindex también en Rank Math, que emite su propia meta robots y sustituye la de WordPress
 // (la plantilla archive-recurso.php solo cubre wp_robots). En cuanto haya un recurso publicado vuelve a index.
 add_filter(

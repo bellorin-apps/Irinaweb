@@ -241,6 +241,11 @@ body.menu-open { overflow: hidden; }
 .di-symptom small { color: var(--color-muted); }
 .di-symptom .di-icon { color: var(--color-secondary-strong); transition: transform var(--motion-base) var(--ease-out); }
 .di-symptom:hover .di-icon { transform: translateX(6px); }
+/* Fila sin enlace (D-076: páginas cortas, sin fichas públicas): sin flecha ni desplazamiento al pasar el cursor. */
+.di-symptom--static { grid-template-columns: 3.2rem 1fr; cursor: default; }
+.di-symptom--static:hover { padding-left: 0; }
+/* Anclas de sección (#oido, #nariz…): que el encabezado fijo no tape el título. */
+.di-section[id] { scroll-margin-top: 96px; }
 
 /* Doctora */
 .di-doctor { display: grid; gap: var(--space-2xl); align-items: center; }

@@ -1,0 +1,216 @@
+{
+ "otorrinolaringologia": {
+  "nombre": "Otorrinolaringología",
+  "url": "/otorrinolaringologia/",
+  "bloques": [
+   {
+    "tipo": "di-bleed",
+    "eyebrow": "Otorrinolaringología",
+    "titulo": "Oído, nariz y garganta, desde los 0 meses",
+    "texto": "Consulta de oído, nariz y garganta para niños, adolescentes, adultos y adultos mayores en Monterrey.",
+    "nota": "",
+    "items": []
+   },
+   {
+    "tipo": "di-listado",
+    "eyebrow": "Oído",
+    "titulo": "Lo que atiendo del oído",
+    "texto": "",
+    "nota": "",
+    "items": [
+     [
+      "Otitis",
+      "Infección o inflamación del oído"
+     ],
+     [
+      "Tapón de cerumen",
+      "Oído tapado por cerilla"
+     ],
+     [
+      "Hipoacusia",
+      "Pérdida de audición"
+     ],
+     [
+      "Tinnitus",
+      "Zumbido o pitido en el oído"
+     ],
+     [
+      "Vértigo",
+      "Mareo o sensación de giro"
+     ]
+    ]
+   },
+   {
+    "tipo": "di-listado",
+    "eyebrow": "Nariz",
+    "titulo": "Lo que atiendo de la nariz",
+    "texto": "",
+    "nota": "",
+    "items": [
+     [
+      "Rinitis",
+      "Nariz tapada, estornudos o escurrimiento frecuentes"
+     ],
+     [
+      "Sinusitis",
+      "Inflamación de los senos paranasales"
+     ],
+     [
+      "Desviación del tabique nasal",
+      "Dificultad para respirar por la nariz"
+     ],
+     [
+      "Pólipos nasales",
+      "Crecimientos dentro de la nariz"
+     ],
+     [
+      "Sangrado nasal",
+      "Epistaxis"
+     ]
+    ]
+   },
+   {
+    "tipo": "di-listado",
+    "eyebrow": "Garganta y voz",
+    "titulo": "Lo que atiendo de la garganta",
+    "texto": "",
+    "nota": "",
+    "items": [
+     [
+      "Amigdalitis",
+      "Dolor de garganta frecuente"
+     ],
+     [
+      "Ronquera y cambios en la voz",
+      "Incluye reflujo laringofaríngeo"
+     ]
+    ]
+   },
+   {
+    "tipo": "di-listado",
+    "eyebrow": "Procedimientos",
+    "titulo": "Consultorio y cirugía",
+    "texto": "",
+    "nota": "Toda cirugía se indica después de una valoración, en la que se explican opciones y alternativas.",
+    "items": [
+     [
+      "Endoscopia nasal y laringoscopia",
+      "En el consultorio, cuando hace falta"
+     ],
+     [
+      "Septoplastia",
+      "Cirugía del tabique nasal"
+     ],
+     [
+      "Turbinoplastia",
+      "Cirugía de los cornetes"
+     ],
+     [
+      "Amígdalas y adenoides",
+      "Cirugía en niños y adultos"
+     ],
+     [
+      "Cirugía endoscópica nasal",
+      "Cirugía de senos paranasales"
+     ],
+     [
+      "Rinoplastia funcional",
+      "Cirugía de la nariz para respirar"
+     ]
+    ]
+   },
+   {
+    "tipo": "di-narrativa",
+    "eyebrow": "Cómo trabajo",
+    "titulo": "Primero escucharte, luego explorar",
+    "texto": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad. Si tu caso necesita a otro especialista, te lo digo y te refiero.",
+    "nota": "",
+    "items": []
+   },
+   {
+    "tipo": "di-cta",
+    "eyebrow": "Agenda",
+    "titulo": "¿Un síntoma que no se va?",
+    "texto": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.",
+    "nota": "",
+    "items": []
+   }
+  ]
+ },
+ "sueno": {
+  "nombre": "Sueño",
+  "url": "/sueno/",
+  "bloques": [
+   {
+    "tipo": "di-bleed",
+    "eyebrow": "Sueño y respiración",
+    "titulo": "Del ronquido al descanso",
+    "texto": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología.",
+    "nota": "",
+    "items": []
+   },
+   {
+    "tipo": "di-listado",
+    "eyebrow": "Qué atiendo",
+    "titulo": "Ronquido y apnea",
+    "texto": "",
+    "nota": "",
+    "items": [
+     [
+      "Ronquido",
+      "En adultos y en niños"
+     ],
+     [
+      "Apnea obstructiva del sueño",
+      "Pausas en la respiración al dormir"
+     ]
+    ]
+   },
+   {
+    "tipo": "di-listado",
+    "eyebrow": "Estudios y tratamientos",
+    "titulo": "La ruta completa",
+    "texto": "",
+    "nota": "El tratamiento se decide con el estudio en la mano y según dónde se estrecha la vía aérea.",
+    "items": [
+     [
+      "Estudio del sueño en casa",
+      "Poligrafía respiratoria interpretada por la propia Dra."
+     ],
+     [
+      "Endoscopia de sueño",
+      "Muestra dónde se cierra la vía aérea al dormir"
+     ],
+     [
+      "CPAP",
+      "Indicación, ajuste y seguimiento"
+     ],
+     [
+      "Cirugía de ronquido y apnea",
+      "Nariz, paladar o amígdalas, según el caso"
+     ],
+     [
+      "Dispositivo de avance mandibular",
+      "Con una odontóloga especializada en sueño"
+     ]
+    ]
+   },
+   {
+    "tipo": "di-narrativa",
+    "eyebrow": "Cómo trabajo",
+    "titulo": "Un otorrino para la vía aérea",
+    "texto": "Nariz, paladar, amígdalas y lengua: como otorrinolaringólogo exploro directamente dónde se estrecha la vía aérea durante el sueño. La valoración empieza en el consultorio; con el estudio en la mano te explico las opciones y decidimos juntos el tratamiento.",
+    "nota": "",
+    "items": []
+   },
+   {
+    "tipo": "di-cta",
+    "eyebrow": "Agenda",
+    "titulo": "¿Hablamos de lo que te quita el descanso?",
+    "texto": "Una valoración de 30 minutos define si necesitas un estudio.",
+    "nota": "",
+    "items": []
+   }
+  ]
+ }
+}

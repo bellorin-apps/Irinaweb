@@ -82,7 +82,7 @@
           "orl_title": "Oído, nariz y garganta, desde los 0 meses",
           "orl_items": "Otitis\nHipoacusia\nTinnitus\nVértigo\nRinitis\nSinusitis\nTabique desviado\nAmígdalas\nVoz",
           "orl_link": "/otorrinolaringologia/",
-          "orl_link_label": "Padecimientos y tratamientos",
+          "orl_link_label": "Ver qué atiendo",
           "orl_image": {
             "id": "__ORL_IMG_ID__",
             "url": "__ORL_IMG_URL__"
@@ -91,7 +91,7 @@
           "sleep_title": "Ronquido y apnea del sueño, con diagnóstico y tratamiento completos",
           "sleep_items": "Poligrafía en casa\nEndoscopia de sueño\nCPAP\nFaringoplastia\nCirugía nasal",
           "sleep_link": "/sueno/",
-          "sleep_link_label": "Conocer la ruta de tratamiento",
+          "sleep_link_label": "Ver la ruta completa",
           "sleep_image": {
             "id": "__SUENO_IMG_ID__",
             "url": "__SUENO_IMG_URL__"
@@ -136,52 +136,52 @@
           "note": "Orientación para encontrar la información adecuada. No sustituye una valoración médica.",
           "items": [
             {
-              "_id": "16bb906",
+              "_id": "8a163a1",
               "label": "Ronco o me dicen que dejo de respirar",
               "sub": "Ronquido, apnea del sueño",
-              "url": "/sueno/ronquido/"
+              "url": "/sueno/"
             },
             {
-              "_id": "5f955f3",
+              "_id": "b0a51fb",
               "label": "Nariz tapada todo el tiempo",
               "sub": "Obstrucción nasal, tabique, cornetes",
-              "url": "/padecimientos/desviacion-de-tabique-nasal/"
+              "url": "/otorrinolaringologia/#nariz"
             },
             {
-              "_id": "bd50fb5",
+              "_id": "f7788bd",
               "label": "Sinusitis que no se quita",
               "sub": "Sinusitis aguda y crónica",
-              "url": "/padecimientos/sinusitis/"
+              "url": "/otorrinolaringologia/#nariz"
             },
             {
-              "_id": "c3e0c45",
+              "_id": "5c62cc1",
               "label": "Dolor u oído tapado",
               "sub": "Otitis, tapón de cerumen",
-              "url": "/padecimientos/otitis/"
+              "url": "/otorrinolaringologia/#oido"
             },
             {
-              "_id": "ebf9272",
+              "_id": "61dbaaf",
               "label": "Escucho menos o me zumba el oído",
               "sub": "Hipoacusia, tinnitus",
-              "url": "/padecimientos/hipoacusia/"
+              "url": "/otorrinolaringologia/#oido"
             },
             {
-              "_id": "15c6a20",
+              "_id": "7e8698f",
               "label": "Estornudos y alergia",
               "sub": "Rinitis alérgica",
-              "url": "/padecimientos/rinitis/"
+              "url": "/otorrinolaringologia/#nariz"
             },
             {
-              "_id": "57405eb",
+              "_id": "724f7bf",
               "label": "Dolor de garganta frecuente",
               "sub": "Amigdalitis, amígdalas en niños",
-              "url": "/padecimientos/amigdalitis/"
+              "url": "/otorrinolaringologia/#garganta"
             },
             {
-              "_id": "820c0e8",
+              "_id": "cc035f5",
               "label": "Ronquera o cambios en la voz",
               "sub": "Laringe, reflujo laringofaríngeo",
-              "url": "/padecimientos/reflujo-laringofaringeo/"
+              "url": "/otorrinolaringologia/#garganta"
             }
           ]
         },
