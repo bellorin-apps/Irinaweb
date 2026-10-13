@@ -18,3 +18,7 @@ La Dra. revisa y aprueba las fichas clínicas sin entrar a wp-admin: `/briefing/
 - Requisito: un usuario con rol `revisor_medico` (`wp user list --role=revisor_medico`); opcional `'reviewer_login' => 'irina'` en `config.php`.
 
 Las tres mini apps van siempre en versión clara (`data-theme="light"`, D-041).
+
+## Guía de revisión (`guia/`, 2026-10-13)
+
+`/briefing/guia/?t=TOKEN` (mismo token): cómo revisar, qué mirar en cada ficha, la lista por prioridad (sueño primero) con el estado real de cada ficha leído de `revision/revisar.php?action=list`, y los dos textos de ORL y Sueño que no están en la app. Cada ficha enlaza a `revision/?t=TOKEN&id=<ID>`, que la abre directamente. Solo lectura: no guarda nada.
