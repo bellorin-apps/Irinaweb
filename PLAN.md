@@ -44,13 +44,13 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 1.1 | Canal técnico: red amplia del entorno + Application Password del WordPress NUEVO (REST); SSH solo desde la PC | 2 | OWNER | D-018, D-021 |
-| 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | REVIEW | `docs/audit/`, `docs/AUDIT_WP.md` |
+| 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | REVIEW | Auditoría2026-10-12: Inventario del7–8/10 histórico. HTML no enumera plugins sin assets, borradores, menús internos ni medios completos; falta inventario actual de Claude local sin datos privados. |
 | 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | TODO | |
 | 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | TODO | Alertas existentes: noindex + canónica duplicada |
-| 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | REVIEW | Ejecutado 2026-10-07/08 por REST + sesión local |
+| 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | REVIEW | Auditoría2026-10-12: HTML es y REST America/Monterrey, UTC−6 verificados. es_MX, formatos, ausencia completa de Astra/Site Kit y constantes de hardening necesitan informe local de valores permitidos, sin abrir wp-config. |
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | DONE | Manual 2026-10-07 16:41 descargado; semanal automático activo |
 | 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | TODO | |
-| 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | REVIEW | `docs/DEPLOY.md`, `docs/RUNBOOK_RESET.md` |
+| 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | DONE | Auditoría2026-10-12: FIX documental: rollback vigente según deploy-code.sh (~/deploy-backups/<ts>); runbook de reset marcado histórico y no ejecutable; sin credenciales. |
 | 1.9 | Codex: auditoría de seguridad del estado actual | 2 | TODO | |
 
 ## FASE 2 — Investigación y estrategia

@@ -59,3 +59,9 @@ Configuración manual únicamente por la sesión local en wp-config.php del serv
 Contacto y copia Bcc se configuran en PracticeSettings; Bcc no es público. Sin constantes SMTP el core utiliza wp_mail normal. La sesión local comprueba HTML/texto y recepción solo con autorización para los correos reales. La línea en blanco adicional antes del cierre es inocua y no requiere cambio.
 
 No todos los scripts antiguos respaldaban cada operación: deploy-code respalda tema/core; deploy-briefing ahora respalda su árbol; upload-media conserva la versión anterior. Probar idempotencia en copia/staging antes de cerrar el gate. No ejecutar go-live ni publicación médica por una recarga de JSON.
+
+
+## Operación vigente auditada · 2026-10-12
+`deploy-code.sh` copia únicamente tema/core mediante tar, sin eliminar archivos, y respalda ambos árboles FUERA del webroot en `~/deploy-backups/<ts>/{irina-gonzalez,dra-irina-core}`. No usa rsync ni crea backups de código en wp-content. La regla de respaldo `.bak` de la descripción histórica no aplica a este script.
+Rollback de código: Claude local verifica el timestamp, repone cada árbol desde ese respaldo dentro de sus destinos exactos y purga LiteSpeed/CDN. No modifica ni restaura tablas, usuarios, clínica, wp-config ni otras aplicaciones como efecto de este rollback. Los cambios de contenido requieren su respaldo propio; la copia de código no revierte la base de datos. No se ensayó restauración real en esta revisión.
+Basic/SSH/configuración privada solo en la sesión local; este documento no contiene passwords, tokens ni claves. El runbook reset es archivo histórico y no se ejecuta. `deploy-briefing.sh` entrega las URLs privadas en su archivo local ignorado: nunca se copian al relevo.
