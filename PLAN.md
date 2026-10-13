@@ -134,7 +134,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 8.1 | Resto de páginas de condición/servicio | 5 | DESCOPED | D-076: sitio corto; las 26 fichas quedan en borrador, sin borrarse |
 | 8.2 | Centro de recursos/artículos iniciales | 3 | DESCOPED | D-076: `/recursos/` responde 404; los 3 artículos siguen en borrador con fuentes |
-| 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | TODO | |
+| 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | REVIEW | Verificado en vivo 2026-10-13: dirección completa (CAB, piso 2, consultorio 6), mapa con estilo D-065 + «Cómo llegar», estacionamiento gratuito, elevador y silla de ruedas, «previa cita» (D-032, José lo mantiene), formulario, WhatsApp/tel y aviso de urgencias; un h1. José: sin referencias extra (basta el mapa); foto de fachada pendiente, opcional (D-079) |
 | 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | DONE | En vivo 2026-10-10 (D-050); SMTP por constantes con contraseña de aplicación |
 | 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | DONE | Publicados 2026-10-10 (D-051); el propietario puede pedir cambios (8.6) |
 | 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
