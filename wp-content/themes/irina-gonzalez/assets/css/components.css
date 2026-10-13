@@ -536,6 +536,13 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-sec-photo picture, .di-sec-photo img { display: block; width: 100%; height: 100%; }
 .di-sec-photo img { object-fit: cover; object-position: right center; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40%); mask-image: linear-gradient(90deg, transparent 0, #000 40%); }
 .di-section--photo > .di-container, .di-section--photo > .di-container--narrow { position: relative; z-index: 1; }
+/* Dos secciones seguidas con la misma foto alta: la primera muestra el tramo de arriba y la segunda el de abajo; la costura se funde con un desvanecido vertical combinado con el lateral. */
+.di-sec-photo--top img { object-position: right top; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40%), linear-gradient(180deg, #000 70%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 40%), linear-gradient(180deg, #000 70%, transparent 100%); -webkit-mask-composite: source-in; mask-composite: intersect; }
+.di-sec-photo--bottom img { object-position: right bottom; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40%), linear-gradient(0deg, #000 70%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 40%), linear-gradient(0deg, #000 70%, transparent 100%); -webkit-mask-composite: source-in; mask-composite: intersect; }
+/* Con JS (main.js) las dos tramos forman una sola foto continua: sin desvanecido vertical, solo el lateral; el contenedor recorta. */
+.di-sec-photo.is-spanned { bottom: auto; height: 100%; overflow: hidden; }
+.di-sec-photo.is-spanned picture { height: auto; }
+.di-sec-photo.is-spanned img { object-position: right center; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40%); mask-image: linear-gradient(90deg, transparent 0, #000 40%); -webkit-mask-composite: source-over; mask-composite: add; }
 @media (max-width: 899px) { .di-sec-photo { width: 85%; } }
 
 /* Tooltip estándar (propietario, 2026-10-10): cualquier elemento con .di-tip y data-tip muestra ese texto encima al pasar el cursor o al enfocar (teclado y toque). Solo CSS; colores ajustables por sección con --tip-bg/--tip-fg. */

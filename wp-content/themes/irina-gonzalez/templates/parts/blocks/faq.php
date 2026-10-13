@@ -15,6 +15,7 @@ $irina_a     = wp_parse_args(
 		'items'   => [],
 		'narrow'  => true,
 		'bg_id'   => 0,
+		'bg_pos'  => 'center',
 	]
 );
 $irina_items = array_filter( (array) $irina_a['items'], static fn( $i ): bool => ! empty( $i['pregunta'] ) );
@@ -22,7 +23,7 @@ if ( ! $irina_items ) {
 	return;
 }
 ?>
-<?php $irina_bg = irina_section_photo( (int) $irina_a['bg_id'] ); ?>
+<?php $irina_bg = irina_section_photo( (int) $irina_a['bg_id'], (string) $irina_a['bg_pos'] ); ?>
 <section class="di-section di-section--tight<?php echo '' !== $irina_bg ? ' di-section--photo' : ''; ?>">
 	<?php echo $irina_bg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- irina_section_photo: wp_get_attachment_image escapado. ?>
 	<div class="<?php echo $irina_a['narrow'] ? 'di-container--narrow' : 'di-container'; ?>">

@@ -24,9 +24,10 @@ $irina_a   = wp_parse_args(
 		'image_alt' => '',
 		'image_pos' => 'right',
 		'bg_id'     => 0,
+		'bg_pos'    => 'center',
 	]
 );
-$irina_bg  = irina_section_photo( (int) $irina_a['bg_id'] );
+$irina_bg  = irina_section_photo( (int) $irina_a['bg_id'], (string) $irina_a['bg_pos'] );
 $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 	(int) $irina_a['image_id'],
 	[

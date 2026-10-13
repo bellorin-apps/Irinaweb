@@ -241,6 +241,38 @@
     endoUpdate();
   }
 
+  // Foto de fondo repartida entre dos secciones seguidas (Primera consulta: «Qué llevar» + «Preguntas frecuentes», 2026-10-13).
+  // Sin JS cada sección enseña su tramo (arriba/abajo) con la costura desvanecida. Con JS las dos <img> toman el alto combinado de
+  // ambas secciones y la segunda se desplaza hacia arriba lo que mide el tramo de la primera: se ve UNA foto continua, sin repetir.
+  var spanTops = document.querySelectorAll('.di-sec-photo--top');
+  if (spanTops.length) {
+    var pairs = [];
+    Array.prototype.forEach.call(spanTops, function (top) {
+      var secA = top.closest('.di-section--photo');
+      var all = Array.prototype.slice.call(document.querySelectorAll('.di-sec-photo--bottom'));
+      var bottom = all.filter(function (b) { return secA && (secA.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING); })[0];
+      if (!secA || !bottom) { return; }
+      var secB = bottom.closest('.di-section--photo'), imgA = top.querySelector('img'), imgB = bottom.querySelector('img');
+      if (secB && imgA && imgB) { pairs.push([secA, secB, top, bottom, imgA, imgB]); }
+    });
+    var spanFit = function () {
+      pairs.forEach(function (q) {
+        var a = q[0].getBoundingClientRect(), b = q[1].getBoundingClientRect();
+        var span = Math.round(b.bottom - a.top), off = Math.round(b.top - a.top);
+        if (span <= 0 || off <= 0) { return; }
+        q[4].style.height = span + 'px'; q[5].style.height = span + 'px'; q[5].style.marginTop = -off + 'px';
+        q[2].classList.add('is-spanned'); q[3].classList.add('is-spanned');
+      });
+    };
+    if (pairs.length) {
+      spanFit();
+      window.addEventListener('resize', spanFit);
+      window.addEventListener('load', spanFit);
+      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(spanFit); }
+      if ('ResizeObserver' in window) { var spanRo = new ResizeObserver(spanFit); pairs.forEach(function (q) { spanRo.observe(q[0]); spanRo.observe(q[1]); }); }
+    }
+  }
+
   // Logos: el carril se mueve solo y además se puede arrastrar con ratón, dedo o lápiz (propietario, 2026-10-10).
   // Al primer arrastre la animación CSS se congela en su posición y el movimiento pasa a JS: sigue el puntero, suelta con
   // inercia breve y, tras 3 s sin tocarlo, reanuda el autoplay desde donde quedó a la misma velocidad que la animación.

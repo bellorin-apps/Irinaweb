@@ -47,6 +47,19 @@ final class Faq extends AbstractWidget {
 			]
 		);
 		$this->image( 'bg_image', __( 'Foto de fondo (lado derecho, 40 %, multiplicar)', 'dra-irina-core' ) );
+		$this->add_control(
+			'bg_pos',
+			[
+				'label'   => __( 'Encuadre de la foto de fondo', 'dra-irina-core' ),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 'center',
+				'options' => [
+					'center' => __( 'Centro', 'dra-irina-core' ),
+					'top'    => __( 'Arriba (primera de dos secciones seguidas)', 'dra-irina-core' ),
+					'bottom' => __( 'Abajo (segunda de dos secciones seguidas)', 'dra-irina-core' ),
+				],
+			]
+		);
 		$this->end_controls_section();
 	}
 
@@ -64,6 +77,7 @@ final class Faq extends AbstractWidget {
 			'items'   => $items,
 			'narrow'  => 'yes' === ( $s['narrow'] ?? 'yes' ),
 			'bg_id'   => self::image_id( $s['bg_image'] ?? null ),
+			'bg_pos'  => (string) ( $s['bg_pos'] ?? 'center' ),
 		];
 	}
 }

@@ -263,9 +263,13 @@ function irina_elementor_main(): bool {
  * Foto de fondo de una sección (propietario, 2026-10-13: «Qué llevar» y «Preguntas frecuentes» de Primera consulta): pegada al lado
  * derecho, opacidad 40 % y en multiplicar sobre el crema. Devuelve el bloque decorativo o cadena vacía; el CSS vive en .di-sec-photo.
  *
- * @param int $attachment_id Adjunto (0 = sin foto).
+ * Con dos secciones seguidas, «top» en la primera y «bottom» en la segunda reparten una foto alta en dos tramos (cabeza arriba,
+ * resto abajo) y funden la costura con un desvanecido, en vez de repetir la misma foto dos veces.
+ *
+ * @param int    $attachment_id Adjunto (0 = sin foto).
+ * @param string $pos           Encuadre vertical: center, top (desvanece abajo) o bottom (desvanece arriba).
  */
-function irina_section_photo( int $attachment_id ): string {
+function irina_section_photo( int $attachment_id, string $pos = 'center' ): string {
 	if ( $attachment_id <= 0 ) {
 		return '';
 	}
@@ -278,5 +282,6 @@ function irina_section_photo( int $attachment_id ): string {
 			'sizes'    => '(max-width: 899px) 100vw, 55vw',
 		]
 	);
-	return '' === $img ? '' : '<div class="di-sec-photo" aria-hidden="true">' . $img . '</div>';
+	$pos = in_array( $pos, [ 'top', 'bottom' ], true ) ? $pos : 'center';
+	return '' === $img ? '' : '<div class="di-sec-photo di-sec-photo--' . esc_attr( $pos ) . '" aria-hidden="true">' . $img . '</div>';
 }
