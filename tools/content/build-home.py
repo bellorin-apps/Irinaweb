@@ -55,14 +55,15 @@ data = [
         "creds": "Certificada por el Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello\nSociedad Iberoamericana de Cirugía de Sueño · Colegio de ORL de Nuevo León\nAtiende en Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente, Hospital Universitario y Hospitaria",
         "link": "/dra-irina-gonzalez-saez/", "link_label": "Conocer a la Dra. Irina",
         "image": {"id": "__DRA_IMG_ID__", "url": "__DRA_IMG_URL__"}, "bg": {"id": "__DRA_BG_ID__", "url": "__DRA_BG_URL__"}, "bg_tone": "light"}),
+    # Ilustración sobre cada paso, como en Primera consulta (propietario, 2026-10-13): adjuntos paso-*.
     container("pasos", "di-pasos", {
         "eyebrow": "Cómo trabajamos", "title": "Qué <b>esperar</b> en tu <b><em>consulta</em></b>",
         "steps": rep([
-            ("Escuchar", "Tus síntomas, desde cuándo y cómo afectan tu día. Trae estudios previos y tu lista de medicamentos."),
-            ("Explorar", "Oído, nariz y garganta; endoscopia nasal o laringoscopia en el consultorio cuando hace falta."),
-            ("Diagnosticar", "Si el problema es de sueño, poligrafía o estudio en casa realizado por la propia Dra."),
-            ("Acompañar", "Un plan claro, con opciones médicas y quirúrgicas explicadas, y seguimiento presencial o en línea."),
-        ], "title", "text")}),
+            ("Escuchar", "Tus síntomas, desde cuándo y cómo afectan tu día. Trae estudios previos y tu lista de medicamentos.", "paso-escuchar"),
+            ("Explorar", "Oído, nariz y garganta; endoscopia nasal o laringoscopia en el consultorio cuando hace falta.", "paso-explorar"),
+            ("Diagnosticar", "Si el problema es de sueño, poligrafía o estudio en casa realizado por la propia Dra.", "paso-diagnosticar"),
+            ("Acompañar", "Un plan claro, con opciones médicas y quirúrgicas explicadas, y seguimiento presencial o en línea.", "paso-acompanar"),
+        ], "title", "text", "img")}),
     container("sueno", "di-sueno", {
         "eyebrow": "Especialización en sueño", "title": "Del <b>ronquido</b><br>al descanso, en<br>un solo <b><em>lugar</em></b>",
         "lead": "En Monterrey, el ronquido y la apnea suelen pasar por varios especialistas. La Dra. Irina evalúa la vía aérea, realiza el estudio, interpreta el resultado y ofrece desde el CPAP hasta la cirugía de paladar y nariz.",
