@@ -258,3 +258,25 @@ function irina_hospitals(): array {
 function irina_elementor_main(): bool {
 	return is_singular() && 'elementor_header_footer' === get_page_template_slug( get_queried_object_id() );
 }
+
+/**
+ * Foto de fondo de una sección (propietario, 2026-10-13: «Qué llevar» y «Preguntas frecuentes» de Primera consulta): pegada al lado
+ * derecho, opacidad 40 % y en multiplicar sobre el crema. Devuelve el bloque decorativo o cadena vacía; el CSS vive en .di-sec-photo.
+ *
+ * @param int $attachment_id Adjunto (0 = sin foto).
+ */
+function irina_section_photo( int $attachment_id ): string {
+	if ( $attachment_id <= 0 ) {
+		return '';
+	}
+	$img = irina_image_original(
+		$attachment_id,
+		[
+			'alt'      => '',
+			'loading'  => 'lazy',
+			'decoding' => 'async',
+			'sizes'    => '(max-width: 899px) 100vw, 55vw',
+		]
+	);
+	return '' === $img ? '' : '<div class="di-sec-photo" aria-hidden="true">' . $img . '</div>';
+}

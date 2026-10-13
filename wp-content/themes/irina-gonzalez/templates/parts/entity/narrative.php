@@ -1,6 +1,7 @@
 <?php
 /**
- * Bloque narrativo centrado (ancho de lectura). $args: eyebrow, title, lead, text, draft (bool), image_id (int, opcional), image_alt.
+ * Bloque narrativo centrado (ancho de lectura). $args: eyebrow, title, lead, text, draft (bool), image_id (int, opcional), image_alt,
+ * bg_id (foto de fondo al lado derecho, opcional).
  * Con imagen (propuesta del propietario, 2026-10-10, «Escucharte» + endoscopio): el texto va en una tarjeta de cristal blanco
  * desplazada a la derecha y la foto, grande, asoma por su lado izquierdo saliendo de debajo de la tarjeta a medida que se baja
  * (main.js fija --endo-p 0→1 según el scroll). La foto va en multiplicar y con desvanecido para fundir su fondo de estudio con el
@@ -22,8 +23,10 @@ $irina_a   = wp_parse_args(
 		'image_id'  => 0,
 		'image_alt' => '',
 		'image_pos' => 'right',
+		'bg_id'     => 0,
 	]
 );
+$irina_bg = irina_section_photo( (int) $irina_a['bg_id'] );
 $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 	(int) $irina_a['image_id'],
 	[
@@ -34,7 +37,8 @@ $irina_img = (int) $irina_a['image_id'] > 0 ? irina_image_original(
 	]
 ) : '';
 ?>
-<section class="di-section<?php echo '' !== $irina_img ? ' di-narrative--card di-narrative--img-' . esc_attr( 'left' === $irina_a['image_pos'] ? 'left' : 'right' ) : ''; ?>">
+<section class="di-section<?php echo '' !== $irina_img ? ' di-narrative--card di-narrative--img-' . esc_attr( 'left' === $irina_a['image_pos'] ? 'left' : 'right' ) : ''; ?><?php echo '' !== $irina_bg ? ' di-section--photo' : ''; ?>">
+	<?php echo $irina_bg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- irina_section_photo: wp_get_attachment_image escapado. ?>
 	<?php if ( '' !== $irina_img ) : ?>
 	<div class="di-container di-narrative__wrap">
 		<div class="di-narrative__aside"><?php echo $irina_img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>

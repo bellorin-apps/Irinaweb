@@ -46,6 +46,7 @@ final class Faq extends AbstractWidget {
 				'return_value' => 'yes',
 			]
 		);
+		$this->image( 'bg_image', __( 'Foto de fondo (lado derecho, 40 %, multiplicar)', 'dra-irina-core' ) );
 		$this->end_controls_section();
 	}
 
@@ -62,6 +63,7 @@ final class Faq extends AbstractWidget {
 			'title'   => (string) ( $s['title'] ?? '' ),
 			'items'   => $items,
 			'narrow'  => 'yes' === ( $s['narrow'] ?? 'yes' ),
+			'bg_id'   => self::image_id( $s['bg_image'] ?? null ),
 		];
 	}
 }

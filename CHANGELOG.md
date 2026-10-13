@@ -134,3 +134,6 @@ Claude local: deploy-code.sh del HEAD de esta entrega y purga; NO setup-site/pag
 
 ## Codex2026-10-12
 Auditoría17REVIEW:14DONE/3REVIEW; progreso39,92%. Documentación alineada a D-071–074, schema/CPT/SEO actuales. Código8b2375c: originales1600a100 y móvil95por metadata,DNT en clics,cancelación y reduced-motion logos,PHPCS limpio. Pruebas y límites en docs/REVISION_2026-10-12.md. Sin despliegue/SMTP/publicación médica; cuatroHTML locales preservados.
+## 2026-10-13 — Foto de fondo en «Qué llevar» y «Preguntas frecuentes» (sin desplegar)
+
+- Bloques narrativo y FAQ con foto de fondo opcional (`bg_image`): pegada a la derecha (55 % del ancho en escritorio, 85 % en móvil), opacidad 40 %, multiplicar, borde izquierdo desvanecido; decorativa (aria-hidden). Helper `irina_section_photo()`, CSS `.di-sec-photo`. `build-pages.py` la pone en pc-narr y pc-faq con el slug `pc-fondo` (resuelto en `setup-pages.sh`); JSON regenerado. Previsualizado en harness con una foto de prueba: no demuestra el despliegue.

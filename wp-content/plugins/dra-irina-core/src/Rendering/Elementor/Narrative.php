@@ -59,6 +59,7 @@ final class Narrative extends AbstractWidget {
 				'return_value' => 'yes',
 			]
 		);
+		$this->image( 'bg_image', __( 'Foto de fondo (lado derecho, 40 %, multiplicar)', 'dra-irina-core' ) );
 		$this->end_controls_section();
 	}
 
@@ -72,6 +73,7 @@ final class Narrative extends AbstractWidget {
 			'image_id'  => self::image_id( $s['image'] ?? null ),
 			'image_alt' => (string) ( $s['image_alt'] ?? '' ),
 			'image_pos' => 'left' === ( $s['image_pos'] ?? '' ) ? 'left' : 'right',
+			'bg_id'     => self::image_id( $s['bg_image'] ?? null ),
 		];
 	}
 }
