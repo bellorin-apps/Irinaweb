@@ -4,12 +4,12 @@ Generado desde `PLAN.md` con `python tools/audit/progress.py`.
 
 Solo DONE suma. REVIEW, DOING, TODO, OWNER y BLOCKED suman cero; inglés aparte.
 
-Español: **66/253 pesos = 26.09%** · 25/95 tareas DONE.
+Español: **101/253 pesos = 39.92%** · 39/95 tareas DONE.
 
 | Estado | Tareas |
 |---|---:|
-| DONE | 25 |
-| REVIEW | 17 |
+| DONE | 39 |
+| REVIEW | 3 |
 | DOING | 17 |
 | TODO | 30 |
 | OWNER | 6 |
@@ -18,10 +18,10 @@ Español: **66/253 pesos = 26.09%** · 25/95 tareas DONE.
 | Fase | Peso DONE | Peso total |
 |---|---:|---:|
 | 0 | 23 | 23 |
-| 1 | 3 | 20 |
-| 2 | 0 | 14 |
-| 3 | 0 | 20 |
-| 4 | 15 | 20 |
+| 1 | 4 | 20 |
+| 2 | 13 | 14 |
+| 3 | 16 | 20 |
+| 4 | 20 | 20 |
 | 5 | 0 | 23 |
 | 6 | 12 | 33 |
 | 7 | 5 | 22 |
@@ -32,4 +32,4 @@ Español: **66/253 pesos = 26.09%** · 25/95 tareas DONE.
 | 12 | 0 | 12 |
 | 13 (EN, aparte) | 0 | 19 |
 
-Los DONE heredados conservan la evidencia referida por PLAN; este cálculo no equivale a certificar todos los gates. Auditoría actual y límites: `docs/AUDITORIA_CODEX_2026-10-10.md`. No se elevan tareas a DONE por terminar una revisión local.
+Los DONE conservan la evidencia referida por PLAN; este cálculo no equivale a certificar todos los gates. Auditorías y límites: `QA.md`, `BATON.md`, `docs/AUDITORIA_CODEX_2026-10-10.md` y `docs/REVISION_2026-10-12.md`. La revisión documental no certifica staging, despliegue ni aprobación clínica.

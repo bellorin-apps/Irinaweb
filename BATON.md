@@ -1,3 +1,23 @@
+# BATON — Codex → Claude local · auditoría2026-10-12
+
+**Código correctivo:8b2375c.** Base fdb04d0; producción declarada edfa4f0. Revisión de17tareas completada:14DONE y3REVIEW (1.2,1.5,3.6); progreso101/253,39,92%. Docs y PLAN/PROGRESS actualizados. Informe:docs/REVISION_2026-10-12.md; evidencia:docs/audit/2026-10-12/.
+
+## Despliegue de esta entrega
+
+1. git pull de ccr-6254502d-xly8ww, conservando los cuatroHTML locales de José. El HEAD de esta entrega incluye documentación posterior al código8b2375c.
+2. **bash tools/deploy/deploy-code.sh**: respaldo en ~/deploy-backups/<ts>, tema/core solamente. No setup-site/pages/dra, upload-media, regeneración masiva, publicaciones médicas ni SMTP. Los cuatrobuilders producen13JSON sin cambio semántico.
+3. Purga LiteSpeed/CDN por el procedimiento local habitual. Verificar URL limpia: la primera copia de caché mostró «oído» mal codificado; petición fresca/build están correctos. No cambiar las palabras ni reimportar contenido a ciegas.
+4. Comprobar logos (gesto normal, cancelación, segundo dedo, reduced-motion), DNT sin eventos, hero Primera consulta y alineación móvil. QA local pasa, no demuestra despliegue. Fotos móviles existentes ya son95; el código cambia la política para generación futura, no necesita recomprimirlas ahora.
+5. Rollback de código: respaldo de esos dos árboles, purga; no restaurar BD/wp-config ni otras aplicaciones como efecto de este rollback.
+
+## Evidencia pendiente
+
+1.2/3.6: inventario actual seguro de plugins activos/MU,temas,páginas/estado,menús y medios públicos con clasificación/destino. 1.5: idioma es_MX,formatos y booleanos de hardening en informe permitido,sin imprimir secretos ni copiar wp-config. Esto permitirá cerrar los3REVIEW; ningún crédito parcial.
+Staging: idempotencia completa de setup-pages/Elementor,roles y calidad con editor del servidor (original1600a100,derivado95). Safari nativo no probado. GA4 puede perder clic si se abandona antes de descargar proveedor: se conserva D-073 y no se retrasa WhatsApp.
+Sin nuevas preguntas de producto necesarias para desplegar. GSC/GBP,clínica/documentos siguen OWNER. Codex no desplegó. Historial de relevos debajo; no aplicar sus pendientes antiguos que contradigan esta entrega.
+
+---
+
 > **Producción 2026-10-12 18:05 (sesión local): edfa4f0.** José: «Listo, todo perfecto» tras probar en su Samsung los logos, el hero de Primera consulta y «Escucharte» (Q-039 VERIFIED). Aprobó con captura el bloque «Qué llevar» de Primera consulta: marca de borrador retirada en build-pages, setup-pages y purga; el HTML público tiene 0 «Borrador» y conserva la lista. Q-043 VERIFIED. La Dra. sigue sin terminar su revisión: fichas, 3 recursos y ORL/Sueño en borrador. Siguiente: José pasa a Codex `docs/CODEX_REVIEW_PROMPT.md`.
 
 > **Producción 2026-10-12 17:55 (sesión local): desplegado hasta b64ee27** (D-074 de la nube, «Sí, pásalas» de José, y 1f413f0, títulos de Primera consulta dictados por José). (1) Títulos con setup-pages y purga: «<b>Qué</b> esperar / en tu <em>consulta</em>», «<b>Así</b> es la <em>consulta</em>», «<b>Llega</b> con lo que <em>ya tienes</em>», «<b>Costo,</b> pagos y <em>seguros</em>», «Agenda tu / <em>primera consulta</em>» (cursiva blanca sin color en el CTA). Color y cursiva verificados por estilo computado en 1440. (2) D-074: deploy-code (backup `~/deploy-backups/20261012-175129/`) y `wp media regenerate 358 359 360 --image_size=irina-movil`. Archivo móvil antes→después: fondo 358 1117→96 KB; área ORL 359 2268→577 KB; área sueño 360 1989→373 KB. Galaxy e iPhone (UA real): tarjetas en `…-1600x1600.webp?m=…` dentro de <picture>, 577/374 KB transferidos (antes servían la de 1536 px, 2107/1849 KB); fondo `…-1600x1067.webp?m=…`, 96 KB. 1440: tarjetas por su srcset (768 px, 538/473 KB, igual que antes, sin <source> aplicado); fondo 2400 px original. Recorte igual (object-position 100 % 50 %); consola limpia en los tres.
