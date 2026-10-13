@@ -283,7 +283,7 @@
       var track = rail.querySelector('.di-logos__track');
       var items = track ? track.querySelectorAll('.di-logos__item') : [];
       if (!track || items.length < 2 || items.length % 2) { return; }
-      var n = items.length / 2, x = 0, cycle = 0, speed = 0, manual = false, dragging = false, hovering = false;
+      var n = items.length / 2, x = 0, cycle = 0, speed = 0, manual = false, dragging = false, hovering = false, focused = false;
       var startX = 0, lastX = 0, lastT = 0, vel = 0, moved = false, raf = 0, prevT = 0, idle = 0, pid = null;
       Array.prototype.forEach.call(track.querySelectorAll('img'), function (img) { img.draggable = false; });
       function measure() {
@@ -304,7 +304,7 @@
       }
       function tick(t) {
         var dt = prevT ? Math.min((t - prevT) / 1000, 0.05) : 0; prevT = t;
-        if (!dragging) {
+        if (!dragging && !focused) {
           // Inercia «suelta» (propietario, 2026-10-12): fricción baja, queda el 40 % de la velocidad tras 1 s (un punto más fluido, 2026-10-12). Si la inercia va en el
           // sentido del autoplay le pasa el relevo a velocidad plena; si va al revés, el autoplay recoge la velocidad que trae (sin salto a
           // cero) y la invierte en continuo: rápido hasta el cero (0,25 s) y suave hasta la velocidad plena (0,8 s).
@@ -353,6 +353,17 @@
       // En escritorio, al pasar el ratón el carril se detiene (como la animación CSS); con el dedo no aplica.
       rail.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hovering = true; } });
       rail.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hovering = false; } });
+      rail.addEventListener('focusin', function (e) {
+        var item = e.target.closest('.di-logos__item');
+        if (!item) { return; }
+        focused = true; vel = 0; x = 0; apply(); rail.scrollLeft = 0;
+        item.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'auto' });
+      });
+      rail.addEventListener('focusout', function (e) {
+        if (rail.contains(e.relatedTarget)) { return; }
+        focused = false; rail.scrollLeft = 0;
+        if (!manual) { track.style.transform = ''; }
+      });
       window.addEventListener('resize', function () { if (manual) { measure(); x = wrap(x); apply(); } });
       var logoMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
       function stopLogoMotion(e) {

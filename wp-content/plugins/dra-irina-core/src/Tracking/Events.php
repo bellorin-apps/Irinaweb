@@ -50,6 +50,9 @@ final class Events {
 	}
 
 	public function inline_script(): void {
+		if ( '' === self::ga4_id() || ( is_user_logged_in() && current_user_can( 'edit_posts' ) ) ) {
+			return;
+		}
 		$allowed = wp_json_encode( self::ALLOWED );
 		$script  = "document.addEventListener('click',function(e){if(navigator.doNotTrack==='1'||window.doNotTrack==='1')return;var a=e.target.closest('[data-di-event]');if(!a)return;var n=a.getAttribute('data-di-event');if({$allowed}.indexOf(n)<0)return;if(typeof window.gtag==='function'){window.gtag('event',n,{page_path:location.pathname});}});";
 		wp_print_inline_script_tag( $script, [ 'id' => 'di-events' ] );

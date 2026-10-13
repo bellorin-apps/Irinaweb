@@ -569,6 +569,7 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-logos__rail.is-dragging { cursor: grabbing; }
 /* Tras el primer arrastre el movimiento lo lleva main.js (translateX inline); la animación CSS se apaga. */
 .di-logos__track.is-manual { animation: none; }
+.di-logos__rail:focus-within .di-logos__track { animation: none; }
 .di-logos__item img { -webkit-user-drag: none; }
 .di-logos__item { display: block; flex: none; line-height: 0; opacity: 0.92; transition: opacity var(--motion-base) var(--ease-out); --tip-bg: #2b1c34; }
 .di-logos__item img { filter: brightness(0) invert(1); }

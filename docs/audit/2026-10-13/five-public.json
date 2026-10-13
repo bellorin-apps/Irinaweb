@@ -1,0 +1,2368 @@
+{
+  "rows": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "headings": [
+        {
+          "text": "Respirar bien,\ndormir bien,\noír bien",
+          "bold": 2,
+          "italic": 1
+        },
+        {
+          "text": "Dos especialidades, una misma\nforma de atender",
+          "bold": 2,
+          "italic": 1
+        },
+        {
+          "text": "Motivos de consulta frecuentes",
+          "bold": 2,
+          "italic": 1
+        },
+        {
+          "text": "Qué esperar en tu consulta",
+          "bold": 2,
+          "italic": 1
+        },
+        {
+          "text": "Del ronquido\nal descanso, en\nun solo lugar",
+          "bold": 2,
+          "italic": 1
+        },
+        {
+          "text": "CAB Medical,\nHeadquarters",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "¿Hablamos de lo que\nte está quitando\nel descanso?",
+          "bold": 0,
+          "italic": 1
+        }
+      ],
+      "schemas": [
+        "WebSite",
+        "ImageObject",
+        "WebPage",
+        "Physician"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "title": "Dra. Irina González Sáez, otorrinolaringólogo especialista en sueño",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nConóceme",
+      "headings": [
+        {
+          "text": "Dra. Irina\nGonzález Sáez",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "«Escucharte\ntambién es parte\ndel tratamiento»",
+          "bold": 2,
+          "italic": 1
+        },
+        {
+          "text": "Credenciales verificables",
+          "bold": 0,
+          "italic": 1
+        },
+        {
+          "text": "Membresías y hospitales",
+          "bold": 0,
+          "italic": 1
+        },
+        {
+          "text": "Formación continua en cirugía de sueño",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Agenda tu\nprimera consulta",
+          "bold": 0,
+          "italic": 1
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList",
+        "Physician",
+        "ProfilePage"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "logos": [
+        {
+          "alt": "CHRISTUS MUGUERZA Sistema de Salud",
+          "tip": "CHRISTUS MUGUERZA Sistema de Salud",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "Hospital Zambrano Hellion · TecSalud",
+          "tip": "Hospital Zambrano Hellion · TecSalud",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "Hospital Ángeles Valle Oriente",
+          "tip": "Hospital Ángeles Valle Oriente",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "Hospital Universitario «Dr. José Eleuterio González», UANL",
+          "tip": "Hospital Universitario «Dr. José Eleuterio González», UANL",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "Hospitaria",
+          "tip": "Hospitaria",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello, A.C. (CMORL y CCC)",
+          "tip": "Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello, A.C. (CMORL y CCC)",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "Federación Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (FESORMEX)",
+          "tip": "Federación Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (FESORMEX)",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "Sociedad Iberoamericana de Cirugía de Sueño (SIBECS)",
+          "tip": "Sociedad Iberoamericana de Cirugía de Sueño (SIBECS)",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "Colegio de Otorrinolaringología de Nuevo León",
+          "tip": "Colegio de Otorrinolaringología de Nuevo León",
+          "hidden": null,
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "CHRISTUS MUGUERZA Sistema de Salud",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "Hospital Zambrano Hellion · TecSalud",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "Hospital Ángeles Valle Oriente",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "Hospital Universitario «Dr. José Eleuterio González», UANL",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "Hospitaria",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello, A.C. (CMORL y CCC)",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "Federación Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (FESORMEX)",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "Sociedad Iberoamericana de Cirugía de Sueño (SIBECS)",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        },
+        {
+          "alt": "",
+          "tip": "Colegio de Otorrinolaringología de Nuevo León",
+          "hidden": "true",
+          "tabIndex": 0,
+          "tag": "SPAN"
+        }
+      ],
+      "logoKeyboard": {
+        "focused": true,
+        "tipOpacity": "1"
+      },
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/primera-consulta/",
+      "status": 200,
+      "title": "Primera consulta con la Dra. Irina González Sáez | Qué esperar",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nPrimera consulta",
+      "headings": [
+        {
+          "text": "Qué esperar\nen tu consulta",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Así es la consulta",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Llega con lo que ya tienes",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Costo, pagos y seguros",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Agenda tu\nprimera consulta",
+          "bold": 0,
+          "italic": 1
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "span": {
+        "before": [
+          {
+            "top": 1772.078125,
+            "height": 1216,
+            "spanned": true,
+            "opacity": "0.4",
+            "blend": "multiply"
+          },
+          {
+            "top": 1772.03125,
+            "height": 1216,
+            "spanned": true,
+            "opacity": "0.4",
+            "blend": "multiply"
+          }
+        ],
+        "steps": 4,
+        "after": [
+          {
+            "top": 1772.078125,
+            "height": 1276,
+            "spanned": true,
+            "opacity": "0.4",
+            "blend": "multiply"
+          },
+          {
+            "top": 1772.03125,
+            "height": 1276,
+            "spanned": true,
+            "opacity": "0.4",
+            "blend": "multiply"
+          }
+        ]
+      },
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "title": "Contacto y ubicación | Dra. Irina González Sáez, Cumbres",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nContacto",
+      "headings": [
+        {
+          "text": "Consultorio en\nCumbres, Monterrey",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "CAB Medical,\nHeadquarters",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "¿Prefieres que\nte llamemos?",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Este sitio no es un\ncanal de urgencias",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "¿Agendamos?",
+          "bold": 0,
+          "italic": 1
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList",
+        "Physician",
+        "ContactPage"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "title": "Preguntas frecuentes | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nPreguntas frecuentes",
+      "headings": [
+        {
+          "text": "Lo que más nos preguntan",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Consulta y agenda",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "¿Otra duda?",
+          "bold": 0,
+          "italic": 0
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/links/",
+      "status": 200,
+      "title": "Links | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "headings": [
+        {
+          "text": "Dra. Irina González Sáez",
+          "bold": 0,
+          "italic": 0
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/gracias/",
+      "status": 200,
+      "title": "Mensaje recibido | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nGracias",
+      "headings": [
+        {
+          "text": "Recibido, gracias",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Lo que puedes ir preparando",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "Si prefieres, escríbenos ahora",
+          "bold": 0,
+          "italic": 1
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/aviso-de-privacidad/",
+      "status": 200,
+      "title": "Aviso de privacidad | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nAviso de privacidad",
+      "headings": [
+        {
+          "text": "Aviso de privacidad",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "1. Responsable del tratamiento",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "2. Datos personales que recabamos",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "3. Finalidades del tratamiento",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "4. Datos sensibles y consentimiento",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "5. Transferencias de datos",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "6. Conservación de los datos",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "7. Derechos ARCO, revocación y limitación de uso",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "8. Medidas de seguridad",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "9. Cookies y tecnologías similares",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "10. Menores de edad",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "11. Cambios a este aviso",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "12. Aviso de privacidad simplificado",
+          "bold": 0,
+          "italic": 0
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/aviso-medico/",
+      "status": 200,
+      "title": "Aviso médico | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nAviso médico",
+      "headings": [
+        {
+          "text": "Aviso médico",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "La información no es una consulta",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "No es un canal de urgencias",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "Contenido revisado",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "Resultados y expectativas",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "Publicidad y datos regulatorios",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "Enlaces y contenidos de terceros",
+          "bold": 0,
+          "italic": 0
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/terminos-de-uso/",
+      "status": 200,
+      "title": "Términos de uso | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nTérminos de uso",
+      "headings": [
+        {
+          "text": "Términos de uso",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "1. Objeto del sitio",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "2. Citas y comunicaciones",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "3. Uso permitido",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "4. Propiedad intelectual",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "5. Contenido de terceros y enlaces",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "6. Exclusión de garantías y limitación de responsabilidad",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "7. Privacidad",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "8. Menores de edad",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "9. Modificaciones",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "10. Legislación aplicable y jurisdicción",
+          "bold": 0,
+          "italic": 0
+        },
+        {
+          "text": "11. Contacto",
+          "bold": 0,
+          "italic": 0
+        }
+      ],
+      "schemas": [
+        "BreadcrumbList"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    },
+    {
+      "route": "/recursos/",
+      "status": 200,
+      "title": "Recursos Archive | Dra. Irina González Sáez",
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "crumb": "Inicio\nRecursos",
+      "headings": [
+        {
+          "text": "Recursos para cuidarte en casa",
+          "bold": 1,
+          "italic": 1
+        },
+        {
+          "text": "¿Hablamos de lo que te está quitando el descanso?",
+          "bold": 0,
+          "italic": 0
+        }
+      ],
+      "schemas": [
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "twitter": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "sizes": "32x32"
+        },
+        {
+          "rel": "icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": "192x192"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "https://drairinagonzalez.com/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "sizes": ""
+        }
+      ],
+      "gaScriptCount": 1,
+      "gaProviderCount": 1,
+      "gaIds": [
+        "G-5961XX8QZ7"
+      ],
+      "social": [
+        {
+          "url": "/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+          "status": 200,
+          "format": "jpeg",
+          "width": 1200,
+          "height": 630,
+          "bytes": 120068
+        }
+      ],
+      "iconResponses": [
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-150x150.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "path": "/wp-content/uploads/2026/10/site-icon-300x300.png",
+          "status": 200,
+          "type": "image/png"
+        }
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false
+        },
+        {
+          "width": 393,
+          "overflow": false
+        },
+        {
+          "width": 430,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "duplicates": 0,
+      "errors": [],
+      "gaAppendStates": [
+        "complete"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/hero-home-v20261010134119-1600x1067.webp",
+      "selector": "",
+      "cssWidth": 360,
+      "cssHeight": 842.390625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1067,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 268396,
+      "encodedBodySize": 268096,
+      "versionM": true,
+      "bytes": 268096,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1067,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/area-orl-v20261010134558-1600x1600.webp",
+      "selector": "",
+      "cssWidth": 328,
+      "cssHeight": 520,
+      "naturalWidth": 1600,
+      "naturalHeight": 1600,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 590728,
+      "encodedBodySize": 590428,
+      "versionM": true,
+      "bytes": 590428,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1600,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/area-sueno-v20261010134722-1600x1600.webp",
+      "selector": "",
+      "cssWidth": 328,
+      "cssHeight": 520,
+      "naturalWidth": 1600,
+      "naturalHeight": 1600,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 382762,
+      "encodedBodySize": 382462,
+      "versionM": true,
+      "bytes": 382462,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1600,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/dra-escucharte-bg-v20261010134432-1600x1067.webp",
+      "selector": "",
+      "cssWidth": 360,
+      "cssHeight": 803.75,
+      "naturalWidth": 1600,
+      "naturalHeight": 1067,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 98294,
+      "encodedBodySize": 97994,
+      "versionM": true,
+      "bytes": 97994,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1067,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/dra-escucharte-v20261012143733-725x1536.webp",
+      "selector": "di-doctor__portrait di-reveal is-visible",
+      "cssWidth": 283.203125,
+      "cssHeight": 600,
+      "naturalWidth": 360,
+      "naturalHeight": 762,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 678596,
+      "encodedBodySize": 678296,
+      "versionM": false,
+      "bytes": 678296,
+      "format": "webp",
+      "pixelWidth": 725,
+      "pixelHeight": 1536,
+      "alpha": true,
+      "losslessWebp": true
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/dra-irina-gonzalez-saez/",
+      "src": "/wp-content/uploads/2026/10/hero-dra-v20261010134228-1600x1102.webp",
+      "selector": "",
+      "cssWidth": 360,
+      "cssHeight": 842.390625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1102,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 269234,
+      "encodedBodySize": 268934,
+      "versionM": true,
+      "bytes": 268934,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1102,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/dra-irina-gonzalez-saez/",
+      "src": "/wp-content/uploads/2026/10/dra-endoscopio-v20261012144446.webp",
+      "selector": "di-narrative__aside",
+      "cssWidth": 328,
+      "cssHeight": 218.765625,
+      "naturalWidth": 1024,
+      "naturalHeight": 683,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 461584,
+      "encodedBodySize": 461284,
+      "versionM": false,
+      "bytes": 461284,
+      "format": "webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 683,
+      "alpha": true,
+      "losslessWebp": true
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/hero-primera-v20261012172547-1600x1102.webp",
+      "selector": "",
+      "cssWidth": 360,
+      "cssHeight": 842.390625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1102,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 128456,
+      "encodedBodySize": 128156,
+      "versionM": true,
+      "bytes": 128156,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1102,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/pc-fondo-v20261013094949.png",
+      "selector": "di-sec-photo di-sec-photo--top is-spanned",
+      "cssWidth": 306,
+      "cssHeight": 1129,
+      "naturalWidth": 1024,
+      "naturalHeight": 1623,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 793064,
+      "encodedBodySize": 792764,
+      "versionM": false,
+      "bytes": 792764,
+      "format": "png",
+      "pixelWidth": 1024,
+      "pixelHeight": 1623,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/pc-fondo-v20261013094949.png",
+      "selector": "di-sec-photo di-sec-photo--bottom is-spanned",
+      "cssWidth": 306,
+      "cssHeight": 1129,
+      "naturalWidth": 1024,
+      "naturalHeight": 1623,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 793064,
+      "encodedBodySize": 792764,
+      "versionM": false,
+      "bytes": 792764,
+      "format": "png",
+      "pixelWidth": 1024,
+      "pixelHeight": 1623,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/contacto/",
+      "src": "/wp-content/uploads/2026/10/hero-contacto-v20261013102539-1600x1102.webp",
+      "selector": "",
+      "cssWidth": 360,
+      "cssHeight": 842.390625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1102,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 271314,
+      "encodedBodySize": 271014,
+      "versionM": true,
+      "bytes": 271014,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1102,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/hero-home-v20261010134119-1600x1067.webp",
+      "selector": "",
+      "cssWidth": 393,
+      "cssHeight": 842.390625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1067,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 268396,
+      "encodedBodySize": 268096,
+      "versionM": true,
+      "bytes": 268096,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1067,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/area-orl-v20261010134558-1600x1600.webp",
+      "selector": "",
+      "cssWidth": 361,
+      "cssHeight": 520,
+      "naturalWidth": 1600,
+      "naturalHeight": 1600,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 590728,
+      "encodedBodySize": 590428,
+      "versionM": true,
+      "bytes": 590428,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1600,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/area-sueno-v20261010134722-1600x1600.webp",
+      "selector": "",
+      "cssWidth": 361,
+      "cssHeight": 520,
+      "naturalWidth": 1600,
+      "naturalHeight": 1600,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 382762,
+      "encodedBodySize": 382462,
+      "versionM": true,
+      "bytes": 382462,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1600,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/dra-escucharte-bg-v20261010134432-1600x1067.webp",
+      "selector": "",
+      "cssWidth": 393,
+      "cssHeight": 757.0625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1067,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 98294,
+      "encodedBodySize": 97994,
+      "versionM": true,
+      "bytes": 97994,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1067,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/dra-escucharte-v20261012143733-966x2048.webp",
+      "selector": "di-doctor__portrait di-reveal is-visible",
+      "cssWidth": 301.875,
+      "cssHeight": 640,
+      "naturalWidth": 393,
+      "naturalHeight": 833,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 1116824,
+      "encodedBodySize": 1116524,
+      "versionM": false,
+      "bytes": 1116524,
+      "format": "webp",
+      "pixelWidth": 966,
+      "pixelHeight": 2048,
+      "alpha": true,
+      "losslessWebp": true
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/dra-irina-gonzalez-saez/",
+      "src": "/wp-content/uploads/2026/10/hero-dra-v20261010134228-1600x1102.webp",
+      "selector": "",
+      "cssWidth": 393,
+      "cssHeight": 842.390625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1102,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 269234,
+      "encodedBodySize": 268934,
+      "versionM": true,
+      "bytes": 268934,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1102,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/dra-irina-gonzalez-saez/",
+      "src": "/wp-content/uploads/2026/10/dra-endoscopio-v20261012144446.webp",
+      "selector": "di-narrative__aside",
+      "cssWidth": 361,
+      "cssHeight": 240.78125,
+      "naturalWidth": 1024,
+      "naturalHeight": 683,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 461584,
+      "encodedBodySize": 461284,
+      "versionM": false,
+      "bytes": 461284,
+      "format": "webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 683,
+      "alpha": true,
+      "losslessWebp": true
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/hero-primera-v20261012172547-1600x1102.webp",
+      "selector": "",
+      "cssWidth": 393,
+      "cssHeight": 842.390625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1102,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 128456,
+      "encodedBodySize": 128156,
+      "versionM": true,
+      "bytes": 128156,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1102,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/pc-fondo-v20261013094949.png",
+      "selector": "di-sec-photo di-sec-photo--top is-spanned",
+      "cssWidth": 334.046875,
+      "cssHeight": 1073,
+      "naturalWidth": 1024,
+      "naturalHeight": 1623,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 793064,
+      "encodedBodySize": 792764,
+      "versionM": false,
+      "bytes": 792764,
+      "format": "png",
+      "pixelWidth": 1024,
+      "pixelHeight": 1623,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/pc-fondo-v20261013094949.png",
+      "selector": "di-sec-photo di-sec-photo--bottom is-spanned",
+      "cssWidth": 334.046875,
+      "cssHeight": 1073,
+      "naturalWidth": 1024,
+      "naturalHeight": 1623,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 793064,
+      "encodedBodySize": 792764,
+      "versionM": false,
+      "bytes": 792764,
+      "format": "png",
+      "pixelWidth": 1024,
+      "pixelHeight": 1623,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/contacto/",
+      "src": "/wp-content/uploads/2026/10/hero-contacto-v20261013102539-1600x1102.webp",
+      "selector": "",
+      "cssWidth": 393,
+      "cssHeight": 842.390625,
+      "naturalWidth": 1600,
+      "naturalHeight": 1102,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 271314,
+      "encodedBodySize": 271014,
+      "versionM": true,
+      "bytes": 271014,
+      "format": "webp",
+      "pixelWidth": 1600,
+      "pixelHeight": 1102,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/hero-home-v20261010134119.webp",
+      "selector": "",
+      "cssWidth": 1440,
+      "cssHeight": 894.234375,
+      "naturalWidth": 2400,
+      "naturalHeight": 1600,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 3472366,
+      "encodedBodySize": 3472066,
+      "versionM": false,
+      "bytes": 3472066,
+      "format": "webp",
+      "pixelWidth": 2400,
+      "pixelHeight": 1600,
+      "alpha": false,
+      "losslessWebp": true
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/area-orl-v20261010134558-768x768.webp",
+      "selector": "",
+      "cssWidth": 652,
+      "cssHeight": 520,
+      "naturalWidth": 719,
+      "naturalHeight": 719,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 550672,
+      "encodedBodySize": 550372,
+      "versionM": false,
+      "bytes": 550372,
+      "format": "webp",
+      "pixelWidth": 768,
+      "pixelHeight": 768,
+      "alpha": false,
+      "losslessWebp": true
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/area-sueno-v20261010134722-768x768.webp",
+      "selector": "",
+      "cssWidth": 652,
+      "cssHeight": 520,
+      "naturalWidth": 719,
+      "naturalHeight": 719,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 483904,
+      "encodedBodySize": 483604,
+      "versionM": false,
+      "bytes": 483604,
+      "format": "webp",
+      "pixelWidth": 768,
+      "pixelHeight": 768,
+      "alpha": false,
+      "losslessWebp": true
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/dra-escucharte-bg-v20261010134432.webp",
+      "selector": "",
+      "cssWidth": 1440,
+      "cssHeight": 849.015625,
+      "naturalWidth": 2400,
+      "naturalHeight": 1600,
+      "loading": "lazy",
+      "priority": null,
+      "versionM": false,
+      "bytes": 3208336,
+      "format": "webp",
+      "pixelWidth": 2400,
+      "pixelHeight": 1600,
+      "alpha": false,
+      "losslessWebp": true
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/",
+      "src": "/wp-content/uploads/2026/10/dra-escucharte-v20261012143733-725x1536.webp",
+      "selector": "di-doctor__portrait di-reveal is-visible",
+      "cssWidth": 344.09375,
+      "cssHeight": 729.015625,
+      "naturalWidth": 576,
+      "naturalHeight": 1220,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 678596,
+      "encodedBodySize": 678296,
+      "versionM": false,
+      "bytes": 678296,
+      "format": "webp",
+      "pixelWidth": 725,
+      "pixelHeight": 1536,
+      "alpha": true,
+      "losslessWebp": true
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/dra-irina-gonzalez-saez/",
+      "src": "/wp-content/uploads/2026/10/hero-dra-v20261010134228.webp",
+      "selector": "",
+      "cssWidth": 1440,
+      "cssHeight": 894.234375,
+      "naturalWidth": 2040,
+      "naturalHeight": 1405,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 3007038,
+      "encodedBodySize": 3006738,
+      "versionM": false,
+      "bytes": 3006738,
+      "format": "webp",
+      "pixelWidth": 2040,
+      "pixelHeight": 1405,
+      "alpha": false,
+      "losslessWebp": true
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/dra-irina-gonzalez-saez/",
+      "src": "/wp-content/uploads/2026/10/dra-endoscopio-v20261012144446.webp",
+      "selector": "di-narrative__aside",
+      "cssWidth": 897.59375,
+      "cssHeight": 598.6875,
+      "naturalWidth": 1024,
+      "naturalHeight": 683,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 461584,
+      "encodedBodySize": 461284,
+      "versionM": false,
+      "bytes": 461284,
+      "format": "webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 683,
+      "alpha": true,
+      "losslessWebp": true
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/hero-primera-v20261012172547.webp",
+      "selector": "",
+      "cssWidth": 1440,
+      "cssHeight": 894.234375,
+      "naturalWidth": 2040,
+      "naturalHeight": 1405,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 2637574,
+      "encodedBodySize": 2637274,
+      "versionM": false,
+      "bytes": 2637274,
+      "format": "webp",
+      "pixelWidth": 2040,
+      "pixelHeight": 1405,
+      "alpha": false,
+      "losslessWebp": true
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/pc-fondo-v20261013094949.png",
+      "selector": "di-sec-photo di-sec-photo--top is-spanned",
+      "cssWidth": 792,
+      "cssHeight": 1216,
+      "naturalWidth": 1024,
+      "naturalHeight": 1623,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 793064,
+      "encodedBodySize": 792764,
+      "versionM": false,
+      "bytes": 792764,
+      "format": "png",
+      "pixelWidth": 1024,
+      "pixelHeight": 1623,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/primera-consulta/",
+      "src": "/wp-content/uploads/2026/10/pc-fondo-v20261013094949.png",
+      "selector": "di-sec-photo di-sec-photo--bottom is-spanned",
+      "cssWidth": 792,
+      "cssHeight": 1216,
+      "naturalWidth": 1024,
+      "naturalHeight": 1623,
+      "loading": "lazy",
+      "priority": null,
+      "transferSize": 793064,
+      "encodedBodySize": 792764,
+      "versionM": false,
+      "bytes": 792764,
+      "format": "png",
+      "pixelWidth": 1024,
+      "pixelHeight": 1623,
+      "alpha": false,
+      "losslessWebp": false
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/contacto/",
+      "src": "/wp-content/uploads/2026/10/hero-contacto-v20261013102539.webp",
+      "selector": "",
+      "cssWidth": 1440,
+      "cssHeight": 894.234375,
+      "naturalWidth": 2040,
+      "naturalHeight": 1405,
+      "loading": "eager",
+      "priority": "high",
+      "transferSize": 3333088,
+      "encodedBodySize": 3332788,
+      "versionM": false,
+      "bytes": 3332788,
+      "format": "webp",
+      "pixelWidth": 2040,
+      "pixelHeight": 1405,
+      "alpha": false,
+      "losslessWebp": true
+    }
+  ],
+  "layouts": [
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 4
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/dra-irina-gonzalez-saez/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 0
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/primera-consulta/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 4
+    },
+    {
+      "name": "Galaxy",
+      "width": 360,
+      "route": "/contacto/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 0
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 4
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/dra-irina-gonzalez-saez/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 0
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/primera-consulta/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 4
+    },
+    {
+      "name": "iPhone",
+      "width": 393,
+      "route": "/contacto/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 0
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 4
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/dra-irina-gonzalez-saez/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 0
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/primera-consulta/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 4
+    },
+    {
+      "name": "Desktop",
+      "width": 1440,
+      "route": "/contacto/",
+      "overflow": false,
+      "bodyImages": 0,
+      "steps": 0
+    }
+  ]
+}

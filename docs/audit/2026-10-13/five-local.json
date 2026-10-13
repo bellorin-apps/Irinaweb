@@ -1,0 +1,12 @@
+{
+  "sixEventsQueued": true,
+  "providerAfterLoad": true,
+  "dntBlocksExternalGtag": true,
+  "editorsAndInvalidExcluded": true,
+  "manifestIconDimensions": true,
+  "originals": 9,
+  "hiddenNotFocusable": true,
+  "keyboardTooltipVisible": true,
+  "keyboardPausesTrack": true,
+  "reducedMotionStatic": true
+}

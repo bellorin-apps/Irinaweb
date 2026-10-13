@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Galaxy",
+    "width": 360,
+    "reduced": false,
+    "overflow": false,
+    "outside": 0,
+    "covered": 0,
+    "endoProgress": "0.773",
+    "cardZ": "2"
+  },
+  {
+    "name": "Galaxy",
+    "width": 360,
+    "reduced": true,
+    "overflow": false,
+    "outside": 0,
+    "covered": 0,
+    "endoProgress": "1",
+    "cardZ": "2"
+  },
+  {
+    "name": "iPhone",
+    "width": 393,
+    "reduced": false,
+    "overflow": false,
+    "outside": 0,
+    "covered": 0,
+    "endoProgress": "0.766",
+    "cardZ": "2"
+  },
+  {
+    "name": "iPhone",
+    "width": 393,
+    "reduced": true,
+    "overflow": false,
+    "outside": 0,
+    "covered": 0,
+    "endoProgress": "1",
+    "cardZ": "2"
+  },
+  {
+    "name": "Desktop",
+    "width": 1440,
+    "reduced": false,
+    "overflow": false,
+    "outside": 0,
+    "covered": 0,
+    "endoProgress": "0.807",
+    "cardZ": "2"
+  },
+  {
+    "name": "Desktop",
+    "width": 1440,
+    "reduced": true,
+    "overflow": false,
+    "outside": 0,
+    "covered": 0,
+    "endoProgress": "1",
+    "cardZ": "2"
+  }
+]

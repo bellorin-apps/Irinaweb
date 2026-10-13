@@ -138,6 +138,7 @@ add_filter(
 add_action(
 	'wp_head',
 	static function (): void {
+		echo '<link rel="manifest" href="' . esc_url( IRINA_THEME_URI . '/assets/brand/site.webmanifest' ) . '">' . "\n";
 		if ( has_site_icon() ) {
 			return;
 		}

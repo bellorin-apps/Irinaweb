@@ -60,7 +60,7 @@ $irina_a = wp_parse_args(
 			<?php
 			$irina_d = 0;
 			foreach ( (array) $irina_a['steps'] as $irina_s ) :
-				$irina_s = wp_parse_args(
+				$irina_s   = wp_parse_args(
 					(array) $irina_s,
 					[
 						'title' => '',

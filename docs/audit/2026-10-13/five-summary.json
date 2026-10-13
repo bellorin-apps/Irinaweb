@@ -1,0 +1,14 @@
+{
+  "Galaxy": {
+    "selectedImageBytes": 2017276,
+    "browserTransferBytes": 2018776
+  },
+  "iPhone": {
+    "selectedImageBytes": 2455504,
+    "browserTransferBytes": 2457004
+  },
+  "Desktop": {
+    "selectedImageBytes": 8392674,
+    "browserTransferBytes": 5185538
+  }
+}

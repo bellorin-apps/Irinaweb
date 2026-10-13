@@ -29,7 +29,7 @@ page = [
         "tags_title": "",  # vacío: membresías y hospitales van en la sección de logos (di-logos)
         "extra_tags": ""}),
     container("dra-logos", "di-logos", {
-        "eyebrow": "", "title": "Membresías y <em>hospitales</em>",
+        "eyebrow": "", "title": "<b>Membresías</b> y <em>hospitales</em>",
         "items": rep([
             ("CHRISTUS MUGUERZA Sistema de Salud", "christus-muguerza", ""),
             ("Hospital Zambrano Hellion · TecSalud", "zambrano-hellion", ""),
@@ -42,7 +42,7 @@ page = [
             ("Colegio de Otorrinolaringología de Nuevo León", "colegio-orl-nl", ""),
         ], "name", "slug", "url")}),
     container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "<b>Formación</b> continua en <em>cirugía de sueño</em>"}),
-    container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu<br>primera <em>consulta</em>",
+    container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "<b>Agenda</b> tu<br>primera <em>consulta</em>",
         "text": "30 minutos para escucharte, explorar y proponerte un plan.", "message": ""}),
 ]
 # slug, título, tipo, institucion, lugar, anio, mostrar, orden. Fuente: DISCOVERY.md §Credenciales (CV, títulos, briefing confirmado).
