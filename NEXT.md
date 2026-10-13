@@ -2,6 +2,7 @@
 
 Actualizado: 2026-10-13 · Codex. Progreso 118/253 (46,64%); 46/95 DONE.
 
+0. **D-076, prioridad (propietario, 2026-10-13): sitio corto.** Cloud: reescribir Otorrinolaringología y Sueño como páginas cortas (qué atiende, cómo trabaja, CTA; lo necesario de las fichas, directo y simple); etiquetas de la portada hacia esas páginas; las 26 fichas quedan en borrador sin enlaces; adaptar la guía de revisión a las dos páginas; reescopar PLAN Fases 7/8 y recalcular PROGRESS. Local: desplegar y verificar. Dra.: leer solo esas dos páginas. No enviar a la Dra. la guía actual de 26 fichas.
 1. Claude local: desplegar este lote con `bash tools/deploy/deploy-code.sh`, luego `bash tools/deploy/setup-dra.sh`, purgar LiteSpeed/CDN. Verificar manifest 200 e iconos, nueve logos originales accesibles y copias fuera de tabulación, pausa/tooltip con foco, títulos Membresías/Agenda y exclusión GA4 de editores/DNT. Sin probar formulario/SMTP en producción. Detalle en BATON e informe.
 2. Cerrar 1.2: aportar docs/audit/2026-10-13/medios.csv con los 44 adjuntos, uso y propuesta KEEP/REPLACE/REMOVE aprobada por José, más entradas pie/legal. Solo inventario: conservar medios y no acceder a secretos/datos privados.
 3. 10.2: medir Lighthouse/CWV actuales e informe de presupuesto/excepciones. Registrar escritorio q100, fuentes intactas y fallback PNG de Primera consulta (774 KiB); no cambiar calidad ni fotografía sin autorización.
