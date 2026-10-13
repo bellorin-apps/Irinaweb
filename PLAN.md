@@ -44,10 +44,10 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 1.1 | Canal técnico: red amplia del entorno + Application Password del WordPress NUEVO (REST); SSH solo desde la PC | 2 | OWNER | D-018, D-021 |
-| 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | REVIEW | Auditoría2026-10-12: Inventario del7–8/10 histórico. HTML no enumera plugins sin assets, borradores, menús internos ni medios completos; falta inventario actual de Claude local sin datos privados. |
+| 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | REVIEW | Inventario13/10 actualizado; falta lista de44adjuntos y clasificación/destino por ítem, más entradas pie/legal. Ver docs/audit/2026-10-13/veredictos-inventario.md |
 | 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | TODO | |
 | 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | TODO | Alertas existentes: noindex + canónica duplicada |
-| 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | REVIEW | Auditoría2026-10-12: HTML es y REST America/Monterrey, UTC−6 verificados. es_MX, formatos, ausencia completa de Astra/Site Kit y constantes de hardening necesitan informe local de valores permitidos, sin abrir wp-config. |
+| 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | DONE | InformeWP-CLI13/10: es_MX,Monterrey,formatos,Hello/child,ausenciaAstra/SiteKit y hardening confirmados. DISPLAY=true sinDEBUG no bloquea. Ver docs/audit/2026-10-13/veredictos-inventario.md |
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | DONE | Manual 2026-10-07 16:41 descargado; semanal automático activo |
 | 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | TODO | |
 | 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | DONE | Auditoría2026-10-12: FIX documental: rollback vigente según deploy-code.sh (~/deploy-backups/<ts>); runbook de reset marcado histórico y no ejecutable; sin credenciales. |
@@ -73,7 +73,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 3.3 | Content model: CPT condiciones / servicios / credenciales / FAQ / fuentes / revisores | 3 | DONE | Auditoría2026-10-12: FIX modelo documentado frente a MetaRegistry::definitions: cuatro CPT, prefijo di_, revisor_id, menu_order, estudio_previo texto y sin falsa UI. Implementación UI sigue5.2. |
 | 3.4 | Schema map por tipo de página | 2 | DONE | Auditoría2026-10-12: FIX mapa de tipos publicado: HomePhysician, ConócemeProfilePage+Physician, ContactoContactPage+Physician, FAQPage9 preguntas solo FAQ, recursosCollectionPage. CPT descritos desde Graph, no certificados públicamente. |
 | 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | DONE | Auditoría2026-10-12: FIX inventario de capas real (IIFEJS, CSS único, versión por filemtime, Adobe Fonts, header/footerPHP). NAP repetido Q-042 y UI pendientes no se presentan como entregados. |
-| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | REVIEW | Auditoría2026-10-12: Tabla de decisiones separada de inventario. Assets prueban Elementor/Pro; Rank Math por sitemap y schema, no inventario completo. Falta listado actual de plugins activos/MU sin secretos. |
+| 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | DONE | ListadoWP-CLI13/10:6activos y2MU con versiones; PLUGINS actualizado y propuestas separadas. Ver docs/audit/2026-10-13/veredictos-inventario.md |
 | 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | DONE | Auditoría2026-10-12: WhatsApp/teléfono/Maps/Doctoralia con destinos publicados. Eventos allowlist solo page_path; fixtures cola antesload y DNT incluso con gtag ajeno. Salida antes de descargarGA4 puede perder clic: límite declarado. |
 | 3.8 | Codex: auditoría de arquitectura contra MASTER_PROMPT | 2 | TODO | |
 

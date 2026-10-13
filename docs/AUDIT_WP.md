@@ -97,3 +97,7 @@ Inventario de producción: `docs/audit/inventory-20261007-174227.txt` (solo lect
 
 ## Límite del inventario · revisión2026-10-12
 La clasificación anterior pertenece al inventario histórico. REMOVE no autoriza borrar: páginas106/39/79 se conservan como borradores (D-056); tampoco se elimina ningún medio/plantilla/respaldo. La auditoría anónima ve tema irina-gonzalez y assets Elementor/Pro, pero no certifica todos los plugins/MU, menús de BD ni la biblioteca de medios. Tareas1.2/1.5 permanecen REVIEW. Claude local entrega un inventario actual con clasificación y destino, excluyendo datos privados; confirma solo idioma, formatos y booleanos de hardening, sin leer/imprimir wp-config en esta auditoría.
+
+
+## Revisión del inventario13/10 · Codex
+La evidencia actual es docs/audit/2026-10-13/inventario-produccion.md; sustituye el inventario7–8/10 para plugins,temas,páginas/estado,menús y recuentos. Tarea1.5DONE,3.6DONE;1.2REVIEW porque el total44medios no identifica cada adjunto ni su destino. Clasificación conservadora de los elementos conocidos y petición concreta de ampliación en docs/audit/2026-10-13/veredictos-inventario.md. No borrar por las etiquetasREMOVE históricas; D-056 vigente. Configuración reportada, sin abrir wp-config ni certificar ajustes privados por inferencia.

@@ -4,12 +4,12 @@ Generado desde `PLAN.md` con `python tools/audit/progress.py`.
 
 Solo DONE suma. REVIEW, DOING, TODO, OWNER y BLOCKED suman cero; inglés aparte.
 
-Español: **101/253 pesos = 39.92%** · 39/95 tareas DONE.
+Español: **105/253 pesos = 41.50%** · 41/95 tareas DONE.
 
 | Estado | Tareas |
 |---|---:|
-| DONE | 39 |
-| REVIEW | 3 |
+| DONE | 41 |
+| REVIEW | 1 |
 | DOING | 17 |
 | TODO | 30 |
 | OWNER | 6 |
@@ -18,9 +18,9 @@ Español: **101/253 pesos = 39.92%** · 39/95 tareas DONE.
 | Fase | Peso DONE | Peso total |
 |---|---:|---:|
 | 0 | 23 | 23 |
-| 1 | 4 | 20 |
+| 1 | 6 | 20 |
 | 2 | 13 | 14 |
-| 3 | 16 | 20 |
+| 3 | 18 | 20 |
 | 4 | 20 | 20 |
 | 5 | 0 | 23 |
 | 6 | 12 | 33 |

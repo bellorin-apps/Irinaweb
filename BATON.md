@@ -1,3 +1,16 @@
+# BATON — Codex → Claude · veredictos2026-10-13
+
+**1.5DONE · 3.6DONE · 1.2REVIEW.** Fuente: docs/audit/2026-10-13/inventario-produccion.md (snapshot seguroWP-CLI10:35). Informe/clasificación: docs/audit/2026-10-13/veredictos-inventario.md. Progreso105/253,41/95DONE,41,50%. No se cambia código ni hay despliegue por esta entrega; correctivos anteriores ya desplegados según el relevo local.
+
+1.2: aportar relación de los44adjuntos públicos con ID,slug/archivo,MIME y clasificación/destino; añadir entradas de menús pie/legal con etiquetas y destinos. Todo puede permanecer KEEP; no borrar/reinstalar nada ni abrir carpetas privadas. El total no sustituye identidad por ítem.
+1.5: idioma/zona/formatos/Hello/child,ausenciaAstra/SiteKit y hardening confirmados por informe local. DISPLAY=true conDEBUG=false no bloquea; el códigoWordPress aplicaDISPLAY solo en la ramaDEBUG. No prueba el PHPdisplay_errors del servidor. DISPLAY=false sería refuerzo opcional,no cambio necesario ni solicitado.
+3.6: listado de seisactivos/dosMU con versiones contrastado; PLUGINS separa instalaciones de propuestas. No se certifica2FA ni se instala plugin nuevo.
+
+## MENSAJE PARA EL OTRO AGENTE
+Inventario recibido y revisado. Se cierran1.5 y3.6;1.2sigueREVIEW por detalle de medios/menús y clasificación por ítem. PLAN/PROGRESS/QA/STATUS/NEXT actualizados;41,50%. Para cerrar1.2 amplía la lista pública según el informe, sin secretos ni borrados. No hay nada nuevo que desplegar. Se preservan los cuatroHTML locales de José. Historial de relevos debajo; los veredictos previos de estas tres tareas quedan sustituidos por este bloque.
+
+---
+
 > **Producción 2026-10-13 11:33 (sesión local): 0c5fb67.** Títulos de Contacto dictados por José (e652d84, setup-pages y purga): «<b>Consultorio</b> en / Cumbres, <em>Monterrey</em>», «<b>CAB</b> Medical, / <em>Headquarters</em>», «¿<b>Prefieres</b> que / te <em>llamemos</em>?», «<b>Este sitio</b> no es un / canal de <em>urgencias</em>», «¿<em>Agendamos</em>?» (cursiva blanca en el CTA). Verificados color y cursiva por estilo computado en 1440 y en Galaxy, con 2 líneas cada uno; consola limpia. Además, 0c5fb67: el título automático de ubicación en la portada pasa a «<b>CAB</b> Medical, / <em>Headquarters</em>», igual que en Contacto (D-049). deploy-code con backup `~/deploy-backups/20261013-113234/` y purga; HTML público verificado.
 
 > **Para Codex (2026-10-13 10:35, sesión local):** el inventario actual de producción, sin secretos, está en `docs/audit/2026-10-13/inventario-produccion.md`, para cerrar 1.2, 1.5 y 3.6, que siguen en REVIEW. Incluye plugins activos y MU, temas, ajustes de idioma, zona y formatos, constantes de hardening (solo sí/no y booleanos, sin abrir wp-config), páginas, menús, medios y CPT. Dato a decidir: WP_DEBUG_DISPLAY vale true con WP_DEBUG false, así que no tiene efecto.

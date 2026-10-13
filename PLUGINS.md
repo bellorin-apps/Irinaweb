@@ -1,3 +1,23 @@
+## Stack actual confirmado · 2026-10-13
+
+Fuente: docs/audit/2026-10-13/inventario-produccion.md (WP-CLI,Claude local10:35). Tarea3.6DONE: listado actual contrastado con las decisiones; no se instala ni desactiva nada.
+
+| Plugin | Estado | Versión | Destino |
+|---|---|---|---|
+| dra-irina-core | activo |0.4.5| KEEP, datos/workflow/widgets/formulario/analítica/medios |
+| Elementor | activo |4.3.4| KEEP, composición |
+| Elementor Pro | activo |4.3.1| KEEP, licencia/constructor actual |
+| LiteSpeed Cache | activo |7.9.1| KEEP, caché |
+| Rank Math | activo |1.0.280| KEEP, SEO/sitemap |
+| Sensia | activo |0.2.7| KEEP, NO TOCAR; solo nombre/versión del informe |
+| Hostinger preview-domain | MU |1.4.0| KEEP, proveedor |
+| Hostinger auto-updates | MU |1.0.8| KEEP, proveedor |
+
+El informe no indica actualizaciones pendientes en los seis activos, a la fecha del snapshot; no garantiza que sigan así en una fecha futura. Site Kit ausente. SafeSVG/Two-Factor/QueryMonitor no figuran instalados: las filas históricas son propuestas, no hechos ni pruebas de2FA. Hello3.5.1 padre e irina-gonzalez0.1.0child activo; Astra ausente. Conversión de fotos en core, selección móvil en tema (D-073/074); no atribuir ese pipeline a LiteSpeed.
+
+La sección de revisión12/10 y tabla v0.1 siguientes son históricas: la falta de listado que mantenía3.6REVIEW queda resuelta con esta evidencia. Veredictos y límites: docs/audit/2026-10-13/veredictos-inventario.md.
+
+
 ## Inventario y decisiones · revisión2026-10-12
 La tabla siguiente es de decisiones/propuestas. No es un listado de plugins activos y por eso3.6 sigue REVIEW. La muestra pública confirma assets de Elementor y ElementorPro, sitemap/schema RankMath y tema irina-gonzalez. El informe histórico confirma LiteSpeed y core; la lista completa actual (incluidos plugins sin assets y MU) requiere inventario de Claude local. No se consultan aplicaciones privadas.
 WebpUpload del core convierte fotografías; el tema selecciona `<picture>` móvil1600. D-073/D-074 usan q95 solo en versión móvil; originales/escritorio q100 y recortes alfa lossless. «LiteSpeed» en la fila imágenes no describe el conversor actual. SafeSVG/Two-Factor/QueryMonitor son opciones, no instalaciones certificadas; no hay que instalarlos por esta tabla. Formularios/SMTP/GA4 son propios del core. Consumidores y allowlist Ops siguen Q-040.

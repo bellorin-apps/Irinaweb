@@ -189,3 +189,14 @@ FIXED_LOCAL: calidad95 ligada al derivado metadata y originales1600 a100; Do Not
 ## Integración concurrente de Claude · 9ad3a67
 Durante el push llegó9ad3a67 (fondo decorativo de Qué llevar/FAQ de Primera consulta), integrado sin perder cambios en12e10c4. Se conserva su build/JSON,CSS,widgets,helper y setup-pages. Los cincoPHP nuevos/modificados pasan sintaxis; PHPCS detectó un aviso de alineación en narrative.php, corregido; bash-n setup-pages pasa. Build-pages regenerado conserva exactamente la semántica recibida; solo se añadieron campos bg_image, sin cambios de textos/estados. Fixture con/sinID de hero y fondo deja0placeholders; helper sinID no emitebloque. No se certificó la foto definitiva de pc-fondo ni su contraste/encuadre: la evidencia pública y las capturas anteriores son ANTES de ese fondo, aún sin desplegar según Claude. No cambia el veredicto de las17tareas.
 La corrección8b2375c no requiere contenido nuevo. Para activar también el fondo de Claude: archivo aprobado con `bash tools/deploy/upload-media.sh <archivo_aprobado> pc-fondo "Fondo de Primera consulta"`, luego `bash tools/deploy/setup-pages.sh` (conserva estados) y purga. Esa activación es una operación separada de los correctivos de auditoría; validar el fondo real en360/393/430/1440, lectura del texto y ausencia de franjas antes de cerrar su QA. No publicar pilares/CPT por ello. El deploy-code del HEAD incluye el soporte opcional integrado, aunque aún no se asigne el adjunto.
+
+
+## Veredictos de inventario · 2026-10-13
+
+| Tarea | Veredicto | Evidencia / límite |
+|---|---|---|
+|1.2|REVIEW| Snapshot actual identifica categorías/páginas/plugins;44adjuntos solo como total y pie/legal solo por recuento. Falta lista individual y clasificación/destino. Clasificación de lo conocido añadida sin borrar nada. |
+|1.5|DONE| es_MX,MonterreyUTC−6,formatos escapados,H:i,permalinks,Hello/child,Astra/SiteKit ausentes y hardening por informeWP-CLI local sin secretos. DISPLAY=true conDEBUG=false no bloquea; no se modifica servidor. |
+|3.6|DONE| Seisactivos/dosMU y versiones contrastados; PLUGINS actualizado. OpcionesSafeSVG/TwoFactor/QueryMonitor separadas de instalaciones reales. |
+
+Fuente: docs/audit/2026-10-13/inventario-produccion.md. Detalle: docs/audit/2026-10-13/veredictos-inventario.md. Revisión documental, sin nueva extracción autenticada, despliegue ni pruebasPHP/SMTP; no cambió código. Se conserva la evidencia de revisión12/10 como historial. Progreso recalculado desdePLAN; no se concede crédito parcial a1.2.
