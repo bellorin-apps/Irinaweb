@@ -4,7 +4,7 @@ Actualizado: 2026-10-12 (cierre) · Claude local · cálculo: PLAN → PROGRESS.
 
 **26,09 % global español: 66/253 pesos, 25/95 tareas DONE.** Solo DONE suma; inglés aparte (0/19). El 31 % anterior mezclaba crédito parcial y un resumen divergente. No se elevó ninguna tarea por pruebas locales.
 
-**Cierre 2026-10-12:** producción en 9a9329a (BATON). Hoy: migas en franja y «Conóceme» (D-071), menú Inicio + Conóceme (D-072), «Escucharte» con tarjeta beige y endoscopio nuevo, retrato y endoscopio en WebP sin pérdida (plugin 0.4.5), logos con inercia nativa y relevo continuo. Después: hero de Primera consulta con foto (como «Conóceme») y D-073 (móvil q95, GA4 y encaje diferidos). Encargo para Codex de las 17 tareas REVIEW en `docs/CODEX_REVIEW_PROMPT.md`. Ninguna tarea cambia a DONE. Pendientes en NEXT §NOW.
+**Cierre 2026-10-12:** producción en edfa4f0 (BATON). Hoy: migas en franja y «Conóceme» (D-071), menú Inicio + Conóceme (D-072), «Escucharte» con tarjeta beige y endoscopio nuevo, retrato y endoscopio en WebP sin pérdida (plugin 0.4.5), logos con inercia nativa y relevo continuo. Después: hero de Primera consulta con foto (como «Conóceme») y D-073 (móvil q95, GA4 y encaje diferidos). Encargo para Codex de las 17 tareas REVIEW en `docs/CODEX_REVIEW_PROMPT.md`. D-074 (fondo y áreas a q95 en móvil). José verificó en su Samsung (Q-039) y aprobó «Qué llevar» (Q-043). Ninguna tarea cambia a DONE. Pendientes en NEXT §NOW.
 
 **Cierre 2026-10-10:** producción en 3b78ece (BATON). Hoy: logos (D-066/D-068) con arrastre, títulos de la Dra., og:image (D-067), hub de recursos en noindex con 3 borradores (8.2 DOING), «Escucharte» con tarjeta de cristal y endoscopio (D-069), lombrices acotadas, Lighthouse medido (Q-025/046/047). Pendientes en NEXT §NOW.
 
