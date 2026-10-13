@@ -37,3 +37,18 @@ Los archivos del tema (`assets/brand`, logos SVG) no son adjuntos y no aparecen.
 | Legal (legal) | Aviso de privacidad (175) · Aviso médico (176) · Términos de uso (177) |
 
 En el pie, Otorrinolaringología y Sueño apuntan a páginas en borrador. WordPress no muestra esas entradas a visitantes sin sesión hasta que se publiquen.
+
+## Propuesta de clasificación (Claude cloud, 2026-10-13) · pendiente de aprobación de José
+
+Criterio: se conserva todo lo que está en uso; de cada imagen resubida se conserva **la versión anterior más reciente** como respaldo para volver atrás (además del original en Recursos); se proponen para retirar las versiones antiguas, los favicons viejos sin uso y el retrato duplicado sin uso. La columna `propuesta` del CSV lleva la decisión y el motivo por fila.
+
+| Propuesta | Archivos | Peso |
+|---|---:|---:|
+| KEEP | 25 | 31.5 MB |
+| REMOVE | 18 | 50.3 MB |
+| REPLACE (opcional) | 1 | 0.8 MB |
+
+REMOVE: 8 favicon, 151 favicon2, 322 hero-home-archivo-322, 329 area-orl-archivo-329, 330 area-sueno-archivo-330, 332 dra-escucharte-bg-archivo-332, 334 dra-escucharte-archivo-334, 341 hero-dra-archivo-341, 342 hero-dra-archivo-342, 343 hero-home-archivo-343, 344 hero-dra-archivo-344, 345 dra-escucharte-archivo-345, 346 dra-escucharte-bg-archivo-346, 347 area-orl-archivo-347, 348 area-sueno-archivo-348, 351 dra-irina-gonzalez-saez-2, 365 dra-endoscopio-archivo-365, 367 dra-endoscopio-archivo-367.
+
+Nada se borra sin aprobación explícita de José. Si la da: respaldo previo de `wp-content/uploads` (tar en `~/deploy-backups/`), borrado por WP-CLI solo de los IDs aprobados (`wp post delete <ID> --force` borra adjunto y archivos), purga y verificación de que ninguna página pública cambia (mismas URLs de imagen servidas). El pie: ORL y Sueño enlazan páginas en borrador, que WordPress oculta a visitantes hasta su publicación; no requiere acción.
+
