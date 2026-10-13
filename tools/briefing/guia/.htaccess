@@ -1,0 +1,6 @@
+# Sin índice ni listado; config.php nunca se sirve.
+Options -Indexes
+<Files "config.php">
+  Require all denied
+</Files>
+Header set X-Robots-Tag "noindex, nofollow"
