@@ -18,3 +18,5 @@ Quedan REVIEW:1.2 inventario completo actual,1.5 configuración interna no verif
 - Gates pendientes:despliegue correctivo, inventario/configuración, idempotencia WP en staging, Safari/iOS nativo, GSC/GBP, revisión médica/legal. La Dra. aún debe aprobar fichas,recursos y ORL/Sueño.
 
 Próximo paso:NEXT. Entrega:BATON. Informe:docs/REVISION_2026-10-12.md. No SMTP, despliegue, clínica nueva ni cambios a aplicaciones privadas por esta revisión.
+
+Integración posterior:9ad3a67 de Claude (fondo de Qué llevar/FAQ) preservado; PHP/PHPCS/bash y build revisados. Foto real/contraste y activación de ese fondo pendientes de Claude; capturas anteriores no lo muestran.

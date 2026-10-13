@@ -9,3 +9,5 @@ Actualizado:2026-10-12 · Codex. Progreso101/253 (39,92%);14de17tareas auditadas
 5. Después de cerrar despliegue/entrega, archivo D-060 sin borrar, preservando cuatroHTML modificados de José. Q-040 consumidores/allowlist Ops y Q-042 NAP centralizado siguen pendientes; no incluirlos sin revisión propia.
 
 Maps sigue D-065 (estilo embebido/marker clásico); D-059 histórico no genera una solicitud nueva de MapID. Fuentes siguen D-073. Inglés después del lanzamiento español. Preguntas al propietario por Claude.
+
+Integrado9ad3a67 de Claude: soporte del fondo opcional en Primera consulta preservado; activar foto/build requiere upload-media pc-fondo→setup-pages→purga y QA del fondo real. Ese paso no es necesario para corregir calidad/DNT/logos. Ver BATON.

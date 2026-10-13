@@ -43,10 +43,12 @@ function esc_html($s):string {return htmlspecialchars($s,ENT_QUOTES,'UTF-8');}
 function wp_kses($s,$allowed):string {return strip_tags($s,'<b><em><br>');}
 $source=file_get_contents($root.'/tools/content/pages/primera-consulta.elementor.json');
 foreach([['371','https://example.test/hero.webp'],['','']] as [$id,$url]) {
- $json=str_replace(['__PC_HERO_ID__','__PC_HERO_URL__'],[$id,$url],$source);
+ $json=str_replace(['__PC_HERO_ID__','__PC_HERO_URL__','__PC_BG_ID__','__PC_BG_URL__'],[$id,$url,$id,$url],$source);
  $data=json_decode($json,true,512,JSON_THROW_ON_ERROR);
- check($json===str_replace(['__PC_HERO_ID__','__PC_HERO_URL__'],[$id,$url],$source),'sustitución estable desde build');
+ check(!str_contains($json,'__PC_'),'sin placeholders de medios pendientes');
  check((int)$data[0]['elements'][0]['settings']['image']['id']===(int)$id,'ID con y sin adjunto');
 }
 $args=['image_id'=>0,'title'=>'Fixture','variant'=>'warm'];ob_start();require $root.'/wp-content/themes/irina-gonzalez/templates/parts/bleed.php';$html=ob_get_clean();
 check(!str_contains($html,'<img')&&str_contains($html,'di-bleed__bg--warm')&&!str_contains($html,'di-bleed--photo'),'sin adjunto conserva degradado cálido');
+require $root.'/wp-content/themes/irina-gonzalez/inc/template-tags.php';
+check(irina_section_photo(0)===''&&irina_section_photo(-1)==='','fondo opcional sin adjunto no emite bloque');
