@@ -22,7 +22,9 @@ $irina_fac = array_merge( [ [ __( 'Dirección', 'irina-gonzalez' ), irina_addres
 $irina_centro = trim( (string) irina_practice( 'centro' ) );
 $irina_words  = preg_split( '/\s+/', $irina_centro );
 $irina_last   = (string) array_pop( $irina_words );
-$irina_title  = '' !== $irina_a['title'] ? $irina_a['title'] : trim( implode( ' ', $irina_words ) . ',<br><em>' . $irina_last . '</em>' );
+// Primera palabra en color (D-049; propietario, 2026-10-13, como en Contacto): «<b>CAB</b> Medical,» / «<em>Headquarters</em>».
+$irina_first  = (string) array_shift( $irina_words );
+$irina_title  = '' !== $irina_a['title'] ? $irina_a['title'] : trim( ( '' !== $irina_first ? '<b>' . esc_html( $irina_first ) . '</b> ' : '' ) . esc_html( implode( ' ', $irina_words ) ) ) . ',<br><em>' . esc_html( $irina_last ) . '</em>';
 ?>
 <section class="di-section" id="ubicacion">
 	<div class="di-container di-location">
