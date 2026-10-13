@@ -87,7 +87,8 @@ pages["primera-consulta"] = [
 pages["contacto"] = [
     container("co-bleed", "di-bleed", {"eyebrow": "Contacto", "title": "<b>Consultorio</b> en<br><em>Cumbres, Monterrey</em>",
         "lead": "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Consulta previa cita: agenda por WhatsApp.",
-        "variant": "sand", "crumb": "Contacto"}),
+        # Foto de cabecera como «Conóceme» y Primera consulta (propietario, 2026-10-13): adjunto hero-contacto, sustituido por setup-pages.sh.
+        "variant": "warm", "crumb": "Contacto", "image": {"id": "__CO_HERO_ID__", "url": "__CO_HERO_URL__"}, "focus": "50% 6%", "focus_mobile": "85% 20%"}),
     container("co-ubic", "di-ubicacion", {"eyebrow": "Cómo llegar", "title": "",
         "facts": rep([("Estacionamiento", "Gratuito"), ("Acceso", "Elevador y acceso para silla de ruedas")], "label", "value"),
         "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.777590213581!2d-100.3765032!3d25.7117869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297c19d8eb1cb%3A0x5c3e8ac4d16be247!2sDra%20Irina%20Gonz%C3%A1lez%20S%C3%A1ez!5e0!3m2!1ses!2smx!4v1791433463370!5m2!1ses!2smx"}),

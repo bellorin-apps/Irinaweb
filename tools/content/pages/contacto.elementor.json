@@ -32,8 +32,14 @@
           "eyebrow": "Contacto",
           "title": "<b>Consultorio</b> en<br><em>Cumbres, Monterrey</em>",
           "lead": "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Consulta previa cita: agenda por WhatsApp.",
-          "variant": "sand",
-          "crumb": "Contacto"
+          "variant": "warm",
+          "crumb": "Contacto",
+          "image": {
+            "id": "__CO_HERO_ID__",
+            "url": "__CO_HERO_URL__"
+          },
+          "focus": "50% 6%",
+          "focus_mobile": "85% 20%"
         },
         "elements": []
       }
