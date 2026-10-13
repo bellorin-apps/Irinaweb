@@ -9,9 +9,9 @@ Español: **105/253 pesos = 41.50%** · 41/95 tareas DONE.
 | Estado | Tareas |
 |---|---:|
 | DONE | 41 |
-| REVIEW | 1 |
-| DOING | 17 |
-| TODO | 30 |
+| REVIEW | 6 |
+| DOING | 13 |
+| TODO | 29 |
 | OWNER | 6 |
 | BLOCKED | 0 |
 

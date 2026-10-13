@@ -108,7 +108,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 6.1 | Header + navegación + CTA + mobile bar | 3 | DONE | Verificado en /inicio-v2/; «Cómo llegar» aparece al cargar maps_url |
 | 6.2 | Footer | 2 | DONE | Verificado en /inicio-v2/ |
 | 6.3 | Home | 5 | DONE | /inicio-v2/ en producción (noindex): 8 widgets, header/footer del tema, QA visual OK escritorio y móvil; pendiente CP3 |
-| 6.4 | Página Dra. Irina (entidad/autora) | 5 | DOING | Cargada en 169 (borrador) con credenciales; falta QA con capturas |
+| 6.4 | Página Dra. Irina (entidad/autora) | 5 | REVIEW | Pública en /dra-irina-gonzalez-saez/ (200, 2026-10-13) sin marcas de borrador: hero con foto, «Escucharte» con tarjeta y endoscopio (D-069), credenciales y trayectoria, logos con tooltips y arrastre (D-066, D-068), títulos dictados, migas «Conóceme» (D-071). José la verificó en su Samsung (Q-039 VERIFIED, 2026-10-12). Pendiente de auditoría Codex: docs/CODEX_REVIEW_PROMPT_2026-10-13.md |
 | 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; 23 fichas completas en borrador; falta QA visual con sesión |
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
@@ -122,7 +122,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | DOING | Cargados en WP (borrador) con marcadores [PENDIENTE DE CONFIRMACIÓN]; enfoque de la Dra. en borrador |
 | 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | DONE | 14 condiciones + 9 tratamientos redactados con las respuestas de la Dra. (D-039); en borrador hasta su aprobación |
-| 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | DOING | Primera consulta, Contacto y FAQ cargados (borrador) |
+| 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | REVIEW | Primera consulta, Contacto y FAQ públicas (200, 2026-10-13) y sin marcas de borrador (Q-043 VERIFIED); títulos dictados por José, heros con foto, fondo continuo y pasos ilustrados. «Pacientes» lo cubren Primera consulta + FAQ (Codex confirma si basta). Encargo: docs/CODEX_REVIEW_PROMPT_2026-10-13.md |
 | 7.4 | Bibliografía verificable por página | 2 | DOING | Fuentes propuestas por ficha (SMORL, AAO-HNS, AASM, EPOS, ARIA); la Dra. valida |
 | 7.5 | Revisión técnica/SEO de drafts | 2 | TODO | |
 | 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | OWNER | ext |
@@ -140,7 +140,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
 | 8.7 | 404 útil (noindex), búsqueda interna si procede | 2 | DONE | `404.php`: cabecera a sangre, rutas publicadas (omite borradores), WhatsApp, nota para enlaces del dominio viejo; sin buscador (sitio pequeño) |
 | 8.8 | Navegador de síntomas (orientación, no diagnóstico) | 3 | TODO | |
-| 8.9 | Favicon/app icons, OG template | 1 | DOING | Favicon/app icons desde D-031; og-default.jpg y setup-og.sh listos (D-067), pendiente de ejecutar en producción |
+| 8.9 | Favicon/app icons, OG template | 1 | REVIEW | Favicon y app icons del isotipo (D-031); og:image por defecto JPEG 1200×630 (adjunto 361, D-067) servida por Rank Math en todas las páginas públicas (verificado 2026-10-13). Encargo: docs/CODEX_REVIEW_PROMPT_2026-10-13.md |
 
 ## FASE 9 — SEO técnico, schema, analítica, local
 
@@ -149,7 +149,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 9.1 | On-page completo: titles, metas, H1, canonicals, OG por página | 3 | DOING | Base de Rank Math configurada (2026-10-08) |
 | 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | DOING | Sitemap restringido a tipos públicos; 301 del dominio viejo |
 | 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | DOING | Physician/WebSite/WebPage/ProfilePage/ContactPage validados en vivo (2026-10-10); `image` añadida; Article/Breadcrumb al publicar fichas |
-| 9.4 | GA4 + Search Console + eventos de conversión | 2 | DOING | gtag + 6 eventos en código (D-052); falta el ID de medición de José |
+| 9.4 | GA4 + Search Console + eventos de conversión | 2 | REVIEW | GA4 G-5961XX8QZ7 en vivo (D-052), 6 eventos, carga diferida tras «load» (D-073, Q-047) y DNT corregido (8b2375c). Search Console: José confirma la verificación de la propiedad (cobertura en 1.4). Encargo: docs/CODEX_REVIEW_PROMPT_2026-10-13.md |
 | 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | Requiere acceso |
 | 9.6 | Codex: QA SEO | 2 | TODO | |
 
@@ -157,7 +157,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | TODO | |
+| 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | REVIEW | Imágenes: WebP q100 escritorio y versión móvil 1600 px q95 (D-073/D-074; hero móvil 1,2–1,5 MB → ~262 KB, áreas 2,1/1,8 MB → 577/374 KB, fondo 1,1 MB → 96 KB), PNG con alfa a WebP sin pérdida (0.4.5), lazy y fetchpriority único; GA4 y encaje del retrato diferidos; fuentes sin cambios por decisión (D-073); LiteSpeed + hCDN. Medición antes/después en QA Q-025/Q-046/Q-047; PERFORMANCE.md queda en 10.2. Encargo: docs/CODEX_REVIEW_PROMPT_2026-10-13.md |
 | 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | TODO | |
 | 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | DOING | Cabeceras de seguridad en el plugin (Q-023); resto pendiente |
 | 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | DOING | Auditoría en vivo y correcciones (Q-022); falta decisión sobre el contraste del botón de WhatsApp |

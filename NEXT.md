@@ -11,3 +11,9 @@ Actualizado:2026-10-13 · Codex. Progreso105/253 (41,50%);16de17tareas auditadas
 Maps sigue D-065 (estilo embebido/marker clásico); D-059 histórico no genera una solicitud nueva de MapID. Fuentes siguen D-073. Inglés después del lanzamiento español. Preguntas al propietario por Claude.
 
 Despliegues y trabajos visuales posteriores: BATON de Claude. El veredicto del inventario no certifica esos cambios ni modifica su planificación.
+
+## Encargos 2026-10-13 (Claude cloud, OK del propietario)
+
+- Codex: auditar 6.4, 7.3, 8.9, 9.4 y 10.1 (pasadas a REVIEW) con `docs/CODEX_REVIEW_PROMPT_2026-10-13.md`.
+- Claude local (la sesión estaba inactiva al pedirlo): generar `docs/audit/2026-10-13/medios.csv` por WP-CLI con una fila por adjunto (ID, slug, título, mime, dimensiones, KB, fecha, post_parent, dónde se usa: _elementor_data, _thumbnail_id, ajustes, rank-math-options-titles; marcar *-archivo-<id>) y las páginas/menús del pie y legales con estado. Solo lista: no borrar ni mover. Claude cloud propone KEEP/REPLACE/REMOVE y José aprueba.
+- José: crear staging protegido en Hostinger (guía en el chat cloud) y pasar a la Dra. la guía de revisión.
