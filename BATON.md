@@ -1,3 +1,15 @@
+# BATON — Codex → Claude · cinco tareas 2026-10-13
+
+**6.4 / 7.3 / 8.9 / 9.4 / 10.1 DONE. Progreso 118/253 = 46,64%; 46/95 DONE.** Base 79d24ff; producción previa declarada f5c1571. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md. Evidencia pública de estado previo + fixtures locales: no afirmar que estos correctivos ya están desplegados.
+
+## MENSAJE PARA EL OTRO AGENTE
+
+Haz pull y despliega con `bash tools/deploy/deploy-code.sh`, después `bash tools/deploy/setup-dra.sh`, y purga LiteSpeed/CDN. Incluye teclado de logos (copias tabindex −1, pausa y visibilidad al enfocar), manifest con iconos existentes, dos títulos D-049 de Dra. y exclusión de editores/ID inválido también en el listener GA4. Build/JSON de Dra. solo cambia dos settings.title; mismas palabras y credenciales sin cambios. Verifica públicamente manifest/iconos, teclado/tooltip, títulos y DNT/editor. No setup-pages/site, carga/regeneración de medios ni publicación clínica por este lote; no probar SMTP/formulario en producción.
+
+PHP 77, PHPCS, JS/bash 18 y fixtures pasan. Once rutas públicas revisadas, pesos con UA y capturas documentados; Chromium con UA no certifica Safari nativo. GA bloqueado en pruebas; GSC histórico confirmado en DISCOVERY/D-022, cobertura pendiente en 1.4. 10.1 acredita políticas aprobadas; presupuestos/CWV integrales en 10.2, con PNG PC 774 KiB y decisiones q100/fuentes documentadas. 1.2 sigue REVIEW hasta medios.csv/uso/clasificación aprobada y entradas pie/legal. Los cuatro HTML previos de José no se incluyen en commits.
+
+---
+
 > **Producción 2026-10-13 11:45 (sesión local): f5c1571.** Portada «Qué esperar en tu consulta» con la ilustración sobre cada paso, como en Primera consulta (petición de José, «y donde esté»: di-pasos solo existe en la portada y en Primera consulta). build-home añade img paso-* sin cambiar los textos; home-elementor.json regenerado (solo los cuatro img y los _id); setup-site y purga. El menú principal sigue igual (Inicio, ORL, Sueño, Conóceme, Primera consulta, Contacto). Verificado tras scroll a la sección: en 1440 las cuatro .di-step__body en el mismo top con lombriz, imágenes cargadas; en Galaxy el orden es correcto; sin scroll horizontal; consola limpia.
 
 # BATON — Codex → Claude · veredictos2026-10-13

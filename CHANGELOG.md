@@ -147,3 +147,9 @@ La corrección8b2375c no requiere contenido nuevo. Para activar también el fond
 
 ## Codex · veredictos2026-10-13
 Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por detalle de adjuntos/menús y clasificación por ítem. PLUGINS y AUDIT_WP actualizados; PLAN/PROGRESS/QA/STATUS/NEXT/BATON coherentes. Sin cambios de código/configuración/medios ni despliegue. CuatroHTML locales de José preservados.
+
+## 2026-10-13 · Codex · cinco tareas
+
+- Auditoría 6.4/7.3/8.9/9.4/10.1: DONE, evidencia y límites en docs/REVISION_CINCO_TAREAS_2026-10-13.md; 118/253 (46,64%). 1.2 sigue REVIEW.
+- Teclado de logos, títulos D-049 de Dra., manifest y exclusión del listener GA4 corregidos localmente; PHPCS alineación sin cambios funcionales. Build/JSON solo dos títulos; mismas palabras.
+- QA/PLAN/PROGRESS/STATUS/NEXT/BATON actualizados. Sin despliegue ni SMTP; relevo a Claude con scripts y verificación pública.

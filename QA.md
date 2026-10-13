@@ -200,3 +200,15 @@ La corrección8b2375c no requiere contenido nuevo. Para activar también el fond
 |3.6|DONE| Seisactivos/dosMU y versiones contrastados; PLUGINS actualizado. OpcionesSafeSVG/TwoFactor/QueryMonitor separadas de instalaciones reales. |
 
 Fuente: docs/audit/2026-10-13/inventario-produccion.md. Detalle: docs/audit/2026-10-13/veredictos-inventario.md. Revisión documental, sin nueva extracción autenticada, despliegue ni pruebasPHP/SMTP; no cambió código. Se conserva la evidencia de revisión12/10 como historial. Progreso recalculado desdePLAN; no se concede crédito parcial a1.2.
+
+## Cinco tareas · revisión 2026-10-13
+
+| Tarea | Veredicto | Evidencia / límite |
+|---|---|---|
+| 6.4 | DONE | FIX→DONE: pública 200/h1/main/schema/migas, narrativa y reduced-motion verificados. Teclado de logos y dos títulos D-049 corregidos y probados localmente; despliegue pendiente. |
+| 7.3 | DONE | DONE: Primera consulta/Contacto/FAQ 200, sin Borrador; títulos, FAQPage, fondo continuo y cuatro pasos verificados. Pacientes cubierto por Primera consulta + FAQ. |
+| 8.9 | DONE | FIX→DONE: JPEG OG/Twitter 1200×630 e iconos públicos verificados en once rutas; manifest e integración con site icon preparados y probados localmente. |
+| 9.4 | DONE | FIX→DONE: GA4 único tras load; seis eventos, DNT y exclusión de editores/ID inválido probados sin enviar a Google. GSC confirmado en DISCOVERY §1.6/D-022; cobertura actual sigue 1.4. |
+| 10.1 | DONE | DONE: políticas de optimización aprobadas verificadas con UA Galaxy/iPhone/desktop y pesos registrados. Móvil 1600/q95, escritorio q100, alfa lossless y diferidos. No certifica CWV ni todos los presupuestos antiguos; informe integral en 10.2. |
+
+Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md. Evidencias five-public/local/visual/summary.json y capturas en docs/audit/2026-10-13/. Los correctivos de logos, títulos, manifest y listener GA4 quedan FIXED_LOCAL, pendientes de despliegue y comprobación pública por Claude. PHP 77, PHPCS sin errores/avisos, JS/bash 18 y regresiones pasan. Emulación Chromium con UA, no Safari nativo; sin SMTP ni eventos reales enviados a Google. Abandonar antes de cargar gtag puede perder un evento (D-073). Fondo PNG de Primera consulta 774 KiB, fallback existente menor de 1200 px; oportunidad en 10.2. 1.2 sigue REVIEW.

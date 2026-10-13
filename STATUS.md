@@ -1,22 +1,13 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado:2026-10-13 · Codex · veredictos del inventario de producción.
+Actualizado: 2026-10-13 · Codex · auditoría de cinco tareas sobre 79d24ff.
 
-**41,50% español:105/253 pesos,41/95 tareas DONE.** De las17tareas revisadas:16DONE y1REVIEW. Inglés separado,0/19. PLAN→PROGRESS; sin crédito parcial.
+**46,64% español: 118/253 pesos, 46/95 tareas DONE.** Solo DONE suma; inglés aparte. PLAN → PROGRESS.
 
-Producción reportada por Claude local13/10:0c5fb67 (BATON). Correctivos8b2375c desplegados por Claude el12/10; Codex no desplegó. Esta continuación sobre f5c1571 solo modifica documentación. Incluye calidad móvil por metadata (original1600q100), DNT en clics, cancelación/punteros/reduced-motion de logos y PHPCS. Se conservan textos de marca, menús, sombras y cuatroHTML locales de José.
+6.4, 7.3, 8.9, 9.4 y 10.1 DONE tras revisión y correcciones. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md. Producción previa reportada por Claude: f5c1571. Las correcciones nuevas de teclado de logos, dos títulos de Dra., manifest y exclusión de editores en GA4 están probadas localmente, pendientes de despliegue. Codex no desplegó.
 
-Con docs/audit/2026-10-13/inventario-produccion.md,1.5 y3.6DONE. Queda1.2REVIEW: falta identificar los44adjuntos y entradas pie/legal, con clasificación/destino por ítem. Ver docs/audit/2026-10-13/veredictos-inventario.md. El snapshot local resuelve configuración/stack, sin leer secretos ni inferir toda la biblioteca desde su total.
+Once rutas públicas 200, un h1/main, sin Borrador/errores JS/overflow; OG/Twitter JPEG 1200×630. Fondo continuo y pasos ilustrados verificados; narrativa en Galaxy/iPhone/desktop normal y reduced-motion. PHP 77, PHPCS, JS/bash y regresiones pasan. Evidencia y límites en QA e informe: emulación Chromium no equivale a Safari nativo; fixtures no certifican WordPress autenticado ni entrega de correo/eventos reales.
 
-## Verificación y gates
+1.2 sigue REVIEW: medios.csv individual, uso y clasificación aprobada por José, entradas pie/legal. 1.5/3.6 DONE según inventario local. GSC tiene confirmación histórica aportada en DISCOVERY/D-022; cobertura actual permanece en 1.4. 10.1 acredita las optimizaciones aprobadas, no todos los presupuestos históricos ni CWV: informe integral en 10.2.
 
-- Quince rutas públicas y cinco anchos sin overflow/excepción JS;11rutas200 y cuatro404 esperados. Menú D-072 y migas D-071; FAQPage9 preguntas soloFAQ;8URLs en sitemap;9paresSEO coinciden con build. Recursos público noindex; clínica aún privada.
-- Hero Primera consulta con UA Galaxy/iPhone:1600×1102, eager/high, foco85%20%; fallback cálido sin adjunto probado en fixture. Q-039 aprobado por José en Samsung y Q-043 Qué llevar aprobado, según BATON. No se repiten esas decisiones.
-- PHP77/PHPCS0errores0avisos, JS/bash18 y regresiones pasan. GD real6.8.3 aislado confirma original1600intacto y derivado95; no equivale a WordPress autenticado/Imagick.
-- GA4 conserva carga diferida y cola; abandonar antes de cargar proveedor puede perder clic. No se añade demora a navegación.
-- Primera lectura de caché normal mostró dos acentos antiguos; petición fresca y build correctos. Claude purga y verifica URL limpia.
-- Gates pendientes:detalle de inventario por ítem, idempotencia WP en staging, Safari/iOS nativo, GSC/GBP, revisión médica/legal. La Dra. aún debe aprobar fichas,recursos y ORL/Sueño.
-
-Próximo paso:NEXT. Entrega:BATON. Informe:docs/REVISION_2026-10-12.md. No SMTP, despliegue, clínica nueva ni cambios a aplicaciones privadas por esta revisión.
-
-Historial de fondos/hero y despliegues posteriores en BATON: Claude reportó fondo/hero de Contacto verificados el13/10. Esta revisión no los vuelve a certificar visualmente ni audita los nuevos cambios de f5c1571.
+Claude despliega según BATON/NEXT y verifica el patch público. Staging/idempotencia/roles, Safari nativo, GBP y aprobación médica/legal conservan gates. Fichas, recursos y ORL/Sueño siguen pendientes de revisión médica. Cuatro HTML locales de José preservados. Sin SMTP, secretos ni operaciones privadas.
