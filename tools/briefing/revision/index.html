@@ -409,7 +409,8 @@ async function loadList(){
 // D-076 (propietario, 2026-10-13): el sitio se queda corto y las fichas no se publican. La Dra. revisa solo dos páginas en la guía.
 const SCOPE_PAGES = true;
 if (!TOKEN){ $("#list").innerHTML = `<div class="note warn">Este enlace no trae la clave de acceso. Pide a José el enlace completo.</div>`; $("#count").textContent = ""; }
-else if (SCOPE_PAGES){
+// Un enlace directo ?id=<ficha> sigue abriendo esa ficha (uso interno); sin él se muestra el aviso.
+else if (SCOPE_PAGES && !new URLSearchParams(location.search).get("id")){
   $("#title").textContent = "Revisión médica";
   $("#intro").textContent = "Ya no hace falta revisar fichas: el sitio se quedó corto. Solo necesitamos tu visto bueno en dos páginas.";
   $("#count").textContent = ""; $("#filters").innerHTML = "";
