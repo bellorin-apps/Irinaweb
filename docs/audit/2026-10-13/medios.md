@@ -55,3 +55,13 @@ Nada se borra sin aprobación explícita de José. Si la da: respaldo previo de 
 **Aprobado por José el 2026-10-13** («Sí, retira los 18», D-075). Ejecuta la sesión local con respaldo previo.
 
 Ajuste tras la comprobación de uso (sesión local, 2026-10-13): **322 pasa a KEEP** porque la revisión 288 de Inicio la referencia. Se retiran 17. Respaldo previo: `~/deploy-backups/uploads-20261013-162554.tgz` (196 MB). El borrado espera la confirmación directa de José en el chat de la sesión local.
+
+## Ejecutado (sesión local, 2026-10-13 16:40)
+
+José lo confirmó en el chat de la sesión local: «Sí, borra los 17». Se borraron con `wp post delete --force` los IDs 8 151 329 330 332 334 341 342 343 344 345 346 347 348 351 365 367. **322 se conserva**: aparece en `_elementor_data` de la revisión 288 de Inicio (2026-10-08).
+
+- Respaldo previo: `~/deploy-backups/uploads-20261013-162554.tgz`, 196 MB, con los 342 archivos de `uploads`.
+- Antes, `uploads` pesaba 199 MB con 342 archivos. Después pesa 85 MB con 230 archivos. Se liberaron 114 MB, incluidas las versiones reducidas que WordPress generaba de cada foto.
+- Adjuntos: de 44 a 27.
+- Verificación: portada, Dra., Primera consulta, Contacto y FAQ dan 200 en 1440 y en Galaxy. Sirven exactamente las mismas URLs de imagen que antes (src, srcset, source, currentSrc y fondos CSS), sin imágenes rotas y con la consola limpia.
+- Restaurar un archivo: extraerlo del .tgz. Para volver a tenerlo como adjunto hay que reimportarlo con `upload-media.sh`.
