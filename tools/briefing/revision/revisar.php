@@ -236,6 +236,41 @@ if ( 'GET' === $method && 'get' === $action ) {
 	di_out( $row );
 }
 
+// ---- D-076: revisión de las dos páginas cortas (Otorrinolaringología y Sueño) ---- (antes del filtro de solo POST, para que la lectura GET sea alcanzable)
+// El texto lo genera tools/content/build-pages.py en ../guia/paginas.json (no servible: .htaccess). La decisión de la Dra. se guarda
+// como meta de la página (_di_page_approved_at/_by o _di_page_review_note + _di_page_review_at) y en el registro; nunca publica.
+$di_pages = [ 'otorrinolaringologia', 'sueno' ];
+function di_page_state( string $slug ): array {
+	$pg = get_page_by_path( $slug, OBJECT, 'page' );
+	if ( ! $pg ) {
+		return [ 'exists' => false ];
+	}
+	$approved = (string) get_post_meta( $pg->ID, '_di_page_approved_at', true );
+	$note     = (string) get_post_meta( $pg->ID, '_di_page_review_note', true );
+	return [
+		'exists'      => true,
+		'id'          => $pg->ID,
+		'status'      => $pg->post_status,
+		'state'       => '' !== $approved ? 'approved' : ( '' !== $note ? 'changes' : 'pending' ),
+		'approved_at' => $approved,
+		'note'        => $note,
+		'review_at'   => (string) get_post_meta( $pg->ID, '_di_page_review_at', true ),
+	];
+}
+if ( 'GET' === $method && 'pages' === $action ) {
+	$file = dirname( __DIR__ ) . '/guia/paginas.json';
+	$data = is_readable( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null;
+	if ( ! is_array( $data ) ) {
+		di_out( [ 'error' => 'pages' ], 500 );
+	}
+	$out = [];
+	foreach ( $di_pages as $slug ) {
+		if ( isset( $data[ $slug ] ) ) {
+			$out[] = array_merge( [ 'slug' => $slug ], $data[ $slug ], [ 'review' => di_page_state( $slug ) ] );
+		}
+	}
+	di_out( [ 'reviewer' => $reviewer->display_name, 'pages' => $out ] );
+}
 if ( 'POST' !== $method ) {
 	di_out( [ 'error' => 'method' ], 405 );
 }
@@ -337,41 +372,6 @@ if ( 'save' === $action ) {
 	di_out( [ 'ok' => true, 'changed' => $changed, 'modified' => $p->post_modified_gmt, 'state' => di_state( $p->ID ) ] );
 }
 
-// ---- D-076: revisión de las dos páginas cortas (Otorrinolaringología y Sueño) ----
-// El texto lo genera tools/content/build-pages.py en ../guia/paginas.json (no servible: .htaccess). La decisión de la Dra. se guarda
-// como meta de la página (_di_page_approved_at/_by o _di_page_review_note + _di_page_review_at) y en el registro; nunca publica.
-$di_pages = [ 'otorrinolaringologia', 'sueno' ];
-function di_page_state( string $slug ): array {
-	$pg = get_page_by_path( $slug, OBJECT, 'page' );
-	if ( ! $pg ) {
-		return [ 'exists' => false ];
-	}
-	$approved = (string) get_post_meta( $pg->ID, '_di_page_approved_at', true );
-	$note     = (string) get_post_meta( $pg->ID, '_di_page_review_note', true );
-	return [
-		'exists'      => true,
-		'id'          => $pg->ID,
-		'status'      => $pg->post_status,
-		'state'       => '' !== $approved ? 'approved' : ( '' !== $note ? 'changes' : 'pending' ),
-		'approved_at' => $approved,
-		'note'        => $note,
-		'review_at'   => (string) get_post_meta( $pg->ID, '_di_page_review_at', true ),
-	];
-}
-if ( 'GET' === $method && 'pages' === $action ) {
-	$file = dirname( __DIR__ ) . '/guia/paginas.json';
-	$data = is_readable( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null;
-	if ( ! is_array( $data ) ) {
-		di_out( [ 'error' => 'pages' ], 500 );
-	}
-	$out = [];
-	foreach ( $di_pages as $slug ) {
-		if ( isset( $data[ $slug ] ) ) {
-			$out[] = array_merge( [ 'slug' => $slug ], $data[ $slug ], [ 'review' => di_page_state( $slug ) ] );
-		}
-	}
-	di_out( [ 'reviewer' => $reviewer->display_name, 'pages' => $out ] );
-}
 if ( 'POST' === $method && 'page_review' === $action ) {
 	$slug = (string) ( $body['page'] ?? '' );
 	$to   = (string) ( $body['decision'] ?? '' );
