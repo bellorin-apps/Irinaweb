@@ -57,11 +57,11 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 2.1 | `docs/REFERENCE_RESEARCH.md`: Stanford Sleep, Mayo, Cleveland, Johns Hopkins, Sleep Doctor, ENT privados, referentes UX | 3 | REVIEW | Basado en snippets: todos los dominios bloqueados por la red del entorno; incluye checklist de verificación visual |
-| 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | REVIEW | `docs/COMPETITION_MONTERREY.md`; ítems "no verificado" por bloqueo de red |
-| 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | REVIEW | Sin volúmenes; evidencia SERP; pendiente cruzar con Search Console |
-| 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | REVIEW | 11 motivos reales de la Dra. (DISCOVERY §0b) |
-| 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | REVIEW | v0.1; audiencias por validar con briefing |
+| 2.1 | `docs/REFERENCE_RESEARCH.md`: Stanford Sleep, Mayo, Cleveland, Johns Hopkins, Sleep Doctor, ENT privados, referentes UX | 3 | DONE | Auditoría2026-10-12: Referentes identifican snippets/inferencias y bloqueo de lectura; checklist visual separado. Investigación preliminar útil, sin certificar UX ajena. |
+| 2.2 | Competencia local Monterrey (ORL + sueño): sitios, GBP, Doctoralia | 2 | DONE | Auditoría2026-10-12: FIX documental: oportunidades son hipótesis de muestra, sin afirmar ausencia universal de competidores; precios/horarios se subordinan a D-054/D-032. |
+| 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | DONE | Auditoría2026-10-12: Keyword map sin volúmenes inventados, limitaciones de SERP declaradas; coherencia con slugs del build. GSC/GBP quedan OWNER. |
+| 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | DONE | Auditoría2026-10-12: DISCOVERY §0b contiene11 motivos confirmados; ocho filas del build agrupan los11 (ronquido/apnea, oído/cerumen, amígdalas/niños). Sito fresco y estrategia coherentes. |
+| 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | DONE | Auditoría2026-10-12: FIX documental: CAB Medical, pediatría desde0meses y no publicar precios; mensaje publicado respirar/dormir/oír y agenda WhatsApp. Se retiran hipótesis presentadas como exclusividad. |
 | 2.6 | Codex: revisión de estrategia y keyword map | 1 | TODO | |
 
 ## FASE 3 — Arquitectura (información, SEO, WordPress)

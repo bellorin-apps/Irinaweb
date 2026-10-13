@@ -1,3 +1,5 @@
+> **Estrategia vigente auditada2026-10-12:** marca y mensaje publicados: «Respirar bien, dormir bien, oír bien», ORL general y sueño; CAB Medical, Cumbres; WhatsApp principal. Los11 motivos y atención desde0meses están confirmados en DISCOVERY §0b. El hero propuesto, precios y pendientes OD antiguos de abajo son historia: D-054 no publica precios, D-032 Previa cita, D-039 resuelve la relación profesional y servicios. «Ningún otorrino» es hipótesis de la muestra, no exclusividad demostrada. Mantener revisión médica antes de publicar fichas; no cambiar textos de marca por esta revisión.
+
 # STRATEGY — Dra. Irina González Sáez
 
 Versión 0.1 · 2026-10-07 · Estado: REVIEW (pendiente Codex y Checkpoint 2 del propietario)

@@ -144,3 +144,16 @@ Claude local: deploy-code.sh del HEAD de esta entrega y purga; NO setup-site/pag
 | 1.8 | DONE | FIX documental: rollback vigente según deploy-code.sh (~/deploy-backups/<ts>); runbook de reset marcado histórico y no ejecutable; sin credenciales. |
 
 Fuente: docs/audit/2026-10-12/public-review.json, código/builds y documentos contrastados. No se consultaron secretos, ni se publicó clínica, ni se enviaron formularios. DONE documental no acredita staging ni gates clínicos. Ver docs/REVISION_2026-10-12.md para pruebas y entrega.
+
+
+## Auditoría REVIEW · grupo2 · 2026-10-12
+
+| ID | Veredicto final | Evidencia / límite |
+|---|---|---|
+| 2.1 | DONE | Referentes identifican snippets/inferencias y bloqueo de lectura; checklist visual separado. Investigación preliminar útil, sin certificar UX ajena. |
+| 2.2 | DONE | FIX documental: oportunidades son hipótesis de muestra, sin afirmar ausencia universal de competidores; precios/horarios se subordinan a D-054/D-032. |
+| 2.3 | DONE | Keyword map sin volúmenes inventados, limitaciones de SERP declaradas; coherencia con slugs del build. GSC/GBP quedan OWNER. |
+| 2.4 | DONE | DISCOVERY §0b contiene11 motivos confirmados; ocho filas del build agrupan los11 (ronquido/apnea, oído/cerumen, amígdalas/niños). Sito fresco y estrategia coherentes. |
+| 2.5 | DONE | FIX documental: CAB Medical, pediatría desde0meses y no publicar precios; mensaje publicado respirar/dormir/oír y agenda WhatsApp. Se retiran hipótesis presentadas como exclusividad. |
+
+Fuente: docs/audit/2026-10-12/public-review.json, código/builds y documentos contrastados. No se consultaron secretos, ni se publicó clínica, ni se enviaron formularios. DONE documental no acredita staging ni gates clínicos. Ver docs/REVISION_2026-10-12.md para pruebas y entrega.
