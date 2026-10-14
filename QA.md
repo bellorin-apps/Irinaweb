@@ -268,3 +268,4 @@ Comprobación en solo lectura: XML-RPC POST 403; debug.log 403; listado de uploa
 - **Q-054 · P2 · OPEN:** readme.html público (200), X-Powered-By: PHP/8.4.26 y meta generator de Elementor revelan versiones. Bajo riesgo; se puede ocultar sin borrar archivos del núcleo.
 - **OWNER:** 2FA del usuario administrador (10.3).
 
+**Q-054 · P2 · FIX en la rama (sin desplegar):** Hardening oculta el generator de Elementor y X-Powered-By de PHP; `harden-htaccess.sh` deja readme.html/license.txt/wp-config-sample.php en 403 y quita X-Powered-By también en páginas cacheadas. Pendiente: deploy-code, el script y purga.

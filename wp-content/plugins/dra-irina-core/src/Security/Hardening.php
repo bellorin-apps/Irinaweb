@@ -7,6 +7,8 @@
  * - se retiran las rutas /wp/v2/users de la API (el editor y wp-admin no cambian: allí hay sesión);
  * - las páginas de autor y la consulta ?author= responden 404 (el sitio no tiene blog ni páginas de autor);
  * - los datos oEmbed no incluyen el nombre ni la URL del autor.
+ * Q-054: tampoco se anuncia la versión de Elementor (meta generator; equivale a su ajuste «Ocultar meta generator») ni la de PHP
+ * (cabecera X-Powered-By). readme.html y la cabecera en páginas servidas desde la caché los cubre tools/deploy/harden-htaccess.sh.
  *
  * @package DraIrina\Core
  */
@@ -21,6 +23,15 @@ final class Hardening {
 		add_filter( 'rest_endpoints', [ $this, 'rest_endpoints' ] );
 		add_action( 'template_redirect', [ $this, 'author_404' ], 0 );
 		add_filter( 'oembed_response_data', [ $this, 'oembed' ] );
+		add_filter( 'pre_option_elementor_meta_generator_tag', static fn(): string => '1' );
+		add_action( 'send_headers', [ $this, 'remove_powered_by' ] );
+	}
+
+	/** Sin cabecera X-Powered-By (versión de PHP). */
+	public function remove_powered_by(): void {
+		if ( ! headers_sent() ) {
+			header_remove( 'X-Powered-By' );
+		}
 	}
 
 	/**
@@ -58,7 +69,7 @@ final class Hardening {
 	}
 
 	/**
-	 * oEmbed sin nombre ni URL del autor.
+	 * Datos oEmbed sin nombre ni URL del autor.
 	 *
 	 * @param array<string,mixed> $data Datos oEmbed.
 	 * @return array<string,mixed>
