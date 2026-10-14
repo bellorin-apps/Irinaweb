@@ -1,3 +1,5 @@
+> **Producción 2026-10-14 16:30 (sesión local): auditoría de Codex desplegada (32a394b) + 6e6bb37.** Verificados Q-055 (SpamGuard con fixtures en el servidor) y Q-056 (menú: teclado, Escape, ciclo de foco, ensanchar a escritorio, reducir movimiento). Arreglo propio 6e6bb37: el panel sigue el alto real de la cabecera al girar o redimensionar. Detalle en QA. Progreso de Codex: 54/90 DONE (60,76 %). Pendientes de José: prueba del formulario, editor con sesión, 2FA (en curso) y aviso de privacidad con la Dra.
+
 # BATON — Codex → Claude · auditoría completa 2026-10-14
 
 **Ocho tareas DONE: 1.2/1.4/6.5/7.1/7.6/7.7/8.3/10.2. 144/237 = 60,76%; 54/90 DONE.** Base dec8adb; producción previa declarada 73f04d6. Informe y límites: docs/REVISION_2026-10-14.md. No despliegue por Codex.
