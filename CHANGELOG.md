@@ -166,3 +166,8 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - `deploy-briefing.sh` sube `guia/paginas.json` y verifica la guía.
 - PLAN: estado `DESCOPED` (D-077) para 8.1, 8.2 y 8.8; notas nuevas en 7.1, 7.2, 7.4 y 7.6. PROGRESS: 118/242 = 48,76 %; 46/92 DONE; 3 tareas y 11 pesos fuera de alcance.
 - Corrección tras el despliegue: la guía no cargaba porque `action=pages` (GET) estaba después del filtro «solo POST» de `revisar.php` y respondía 405; lo corrigió la sesión local en f21bed0. Además `revision/?id=` vuelve a abrir la ficha directa con el aviso activo (nube). Probado con `revisar.php` real sobre un stub de WordPress (pages, nota obligatoria, página inválida, aprobar) y la app en Chromium con API simulada; no sustituye la prueba en producción.
+
+## 2026-10-14 · Claude cloud · velocidad y accesibilidad
+
+- 10.2: `PERFORMANCE.md` con la medición «antes» (Lighthouse 12.2.1; 5 páginas × móvil/escritorio × 3 pasadas; medianas), límites del entorno (proxy HTTP/1.1, red ruidosa, datos de laboratorio) y hallazgos. SEO y buenas prácticas 100; accesibilidad 91–95; CLS de portada en escritorio por la tipografía (Q-046, sin tocar); fotos de cabecera de escritorio de 2,6–3,4 MB por la calidad 100 (propuesta q95 pendiente de José).
+- Accesibilidad (8bb93a0): puntos de credenciales con área de 24 px, contraste de cédulas del pie y migas, orden de títulos del pie y de los pasos. Pendiente de despliegue.

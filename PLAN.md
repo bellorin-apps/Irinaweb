@@ -158,7 +158,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | DONE | DONE: políticas de optimización aprobadas verificadas con UA Galaxy/iPhone/desktop y pesos registrados. Móvil 1600/q95, escritorio q100, alfa lossless y diferidos. No certifica CWV ni todos los presupuestos antiguos; informe integral en 10.2. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | TODO | |
+| 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | DOING | «Antes» medido 2026-10-14 (5 páginas × móvil/escritorio × 3 pasadas, medianas y límites en PERFORMANCE.md); a11y corregida en 8bb93a0. Falta el «después» tras desplegar, desde la sesión local o PSI, y la decisión de José sobre la foto de escritorio |
 | 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | DOING | Cabeceras de seguridad en el plugin (Q-023); resto pendiente |
 | 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | DOING | Auditoría en vivo y correcciones (Q-022); falta decisión sobre el contraste del botón de WhatsApp |
 | 10.5 | Codex: QA performance + seguridad + accesibilidad | 3 | TODO | |
