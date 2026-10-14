@@ -24,10 +24,26 @@ final class SpamGuard {
 
 	/** Términos que solo aparecen en ofertas comerciales: uno basta. */
 	private const STRONG = [
-		'\bseo\b', 'backlinks?', 'guest ?posts?', 'link ?building', 'bitcoin', 'crypto', '\bcasino\b', '\bforex\b',
-		'rank(?:ing|ings)? (?:on|in|higher on) google', 'first page (?:of|on) google', 'web ?site design', 'web design', 'digital marketing',
-		'lead generation', 'virtual assistant', 'posicionamiento (?:web|seo|en google)', 'dise[ñn]o (?:web|de p[áa]ginas)',
-		'agencia de marketing', 'marketing digital', 'p[áa]gina web profesional',
+		'\bseo\b',
+		'backlinks?',
+		'guest ?posts?',
+		'link ?building',
+		'bitcoin',
+		'crypto',
+		'\bcasino\b',
+		'\bforex\b',
+		'rank(?:ing|ings)? (?:on|in|higher on) google',
+		'first page (?:of|on) google',
+		'web ?site design',
+		'web design',
+		'digital marketing',
+		'lead generation',
+		'virtual assistant',
+		'posicionamiento (?:web|seo|en google)',
+		'dise[ñn]o (?:web|de p[áa]ginas)',
+		'agencia de marketing',
+		'marketing digital',
+		'p[áa]gina web profesional',
 	];
 
 	/** Palabras comerciales en inglés: cuentan solo si el mensaje está escrito en inglés. */
@@ -45,7 +61,9 @@ final class SpamGuard {
 	 */
 	public static function classify( string $name, string $email, string $message ): string {
 		$text = mb_strtolower( $name . ' ' . $message );
-		if ( preg_match( '~https?://|www\.[a-z0-9-]+\.[a-z]{2,}|\b[a-z0-9-]+\.(?:com|net|org|io|co|info|biz|xyz|online|site)(?:/|\b)~iu', $text ) ) {
+		// Solo enlaces explícitos (http, https, www.). Un dominio suelto no basta: los pacientes escriben su correo en el mensaje
+		// («mi correo es juan@gmail.com») o dicen dónde encontraron a la Dra. («doctoralia.com.mx»), y el descarte es silencioso.
+		if ( preg_match( '~https?://|\bwww\.[a-z0-9-]+\.[a-z]{2,}~iu', $text ) ) {
 			return 'link';
 		}
 		foreach ( self::STRONG as $pattern ) {
@@ -116,12 +134,12 @@ final class SpamGuard {
 	 * @param string $reason Motivo.
 	 */
 	public static function log( string $reason ): void {
-		$log = get_option( self::LOG_OPTION, [] );
-		$log = is_array( $log ) ? $log : [];
-		$log['total']           = (int) ( $log['total'] ?? 0 ) + 1;
-		$log['by'][ $reason ]   = (int) ( $log['by'][ $reason ] ?? 0 ) + 1;
-		$log['last']            = current_time( 'mysql' );
-		$log['last_reason']     = $reason;
+		$log                  = get_option( self::LOG_OPTION, [] );
+		$log                  = is_array( $log ) ? $log : [];
+		$log['total']         = (int) ( $log['total'] ?? 0 ) + 1;
+		$log['by'][ $reason ] = (int) ( $log['by'][ $reason ] ?? 0 ) + 1;
+		$log['last']          = current_time( 'mysql' );
+		$log['last_reason']   = $reason;
 		update_option( self::LOG_OPTION, $log, false );
 	}
 }
