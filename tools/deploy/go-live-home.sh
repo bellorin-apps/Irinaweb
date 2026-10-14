@@ -34,7 +34,7 @@ w "cache flush" >/dev/null; w "litespeed-purge all" >/dev/null 2>&1 || true
 echo "→ Verificación"
 for u in "/" "/inicio-v2/" "/links/" "/op/" "/sitemap_index.xml" "/page-sitemap.xml"; do printf '  %-20s %s\n' "$u" "$(curl -sL -o /dev/null -w '%{http_code} → %{url_effective}' "$SITE_URL$u?cb=$(date +%s)")"; done
 H="$(curl -sL "$SITE_URL/?cb=$(date +%s)")"
-printf '  portada: di-header=%s di-bleed=%s noindex=%s Physician=%s\n' "$(echo "$H" | grep -c 'id="di-header"')" "$(echo "$H" | grep -c 'di-bleed__bg')" "$(echo "$H" | grep -c 'noindex')" "$(echo "$H" | grep -c '"@type":"Physician"')"
+printf '  portada: di-header=%s di-bleed=%s noindex=%s Physician=%s\n' "$(echo "$H" | grep -c 'id="di-header"')" "$(echo "$H" | grep -c 'di-bleed__bg')" "$(echo "$H" | grep -c 'noindex')" "$(echo "$H" | grep -c '"Physician"')"
 L="$(curl -sL "$SITE_URL/links/?cb=$(date +%s)")"
 printf '  /links/: di-header=%s theme-builder=%s\n' "$(echo "$L" | grep -c 'id="di-header"')" "$(echo "$L" | grep -c 'data-elementor-type="header"')"
 echo "  sitemap incluye /: $(curl -sL "$SITE_URL/page-sitemap.xml" | grep -c "<loc>$SITE_URL/</loc>")"

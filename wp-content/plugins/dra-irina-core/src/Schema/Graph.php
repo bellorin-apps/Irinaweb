@@ -25,11 +25,15 @@ final class Graph {
 		return home_url( '/#physician' );
 	}
 
-	/** Nodo Physician desde la fuente única de verdad. Solo propiedades con dato. */
+	/**
+	 * Nodo Physician desde la fuente única de verdad. Solo propiedades con dato.
+	 * Q-058: tipo doble Physician + Person. Physician es de la familia Organization y alumniOf (formación) es de Person; con un solo
+	 * tipo, schema.org avisaba «alumniOf no reconocida». Rank Math no duplica el nodo: strip_rank_math_duplicates() quita su Person.
+	 */
 	public static function physician(): array {
 		$p    = PracticeSettings::public_data();
 		$node = [
-			'@type'            => 'Physician',
+			'@type'            => [ 'Physician', 'Person' ],
 			'@id'              => self::physician_id(),
 			'name'             => $p['nombre_profesional'] ?? '',
 			'url'              => home_url( '/' ),
