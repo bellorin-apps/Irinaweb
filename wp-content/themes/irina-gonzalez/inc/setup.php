@@ -69,7 +69,7 @@ add_filter(
  */
 function irina_nav_fallback( array $args = [] ): void {
 	$items = [
-		'otorrinolaringologia'    => __( 'Otorrinolaringología', 'irina-gonzalez' ),
+		'otorrinolaringologia'    => __( 'Otorrino', 'irina-gonzalez' ), // D-083.
 		'sueno'                   => __( 'Sueño', 'irina-gonzalez' ),
 		'dra-irina-gonzalez-saez' => __( 'Dra. Irina', 'irina-gonzalez' ),
 		'primera-consulta'        => __( 'Primera consulta', 'irina-gonzalez' ),

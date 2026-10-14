@@ -68,7 +68,8 @@ add_items principal "$P_HOME" "$P_ORL" "$P_SUENO" "$P_DRA" "$P_PRIMERA" "$P_CONT
 menu_set(){ local menu="$1" obj="$2" pos="$3" title="${4:-}" id
   id="$(w "menu item list $menu --fields=db_id,object_id --format=csv" | awk -F, -v o="$obj" '$2==o{print $1; exit}')"
   [ -n "$id" ] && w "menu item update $id --position=$pos ${title:+--title='$title'}" >/dev/null; }
-menu_set principal "$P_HOME" 1 'Inicio'; menu_set principal "$P_ORL" 2; menu_set principal "$P_SUENO" 3
+# D-083: en el menú principal «Otorrino» (la página se sigue titulando Otorrinolaringología); el pie conserva el nombre completo.
+menu_set principal "$P_HOME" 1 'Inicio'; menu_set principal "$P_ORL" 2 'Otorrino'; menu_set principal "$P_SUENO" 3 'Sueño'
 menu_set principal "$P_DRA" 4 'Conóceme'; menu_set principal "$P_PRIMERA" 5; menu_set principal "$P_CONTACTO" 6
 add_items pie-de-pagina "$P_ORL" "$P_SUENO" "$P_PRIMERA" "$P_FAQ" "$P_CONTACTO"
 add_items legal "$P_PRIV" "$P_MED" "$P_TERM"
