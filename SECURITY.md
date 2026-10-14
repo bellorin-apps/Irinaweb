@@ -21,13 +21,13 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 ## Decisiones y riesgos aceptados
 
 - **D-085:** la Secret Key de Turnstile quedó visible en una captura del chat; José decidió no rotarla. Se puede rotar en cualquier momento (Turnstile › widget › Rotate Secret Key).
-- **Contraseña de aplicación «claude-ops» (administrador, tarea 1.1):** es el canal REST de la sesión cloud, creada el 2026-10-07. La salida de red del entorno cloud la añade a las peticiones al dominio, por eso las pruebas REST desde la nube se ven como administrador (Q-059). Mantenerla o revocarla lo decide José; los despliegues van por SSH desde su PC y no la necesitan.
+- **Contraseña de aplicación «claude-ops» (administrador, tarea 1.1): REVOCADA el 2026-10-14** por decisión de José. Era el canal REST de la sesión cloud (creada el 2026-10-07); la salida de red del entorno cloud la añadía a las peticiones, por eso sus pruebas REST se veían como administrador (Q-059). El administrador queda con 0 contraseñas de aplicación; los despliegues van por SSH desde la PC.
 - **Actualizaciones automáticas de Hostinger** activas (p. ej. Elementor 4.3.4 → 4.3.5 el 2026-10-14): mantienen los parches al día; tras cada una conviene revisar el sitio.
 
 ## Pendiente
 
-1. **José:** activar el 2FA en su usuario (Perfil › Opciones de dos factores) y en Hostinger y Google. Comprobar después que «claude-ops» sigue funcionando si se mantiene.
-2. **José:** decidir sobre «claude-ops» (tarea 1.1).
+1. **José:** activar el 2FA en su usuario (Perfil › Opciones de dos factores) y en Hostinger y Google.
+2. ~~José: decidir sobre «claude-ops» (tarea 1.1).~~ Hecho: revocada el 2026-10-14.
 3. Revisión de Codex (1.9, 5.7, 10.5) sobre este estado.
 
 ## Límites
