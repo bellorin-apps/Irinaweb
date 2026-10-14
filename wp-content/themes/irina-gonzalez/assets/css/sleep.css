@@ -13,8 +13,12 @@
 body.di-dark .di-header.is-scrolled { background: rgb(27 22 48 / 0.9); color: #fff; }
 body.di-dark .di-header.is-scrolled .di-brand__logo--color { display: none; }
 body.di-dark .di-header.is-scrolled .di-brand__logo--white { display: block; }
-body.di-dark .di-menu-panel { background: var(--color-night); }
-body.di-dark .di-menu-panel li a { color: #fff; border-color: rgb(255 255 255 / 0.15); }
+body.di-dark .di-menu-panel { background: radial-gradient(120% 60% at 100% 0%, rgb(140 78 170 / 0.18), transparent 60%), var(--color-night); }
+body.di-dark .di-menu-panel li a { color: #fff; border-color: rgb(255 255 255 / 0.12); }
+body.di-dark .di-menu-panel li a::before { color: rgb(255 255 255 / 0.5); }
+body.di-dark .di-menu-panel li a:focus-visible, body.di-dark .di-menu-panel li.current-menu-item > a, body.di-dark .di-menu-panel li a:focus-visible::before, body.di-dark .di-menu-panel li.current-menu-item > a::before { color: var(--color-accent); }
+@media (hover: hover) { body.di-dark .di-menu-panel li a:hover, body.di-dark .di-menu-panel li a:hover::before { color: var(--color-accent); } }
+body.di-dark .di-social--panel .di-social__btn { color: #fff; border-color: rgb(255 255 255 / 0.2); }
 body.di-dark .di-symptom b { color: #fff; }
 /* Barra móvil: superficie clara también en el registro nocturno; los rótulos no heredan el acento claro (QA 2026-10-09). */
 body.di-dark .di-mobile-bar a { color: var(--color-text); }

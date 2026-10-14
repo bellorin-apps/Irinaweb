@@ -41,6 +41,8 @@
   if (burger && panel) {
     burger.addEventListener('click', function () {
       var open = !panel.classList.contains('is-open');
+      // El panel arranca justo bajo la cabecera, mida lo que mida (móvil 92 px, tableta 112 px, barra de admin).
+      if (open) { panel.style.top = Math.round(header.getBoundingClientRect().bottom) + 'px'; }
       panel.classList.toggle('is-open', open);
       header.classList.toggle('is-open', open);
       document.body.classList.toggle('menu-open', open);

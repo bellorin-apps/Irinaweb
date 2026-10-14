@@ -46,7 +46,9 @@ if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_loca
 	</div>
 </header>
 <div class="di-menu-panel" id="di-menu-panel">
+	<div class="di-menu-panel__inner">
 	<?php
+	// Panel móvil (propietario, 2026-10-14: «más elegante y sutil, con hovers elegantes»): menú numerado y pie con WhatsApp y redes.
 	wp_nav_menu(
 		[
 			'theme_location' => 'primary',
@@ -56,9 +58,14 @@ if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_loca
 			'fallback_cb'    => 'irina_nav_fallback',
 		]
 	);
-	echo irina_whatsapp_button(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	echo irina_social_circles( 'di-social di-social--panel' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	?>
+		<div class="di-menu-panel__foot">
+			<?php
+			echo irina_whatsapp_button(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo irina_social_circles( 'di-social di-social--panel' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			?>
+		</div>
+	</div>
 </div>
 <?php if ( irina_elementor_main() ) : ?>
 <main id="content" class="di-main">
