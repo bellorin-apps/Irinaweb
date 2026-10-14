@@ -143,12 +143,16 @@ body.menu-open { overflow: hidden; }
 @keyframes di-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 @media (prefers-reduced-motion: reduce) { .di-scroll-cue { animation: none; } }
 /* Entrada del hero (propietario, 2026-10-14: «que entren sutilmente sin fastidiar»). Solo CSS: arranca en el primer cuadro, sin esperar
-   al JS ni al scroll. Textos: suben 14 px y aparecen en cascada (0–0,36 s, 0,9 s cada uno). Foto: se asienta de 103,5 % a 100 % en
+   al JS ni al scroll. Textos: suben 14 px en cascada (0–0,36 s, 0,9 s cada uno); antetítulo y botones además aparecen con fundido. Foto: se asienta de 103,5 % a 100 % en
    1,8 s, solo con transform (no toca su opacidad, así no retrasa el LCP). Nada si el sistema pide menos movimiento. */
 @keyframes di-hero-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+/* Q-050: el título y la entradilla solo suben, sin opacidad. Si empiezan en opacity 0, Chrome no los cuenta como pintados hasta que
+   se ven, y en un hero sin foto (Sueño, ORL) el texto es el LCP: +2,4 s en Lighthouse móvil. Con transform el LCP no cambia. */
+@keyframes di-hero-rise { from { transform: translateY(14px); } to { transform: none; } }
 @keyframes di-hero-photo { from { transform: scale(1.035); } to { transform: none; } }
 @media (prefers-reduced-motion: no-preference) {
   .di-bleed .di-container > :is(.di-eyebrow, h1, .di-lead, .di-hero-cta, .di-hero-trust) { animation: di-hero-in 0.9s var(--ease-out) backwards; }
+  .di-bleed .di-container > :is(h1, .di-lead) { animation-name: di-hero-rise; }
   .di-bleed .di-container > h1 { animation-delay: 0.09s; }
   .di-bleed .di-container > .di-lead { animation-delay: 0.18s; }
   .di-bleed .di-container > .di-hero-cta { animation-delay: 0.27s; }

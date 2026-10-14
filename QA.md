@@ -249,5 +249,5 @@ Desplegados 0679222, f21bed0 y 063ba34: deploy-code (backup `~/deploy-backups/20
 
 3ceba23 con deploy-code (`~/deploy-backups/20261014-091517/`) y purga. En 1440 y Galaxy, en Inicio, ORL, Sueño, Dra. y Contacto: las animaciones di-hero-in y di-hero-photo arrancan al cargar. Al terminar, la posición, el ancho y la opacidad son idénticos a la carga con «reducir movimiento», sin transform y sin animaciones vivas. Con «reducir movimiento» no hay animación. La navegación por el menú dispara una view transition (pagereveal con viewTransition), que no ocurre con «reducir movimiento»; la cabecera lleva view-transition-name `di-header`. Consola limpia. Safari/iPhone real: no probado desde la PC.
 
-**Q-050 · P1 · OPEN:** con la entrada del hero, el LCP móvil de Sueño pasa de 3,81 a 6,17 s (+2,36 s; 3 de 3 pasadas). El elemento LCP es texto que arranca con opacidad 0. Detalle en PERFORMANCE.md.
+**Q-050 · P1 · FIX en la rama (sin desplegar; falta A/B Lighthouse):** h1 y entradilla solo con transform. Antes: con la entrada del hero, el LCP móvil de Sueño pasa de 3,81 a 6,17 s (+2,36 s; 3 de 3 pasadas). El elemento LCP es texto que arranca con opacidad 0. Detalle en PERFORMANCE.md.
 
