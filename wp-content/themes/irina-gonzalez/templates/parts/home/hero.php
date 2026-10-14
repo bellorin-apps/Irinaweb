@@ -53,7 +53,7 @@ if ( '' !== $irina_a['secondary_label'] && '' !== $irina_a['secondary_url'] ) {
 			<p class="di-lead di-lead--mobile"><?php echo esc_html( $irina_a['lead_mobile'] ); ?></p><?php endif; ?>
 		<div class="di-hero-cta"><?php echo $irina_cta; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 		<?php if ( $irina_a['trust'] ) : ?>
-			<ul class="di-hero-trust">
+			<ul class="di-hero-trust" aria-label="<?php esc_attr_e( 'Credenciales', 'irina-gonzalez' ); ?>">
 			<?php
 			foreach ( (array) $irina_a['trust'] as $irina_t ) :
 				?>

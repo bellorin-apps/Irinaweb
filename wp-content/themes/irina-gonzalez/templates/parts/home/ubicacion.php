@@ -77,7 +77,7 @@ $irina_title = '' !== $irina_a['title'] ? $irina_a['title'] : trim( ( '' !== $ir
 			// Mapa con estilo propio (D-048): Maps JavaScript API + JSON de estilo (Snazzy Maps o paleta por defecto).
 			irina_enqueue_map( $irina_key );
 			?>
-			<div class="di-map__canvas" id="di-map" data-lat="<?php echo esc_attr( $irina_lat ); ?>" data-lng="<?php echo esc_attr( $irina_lng ); ?>" data-zoom="16" data-title="<?php echo esc_attr( (string) irina_practice( 'centro' ) ); ?>" data-url="<?php echo esc_attr( (string) irina_practice( 'maps_url' ) ); ?>" role="img" aria-label="<?php esc_attr_e( 'Mapa del consultorio', 'irina-gonzalez' ); ?>"></div>
+			<div class="di-map__canvas" id="di-map" data-lat="<?php echo esc_attr( $irina_lat ); ?>" data-lng="<?php echo esc_attr( $irina_lng ); ?>" data-zoom="16" data-title="<?php echo esc_attr( (string) irina_practice( 'centro' ) ); ?>" data-url="<?php echo esc_attr( (string) irina_practice( 'maps_url' ) ); ?>" role="region" aria-label="<?php esc_attr_e( 'Mapa del consultorio', 'irina-gonzalez' ); ?>"></div>
 			<?php
 		elseif ( '' !== $irina_a['map_embed'] ) :
 			?>

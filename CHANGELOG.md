@@ -196,3 +196,14 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Schema: Otorrinolaringología y Sueño publicadas emiten Physician + MedicalWebPage (specialty Otolaryngologic, reviewedBy la Dra., lastReviewed = aprobación en la guía; Sueño con about Apnea obstructiva del sueño y Ronquido). Probado en WordPress local.
 - Q-058: el nodo #physician pasa a `@type: ["Physician", "Person"]` para que alumniOf (formación) sea válido; Rank Math sigue sin duplicarlo. `go-live-home.sh` busca "Physician" sin depender del tipo único.
 
+## 2026-10-14 · Claude cloud · accesibilidad (10.4)
+
+- axe-core 4.10 (WCAG 2.0/2.1/2.2 A y AA) en 16 vistas × 2 anchos (1440 y 390, con scroll para cargar lo diferido): 5 reglas con fallos. Corregidas:
+  - color-contrast: `--color-secondary-strong` #2a787d → #287277 (≥4.6:1 sobre todas las cremas; antetítulos, barra móvil); botón morado glass 0.82 → 0.92 (4.7:1 sobre fondo claro, p. ej. «Enviar solicitud»).
+  - link-in-text-block: enlace al aviso de privacidad del formulario subrayado (`.di-check a`, `.di-form__note a`).
+  - target-size: enlaces del índice y de «Relacionado» de las fichas con ≥24 px de alto.
+  - nested-interactive: el mapa pasa de role="img" a role="region" (tiene controles de Google Maps).
+  - scrollable-region-focusable: la franja de credenciales del hero recibe foco solo cuando se desplaza (móvil) y lleva aria-label.
+- Falso positivo documentado: botón WhatsApp glass de la cabecera en páginas nocturnas; axe lo calcula sobre claro (4.12) y en pantalla se pinta #224556 sobre el hero oscuro (10.2:1, píxel medido).
+- Verificado con el CSS/JS locales sobre las páginas en vivo (los dos cambios de HTML aplicados en el navegador): sin más violaciones. Límite: axe no cubre todo WCAG (orden de foco, lectores de pantalla reales); faltan pruebas manuales con VoiceOver/TalkBack.
+

@@ -18,6 +18,15 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
+  // Franja de confianza del hero: en móvil se desplaza en horizontal; solo entonces recibe foco para poder recorrerla con el teclado
+  // (WCAG 2.1.1, axe scrollable-region-focusable). En escritorio no se desplaza y no añade una parada de tabulación.
+  var trust = document.querySelector('.di-hero-trust');
+  function trustFocus() {
+    if (!trust) { return; }
+    if (trust.scrollWidth > trust.clientWidth + 1) { trust.setAttribute('tabindex', '0'); } else { trust.removeAttribute('tabindex'); }
+  }
+  trustFocus(); window.addEventListener('resize', trustFocus, { passive: true });
+
   // Header: sólido al desplazarse; claro sobre cabecera a sangre. Parallax suave del fondo.
   var header = document.querySelector('.di-header');
   var bleed = document.querySelector('.di-bleed');
