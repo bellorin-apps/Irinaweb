@@ -188,3 +188,10 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Ocho tareas DONE y seis hallazgos previos verificados; progreso 144/237, 60,76%. Informe docs/REVISION_2026-10-14.md.
 - Q-055/056/057 locales: reducir falsos positivos ingleses, foco del menú y reset captcha tras fallo de red. PHPCS enqueue sin cambio funcional.
 - Evidencia HTTP/fixtures/A-B Lighthouse; documentación/progreso/relevo actualizados. Sin despliegue, publicaciones, borrados, secretos ni SMTP.
+
+## 2026-10-14 · Claude cloud · SEO on-page (9.1–9.3)
+
+- Auditoría de las 15 URL del sitemap: todas 200, un h1, canónica propia, index, og:title/og:image, sin imágenes sin alt, 37 enlaces internos sin errores, JSON-LD válido.
+- Metadatos (`build-pages.py` → `seo.json`): descripciones de portada (166 → 145) y Dra. (168 → ≤155) dentro del límite; título de la Dra. a 57; ORL y Sueño describen la página corta (antes aludían a padecimientos y tratamientos); aviso de privacidad con descripción completa. Títulos con «Monterrey» para las 5 fichas de sueño (la descripción la sigue dando Rank Math). `setup-pages.sh` busca también entre condicion/tratamiento y no pisa la descripción si viene vacía.
+- Schema: Otorrinolaringología y Sueño publicadas emiten Physician + MedicalWebPage (specialty Otolaryngologic, reviewedBy la Dra., lastReviewed = aprobación en la guía; Sueño con about Apnea obstructiva del sueño y Ronquido). Probado en WordPress local.
+

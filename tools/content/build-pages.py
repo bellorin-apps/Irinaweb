@@ -135,17 +135,24 @@ for _f in sorted((pathlib.Path(__file__).parent / "legal").glob("*.html")):
     legal[_f.stem] = _f.read_text(encoding="utf-8")
 
 seo = {
-    "inicio-v2": ("Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez", "Otorrinolaringólogo certificado en Monterrey, especialista en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos en Cumbres. Agenda por WhatsApp."),
-    "dra-irina-gonzalez-saez": ("Dra. Irina González Sáez, otorrinolaringólogo especialista en sueño", "Formación en dos países, certificación del Consejo Mexicano de ORL y CCC y subespecialización en desórdenes respiratorios del dormir. Consultorio en Cumbres, Monterrey."),
-    "otorrinolaringologia": ("Otorrinolaringología en Monterrey: oído, nariz y garganta", "Padecimientos y tratamientos de oído, nariz y garganta en niños y adultos. Cuándo acudir al otorrino y qué esperar. Dra. Irina González Sáez, Cumbres."),
-    "sueno": ("Especialista en ronquido y apnea del sueño en Monterrey", "Otorrinolaringólogo especialista en desórdenes respiratorios del dormir: estudio del sueño, CPAP y cirugía de ronquido y apnea. Dra. Irina González Sáez."),
+    "inicio-v2": ("Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez", "Otorrinolaringólogo certificado en Monterrey, especialista en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos en Cumbres."),
+    "dra-irina-gonzalez-saez": ("Dra. Irina González Sáez | Otorrino especialista en sueño", "Certificada por el Consejo Mexicano de ORL y CCC, con formación en dos países y subespecialidad en trastornos respiratorios del dormir. Cumbres, Monterrey."),
+    "otorrinolaringologia": ("Otorrinolaringología en Monterrey: oído, nariz y garganta", "Otorrino en Cumbres, Monterrey: oído, nariz y garganta en niños desde los 0 meses y adultos. Qué atiendo, cómo trabajo y cómo agendar tu consulta."),
+    "sueno": ("Especialista en ronquido y apnea del sueño en Monterrey", "Ronquido y apnea del sueño en Monterrey: valoración de la vía aérea, estudio del sueño en casa, CPAP y cirugía. Dra. Irina González Sáez, otorrino."),
     "primera-consulta": ("Primera consulta con la Dra. Irina González Sáez | Qué esperar", "Cómo es la consulta de otorrinolaringología: 30 minutos, exploración completa y plan claro. Qué llevar, costos y seguros."),
     "contacto": ("Contacto y ubicación | Dra. Irina González Sáez, Cumbres", "Consultorio en CAB Medical Headquarters, Av. Paseo de los Leones 2341, Cumbres 2.º Sector, Monterrey. Horario, mapa, estacionamiento y WhatsApp."),
     "preguntas-frecuentes": ("Preguntas frecuentes | Dra. Irina González Sáez", "Horario, costo de consulta, seguros, atención a niños y hospitales. Respuestas de servicio del consultorio de la Dra. Irina González Sáez."),
-    "aviso-de-privacidad": ("Aviso de privacidad | Dra. Irina González Sáez", "Cómo tratamos sus datos personales conforme a la LFPDPPP."),
+    "aviso-de-privacidad": ("Aviso de privacidad | Dra. Irina González Sáez", "Cómo tratamos sus datos personales conforme a la LFPDPPP: qué recabamos, para qué, con quién los compartimos y cómo ejercer sus derechos ARCO."),
     "aviso-medico": ("Aviso médico | Dra. Irina González Sáez", "La información del sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias."),
     "terminos-de-uso": ("Términos de uso | Dra. Irina González Sáez", "Condiciones de uso del sitio web de la Dra. Irina González Sáez."),
     "gracias": ("Mensaje recibido | Dra. Irina González Sáez", "Recibimos tu solicitud; te contactamos en horario de consultorio."),
+    # D-082: las 5 fichas de sueño publicadas (condicion/tratamiento). Solo título con «Monterrey» (búsqueda local); la descripción
+    # la conserva Rank Math (extracto de la ficha aprobada por la Dra.). setup-pages las busca también entre esos tipos.
+    "ronquido": ("Tratamiento del ronquido en Monterrey | Dra. Irina González", ""),
+    "apnea-obstructiva-del-sueno": ("Apnea obstructiva del sueño en Monterrey | Dra. Irina González", ""),
+    "estudio-del-sueno": ("Estudio del sueño en casa en Monterrey | Dra. Irina González", ""),
+    "cpap": ("CPAP para apnea del sueño en Monterrey | Dra. Irina González", ""),
+    "cirugia-de-ronquido-y-apnea": ("Cirugía de ronquido y apnea en Monterrey | Dra. Irina González", ""),
 }
 
 out = pathlib.Path(__file__).parent / "pages"

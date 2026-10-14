@@ -242,6 +242,10 @@ final class Graph {
 		} elseif ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) ) {
 			$nodes[] = self::physician();
 			$nodes[] = $this->medical_web_page( get_queried_object_id() );
+		} elseif ( is_page( [ 'otorrinolaringologia', 'sueno' ] ) && 'publish' === get_post_status( get_queried_object_id() ) ) {
+			// D-076/D-082: las dos páginas cortas de área, revisadas por la Dra. en /briefing/guia/.
+			$nodes[] = self::physician();
+			$nodes[] = $this->area_page( get_queried_object_id() );
 		} elseif ( is_page( 'contacto' ) ) {
 			$nodes[] = self::physician();
 			$nodes[] = [
@@ -297,6 +301,40 @@ final class Graph {
 			'inLanguage' => 'es-MX',
 			'mainEntity' => $questions,
 		] : [];
+	}
+
+	/**
+	 * Página de área (Otorrinolaringología o Sueño): MedicalWebPage de la especialidad, revisada por la Dra. En Sueño, «about»
+	 * nombra las dos condiciones que atiende la página; la fecha de revisión es la de su aprobación en la guía.
+	 *
+	 * @param int $post_id Página.
+	 */
+	private function area_page( int $post_id ): array {
+		$page     = [
+			'@type'      => 'MedicalWebPage',
+			'url'        => get_permalink( $post_id ),
+			'name'       => get_the_title( $post_id ),
+			'inLanguage' => 'es-MX',
+			'specialty'  => 'https://schema.org/Otolaryngologic',
+			'reviewedBy' => [ '@id' => self::physician_id() ],
+		];
+		$approved = (string) get_post_meta( $post_id, '_di_page_approved_at', true );
+		if ( '' !== $approved ) {
+			$page['lastReviewed'] = substr( $approved, 0, 10 );
+		}
+		if ( 'sueno' === get_post_field( 'post_name', $post_id ) ) {
+			$page['about'] = [
+				[
+					'@type' => 'MedicalCondition',
+					'name'  => 'Apnea obstructiva del sueño',
+				],
+				[
+					'@type' => 'MedicalCondition',
+					'name'  => 'Ronquido',
+				],
+			];
+		}
+		return $page;
 	}
 
 	private function medical_web_page( int $post_id ): array {
