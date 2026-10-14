@@ -1,0 +1,73 @@
+{
+  "rows": [
+    {
+      "mode": "normal",
+      "run": 1,
+      "version": "12.2.1",
+      "score": 0.75,
+      "lcp": 4457.176500000001,
+      "cls": 0,
+      "bytes": 399927
+    },
+    {
+      "mode": "normal",
+      "run": 2,
+      "version": "12.2.1",
+      "score": 0.75,
+      "lcp": 4445.515,
+      "cls": 0,
+      "bytes": 399966
+    },
+    {
+      "mode": "normal",
+      "run": 3,
+      "version": "12.2.1",
+      "score": 0.8,
+      "lcp": 3998.086,
+      "cls": 0,
+      "bytes": 399978
+    },
+    {
+      "mode": "reduce",
+      "run": 1,
+      "version": "12.2.1",
+      "score": 0.75,
+      "lcp": 4449.165000000001,
+      "cls": 0,
+      "bytes": 399929
+    },
+    {
+      "mode": "reduce",
+      "run": 2,
+      "version": "12.2.1",
+      "score": 0.73,
+      "lcp": 4526.8635,
+      "cls": 0,
+      "bytes": 399926
+    },
+    {
+      "mode": "reduce",
+      "run": 3,
+      "version": "12.2.1",
+      "score": 0.75,
+      "lcp": 4454.3525,
+      "cls": 0,
+      "bytes": 399926
+    }
+  ],
+  "median": {
+    "normal": {
+      "score": 0.75,
+      "lcp": 4445.515,
+      "cls": 0,
+      "bytes": 399966
+    },
+    "reduce": {
+      "score": 0.75,
+      "lcp": 4454.3525,
+      "cls": 0,
+      "bytes": 399926
+    }
+  },
+  "limits": "Local Chrome Windows, Lighthouse12.2.1 mobile simulated default, 3 runs, GA blocked in both modes; laboratory not field data. Full reports ignored in tmp."
+}

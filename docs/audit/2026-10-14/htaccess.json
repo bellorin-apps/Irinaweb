@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "one_marker": true,
+    "before_wordpress": true,
+    "unrelated_preserved": true,
+    "removal_restores": true,
+    "second_run_guard": true,
+    "backup_before_mutation": true
+  },
+  "limits": "Extracted actual awk programs on synthetic local file. No deployment, env.sh, remote htaccess or server modules inspected."
+}

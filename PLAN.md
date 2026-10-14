@@ -44,9 +44,9 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 1.1 | Canal técnico: red amplia del entorno + Application Password del WordPress NUEVO (REST); SSH solo desde la PC | 2 | OWNER | D-018, D-021 |
-| 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | REVIEW | Inventario13/10 actualizado; falta lista de44adjuntos y clasificación/destino por ítem, más entradas pie/legal. Ver docs/audit/2026-10-13/veredictos-inventario.md |
+| 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | DONE | CSV 44 IDs únicos y clasificación (26 KEEP/17 REMOVE/1 REPLACE opcional), pie/legal detallados; retirada D-075 atestada con respaldo y 322 preservado. 27 adjuntos actuales reportados, páginas sin roturas observadas. Informe: docs/REVISION_2026-10-14.md |
 | 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | TODO | |
-| 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | REVIEW | Capturas de José 2026-10-14 (datos de GSC al 8/10/26): 5 indexadas, 9 sin indexar por 5 motivos: redirección 3, noindex 2, 404 1, rastreada sin indexar 2, duplicada con canónica elegida por Google 1; portada, Dra., Primera consulta y Contacto «La URL está en Google» (José, 2026-10-14). Aviso de traslado de otro sitio (otorrino-monterrey.com, 301 verificado). Ejemplos revisados 2026-10-14: 404 = `/wp-*.php` (patrón literal rastreado el 10 ago, no es una página; 404 correcto, sin acción); rastreada sin indexar = aviso-de-privacidad y aviso-medico (legales, rastreadas el 10 oct, index + canónica correctas; decisión de Google, sin acción); duplicada = /links/ (rastreada el 8 ago; hoy noindex por diseño, pasará a «excluida por noindex»). Sin problemas a corregir. Sitemaps: sitemap_index.xml enviado el 13 oct, «Correcto»; Google leyó page-sitemap.xml por última vez el 4 oct (2 URL; hoy lista 8). José lo reenvió el 2026-10-14 para forzar nueva lectura; repetir tras publicar las 5 fichas de sueño (aparecerán condicion- y tratamiento-sitemap) |
+| 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | DONE | Capturas de José (datos al 8/10), cinco motivos y ejemplos explicados, sitemap Correcto y reenviado 14/10. Sitemap actual incluye cinco fichas y excluye archivos 404; no se infiere cobertura nueva. Informe: docs/REVISION_2026-10-14.md |
 | 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | DONE | InformeWP-CLI13/10: es_MX,Monterrey,formatos,Hello/child,ausenciaAstra/SiteKit y hardening confirmados. DISPLAY=true sinDEBUG no bloquea. Ver docs/audit/2026-10-13/veredictos-inventario.md |
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | DONE | Manual 2026-10-07 16:41 descargado; semanal automático activo |
 | 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | DESCOPED | D-080: el plan Premium no incluye Staging y José no lo amplía; sitio corto, respaldo antes de cada despliegue y prueba de formulario de José con su correo |
@@ -109,7 +109,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 6.2 | Footer | 2 | DONE | Verificado en /inicio-v2/ |
 | 6.3 | Home | 5 | DONE | /inicio-v2/ en producción (noindex): 8 widgets, header/footer del tema, QA visual OK escritorio y móvil; pendiente CP3 |
 | 6.4 | Página Dra. Irina (entidad/autora) | 5 | DONE | FIX→DONE: pública 200/h1/main/schema/migas, narrativa y reduced-motion verificados. Teclado de logos y dos títulos D-049 corregidos y probados localmente; despliegue pendiente. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | REVIEW | medical-page.php; D-082: 5 fichas de sueño publicadas el 2026-10-14 en /sueno/{slug}/ (200, schema MedicalWebPage/MedicalTherapy, migas Inicio › Sueño › ficha, rutas del tipo 301, consola limpia en 1440 y Galaxy; BATON/QA de la sesión local). Las otras 21 siguen en borrador (D-076) |
+| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DONE | Cinco fichas /sueno/ 200, h1/main, sin Borrador, schema y migas/canónicas correctas. Cinco rutas antiguas del tipo correspondiente 301; diez borradores 404. Relacionados filtrados por publish. Informe: docs/REVISION_2026-10-14.md |
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
 | 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | TODO | |
@@ -120,13 +120,13 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | REVIEW | Home y Dra. publicadas. D-076: ORL y Sueño cortas publicadas el 2026-10-14 tras aprobación de la Dra. y OK de José (D-078/D-082), con los añadidos de la Dra. en ORL (rinoplastia funcional y estética, cirugía de sueño); 200 sin «Borrador», anclas verificadas |
+| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | DONE | ORL/Sueño cortas publicadas, títulos D-049, seis anclas bajo cabecera, cinco enlaces de fichas en Sueño y sin desborde en cuatro anchos. Publicación declarada 13/10 18:50 tras aprobación y OK. Informe: docs/REVISION_2026-10-14.md |
 | 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | DONE | 14 condiciones + 9 tratamientos redactados con las respuestas de la Dra. (D-039); D-076: archivados en borrador, sin enlaces, menú ni archivo público (404) |
 | 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | DONE | DONE: Primera consulta/Contacto/FAQ 200, sin Borrador; títulos, FAQPage, fondo continuo y cuatro pasos verificados. Pacientes cubierto por Primera consulta + FAQ. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
 | 7.4 | Bibliografía verificable por página | 2 | DOING | Fuentes propuestas por ficha (SMORL, AAO-HNS, AASM, EPOS, ARIA), archivadas con las fichas. D-076: las páginas cortas no hacen afirmaciones que requieran cita; Codex decide si se cierra |
 | 7.5 | Revisión técnica/SEO de drafts | 2 | TODO | |
-| 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | REVIEW | Hecha: la Dra. aprobó ORL y Sueño en `/briefing/guia/` (usuario revisor_medico, 18:03 y 18:38 de Monterrey, 2026-10-13, revision-log) y las 26 fichas en la app de revisión (D-082). Ninguna aprobación generada por las sesiones |
-| 7.7 | CHECKPOINT 4 | 1 | REVIEW | José dio el OK de publicación de ORL, Sueño y las 5 fichas de sueño (D-078/D-082, 2026-10-14) tras la aprobación médica |
+| 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | DONE | Atestación PLAN/BATON/D-082: revisor_medico aprobó ORL 13/10 18:03 y Sueño 18:38; 26 fichas aprobadas, última 18:18. Backend rol/capacidad/fecha/autor/log revisado; sin nueva lectura del log privado ni aprobaciones de agentes. Informe: docs/REVISION_2026-10-14.md |
+| 7.7 | CHECKPOINT 4 | 1 | DONE | OK previo de José documentado D-078/D-082/BATON; publicación local declarada 13/10 18:50. Se corrige fecha histórica 14/10 en notas, sin publicar ni alterar clínica. Informe: docs/REVISION_2026-10-14.md |
 
 ## FASE 8 — Escalado del sitio
 
@@ -134,7 +134,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 8.1 | Resto de páginas de condición/servicio | 5 | DESCOPED | D-076: sitio corto; las 26 fichas quedan en borrador, sin borrarse |
 | 8.2 | Centro de recursos/artículos iniciales | 3 | DESCOPED | D-076: `/recursos/` responde 404; los 3 artículos siguen en borrador con fuentes |
-| 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | REVIEW | Verificado en vivo 2026-10-13: dirección completa (CAB, piso 2, consultorio 6), mapa con estilo D-065 + «Cómo llegar», estacionamiento gratuito, elevador y silla de ruedas, «previa cita» (D-032, José lo mantiene), formulario, WhatsApp/tel y aviso de urgencias; un h1. José: sin referencias extra (basta el mapa); foto de fachada pendiente, opcional (D-079) |
+| 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | DONE | Contacto público completo: dirección/mapa/Cómo llegar, estacionamiento/acceso, previa cita D-079, WhatsApp/tel, formulario y urgencias. Captcha DOM presente; entrega real la prueba José, no agentes. Informe: docs/REVISION_2026-10-14.md |
 | 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | DONE | En vivo 2026-10-10 (D-050); SMTP por constantes con contraseña de aplicación |
 | 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | DONE | Publicados 2026-10-10 (D-051); el propietario puede pedir cambios (8.6) |
 | 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
@@ -157,8 +157,8 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | DONE | DONE: políticas de optimización aprobadas verificadas con UA Galaxy/iPhone/desktop y pesos registrados. Móvil 1600/q95, escritorio q100, alfa lossless y diferidos. No certifica CWV ni todos los presupuestos antiguos; informe integral en 10.2. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | REVIEW | «Antes» y «después» en PERFORMANCE.md (Lighthouse 12.2.1, medianas). Portada escritorio: CLS 0,236 → 0,001, 5204 → 4070 KiB, perf 63 → 86; Dra./Primera consulta/Contacto escritorio a menos de la mitad de peso; accesibilidad 100 en Dra. Límites del entorno documentados; datos de campo pendientes en GSC |
+| 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | DONE | Auditoría 13/10: políticas de optimización aprobadas verificadas con UA Galaxy/iPhone/desktop y pesos registrados. Móvil 1600/q95, escritorio q100, alfa lossless y diferidos. No certifica CWV ni todos los presupuestos antiguos; informe integral en 10.2. Informe histórico: docs/REVISION_CINCO_TAREAS_2026-10-13.md. D-081 sustituye q100 escritorio por derivados q95 en cabeceras/fondo; ver auditoría 14/10 y PERFORMANCE |
+| 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | DONE | PERFORMANCE antes/después/después 2 y límites auditados; CLS/peso q95 documentados. Nuevo A/B tras Q-050: Sueño móvil LCP 4,446/4,454 s (3 pasadas por modo), CLS 0. Laboratorio, no CWV de campo. Informe: docs/REVISION_2026-10-14.md |
 | 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | DOING | Cabeceras de seguridad en el plugin (Q-023); resto pendiente |
 | 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | DOING | Auditoría en vivo y correcciones (Q-022); falta decisión sobre el contraste del botón de WhatsApp |
 | 10.5 | Codex: QA performance + seguridad + accesibilidad | 3 | TODO | |

@@ -1,0 +1,70 @@
+{
+    "classification": [
+        {
+            "id": "patient_es",
+            "expected": "",
+            "actual": "",
+            "pass": true
+        },
+        {
+            "id": "email_es",
+            "expected": "",
+            "actual": "",
+            "pass": true
+        },
+        {
+            "id": "patient_en",
+            "expected": "",
+            "actual": "",
+            "pass": true
+        },
+        {
+            "id": "patient_en_insurance",
+            "expected": "",
+            "actual": "",
+            "pass": true
+        },
+        {
+            "id": "pitch_en",
+            "expected": "commercial_en",
+            "actual": "commercial_en",
+            "pass": true
+        },
+        {
+            "id": "pitch_es",
+            "expected": "commercial",
+            "actual": "commercial",
+            "pass": true
+        },
+        {
+            "id": "link",
+            "expected": "link",
+            "actual": "link",
+            "pass": true
+        },
+        {
+            "id": "domain",
+            "expected": "",
+            "actual": "",
+            "pass": true
+        }
+    ],
+    "captcha": {
+        "disabled": true,
+        "one_key_disabled": true,
+        "enabled": true,
+        "empty_invalid": true,
+        "valid": true,
+        "invalid": true,
+        "offline_null": true,
+        "http_error_null": true,
+        "log_minimal": true
+    },
+    "security": {
+        "public_users_removed": true,
+        "logged_routes_unchanged": true,
+        "oembed_no_author": true,
+        "spam_silent_no_mail": true
+    },
+    "limits": "Isolated stubs; synthetic tokens, no network, mail or real WordPress."
+}

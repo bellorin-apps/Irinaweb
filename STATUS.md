@@ -1,15 +1,13 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado: 2026-10-13 · Claude cloud · D-076 (sitio corto); antes, Codex · auditoría de cinco tareas sobre 79d24ff.
+Actualizado: 2026-10-14 · Codex · encargo completo sobre dec8adb.
 
-**48,76% español: 118/242 pesos, 46/92 tareas DONE.** Solo DONE suma; inglés aparte; 8.1, 8.2 y 8.8 fuera de alcance por D-076 (estado DESCOPED, D-077: 11 pesos fuera del total). PLAN → PROGRESS.
+**60,76% español: 144/237 pesos, 54/90 DONE.** Cinco tareas DESCOPED (16 pesos) por D-076/077/080; inglés aparte. PLAN → PROGRESS.
 
-D-076 implementado en la rama, pendiente de despliegue por Claude local: ORL y Sueño cortas (en borrador hasta que la Dra. apruebe), motivos de la portada hacia sus anclas, archivos de fichas/recursos en 404 y `/briefing/guia/` como revisión de dos páginas. La Dra. ya no revisa fichas.
+Ocho tareas 1.2/1.4/6.5/7.1/7.6/7.7/8.3/10.2 DONE con evidencia en docs/REVISION_2026-10-14.md. Inventario y limpieza autorizada documentados; GSC histórico explicado; ORL/Sueño y cinco fichas públicas tras revisión médica y OK de José atestados. Diez borradores muestreados 404; no se publica ni despublica nada.
 
-6.4, 7.3, 8.9, 9.4 y 10.1 DONE tras revisión y correcciones. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md. Producción previa reportada por Claude: f5c1571. Las correcciones nuevas de teclado de logos, dos títulos de Dra., manifest y exclusión de editores en GA4 están probadas localmente, pendientes de despliegue. Codex no desplegó.
+Producción declarada hasta 73f04d6; HTTP público contrastado. Q-048/049/050/052/053/054 verificados en su alcance. Nuevos Q-055/056/057 FIXED_LOCAL: falsos positivos ingleses del antispam, foco del menú y reset captcha tras fallo de red. Solo código pendiente de despliegue por Claude. Sin cambios de contenido, marca, menús, sombras ni claves; cuatro HTML de José preservados.
 
-Once rutas públicas 200, un h1/main, sin Borrador/errores JS/overflow; OG/Twitter JPEG 1200×630. Fondo continuo y pasos ilustrados verificados; narrativa en Galaxy/iPhone/desktop normal y reduced-motion. PHP 77, PHPCS, JS/bash y regresiones pasan. Evidencia y límites en QA e informe: emulación Chromium no equivale a Safari nativo; fixtures no certifican WordPress autenticado ni entrega de correo/eventos reales.
+Doce páginas 200, h1/main y cuatro anchos sin overflow/error JS. PHP 79/PHPCS/JS/bash pasan; fixtures aislados sin correo/red real. Lighthouse A/B móvil Sueño: 4,446/4,454 s LCP, sin regresión consistente del hero; no CWV de campo. UI con JS local no demuestra despliegue. Sin staging D-080; editor autenticado y prueba humana captcha/formulario a cargo de José.
 
-1.2 sigue REVIEW: medios.csv individual, uso y clasificación aprobada por José, entradas pie/legal. 1.5/3.6 DONE según inventario local. GSC tiene confirmación histórica aportada en DISCOVERY/D-022; cobertura actual permanece en 1.4. 10.1 acredita las optimizaciones aprobadas, no todos los presupuestos históricos ni CWV: informe integral en 10.2.
-
-Claude despliega según BATON/NEXT y verifica el patch público. Staging/idempotencia/roles, Safari nativo, GBP y aprobación médica/legal conservan gates. Fichas, recursos y ORL/Sueño siguen pendientes de revisión médica. Cuatro HTML locales de José preservados. Sin SMTP, secretos ni operaciones privadas.
+NEXT/BATON fijan el relevo. Pendientes: 2FA, GBP, revisión legal/privacidad de Cloudflare y datos de campo. Fichas restantes archivadas en borrador; originales y respaldos conservados.

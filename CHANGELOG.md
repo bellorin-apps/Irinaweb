@@ -182,3 +182,9 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Q-050 (P1, LCP móvil de Sueño +2,36 s con D-084): el título y la entradilla del hero ya no empiezan en opacity 0; solo suben 14 px (`di-hero-rise`). Antetítulo, botones y trust conservan el fundido; la foto no cambia. Medido aquí en Chromium con CPU ×4 y red lenta (ruidoso; no reproduce la simulación de Lighthouse): LCP de Sueño y ORL en el rango de «reducir movimiento». El A/B con Lighthouse lo repite la sesión local.
 - Q-052 (P1, falso positivo de SpamGuard): un dominio suelto contaba como enlace, así que «mi correo es juan@gmail.com» o «la vi en doctoralia.com.mx» se descartaban en silencio. Ahora solo cuentan los enlaces explícitos (http, https, www.). Prueba de `classify()` con 8 mensajes: 5 de pacientes pasan (2 con correo, 1 con doctoralia.com.mx, 1 en inglés) y 3 de spam se descartan. PHPCS del archivo corregido con phpcbf (solo formato).
 - Q-054: el sitio deja de anunciar versiones. `Security\Hardening`: meta generator de Elementor desactivado (filtro `pre_option_elementor_meta_generator_tag`, equivale a su ajuste) y sin cabecera X-Powered-By en lo que genera PHP. `tools/deploy/harden-htaccess.sh` (idempotente, con respaldo y `--remove`): readme.html, license.txt y wp-config-sample.php en 403 sin borrarlos, y `Header unset X-Powered-By` también para la caché de LiteSpeed. Comprobado: PHPCS, bash -n, filtro activo en WordPress local; la verificación en producción la hace el script.
+
+## 2026-10-14 · Codex · auditoría completa
+
+- Ocho tareas DONE y seis hallazgos previos verificados; progreso 144/237, 60,76%. Informe docs/REVISION_2026-10-14.md.
+- Q-055/056/057 locales: reducir falsos positivos ingleses, foco del menú y reset captcha tras fallo de red. PHPCS enqueue sin cambio funcional.
+- Evidencia HTTP/fixtures/A-B Lighthouse; documentación/progreso/relevo actualizados. Sin despliegue, publicaciones, borrados, secretos ni SMTP.

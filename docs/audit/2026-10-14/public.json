@@ -1,0 +1,2257 @@
+{
+  "slugs": [
+    "ronquido",
+    "apnea-obstructiva-del-sueno",
+    "estudio-del-sueno",
+    "cpap",
+    "cirugia-de-ronquido-y-apnea"
+  ],
+  "rows": [
+    {
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/",
+      "types": [
+        "WebSite",
+        "SearchAction",
+        "ImageObject",
+        "WebPage",
+        "Physician",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical"
+      ],
+      "breadcrumbs": [],
+      "generator": 0,
+      "headings": [
+        {
+          "text": "\n\t\t\tDos especialidades, una misma forma de atender\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tMotivos de consulta frecuentes\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tQué esperar en tu consulta\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\t\tDel ronquidoal descanso, enun solo lugar\t\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tCAB Medical,Headquarters\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t¿Hablamos de lo que te está quitando el descanso?\t\t",
+          "b": false,
+          "em": true
+        }
+      ],
+      "sleepLinks": [
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/sueno/#atiendo"
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "matrix(1, 0, 0, 1, 0, 14)",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "ProfilePage"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+              "name": "Dra. Irina González Sáez"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nConóceme",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "\n\t\t\t«Escucharte también es parte del tratamiento»\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\tCredenciales verificables\t\t",
+          "b": false,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tMembresías y hospitales\t\t\t",
+          "b": false,
+          "em": true
+        },
+        {
+          "text": "\n\t\tFormación continua en cirugía de sueño\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\tAgenda tuprimera consulta\t\t",
+          "b": false,
+          "em": true
+        }
+      ],
+      "sleepLinks": [],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/primera-consulta/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/primera-consulta/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/primera-consulta/",
+              "name": "Primera consulta"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nPrimera consulta",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "\n\t\t\tAsí es la consulta\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tLlega con lo que ya tienes\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tCosto, pagos y seguros\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\tAgenda tuprimera consulta\t\t",
+          "b": false,
+          "em": true
+        }
+      ],
+      "sleepLinks": [],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/contacto/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "ContactPage"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/contacto/",
+              "name": "Contacto"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nContacto",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "\n\t\t\tCAB Medical,Headquarters\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\t\t¿Prefieres quete llamemos?\t\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tEste sitio no es uncanal de urgencias\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t¿Agendamos?\t\t",
+          "b": false,
+          "em": true
+        }
+      ],
+      "sleepLinks": [],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ],
+      "contact": {
+        "text": "CONTACTO\n\nConsultorio en\nCumbres, Monterrey\n\nCAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Consulta previa cita: agenda por WhatsApp.\n\nAgendar por WhatsApp\nInicio\nContacto\n\nCÓMO LLEGAR\n\nCAB Medical,\nHeadquarters\nDirección\nAv. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector, 64610 Monterrey, Nuevo León\nEstacionamiento\nGratuito\nAcceso\nElevador y acceso para silla de ruedas\nTeléfono\n(81) 1569 5744\n\nHorario: Previa cita. Agenda por WhatsApp.\n\nAgendar por WhatsApp\nCómo llegar\n\nESCRÍBENOS\n\n¿Prefieres que\nte llamemos?\n\nDéjanos tu nombre y teléfono y te contactamos en horario de consultorio. Para agendar más rápido, WhatsApp.\n\nAgendar por WhatsApp\n\nSitio web\n\nNombre\nTeléfono o WhatsApp\nMotivo\nElige una opción\nRonquido o apnea del sueño\nOído\nNariz y senos paranasales\nGarganta y voz\nNiños\nOtro / no lo sé\nCorreo (opcional)\nMensaje (opcional)\nAcepto que se usen mis datos para contactarme y agendar, conforme al aviso de privacidad.\n\nDatos mínimos: no guardamos tu mensaje en el sitio; llega directo al consultorio. Si es una urgencia, acude a un servicio de urgencias.\n\nEnviar solicitud\n\nURGENCIAS\n\nEste sitio no es un\ncanal de urgencias\n\nSi tienes dificultad para respirar, sangrado nasal que no se detiene o un dolor intenso, acude al servicio de urgencias más cercano. Para citas y dudas, escríbenos por WhatsApp.\n\nAGENDA\n\n¿Agendamos?\n\nWhatsApp es el canal más rápido para citas.\n\nAgendar por WhatsApp",
+        "form": true,
+        "captcha": true,
+        "maps": true,
+        "whatsapp": true,
+        "phone": false
+      }
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/preguntas-frecuentes/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/preguntas-frecuentes/",
+              "name": "Preguntas frecuentes"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nPreguntas frecuentes",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "\n\t\t\tConsulta y agenda\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t¿Otra duda?\t\t",
+          "b": false,
+          "em": false
+        }
+      ],
+      "sleepLinks": [],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/otorrinolaringologia/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/otorrinolaringologia/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/otorrinolaringologia/",
+              "name": "Otorrinolaringología"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nOtorrinolaringología",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "\n\t\t\tLo que atiendo del oído\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tLo que atiendo de la nariz\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tLo que atiendo de la garganta\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tConsultorio y cirugía\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tPrimero escucharte, luego explorar\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t¿Un síntoma que no se va?\t\t",
+          "b": true,
+          "em": true
+        }
+      ],
+      "sleepLinks": [],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ],
+      "anchors": [
+        {
+          "id": "oido",
+          "top": 96.015625,
+          "headerBottom": 66
+        },
+        {
+          "id": "nariz",
+          "top": 95.90625,
+          "headerBottom": 66
+        },
+        {
+          "id": "garganta",
+          "top": 95.890625,
+          "headerBottom": 66
+        },
+        {
+          "id": "procedimientos",
+          "top": 96.4375,
+          "headerBottom": 66
+        }
+      ]
+    },
+    {
+      "route": "/sueno/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/sueno/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nSueño",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "\n\t\t\tRonquido y apnea\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tLa ruta completa\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t\tUn otorrino para la vía aérea\t\t\t",
+          "b": true,
+          "em": true
+        },
+        {
+          "text": "\n\t\t¿Hablamos de lo que te quita el descanso?\t\t",
+          "b": true,
+          "em": true
+        }
+      ],
+      "sleepLinks": [
+        "https://drairinagonzalez.com/sueno/ronquido/",
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+        "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cpap/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ],
+      "anchors": [
+        {
+          "id": "atiendo",
+          "top": 96.015625,
+          "headerBottom": 66
+        },
+        {
+          "id": "ruta",
+          "top": 96.0625,
+          "headerBottom": 66
+        }
+      ]
+    },
+    {
+      "route": "/sueno/ronquido/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/sueno/ronquido/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "CreativeWork",
+        "CreativeWork",
+        "MedicalCondition",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/ronquido/",
+              "name": "Ronquido"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nSueño\nRonquido",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "Qué es",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Síntomas frecuentes",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Causas",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se diagnostica",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Tratamientos",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "\n\t\t¿Hablamos de lo que te está quitando el descanso?\t\t",
+          "b": false,
+          "em": false
+        }
+      ],
+      "sleepLinks": [
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/"
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sueno/apnea-obstructiva-del-sueno/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "CreativeWork",
+        "CreativeWork",
+        "MedicalCondition",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+              "name": "Apnea obstructiva del sueño"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nSueño\nApnea obstructiva del sueño",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "Qué es",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Síntomas frecuentes",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Causas",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se diagnostica",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Tratamientos",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "\n\t\t¿Hablamos de lo que te está quitando el descanso?\t\t",
+          "b": false,
+          "em": false
+        }
+      ],
+      "sleepLinks": [
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cpap/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+        "https://drairinagonzalez.com/sueno/ronquido/"
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sueno/estudio-del-sueno/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "MedicalTest"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+              "name": "Estudio del sueño en casa"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nSueño\nEstudio del sueño en casa",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "En qué consiste",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Para quién está indicado",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Estudio previo",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se realiza",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Recuperación",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Riesgos y alternativas",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Qué resuelve",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "\n\t\t¿Hablamos de lo que te está quitando el descanso?\t\t",
+          "b": false,
+          "em": false
+        }
+      ],
+      "sleepLinks": [
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/sueno/ronquido/",
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cpap/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sueno/cpap/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/sueno/cpap/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "MedicalTherapy"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/cpap/",
+              "name": "CPAP"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nSueño\nCPAP",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "En qué consiste",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Para quién está indicado",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Estudio previo",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se realiza",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Recuperación",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Riesgos y alternativas",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Qué resuelve",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "\n\t\t¿Hablamos de lo que te está quitando el descanso?\t\t",
+          "b": false,
+          "em": false
+        }
+      ],
+      "sleepLinks": [
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+        "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sueno/cirugia-de-ronquido-y-apnea/",
+      "status": 200,
+      "h1": 1,
+      "main": 1,
+      "draft": false,
+      "canonical": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "CreativeWork",
+        "MedicalProcedure"
+      ],
+      "breadcrumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+              "name": "Cirugía de ronquido y apnea"
+            }
+          }
+        ]
+      ],
+      "visibleCrumbs": "Inicio\nSueño\nCirugía de ronquido y apnea",
+      "generator": 0,
+      "headings": [
+        {
+          "text": "En qué consiste",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Para quién está indicado",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Estudio previo",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se realiza",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Recuperación",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Riesgos y alternativas",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Qué resuelve",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "b": false,
+          "em": false
+        },
+        {
+          "text": "\n\t\t¿Hablamos de lo que te está quitando el descanso?\t\t",
+          "b": false,
+          "em": false
+        }
+      ],
+      "sleepLinks": [
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/sueno/ronquido/",
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cpap/"
+      ],
+      "widths": [
+        {
+          "width": 360,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 393,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": false,
+          "hero": [
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            },
+            {
+              "opacity": "1",
+              "transform": "none",
+              "animation": "di-hero-rise"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "slug": "ronquido",
+      "type": "padecimientos",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/ronquido/"
+    },
+    {
+      "slug": "ronquido",
+      "type": "tratamientos",
+      "status": 404
+    },
+    {
+      "slug": "apnea-obstructiva-del-sueno",
+      "type": "padecimientos",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/"
+    },
+    {
+      "slug": "apnea-obstructiva-del-sueno",
+      "type": "tratamientos",
+      "status": 404
+    },
+    {
+      "slug": "estudio-del-sueno",
+      "type": "padecimientos",
+      "status": 404
+    },
+    {
+      "slug": "estudio-del-sueno",
+      "type": "tratamientos",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/estudio-del-sueno/"
+    },
+    {
+      "slug": "cpap",
+      "type": "padecimientos",
+      "status": 404
+    },
+    {
+      "slug": "cpap",
+      "type": "tratamientos",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/cpap/"
+    },
+    {
+      "slug": "cirugia-de-ronquido-y-apnea",
+      "type": "padecimientos",
+      "status": 404
+    },
+    {
+      "slug": "cirugia-de-ronquido-y-apnea",
+      "type": "tratamientos",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+    }
+  ],
+  "hidden": [
+    {
+      "route": "/padecimientos/otitis/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/tapon-de-cerumen/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/hipoacusia/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/tinnitus/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/vertigo/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/rinitis/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/sinusitis/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/desviacion-de-tabique-nasal/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/polipos-nasales/",
+      "status": 404
+    },
+    {
+      "route": "/padecimientos/epistaxis/",
+      "status": 404
+    }
+  ],
+  "security": [
+    {
+      "route": "/wp-json/wp/v2/users",
+      "status": 404,
+      "redirect": false,
+      "poweredBy": false
+    },
+    {
+      "route": "/wp-json/wp/v2/users/1",
+      "status": 404,
+      "redirect": false,
+      "poweredBy": false
+    },
+    {
+      "route": "/?author=1",
+      "status": 404,
+      "redirect": false,
+      "poweredBy": false
+    },
+    {
+      "route": "/readme.html",
+      "status": 403,
+      "redirect": false,
+      "poweredBy": false
+    },
+    {
+      "route": "/license.txt",
+      "status": 403,
+      "redirect": false,
+      "poweredBy": false
+    },
+    {
+      "route": "/wp-config-sample.php",
+      "status": 403,
+      "redirect": false,
+      "poweredBy": false
+    },
+    {
+      "route": "/wp-login.php",
+      "status": 200,
+      "redirect": false,
+      "poweredBy": false
+    },
+    {
+      "route": "/wp-json/",
+      "status": 200,
+      "redirect": false,
+      "poweredBy": false
+    },
+    {
+      "route": "/sitemap_index.xml",
+      "status": 200,
+      "redirect": false,
+      "poweredBy": false
+    }
+  ],
+  "sitemap": [
+    {
+      "path": "/page-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/",
+        "https://drairinagonzalez.com/otorrinolaringologia/",
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/terminos-de-uso/",
+        "https://drairinagonzalez.com/aviso-medico/",
+        "https://drairinagonzalez.com/aviso-de-privacidad/",
+        "https://drairinagonzalez.com/preguntas-frecuentes/",
+        "https://drairinagonzalez.com/contacto/",
+        "https://drairinagonzalez.com/primera-consulta/",
+        "https://drairinagonzalez.com/dra-irina-gonzalez-saez/"
+      ]
+    },
+    {
+      "path": "/condicion-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+        "https://drairinagonzalez.com/sueno/ronquido/"
+      ]
+    },
+    {
+      "path": "/tratamiento-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cpap/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+      ]
+    }
+  ],
+  "menus": [
+    {
+      "motion": "no-preference",
+      "active": "di-burger",
+      "expanded": "true",
+      "top": 92,
+      "headerBottom": 92,
+      "barVisibility": "hidden",
+      "links": [
+        "Inicio",
+        "Otorrino",
+        "Sueño",
+        "Conóceme",
+        "Primera consulta",
+        "Contacto",
+        "Agendar por WhatsApp",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "tabAfterLast": {
+        "inside": false,
+        "tag": "A"
+      },
+      "escape": {
+        "focused": true,
+        "expanded": "false"
+      }
+    },
+    {
+      "motion": "reduce",
+      "active": "di-burger",
+      "expanded": "true",
+      "top": 92,
+      "headerBottom": 92,
+      "barVisibility": "hidden",
+      "links": [
+        "Inicio",
+        "Otorrino",
+        "Sueño",
+        "Conóceme",
+        "Primera consulta",
+        "Contacto",
+        "Agendar por WhatsApp",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "tabAfterLast": {
+        "inside": false,
+        "tag": "A"
+      },
+      "escape": {
+        "focused": true,
+        "expanded": "false"
+      }
+    }
+  ],
+  "errors": []
+}

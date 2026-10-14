@@ -269,3 +269,29 @@ Comprobación en solo lectura: XML-RPC POST 403; debug.log 403; listado de uploa
 - **OWNER:** 2FA del usuario administrador (10.3).
 
 **Q-054 · P2 · FIX en la rama (sin desplegar):** Hardening oculta el generator de Elementor y X-Powered-By de PHP; `harden-htaccess.sh` deja readme.html/license.txt/wp-config-sample.php en 403 y quita X-Powered-By también en páginas cacheadas. Pendiente: deploy-code, el script y purga.
+
+## Auditoría Codex completa · 2026-10-14
+
+Base dec8adb; producción declarada 73f04d6. Informe vigente: docs/REVISION_2026-10-14.md.
+
+| Tarea | Veredicto | Evidencia / límite |
+|---|---|---|
+| 1.2 | DONE | CSV 44 IDs únicos y clasificación (26 KEEP/17 REMOVE/1 REPLACE opcional), pie/legal detallados; retirada D-075 atestada con respaldo y 322 preservado. 27 adjuntos actuales reportados, páginas sin roturas observadas. |
+| 1.4 | DONE | Capturas de José (datos al 8/10), cinco motivos y ejemplos explicados, sitemap Correcto y reenviado 14/10. Sitemap actual incluye cinco fichas y excluye archivos 404; no se infiere cobertura nueva. |
+| 6.5 | DONE | Cinco fichas /sueno/ 200, h1/main, sin Borrador, schema y migas/canónicas correctas. Cinco rutas antiguas del tipo correspondiente 301; diez borradores 404. Relacionados filtrados por publish. |
+| 7.1 | DONE | ORL/Sueño cortas publicadas, títulos D-049, seis anclas bajo cabecera, cinco enlaces de fichas en Sueño y sin desborde en cuatro anchos. Publicación declarada 13/10 18:50 tras aprobación y OK. |
+| 7.6 | DONE | Atestación PLAN/BATON/D-082: revisor_medico aprobó ORL 13/10 18:03 y Sueño 18:38; 26 fichas aprobadas, última 18:18. Backend rol/capacidad/fecha/autor/log revisado; sin nueva lectura del log privado ni aprobaciones de agentes. |
+| 7.7 | DONE | OK previo de José documentado D-078/D-082/BATON; publicación local declarada 13/10 18:50. Se corrige fecha histórica 14/10 en notas, sin publicar ni alterar clínica. |
+| 8.3 | DONE | Contacto público completo: dirección/mapa/Cómo llegar, estacionamiento/acceso, previa cita D-079, WhatsApp/tel, formulario y urgencias. Captcha DOM presente; entrega real la prueba José, no agentes. |
+| 10.2 | DONE | PERFORMANCE antes/después/después 2 y límites auditados; CLS/peso q95 documentados. Nuevo A/B tras Q-050: Sueño móvil LCP 4,446/4,454 s (3 pasadas por modo), CLS 0. Laboratorio, no CWV de campo. |
+
+Hallazgos adicionales:
+
+- Q-048 / Q-049 VERIFIED: sitemaps sin archivos 404/recursos; credenciales h3 y A11y 100 documentada por sesión local. No nueva auditoría completa AA.
+- Q-050 VERIFIED: h1/lead sin fundido, fin opacity 1/transform none; A/B nuevo de seis pasadas no reproduce regresión. PERFORMANCE actualizado.
+- Q-052 VERIFIED: correos/dominios sueltos pasan. Q-053 / Q-054 VERIFIED: HTTP público y fixtures Hardening; awk extraído del script conserva/restaura reglas. Editor autenticado y 2FA a cargo de José.
+- Q-055 P1 FIXED_LOCAL: preguntas legítimas en inglés por services/pricing se descartaban. Regla ahora exige además oferta comercial del remitente; corpus 8/8. No garantiza cero falsos positivos; enlaces explícitos mantienen descarte aprobado.
+- Q-056 P1 FIXED_LOCAL: menú abierto dejaba escapar foco. Primer enlace al abrir, ciclo Tab/Shift+Tab, Escape/restauración y resize pasan en normal/reducido. Barra inferior oculta y captura local revisada.
+- Q-057 P2 FIXED_LOCAL: reset Turnstile añadido a error de red/JSON además de rechazo HTTP. Dos POST sintéticos interceptados, cero envíos reales. Siteverify simulado: válido/inválido/vacío/offline; contadores sin datos personales. Fail-open solo al fallo server-side del proveedor, no a token vacío.
+
+PHP 79 sin errores, PHPCS completo sin avisos/errores; JS y bash 18 pasan. public.json = estado público; ui.json menú/form = JS local sobre HTML público, no prueba despliegue. Lighthouse A/B con GA bloqueado, laboratorio Windows; no CWV de campo ni Safari nativo. No claves, log privado, publicación, borrado, SMTP ni despliegue. D-080 elimina el gate de staging; límites autenticados se documentan. Evidencia en docs/audit/2026-10-14/.

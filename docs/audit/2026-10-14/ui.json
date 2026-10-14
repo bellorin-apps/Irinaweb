@@ -1,0 +1,224 @@
+{
+  "hero": [
+    {
+      "motion": "no-preference",
+      "route": "/",
+      "parts": [
+        {
+          "tag": "IMG",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "di-hero-photo"
+        },
+        {
+          "tag": "H1",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "di-hero-rise"
+        },
+        {
+          "tag": "P",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "di-hero-rise"
+        },
+        {
+          "tag": "P",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "di-hero-rise"
+        }
+      ],
+      "running": 0
+    },
+    {
+      "motion": "no-preference",
+      "route": "/sueno/",
+      "parts": [
+        {
+          "tag": "H1",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "di-hero-rise"
+        },
+        {
+          "tag": "P",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "di-hero-rise"
+        }
+      ],
+      "running": 0
+    },
+    {
+      "motion": "no-preference",
+      "route": "/otorrinolaringologia/",
+      "parts": [
+        {
+          "tag": "H1",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "di-hero-rise"
+        },
+        {
+          "tag": "P",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "di-hero-rise"
+        }
+      ],
+      "running": 0
+    },
+    {
+      "motion": "reduce",
+      "route": "/",
+      "parts": [
+        {
+          "tag": "IMG",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        {
+          "tag": "H1",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        {
+          "tag": "P",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        {
+          "tag": "P",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "none"
+        }
+      ],
+      "running": 0
+    },
+    {
+      "motion": "reduce",
+      "route": "/sueno/",
+      "parts": [
+        {
+          "tag": "H1",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        {
+          "tag": "P",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "none"
+        }
+      ],
+      "running": 0
+    },
+    {
+      "motion": "reduce",
+      "route": "/otorrinolaringologia/",
+      "parts": [
+        {
+          "tag": "H1",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        {
+          "tag": "P",
+          "opacity": "1",
+          "transform": "none",
+          "animation": "none"
+        }
+      ],
+      "running": 0
+    }
+  ],
+  "menu": [
+    {
+      "motion": "no-preference",
+      "firstFocused": true,
+      "tabWrap": true,
+      "shiftWrap": true,
+      "escape": true,
+      "desktopCloses": true
+    },
+    {
+      "motion": "reduce",
+      "firstFocused": true,
+      "tabWrap": true,
+      "shiftWrap": true,
+      "escape": true,
+      "desktopCloses": true
+    }
+  ],
+  "form": [
+    {
+      "networkError": false,
+      "resets": 1,
+      "sending": false
+    },
+    {
+      "networkError": true,
+      "resets": 2,
+      "sending": false
+    }
+  ],
+  "images": [
+    {
+      "width": 360,
+      "broken": 0,
+      "images": [
+        {
+          "path": "/wp-content/uploads/2026/10/hero-home-v20261010134119-1600x1067.webp",
+          "naturalWidth": 1600,
+          "transfer": 268396
+        },
+        {
+          "path": "/wp-content/uploads/2026/10/dra-escucharte-bg-v20261010134432-1600x1067.webp",
+          "naturalWidth": 1600,
+          "transfer": 98294
+        }
+      ]
+    },
+    {
+      "width": 393,
+      "broken": 0,
+      "images": [
+        {
+          "path": "/wp-content/uploads/2026/10/hero-home-v20261010134119-1600x1067.webp",
+          "naturalWidth": 1600,
+          "transfer": 268396
+        },
+        {
+          "path": "/wp-content/uploads/2026/10/dra-escucharte-bg-v20261010134432-1600x1067.webp",
+          "naturalWidth": 1600,
+          "transfer": 98294
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "broken": 0,
+      "images": [
+        {
+          "path": "/wp-content/uploads/2026/10/hero-home-v20261010134119-escritorio.webp",
+          "naturalWidth": 2400,
+          "transfer": 1095482
+        },
+        {
+          "path": "/wp-content/uploads/2026/10/dra-escucharte-bg-v20261010134432-escritorio.webp",
+          "naturalWidth": 2400,
+          "transfer": 538068
+        }
+      ]
+    }
+  ],
+  "limits": "Chromium emulation, local JS overlay for menu/form, no real POST or mail.",
+  "interceptedPosts": 2
+}

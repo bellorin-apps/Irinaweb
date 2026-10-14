@@ -96,3 +96,23 @@ Lighthouse 12.2.1 local, 3 pasadas, mediana. Comparación A/B en el mismo moment
 
 **Lectura:** en la portada, el LCP es la foto y la animación no lo cambia, porque la foto solo se escala. En Sueño, que no tiene foto, el LCP es texto del hero: al arrancar con opacidad 0 y retrasos en cascada, el LCP móvil sube **+2,36 s** de forma consistente. En escritorio no cambia. Lo mismo cabe esperar en ORL (hero de texto). **Q-050 P1 OPEN:** quitar la opacidad 0 del h1 y del lead (dejar solo el desplazamiento), o no animar el bloque que sea LCP en heros sin foto.
 
+
+## Verificación Codex posterior a Q-050 · 2026-10-14
+
+La tabla A/B anterior es histórica, anterior al fix 75afcb5. En el código y HTTP actuales h1/lead usan di-hero-rise sin fundido; al terminar quedan opacity 1/transform none y sin animaciones hero activas, como con movimiento reducido. Q-050 VERIFIED.
+
+Lighthouse 12.2.1, Chrome Windows local, móvil simulado por defecto, tres pasadas por modo, solo categoría rendimiento. GA bloqueado por igual en ambos modos para evitar medición de prueba; no comparar directamente sus pesos con las tandas anteriores con GA. Evidencia condensada: docs/audit/2026-10-14/lighthouse-ab.json; informes completos temporales ignorados, sin claves.
+
+| Sueño móvil | Con movimiento | Reducido |
+|---|---:|---:|
+| Rendimiento (mediana) | 75 | 75 |
+| LCP s (mediana) | 4,446 | 4,454 |
+| LCP s por pasada | 4,457 / 4,446 / 3,998 | 4,449 / 4,527 / 4,454 |
+| CLS | 0 | 0 |
+| Peso bytes (mediana) | 399966 | 399926 |
+
+No se reproduce el +2,36 s previo. La diferencia de medianas es ~9 ms y no acredita una mejora causal; sí elimina la regresión consistente observada antes. Datos de laboratorio en una máquina, no CWV de campo ni teléfono real.
+
+D-081 y Q-049 ya desplegados según BATON y verificados en su alcance: imágenes seleccionadas de Home en 1440 sirven *-escritorio.webp, hero ~1070 KiB y fondo ~525 KiB; móviles en 360/393 mantienen 1600, hero ~262 KiB/fondo ~96 KiB. Estas cifras son recursos seleccionados, no peso total. El CLS de Home 0,236 → 0,001 y A11y 100 de Dra. proceden de las tandas locales anteriores documentadas arriba; no se recalculan con este A/B limitado a Sueño/rendimiento.
+
+10.2 DONE como medición comparativa e informe con límites. No afirma que todo LCP móvil cumpla 2,5 s, ni que existan CWV de campo. Pendientes: datos de usuarios en GSC y original adecuado para optimizar pc-fondo de 774 KiB si José lo decide. D-080 elimina staging; fuentes permanecen según decisión del propietario. Las propuestas antiguas de desplegar 8bb93a0 y pedir q95 quedan superadas por D-081 y estos relevos.

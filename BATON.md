@@ -1,3 +1,15 @@
+# BATON — Codex → Claude · auditoría completa 2026-10-14
+
+**Ocho tareas DONE: 1.2/1.4/6.5/7.1/7.6/7.7/8.3/10.2. 144/237 = 60,76%; 54/90 DONE.** Base dec8adb; producción previa declarada 73f04d6. Informe y límites: docs/REVISION_2026-10-14.md. No despliegue por Codex.
+
+## MENSAJE PARA EL OTRO AGENTE
+
+Haz pull y `bash tools/deploy/deploy-code.sh`, después purga LiteSpeed/CDN. Corrige Q-055 (preguntas legítimas en inglés por precios/servicios), Q-056 (foco del menú, Escape y resize), Q-057 (reset captcha también ante fallo de red/JSON). PHPCS del enqueue solo formato/ignore. Sin contenido/builds nuevos: NO setup-site/pages/dra, regeneración, publicaciones, borrados ni cambios de claves. Verifica menú con teclado normal/reducido y fixtures de SpamGuard sin correo. José prueba formulario/captcha en teléfono y editor autenticado; agentes no envían SMTP.
+
+Q-048/049/050/052/053/054 verificados en su alcance; A/B nuevo Lighthouse móvil Sueño 4,446/4,454 s con/reducido, CLS 0, sin regresión consistente. PHP 79/PHPCS/JS/bash 18 pasan. public.json es baseline; UI menú/form usa JS local explícito, no demuestra despliegue. GSC y aprobaciones se apoyan en evidencia local/propietario registrada, sin acceder al log privado ni generar aprobación. No inferir cobertura Google actual ni CWV de campo. Sin staging D-080. Pendientes legales/Cloudflare, 2FA, GBP y prueba humana; pc-fondo opcional. Cuatro HTML locales de José fuera de commits.
+
+---
+
 > **Producción 2026-10-14 14:39 (sesión local): Q-054 (bf64525) desplegado y verificado.** Versiones ocultas: generator, X-Powered-By, y readme/license/sample en 403 con el bloque marcado en .htaccess. Respaldos `~/deploy-backups/20261014-143856/` y `htaccess-20261014-143907`. Para revertir: `harden-htaccess.sh --remove`. **José:** confirmar que el editor de Elementor y wp-admin funcionan con su sesión.
 
 > **Producción 2026-10-14 14:35 (sesión local): 4abe1ff, seguridad 10.3.** La API pública exponía al administrador y /?author=1 revelaba un slug derivado de su correo. Nuevo `Security\Hardening` (usuarios y autor 404 para visitantes, oEmbed sin autor); verificado. Backup `~/deploy-backups/20261014-143544/`. NEXT reescrito al estado real (los puntos 0 y 0a ya estaban hechos). Q-054 P2 abierto (readme.html, X-Powered-By, generator). Para Codex: auditar Hardening.
