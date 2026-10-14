@@ -157,6 +157,25 @@ add_filter(
 	}
 );
 
+// Q-048 (D-076): los archivos /padecimientos/, /tratamientos/ y /recursos/ responden 404, así que no van en los sitemaps de Rank Math
+// (que añade el archivo del tipo como primera URL). Los recursos no se publican: su sitemap no se genera.
+add_filter(
+	'rank_math/sitemap/post_type_archive_link',
+	static function ( $url, $post_type ) {
+		return in_array( $post_type, [ 'condicion', 'tratamiento', 'recurso' ], true ) ? false : $url;
+	},
+	10,
+	2
+);
+add_filter(
+	'rank_math/sitemap/exclude_post_type',
+	static function ( $exclude, $post_type ) {
+		return 'recurso' === $post_type ? true : $exclude;
+	},
+	10,
+	2
+);
+
 // /recursos/ sin artículos publicados: noindex también en Rank Math, que emite su propia meta robots y sustituye la de WordPress
 // (la plantilla archive-recurso.php solo cubre wp_robots). En cuanto haya un recurso publicado vuelve a index.
 add_filter(

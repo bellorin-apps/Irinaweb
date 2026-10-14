@@ -238,10 +238,10 @@ Desplegados 0679222, f21bed0 y 063ba34: deploy-code (backup `~/deploy-backups/20
 | ORL 170 y Sueño 171 | publish; 200; sin «Borrador»; anclas a 96 px del borde en 1440 y Galaxy, con la cabecera de 76/66 px |
 | 5 fichas de sueño | 200 en /sueno/{slug}/; rutas /padecimientos/ y /tratamientos/{slug}/ → 301; enlazadas solo desde Sueño |
 | 21 fichas en borrador (muestra de 10) | 404 en /padecimientos/, /tratamientos/, /sueno/ y /otorrinolaringologia/{slug}/ |
-| Sitemaps | Las 5 publicadas presentes. **Q-048 P2 OPEN:** incluyen /padecimientos/, /tratamientos/ y /recursos/ (404) |
+| Sitemaps | Las 5 publicadas presentes. **Q-048 P2 FIXED (rama, sin desplegar):** incluían /padecimientos/, /tratamientos/ y /recursos/ (404); filtro de archivo y exclusión de recurso en inc/setup.php |
 | Robots | 205 tenía noindex de muestra → se borró `rank_math_robots`; ahora index, follow. Las otras 4 y las dos páginas, por defecto |
 | Schema y migas | MedicalWebPage + MedicalTherapy; BreadcrumbList Inicio › Sueño › CPAP; canonical correcto |
 | Portada, menú y pie | Motivos a anclas de ORL y a /sueno/#atiendo; menú y pie con ORL y Sueño |
 | Consola | Limpia en 1440 y Galaxy |
-| Lighthouse (antes de D-082) | Accesibilidad 100 salvo Dra. 98/99: **Q-049 P2 OPEN** heading-order (h4) |
+| Lighthouse (antes de D-082) | Accesibilidad 100 salvo Dra. 98/99: **Q-049 P2 FIXED (rama, sin desplegar)** heading-order: h4 de credenciales → h3 |
 

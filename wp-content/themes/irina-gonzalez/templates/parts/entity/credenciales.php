@@ -76,7 +76,7 @@ if ( ! $irina_cards && ( ! $irina_tags || '' === $irina_a['tags_title'] ) ) {
 			<?php
 			$irina_d = 0; foreach ( $irina_cards as [ $irina_l, $irina_t, $irina_s ] ) :
 				?>
-				<div class="di-cred di-reveal di-reveal--d<?php echo esc_attr( (string) min( 4, $irina_d++ ) ); ?>"><p class="di-eyebrow"><?php echo esc_html( $irina_l ); ?></p><h4><?php echo esc_html( $irina_t ); ?></h4><p class="di-muted"><?php echo esc_html( $irina_s ); ?></p></div><?php endforeach; ?></div>
+				<div class="di-cred di-reveal di-reveal--d<?php echo esc_attr( (string) min( 4, $irina_d++ ) ); ?>"><p class="di-eyebrow"><?php echo esc_html( $irina_l ); ?></p><h3><?php echo esc_html( $irina_t ); ?></h3><p class="di-muted"><?php echo esc_html( $irina_s ); ?></p></div><?php endforeach; ?></div>
 		<?php endif; ?>
 		<?php if ( $irina_tags && '' !== $irina_a['tags_title'] ) : // Con tags_title vacío, las membresías y hospitales van en la sección de logos (di-logos). ?>
 			<h3 class="di-reveal" style="margin-top:var(--space-2xl)"><?php echo esc_html( $irina_a['tags_title'] ); ?></h3>
