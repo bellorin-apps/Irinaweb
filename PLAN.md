@@ -109,7 +109,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 6.2 | Footer | 2 | DONE | Verificado en /inicio-v2/ |
 | 6.3 | Home | 5 | DONE | /inicio-v2/ en producción (noindex): 8 widgets, header/footer del tema, QA visual OK escritorio y móvil; pendiente CP3 |
 | 6.4 | Página Dra. Irina (entidad/autora) | 5 | DONE | FIX→DONE: pública 200/h1/main/schema/migas, narrativa y reduced-motion verificados. Teclado de logos y dos títulos D-049 corregidos y probados localmente; despliegue pendiente. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DOING | medical-page.php; 23 fichas completas en borrador; falta QA visual con sesión |
+| 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | REVIEW | medical-page.php; D-082: 5 fichas de sueño publicadas el 2026-10-14 en /sueno/{slug}/ (200, schema MedicalWebPage/MedicalTherapy, migas Inicio › Sueño › ficha, rutas del tipo 301, consola limpia en 1440 y Galaxy; BATON/QA de la sesión local). Las otras 21 siguen en borrador (D-076) |
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
 | 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | TODO | |
@@ -120,13 +120,13 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | DOING | Home y Dra. publicadas. D-076: ORL y Sueño reescritas como páginas cortas (qué atiendo con una línea por motivo, cómo trabajo, CTA), sin marcadores ni FAQ, en borrador hasta 7.6; despliegue pendiente |
+| 7.1 | Drafts: Home, Dra. Irina, ORL pilar, Sueño pilar | 5 | REVIEW | Home y Dra. publicadas. D-076: ORL y Sueño cortas publicadas el 2026-10-14 tras aprobación de la Dra. y OK de José (D-078/D-082), con los añadidos de la Dra. en ORL (rinoplastia funcional y estética, cirugía de sueño); 200 sin «Borrador», anclas verificadas |
 | 7.2 | Drafts: condiciones y servicios confirmados (OFRECE) | 5 | DONE | 14 condiciones + 9 tratamientos redactados con las respuestas de la Dra. (D-039); D-076: archivados en borrador, sin enlaces, menú ni archivo público (404) |
 | 7.3 | Drafts: primera consulta, pacientes, contacto | 2 | DONE | DONE: Primera consulta/Contacto/FAQ 200, sin Borrador; títulos, FAQPage, fondo continuo y cuatro pasos verificados. Pacientes cubierto por Primera consulta + FAQ. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
 | 7.4 | Bibliografía verificable por página | 2 | DOING | Fuentes propuestas por ficha (SMORL, AAO-HNS, AASM, EPOS, ARIA), archivadas con las fichas. D-076: las páginas cortas no hacen afirmaciones que requieran cita; Codex decide si se cierra |
 | 7.5 | Revisión técnica/SEO de drafts | 2 | TODO | |
-| 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | OWNER | D-076: solo ORL y Sueño cortas, en la app `/briefing/guia/` (aprobar o pedir cambios; nunca publica) |
-| 7.7 | CHECKPOINT 4 | 1 | OWNER | ext |
+| 7.6 | Revisión médica por la Dra. Irina (MEDICAL REVIEW → APPROVED) | 5 | REVIEW | Hecha: la Dra. aprobó ORL y Sueño en `/briefing/guia/` (usuario revisor_medico, 18:03 y 18:38 de Monterrey, 2026-10-13, revision-log) y las 26 fichas en la app de revisión (D-082). Ninguna aprobación generada por las sesiones |
+| 7.7 | CHECKPOINT 4 | 1 | REVIEW | José dio el OK de publicación de ORL, Sueño y las 5 fichas de sueño (D-078/D-082, 2026-10-14) tras la aprobación médica |
 
 ## FASE 8 — Escalado del sitio
 
@@ -158,7 +158,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | DONE | DONE: políticas de optimización aprobadas verificadas con UA Galaxy/iPhone/desktop y pesos registrados. Móvil 1600/q95, escritorio q100, alfa lossless y diferidos. No certifica CWV ni todos los presupuestos antiguos; informe integral en 10.2. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | DOING | «Antes» medido 2026-10-14 (5 páginas × móvil/escritorio × 3 pasadas, medianas y límites en PERFORMANCE.md); a11y corregida en 8bb93a0. Falta el «después» tras desplegar, desde la sesión local o PSI, y la decisión de José sobre la foto de escritorio |
+| 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | REVIEW | «Antes» y «después» en PERFORMANCE.md (Lighthouse 12.2.1, medianas). Portada escritorio: CLS 0,236 → 0,001, 5204 → 4070 KiB, perf 63 → 86; Dra./Primera consulta/Contacto escritorio a menos de la mitad de peso; accesibilidad 100 en Dra. Límites del entorno documentados; datos de campo pendientes en GSC |
 | 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | DOING | Cabeceras de seguridad en el plugin (Q-023); resto pendiente |
 | 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | DOING | Auditoría en vivo y correcciones (Q-022); falta decisión sobre el contraste del botón de WhatsApp |
 | 10.5 | Codex: QA performance + seguridad + accesibilidad | 3 | TODO | |
