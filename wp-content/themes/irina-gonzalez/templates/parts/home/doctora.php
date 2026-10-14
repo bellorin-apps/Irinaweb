@@ -30,13 +30,16 @@ $irina_a = wp_parse_args(
 		<?php
 		// Solo el original (sin srcset): en móvil se recorta en cover y la CDN debe servirlo a 1200 px, no al ancho del viewport.
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- irina_image_original devuelve wp_get_attachment_image (escapado).
-		echo irina_image_original(
+		echo irina_desktop_variant( // D-081: escritorio a q95 (propietario, 2026-10-14).
 			$irina_bg,
-			[
-				'loading'  => 'lazy',
-				'decoding' => 'async',
-				'alt'      => '',
-			]
+			irina_image_original(
+				$irina_bg,
+				[
+					'loading'  => 'lazy',
+					'decoding' => 'async',
+					'alt'      => '',
+				]
+			)
 		); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image escapa su salida.
 		?>
 									</div>

@@ -177,3 +177,4 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Q-048: los sitemaps de Rank Math ya no listan /padecimientos/, /tratamientos/ ni /recursos/ (404 por D-076; filtro `rank_math/sitemap/post_type_archive_link`) y el de recursos no se genera (`rank_math/sitemap/exclude_post_type`). Nombres de filtro comprobados en el código de Rank Math 1.0.280.
 - Q-049: títulos de las tarjetas de credenciales (página de la Dra.) de h4 a h3, con las mismas medidas.
 - D-083: menú principal con «Otorrino» y «Sueño» (`setup-site.sh`; respaldo de menú del tema igual). Pie sin cambios.
+- D-081 ampliada (OK de José): el fondo de «Escucharte» (dra-escucharte-bg) también recibe la versión de escritorio q95; `irina_desktop_variant()` se reutiliza en la sección de la Dra. de la portada. Probado en WordPress local: 3 391 → 1 069 KB con una foto de prueba del mismo tamaño; otras fotos sin cambio.

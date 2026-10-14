@@ -99,11 +99,15 @@ function irina_mobile_metadata_quality( array $metadata, int $attachment_id ): a
 }
 add_filter( 'wp_generate_attachment_metadata', 'irina_mobile_metadata_quality', 20, 2 );
 
-/** Foto de cabecera: adjunto cuyo archivo o slug empieza por «hero-» (mismo criterio que los tamaños, más abajo). */
+/**
+ * Fotos con versión de escritorio a q95 (D-081): las de cabecera (archivo o slug «hero-*», mismo criterio que los tamaños, más
+ * abajo) y el fondo de «Escucharte» en la portada (dra-escucharte-bg, propietario 2026-10-14).
+ */
 function irina_is_hero_attachment( int $attachment_id, array $metadata = [] ): bool {
 	$file = basename( (string) ( $metadata['file'] ?? get_attached_file( $attachment_id ) ) );
 	$post = get_post( $attachment_id );
-	return str_starts_with( $file, 'hero-' ) || ( $post && str_starts_with( (string) $post->post_name, 'hero-' ) );
+	$name = $post ? (string) $post->post_name : '';
+	return str_starts_with( $file, 'hero-' ) || str_starts_with( $name, 'hero-' ) || str_starts_with( $file, 'dra-escucharte-bg' ) || 'dra-escucharte-bg' === $name;
 }
 
 /**
@@ -204,7 +208,16 @@ function irina_hero_image( int $attachment_id ): string {
 			]
 		)
 	);
-	// D-081: en escritorio (el <img>; los teléfonos usan el <source> irina-movil) la versión q95 si existe. ?m= como en móvil.
+	return irina_desktop_variant( $attachment_id, $html );
+}
+
+/**
+ * D-081: en escritorio (el <img>; los teléfonos usan el <source> irina-movil) pone la versión q95 si existe. ?m= como en móvil.
+ *
+ * @param int    $attachment_id Adjunto.
+ * @param string $html          <picture>/<img> ya generado.
+ */
+function irina_desktop_variant( int $attachment_id, string $html ): string {
 	$meta = wp_get_attachment_metadata( $attachment_id );
 	$desk = empty( $meta['sizes']['irina-escritorio']['file'] ) ? false : wp_get_attachment_image_src( $attachment_id, 'irina-escritorio' );
 	if ( ! $desk ) {
