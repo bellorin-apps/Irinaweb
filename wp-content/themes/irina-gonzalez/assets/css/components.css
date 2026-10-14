@@ -478,6 +478,8 @@ body.menu-open { overflow: hidden; }
 .di-mobile-bar a { display: grid; justify-items: center; gap: 2px; font-size: 0.78rem; font-weight: 600; text-decoration: none; color: var(--color-text); padding: 0.4rem; }
 .di-mobile-bar a:first-child { color: var(--color-secondary-strong); }
 @media (min-width: 900px) { .di-mobile-bar { display: none; } }
+/* Con el menú abierto la barra inferior se oculta: el panel ya trae WhatsApp y redes, y la barra tapaba el pie del panel. */
+body.menu-open .di-mobile-bar { visibility: hidden; opacity: 0; transition: opacity var(--motion-fast) var(--ease-out), visibility 0s linear var(--motion-fast); }
 body.has-mobile-bar { padding-bottom: 72px; }
 @media (min-width: 900px) { body.has-mobile-bar { padding-bottom: 0; } }
 
