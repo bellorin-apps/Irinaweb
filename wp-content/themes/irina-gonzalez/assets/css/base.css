@@ -5,6 +5,17 @@
 
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Transición entre páginas (propietario, 2026-10-14): fundido corto de la página entera al navegar dentro del sitio; la cabecera
+   se queda quieta (nombre propio). View Transitions entre documentos: Chrome/Edge 126+ y Safari 18.2+; el resto navega como siempre.
+   Nada si el sistema pide menos movimiento. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  .di-header { view-transition-name: di-header; }
+  ::view-transition-old(root) { animation: di-page-out 0.2s ease-in both; }
+  ::view-transition-new(root) { animation: di-page-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+}
+@keyframes di-page-out { to { opacity: 0; } }
+@keyframes di-page-in { from { opacity: 0; transform: translateY(8px); } }
 
 body {
   margin: 0;
