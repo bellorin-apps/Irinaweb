@@ -26,7 +26,7 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 
 ## Pendiente
 
-1. ~~**José:** activar el 2FA en su usuario~~ — **hecho** (José, 2026-10-14). Recomendado también en Hostinger y Google.
+1. **José:** activar el 2FA en su usuario (Perfil › Opciones de dos factores: escanear el QR, escribir el código y pulsar Verify/Enviar, generar códigos de respaldo y «Actualizar perfil»). Dijo haberlo hecho el 2026-10-14, pero el servidor no tiene ningún dato de Two Factor en el usuario 1 (sesión local, WP-CLI de solo lectura): pendiente de completar y volver a comprobar. Recomendado también en Hostinger y Google.
 2. Revisión de Codex (1.9, 5.7, 10.5) sobre este estado.
 
 ## Límites
