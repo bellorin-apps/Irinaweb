@@ -1,0 +1,25 @@
+# Encargo para Codex: auditoría de las tareas en REVIEW (2026-10-14)
+
+Lo preparó Claude (sesión cloud). Mismo rol y reglas que `docs/CODEX_REVIEW_PROMPT.md` y `AGENTS.md`: veredicto por tarea con
+evidencia (`DONE`, `FIX` o `REVIEW` con motivo), QA.md, PLAN.md, PROGRESS.md (`python tools/audit/progress.py`), BATON.md y mensaje
+para el otro agente. No despliegas; no pruebas el formulario en producción (envía correos reales); no pegas URLs con clave; no
+publicas ni despublicas nada. Producción declarada por la sesión local: hasta f917812 (BATON 2026-10-14).
+
+Cambios de alcance que debes aplicar al auditar (decisiones del propietario, prevalecen sobre documentos anteriores):
+D-076 sitio corto · D-077 estado DESCOPED (no entra en el total) · D-078 publicación con OK de José tras la aprobación médica ·
+D-079 Contacto con «previa cita» · D-080 sin staging · D-081 escritorio q95 en fotos de cabecera y fondo de Escucharte ·
+D-082 5 fichas de sueño publicadas, 21 en borrador · D-083 menú «Otorrino» y «Sueño».
+
+| Tarea | Qué verificar | Evidencia de partida |
+|---|---|---|
+| 1.2 Inventario y medios | medios.csv/medios.md completos, limpieza D-075 con respaldo, ninguna página rota | docs/audit/2026-10-13/, BATON 16:40 |
+| 1.4 Search Console | Capturas de José resumidas en PLAN: 5 motivos explicados, sitemap «Correcto» y reenviado; no inferir cobertura actual más allá de lo aportado | PLAN 1.4, chat cloud |
+| 6.5 Página médica | /sueno/{slug}/ de las 5 fichas: 200, h1/main, sin «Borrador», schema, migas sin archivo (también BreadcrumbList), 301 desde /padecimientos/ y /tratamientos/, relacionados solo publicados; 10 de las 21 en borrador dan 404 | medical-page.php, setup.php, MetaRegistry::area_permalink |
+| 7.1 ORL y Sueño | Páginas cortas publicadas; anclas #oido #nariz #garganta #procedimientos #atiendo #ruta bajo la cabecera; en Sueño, solo las 5 fichas con enlace; títulos D-049 | build-pages.py, D-076/D-082 |
+| 7.6 Revisión médica | Aprobación por el usuario revisor_medico (no por las sesiones), con hora; nada publicado sin aprobación | revision-log (lo consulta la sesión local), QA |
+| 7.7 Checkpoint 4 | OK de José registrado antes de publicar | D-078, D-082, BATON |
+| 8.3 Contacto | Dirección completa, mapa D-065 con «Cómo llegar», estacionamiento, accesibilidad, «previa cita», formulario (sin enviarlo), WhatsApp/tel, aviso de urgencias | D-079, PLAN 8.3 |
+| 10.2 Rendimiento | PERFORMANCE.md: «antes», «después» y «después 2», límites del entorno, CLS de portada, peso de escritorio tras D-081 | PERFORMANCE.md |
+
+Hallazgos verificados por la sesión local que puedes cerrar: Q-048 (sitemaps sin archivos 404, sin recurso-sitemap) y Q-049
+(credenciales h3, accesibilidad 100 en Dra.).
