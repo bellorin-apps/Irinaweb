@@ -290,22 +290,23 @@ body.menu-open { overflow: hidden; }
 .di-section--doctor-bg .di-creds.di-creds--carousel li.is-out-left { transform: translateX(-10px); }
 @media (prefers-reduced-motion: reduce) { .di-section--doctor-bg .di-creds.di-creds--carousel li { transition: none; } }
 /* Puntos alineados con el borde interior de la tarjeta (su padding 0.85rem) (propietario, 2026-10-10). */
-.di-creds__dots { display: flex; gap: 14px; margin: 0.85rem 0 var(--space-lg) 0.85rem; padding: 0; list-style: none; font-size: 0.86rem; }
-.di-creds__dots button { position: relative; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgb(36 31 35 / 0.22); cursor: pointer; overflow: visible; }
-.di-creds__dots button[aria-current="true"] { background: var(--color-primary); }
-/* Área táctil de 24 px (WCAG 2.5.8) sin cambiar el punto de 8 px. */
-.di-creds__dots button::before { content: ""; position: absolute; inset: -8px; border-radius: 50%; }
+.di-creds__dots { display: flex; gap: 0; margin: calc(0.85rem - 8px) 0 calc(var(--space-lg) - 8px) calc(0.85rem - 8px); padding: 0; list-style: none; font-size: 0.86rem; }
+/* El botón mide 24 px (WCAG 2.5.8; Lighthouse no cuenta un ::before como área táctil) y el punto de 8 px se dibuja en ::after.
+   Los márgenes restan esos 8 px para que los puntos queden donde estaban; separación entre centros 24 px (antes 22). */
+.di-creds__dots button { position: relative; width: 24px; height: 24px; padding: 0; border: 0; border-radius: 50%; background: none; cursor: pointer; overflow: visible; }
+.di-creds__dots button::after { content: ""; position: absolute; left: 8px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background: rgb(36 31 35 / 0.22); }
+.di-creds__dots button[aria-current="true"]::after { background: var(--color-primary); }
 /* Cargador de tiempo: anillo sutil alrededor del punto activo que se completa en los 4 s del autoplay; se oculta al pausar (toque/deslizar). */
-/* max-width: none anula «img, svg { max-width:100% }» de base.css (el botón mide 8 px y aplastaba el anillo). */
-.di-creds__dots button svg { position: absolute; left: -6px; top: -6px; width: 20px; height: 20px; max-width: none; transform: rotate(-90deg); opacity: 0; pointer-events: none; overflow: visible; }
+/* max-width: none anula «img, svg { max-width:100% }» de base.css (con el botón de 8 px aplastaba el anillo). */
+.di-creds__dots button svg { position: absolute; left: 2px; top: 2px; width: 20px; height: 20px; max-width: none; transform: rotate(-90deg); opacity: 0; pointer-events: none; overflow: visible; }
 .di-creds__dots svg circle { fill: none; stroke: var(--color-primary); stroke-opacity: 0.85; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 47.1; stroke-dashoffset: 47.1; }
 .di-creds__dots svg circle.di-ring__track { stroke-opacity: 0.18; stroke-dasharray: none; stroke-dashoffset: 0; animation: none !important; }
 .di-creds__dots.is-playing button[aria-current="true"] svg { opacity: 1; }
 .di-creds__dots.is-playing button[aria-current="true"] svg circle.di-ring__bar { animation: di-ring 4s linear forwards; }
 @keyframes di-ring { from { stroke-dashoffset: 47.1; } to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .di-creds__dots svg { display: none; } }
-.di-section--doctor-dark .di-creds__dots button { background: rgb(255 255 255 / 0.35); }
-.di-section--doctor-dark .di-creds__dots button[aria-current="true"] { background: #fff; }
+.di-section--doctor-dark .di-creds__dots button::after { background: rgb(255 255 255 / 0.35); }
+.di-section--doctor-dark .di-creds__dots button[aria-current="true"]::after { background: #fff; }
 .di-section--doctor-dark .di-creds__dots svg circle { stroke: #fff; }
 /* Móvil · referencia 60/40 del propietario (2026-10-10): texto a la izquierda,
    retrato al inicio de su columna, 5 px antes de la división. Se acepta recorte
@@ -346,7 +347,8 @@ body.menu-open { overflow: hidden; }
 @media (min-width: 900px) { .di-steps { grid-template-columns: repeat(4, 1fr); } }
 .di-step { counter-increment: di-s; background: var(--worm-border) 0 0 / 8px 8px repeat-x; padding-top: var(--space-md); }
 .di-step::before { content: "0" counter(di-s); font-family: var(--font-display); font-weight: 300; font-size: clamp(3rem, 6vw, 5rem); line-height: 1; color: var(--color-secondary-strong); display: block; margin-bottom: var(--space-md); }
-.di-step h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
+/* h3 bajo el h2 de la sección (orden de títulos, Lighthouse 2026-10-14); mismas medidas que tenía como h4. */
+.di-step h3, .di-step h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; line-height: var(--leading-tight); letter-spacing: 0; }
 /* Ilustración bajo cada paso (propietario, 2026-10-12): sutil, pequeña y sin protagonismo; decorativa (aria-hidden). */
 /* Paso con ilustración (propietario, 2026-10-13): ilustración arriba (misma altura de caja y apoyada abajo para que las lombrices queden alineadas), luego lombriz, número, título y texto. */
 .di-step--img { background: none; padding-top: 0; display: flex; flex-direction: column; }
@@ -398,7 +400,8 @@ body.menu-open { overflow: hidden; }
 .di-footer__big { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.8rem, 4.2vw, 3.4rem); color: #fff; letter-spacing: -0.025em; line-height: 1; margin: 0 0 var(--space-2xl); max-width: none; }
 .di-footer__cols { display: grid; gap: var(--space-xl); }
 @media (min-width: 900px) { .di-footer__cols { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
-.di-footer h4 { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(255 255 255 / 0.5); margin-bottom: var(--space-sm); }
+/* Títulos de columna como h2 (orden de títulos); se fijan line-height y peso del h4 anterior para no cambiar nada visible. */
+.di-footer h2, .di-footer h4 { line-height: var(--leading-tight); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(255 255 255 / 0.5); margin-bottom: var(--space-sm); }
 .di-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem; }
 .di-footer a { color: #fff; text-decoration: none; }
 .di-footer ul a { display: inline-block; padding-block: 0.15rem; } /* objetivo táctil ≥ 24 px (PLAN 10.4) */
@@ -408,7 +411,8 @@ body.menu-open { overflow: hidden; }
 .di-footer__brand { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-md); }
 .di-footer__brand .di-brand { flex: none; }
 .di-footer__tag { margin: 0; padding-left: var(--space-md); border-left: 1px solid rgb(255 255 255 / 0.35); font-size: 0.9rem; line-height: var(--leading-body); color: rgb(255 255 255 / 0.9); max-width: 26ch; }
-.di-footer__creds { font-size: 0.82rem; color: rgb(255 255 255 / 0.45); max-width: 44ch; }
+/* 0.5 en vez de 0.45: contraste 4,38 → ≥ 4,5 sobre el fondo del pie (Lighthouse 2026-10-14). */
+.di-footer__creds { font-size: 0.82rem; color: rgb(255 255 255 / 0.5); max-width: 44ch; }
 .di-footer .di-hours th, .di-footer .di-hours td { border-color: rgb(255 255 255 / 0.15); }
 .di-footer__legal { margin-top: var(--space-2xl); padding-top: var(--space-lg); background: var(--worm-white-15) 0 0 / 8px 8px repeat-x; color: rgb(255 255 255 / 0.55); display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: space-between; font-size: 0.82rem; }
 .di-footer__legal ul { display: flex; gap: var(--space-sm); }
@@ -516,8 +520,9 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 
 /* Migas de pan en franja propia bajo el hero (propietario, 2026-10-12, D-071): crema arena, texto apagado, alineadas al contenedor. */
 .di-crumbs-bar { background: var(--color-surface-soft); border-bottom: 1px solid var(--color-border); }
-.di-crumbs-bar .di-crumbs { margin: 0; padding-block: 0.85rem; font-size: 0.8rem; letter-spacing: 0.01em; color: var(--color-muted); }
-.di-crumbs-bar .di-crumbs a { color: var(--color-muted); }
+/* #72666c: el muted (#75696f) daba 4,44:1 sobre la franja; este tono, casi idéntico, da 4,64:1 (Lighthouse 2026-10-14). */
+.di-crumbs-bar .di-crumbs { margin: 0; padding-block: 0.85rem; font-size: 0.8rem; letter-spacing: 0.01em; color: #72666c; }
+.di-crumbs-bar .di-crumbs a { color: #72666c; }
 .di-crumbs-bar .di-crumbs a:hover, .di-crumbs-bar .di-crumbs a:focus-visible { color: var(--color-text); text-decoration: underline; text-underline-offset: 3px; }
 .di-crumbs-bar .di-crumbs [aria-current="page"] { color: var(--color-text); }
 @media (max-width: 899px) { .di-crumbs-bar .di-crumbs { padding-block: 0.7rem; font-size: 0.76rem; } }

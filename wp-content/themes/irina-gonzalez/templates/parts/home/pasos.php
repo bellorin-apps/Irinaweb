@@ -90,9 +90,9 @@ $irina_a = wp_parse_args(
 					);
 					?>
 					</div>
-					<div class="di-step__body"><h4><?php echo esc_html( $irina_s['title'] ); ?></h4><p class="di-muted"><?php echo esc_html( $irina_s['text'] ); ?></p></div>
+					<div class="di-step__body"><h3><?php echo esc_html( $irina_s['title'] ); ?></h3><p class="di-muted"><?php echo esc_html( $irina_s['text'] ); ?></p></div>
 				<?php else : ?>
-					<h4><?php echo esc_html( $irina_s['title'] ); ?></h4><p class="di-muted"><?php echo esc_html( $irina_s['text'] ); ?></p>
+					<h3><?php echo esc_html( $irina_s['title'] ); ?></h3><p class="di-muted"><?php echo esc_html( $irina_s['text'] ); ?></p>
 				<?php endif; ?>
 				</li>
 			<?php endforeach; ?>

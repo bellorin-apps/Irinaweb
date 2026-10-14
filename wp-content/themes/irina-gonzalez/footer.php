@@ -46,7 +46,7 @@ if ( irina_elementor_main() ) {
 				<?php endif; ?>
 			</div>
 			<div>
-				<h4><?php esc_html_e( 'Atención', 'irina-gonzalez' ); ?></h4>
+				<h2><?php esc_html_e( 'Atención', 'irina-gonzalez' ); ?></h2>
 				<?php
 				wp_nav_menu(
 					[
@@ -59,7 +59,7 @@ if ( irina_elementor_main() ) {
 				?>
 			</div>
 			<div>
-				<h4><?php esc_html_e( 'Consultorio', 'irina-gonzalez' ); ?></h4>
+				<h2><?php esc_html_e( 'Consultorio', 'irina-gonzalez' ); ?></h2>
 				<address class="di-address">
 					<ul>
 						<li><?php echo esc_html( (string) irina_practice( 'centro' ) ); ?><?php echo '' !== (string) irina_practice( 'interior' ) ? ', ' . esc_html( (string) irina_practice( 'interior' ) ) : ''; ?></li>
@@ -81,7 +81,7 @@ if ( irina_elementor_main() ) {
 				</address>
 			</div>
 			<div>
-				<h4><?php esc_html_e( 'Horario', 'irina-gonzalez' ); ?></h4>
+				<h2><?php esc_html_e( 'Horario', 'irina-gonzalez' ); ?></h2>
 				<?php
 				if ( '' !== irina_hours_note() ) :
 					?>
