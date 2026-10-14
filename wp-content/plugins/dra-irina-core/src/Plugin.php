@@ -13,6 +13,7 @@ use DraIrina\Core\Fields\MetaRegistry;
 use DraIrina\Core\Contact\Form as ContactForm;
 use DraIrina\Core\Media\WebpUpload;
 use DraIrina\Core\Ops\Endpoints as OpsEndpoints;
+use DraIrina\Core\Security\Hardening as SecurityHardening;
 use DraIrina\Core\Security\Headers as SecurityHeaders;
 use DraIrina\Core\PostTypes\Condicion;
 use DraIrina\Core\PostTypes\Credencial;
@@ -64,6 +65,7 @@ final class Plugin {
 			new OpsEndpoints(),
 			new ContactForm(),
 			new SecurityHeaders(),
+			new SecurityHardening(),
 			new WebpUpload(),
 		];
 	}
