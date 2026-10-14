@@ -75,7 +75,9 @@ final class SpamGuard {
 		$words = is_array( $words ) ? $words : [];
 		$stop  = count( array_intersect( $words, self::STOP_EN ) );
 		$comm  = count( array_intersect( $words, self::COMMERCIAL_EN ) );
-		if ( $stop >= 6 && $comm >= 2 ) {
+		// Preguntar por services/pricing es normal en pacientes. Exigir además una oferta del remitente, no solo vocabulario inglés.
+		$pitch = preg_match( '~\b(?:we|our (?:team|company|agency))\s+(?:can\s+|would like to\s+)?(?:help|offer|provide|speciali[sz]e|deliver|boost|increase|grow)\b|\bi\s+(?:can\s+|would like to\s+)?(?:offer|provide|help you (?:grow|increase|boost))\b~iu', $text );
+		if ( $stop >= 6 && $comm >= 2 && $pitch ) {
 			return 'commercial_en';
 		}
 		unset( $email );

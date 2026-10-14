@@ -39,6 +39,9 @@
   var burger = document.querySelector('.di-burger');
   var panel = document.getElementById('di-menu-panel');
   if (burger && panel) {
+    function menuFocusables() {
+      return [burger].concat(Array.prototype.slice.call(panel.querySelectorAll('a[href],button:not([disabled]),[tabindex="0"]')).filter(function (el) { return el.getClientRects().length > 0; }));
+    }
     burger.addEventListener('click', function () {
       var open = !panel.classList.contains('is-open');
       // El panel arranca justo bajo la cabecera, mida lo que mida (móvil 92 px, tableta 112 px, barra de admin).
@@ -47,9 +50,22 @@
       header.classList.toggle('is-open', open);
       document.body.classList.toggle('menu-open', open);
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) { var first = menuFocusables()[1]; if (first) { first.focus(); } }
+      else { burger.focus(); }
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && panel.classList.contains('is-open')) { burger.click(); burger.focus(); }
+      if (!panel.classList.contains('is-open')) { return; }
+      if (e.key === 'Escape') { e.preventDefault(); burger.click(); }
+      if (e.key === 'Tab') {
+        var focusable = menuFocusables(), first = focusable[0], last = focusable[focusable.length - 1];
+        if (e.shiftKey && (document.activeElement === first || !focusable.includes(document.activeElement))) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && (document.activeElement === last || !focusable.includes(document.activeElement))) { e.preventDefault(); first.focus(); }
+      }
+    });
+    window.addEventListener('resize', function () {
+      if (!panel.classList.contains('is-open')) { return; }
+      if (window.innerWidth >= 1024) { burger.click(); }
+      else { panel.style.top = Math.round(header.getBoundingClientRect().bottom) + 'px'; }
     });
   }
 
@@ -221,7 +237,10 @@
           // Captcha Turnstile: cada token sirve una vez; tras un error se pide uno nuevo.
           if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch (err) { /* sin captcha */ } }
         })
-        .catch(function () { showError('No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', null); })
+        .catch(function () {
+          showError('No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', null);
+          if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch (err) { /* sin captcha */ } }
+        })
         .finally(function () { form.classList.remove('is-sending'); form.querySelector('.di-form__label').hidden = false; form.querySelector('.di-form__sending').hidden = true; });
     });
   }

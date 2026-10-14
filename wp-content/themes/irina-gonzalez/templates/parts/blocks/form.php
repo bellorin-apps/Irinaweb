@@ -101,7 +101,16 @@ if ( ! $irina_core ) {
 			<?php
 			// Captcha Turnstile (2026-10-14): solo si hay claves; sin rompecabezas en la mayoría de los casos.
 			if ( class_exists( '\\DraIrina\\Core\\Contact\\SpamGuard' ) && \DraIrina\Core\Contact\SpamGuard::captcha_enabled() ) :
-				wp_enqueue_script( 'cf-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', [], null, [ 'in_footer' => true, 'strategy' => 'async' ] ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- script remoto versionado por Cloudflare.
+				wp_enqueue_script(
+					'cf-turnstile',
+					'https://challenges.cloudflare.com/turnstile/v0/api.js',
+					[],
+					null, // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- URL de API versionada por Cloudflare.
+					[
+						'in_footer' => true,
+						'strategy'  => 'async',
+					]
+				); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- script remoto versionado por Cloudflare.
 				?>
 				<div class="cf-turnstile di-form__captcha" data-sitekey="<?php echo esc_attr( \DraIrina\Core\Contact\SpamGuard::site_key() ); ?>" data-language="es" data-theme="light" data-appearance="interaction-only"></div>
 			<?php endif; ?>
