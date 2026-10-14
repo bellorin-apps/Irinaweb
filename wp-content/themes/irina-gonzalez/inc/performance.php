@@ -63,8 +63,10 @@ add_action(
 // profesionales y la CDN se encarga del peso por dispositivo. Los originales se conservan sin reescalar (abajo).
 // Calidad 100 en todo lo que genere WordPress (D-064, propietario 2026-10-10: vio la comparativa 100/95 y mantiene 100).
 // Excepción (D-073, propietario 2026-10-12): la versión para teléfonos (irina-movil, 1600 px de ancho) va a calidad 95 para que la
-// reducir su peso; escritorio y original siguen a 100. El filtro de calidad recibe dimensiones, no el nombre del tamaño:
+// reducir su peso; el original sigue a 100. El filtro de calidad recibe dimensiones, no el nombre del tamaño:
 // q95 se aplica abajo al archivo identificado en metadata, después de generar los tamaños a q100.
+// D-081 (propietario 2026-10-14, tras comparar 1:1): las fotos de cabecera también se sirven en escritorio a q95 (irina-escritorio,
+// mismo tamaño en píxeles que el original); el original a q100 se conserva en la biblioteca.
 add_filter( 'jpeg_quality', static fn(): int => 100 );
 add_filter(
 	'wp_editor_set_quality',
@@ -96,6 +98,91 @@ function irina_mobile_metadata_quality( array $metadata, int $attachment_id ): a
 	return $metadata;
 }
 add_filter( 'wp_generate_attachment_metadata', 'irina_mobile_metadata_quality', 20, 2 );
+
+/** Foto de cabecera: adjunto cuyo archivo o slug empieza por «hero-» (mismo criterio que los tamaños, más abajo). */
+function irina_is_hero_attachment( int $attachment_id, array $metadata = [] ): bool {
+	$file = basename( (string) ( $metadata['file'] ?? get_attached_file( $attachment_id ) ) );
+	$post = get_post( $attachment_id );
+	return str_starts_with( $file, 'hero-' ) || ( $post && str_starts_with( (string) $post->post_name, 'hero-' ) );
+}
+
+/**
+ * D-081: versión de escritorio de las fotos de cabecera a calidad 95, con las mismas dimensiones que el original (q100).
+ * Se guarda junto al original como «<nombre>-escritorio.webp» y se registra en metadata como tamaño «irina-escritorio», así
+ * WordPress la borra con el adjunto y `wp media regenerate` la rehace. Solo se usa si pesa menos que el original. Idempotente.
+ */
+function irina_desktop_metadata_quality( array $metadata, int $attachment_id ): array {
+	if ( ! irina_is_hero_attachment( $attachment_id, $metadata ) ) {
+		return $metadata;
+	}
+	$original = (string) get_attached_file( $attachment_id );
+	$mime     = (string) wp_check_filetype( $original )['type'];
+	if ( ! is_file( $original ) || ! in_array( $mime, [ 'image/webp', 'image/jpeg' ], true ) ) {
+		return $metadata;
+	}
+	$info = pathinfo( $original );
+	$file = $info['dirname'] . '/' . $info['filename'] . '-escritorio.' . $info['extension'];
+	$prev = $metadata['sizes']['irina-escritorio'] ?? [];
+	if ( ! empty( $prev['irina_quality_95'] ) && is_file( $file ) && filemtime( $file ) >= filemtime( $original ) ) {
+		return $metadata;
+	}
+	$editor = wp_get_image_editor( $original );
+	if ( is_wp_error( $editor ) || is_wp_error( $editor->set_quality( 95 ) ) ) {
+		return $metadata;
+	}
+	$saved = $editor->save( $file, $mime );
+	if ( is_wp_error( $saved ) || ! is_file( $file ) ) {
+		return $metadata;
+	}
+	clearstatcache( true, $file );
+	if ( filesize( $file ) >= filesize( $original ) ) {
+		wp_delete_file( $file );
+		unset( $metadata['sizes']['irina-escritorio'] );
+		return $metadata;
+	}
+	$metadata['sizes']['irina-escritorio'] = [
+		'file'             => wp_basename( $file ),
+		'width'            => (int) $saved['width'],
+		'height'           => (int) $saved['height'],
+		'mime-type'        => $mime,
+		'filesize'         => filesize( $file ),
+		'irina_quality_95' => true,
+	];
+	return $metadata;
+}
+add_filter( 'wp_generate_attachment_metadata', 'irina_desktop_metadata_quality', 21, 2 );
+
+/**
+ * Genera (o comprueba) la versión de escritorio q95 de todas las fotos de cabecera ya subidas. Para la sesión local tras desplegar:
+ * `wp eval 'print_r( irina_regenerate_desktop_heroes() );'`. Devuelve [id => 'archivo KB → KB'] o el motivo si no se generó.
+ *
+ * @return array<int,string>
+ */
+function irina_regenerate_desktop_heroes(): array {
+	$out = [];
+	$ids = get_posts(
+		[
+			'post_type'      => 'attachment',
+			'post_status'    => 'inherit',
+			'post_mime_type' => 'image',
+			'posts_per_page' => -1,
+			'fields'         => 'ids',
+		]
+	);
+	foreach ( $ids as $id ) {
+		$meta = wp_get_attachment_metadata( (int) $id );
+		if ( ! is_array( $meta ) || ! irina_is_hero_attachment( (int) $id, $meta ) ) {
+			continue;
+		}
+		$new = irina_desktop_metadata_quality( $meta, (int) $id );
+		if ( $new !== $meta ) {
+			wp_update_attachment_metadata( (int) $id, $new );
+		}
+		$d          = $new['sizes']['irina-escritorio'] ?? [];
+		$out[ $id ] = empty( $d['file'] ) ? 'sin versión q95 (no pesa menos o formato no admitido)' : sprintf( '%s %d KB → %s %d KB', wp_basename( (string) get_attached_file( (int) $id ) ), (int) round( filesize( (string) get_attached_file( (int) $id ) ) / 1024 ), $d['file'], (int) round( (int) $d['filesize'] / 1024 ) );
+	}
+	return $out;
+}
 // El original subido se conserva como tamaño "full" (WordPress no lo reescala a 2560 px): la foto del hero se sirve tal cual.
 add_filter( 'big_image_size_threshold', '__return_false' );
 // Sin «sizes=auto» en imágenes diferidas: con «auto» el navegador pedía la versión del ancho CSS a 1× (borrosa en 2×). Q-020.
@@ -107,7 +194,7 @@ add_filter( 'wp_img_tag_add_auto_sizes', '__return_false' );
  * dispositivo a partir de ese original sin pérdida.
  */
 function irina_hero_image( int $attachment_id ): string {
-	return irina_normalize_image_attributes(
+	$html = irina_normalize_image_attributes(
 		irina_image_original(
 			$attachment_id,
 			[
@@ -117,6 +204,24 @@ function irina_hero_image( int $attachment_id ): string {
 			]
 		)
 	);
+	// D-081: en escritorio (el <img>; los teléfonos usan el <source> irina-movil) la versión q95 si existe. ?m= como en móvil.
+	$meta = wp_get_attachment_metadata( $attachment_id );
+	$desk = empty( $meta['sizes']['irina-escritorio']['file'] ) ? false : wp_get_attachment_image_src( $attachment_id, 'irina-escritorio' );
+	if ( ! $desk ) {
+		return $html;
+	}
+	$file = dirname( (string) get_attached_file( $attachment_id ) ) . '/' . $meta['sizes']['irina-escritorio']['file'];
+	if ( ! is_file( $file ) || wp_basename( (string) $desk[0] ) !== $meta['sizes']['irina-escritorio']['file'] ) {
+		return $html;
+	}
+	$src       = add_query_arg( 'm', (string) filemtime( $file ), (string) $desk[0] );
+	$processor = new \WP_HTML_Tag_Processor( $html );
+	if ( $processor->next_tag( 'IMG' ) ) {
+		$processor->set_attribute( 'src', esc_url_raw( $src ) ); // El procesador escapa el atributo.
+		$processor->remove_attribute( 'srcset' );
+		$processor->remove_attribute( 'sizes' );
+	}
+	return $processor->get_updated_html();
 }
 
 /** Normaliza atributos de carga incluso si un optimizador añadió una segunda copia. */
@@ -172,7 +277,8 @@ function irina_movil_picture( int $attachment_id, string $html ): string {
 	return '<picture><source media="(max-width: 899px)" srcset="' . esc_url( $src ) . '">' . $html . '</picture>';
 }
 
-// Las fotos de cabecera (slug hero-*: hero-home, hero-dra…) solo generan la versión para teléfonos (irina-movil); el original es el resto.
+// Las fotos de cabecera (slug hero-*: hero-home, hero-dra…) solo generan la versión para teléfonos (irina-movil); la de escritorio q95
+// (irina-escritorio, D-081) la crea irina_desktop_metadata_quality() con el tamaño del original.
 add_filter(
 	'intermediate_image_sizes_advanced',
 	static function ( array $sizes, array $image_meta, int $attachment_id ): array {

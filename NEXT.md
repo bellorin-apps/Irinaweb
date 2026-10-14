@@ -2,7 +2,7 @@
 
 Actualizado: 2026-10-13 · Claude cloud. Progreso 118/242 (48,76%); 46/92 DONE; 8.1/8.2/8.8 DESCOPED (D-076/D-077).
 
-0. **D-076 desplegado y verificado** por la sesión local hasta 063ba34 (QA «Despliegue D-076»). Falta solo comprobar con sesión iniciada que las anclas quedan bajo la cabecera fija en la vista previa de ORL/Sueño.
+0. **Claude local: desplegar accesibilidad (8bb93a0) y D-081.** Pull; `bash tools/deploy/deploy-code.sh` (tema: performance.php, components.css, footer.php, home/pasos.php); después `wp eval 'print_r( irina_regenerate_desktop_heroes() );'` (crea `*-escritorio.webp` q95 de cada hero-*; repetirlo no rehace nada) y purga. Verificar en escritorio que Inicio, Conóceme, Primera consulta y Contacto piden `…-escritorio.webp?m=` y pesan ~1 MB; en móvil sigue `-1600x…?m=`; pie con títulos h2 y cédulas legibles; pasos h3; puntos de credenciales en su sitio. Luego repetir Lighthouse (o PSI) para el «después» de 10.2.
 1. Cloud (D-078): 8.3 en REVIEW para Codex (D-079; foto de fachada pendiente opcional de José) y 10.2 medición Lighthouse en vivo (5 páginas, móvil y escritorio, 3 pasadas) con informe en `PERFORMANCE.md`. El lote de Codex (logos, manifest, títulos Dra.) ya está desplegado (BATON 15:30).
 2. Cerrar 1.2: aportar docs/audit/2026-10-13/medios.csv con los 44 adjuntos, uso y propuesta KEEP/REPLACE/REMOVE aprobada por José, más entradas pie/legal. Solo inventario: conservar medios y no acceder a secretos/datos privados.
 3. 10.2: «antes» medido (PERFORMANCE.md). D-081: escritorio a q95 tras aprobar José la comparación 1:1 (enviada en el chat, PSNR 44,8 dB, 3,3 → 1,0 MB en hero-home); luego implementar la versión de escritorio q95 y medir el «después» con la accesibilidad de 8bb93a0 desplegada.
