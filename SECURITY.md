@@ -26,7 +26,7 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 
 ## Pendiente
 
-1. **José:** activar el 2FA en su usuario (Perfil › Opciones de dos factores) y en Hostinger y Google. 
+1. ~~**José:** activar el 2FA en su usuario~~ — **hecho** (José, 2026-10-14). Recomendado también en Hostinger y Google.
 2. Revisión de Codex (1.9, 5.7, 10.5) sobre este estado.
 
 ## Límites
