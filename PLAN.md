@@ -49,7 +49,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | TODO | Alertas existentes: noindex + canónica duplicada |
 | 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | DONE | InformeWP-CLI13/10: es_MX,Monterrey,formatos,Hello/child,ausenciaAstra/SiteKit y hardening confirmados. DISPLAY=true sinDEBUG no bloquea. Ver docs/audit/2026-10-13/veredictos-inventario.md |
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | DONE | Manual 2026-10-07 16:41 descargado; semanal automático activo |
-| 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | TODO | |
+| 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | DESCOPED | D-080: el plan Premium no incluye Staging y José no lo amplía; sitio corto, respaldo antes de cada despliegue y prueba de formulario de José con su correo |
 | 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | DONE | Auditoría2026-10-12: FIX documental: rollback vigente según deploy-code.sh (~/deploy-backups/<ts>); runbook de reset marcado histórico y no ejecutable; sin credenciales. |
 | 1.9 | Codex: auditoría de seguridad del estado actual | 2 | TODO | |
 
@@ -98,7 +98,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 5.3 | Fuente única de verdad: módulo de datos de contacto/profesionales reutilizable | 3 | TODO | |
 | 5.4 | Schema JSON-LD propio sin duplicar con el plugin SEO | 3 | TODO | |
 | 5.5 | Tooling: linters (PHPCS WPCS, stylelint, eslint), build de assets, fuentes WOFF2 locales | 2 | DOING | PHPCS + WPCS configurados y en verde. Falta: stylelint/eslint, build de sprite, fuentes |
-| 5.6 | Instalación/configuración plugins aprobados en staging | 2 | TODO | |
+| 5.6 | Instalación/configuración plugins aprobados en staging | 2 | DESCOPED | D-080: sin staging; los plugins ya están en producción con respaldo previo |
 | 5.7 | Codex: auditoría de código (PHP/JS/CSS/seguridad) | 3 | TODO | |
 
 ## FASE 6 — Build del núcleo visual
@@ -178,7 +178,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 12.1 | Deploy staging → producción con backup y rollback | 5 | TODO | |
+| 12.1 | Deploy a producción con backup y rollback (sin staging, D-080) | 5 | TODO | Scripts de tools/deploy/ con respaldo en ~/deploy-backups/; falta documentar y probar el rollback |
 | 12.2 | Día 0 validación; Día 1 errores críticos | 2 | TODO | |
 | 12.3 | Día 7 Search Console + analytics; Día 30 indexación/keywords/conversiones/CWV | 2 | TODO | |
 | 12.4 | `MAINTENANCE.md` + plan SEO 6–12 meses + KPIs | 3 | TODO | |
