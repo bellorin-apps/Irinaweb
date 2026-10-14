@@ -304,9 +304,15 @@
               "url": ""
             },
             {
-              "_id": "58695a4",
-              "label": "Rinoplastia funcional",
-              "sub": "Cirugía de la nariz para respirar",
+              "_id": "6250031",
+              "label": "Rinoplastia funcional y estética",
+              "sub": "Cirugía de la nariz por función y por forma",
+              "url": ""
+            },
+            {
+              "_id": "8e6c48c",
+              "label": "Cirugía de sueño",
+              "sub": "Ronquido y apnea obstructiva del sueño",
               "url": ""
             }
           ]
