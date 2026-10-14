@@ -76,16 +76,16 @@
           "anchor": "atiendo",
           "items": [
             {
-              "_id": "1dc399c",
+              "_id": "005005b",
               "label": "Ronquido",
               "sub": "En adultos y en niños",
-              "url": ""
+              "url": "/padecimientos/ronquido/"
             },
             {
-              "_id": "0ac5d3f",
+              "_id": "62fe7dc",
               "label": "Apnea obstructiva del sueño",
               "sub": "Pausas en la respiración al dormir",
-              "url": ""
+              "url": "/padecimientos/apnea-obstructiva-del-sueno/"
             }
           ]
         },
@@ -131,10 +131,10 @@
           "note": "El tratamiento se decide con el estudio en la mano y según dónde se estrecha la vía aérea.",
           "items": [
             {
-              "_id": "d9067e5",
+              "_id": "33f31f7",
               "label": "Estudio del sueño en casa",
               "sub": "Poligrafía respiratoria interpretada por la propia Dra.",
-              "url": ""
+              "url": "/tratamientos/estudio-del-sueno/"
             },
             {
               "_id": "1917825",
@@ -143,16 +143,16 @@
               "url": ""
             },
             {
-              "_id": "ae96bcf",
+              "_id": "df56616",
               "label": "CPAP",
               "sub": "Indicación, ajuste y seguimiento",
-              "url": ""
+              "url": "/tratamientos/cpap/"
             },
             {
-              "_id": "3e8b76b",
+              "_id": "df134e5",
               "label": "Cirugía de ronquido y apnea",
               "sub": "Nariz, paladar o amígdalas, según el caso",
-              "url": ""
+              "url": "/tratamientos/cirugia-de-ronquido-y-apnea/"
             },
             {
               "_id": "35a4e2f",

@@ -2,7 +2,8 @@
 /**
  * Listado numerado de condiciones/tratamientos. $args: eyebrow, title, note, post_type, area, zona, items (manual: [label, sub, url]), tight (bool), anchor.
  * Si hay entradas publicadas del CPT con esa área/zona, se listan; si no, los items manuales. Con post_type vacío solo se usa la lista
- * manual, y un ítem sin url se pinta como texto, sin enlace (D-076: sitio corto, sin fichas públicas).
+ * manual, y un ítem sin url se pinta como texto, sin enlace (D-076: sitio corto). Un ítem con url de ficha o pilar solo enlaza si está
+ * publicado (D-082: las 5 fichas de sueño).
  *
  * @package IrinaGonzalez
  */
@@ -64,7 +65,8 @@ if ( ! $irina_rows ) {
 			]
 		);
 		if ( '' !== $irina_i['label'] ) {
-			$irina_rows[] = [ $irina_i['label'], $irina_i['sub'], $irina_i['url'] ];
+			// D-082: un ítem que apunta a una ficha o pilar solo enlaza si está publicado; si no, se pinta como texto.
+			$irina_rows[] = [ $irina_i['label'], $irina_i['sub'], '' === (string) $irina_i['url'] ? '' : irina_url_if_published( (string) $irina_i['url'] ) ];
 		}
 	}
 }

@@ -8,18 +8,20 @@
 
 declare( strict_types=1 );
 
-$irina_id      = get_the_ID();
-$irina_type    = get_post_type( $irina_id );
-$irina_sleep   = has_term( 'sueno', 'area', $irina_id );
-$irina_meta    = static fn( string $key ) => get_post_meta( $irina_id, 'di_' . $key, true );
-$irina_list    = static function ( $value ): array {
+$irina_id    = get_the_ID();
+$irina_type  = get_post_type( $irina_id );
+$irina_sleep = has_term( 'sueno', 'area', $irina_id );
+$irina_meta  = static fn( string $key ) => get_post_meta( $irina_id, 'di_' . $key, true );
+$irina_list  = static function ( $value ): array {
 	return is_array( $value ) ? array_values( array_filter( array_map( 'strval', $value ) ) ) : [];
 };
-$irina_area    = get_the_terms( $irina_id, 'area' );
-$irina_area    = is_array( $irina_area ) && $irina_area ? $irina_area[0] : null;
+$irina_area  = get_the_terms( $irina_id, 'area' );
+$irina_area  = is_array( $irina_area ) && $irina_area ? $irina_area[0] : null;
+// Migas hacia el pilar si está publicado (sin enlace si no). D-076: los archivos /padecimientos/ y /tratamientos/ dan 404, así que
+// esa miga ya no existe; la ficha cuelga directamente de su página corta.
 $irina_crumb   = $irina_sleep
-	? [ [ __( 'Sueño', 'irina-gonzalez' ), home_url( '/sueno/' ) ] ]
-	: [ [ __( 'Otorrinolaringología', 'irina-gonzalez' ), home_url( '/otorrinolaringologia/' ) ], [ 'condicion' === $irina_type ? __( 'Padecimientos', 'irina-gonzalez' ) : __( 'Tratamientos', 'irina-gonzalez' ), (string) get_post_type_archive_link( $irina_type ) ] ];
+	? [ [ __( 'Sueño', 'irina-gonzalez' ), irina_url_if_published( '/sueno/' ) ] ]
+	: [ [ __( 'Otorrinolaringología', 'irina-gonzalez' ), irina_url_if_published( '/otorrinolaringologia/' ) ] ];
 $irina_crumb[] = [ get_the_title( $irina_id ), '' ];
 
 $irina_sections = [];
@@ -106,7 +108,7 @@ irina_part(
 			}
 			$irina_toc[ $irina_anchor ] = $irina_label;
 			if ( 'callout' === $irina_k ) {
-				printf( '<div class="di-callout di-reveal" id="%s"><h4>%s</h4>%s</div>', esc_attr( $irina_anchor ), esc_html( $irina_label ), $irina_html ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<div class="di-callout di-reveal" id="%s"><h3>%s</h3>%s</div>', esc_attr( $irina_anchor ), esc_html( $irina_label ), $irina_html ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			} else {
 				printf( '<h2 id="%s" class="di-reveal">%s</h2><div class="di-reveal di-prose">%s</div>', esc_attr( $irina_anchor ), esc_html( $irina_label ), $irina_html ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}

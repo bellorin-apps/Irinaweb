@@ -40,7 +40,7 @@ data = [
         "eyebrow": "¿Qué estás sintiendo?", "title": "<b>Motivos</b> de consulta <b><em>frecuentes</em></b>",
         "note": "Orientación para encontrar la información adecuada. No sustituye una valoración médica.",
         "items": rep([
-            ("Ronco o me dicen que dejo de respirar", "Ronquido, apnea del sueño", "/sueno/"),
+            ("Ronco o me dicen que dejo de respirar", "Ronquido, apnea del sueño", "/sueno/#atiendo"),
             ("Nariz tapada todo el tiempo", "Obstrucción nasal, tabique, cornetes", "/otorrinolaringologia/#nariz"),
             ("Sinusitis que no se quita", "Sinusitis aguda y crónica", "/otorrinolaringologia/#nariz"),
             ("Dolor u oído tapado", "Otitis, tapón de cerumen", "/otorrinolaringologia/#oido"),

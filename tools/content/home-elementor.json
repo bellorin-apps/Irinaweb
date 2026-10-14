@@ -136,10 +136,10 @@
           "note": "Orientación para encontrar la información adecuada. No sustituye una valoración médica.",
           "items": [
             {
-              "_id": "8a163a1",
+              "_id": "2e2208b",
               "label": "Ronco o me dicen que dejo de respirar",
               "sub": "Ronquido, apnea del sueño",
-              "url": "/sueno/"
+              "url": "/sueno/#atiendo"
             },
             {
               "_id": "b0a51fb",

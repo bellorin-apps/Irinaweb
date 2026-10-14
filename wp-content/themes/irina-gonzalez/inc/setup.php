@@ -116,7 +116,44 @@ add_action(
 			$wp_query->set_404();
 			status_header( 404 );
 			nocache_headers();
+			return;
 		}
+		// D-082: una ficha de sueño publicada vive en /sueno/{slug}/ (MetaRegistry::area_permalink); /padecimientos/{slug}/ y
+		// /tratamientos/{slug}/ también la resolverían, así que se redirigen con 301 a su dirección única (nunca en vista previa ni borradores).
+		if ( is_singular( [ 'condicion', 'tratamiento' ] ) && ! is_preview() && 'publish' === get_post_status() ) {
+			global $wp;
+			$canonical = (string) get_permalink();
+			$requested = home_url( user_trailingslashit( (string) $wp->request ) );
+			if ( '' !== $canonical && untrailingslashit( $requested ) !== untrailingslashit( $canonical ) ) {
+				wp_safe_redirect( $canonical, 301 );
+				exit;
+			}
+		}
+	}
+);
+
+// D-076/D-082: en las fichas publicadas (las 5 de sueño), el BreadcrumbList de Rank Math no debe pasar por el archivo del tipo
+// (/padecimientos/, /tratamientos/: 404). Se sustituye por el pilar (Sueño u Otorrinolaringología) si está publicado.
+add_filter(
+	'rank_math/frontend/breadcrumb/items',
+	static function ( array $crumbs ): array {
+		if ( ! is_singular( [ 'condicion', 'tratamiento' ] ) ) {
+			return $crumbs;
+		}
+		$archive = trailingslashit( (string) get_post_type_archive_link( (string) get_post_type() ) );
+		$pillar  = has_term( 'sueno', 'area' ) ? [ __( 'Sueño', 'irina-gonzalez' ), '/sueno/' ] : [ __( 'Otorrinolaringología', 'irina-gonzalez' ), '/otorrinolaringologia/' ];
+		$out     = [];
+		foreach ( $crumbs as $crumb ) {
+			if ( isset( $crumb[1] ) && trailingslashit( (string) $crumb[1] ) === $archive ) {
+				$url = irina_url_if_published( $pillar[1] );
+				if ( '' !== $url ) {
+					$out[] = [ $pillar[0], $url ];
+				}
+				continue;
+			}
+			$out[] = $crumb;
+		}
+		return $out;
 	}
 );
 

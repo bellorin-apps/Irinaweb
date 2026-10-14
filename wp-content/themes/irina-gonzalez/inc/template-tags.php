@@ -30,25 +30,39 @@ function irina_part( string $name, array $args = [] ): void {
 	get_template_part( 'templates/parts/' . $name, null, $args );
 }
 
-/** Evita 404 desde Home mientras los pilares y fichas esperan aprobación médica. */
-function irina_public_content_url( string $url ): string {
+/**
+ * Enlace interno a un pilar (ORL, Sueño) o a una ficha (/padecimientos/…, /tratamientos/…): su permalink, con el #ancla, si está
+ * publicado; '' si no lo está. Cualquier otra URL se devuelve tal cual.
+ *
+ * @param string $url URL relativa o absoluta del sitio.
+ */
+function irina_url_if_published( string $url ): string {
 	$path = (string) wp_parse_url( $url, PHP_URL_PATH );
 	$host = wp_parse_url( $url, PHP_URL_HOST );
 	if ( ( $host && wp_parse_url( home_url(), PHP_URL_HOST ) !== $host ) || ! preg_match( '#^/(otorrinolaringologia|sueno|padecimientos|tratamientos)(/|$)#', $path ) ) {
 		return $url;
 	}
-	$slug  = basename( rtrim( $path, '/' ) );
+	$type  = str_starts_with( $path, '/padecimientos/' ) ? 'condicion' : ( str_starts_with( $path, '/tratamientos/' ) ? 'tratamiento' : 'page' );
 	$posts = get_posts(
 		[
-			'post_type'      => [ 'page', 'condicion', 'tratamiento' ],
-			'post_name__in'  => [ $slug ],
+			'post_type'      => $type,
+			'post_name__in'  => [ basename( rtrim( $path, '/' ) ) ],
 			'post_status'    => 'publish',
 			'posts_per_page' => 1,
 		]
 	);
-	if ( $posts ) {
-		$frag = (string) wp_parse_url( $url, PHP_URL_FRAGMENT );
-		return (string) get_permalink( $posts[0] ) . ( '' !== $frag ? '#' . rawurlencode( $frag ) : '' );
+	if ( ! $posts ) {
+		return '';
+	}
+	$frag = (string) wp_parse_url( $url, PHP_URL_FRAGMENT );
+	return (string) get_permalink( $posts[0] ) . ( '' !== $frag ? '#' . rawurlencode( $frag ) : '' );
+}
+
+/** Evita 404 desde Home mientras los pilares y fichas esperan aprobación médica: si no está publicado, Primera consulta o Contacto. */
+function irina_public_content_url( string $url ): string {
+	$public = irina_url_if_published( $url );
+	if ( '' !== $public ) {
+		return $public;
 	}
 	foreach ( [ 'primera-consulta', 'contacto' ] as $fallback ) {
 		$page = get_page_by_path( $fallback );
@@ -215,8 +229,10 @@ function irina_social_circles( string $css_class = 'di-social' ): string {
  */
 function irina_breadcrumbs( array $trail ): string {
 	$items = [ sprintf( '<li><a href="%s">%s</a></li>', esc_url( home_url( '/' ) ), esc_html__( 'Inicio', 'irina-gonzalez' ) ) ];
-	foreach ( $trail as [ $label, $url ] ) {
-		$items[] = '' !== $url ? sprintf( '<li><a href="%s">%s</a></li>', esc_url( $url ), esc_html( $label ) ) : sprintf( '<li aria-current="page">%s</li>', esc_html( $label ) );
+	$last  = count( $trail ) - 1;
+	foreach ( array_values( $trail ) as $i => [ $label, $url ] ) {
+		// Sin enlace: la página actual (último) o un pilar aún en borrador (texto sin aria-current).
+		$items[] = '' !== $url ? sprintf( '<li><a href="%s">%s</a></li>', esc_url( $url ), esc_html( $label ) ) : sprintf( $i === $last ? '<li aria-current="page">%s</li>' : '<li>%s</li>', esc_html( $label ) );
 	}
 	return '<nav class="di-crumbs" aria-label="' . esc_attr__( 'Migas de pan', 'irina-gonzalez' ) . '"><ol>' . implode( '', $items ) . '</ol></nav>';
 }
