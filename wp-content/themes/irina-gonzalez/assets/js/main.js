@@ -67,6 +67,12 @@
       if (window.innerWidth >= 1024) { burger.click(); }
       else { panel.style.top = Math.round(header.getBoundingClientRect().bottom) + 'px'; }
     });
+    // La cabecera cambia de alto con una transición (móvil 92 px → tableta 112 px) después del evento resize: se sigue su alto real.
+    if (window.ResizeObserver) {
+      new ResizeObserver(function () {
+        if (panel.classList.contains('is-open')) { panel.style.top = Math.round(header.getBoundingClientRect().bottom) + 'px'; }
+      }).observe(header);
+    }
   }
 
   // Credenciales de la sección de la Dra.: un ítem a la vez, rotación automática, puntos y anillo, en todos los anchos (propietario, 2026-10-09/10).
