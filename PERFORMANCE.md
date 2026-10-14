@@ -44,3 +44,30 @@ Perf = rendimiento; A11y = accesibilidad; BP = buenas prácticas. LCP = elemento
 - Desplegar 8bb93a0 (accesibilidad) y repetir la tanda desde la sesión local o PageSpeed Insights para el «después».
 - Decisión de José sobre el punto 4.
 - Revisar datos de campo en Search Console cuando existan.
+
+## Después (sesión local, 2026-10-13 18:25, hora de Monterrey)
+
+Lighthouse 12.2.1 (npx) en Chrome headless local (Windows, red doméstica), con 3 pasadas por página y modo y mediana. Es el mismo método y la misma versión que el «antes». Se usaron URLs con barra final y la caché de LiteSpeed estaba caliente. Medido después de desplegar a4a3109 (accesibilidad 8bb93a0 + D-081, escritorio a q95) y **antes** de D-082, con ORL y Sueño todavía en borrador. PageSpeed Insights sin clave respondió 429 y no se usó. Cada cifra de la tabla va de antes a después.
+
+| Página | Modo | Perf | A11y | BP | SEO | LCP s | FCP s | TBT ms | CLS | SI s | TTFB ms | Peso KiB | Fallos de accesibilidad |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contacto | desktop | 75 → 87 | 95 → 100 | 100 | 100 | 3.67 → 2.21 | 0.83 | 0 | 0.021 → 0.001 | 1.34 | 65 | 4260 → 1763 | — |
+| contacto | mobile | 61 → 75 | 95 → 100 | 100 | 100 | 7.17 → 4.76 | 2.91 | 94 | 0.009 → 0.009 | 4.06 | 199 | 1298 → 1295 | — |
+| dra-irina-gonzalez-saez | desktop | 77 → 88 | 95 → 98 | 100 | 100 | 3.64 → 2.20 | 0.88 | 0 | 0.023 → 0.001 | 0.96 | 63 | 3942 → 1817 | heading-order |
+| dra-irina-gonzalez-saez | mobile | 82 → 78 | 95 → 99 | 100 | 100 | 4.01 → 4.65 | 2.98 | 26 | 0.011 → 0.000 | 2.98 | 193 | 1269 → 1332 | heading-order |
+| inicio | desktop | 63 → 83 | 91 → 100 | 100 | 100 | 3.74 → 2.89 | 0.91 | 0 | 0.236 → 0.001 | 1.11 | 197 | 5204 → 6678 | — |
+| inicio | mobile | 70 → 75 | 91 → 100 | 100 | 100 | 4.26 → 5.30 | 2.95 | 69 | 0.012 → 0.000 | 3.04 | 198 | 2015 → 2772 | — |
+| preguntas-frecuentes | desktop | 95 → 97 | 92 → 100 | 100 | 100 | 1.12 → 1.18 | 0.89 | 0 | 0.027 → 0.001 | 0.89 | 66 | 550 → 551 | — |
+| preguntas-frecuentes | mobile | 78 → 78 | 93 → 100 | 100 | 100 | 3.88 → 4.27 | 3.53 | 40 | 0.0 → 0.017 | 3.53 | 209 | 527 → 527 | — |
+| primera-consulta | desktop | 79 → 97 | 93 → 100 | 100 | 100 | 3.08 → 1.10 | 0.85 | 0 | 0.001 → 0.001 | 1.18 | 682 | 3955 → 1640 | — |
+| primera-consulta | mobile | 73 → 85 | 94 → 100 | 100 | 100 | 4.67 → 3.63 | 2.79 | 26 | 0.0 → 0.000 | 2.79 | 196 | 693 → 1480 | — |
+
+**Lectura:**
+- **Accesibilidad 100** en todas las páginas salvo Dra. (98/99): queda un `<h4>` fuera de orden (heading-order).
+- **CLS de la portada en escritorio: 0,236 → 0,001.**
+- **Escritorio:** el peso baja a menos de la mitad en Dra. (3942 → 1817 KiB), Primera consulta (3955 → 1640) y Contacto (4260 → 1763) gracias a D-081. El LCP baja a 1,1–2,2 s.
+- **Portada:** pesa más (escritorio 5204 → 6678 KiB). Esta vez la medición cargó el fondo de «Escucharte» `dra-escucharte-bg` a q100 en 2400 px (**3133 KiB**, el recurso más pesado), que en el «antes» no aparecía, probablemente por la carga diferida. La foto de cabecera sí bajó (3391 → 1071 KiB). Aplicar D-081 también a ese fondo en escritorio es decisión de José.
+- **Primera consulta en móvil:** 693 → 1480 KiB. El peso lo da `pc-fondo` en PNG (775 KiB, 1024 px, sin WebP; ver NEXT). Con un original de 1600 px o más se reduciría a unos 80 KiB en móvil.
+- **Móvil:** el LCP sigue en 3,6–5,3 s con 4G lento simulado. La red simulada pesa más que el sitio. TTFB 190–210 ms en móvil y 60–200 ms en escritorio.
+- **Límites:** es una sola máquina en una red doméstica y la medición tiene ruido. Por ejemplo, Dra. móvil bajó de 82 a 78 con más peso de endoscopio visible. Sirve para comparar órdenes de magnitud.
+

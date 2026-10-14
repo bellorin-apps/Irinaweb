@@ -231,3 +231,17 @@ Desplegados 0679222, f21bed0 y 063ba34: deploy-code (backup `~/deploy-backups/20
 
 **Límites:** la vista visual de ORL y Sueño en borrador (anclas bajo la cabecera fija) necesita sesión iniciada y no se verificó en navegador; se comprobó la estructura renderizada en el servidor. Durante la depuración, el token del briefing apareció en la salida de consola de la sesión local; no está en el repositorio ni en documentos. José decide si se rota.
 
+## Publicación D-082 (sesión local, 2026-10-13 18:50)
+
+| Comprobación | Resultado |
+|---|---|
+| ORL 170 y Sueño 171 | publish; 200; sin «Borrador»; anclas a 96 px del borde en 1440 y Galaxy, con la cabecera de 76/66 px |
+| 5 fichas de sueño | 200 en /sueno/{slug}/; rutas /padecimientos/ y /tratamientos/{slug}/ → 301; enlazadas solo desde Sueño |
+| 21 fichas en borrador (muestra de 10) | 404 en /padecimientos/, /tratamientos/, /sueno/ y /otorrinolaringologia/{slug}/ |
+| Sitemaps | Las 5 publicadas presentes. **Q-048 P2 OPEN:** incluyen /padecimientos/, /tratamientos/ y /recursos/ (404) |
+| Robots | 205 tenía noindex de muestra → se borró `rank_math_robots`; ahora index, follow. Las otras 4 y las dos páginas, por defecto |
+| Schema y migas | MedicalWebPage + MedicalTherapy; BreadcrumbList Inicio › Sueño › CPAP; canonical correcto |
+| Portada, menú y pie | Motivos a anclas de ORL y a /sueno/#atiendo; menú y pie con ORL y Sueño |
+| Consola | Limpia en 1440 y Galaxy |
+| Lighthouse (antes de D-082) | Accesibilidad 100 salvo Dra. 98/99: **Q-049 P2 OPEN** heading-order (h4) |
+
