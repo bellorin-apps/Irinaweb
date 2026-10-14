@@ -206,4 +206,4 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
   - scrollable-region-focusable: la franja de credenciales del hero recibe foco solo cuando se desplaza (móvil) y lleva aria-label.
 - Falso positivo documentado: botón WhatsApp glass de la cabecera en páginas nocturnas; axe lo calcula sobre claro (4.12) y en pantalla se pinta #224556 sobre el hero oscuro (10.2:1, píxel medido).
 - Verificado con el CSS/JS locales sobre las páginas en vivo (los dos cambios de HTML aplicados en el navegador): sin más violaciones. Límite: axe no cubre todo WCAG (orden de foco, lectores de pantalla reales); faltan pruebas manuales con VoiceOver/TalkBack.
-
+- SECURITY.md creado (10.3) con el estado verificado y los límites de las pruebas desde la nube (Q-059). Encargo de la segunda ronda de Codex: `docs/CODEX_REVIEW_PROMPT_2026-10-14b.md` (8 auditorías «Codex:» + 9.1, 9.2, 9.3, 10.3, 10.4).
