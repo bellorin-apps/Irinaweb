@@ -4,8 +4,8 @@
  *
  * - Recibe nombre, teléfono, motivo (categoría), correo opcional y mensaje opcional; exige consentimiento del aviso de privacidad.
  * - No guarda nada en la base de datos: envía un correo al consultorio y redirige a la página de gracias (noindex).
- * - Anti-abuso sin cookies ni captcha: honeypot, tiempo mínimo de llenado, límite por IP (transitorio con hash) y
- *   comprobación de origen. Compatible con la caché de página (no usa nonce).
+ * - Anti-abuso compatible con la caché de página (no usa nonce): honeypot, tiempo mínimo de llenado, límite por IP (transitorio
+ *   con hash), comprobación de origen y, desde 2026-10-14, filtro de contenido comercial y captcha Turnstile opcional (SpamGuard).
  * - SMTP opcional por constantes en wp-config.php: DI_SMTP_HOST, DI_SMTP_PORT, DI_SMTP_USER, DI_SMTP_PASS, DI_SMTP_SECURE (ssl|tls),
  *   DI_SMTP_FROM, DI_SMTP_FROM_NAME. Sin ellas se usa wp_mail() normal.
  *
@@ -74,7 +74,7 @@ final class Form {
 			return $this->invalid( 'form', __( 'Vuelve a cargar el formulario.', 'dra-irina-core' ) );
 		}
 		// Rechazar arrays en campos simples antes de pasar por funciones de texto.
-		foreach ( [ 'di_web', 'di_t', 'di_name', 'di_phone', 'di_email', 'di_motivo', 'di_message', 'di_consent' ] as $field ) {
+		foreach ( [ 'di_web', 'di_t', 'di_name', 'di_phone', 'di_email', 'di_motivo', 'di_message', 'di_consent', 'cf-turnstile-response' ] as $field ) {
 			if ( isset( $_POST[ $field ] ) && ! is_string( $_POST[ $field ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- validación de forma; protección sin nonce para caché.
 				return $this->invalid( 'form', __( 'Revisa los campos del formulario.', 'dra-irina-core' ) );
 			}
@@ -92,7 +92,12 @@ final class Form {
 			return [ 'ok' => true ];
 		}
 		$started = (int) sanitize_text_field( wp_unslash( $_POST['di_t'] ?? '0' ) );
-		if ( $started > 0 && ( time() - $started ) < self::MIN_SECONDS ) {
+		if ( $started <= 0 ) {
+			// Sin la marca de tiempo que siempre lleva el formulario: envío directo de un robot. Éxito aparente, sin correo.
+			SpamGuard::log( 'no_t' );
+			return [ 'ok' => true ];
+		}
+		if ( ( time() - $started ) < self::MIN_SECONDS ) {
 			return [
 				'ok'      => false,
 				'error'   => 'fast',
@@ -105,6 +110,22 @@ final class Form {
 				'error'   => 'rate',
 				'message' => __( 'Hemos recibido varios mensajes desde tu conexión. Espera unos minutos o escríbenos por WhatsApp.', 'dra-irina-core' ),
 			];
+		}
+
+		if ( SpamGuard::captcha_enabled() ) {
+			$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+			$ok = SpamGuard::verify( sanitize_text_field( wp_unslash( $_POST['cf-turnstile-response'] ?? '' ) ), $ip );
+			if ( false === $ok ) {
+				SpamGuard::log( 'captcha' );
+				return [
+					'ok'      => false,
+					'error'   => 'captcha',
+					'message' => __( 'No pudimos comprobar que eres una persona. Espera un momento e inténtalo de nuevo, o escríbenos por WhatsApp.', 'dra-irina-core' ),
+				];
+			}
+			if ( null === $ok ) {
+				SpamGuard::log( 'captcha_unreachable' ); // Cloudflare no respondió: se deja pasar para no perder a un paciente.
+			}
 		}
 
 		$name     = $this->clean_text( sanitize_text_field( wp_unslash( $_POST['di_name'] ?? '' ) ), 80 );
@@ -131,6 +152,14 @@ final class Form {
 		}
 		if ( ! $consent ) {
 			return $this->invalid( 'consent', __( 'Necesitamos tu consentimiento para contactarte.', 'dra-irina-core' ) );
+		}
+
+		$spam = SpamGuard::classify( $name, $email, $message );
+		if ( '' !== $spam ) {
+			// Oferta comercial o enlaces: éxito aparente para no dar pistas, sin enviar correo.
+			SpamGuard::log( $spam );
+			$this->count();
+			return [ 'ok' => true ];
 		}
 
 		$sent = $this->send( $name, $phone, $email, self::MOTIVOS[ $motivo ], $message );

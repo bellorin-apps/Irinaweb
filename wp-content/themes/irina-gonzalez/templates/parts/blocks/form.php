@@ -34,6 +34,7 @@ $irina_errors  = [
 	'consent' => __( 'Necesitamos tu consentimiento para contactarte.', 'irina-gonzalez' ),
 	'rate'    => __( 'Hemos recibido varios mensajes desde tu conexión. Espera unos minutos o escríbenos por WhatsApp.', 'irina-gonzalez' ),
 	'mail'    => __( 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp y te atendemos enseguida.', 'irina-gonzalez' ),
+	'captcha' => __( 'No pudimos comprobar que eres una persona. Espera un momento e inténtalo de nuevo, o escríbenos por WhatsApp.', 'irina-gonzalez' ),
 ];
 if ( ! $irina_core ) {
 	return;
@@ -97,6 +98,13 @@ if ( ! $irina_core ) {
 			?>
 			</span></label>
 			<p class="di-form__note"><?php esc_html_e( 'Datos mínimos: no guardamos tu mensaje en el sitio; llega directo al consultorio. Si es una urgencia, acude a un servicio de urgencias.', 'irina-gonzalez' ); ?></p>
+			<?php
+			// Captcha Turnstile (2026-10-14): solo si hay claves; sin rompecabezas en la mayoría de los casos.
+			if ( class_exists( '\\DraIrina\\Core\\Contact\\SpamGuard' ) && \DraIrina\Core\Contact\SpamGuard::captcha_enabled() ) :
+				wp_enqueue_script( 'cf-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', [], null, [ 'in_footer' => true, 'strategy' => 'async' ] ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- script remoto versionado por Cloudflare.
+				?>
+				<div class="cf-turnstile di-form__captcha" data-sitekey="<?php echo esc_attr( \DraIrina\Core\Contact\SpamGuard::site_key() ); ?>" data-language="es" data-theme="light" data-appearance="interaction-only"></div>
+			<?php endif; ?>
 			<button type="submit" class="di-btn di-btn--primary di-form__submit"><span class="di-form__label"><?php echo esc_html( $irina_a['button'] ); ?></span><span class="di-form__sending" hidden><?php esc_html_e( 'Enviando…', 'irina-gonzalez' ); ?></span></button>
 		</form>
 	</div>

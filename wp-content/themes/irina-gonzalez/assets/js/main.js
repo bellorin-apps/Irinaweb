@@ -218,6 +218,8 @@
             return;
           }
           showError((res.j && res.j.message) || 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', res.j && res.j.error);
+          // Captcha Turnstile: cada token sirve una vez; tras un error se pide uno nuevo.
+          if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch (err) { /* sin captcha */ } }
         })
         .catch(function () { showError('No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', null); })
         .finally(function () { form.classList.remove('is-sending'); form.querySelector('.di-form__label').hidden = false; form.querySelector('.di-form__sending').hidden = true; });
