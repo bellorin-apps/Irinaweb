@@ -21,16 +21,15 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 ## Decisiones y riesgos aceptados
 
 - **D-085:** la Secret Key de Turnstile quedó visible en una captura del chat; José decidió no rotarla. Se puede rotar en cualquier momento (Turnstile › widget › Rotate Secret Key).
-- **Contraseña de aplicación «claude-ops» (administrador, tarea 1.1):** es el canal REST de la sesión cloud, creada el 2026-10-07. La salida de red del entorno cloud la añade a las peticiones al dominio, por eso las pruebas REST desde la nube se ven como administrador (Q-059). Mantenerla o revocarla lo decide José; los despliegues van por SSH desde su PC y no la necesitan.
+- **Contraseña de aplicación «claude-ops» revocada (José, 2026-10-14):** era el canal REST de la sesión cloud (tarea 1.1) y hacía que sus pruebas se vieran como administrador (Q-059). El admin queda sin contraseñas de aplicación; lo que requiera permisos lo consulta la sesión local por SSH/WP-CLI. Comprobado desde la nube tras la revocación: users/me, settings, users y abilities sin acceso.
 - **Actualizaciones automáticas de Hostinger** activas (p. ej. Elementor 4.3.4 → 4.3.5 el 2026-10-14): mantienen los parches al día; tras cada una conviene revisar el sitio.
 
 ## Pendiente
 
-1. **José:** activar el 2FA en su usuario (Perfil › Opciones de dos factores) y en Hostinger y Google. Comprobar después que «claude-ops» sigue funcionando si se mantiene.
-2. **José:** decidir sobre «claude-ops» (tarea 1.1).
-3. Revisión de Codex (1.9, 5.7, 10.5) sobre este estado.
+1. **José:** activar el 2FA en su usuario (Perfil › Opciones de dos factores) y en Hostinger y Google. 
+2. Revisión de Codex (1.9, 5.7, 10.5) sobre este estado.
 
 ## Límites
 
-- Las peticiones REST que salen del entorno cloud van autenticadas: cualquier prueba de «visitante anónimo» contra la API debe hacerse desde otra red (sesión local).
+- Hasta la revocación de «claude-ops» (2026-10-14), las peticiones REST desde la nube iban autenticadas; las pruebas anónimas anteriores a esa fecha valen solo si las hizo la sesión local.
 - No se han hecho pruebas de penetración ni escaneo de dependencias de terceros; el formulario no se prueba en producción porque envía correos reales.
