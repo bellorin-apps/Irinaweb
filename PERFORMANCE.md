@@ -83,3 +83,16 @@ Mismo método (Lighthouse 12.2.1 local, 3 pasadas, mediana).
 
 `dra-escucharte-bg` en escritorio pasa de 3133 KiB (q100) a 525 KiB (q95), sin cambio visible a 1440. Accesibilidad 100 en las cinco páginas. El rendimiento móvil de Dra. varía ±4 entre tandas con el mismo peso: es ruido de la red simulada.
 
+## D-084, entrada del hero: con y sin animación (sesión local, 2026-10-14 09:45)
+
+Lighthouse 12.2.1 local, 3 pasadas, mediana. Comparación A/B en el mismo momento: animación activa frente a Chrome con `--force-prefers-reduced-motion` (sin animación).
+
+| Página | Modo | Perf con / sin | LCP s con / sin | LCP por pasada (con · sin) | CLS |
+|---|---|---|---|---|---|
+| inicio | desktop | 88 / 87 | 2.26 / 2.32 | 2.26, 2.26, 3.01 · 2.04, 2.32, 3.05 | 0.001 |
+| inicio | mobile | 75 / 73 | 5.29 / 5.74 | 5.29, 7.30, 5.13 · 5.74, 5.29, 7.97 | 0 |
+| sueno | desktop | 97 / 97 | 1.09 / 1.08 | 1.09, 1.09, 1.13 · 1.08, 1.07, 1.08 | 0.001 |
+| **sueno** | **mobile** | **68 / 79** | **6.17 / 3.81** | 6.30, 6.09, 6.17 · 3.85, 3.80, 3.81 | 0 |
+
+**Lectura:** en la portada, el LCP es la foto y la animación no lo cambia, porque la foto solo se escala. En Sueño, que no tiene foto, el LCP es texto del hero: al arrancar con opacidad 0 y retrasos en cascada, el LCP móvil sube **+2,36 s** de forma consistente. En escritorio no cambia. Lo mismo cabe esperar en ORL (hero de texto). **Q-050 P1 OPEN:** quitar la opacidad 0 del h1 y del lead (dejar solo el desplazamiento), o no animar el bloque que sea LCP en heros sin foto.
+
