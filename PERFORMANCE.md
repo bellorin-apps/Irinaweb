@@ -71,3 +71,15 @@ Lighthouse 12.2.1 (npx) en Chrome headless local (Windows, red doméstica), con 
 - **Móvil:** el LCP sigue en 3,6–5,3 s con 4G lento simulado. La red simulada pesa más que el sitio. TTFB 190–210 ms en móvil y 60–200 ms en escritorio.
 - **Límites:** es una sola máquina en una red doméstica y la medición tiene ruido. Por ejemplo, Dra. móvil bajó de 82 a 78 con más peso de endoscopio visible. Sirve para comparar órdenes de magnitud.
 
+## Después 2 (sesión local, 2026-10-14 09:10): fondo de «Escucharte» a q95 en escritorio (D-081) y Q-049
+
+Mismo método (Lighthouse 12.2.1 local, 3 pasadas, mediana).
+
+| Página | Modo | Perf | A11y | LCP s | CLS | Peso KiB |
+|---|---|---|---|---|---|---|
+| inicio | desktop | 83 → 86 | 100 | 2.89 → 2.45 | 0.001 | 6678 → 4070 |
+| dra-irina-gonzalez-saez | desktop | 88 → 89 | 98 → 100 | 2.20 → 2.15 | 0.001 | 1817 |
+| dra-irina-gonzalez-saez | mobile | 78 → 76 | 99 → 100 | 4.65 → 5.13 | 0.000 | 1332 |
+
+`dra-escucharte-bg` en escritorio pasa de 3133 KiB (q100) a 525 KiB (q95), sin cambio visible a 1440. Accesibilidad 100 en las cinco páginas. El rendimiento móvil de Dra. varía ±4 entre tandas con el mismo peso: es ruido de la red simulada.
+
