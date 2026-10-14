@@ -10,9 +10,7 @@ Decisiones recientes que prevalecen sobre documentos anteriores: D-076 sitio cor
 tras aprobación médica · D-079 Contacto · D-080 sin staging · D-081 escritorio q95 · D-082 5 fichas de sueño · D-083 menú «Otorrino» y
 «Sueño» · D-084 movimiento · D-085 Turnstile.
 
-**Aviso de método (Q-059):** las peticiones REST que salen del entorno cloud llevan la contraseña de aplicación «claude-ops» del **Actualización 2026-10-14 17:55:** José revocó «claude-ops»; ya no hay canal REST de admin. Toda prueba REST es de visitante anónimo; lo que exija permisos lo consulta la sesión local por SSH/WP-CLI.
-administrador. Si tu entorno también sale por ahí, no tomes un 200 de la API como prueba de exposición anónima; usa la evidencia de la
-sesión local o pídele la prueba.
+**Aviso de método (Q-059):** hasta el 2026-10-14 las peticiones REST desde el entorno cloud llevaban la contraseña de aplicación «claude-ops» del administrador; José la revocó ese día (el admin queda sin contraseñas de aplicación). Desde entonces toda prueba REST es anónima; lo que necesite permisos (ajustes, metas, aprobaciones) lo consulta la sesión local por SSH/WP-CLI. No tomes como prueba de exposición resultados REST anteriores a la revocación hechos desde la nube.
 
 ## A. Auditorías «Codex:» pendientes
 
