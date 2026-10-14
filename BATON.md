@@ -1,3 +1,5 @@
+> **Producción 2026-10-14 17:20 (sesión local): accesibilidad 10.4 (cae491d) desplegada y verificada.** Mapa como región y funcionando; franja de credenciales enfocable solo en móvil; Lighthouse de accesibilidad 100 en Contacto y CPAP (móvil y escritorio). Falta la prueba manual con lector de pantalla.
+
 > **Producción 2026-10-14 17:10 (sesión local): Q-058 (c7bb5b5) desplegado y verificado** (Physician + Person; schema.org 0 errores y 0 advertencias en Sueño y Dra.). Backup `~/deploy-backups/20261014-170539/`.
 
 > **Producción 2026-10-14 17:00 (sesión local): SEO on-page bc65946 desplegado y verificado** (títulos, descripciones y MedicalWebPage en ORL y Sueño). schema.org: 0 errores; Q-058 P2 (alumniOf en Physician) para la nube. Detalle en QA.
