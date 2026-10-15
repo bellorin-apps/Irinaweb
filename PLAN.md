@@ -168,7 +168,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 11.1 | QA funcional (enlaces, forms, email, agenda, WhatsApp, maps, 404, cookies, analytics) | 3 | REVIEW | 80 vistas: 200/404 correctos, un h1, 0 desbordes, 0 imágenes rotas, 0 errores JS propios; WhatsApp, tel y mapa únicos y correctos; cookies solo GA4; formulario no enviado (correos reales). docs/audit/2026-10-15/qa-cierre.md |
-| 11.2 | QA dispositivos (Chrome, Edge, Safari, Firefox, Android, iOS) | 2 | TODO | Solo Chromium en la nube (5 anchos). Falta pasada manual en iPhone/Safari y Firefox (José o sesión local) |
+| 11.2 | QA dispositivos (Chrome, Edge, Safari, Firefox, Android, iOS) | 2 | TODO | Chromium (5 anchos, nube), Edge 155 y Firefox 158 headless (15 URL + 404 a 1440 y 390, sesión local, 2026-10-15): sin incidencias. Falta Safari en iPhone real (José) |
 | 11.3 | QA contenido (consistencia NAP, nombres, títulos, claims, fechas) | 2 | REVIEW | NAP idéntico en texto y schema; corregida la entradilla de FAQ que remitía a páginas de padecimiento (build-pages, pendiente de setup-pages); claims solo aprobados. docs/audit/2026-10-15/qa-cierre.md |
 | 11.4 | Consistency check de Codex contra MASTER_PROMPT | 2 | DONE | FIX documentos activos y coordinación coherentes con D-076…085. README/HANDOFF sin staging ni envío de URL con token; historia etiquetada, gate médico intacto. Informe: docs/REVISION_2026-10-14b.md |
 | 11.5 | `LAUNCH_CHECKLIST.md` completado | 2 | REVIEW | LAUNCH_CHECKLIST.md (2026-10-15): técnica, SEO, rendimiento, accesibilidad y medición en verde; quedan explícitos los puntos de José (prueba del formulario, GBP/Doctoralia, legal) y Safari/Firefox |

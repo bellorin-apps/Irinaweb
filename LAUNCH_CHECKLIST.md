@@ -34,7 +34,7 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 
 - ✅ Lighthouse «antes/después» (PERFORMANCE.md): CLS de portada 0,236 → 0,001; escritorio a menos de la mitad de peso con fotos q95.
 - ✅ Accesibilidad: axe WCAG 2.2 AA sin violaciones reales; Lighthouse a11y 100 en las páginas medidas; menú con teclado.
-- ⏳ Lector de pantalla manual (VoiceOver/TalkBack) y navegadores Safari/Firefox reales (PLAN 11.2).
+- ✅ Chromium, Edge y Firefox sin incidencias (11.2). ⏳ Safari en iPhone real (José) y lector de pantalla manual (VoiceOver/TalkBack).
 
 ## Medición
 
@@ -44,5 +44,5 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 ## Para dar el lanzamiento por cerrado (CHECKPOINT 5)
 
 1. 👤 José: prueba del formulario, GBP/Doctoralia y revisión legal (o aceptar que quedan como mejora continua).
-2. ⏳ Pasada en iPhone (Safari) y Firefox.
+2. ⏳ Pasada en iPhone (Safari).
 3. 👤 José aprueba esta lista.
