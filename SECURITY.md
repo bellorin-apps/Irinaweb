@@ -26,7 +26,7 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 
 ## Pendiente
 
-1. ~~2FA del administrador~~ — **activo** (verificado en el servidor, 2026-10-14): TOTP, correo y 10 códigos de respaldo; `is_user_using_two_factor(1)` = true. La cuenta de la Dra. (revisor_medico) no usa wp-admin y queda sin 2FA. **José:** activarlo también en Hostinger y Google.
+1. ~~2FA del administrador~~ — **activo** (verificado en el servidor, 2026-10-14): TOTP, correo y 10 códigos de respaldo; `is_user_using_two_factor(1)` = true. La cuenta de la Dra. (revisor_medico) no usa wp-admin y queda sin 2FA. Hostinger y la cuenta de Google de José también tienen 2FA (José, 2026-10-15).
 2. Revisión de Codex (1.9, 5.7, 10.5) sobre este estado.
 
 ## Límites
