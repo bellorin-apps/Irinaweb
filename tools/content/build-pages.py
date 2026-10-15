@@ -111,7 +111,7 @@ pages["gracias"] = [
 
 pages["preguntas-frecuentes"] = [
     container("faq-bleed", "di-bleed", {"eyebrow": "Preguntas frecuentes", "title": "Lo que <b>más</b> <em>nos preguntan</em>",
-        "lead": "Horario, costos, seguros, niños y qué pasa en la consulta. Las dudas médicas se responden en cada página de padecimiento.", "variant": "sand", "crumb": "Preguntas frecuentes"}),
+        "lead": "Horario, costos, seguros, niños y qué pasa en la consulta. Las dudas sobre tu caso se resuelven en la valoración.", "variant": "sand", "crumb": "Preguntas frecuentes"}),
     container("faq-serv", "di-faq", {"eyebrow": "Servicio", "title": "<b>Consulta</b> y <em>agenda</em>", "items": rep([
         ("¿Cómo agendo?", "Por WhatsApp, en un toque desde cualquier página del sitio, o por teléfono. La consulta es previa cita."),
         ("¿Cuál es el horario?", "Previa cita: agenda por WhatsApp y te confirmamos el horario disponible."),

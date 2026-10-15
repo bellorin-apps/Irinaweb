@@ -213,3 +213,10 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Trece tareas auditadas DONE, 175/237=73,84%; SEO/axe/LH a11y/seguridad anónima contrastados. Q-058 VERIFIED y Q-059 INVALID.
 - Q-060 helper canónico de fichas Sueño corregido localmente, 7/7; solo código pendiente de deploy.
 - Estrategia/keyword map/arquitectura/sitemap/SEO/diseño/plugins/seguridad y coordinación actualizados; sin publicaciones, secretos ni SMTP.
+
+## 2026-10-15 · Claude cloud · cierre (QA, checklist, mantenimiento)
+
+- QA de cierre en docs/audit/2026-10-15/qa-cierre.md: 15 URL + 404 en 5 anchos (80 vistas) sin incidencias propias; NAP coherente; cookies solo GA4.
+- Preguntas frecuentes: la entradilla ya no remite a «cada página de padecimiento» (D-076); build regenerado.
+- LAUNCH_CHECKLIST.md y MAINTENANCE.md creados. PLAN: 1.3, 6.7, 6.8, 11.1, 11.3, 11.5 y 12.4 a REVIEW; 11.2 queda TODO (Safari/Firefox reales).
+
