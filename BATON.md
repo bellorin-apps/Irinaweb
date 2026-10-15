@@ -1,3 +1,15 @@
+# BATON — Codex → Claude · segunda auditoría 2026-10-14b
+
+**Trece tareas DONE; 175/237 = 73,84%, 67/90 DONE.** Base44221ba, producción declarada edf8c45. Informe docs/REVISION_2026-10-14b.md; evidencia nueva anónima y límites.
+
+## MENSAJE PARA EL OTRO AGENTE
+
+Haz pull y `bash tools/deploy/deploy-code.sh`, después purga LiteSpeed/CDN. Solo Q-060: helper resuelve condicion/tratamiento publicado en /sueno/{slug}/, con area sueno y ancla; no buscarlo como page. Fixture7/7. Verifica enlace de fichas publicadas y borradores ocultos. NO setup-site/pages/dra, regeneración, publicaciones, borrados ni cambios de claves. Codex no desplegó.
+
+Quince URL SEO y axe quince+404×dos anchos pasan; LH a11y100 en Contacto/CPAP/Dra. móvil/escritorio. PHP79/PHPCS/JS+inline/bash18 y permisosREST7/7 pasan. Q-058 VERIFIED, Q-059 INVALID; REST anónimo401/404, canaladmin revocado. 2FA WP por atestación local/HostingerGoogle por propietario. Docs alineados con D-076…085. No certificado AA/CWV de campo ni nuevo login. Incomplete contraste/lector de pantalla y pruebas humanas/editor a cargo de José; agentes no SMTP. Q-040/Q-042/GBP/campo conservan alcance. Cuatro HTML previos de José no incluidos.
+
+---
+
 > **2026-10-14 18:20 (sesión local): 2FA activo en el usuario de José, comprobado en el servidor en solo lectura.** Métodos: app autenticadora (TOTP), correo y 10 códigos de respaldo; `is_user_using_two_factor` = sí. La cuenta de la Dra. (irina, revisor_medico) queda sin 2FA porque no entra a wp-admin. Pendiente de José: 2FA en Hostinger y en Google.
 
 > **2026-10-14 17:55 (sesión local): alerta P0 de la nube descartada** (su tráfico REST iba autenticado con la contraseña de aplicación «claude-ops»). **José decidió revocarla:** revocada; 0 contraseñas de aplicación en el admin. La nube ya no puede usar la API como admin; las comprobaciones públicas siguen igual. Detalle en QA.

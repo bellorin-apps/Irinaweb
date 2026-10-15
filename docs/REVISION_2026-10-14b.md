@@ -1,0 +1,47 @@
+# Segunda auditoría Codex · 2026-10-14
+
+Base `44221ba`, rama `ccr-6254502d-xly8ww`; pull completado. Producción declarada hasta `edf8c45`; HTTP acredita conducta, no identifica el commit del servidor. Encargo 14b y AGENTS ejecutados; decisiones D-076…085 prevalecen sobre propuestas históricas. Sin despliegue, publicaciones, borrados, SMTP ni lectura de secretos. Cuatro HTML de José preservados.
+
+## Veredictos
+
+| Tarea | Resultado | Evidencia / límite |
+|---|---|---|
+| 1.9 | DONE | SECURITY contrastado con source y nuevas peticiones anónimas: users/me/users/author 404, settings/Ops 401, XML-RPC/readme 403, sin generator. Cabeceras completas en front PHP; no se afirman en todas las respuestas REST/estáticas. 2FA instalado/activo WP según atestación local; no nuevo login. Archivos privados ignorados/no versionados; no auditoría forense del historial ni pentest. |
+| 2.6 | FIX→DONE | STRATEGY/KEYWORDS actualizados con destinos públicos de dos áreas y cinco fichas; ORL individual/recursos/navegador fuera de alcance marcados como historia. Sin inventar volúmenes/rankings ni crear contenido clínico nuevo. |
+| 3.8 | FIX→DONE | ARCHITECTURE/SITEMAP reflejan diez páginas + cinco CPT, /sueno/{slug}/, archivos 404, Links/Gracias noindex, mini apps y gate, sin staging, fotografía q95 y menú vigente. Propuestas anteriores identificadas como históricas. |
+| 5.7 | DONE | PHPCS completo, PHP 79, JS externo + cuatro scripts inline y bash 18 pasan. Escapes/kses, nonce/capacidades de administración, proyección pública PracticeSettings, permisos Ops, workflow y backend revisar.php revisados. Corpus SpamGuard y regresiones pasan. Siete permisos REST capturados: solo GET practice público, mutaciones/ops admin-only. No se invocan callbacks de escritura ni endpoints POST. Q-040/Q-042 siguen mejoras separadas. |
+| 6.9 | FIX→DONE | Diecisiete widgets registrados y presentes en JSON de builds; templates/entity/medical-page y filtros publish revisados. Fix Q-060: helper buscaba /sueno/cpap/ como page; ahora resuelve condicion/tratamiento publicado y área sueno, conserva ancla y excluye borrador/otra área. Fixture 7/7; no se eliminan widgets/plantillas legacy. No se afirma integración WP autenticada ni despliegue del fix. |
+| 9.6 | DONE | Quince URL 200, h1/main único, canónica propia, title ≤62/description ≤158 y OG; schema y migas contrastados. Sitemaps y cinco redirecciones médicas comprobados de nuevo en support.json; dominio aparcado raíz 301. No inferir indexación nueva de Google. |
+| 10.5 | DONE | PERFORMANCE comparativo/A-B con límites, seguridad actual y axe 32 muestras revisados. Lighthouse a11y 100 en seis combinaciones Contacto/CPAP/Dra. Rendimiento de campo, lector de pantalla y editor autenticado conservan límites; no certificación universal AA/pentest. |
+| 11.4 | FIX→DONE | Docs de arquitectura/estrategia/mapa/SEO/diseño/plugins/seguridad y coordinación alineados; README/HANDOFF corrigen staging y orden antiguo que pedía copiar URL con token al chat. MASTER/DECISIONS mantienen autoridad/historial; no se reabre enciclopedia ni aprobación médica. |
+| 9.1 | DONE | Quince indexables 200, h1/main, canónica propia. Titles 39–62 caracteres, descriptions 64–158; OG presente. No cambios de copy/build en esta auditoría. |
+| 9.2 | DONE | Robots público permite rastreo y bloquea wp-admin salvo admin-ajax; sitemap declarado. Tres sitemaps, quince URLs, archivos 404 excluidos, sin recursos (support.json nuevo). Cinco rutas antiguas del tipo correcto 301 a Sueño; dominio aparcado raíz 301 directo comprobado. No prueba todas las URLs posibles del dominio anterior. |
+| 9.3 | DONE | Graph Physician+Person único en páginas pertinentes, ProfilePage/ContactPage/FAQPage, MedicalWebPage en dos áreas y cinco fichas, BreadcrumbList sin archivo. Q-058 confirmado. Se acepta validator.schema.org 0 errores/0 avisos aportado por Claude para Sueño/Dra.; no se afirma haber reenviado las quince al validador externo. |
+| 10.3 | DONE | SECURITY actualizado y medidas públicas contrastadas; Two Factor 0.17 activo y WP 2FA habilitado por José según lectura local del servidor 14/10 18:20. Hostinger/Google según declaración del propietario. No secretos/config leídos, no pruebas de ingreso ni escaneo de plugins privados. Riesgo de no rotar Turnstile conservado D-085, sin exigir nueva aprobación. |
+| 10.4 | DONE | axe 4.14.0 tags WCAG 2 A/AA, 2.1 A/AA, 2.2 AA: quince páginas + 404 × 1440/390, cero violaciones detectadas. Lighthouse a11y 100 móvil/escritorio en Contacto/CPAP/Dra. Menú público con teclado normal/reducido pasa. Esta versión difiere del axe 4.10 de la evidencia de Claude. Incomplete de axe no equivale a aprobado manualmente; lector de pantalla pendiente explícito conforme al encargo. |
+
+Treinta y un pesos añadidos: **175/237 = 73,84%; 67/90 DONE**. Cinco DESCOPED y dieciséis pesos fuera del total se conservan. DONE corresponde al alcance auditado con sus límites; Q-060 está FIXED_LOCAL, no desplegado.
+
+## Hallazgos y cambios
+
+- Q-058 VERIFIED: Physician + Person permite alumniOf; el mismo @id aparece una vez como nodo profesional donde corresponde, no un segundo Person de Rank Math. JSON-LD público y código concordantes; validación externa histórica atestada. No ratings propios ni afirmaciones clínicas nuevas.
+- Q-059 INVALID confirmado: resultados REST de admin anteriores no prueban exposición anónima. Contexto Chrome nuevo, sin sesión/Authorization: users/me/users 404; settings/ops/info/ops/option/blogname 401; practice GET 200 intencional. No se guardan cuerpos de respuestas privilegiadas ni se prueban mutaciones. Acceso operativo privilegiado por SSH/WP-CLI local tras revocación.
+- Q-060 P2 FIXED_LOCAL: `irina_url_if_published()` reconocía rutas antiguas pero no CPT bajo /sueno/{slug}/. Consulta nueva restringida a publish, slug y taxonomía area=sueno. Pruebas: pilar, CPAP con ancla, condición, borrador, slug de otra área, ruta antigua y enlace externo. Sin cambiar contenido ni menú. Claude despliega código únicamente.
+- Se actualiza documentación activa; árboles/research de 2026-10-07/12 se conservan como historia salvo SITEMAP, reemplazado por el mapa actual (original recuperable en Git). HANDOFF antiguo pedía mostrar/enviar URL con token y queda sustituido por un relevo que usa canal privado. No se leen ni regeneran tokens.
+- Pendientes Q-040 (consumidores/allowlist Ops) y Q-042 (NAP centralizado) no se convierten en DONE. Ops es admin-only; no se presenta su denylist como una allowlist ni como permiso exclusivo a application passwords. Autenticación/nonce REST por cookies la aplica WordPress; esta revisión no sustituye pruebas autenticadas.
+
+## Evidencia reproducible y límites
+
+`docs/audit/2026-10-14b/public.json`: quince indexables + 404, metadatos/schema, axe dos anchos, incompletes, seguridad anónima, robots, dominio viejo y teclado menú. `support.json`: OG JPEG200/1200×630, sitemaps10/2/3, cabeceras front, archivos404, Links/Gracias noindex y cinco301 médicos. `lighthouse-a11y.json`: seis resultados Lighthouse 12.2.1 con 100 y cero auditorías fallidas. `core.json`: permisos REST aislados; `links.json`: enlaces canónicos aislados; `inline-syntax.json`: cuatro scripts de mini apps. Harnesses en tools/audit/review-oct14b*. Chrome local Windows/Chromium; no Safari/lector de pantalla nativo. GA y todos los POST bloqueados en harness público; ningún envío real.
+
+PHP 79 y PHPCS del tema/core sin errores/avisos; helper modificado revisado adicionalmente. Main/maps JS externo, inline mini apps y bash 18 sintácticamente válidos. Corpus SpamGuard 8/8 y regresiones q95/original/metadata/hero opcional pasan; no se repite envío ni WP DB real. Formularios se auditan como código/DOM; José conserva prueba humana de entrega. Turnstile usa siteverify y fail-open server-side documentado, sin probar tokens reales.
+
+CSS se contrasta mediante source y funcionamiento público/axe en dos anchos; no se afirma un lint Stylelint que no está configurado ni una cobertura de todas las variantes. A/B Lighthouse de rendimiento de ronda anterior continúa vigente; la nueva tanda es accesibilidad únicamente, una pasada por combinación. Cero detecciones no es certificación de WCAG completo, ni los scores son CWV de campo.
+
+Secretos: rutas privadas ignoradas y no presentes en índice Git; no se inspeccionan sus contenidos ni el historial entero en busca de secretos. Cabeceras completas verificadas en front PHP en Home/Contacto y respuestas404; REST observado incluye nosniff/CSP upgrade-insecure-requests, no todo el conjunto. CSP no es allowlist estricta de scripts. 2FA/instalaciones/roles respaldados por reporte local, no inferidos del DOM.
+
+## Mensaje para el otro agente
+
+Claude local: pull y `bash tools/deploy/deploy-code.sh`, purga LiteSpeed/CDN. Solo helper de enlaces canónicos Q-060; documentación restante. NO setup-site/pages/dra, regeneración, publicaciones, borrados ni claves. Verificar enlace público de fichas de sueño y que borradores sigan ocultos; fixture local pasa pero no demuestra despliegue. No formulario/SMTP por agentes. Q-058 VERIFIED, Q-059 INVALID; trece tareas cerradas, 73,84%. Persisten lector de pantalla, editor/prueba humana de formulario, GBP/mediciones de campo y Q-040/Q-042 con alcance propio.
+
+Los archivos404 pueden llevar meta robots index/follow: el estado HTTP404 impide su indexación; no se afirma noindex en esas respuestas. Links/Gracias sí noindex. No se añade un cambio de robots por ese dato.

@@ -1,3 +1,11 @@
+## Vigencia 2026-10-14b
+
+Sin cambios a marca, menús, sombras ni composición aprobada. D-081: cabeceras/fondo escritorio con derivado q95, originales q100 conservados; móvil1600 q95 y alfa lossless. D-083 menú Otorrino/Sueño. D-084 entrada hero h1/lead sin fundido y View Transitions; reduced-motion desactiva movimientos. Menú con foco acotado y barra inferior oculta; trust recibe tabindex solo si se desplaza. D-075 autoriza limpieza histórica con respaldo; no repetir borrados. Las propuestas históricas de abajo no reabren decisiones de José.
+
+---
+
+## Historial y propuestas anteriores (no definen el alcance actual)
+
 ## Sistema vigente contrastado · auditoría2026-10-12
 Los tokens y decisiones actuales prevalecen sobre las maquetas v0.2 y la propuesta A histórica de abajo. Fuente: assets/css/tokens.css, base.css, components.css, sleep.css y templates. Contenedor1320; gutter16–32; secciones96 móvil/144 escritorio; barra móvil desde menos900px. Iskra por AdobeFonts, interlineado1em títulos y1.3em cuerpo. Sin cambiar fuentes (D-073).
 Títulos D-049: tramo color bold y cierre color cursiva; sin punto final. Excepciones puntuales dictadas por José (CTA Primera consulta con cursiva blanca) constan D-074/BATON. WhatsApp sólido teal fuerte en claros y glass en foto/oscuros (D-053); otros botones mantienen fondos/blur y sombras existentes. No se reinterpretan para cambiar sombras. Cards de área fotográficas, badges y sprite Lucide; inputs se revisan en Fase8.

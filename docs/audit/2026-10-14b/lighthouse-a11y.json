@@ -1,0 +1,38 @@
+[
+  {
+    "name": "oct14b-contacto-desktop",
+    "version": "12.2.1",
+    "score": 1,
+    "failed": []
+  },
+  {
+    "name": "oct14b-contacto-mobile",
+    "version": "12.2.1",
+    "score": 1,
+    "failed": []
+  },
+  {
+    "name": "oct14b-dra-irina-gonzalez-saez-desktop",
+    "version": "12.2.1",
+    "score": 1,
+    "failed": []
+  },
+  {
+    "name": "oct14b-dra-irina-gonzalez-saez-mobile",
+    "version": "12.2.1",
+    "score": 1,
+    "failed": []
+  },
+  {
+    "name": "oct14b-sueno-cpap-desktop",
+    "version": "12.2.1",
+    "score": 1,
+    "failed": []
+  },
+  {
+    "name": "oct14b-sueno-cpap-mobile",
+    "version": "12.2.1",
+    "score": 1,
+    "failed": []
+  }
+]

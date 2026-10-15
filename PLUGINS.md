@@ -1,3 +1,11 @@
+## Stack vigente · 2026-10-14b
+
+El inventario 13/10 de abajo es histórico. Two Factor 0.17.0 está instalado/activo y 2FA de WP activo según atestación local de 14/10 18:20; Elementor 4.3.5 por auto-update. Los demás plugins/MU del inventario se conservan; no se consulta ni modifica la aplicación privada. No instalar SafeSVG/QueryMonitor por las propuestas viejas. D-080 elimina staging: no se exige contratarlo. Cabeceras/fondo escritorio q95 D-081 y alfa lossless. Versiones/usuarios internos se acreditan por reporte local, no desde páginas con versión oculta. SECURITY vigente fija medidas y límites.
+
+---
+
+## Historial y propuestas anteriores (no definen el alcance actual)
+
 ## Stack actual confirmado · 2026-10-13
 
 Fuente: docs/audit/2026-10-13/inventario-produccion.md (WP-CLI,Claude local10:35). Tarea3.6DONE: listado actual contrastado con las decisiones; no se instala ni desactiva nada.

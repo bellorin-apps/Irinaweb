@@ -314,3 +314,31 @@ deploy-code (`~/deploy-backups/20261014-171813/`) y purga; php -l de ubicacion.p
 
 La nube veía /wp/v2/users/me como admin y /wp/v2/settings con 200. Desde la PC de José, sin cookies, el anónimo no es admin: users/me 404, settings 401, abilities 401. Causa: la contraseña de aplicación «claude-ops» del admin (creada el 2026-10-07; último uso el 2026-10-14 23:47 UTC desde 160.79.106.133, el entorno de la nube), es decir, el canal REST de la tarea 1.1. Solo hay hooks de autenticación del núcleo; plugins y MU conocidos; 1 admin y 1 revisor_medico; los cambios de 48 h son despliegues propios. Rutas MCP de Elementor 4.3.5 (autoactualizado) y abilities: 401/403 para anónimos (mcp-proxy 401 con parámetros completos). No hubo acciones correctivas. **Decisión de José (2026-10-14):** revocar «claude-ops». Revocada con `wp user application-password delete`; el admin queda con 0 contraseñas de aplicación. La nube ya no tiene canal REST de administrador; los despliegues siguen por SSH desde la PC.
 
+
+## Segunda auditoría Codex · 2026-10-14b
+
+Base44221ba; producción declarada edf8c45. Informe docs/REVISION_2026-10-14b.md.
+
+| Tarea | Veredicto | Evidencia / límites |
+|---|---|---|
+| 1.9 | DONE | SECURITY contrastado: HTTP anónimo users/author404, settings/Ops401, XML-RPC/readme403; cabeceras front y versiones ocultas. 2FA por atestación local; secretos ignorados/no versionados, sin pentest. |
+| 2.6 | DONE | FIX estrategia/keyword map alineados con dos áreas cortas y cinco fichas; ORL individual/recursos/navegador históricos, sin volumen/ranking inventado. |
+| 3.8 | DONE | FIX arquitectura/mapa: diez páginas+cinco fichas, rutas Sueño, archivos404, mini apps/gate, sin staging y D-081/083/084. Propuestas antiguas como historia. |
+| 5.7 | DONE | PHPCS/PHP79/JS externo+inline/bash18 pasan; permisos REST propios 7/7, corpus antispam/regresiones, escapes/nonces/admin/revisar revisados. Sin mutaciones; Q-040/Q-042 conservan alcance. |
+| 6.9 | DONE | FIX Q-060 helper para CPT publicados en /sueno/{slug}/ con taxonomía/ancla; 7/7 fixtures. Widgets/templates/filtros publish revisados, sin borrar legacy. Correctivo local pendiente despliegue. |
+| 9.6 | DONE | QA quince200/h1/main/canónicas, longitudes≤62/158 y OG/schema/migas. Robots/redirecciones/sitemaps contrastados; sin inferir indexación. |
+| 10.5 | DONE | PERFORMANCE, SECURITY, axe32 muestras y LH a11y seis100 revisados. Sin CWV de campo/pentest/lector de pantalla ni certificación universal AA. |
+| 11.4 | DONE | FIX documentos activos y coordinación coherentes con D-076…085. README/HANDOFF sin staging ni envío de URL con token; historia etiquetada, gate médico intacto. |
+| 9.1 | DONE | Quince indexables200, h1/main único, canónica propia, title39–62/description64–158, OG presente. Sin nuevos cambios de copy/build. |
+| 9.2 | DONE | Sitemap page10/condicion2/tratamiento3 sin archivos404/recursos, robots público correcto. Dominio aparcado raíz301 confirmado; cinco rutas antiguas301 según evidencia14/10. |
+| 9.3 | DONE | Q-058 confirmado: Physician+Person único, ProfilePage/ContactPage/FAQPage/MedicalWebPage de áreas/fichas y BreadcrumbList. Validator0/0 Sueño/Dra. por atestación local, no nueva validación externa universal. |
+| 10.3 | DONE | SECURITY revisado y medidas contrastadas; Two Factor instalado/WP2FA activo por atestación local14/10 18:20, Hostinger/Google por propietario. Revocación REST y D-085 respetados; no login ni secretos. |
+| 10.4 | DONE | Axe4.14: quince+404×1440/390, cero violaciones detectadas; incomplete contraste no aprobado manualmente. LH12.2.1 a11y seis100 y menú público teclado normal/reducido pasan. Lector de pantalla pendiente explícito según encargo. |
+
+Q-058 VERIFIED: tipo doble Physician+Person y ausencia de nodo profesional duplicado confirmados; validación externa histórica de Sueño/Dra. aportada por Claude. Q-059 INVALID: respuestas de admin previas a revocación no prueban exposición pública; nuevas peticiones anónimas confirman denegación. Se sustituye cualquier recomendación de investigar/rotar por esa alerta descartada, sin reabrir decisión.
+
+Q-060 P2 FIXED_LOCAL: helper de URL publicada trataba /sueno/{slug}/ como page. Ahora consulta condicion/tratamiento publish por slug y area=sueno, conserva ancla y excluye borrador/otra área; fixture 7/7. No altera copy, estado clínico, menú ni sombras. Despliegue a cargo de Claude.
+
+Axe4.14.0 (distinto del4.10 anterior): 32 muestras sin violaciones detectadas; incomplete color-contrast permanece como comprobación manual, no un pass automático. Lighthouse12.2.1 accesibilidad100 en Contacto/CPAP/Dra. × móvil/escritorio. No certificado AA/lector de pantalla/Safari ni CWV de campo. PHP79/PHPCS/JS2+inline4/bash18 y regresiones pasan; permisos REST7/7. GET sin sesión/Authorization; cuerpos privilegiados no leídos, todos POST bloqueados en harness. Sin SMTP ni tokens reales. Evidencias docs/audit/2026-10-14b/. 2FA/roles por atestación local, no nuevo login. Secretos ignorados/no versionados, sin análisis forense de historial.
+
+Support14b: comprobación GET nueva de OG JPEG1200×630, sitemap10/2/3 y cinco301 médicos. Home/Contacto con cabeceras completas; Links/Gracias noindex, archivos404 (meta index/follow no convierte un HTTP404 en página indexable). Sin cambio de robots necesario.

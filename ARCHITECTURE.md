@@ -1,3 +1,21 @@
+# Arquitectura vigente · auditoría 2026-10-14b
+
+D-076…085 sustituyen el alcance proyectado: WordPress + Hello/child PHP y plugin dra-irina-core; Elementor compone páginas, singles médicos usan templates PHP. CSS tokens/base/components/sleep/print y main.js IIFE, sin build esbuild entregado. Header/footer del tema. Scripts de despliegue de Claude local con respaldo/rollback; sin staging D-080.
+
+Publicadas diez páginas indexables y cinco CPT médicos bajo /sueno/{slug}/. Links/Gracias noindex; archivos /padecimientos/, /tratamientos/, /recursos/ 404. Cuatro CPT registrados (condicion, tratamiento, recurso, credencial) siguen existiendo; 21 fichas clínicas restantes en borrador, sin borrarlos. Widgets di-* siguen registrados para compatibilidad y revisión; no eliminar legacy por esta auditoría. Mapa definitivo en SITEMAP.
+
+Schema: Graph Physician+Person (Q-058), ProfilePage, ContactPage, MedicalWebPage en ORL/Sueño y cinco fichas con entidad apropiada. Rank Math WebSite/WebPage/BreadcrumbList; FAQPage solo FAQ. No ratings/testimonios propios. Un nodo profesional por página donde corresponde, alumniOf válido por Person. Validación schema.org 0/0 aportada por Claude, no repetida como certificación clínica.
+
+REST /practice GET proyecta datos públicos; POST y Ops requieren manage_options. Metas edit_post, gate médico y nonce en administración. Briefing con token fuera de Git, rol médico y log; nunca publica. Cloud sin contraseña de aplicación tras revocación; operaciones privilegiadas solo local SSH/WP-CLI. Formularios sin nonce por caché, con validación/antiabuso/Turnstile; no probar SMTP en producción. Q-040 consumidores/allowlist Ops y Q-042 NAP duplicado siguen mejoras separadas.
+
+Fotografía: originales q100 conservados; derivados escritorio q95 cabeceras/fondo (D-081), móvil 1600 q95, alfa lossless. Adobe Fonts intactas por decisión; presupuestos originales son objetivos, no resultados cumplidos. PERFORMANCE acredita medición, no CWV de campo. 2FA WP activo según atestación local; editor autenticado no probado por Codex. Reporte de versiones local, sin inferir desde cabeceras ocultas.
+
+La declaración histórica «ninguna desviación» de abajo ya no aplica: decisiones del propietario reescopan enciclopedia, staging, fotografía y menús. La UI de repetidores y fuente NAP completa conservan su planificación; esta auditoría no las presenta como entregadas.
+
+---
+
+## Historial y propuestas anteriores (no definen el alcance actual)
+
 ## Implementación y mapa vigentes · auditoría2026-10-12
 Esta sección prevalece sobre los árboles/especificaciones v0.1 de abajo. Tema: `inc/setup.php`, `enqueue.php`, `performance.php`, `template-tags.php`, `elementor.php`, CSS `tokens/base/components/sleep/print`, main.js IIFE sin módulos/build ES, assets/icons/lucide.svg y marcas, templates/parts; header/footerPHP del child. Versiones de assets por filemtime, Adobe Fonts kitnlo5pss (no fuentes locales entregadas). Core: cuatro CPT y tres taxonomías, MetaRegistry, PracticeSettings, Workflow/MedicalReview, Schema/Graph, widgets de Rendering/Elementor, Contact/Form, Tracking/Events, Media/WebpUpload y Ops. PHP8.4 según informe local; no se certifica por una cabecera web oculta.
 El modelo real usa prefijo `di_`: revisor es `di_revisor_id`; fuentes/FAQ son arrays con schemaREST; `di_estudio_previo` es texto, no relación. Condicion/tratamiento comparten oferta/enfoque_dra/relacionados; recurso tiene revisión/fuentes/FAQ y contenido core. Credencial usa título y menu_order del core; no existe meta `di_orden`. Riesgos de cirugía no son validación de obligatoriedad implementada. UI de repetidores pendiente5.2, no entregada. REST de edición protegido por capacidades y workflow; validación clínica queda en revisión médica.

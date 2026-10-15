@@ -1,0 +1,22 @@
+[
+  {
+    "file": "tools/briefing/index.html",
+    "script": 0,
+    "pass": true
+  },
+  {
+    "file": "tools/briefing/fichas/index.html",
+    "script": 0,
+    "pass": true
+  },
+  {
+    "file": "tools/briefing/guia/index.html",
+    "script": 0,
+    "pass": true
+  },
+  {
+    "file": "tools/briefing/revision/index.html",
+    "script": 0,
+    "pass": true
+  }
+]

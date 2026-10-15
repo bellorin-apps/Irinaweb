@@ -2,6 +2,8 @@
 
 Repositorio del proyecto de desarrollo del sitio **drairinagonzalez.com** (WordPress híbrido / custom).
 
+D-076…085 prevalecen: sitio corto con cinco fichas de sueño, sin staging, despliegue por Claude local con respaldo. Estado y tareas vigentes en STATUS/NEXT/PLAN; documentos v0.1 etiquetados como históricos no autorizan nuevas publicaciones.
+
 ## Cómo retomar una sesión (Claude o Codex)
 
 Leer en este orden, siempre:
@@ -45,5 +47,5 @@ wp-content/
 
 - Nunca inventar información médica. Lo no confirmado se marca `[PENDIENTE DE CONFIRMACIÓN]`.
 - Nunca guardar contraseñas, tokens ni secretos en este repositorio.
-- Nunca cambios destructivos en producción sin backup, staging y rollback.
+- Nunca cambios destructivos en producción sin backup y rollback; sin staging por D-080.
 - La aprobación médica (`MEDICALLY APPROVED`) solo la otorga la Dra. Irina.

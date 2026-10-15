@@ -1,13 +1,13 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado: 2026-10-14 · Codex · encargo completo sobre dec8adb.
+Actualizado: 2026-10-14 · Codex · segunda auditoría, base44221ba.
 
-**60,76% español: 144/237 pesos, 54/90 DONE.** Cinco tareas DESCOPED (16 pesos) por D-076/077/080; inglés aparte. PLAN → PROGRESS.
+**73,84% español: 175/237 pesos, 67/90 DONE.** Cinco DESCOPED/16 pesos fuera de total; inglés aparte. PLAN→PROGRESS.
 
-Ocho tareas 1.2/1.4/6.5/7.1/7.6/7.7/8.3/10.2 DONE con evidencia en docs/REVISION_2026-10-14.md. Inventario y limpieza autorizada documentados; GSC histórico explicado; ORL/Sueño y cinco fichas públicas tras revisión médica y OK de José atestados. Diez borradores muestreados 404; no se publica ni despublica nada.
+Trece tareas del encargo14b DONE: 1.9/2.6/3.8/5.7/6.9/9.6/10.5/11.4 y 9.1/9.2/9.3/10.3/10.4. Informe docs/REVISION_2026-10-14b.md. Estrategia/mapa/arquitectura/SEO/diseño/plugins/seguridad y coordinación actualizados al sitio corto, cinco fichas y decisiones vigentes. Historia etiquetada; sin nuevas publicaciones.
 
-Producción declarada hasta 73f04d6; HTTP público contrastado. Q-048/049/050/052/053/054 verificados en su alcance. Nuevos Q-055/056/057 FIXED_LOCAL: falsos positivos ingleses del antispam, foco del menú y reset captcha tras fallo de red. Solo código pendiente de despliegue por Claude. Sin cambios de contenido, marca, menús, sombras ni claves; cuatro HTML de José preservados.
+Producción declarada edf8c45; quince200 y404, title/meta dentro de límites, schema Physician+Person/migas contrastados. Q-058 VERIFIED; Q-059 INVALID tras revocación y nuevas pruebas anónimas. 2FA WP activo por atestación local y Hostinger/Google por propietario. Lecturas privilegiadas solo SSH/WP-CLI local.
 
-Doce páginas 200, h1/main y cuatro anchos sin overflow/error JS. PHP 79/PHPCS/JS/bash pasan; fixtures aislados sin correo/red real. Lighthouse A/B móvil Sueño: 4,446/4,454 s LCP, sin regresión consistente del hero; no CWV de campo. UI con JS local no demuestra despliegue. Sin staging D-080; editor autenticado y prueba humana captcha/formulario a cargo de José.
+Q-060 FIXED_LOCAL: helper reconoce CPT publicados en /sueno/{slug}/, con área y ancla, excluyendo borradores. Fixture7/7. Claude despliega solo código; no contenido/builds ni claves. Cuatro HTML de José preservados.
 
-NEXT/BATON fijan el relevo. Pendientes: 2FA, GBP, revisión legal/privacidad de Cloudflare y datos de campo. Fichas restantes archivadas en borrador; originales y respaldos conservados.
+PHP79/PHPCS/JS externo2+inline4/bash18 pasan. Axe32 muestras sin violaciones detectadas; LH a11y seis100. Incomplete contraste y lector de pantalla/manual no equivalen a aprobado; no certificado universal AA ni CWV de campo. Sin stagingD-080, sin secretos/SMTP/borrados/deploy por Codex. Pendientes manuales, GBP, campo y Q-040/Q-042 conservan alcance en NEXT.

@@ -1,3 +1,25 @@
+# Keyword map activo · 2026-10-14b
+
+Este mapa reemplaza los destinos proyectados de la investigación histórica. Sin volúmenes ni rankings inventados; el SEO local se apoya en entidad, GBP y las páginas aprobadas. D-076/D-082 y títulos/meta vigentes de tools/content/pages/seo.json prevalecen.
+
+| Intención | URL actual | Alcance |
+|---|---|---|
+| Otorrinolaringólogo en Monterrey/Cumbres; nombre de la Dra. | / y /dra-irina-gonzalez-saez/ | Entidad local y confianza, sin exclusividad no demostrada |
+| Otorrino, oído, nariz, garganta y procedimientos | /otorrinolaringologia/#oido, #nariz, #garganta, #procedimientos | Página corta; las fichas ORL están archivadas en borrador |
+| Especialista en ronquido/apnea del sueño | /sueno/#atiendo y #ruta | Página corta y ruta de valoración |
+| Ronquido | /sueno/ronquido/ | Ficha publicada aprobada |
+| Apnea obstructiva del sueño | /sueno/apnea-obstructiva-del-sueno/ | Ficha publicada aprobada |
+| Estudio del sueño en casa/poligrafía respiratoria | /sueno/estudio-del-sueno/ | Ficha publicada aprobada |
+| CPAP | /sueno/cpap/ | Ficha publicada aprobada |
+| Cirugía de ronquido y apnea | /sueno/cirugia-de-ronquido-y-apnea/ | Ficha publicada aprobada, sin promesas de eficacia |
+| Preparación, dudas, citas y ubicación | /primera-consulta/, /preguntas-frecuentes/, /contacto/ | Apoyo al paciente y conversión |
+
+Las variantes ORL conservan cobertura temática en la página de área y sus anclas; no equivalen a entregar una ficha individual por keyword. DISE, dispositivo de avance mandibular y recursos no tienen landing pública propia; la investigación queda archivada. No crear doorway, páginas por colonia o duplicados de género. OFRECE/REFIERE, edad y ausencia de precios ya están decididos; solo las consultas y volúmenes reales de GSC/GBP siguen como medición futura. Mantener las fuentes históricas sin tomar sus resultados de 2026-10-07 como una SERP actual.
+
+---
+
+## Historial y propuestas anteriores (no definen el alcance actual)
+
 > **Vigencia2026-10-12:** keyword research preliminar, sin volumen/ranking medido. GSC, GBP y SERP México quedan OWNER; no bloquean la entrega documental2.3. URLs desplegadas/borradores se consultan en SITEMAP.md. OFRECE/REFIERE y edad ya confirmados en DISCOVERY §0b/D-039 prevalecen sobre «por confirmar» histórico; eso no sustituye aprobación de textos. Sin precios públicos (D-054).
 
 # KEYWORDS — Investigación preliminar de palabras clave

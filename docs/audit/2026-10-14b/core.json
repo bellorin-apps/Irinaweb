@@ -1,0 +1,54 @@
+{
+    "routes": [
+        {
+            "route": "dra-irina\/v1\/ops\/option\/(?P<name>[A-Za-z0-9_\\-]+)",
+            "method": "GET",
+            "anonymous": false,
+            "administrator": true,
+            "pass": true
+        },
+        {
+            "route": "dra-irina\/v1\/ops\/option\/(?P<name>[A-Za-z0-9_\\-]+)",
+            "method": "POST",
+            "anonymous": false,
+            "administrator": true,
+            "pass": true
+        },
+        {
+            "route": "dra-irina\/v1\/ops\/flush-rewrite",
+            "method": "POST",
+            "anonymous": false,
+            "administrator": true,
+            "pass": true
+        },
+        {
+            "route": "dra-irina\/v1\/ops\/purge-cache",
+            "method": "POST",
+            "anonymous": false,
+            "administrator": true,
+            "pass": true
+        },
+        {
+            "route": "dra-irina\/v1\/ops\/info",
+            "method": "GET",
+            "anonymous": false,
+            "administrator": true,
+            "pass": true
+        },
+        {
+            "route": "dra-irina\/v1\/practice",
+            "method": "GET",
+            "anonymous": true,
+            "administrator": true,
+            "pass": true
+        },
+        {
+            "route": "dra-irina\/v1\/practice",
+            "method": "POST",
+            "anonymous": false,
+            "administrator": true,
+            "pass": true
+        }
+    ],
+    "limits": "Stubbed capabilities and registration; callbacks never invoked; not WordPress authentication integration."
+}

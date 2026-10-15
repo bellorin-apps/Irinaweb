@@ -139,3 +139,7 @@ Se conserva el alcance autorizado de D-049/068/073/074: corregir formato sin cam
 ## Aplicación en auditoría · 2026-10-14
 
 D-075–085 prevalecen: se acepta inventario/limpieza autorizada histórica, sitio corto con cinco fichas, estados DESCOPED, sin staging y cabeceras/fondo escritorio q95. Fechas de publicación de notas PLAN normalizadas al BATON local 13/10 18:50. Revisiones médicas y OK del propietario se acreditan mediante la atestación registrada, sin generar aprobaciones. Antispam prioriza no descartar preguntas clínicas en inglés solo por services/pricing: se exige además oferta comercial en esa regla. Enlaces explícitos mantienen política previa. Menú conserva diseño/textos, solo corrige foco y resize. Claves no se leen ni rotan D-085. Informe docs/REVISION_2026-10-14.md.
+
+## Aplicación de alcance · auditoría14b, 2026-10-14
+
+Se conserva D-076…085 y no se reabre staging/enciclopedia. Mapas históricos se etiquetan; helper de enlaces debe reconocer la ruta canónica aprobada /sueno/{slug}/ como CPT publicado y filtrar su área. Q-059 INVALID no justifica rotaciones ni nuevas aprobaciones; canal cloud sin contraseña de aplicación tras revocación. 2FA por atestación local/propietario. Auditorías automáticas completadas con límites explícitos: pendiente lector de pantalla no se disfraza de certificado AA. Informe docs/REVISION_2026-10-14b.md.

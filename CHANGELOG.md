@@ -207,3 +207,9 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Falso positivo documentado: botón WhatsApp glass de la cabecera en páginas nocturnas; axe lo calcula sobre claro (4.12) y en pantalla se pinta #224556 sobre el hero oscuro (10.2:1, píxel medido).
 - Verificado con el CSS/JS locales sobre las páginas en vivo (los dos cambios de HTML aplicados en el navegador): sin más violaciones. Límite: axe no cubre todo WCAG (orden de foco, lectores de pantalla reales); faltan pruebas manuales con VoiceOver/TalkBack.
 - SECURITY.md creado (10.3) con el estado verificado y los límites de las pruebas desde la nube (Q-059). Encargo de la segunda ronda de Codex: `docs/CODEX_REVIEW_PROMPT_2026-10-14b.md` (8 auditorías «Codex:» + 9.1, 9.2, 9.3, 10.3, 10.4).
+
+## 2026-10-14 · Codex · ronda14b
+
+- Trece tareas auditadas DONE, 175/237=73,84%; SEO/axe/LH a11y/seguridad anónima contrastados. Q-058 VERIFIED y Q-059 INVALID.
+- Q-060 helper canónico de fichas Sueño corregido localmente, 7/7; solo código pendiente de deploy.
+- Estrategia/keyword map/arquitectura/sitemap/SEO/diseño/plugins/seguridad y coordinación actualizados; sin publicaciones, secretos ni SMTP.

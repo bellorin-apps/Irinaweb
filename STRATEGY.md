@@ -1,3 +1,27 @@
+# Estrategia vigente · auditoría 2026-10-14b
+
+D-076/D-082: punto de encuentro para conocer a la Dra., dos páginas cortas de área y cinco fichas de sueño. WhatsApp principal; llamada y Cómo llegar secundarios. Marca, textos aprobados, atención desde 0 meses y catálogo OFRECE/REFIERE se conservan según DISCOVERY/D-039. Sin precios públicos D-054 ni afirmaciones clínicas nuevas.
+
+| Intención | URL actual | Alcance |
+|---|---|---|
+| Otorrinolaringólogo en Monterrey/Cumbres; nombre de la Dra. | / y /dra-irina-gonzalez-saez/ | Entidad local y confianza, sin exclusividad no demostrada |
+| Otorrino, oído, nariz, garganta y procedimientos | /otorrinolaringologia/#oido, #nariz, #garganta, #procedimientos | Página corta; las fichas ORL están archivadas en borrador |
+| Especialista en ronquido/apnea del sueño | /sueno/#atiendo y #ruta | Página corta y ruta de valoración |
+| Ronquido | /sueno/ronquido/ | Ficha publicada aprobada |
+| Apnea obstructiva del sueño | /sueno/apnea-obstructiva-del-sueno/ | Ficha publicada aprobada |
+| Estudio del sueño en casa/poligrafía respiratoria | /sueno/estudio-del-sueno/ | Ficha publicada aprobada |
+| CPAP | /sueno/cpap/ | Ficha publicada aprobada |
+| Cirugía de ronquido y apnea | /sueno/cirugia-de-ronquido-y-apnea/ | Ficha publicada aprobada, sin promesas de eficacia |
+| Preparación, dudas, citas y ubicación | /primera-consulta/, /preguntas-frecuentes/, /contacto/ | Apoyo al paciente y conversión |
+
+Fuera de alcance actual: enciclopedia ORL, centro de recursos y navegador de síntomas (DESCOPED). Resto de fichas conserva aprobación pero sigue en borrador; ninguna propuesta de este documento autoriza publicarlas. No hay objetivo de poblar hubs /padecimientos/, /tratamientos/ ni /recursos/, que responden 404. KPIs: consultas/clics cualificados, marca y consultas locales; volúmenes/rankings no medidos. Google decide indexación; no prometer cobertura.
+
+Las hipótesis competitivas de 2026-10-07 abajo son investigación histórica, no exclusividad demostrada. D-078 exige aprobación médica y OK de José; no se añade otro checkpoint ya resuelto. Informe: docs/REVISION_2026-10-14b.md.
+
+---
+
+## Historial y propuestas anteriores (no definen el alcance actual)
+
 > **Estrategia vigente auditada2026-10-12:** marca y mensaje publicados: «Respirar bien, dormir bien, oír bien», ORL general y sueño; CAB Medical, Cumbres; WhatsApp principal. Los11 motivos y atención desde0meses están confirmados en DISCOVERY §0b. El hero propuesto, precios y pendientes OD antiguos de abajo son historia: D-054 no publica precios, D-032 Previa cita, D-039 resuelve la relación profesional y servicios. «Ningún otorrino» es hipótesis de la muestra, no exclusividad demostrada. Mantener revisión médica antes de publicar fichas; no cambiar textos de marca por esta revisión.
 
 # STRATEGY — Dra. Irina González Sáez

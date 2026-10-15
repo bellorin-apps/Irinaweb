@@ -1,0 +1,1571 @@
+{
+  "rows": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez",
+      "description": "Otorrinolaringólogo certificado en Monterrey, especialista en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos en Cumbres.",
+      "canonical": "https://drairinagonzalez.com/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "WebSite",
+        "SearchAction",
+        "ImageObject",
+        "WebPage",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [],
+      "generator": 0,
+      "titleLength": 59,
+      "descriptionLength": 145,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 23
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 15
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "title": "Dra. Irina González Sáez | Otorrino especialista en sueño",
+      "description": "Certificada por el Consejo Mexicano de ORL y CCC, con formación en dos países y subespecialidad en trastornos respiratorios del dormir. Cumbres, Monterrey.",
+      "canonical": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "ProfilePage"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+              "name": "Dra. Irina González Sáez"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 57,
+      "descriptionLength": 155,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 20
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 13
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/otorrinolaringologia/",
+      "status": 200,
+      "title": "Otorrinolaringología en Monterrey: oído, nariz y garganta",
+      "description": "Otorrino en Cumbres, Monterrey: oído, nariz y garganta en niños desde los 0 meses y adultos. Qué atiendo, cómo trabajo y cómo agendar tu consulta.",
+      "canonical": "https://drairinagonzalez.com/otorrinolaringologia/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/otorrinolaringologia/",
+              "name": "Otorrinolaringología"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 57,
+      "descriptionLength": 146,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 19
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 30
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/sueno/",
+      "status": 200,
+      "title": "Especialista en ronquido y apnea del sueño en Monterrey",
+      "description": "Ronquido y apnea del sueño en Monterrey: valoración de la vía aérea, estudio del sueño en casa, CPAP y cirugía. Dra. Irina González Sáez, otorrino.",
+      "canonical": "https://drairinagonzalez.com/sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "MedicalCondition",
+        "MedicalCondition"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 55,
+      "descriptionLength": 147,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 19
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 21
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/primera-consulta/",
+      "status": 200,
+      "title": "Primera consulta con la Dra. Irina González Sáez | Qué esperar",
+      "description": "Cómo es la consulta de otorrinolaringología: 30 minutos, exploración completa y plan claro. Qué llevar, costos y seguros.",
+      "canonical": "https://drairinagonzalez.com/primera-consulta/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "physicians": [],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/primera-consulta/",
+              "name": "Primera consulta"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 62,
+      "descriptionLength": 121,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 19
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 12
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "title": "Contacto y ubicación | Dra. Irina González Sáez, Cumbres",
+      "description": "Consultorio en CAB Medical Headquarters, Av. Paseo de los Leones 2341, Cumbres 2.º Sector, Monterrey. Horario, mapa, estacionamiento y WhatsApp.",
+      "canonical": "https://drairinagonzalez.com/contacto/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "ContactPage"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/contacto/",
+              "name": "Contacto"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 56,
+      "descriptionLength": 144,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 19
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 12
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "title": "Preguntas frecuentes | Dra. Irina González Sáez",
+      "description": "Horario, costo de consulta, seguros, atención a niños y hospitales. Respuestas de servicio del consultorio de la Dra. Irina González Sáez.",
+      "canonical": "https://drairinagonzalez.com/preguntas-frecuentes/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "physicians": [],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/preguntas-frecuentes/",
+              "name": "Preguntas frecuentes"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 47,
+      "descriptionLength": 138,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 19
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 12
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/aviso-de-privacidad/",
+      "status": 200,
+      "title": "Aviso de privacidad | Dra. Irina González Sáez",
+      "description": "Cómo tratamos sus datos personales conforme a la LFPDPPP: qué recabamos, para qué, con quién los compartimos y cómo ejercer sus derechos ARCO.",
+      "canonical": "https://drairinagonzalez.com/aviso-de-privacidad/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "physicians": [],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/aviso-de-privacidad/",
+              "name": "Aviso de privacidad"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 46,
+      "descriptionLength": 142,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 14
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 7
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/aviso-medico/",
+      "status": 200,
+      "title": "Aviso médico | Dra. Irina González Sáez",
+      "description": "La información del sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias.",
+      "canonical": "https://drairinagonzalez.com/aviso-medico/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "physicians": [],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/aviso-medico/",
+              "name": "Aviso médico"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 39,
+      "descriptionLength": 101,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 14
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 7
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/terminos-de-uso/",
+      "status": 200,
+      "title": "Términos de uso | Dra. Irina González Sáez",
+      "description": "Condiciones de uso del sitio web de la Dra. Irina González Sáez.",
+      "canonical": "https://drairinagonzalez.com/terminos-de-uso/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "physicians": [],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/terminos-de-uso/",
+              "name": "Términos de uso"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 42,
+      "descriptionLength": 64,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 14
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 7
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/sueno/ronquido/",
+      "status": 200,
+      "title": "Tratamiento del ronquido en Monterrey | Dra. Irina González",
+      "description": "Roncar no es normal, aunque sea común. El ronquido aparece cuando el aire pasa con dificultad por una vía aérea que se estrecha al dormir: la nariz tapada, el",
+      "canonical": "https://drairinagonzalez.com/sueno/ronquido/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "CreativeWork",
+        "CreativeWork",
+        "MedicalCondition",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/ronquido/",
+              "name": "Ronquido"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 59,
+      "descriptionLength": 158,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 17
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 10
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/sueno/apnea-obstructiva-del-sueno/",
+      "status": 200,
+      "title": "Apnea obstructiva del sueño en Monterrey | Dra. Irina González",
+      "description": "En la apnea obstructiva del sueño, la vía aérea se cierra una y otra vez mientras duermes. Cada cierre interrumpe la respiración durante unos segundos, baja",
+      "canonical": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "CreativeWork",
+        "CreativeWork",
+        "MedicalCondition",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom",
+        "MedicalSignOrSymptom"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+              "name": "Apnea obstructiva del sueño"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 62,
+      "descriptionLength": 156,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 17
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 10
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/sueno/estudio-del-sueno/",
+      "status": 200,
+      "title": "Estudio del sueño en casa en Monterrey | Dra. Irina González",
+      "description": "El estudio del sueño en casa, o poligrafía respiratoria, registra durante una noche el flujo de aire por la nariz, el esfuerzo respiratorio, el nivel de",
+      "canonical": "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "MedicalTest"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+              "name": "Estudio del sueño en casa"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 60,
+      "descriptionLength": 152,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 17
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 10
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/sueno/cpap/",
+      "status": 200,
+      "title": "CPAP para apnea del sueño en Monterrey | Dra. Irina González",
+      "description": "El CPAP es un equipo pequeño que envía aire a presión suave a través de una mascarilla mientras duermes. Esa presión funciona como una férula de aire que",
+      "canonical": "https://drairinagonzalez.com/sueno/cpap/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "MedicalTherapy"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/cpap/",
+              "name": "CPAP"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 60,
+      "descriptionLength": 153,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 17
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 10
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/sueno/cirugia-de-ronquido-y-apnea/",
+      "status": 200,
+      "title": "Cirugía de ronquido y apnea en Monterrey | Dra. Irina González",
+      "description": "La cirugía del ronquido y la apnea busca ensanchar y dar firmeza a la parte de la vía aérea que se cierra al dormir. No es una sola operación: puede ser",
+      "canonical": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Physician",
+        "Person",
+        "PostalAddress",
+        "GeoCoordinates",
+        "Place",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "Hospital",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "Organization",
+        "ScholarlyArticle",
+        "Periodical",
+        "MedicalWebPage",
+        "CreativeWork",
+        "CreativeWork",
+        "MedicalProcedure"
+      ],
+      "physicians": [
+        {
+          "id": "https://drairinagonzalez.com/#physician",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "alumni": true
+        }
+      ],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/",
+              "name": "Sueño"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+              "name": "Cirugía de ronquido y apnea"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 62,
+      "descriptionLength": 152,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 17
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 10
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "route": "/audit-not-a-page/",
+      "status": 404,
+      "title": "Page Not Found | Dra. Irina González Sáez",
+      "robots": "follow, noindex",
+      "h1": 1,
+      "main": 1,
+      "og": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+      "types": [
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "WebPage"
+      ],
+      "physicians": [],
+      "crumbs": [
+        [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://drairinagonzalez.com",
+              "name": "Inicio"
+            }
+          }
+        ]
+      ],
+      "generator": 0,
+      "titleLength": 41,
+      "descriptionLength": 0,
+      "audits": [
+        {
+          "width": 1440,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 36
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "count": 32
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "security": [
+    {
+      "route": "/wp-json/wp/v2/users/me?context=edit",
+      "status": 404,
+      "redirect": false,
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "route": "/wp-json/wp/v2/users",
+      "status": 404,
+      "redirect": false,
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "route": "/wp-json/wp/v2/settings",
+      "status": 401,
+      "redirect": false,
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "route": "/wp-json/dra-irina/v1/ops/info",
+      "status": 401,
+      "redirect": false,
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "route": "/wp-json/dra-irina/v1/ops/option/blogname",
+      "status": 401,
+      "redirect": false,
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "route": "/wp-json/dra-irina/v1/practice",
+      "status": 200,
+      "redirect": false,
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "route": "/xmlrpc.php",
+      "status": 403,
+      "redirect": false,
+      "headers": {
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "route": "/readme.html",
+      "status": 403,
+      "redirect": false,
+      "headers": {
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    },
+    {
+      "route": "/?author=1",
+      "status": 404,
+      "redirect": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "content-security-policy": "upgrade-insecure-requests"
+      }
+    }
+  ],
+  "robots": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://drairinagonzalez.com/sitemap_index.xml\n",
+  "oldDomain": {
+    "status": 301,
+    "location": "https://drairinagonzalez.com/"
+  },
+  "menu": [
+    {
+      "motion": "no-preference",
+      "first": true,
+      "wraps": true,
+      "escape": true
+    },
+    {
+      "motion": "reduce",
+      "first": true,
+      "wraps": true,
+      "escape": true
+    }
+  ],
+  "errors": []
+}

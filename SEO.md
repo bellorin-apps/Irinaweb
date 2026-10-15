@@ -1,3 +1,13 @@
+# SEO vigente · auditoría 2026-10-14b
+
+Quince URLs indexables 200 con un h1/main, canónica propia, title ≤62 y description ≤158, OG presente. Diez páginas y cinco fichas en sitemap, sin archivos 404 ni recursos; Links/Gracias noindex. Dominio aparcado raíz 301; rutas médicas antiguas del tipo correcto 301 a Sueño. Detalle en SITEMAP y docs/REVISION_2026-10-14b.md.
+
+Graph emite Physician+Person para formación Q-058, ProfilePage, ContactPage, MedicalWebPage de áreas/fichas; Rank Math conserva migas, sin archivo en fichas. FAQPage solo FAQ, sin ratings propios. Schema.org 0/0 documentado por Claude y tipos/duplicados contrastados en HTTP; no se equipara parsear JSON con una nueva validación externa. GSC actual no se infiere de estas peticiones. La nota vieja que toleraba títulos largos quedó superada por bc65946 y aprobación del propietario. No se recortan textos nuevos por esta auditoría.
+
+---
+
+## Historial y propuestas anteriores (no definen el alcance actual)
+
 > **Reglas vigentes auditadas2026-10-12:** nueve páginas públicas con entrada en seo.json coinciden exactamente en title/description. Longitudes60/155 son guía editorial; los títulos aprobados de Home/Conóceme/Primera consulta tienen62/71/65 caracteres y no se recortan automáticamente. Canónicos sinwww, sitemap ocho páginas, Links/Gracias/Recursos noindex. Home ya es portada indexable; `/inicio-v2/` identifica el registro WP, no una segunda landing a indexar. OG por defecto `og-default.jpg` (D-067), no un retrato por generar. Horario no publicado; atención Previa cita. Datos de GSC y selección canónica de Google quedan OWNER. Redirecciones registradas en BATON/DEPLOY son evidencia anterior, no ensayo de servidor en esta revisión. Schema actual se detalla en ARCHITECTURE addendum2026-10-12.
 
 # SEO — Arquitectura y reglas

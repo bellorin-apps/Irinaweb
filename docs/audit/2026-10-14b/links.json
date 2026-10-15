@@ -1,0 +1,33 @@
+{
+    "rows": [
+        {
+            "input": "\/sueno\/",
+            "pass": true
+        },
+        {
+            "input": "\/sueno\/cpap\/#riesgos",
+            "pass": true
+        },
+        {
+            "input": "\/sueno\/apnea\/",
+            "pass": true
+        },
+        {
+            "input": "\/sueno\/draft\/",
+            "pass": true
+        },
+        {
+            "input": "\/sueno\/otitis\/",
+            "pass": true
+        },
+        {
+            "input": "\/tratamientos\/cpap\/",
+            "pass": true
+        },
+        {
+            "input": "https:\/\/other.invalid\/sueno\/cpap\/",
+            "pass": true
+        }
+    ],
+    "limits": "Stubbed get_posts and taxonomy; no real WP integration."
+}

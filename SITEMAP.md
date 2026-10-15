@@ -1,131 +1,27 @@
-## Mapa vigente auditado · 2026-10-12
-Publicadas: `/`, `/dra-irina-gonzalez-saez/`, `/primera-consulta/`, `/contacto/`, `/preguntas-frecuentes/`, `/aviso-de-privacidad/`, `/aviso-medico/`, `/terminos-de-uso/`. Las ocho aparecen en page-sitemap.xml. `/links/` y `/gracias/` públicas noindex; `/recursos/` es hub público noindex, aún sin artículos aprobados. Pilares ORL/Sueño y muestra otitis devuelven404 al visitante; no se publican para probarlos.
-Menú D-072: Inicio · Conóceme · Primera consulta · Contacto · WhatsApp; ORL/Sueño se añaden solo cuando tengan destino publicado. URL de Conóceme permanece `/dra-irina-gonzalez-saez/`. Migas D-071 en franja bajo hero: Inicio › Conóceme. La navegación histórica de abajo no es el menú actual. Home usa salida temporal Primera consulta para destinos clínicos aún privados.
-Catálogo real del build (23 fichas,3 recursos). Los hubs `/padecimientos/`, `/tratamientos/`, una página DISE independiente y `/politica-de-cookies/` son propuestas, no URLs comprobadas ni entregadas.
+# SITEMAP — Mapa vigente · 2026-10-14b
 
-| URL prevista | Tipo | Estado |
-|---|---|---|
-| /padecimientos/otitis/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/tapon-de-cerumen/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/hipoacusia/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/tinnitus/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/vertigo/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/rinitis/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/sinusitis/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/desviacion-de-tabique-nasal/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/polipos-nasales/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/epistaxis/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/amigdalitis/ | condicion | Build en borrador; publicación médica pendiente |
-| /padecimientos/reflujo-laringofaringeo/ | condicion | Build en borrador; publicación médica pendiente |
-| /sueno/ronquido/ | condicion | Build en borrador; publicación médica pendiente |
-| /sueno/apnea-obstructiva-del-sueno/ | condicion | Build en borrador; publicación médica pendiente |
-| /tratamientos/septoplastia/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /tratamientos/turbinoplastia/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /tratamientos/amigdalas-y-adenoides/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /tratamientos/cirugia-endoscopica-nasal/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /tratamientos/rinoplastia/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /sueno/estudio-del-sueno/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /sueno/cpap/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /sueno/cirugia-de-ronquido-y-apnea/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /sueno/dispositivo-de-avance-mandibular/ | tratamiento | Build en borrador; publicación médica pendiente |
-| /recursos/como-limpiar-los-oidos/ | recurso | Build en borrador; revisión pendiente |
-| /recursos/postoperatorio-de-amigdalas/ | recurso | Build en borrador; revisión pendiente |
-| /recursos/como-limpiar-la-nariz/ | recurso | Build en borrador; revisión pendiente |
+D-076/078/082/083. Público HTTP contrastado; ninguna publicación ni cambio de estados por Codex.
 
-# SITEMAP — Arquitectura de información
+| URL | Estado / sitemap |
+|---|---|
+| / | 200 · page |
+| /dra-irina-gonzalez-saez/ | 200 · page · Conóceme |
+| /otorrinolaringologia/ | 200 · page · área corta |
+| /sueno/ | 200 · page · área corta |
+| /primera-consulta/ | 200 · page |
+| /preguntas-frecuentes/ | 200 · page |
+| /contacto/ | 200 · page |
+| /aviso-de-privacidad/, /aviso-medico/, /terminos-de-uso/ | 200 · page |
+| /sueno/apnea-obstructiva-del-sueno/, /sueno/ronquido/ | 200 · condicion |
+| /sueno/estudio-del-sueno/, /sueno/cpap/, /sueno/cirugia-de-ronquido-y-apnea/ | 200 · tratamiento |
+| /links/, /gracias/ | Públicas noindex, fuera de sitemap |
+| /padecimientos/, /tratamientos/, /recursos/ | Archivos 404, fuera de sitemap |
+| Otras 21 fichas | Borradores archivados, sin enlaces públicos; muestra de diez 404 en auditoría anterior |
 
-Versión 0.1 · 2026-10-07 · Estado: REVIEW. Deriva de `KEYWORDS.md`. Cada URL tiene una sola intención. Las páginas de servicio se publican únicamente si la Dra. confirma OFRECE.
+Sitemap index: page (10), condicion (2), tratamiento (3); sin recurso-sitemap ni archivos 404. Robots permite rastreo público y bloquea wp-admin salvo admin-ajax. Noindex de mini apps/preview se sirve mediante controles propios; robots.txt no es control de acceso. Mini apps /briefing/guia/ y /briefing/revision/ no llevan claves en documentación ni requieren pruebas de escritura; paginas.json denegado según evidencia local.
 
-## 1. Convenciones
+Menú D-083: Inicio · Otorrino · Sueño · Conóceme · Primera consulta · Contacto. Pie conserva nombre completo ORL y legales; barra móvil WhatsApp/Llamar/Cómo llegar, oculta al abrir menú. Migas Conóceme y fichas Inicio → Sueño → ficha (sin archivo).
 
-- Dominio canónico: `https://drairinagonzalez.com/` (sin `www`, D-022). Redirección 301 de `www`, de `http` y de `otorrino-monterrey.com`.
-- Slugs en minúsculas, sin acentos ni eñe, con guiones. Barra final siempre.
-- Un pilar por especialidad; las páginas hijas cuelgan del pilar al que pertenecen.
-- `noindex`: gracias, 404, búsqueda, staging, páginas legales secundarias si no aportan valor de búsqueda (el aviso de privacidad sí se indexa).
+Redirecciones: dominio otorrino-monterrey.com/ → https://drairinagonzalez.com/ (301 observado). /padecimientos/{slug}/ de las dos condiciones y /tratamientos/{slug}/ de los tres tratamientos → /sueno/{slug}/ (301 observado en 14/10); tipo incorrecto 404. No redirigir borradores indiscriminadamente a Home. Anclas ORL #oido/#nariz/#garganta/#procedimientos; Sueño #atiendo/#ruta.
 
-## 2. Árbol
-
-```
-/                                   Home · otorrinolaringólogo en Monterrey
-├── /dra-irina-gonzalez-saez/        Página de entidad (persona, credenciales, trayectoria)
-├── /otorrinolaringologia/           Pilar ORL
-│   ├── /padecimientos/              Hub de padecimientos (índice por zona: oído, nariz, garganta)
-│   │   ├── /padecimientos/otitis/
-│   │   ├── /padecimientos/tapon-de-cerumen/
-│   │   ├── /padecimientos/hipoacusia/
-│   │   ├── /padecimientos/tinnitus/
-│   │   ├── /padecimientos/vertigo/
-│   │   ├── /padecimientos/rinitis/
-│   │   ├── /padecimientos/sinusitis/
-│   │   ├── /padecimientos/desviacion-de-tabique-nasal/
-│   │   ├── /padecimientos/polipos-nasales/
-│   │   ├── /padecimientos/epistaxis/
-│   │   ├── /padecimientos/amigdalitis/
-│   │   └── /padecimientos/reflujo-laringofaringeo/
-│   └── /tratamientos/               Hub de tratamientos y procedimientos
-│       ├── /tratamientos/septoplastia/
-│       ├── /tratamientos/turbinoplastia/
-│       ├── /tratamientos/amigdalas-y-adenoides/
-│       ├── /tratamientos/cirugia-endoscopica-nasal/        (si OFRECE)
-│       └── /tratamientos/rinoplastia/                      (OD-009 resuelto: en borrador con redacción prudente hasta aprobación de la Dra.)
-├── /sueno/                          Pilar Sueño (sub-marca visual)
-│   ├── /sueno/ronquido/
-│   ├── /sueno/apnea-obstructiva-del-sueno/
-│   ├── /sueno/estudio-del-sueno/
-│   ├── /sueno/cpap/                                         (si OFRECE seguimiento)
-│   ├── /sueno/cirugia-de-ronquido-y-apnea/                  (faringoplastia como H2)
-│   ├── /sueno/dispositivo-de-avance-mandibular/             (si OFRECE o coordina)
-│   └── /sueno/endoscopia-de-sueno/                          (si OFRECE)
-├── /primera-consulta/               Qué esperar, qué llevar, cuánto dura, cómo agendar
-├── /preguntas-frecuentes/           Preguntas de servicio (horario, seguros, pagos, en línea)
-├── /recursos/                       Centro de recursos para pacientes (artículos y guías)
-│   └── /recursos/{slug}/
-├── /links/                          Enlaces para redes (se conserva, noindex)
-├── /contacto/                       Ubicación, mapa, cómo llegar, estacionamiento, horario, formulario
-├── /gracias/                        Confirmación de formulario (noindex)
-├── /aviso-de-privacidad/
-├── /terminos-de-uso/
-├── /politica-de-cookies/            (solo si se usan cookies no esenciales)
-└── /aviso-medico/                   Disclaimer: contenido educativo, no sustituye consulta, no es canal de urgencias
-```
-
-Páginas que NO existen a propósito: `/otorrino-cumbres/`, `/otorrino-san-pedro/`, `/servicios/` como página única gigante, `/blog/` genérico (se usa `/recursos/`), `/otorrinolaringologa/` como duplicado de género.
-
-## 3. Jerarquía de navegación
-
-**Header (desktop):** Logo · Otorrinolaringología (menú: Padecimientos, Tratamientos) · Sueño (menú: Ronquido, Apnea, Estudio del sueño, Cirugía) · Dra. Irina · Primera consulta · Contacto · [Agendar por WhatsApp]
-
-**Header (móvil):** Logo · menú · botón WhatsApp. Barra inferior: WhatsApp · Llamar · Cómo llegar.
-
-**Footer:** logo y nombre; especialidad; NAP; horario; enlaces principales; redes oficiales; Doctoralia; aviso de privacidad; aviso médico; copyright; datos regulatorios que apliquen (cédulas, si la Dra. autoriza).
-
-## 4. Breadcrumbs
-
-`Inicio › Sueño › Apnea obstructiva del sueño` · `Inicio › Otorrinolaringología › Padecimientos › Sinusitis` · `Inicio › Dra. Irina González Sáez`. Emitidos como `BreadcrumbList`.
-
-## 5. Enlazado interno (clusters)
-
-- Cada padecimiento enlaza a: su pilar, sus tratamientos relacionados, la página de la Dra. (autora/revisora), primera consulta y CTA.
-- Cada tratamiento enlaza a: los padecimientos que resuelve, el estudio diagnóstico previo (si aplica) y la página de la Dra.
-- Sueño: Ronquido ↔ Apnea ↔ Estudio del sueño → (CPAP | Cirugía | Dispositivo) → Dra. Irina → WhatsApp.
-- ORL: Desviación de tabique → Septoplastia; Rinitis/Sinusitis → Turbinoplastia / Cirugía endoscópica; Amigdalitis → Amígdalas y adenoides → Ronquido en niños (puente a Sueño).
-- Home enlaza a los dos pilares, a 6 motivos de consulta frecuentes, a la Dra., a primera consulta y a contacto.
-
-## 6. Mapa de redirecciones
-
-Se completa en Fase 1.4 cuando se conozcan las URLs existentes en el WordPress actual y en Search Console. Regla: `OLD → NEW` con 301 directo, sin cadenas, sin redirigir todo a Home.
-
-## 7. Estado de cada URL
-
-| URL | Tipo WP | Estado |
-|---|---|---|
-| `/` | Página (Elementor, datos del core) | TODO |
-| `/dra-irina-gonzalez-saez/` | Página (template entidad) | TODO |
-| `/otorrinolaringologia/`, `/sueno/` | Página pilar | TODO |
-| `/padecimientos/*`, `/tratamientos/*`, `/sueno/*` | CPT `condicion` / `tratamiento` con prefijo de URL por área | TODO · cada una OFRECE/NO OFRECE por confirmar |
-| `/primera-consulta/`, `/preguntas-frecuentes/`, `/contacto/`, legales | Página | TODO |
-| `/recursos/*` | CPT `recurso` (o `post` renombrado) | TODO · fase posterior |
-
-## Estado actual 2026-10-10 (sustituye TODO de la tabla histórica)
-
-Home, Dra., Primera consulta, FAQ, Contacto, tres legales, Links y Gracias: públicas, verificadas200. Links/Gracias noindex y fuera de sitemap. Pilares ORL/Sueño y fichas clínicas: no públicas (destinos404), pendientes de aprobación y flujo de publicación; no se cambian estados por la auditoría. Recursos no publicados. Menús omiten borradores; Home ahora tiene salida pública temporal para sus enlaces clínicos. Navegación proyectada de §3 no debe confundirse con el menú vigente.
+Enlaces a clínica filtrados por publish; helper corregido para reconocer CPT en rutas canónicas de Sueño, conservando anclas y área. Fix probado localmente, aún no desplegado. Historial de árboles proyectados en Git y revisiones anteriores; no usarlo como mandato para publicar. Google puede mantener datos históricos: HTTP/sitemap no equivalen a indexación actual.

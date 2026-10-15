@@ -15,7 +15,7 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 | Formulario | Datos mínimos y sin guardar en la base de datos (D-050); campo trampa; filtro de contenido SpamGuard con descarte silencioso; Cloudflare Turnstile (Managed); SMTP por constantes | `Contact/Form.php`, `Contact/SpamGuard.php` | Q-051/Q-052/Q-055, D-085 |
 | Mini apps de la Dra. | `/briefing/` con token (config.php fuera del repo), noindex, `paginas.json` denegado, la app de revisión nunca publica | `tools/briefing/` | D-040, D-076 |
 | Publicación clínica | Gate médico del plugin: nada clínico se publica sin aprobación de la revisora | `Workflow/MedicalReview.php` | D-078/D-082 |
-| Secretos | `env.sh`, `config.php` y `*.local.txt` fuera de Git; las sesiones no los imprimen; claves de Turnstile cargadas sin mostrarlas | `.gitignore`, AGENTS.md | D-085 |
+| Secretos | `env.sh`, `config.php` y `*.local.txt` fuera de Git; las sesiones no los imprimen durante esta auditoría; las exposiciones históricas aceptadas se registran en D-078/D-085; claves de Turnstile cargadas sin mostrarlas | `.gitignore`, AGENTS.md | D-085 |
 | Copias | Respaldo automático antes de cada despliegue (`~/deploy-backups/`), también del `.htaccess`; copias del hosting | `tools/deploy/*.sh` | BATON |
 
 ## Decisiones y riesgos aceptados
@@ -26,10 +26,14 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 
 ## Pendiente
 
-1. ~~2FA del administrador~~ — **activo** (verificado en el servidor, 2026-10-14): TOTP, correo y 10 códigos de respaldo; `is_user_using_two_factor(1)` = true. La cuenta de la Dra. (revisor_medico) no usa wp-admin y queda sin 2FA. Hostinger y la cuenta de Google de José también tienen 2FA (José, 2026-10-15).
-2. Revisión de Codex (1.9, 5.7, 10.5) sobre este estado.
+1. ~~2FA del administrador~~ — **activo** (verificado en el servidor, 2026-10-14): TOTP, correo y 10 códigos de respaldo; `is_user_using_two_factor(1)` = true. La cuenta de la Dra. (revisor_medico) no usa wp-admin y queda sin 2FA. Hostinger y la cuenta de Google de José también tienen 2FA (confirmación del propietario; fecha 15/10 del reporte original no usada como fecha de esta auditoría).
+2. Revisión Codex 2026-10-14b completada: HTTP anónimo y permisos propios contrastados; informe docs/REVISION_2026-10-14b.md. Prueba de editor autenticado y prueba humana de formulario permanecen a cargo de José.
 
 ## Límites
 
 - Hasta la revocación de «claude-ops» (2026-10-14), las peticiones REST desde la nube iban autenticadas; las pruebas anónimas anteriores a esa fecha valen solo si las hizo la sesión local.
 - No se han hecho pruebas de penetración ni escaneo de dependencias de terceros; el formulario no se prueba en producción porque envía correos reales.
+
+## Alcance de cabeceras y auditoría 2026-10-14b
+
+Las cabeceras completas de Headers se aplican al front PHP, no se afirman en todos los endpoints REST ni en respuestas estáticas del hosting. REST observado lleva nosniff y upgrade-insecure-requests; 404 de autor lleva HSTS/XFO/Referrer/Permissions. No CSP restrictiva contra XSS: upgrade-insecure-requests no es una allowlist de scripts. Users/me/users 404, settings y Ops GET 401, practice GET 200 con proyección pública. No se leyeron cuerpos privilegiados, secretos ni rutas privadas; archivos privados ignorados y no versionados. Ops sigue admin-only; allowlist/consumidores Q-040 es una mejora pendiente, no una exposición anónima. 2FA se acredita por atestación local/José, no por una prueba de login de Codex.

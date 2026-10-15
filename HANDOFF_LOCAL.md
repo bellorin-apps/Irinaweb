@@ -1,15 +1,9 @@
-# HANDOFF — Sesión local en la PC de José (acceso SSH como Sensia)
+# HANDOFF — Claude local · vigente 2026-10-14b
 
-Pegar este encargo en una sesión de Claude Code abierta en una carpeta nueva de la PC (por ejemplo `C:\Users\bellg\Documents\Irinaweb`):
+Trabajar en la carpeta del proyecto y rama ccr-6254502d-xly8ww. Leer AGENTS, encargo activo, MASTER_PROMPT, STATUS, NEXT, BATON y DECISIONS; las decisiones recientes prevalecen sobre propuestas antiguas.
 
-```
-Clona https://github.com/bellorin-apps/Irinaweb rama ccr-6254502d-xly8ww en esta carpeta.
-Lee MASTER_PROMPT.md, STATUS.md, NEXT.md, BATON.md y docs/DEPLOY.md.
-Copia tools/deploy/env.example.sh a tools/deploy/env.sh y ajusta SSH_KEY a la clave del alias `gibelab` de tu ~/.ssh/config (misma cuenta Hostinger u855694717). No pegues claves en el chat.
-Ejecuta en orden, desde Git Bash o WSL:
-  bash tools/deploy/inventory.sh        (solo lectura; guarda docs/audit/inventory-*.txt)
-  bash tools/deploy/deploy-briefing.sh  (sube /briefing/ y muestra la URL con token)
-Haz commit del inventario y push a la misma rama. Envía a la sesión cloud "Sitio web" (session_01P2pMHfo6sjjDF1P9dmdq9w) un mensaje con la URL del briefing y un resumen del inventario, sin credenciales.
-```
+Codex audita y deja commits; Claude local despliega por tools/deploy con respaldo/rollback. Sin staging D-080. Pull antes de actuar; no mezclar los cuatro HTML locales de José. El script exacto y alcance están en el BATON vigente, no ejecutar automáticamente todo el catálogo de despliegue.
 
-Después, cada vez que la sesión cloud lo pida: `git pull` y `bash tools/deploy/deploy-code.sh`.
+SSH/WP-CLI local para lecturas privilegiadas: el canal REST cloud dejó de ser administrador tras revocación. No leer/imprimir secretos ni pegar URLs con claves; config.php/env.sh/*.local.txt permanecen fuera de Git. Los enlaces de la Dra. se transmiten por el canal privado establecido, no se copian a chats/docs/repos. No ejecutar deploy-briefing solo para obtener o imprimir una URL.
+
+No publicar clínica sin aprobación médica y OK de José. No repetir limpieza histórica, borrar respaldos ni tocar aplicaciones privadas. Agentes no prueban formulario/SMTP en producción: la prueba humana la hace José. Informe y relevo vigentes en docs/REVISION_2026-10-14b.md y BATON.

@@ -51,7 +51,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | DONE | Manual 2026-10-07 16:41 descargado; semanal automático activo |
 | 1.7 | Crear staging protegido (noindex, fuera de sitemap, auth) | 3 | DESCOPED | D-080: el plan Premium no incluye Staging y José no lo amplía; sitio corto, respaldo antes de cada despliegue y prueba de formulario de José con su correo |
 | 1.8 | Documentar accesos (sin secretos) y procedimiento de rollback | 1 | DONE | Auditoría2026-10-12: FIX documental: rollback vigente según deploy-code.sh (~/deploy-backups/<ts>); runbook de reset marcado histórico y no ejecutable; sin credenciales. |
-| 1.9 | Codex: auditoría de seguridad del estado actual | 2 | TODO | |
+| 1.9 | Codex: auditoría de seguridad del estado actual | 2 | DONE | SECURITY contrastado: HTTP anónimo users/author404, settings/Ops401, XML-RPC/readme403; cabeceras front y versiones ocultas. 2FA por atestación local; secretos ignorados/no versionados, sin pentest. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 2 — Investigación y estrategia
 
@@ -62,7 +62,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 2.3 | Keyword research local y de condiciones (`KEYWORDS.md`) | 3 | DONE | Auditoría2026-10-12: Keyword map sin volúmenes inventados, limitaciones de SERP declaradas; coherencia con slugs del build. GSC/GBP quedan OWNER. |
 | 2.4 | Perfil de paciente + motivos de consulta top 5–10 | 2 | DONE | Auditoría2026-10-12: DISCOVERY §0b contiene11 motivos confirmados; ocho filas del build agrupan los11 (ronquido/apnea, oído/cerumen, amígdalas/niños). Sito fresco y estrategia coherentes. |
 | 2.5 | `STRATEGY.md`: posicionamiento, mensaje central, propuesta de valor | 3 | DONE | Auditoría2026-10-12: FIX documental: CAB Medical, pediatría desde0meses y no publicar precios; mensaje publicado respirar/dormir/oír y agenda WhatsApp. Se retiran hipótesis presentadas como exclusividad. |
-| 2.6 | Codex: revisión de estrategia y keyword map | 1 | TODO | |
+| 2.6 | Codex: revisión de estrategia y keyword map | 1 | DONE | FIX estrategia/keyword map alineados con dos áreas cortas y cinco fichas; ORL individual/recursos/navegador históricos, sin volumen/ranking inventado. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 3 — Arquitectura (información, SEO, WordPress)
 
@@ -75,7 +75,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 3.5 | `ARCHITECTURE.md`: theme vs core, Elementor controlado, fuente única de verdad | 3 | DONE | Auditoría2026-10-12: FIX inventario de capas real (IIFEJS, CSS único, versión por filemtime, Adobe Fonts, header/footerPHP). NAP repetido Q-042 y UI pendientes no se presentan como entregados. |
 | 3.6 | `PLUGINS.md`: tabla necesidad / opción / alternativa / decisión | 2 | DONE | ListadoWP-CLI13/10:6activos y2MU con versiones; PLUGINS actualizado y propuestas separadas. Ver docs/audit/2026-10-13/veredictos-inventario.md |
 | 3.7 | Flujo de agenda y conversión (Doctoralia / WhatsApp / teléfono / formulario) | 2 | DONE | Auditoría2026-10-12: WhatsApp/teléfono/Maps/Doctoralia con destinos publicados. Eventos allowlist solo page_path; fixtures cola antesload y DNT incluso con gtag ajeno. Salida antes de descargarGA4 puede perder clic: límite declarado. |
-| 3.8 | Codex: auditoría de arquitectura contra MASTER_PROMPT | 2 | TODO | |
+| 3.8 | Codex: auditoría de arquitectura contra MASTER_PROMPT | 2 | DONE | FIX arquitectura/mapa: diez páginas+cinco fichas, rutas Sueño, archivos404, mini apps/gate, sin staging y D-081/083/084. Propuestas antiguas como historia. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 4 — Design System y dirección visual
 
@@ -99,7 +99,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 5.4 | Schema JSON-LD propio sin duplicar con el plugin SEO | 3 | TODO | |
 | 5.5 | Tooling: linters (PHPCS WPCS, stylelint, eslint), build de assets, fuentes WOFF2 locales | 2 | DOING | PHPCS + WPCS configurados y en verde. Falta: stylelint/eslint, build de sprite, fuentes |
 | 5.6 | Instalación/configuración plugins aprobados en staging | 2 | DESCOPED | D-080: sin staging; los plugins ya están en producción con respaldo previo |
-| 5.7 | Codex: auditoría de código (PHP/JS/CSS/seguridad) | 3 | TODO | |
+| 5.7 | Codex: auditoría de código (PHP/JS/CSS/seguridad) | 3 | DONE | PHPCS/PHP79/JS externo+inline/bash18 pasan; permisos REST propios 7/7, corpus antispam/regresiones, escapes/nonces/admin/revisar revisados. Sin mutaciones; Q-040/Q-042 conservan alcance. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 6 — Build del núcleo visual
 
@@ -113,7 +113,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
 | 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | TODO | |
 | 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | TODO | |
-| 6.9 | Codex: auditoría del núcleo | 3 | TODO | |
+| 6.9 | Codex: auditoría del núcleo | 3 | DONE | FIX Q-060 helper para CPT publicados en /sueno/{slug}/ con taxonomía/ancla; 7/7 fixtures. Widgets/templates/filtros publish revisados, sin borrar legacy. Correctivo local pendiente despliegue. Informe: docs/REVISION_2026-10-14b.md |
 | 6.10 | CHECKPOINT 3: Home + sistema visual aprobados | 2 | DONE | 2026-10-08: portada = Home v2, logotipo completo, foto autorizada (D-034) |
 
 ## FASE 7 — Contenido médico
@@ -146,12 +146,12 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 9.1 | On-page completo: titles, metas, H1, canonicals, OG por página | 3 | DOING | Base de Rank Math configurada (2026-10-08) |
-| 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | DOING | Sitemap restringido a tipos públicos; 301 del dominio viejo |
-| 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | DOING | Physician/WebSite/WebPage/ProfilePage/ContactPage validados en vivo (2026-10-10); `image` añadida; Article/Breadcrumb al publicar fichas |
+| 9.1 | On-page completo: titles, metas, H1, canonicals, OG por página | 3 | DONE | Quince indexables200, h1/main único, canónica propia, title39–62/description64–158, OG presente. Sin nuevos cambios de copy/build. Informe: docs/REVISION_2026-10-14b.md |
+| 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | DONE | Sitemap page10/condicion2/tratamiento3 sin archivos404/recursos, robots público correcto. Dominio aparcado raíz301 confirmado; cinco rutas antiguas301 recomprobadas en support.json. Informe: docs/REVISION_2026-10-14b.md |
+| 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | DONE | Q-058 confirmado: Physician+Person único, ProfilePage/ContactPage/FAQPage/MedicalWebPage de áreas/fichas y BreadcrumbList. Validator0/0 Sueño/Dra. por atestación local, no nueva validación externa universal. Informe: docs/REVISION_2026-10-14b.md |
 | 9.4 | GA4 + Search Console + eventos de conversión | 2 | DONE | FIX→DONE: GA4 único tras load; seis eventos, DNT y exclusión de editores/ID inválido probados sin enviar a Google. GSC confirmado en DISCOVERY §1.6/D-022; cobertura actual sigue 1.4. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
 | 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | Requiere acceso |
-| 9.6 | Codex: QA SEO | 2 | TODO | |
+| 9.6 | Codex: QA SEO | 2 | DONE | QA quince200/h1/main/canónicas, longitudes≤62/158 y OG/schema/migas. Robots/redirecciones/sitemaps contrastados; sin inferir indexación. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 10 — Performance, seguridad, accesibilidad
 
@@ -159,9 +159,9 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 10.1 | Performance budget, caché, imágenes, fuentes, JS/CSS mínimos | 3 | DONE | Auditoría 13/10: políticas de optimización aprobadas verificadas con UA Galaxy/iPhone/desktop y pesos registrados. Móvil 1600/q95, escritorio q100, alfa lossless y diferidos. No certifica CWV ni todos los presupuestos antiguos; informe integral en 10.2. Informe histórico: docs/REVISION_CINCO_TAREAS_2026-10-13.md. D-081 sustituye q100 escritorio por derivados q95 en cabeceras/fondo; ver auditoría 14/10 y PERFORMANCE |
 | 10.2 | Medición CWV/Lighthouse antes vs después (`PERFORMANCE.md`) | 2 | DONE | PERFORMANCE antes/después/después 2 y límites auditados; CLS/peso q95 documentados. Nuevo A/B tras Q-050: Sueño móvil LCP 4,446/4,454 s (3 pasadas por modo), CLS 0. Laboratorio, no CWV de campo. Informe: docs/REVISION_2026-10-14.md |
-| 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | DOING | SECURITY.md (2026-10-14): cabeceras (Q-023), versiones ocultas (Q-054), enumeración cerrada (Q-053), XML-RPC 403, API privilegiada 401/403 para anónimo (Q-059 descartado), Two Factor instalado, formulario con SpamGuard + Turnstile, secretos fuera de Git, respaldos. «claude-ops» revocada y 2FA activo en el administrador, verificado en el servidor (2026-10-14). 2FA también en Hostinger y Google (José, 2026-10-15) |
-| 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | DOING | axe-core 4.10 en 15 URL + 404 a 1440 y 390 (2026-10-14): contraste, enlace en texto, tamaño de objetivo, mapa y franja desplazable corregidos; queda un falso positivo medido (WhatsApp glass sobre hero oscuro, 10.2:1). Antes: Lighthouse a11y 100 en Dra. y menú con teclado (Q-056). Falta: prueba manual con lector de pantalla (VoiceOver/TalkBack) |
-| 10.5 | Codex: QA performance + seguridad + accesibilidad | 3 | TODO | |
+| 10.3 | Hardening (`SECURITY.md`): 2FA, login, headers, permisos, XML-RPC/REST, backups | 3 | DONE | SECURITY revisado y medidas contrastadas; Two Factor instalado/WP2FA activo por atestación local14/10 18:20, Hostinger/Google por propietario. Revocación REST y D-085 respetados; no login ni secretos. Informe: docs/REVISION_2026-10-14b.md |
+| 10.4 | Accesibilidad WCAG 2.2 AA: teclado, focus, contraste, labels, skip link | 3 | DONE | Axe4.14: quince+404×1440/390, cero violaciones detectadas; incomplete contraste no aprobado manualmente. LH12.2.1 a11y seis100 y menú público teclado normal/reducido pasan. Lector de pantalla pendiente explícito según encargo. Informe: docs/REVISION_2026-10-14b.md |
+| 10.5 | Codex: QA performance + seguridad + accesibilidad | 3 | DONE | PERFORMANCE, SECURITY, axe32 muestras y LH a11y seis100 revisados. Sin CWV de campo/pentest/lector de pantalla ni certificación universal AA. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 11 — QA integral y pre-launch
 
@@ -170,7 +170,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 11.1 | QA funcional (enlaces, forms, email, agenda, WhatsApp, maps, 404, cookies, analytics) | 3 | TODO | |
 | 11.2 | QA dispositivos (Chrome, Edge, Safari, Firefox, Android, iOS) | 2 | TODO | |
 | 11.3 | QA contenido (consistencia NAP, nombres, títulos, claims, fechas) | 2 | TODO | |
-| 11.4 | Consistency check de Codex contra MASTER_PROMPT | 2 | TODO | |
+| 11.4 | Consistency check de Codex contra MASTER_PROMPT | 2 | DONE | FIX documentos activos y coordinación coherentes con D-076…085. README/HANDOFF sin staging ni envío de URL con token; historia etiquetada, gate médico intacto. Informe: docs/REVISION_2026-10-14b.md |
 | 11.5 | `LAUNCH_CHECKLIST.md` completado | 2 | TODO | |
 | 11.6 | CHECKPOINT 5: pre-launch aprobado | 2 | OWNER | ext |
 

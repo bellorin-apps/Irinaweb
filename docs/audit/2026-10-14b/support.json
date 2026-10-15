@@ -1,0 +1,159 @@
+{
+  "og": [
+    {
+      "status": 200,
+      "format": "jpeg",
+      "width": 1200,
+      "height": 630,
+      "bytes": 120068
+    }
+  ],
+  "sitemaps": [
+    {
+      "path": "/page-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/",
+        "https://drairinagonzalez.com/terminos-de-uso/",
+        "https://drairinagonzalez.com/aviso-medico/",
+        "https://drairinagonzalez.com/aviso-de-privacidad/",
+        "https://drairinagonzalez.com/otorrinolaringologia/",
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/preguntas-frecuentes/",
+        "https://drairinagonzalez.com/contacto/",
+        "https://drairinagonzalez.com/primera-consulta/",
+        "https://drairinagonzalez.com/dra-irina-gonzalez-saez/"
+      ]
+    },
+    {
+      "path": "/condicion-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+        "https://drairinagonzalez.com/sueno/ronquido/"
+      ]
+    },
+    {
+      "path": "/tratamiento-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cpap/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      }
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      }
+    },
+    {
+      "route": "/padecimientos/",
+      "status": 404,
+      "robots": "index, follow",
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      }
+    },
+    {
+      "route": "/tratamientos/",
+      "status": 404,
+      "robots": "index, follow",
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      }
+    },
+    {
+      "route": "/recursos/",
+      "status": 404,
+      "robots": "index, follow",
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      }
+    },
+    {
+      "route": "/links/",
+      "status": 200,
+      "robots": "nofollow, noindex",
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      }
+    },
+    {
+      "route": "/gracias/",
+      "status": 200,
+      "robots": "nofollow, noindex",
+      "headers": {
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "route": "/padecimientos/ronquido/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/ronquido/"
+    },
+    {
+      "route": "/padecimientos/apnea-obstructiva-del-sueno/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/"
+    },
+    {
+      "route": "/tratamientos/estudio-del-sueno/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/estudio-del-sueno/"
+    },
+    {
+      "route": "/tratamientos/cpap/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/cpap/"
+    },
+    {
+      "route": "/tratamientos/cirugia-de-ronquido-y-apnea/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+    }
+  ]
+}
