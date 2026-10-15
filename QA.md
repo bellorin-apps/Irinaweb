@@ -347,3 +347,10 @@ Support14b: comprobación GET nueva de OG JPEG1200×630, sitemap10/2/3 y cinco30
 
 3928e49 (Q-060 en e0352be, template-tags.php) con deploy-code (`~/deploy-backups/20261014-183634/`) y purga; sin builds, publicaciones ni claves. Recorrido de las 15 URL públicas: 15 enlaces internos distintos, todos 200 sin redirección. Las 5 fichas se enlazan en /sueno/{slug}/ (canónico) y ningún enlace usa /padecimientos/ o /tratamientos/. Las 21 fichas y recursos en borrador dan 404 en sus 5 rutas posibles (105 de 105). Q-060 VERIFIED. Progreso de Codex: 67/90 DONE (73,84 %).
 
+## Cierre: FAQ y navegadores (sesión local, 2026-10-14 18:55)
+
+- Entradilla de FAQ (e434d2a) cargada con setup-pages y purga; en vivo «Las dudas sobre tu caso se resuelven en la valoración.» y ya no aparece «página de padecimiento».
+- **11.2, Edge 155 (Chromium) headless:** 15 URL + 404 a 1440 y 390 (32 vistas). Todas con un h1, main, cabecera y pie; sin scroll horizontal, sin imágenes rotas y con la consola limpia (solo el 404 esperado de la página de error).
+- **Q-061 · P2 · OPEN:** el título de la página 404 está en inglés («Page Not Found | …»): es el `404_title` por defecto de Rank Math. Propuesta: «Página no encontrada %sep% %sitename%».
+- **Pendiente para 11.2:** Firefox no está instalado en la PC; Safari en iPhone real lo prueba José.
+

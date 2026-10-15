@@ -10,6 +10,8 @@ Quince URL SEO y axe quince+404×dos anchos pasan; LH a11y100 en Contacto/CPAP/D
 
 ---
 
+> **2026-10-14 18:55 (sesión local):** FAQ (e434d2a) en vivo con la entradilla nueva. 11.2: Edge limpio en 32 vistas; Firefox no instalado; Safari iOS lo prueba José. Q-061 P2: título 404 en inglés (Rank Math).
+
 > **Producción 2026-10-14 18:40 (sesión local): segunda auditoría de Codex (3928e49) desplegada.** Q-060 verificado: enlaces canónicos /sueno/{slug}/ a las 5 fichas; 21 borradores ocultos (105 de 105 rutas en 404); 15 enlaces internos con 200. Detalle en QA.
 
 > **2026-10-14 18:20 (sesión local): 2FA activo en el usuario de José, comprobado en el servidor en solo lectura.** Métodos: app autenticadora (TOTP), correo y 10 códigos de respaldo; `is_user_using_two_factor` = sí. La cuenta de la Dra. (irina, revisor_medico) queda sin 2FA porque no entra a wp-admin. Pendiente de José: 2FA en Hostinger y en Google.
