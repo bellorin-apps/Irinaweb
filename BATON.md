@@ -1,3 +1,5 @@
+> **2026-10-14 18:20 (sesión local): 2FA activo en el usuario de José, comprobado en el servidor en solo lectura.** Métodos: app autenticadora (TOTP), correo y 10 códigos de respaldo; `is_user_using_two_factor` = sí. La cuenta de la Dra. (irina, revisor_medico) queda sin 2FA porque no entra a wp-admin. Pendiente de José: 2FA en Hostinger y en Google.
+
 > **2026-10-14 17:55 (sesión local): alerta P0 de la nube descartada** (su tráfico REST iba autenticado con la contraseña de aplicación «claude-ops»). **José decidió revocarla:** revocada; 0 contraseñas de aplicación en el admin. La nube ya no puede usar la API como admin; las comprobaciones públicas siguen igual. Detalle en QA.
 
 > **Producción 2026-10-14 17:20 (sesión local): accesibilidad 10.4 (cae491d) desplegada y verificada.** Mapa como región y funcionando; franja de credenciales enfocable solo en móvil; Lighthouse de accesibilidad 100 en Contacto y CPAP (móvil y escritorio). Falta la prueba manual con lector de pantalla.
