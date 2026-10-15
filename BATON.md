@@ -10,6 +10,8 @@ Quince URL SEO y axe quince+404×dos anchos pasan; LH a11y100 en Contacto/CPAP/D
 
 ---
 
+> **2026-10-14 19:10 (sesión local):** Q-061 aplicado y verificado (título de la 404 en español). 11.2: Firefox 158 sin incidencias en 32 vistas (más Edge); queda Safari en iPhone real (José).
+
 > **2026-10-14 18:55 (sesión local):** FAQ (e434d2a) en vivo con la entradilla nueva. 11.2: Edge limpio en 32 vistas; Firefox no instalado; Safari iOS lo prueba José. Q-061 P2: título 404 en inglés (Rank Math).
 
 > **Producción 2026-10-14 18:40 (sesión local): segunda auditoría de Codex (3928e49) desplegada.** Q-060 verificado: enlaces canónicos /sueno/{slug}/ a las 5 fichas; 21 borradores ocultos (105 de 105 rutas en 404); 15 enlaces internos con 200. Detalle en QA.

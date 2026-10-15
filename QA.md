@@ -351,6 +351,7 @@ Support14b: comprobación GET nueva de OG JPEG1200×630, sitemap10/2/3 y cinco30
 
 - Entradilla de FAQ (e434d2a) cargada con setup-pages y purga; en vivo «Las dudas sobre tu caso se resuelven en la valoración.» y ya no aparece «página de padecimiento».
 - **11.2, Edge 155 (Chromium) headless:** 15 URL + 404 a 1440 y 390 (32 vistas). Todas con un h1, main, cabecera y pie; sin scroll horizontal, sin imágenes rotas y con la consola limpia (solo el 404 esperado de la página de error).
-- **Q-061 · P2 · OPEN:** el título de la página 404 está en inglés («Page Not Found | …»): es el `404_title` por defecto de Rank Math. Propuesta: «Página no encontrada %sep% %sitename%».
-- **Pendiente para 11.2:** Firefox no está instalado en la PC; Safari en iPhone real lo prueba José.
+- **Q-061 · P2 · VERIFIED (1ce1cd7):** el `404_title` de Rank Math estaba guardado como «Page Not Found %sep% %sitename%». Aplicado `option patch update` a «Página no encontrada %sep% %sitename%» y purga; /no-existe-qa/ da HTTP 404 con el título «Página no encontrada | Dra. Irina González Sáez».
+- **11.2, Firefox 158 headless** (descargado por Selenium Manager a su caché con OK de José, sin instalarlo en el sistema): las mismas 32 vistas, todas con un h1, main, cabecera y pie, sin scroll horizontal ni imágenes rotas, con CSS y la tipografía Iskra cargados; menú móvil abierto en top 92. Firefox no expone la consola a Selenium, así que no se comprobó.
+- **Pendiente para 11.2:** Safari en iPhone real, lo prueba José.
 
