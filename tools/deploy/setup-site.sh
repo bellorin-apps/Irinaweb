@@ -89,6 +89,10 @@ if [ -z "$S_ID" ]; then
   echo "  creada condición privada $S_ID"
 else echo "  existe condición $S_ID"; fi
 
+# Q-061: título de la 404 en español (Rank Math lo guardaba como «Page Not Found %sep% %sitename%»). Idempotente.
+echo "→ Rank Math: título de la 404"
+w "option patch update rank-math-options-titles 404_title 'Página no encontrada %sep% %sitename%'" >/dev/null 2>&1 || echo "  (no se pudo actualizar 404_title)"
+
 echo "→ Rewrites y caché"
 # No usar `rewrite flush` aquí: con --skip-plugins=elementor las reglas de Elementor/Pro se perderían.
 # Borrar la opción hace que WordPress las regenere en la siguiente petición web con TODOS los plugins cargados.
