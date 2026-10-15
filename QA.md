@@ -337,8 +337,13 @@ Base44221ba; producción declarada edf8c45. Informe docs/REVISION_2026-10-14b.md
 
 Q-058 VERIFIED: tipo doble Physician+Person y ausencia de nodo profesional duplicado confirmados; validación externa histórica de Sueño/Dra. aportada por Claude. Q-059 INVALID: respuestas de admin previas a revocación no prueban exposición pública; nuevas peticiones anónimas confirman denegación. Se sustituye cualquier recomendación de investigar/rotar por esa alerta descartada, sin reabrir decisión.
 
-Q-060 P2 FIXED_LOCAL: helper de URL publicada trataba /sueno/{slug}/ como page. Ahora consulta condicion/tratamiento publish por slug y area=sueno, conserva ancla y excluye borrador/otra área; fixture 7/7. No altera copy, estado clínico, menú ni sombras. Despliegue a cargo de Claude.
+Q-060 P2 VERIFIED (desplegado 2026-10-14 18:36, sesión local; antes FIXED_LOCAL): helper de URL publicada trataba /sueno/{slug}/ como page. Ahora consulta condicion/tratamiento publish por slug y area=sueno, conserva ancla y excluye borrador/otra área; fixture 7/7. No altera copy, estado clínico, menú ni sombras. Despliegue a cargo de Claude.
 
 Axe4.14.0 (distinto del4.10 anterior): 32 muestras sin violaciones detectadas; incomplete color-contrast permanece como comprobación manual, no un pass automático. Lighthouse12.2.1 accesibilidad100 en Contacto/CPAP/Dra. × móvil/escritorio. No certificado AA/lector de pantalla/Safari ni CWV de campo. PHP79/PHPCS/JS2+inline4/bash18 y regresiones pasan; permisos REST7/7. GET sin sesión/Authorization; cuerpos privilegiados no leídos, todos POST bloqueados en harness. Sin SMTP ni tokens reales. Evidencias docs/audit/2026-10-14b/. 2FA/roles por atestación local, no nuevo login. Secretos ignorados/no versionados, sin análisis forense de historial.
 
 Support14b: comprobación GET nueva de OG JPEG1200×630, sitemap10/2/3 y cinco301 médicos. Home/Contacto con cabeceras completas; Links/Gracias noindex, archivos404 (meta index/follow no convierte un HTTP404 en página indexable). Sin cambio de robots necesario.
+
+## Despliegue de la segunda auditoría de Codex (sesión local, 2026-10-14 18:40)
+
+3928e49 (Q-060 en e0352be, template-tags.php) con deploy-code (`~/deploy-backups/20261014-183634/`) y purga; sin builds, publicaciones ni claves. Recorrido de las 15 URL públicas: 15 enlaces internos distintos, todos 200 sin redirección. Las 5 fichas se enlazan en /sueno/{slug}/ (canónico) y ningún enlace usa /padecimientos/ o /tratamientos/. Las 21 fichas y recursos en borrador dan 404 en sus 5 rutas posibles (105 de 105). Q-060 VERIFIED. Progreso de Codex: 67/90 DONE (73,84 %).
+
