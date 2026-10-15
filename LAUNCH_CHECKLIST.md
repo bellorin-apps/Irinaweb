@@ -18,7 +18,7 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 - ✅ HTTPS, HSTS y cabeceras de seguridad; versiones ocultas; enumeración de usuarios cerrada; XML-RPC desactivado (SECURITY.md).
 - ✅ 2FA en WordPress, Hostinger y Google; sin contraseñas de aplicación activas.
 - ✅ Formulario con datos mínimos, antispam y captcha; SMTP operativo desde el 10-oct.
-- 👤 Una prueba real del formulario con «PRUEBA» en el mensaje (llega al consultorio).
+- ✅ Prueba real del formulario con «PRUEBA» hecha por José (2026-10-15).
 - ✅ Respaldo automático antes de cada despliegue y copias del hosting.
 
 ## SEO
@@ -34,7 +34,7 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 
 - ✅ Lighthouse «antes/después» (PERFORMANCE.md): CLS de portada 0,236 → 0,001; escritorio a menos de la mitad de peso con fotos q95.
 - ✅ Accesibilidad: axe WCAG 2.2 AA sin violaciones reales; Lighthouse a11y 100 en las páginas medidas; menú con teclado.
-- ✅ Chromium, Edge y Firefox sin incidencias (11.2). ⏳ Safari en iPhone real (José) y lector de pantalla manual (VoiceOver/TalkBack).
+- ✅ Chromium, Edge, Firefox y Safari en iPhone real sin incidencias (11.2). ⏳ Lector de pantalla manual (VoiceOver/TalkBack), opcional.
 
 ## Medición
 
@@ -43,6 +43,6 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 
 ## Para dar el lanzamiento por cerrado (CHECKPOINT 5)
 
-1. 👤 José: prueba del formulario, GBP/Doctoralia y revisión legal (o aceptar que quedan como mejora continua).
-2. ⏳ Pasada en iPhone (Safari).
+1. 👤 José: GBP/Doctoralia y revisión legal (o aceptar que quedan como mejora continua). Prueba del formulario: ✅.
+2. ✅ Pasada en iPhone (Safari) — José, 2026-10-15.
 3. 👤 José aprueba esta lista.
