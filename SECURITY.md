@@ -11,7 +11,7 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 | Enumeración de usuarios | Para visitantes: rutas `/wp/v2/users` retiradas de la API, páginas de autor y `?author=` en 404, oEmbed sin autor | `Security/Hardening.php` | Q-053 (anónimo desde la PC de José: users 404, users/me 404) |
 | XML-RPC | No disponible (403) | Hosting / configuración | Leído en vivo 2026-10-14 |
 | API REST privilegiada | settings, abilities, MCP y Elementor One exigen sesión o permisos (401/403 para anónimo) | Núcleo y plugins | Sesión local 2026-10-14 (Q-059 descartado) |
-| Acceso | Plugin Two Factor 0.17 instalado (TOTP + códigos de respaldo); 2 usuarios: 1 administrador y 1 revisor_medico (la Dra., que no puede publicar) | wp-admin | BATON 2026-10-14 |
+| Acceso | Plugin Two Factor 0.17 con 2FA activo en el administrador (TOTP, correo y códigos de respaldo); 2 usuarios: 1 administrador y 1 revisor_medico (la Dra., que no puede publicar) | wp-admin | BATON 2026-10-14 |
 | Formulario | Datos mínimos y sin guardar en la base de datos (D-050); campo trampa; filtro de contenido SpamGuard con descarte silencioso; Cloudflare Turnstile (Managed); SMTP por constantes | `Contact/Form.php`, `Contact/SpamGuard.php` | Q-051/Q-052/Q-055, D-085 |
 | Mini apps de la Dra. | `/briefing/` con token (config.php fuera del repo), noindex, `paginas.json` denegado, la app de revisión nunca publica | `tools/briefing/` | D-040, D-076 |
 | Publicación clínica | Gate médico del plugin: nada clínico se publica sin aprobación de la revisora | `Workflow/MedicalReview.php` | D-078/D-082 |
@@ -26,7 +26,7 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 
 ## Pendiente
 
-1. **José:** activar el 2FA en su usuario (Perfil › Opciones de dos factores: escanear el QR, escribir el código y pulsar Verify/Enviar, generar códigos de respaldo y «Actualizar perfil»). Dijo haberlo hecho el 2026-10-14, pero el servidor no tiene ningún dato de Two Factor en el usuario 1 (sesión local, WP-CLI de solo lectura): pendiente de completar y volver a comprobar. Recomendado también en Hostinger y Google.
+1. ~~2FA del administrador~~ — **activo** (verificado en el servidor, 2026-10-14): TOTP, correo y 10 códigos de respaldo; `is_user_using_two_factor(1)` = true. La cuenta de la Dra. (revisor_medico) no usa wp-admin y queda sin 2FA. **José:** activarlo también en Hostinger y Google.
 2. Revisión de Codex (1.9, 5.7, 10.5) sobre este estado.
 
 ## Límites
