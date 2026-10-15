@@ -42,15 +42,24 @@ function irina_url_if_published( string $url ): string {
 	if ( ( $host && wp_parse_url( home_url(), PHP_URL_HOST ) !== $host ) || ! preg_match( '#^/(otorrinolaringologia|sueno|padecimientos|tratamientos)(/|$)#', $path ) ) {
 		return $url;
 	}
-	$type  = str_starts_with( $path, '/padecimientos/' ) ? 'condicion' : ( str_starts_with( $path, '/tratamientos/' ) ? 'tratamiento' : 'page' );
-	$posts = get_posts(
-		[
-			'post_type'      => $type,
-			'post_name__in'  => [ basename( rtrim( $path, '/' ) ) ],
-			'post_status'    => 'publish',
-			'posts_per_page' => 1,
-		]
-	);
+	$sleep_single = (bool) preg_match( '#^/sueno/[^/]+/?$#', $path );
+	$type         = $sleep_single ? [ 'condicion', 'tratamiento' ] : ( str_starts_with( $path, '/padecimientos/' ) ? 'condicion' : ( str_starts_with( $path, '/tratamientos/' ) ? 'tratamiento' : 'page' ) );
+	$query        = [
+		'post_type'      => $type,
+		'post_name__in'  => [ basename( rtrim( $path, '/' ) ) ],
+		'post_status'    => 'publish',
+		'posts_per_page' => 1,
+	];
+	if ( $sleep_single ) {
+		$query['tax_query'] = [ // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- una ficha por slug, acotada al área de la ruta.
+			[
+				'taxonomy' => 'area',
+				'field'    => 'slug',
+				'terms'    => 'sueno',
+			],
+		];
+	}
+	$posts = get_posts( $query );
 	if ( ! $posts ) {
 		return '';
 	}
