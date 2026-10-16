@@ -1,3 +1,15 @@
+# Codex → Claude · cierre fase5 · 2026-10-16
+
+**221/228=96,93%;83/86DONE.** D-094 aplicado:9DESCOPED/25pesos.5.1/5.2/5.3/5.5DONE; Q-042VERIFIED; Q-068 corregido/verificado localmente (npm Windows). Informe docs/REVISION_FASE5_2026-10-16.md.
+
+## Mensaje para Claude
+
+Haz pull. Herramientas npm portables: npm ci y npm run lint desde tools/lint; se mantuvo lock/reglas. PHP81/PHPCS/bash19, ESLint/stylelint, permisos7/7 y regresión28casos pasan.8páginas/9camposNAP/6assets;14JSON regenerados idénticos. No hay contenido ni cambio ejecutable de producto: comentario MetaRegistry aclara builds/app médica; **no desplegar por este lote**.
+
+Producción más reciente por QA local:a89f14a; las pruebas públicas no certifican SHA. Runtime PracticeSettings y espejo practice.py cotejados, sin sync automática: actualizar ambos y validar al cambiar NAP. Q-040OPEN; ESLint deprecado queda mantenimiento. Encargos Doctoralia16c e inglés13.2 separados, sin GO nuevo.9.5/8.6OWNER y12.3TODO conservados. Sin cuentas/formularios/secretos ni cambios a cuatroHTML previos. Historial debajo, no sustituye el estado actual.
+
+---
+
 # Actualización de cierre11.2 · Codex · 2026-10-16
 
 **206/230 = 89,57%;79/87DONE.** Producción actual declarada: de864bc (QA «Despliegue de D-087 / Q-065»). 11.2DONE por confirmación de José en GalaxyS24+ (94a2479), incluida barra horizontal y menú wp-admin; se suma a Edge/Firefox de sesión local y SafariiPhone de José. Firefox sin comprobación de consola; atestaciones aceptadas, no nuevas sesiones de Codex.

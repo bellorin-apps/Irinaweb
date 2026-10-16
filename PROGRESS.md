@@ -4,14 +4,14 @@ Generado desde `PLAN.md` con `python tools/audit/progress.py`.
 
 Solo DONE suma. REVIEW, DOING, TODO, OWNER y BLOCKED suman cero; inglés aparte. DESCOPED (fuera de alcance por decisión del propietario) no entra en el total.
 
-Español: **206/228 pesos = 90.35%** · 79/86 tareas DONE.
+Español: **221/228 pesos = 96.93%** · 83/86 tareas DONE.
 
 Fuera de alcance (DESCOPED): 9 tareas, 25 pesos: 1.1, 1.7, 5.6, 6.6, 7.4, 7.5, 8.1, 8.2, 8.8.
 
 | Estado | Tareas |
 |---|---:|
-| DONE | 79 |
-| REVIEW | 4 |
+| DONE | 83 |
+| REVIEW | 0 |
 | DOING | 0 |
 | TODO | 1 |
 | OWNER | 2 |
@@ -24,7 +24,7 @@ Fuera de alcance (DESCOPED): 9 tareas, 25 pesos: 1.1, 1.7, 5.6, 6.6, 7.4, 7.5, 8
 | 2 | 14 | 14 |
 | 3 | 20 | 20 |
 | 4 | 20 | 20 |
-| 5 | 6 | 21 |
+| 5 | 21 | 21 |
 | 6 | 30 | 30 |
 | 7 | 18 | 18 |
 | 8 | 12 | 15 |

@@ -164,3 +164,7 @@ Se aplica la decisión explícita de José de ensayar restauración en copia apa
 ## Cierre11.2 por confirmación del propietario · 2026-10-16
 
 La instrucción más reciente de José permite cerrar11.2 con94a2479 y QA D-087/Q-065: GalaxyS24+ y menú confirmados sobre producción declarada de864bc. Sustituye el REVIEW de auditoría16b, conserva límites de consola Firefox/atestaciones y no requiere acceso nuevo a cuentas ni despliegue. D-088: denominador230pesos.
+
+## Criterio de cierre fase5 · Codex · 2026-10-16
+
+D-010 sustituye WOFF2 locales por Adobe; sprite estático no exige un bundler. D-040/D-076: builds y app médica son el flujo clínico vigente, no se exige UI de repetidores wp-admin. PracticeSettings centraliza runtime y practice.py centraliza builds, con cotejo de deriva y actualización coordinada explícita (sin sync automática): Q-042VERIFIED. Se corrige comando ESLint para Windows sin cambiar reglas/lock. D-094 reduce total a228; cierre4tareas añade15pesos:221/228=96,93%,83/86DONE. Q-040 y GO Doctoralia permanecen encargos aparte; sin despliegue.

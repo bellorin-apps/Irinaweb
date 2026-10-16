@@ -6,11 +6,11 @@ Publicadas diez páginas indexables y cinco CPT médicos bajo /sueno/{slug}/. Li
 
 Schema: Graph Physician+Person (Q-058), ProfilePage, ContactPage, MedicalWebPage en ORL/Sueño y cinco fichas con entidad apropiada. Rank Math WebSite/WebPage/BreadcrumbList; FAQPage solo FAQ. No ratings/testimonios propios. Un nodo profesional por página donde corresponde, alumniOf válido por Person. Validación schema.org 0/0 aportada por Claude, no repetida como certificación clínica.
 
-REST /practice GET proyecta datos públicos; POST y Ops requieren manage_options. Metas edit_post, gate médico y nonce en administración. Briefing con token fuera de Git, rol médico y log; nunca publica. Cloud sin contraseña de aplicación tras revocación; operaciones privilegiadas solo local SSH/WP-CLI. Formularios sin nonce por caché, con validación/antiabuso/Turnstile; no probar SMTP en producción. Q-040 consumidores/allowlist Ops y Q-042 NAP duplicado siguen mejoras separadas.
+REST /practice GET proyecta datos públicos; POST y Ops requieren manage_options. Metas edit_post, gate médico y nonce en administración. Briefing con token fuera de Git, rol médico y log; nunca publica. Cloud sin contraseña de aplicación tras revocación; operaciones privilegiadas solo local SSH/WP-CLI. Formularios sin nonce por caché, con validación/antiabuso/Turnstile; no probar SMTP en producción. Q-040 consumidores/allowlist Ops sigue abierto. Q-042 VERIFIED en auditoría fase5: PracticeSettings runtime y practice.py en builds, con cotejo nap-check; no sincronización automática.
 
 Fotografía: originales q100 conservados; derivados escritorio q95 cabeceras/fondo (D-081), móvil 1600 q95, alfa lossless. Adobe Fonts intactas por decisión; presupuestos originales son objetivos, no resultados cumplidos. PERFORMANCE acredita medición, no CWV de campo. 2FA WP activo según atestación local; editor autenticado no probado por Codex. Reporte de versiones local, sin inferir desde cabeceras ocultas.
 
-La declaración histórica «ninguna desviación» de abajo ya no aplica: decisiones del propietario reescopan enciclopedia, staging, fotografía y menús. La UI de repetidores y fuente NAP completa conservan su planificación; esta auditoría no las presenta como entregadas.
+La declaración histórica «ninguna desviación» de abajo ya no aplica: decisiones del propietario reescopan enciclopedia, staging, fotografía y menús. Actualización fase5: no se construye UI de repetidores clínicos en wp-admin; el flujo vigente es builds + app de revisión (D-040/D-076). NAP centralizado por ámbito y cotejado; tooling PHP/ESLint/stylelint operativo (docs/REVISION_FASE5_2026-10-16.md).
 
 ---
 

@@ -253,3 +253,9 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 
 - 11.2DONE por confirmación de José en GalaxyS24+ (94a2479 y QA D-087/Q-065); producción declarada de864bc.
 - Avance206/230=89,57%,79/87DONE. Pull al día y commits94a2479/4fa21ca/25a03de integrados. Auditoría16b previamente subida; sin despliegue ni nuevas pruebas de cuentas/formulario.
+
+## 2026-10-16 · Codex · fase5
+
+- 5.1/5.2/5.3/5.5DONE: estructura tema/core, NAP y tooling contrastados; Q-042VERIFIED.
+- Q-068 corregido: npm lint Windows usa PATH de npm desde raíz; sin relajar reglas. Comentario MetaRegistry/arquitectura alineados con builds/app médica.
+- PHP81/PHPCS/bash19/ESLint/stylelint y fixtures pasan;8páginas/9camposNAP/6assets,14JSON regenerados idénticos.221/228=96,93%,83/86DONE; sin deploy ni GO Doctoralia.
