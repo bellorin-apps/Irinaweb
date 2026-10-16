@@ -431,8 +431,8 @@ Todo en solo lectura: sin formularios, SMTP, despliegues ni cambios de ajustes.
 - Sin errores PHP del dominio: no hay error_log ni debug.log en el dominio, `~/error_log` no tiene ninguna línea del dominio y WP_DEBUG y la depuración de LiteSpeed están apagados.
 
 **Hallazgos nuevos (P3, para la nube)**
-- **Q-063 · P3 · OPEN:** /?author=1 da 404 (correcto), pero con el título «José | Dra. Irina González Sáez»: muestra el nombre visible del administrador. No expone el usuario ni el correo. Propuesta: que el 404 de Hardening use el título de la 404.
-- **Q-064 · P3 · OPEN:** /recursos/ da 404 con el título «Recursos Archive» (en inglés) y `index, follow` en el HTML. Google no lo indexa por el 404; es solo cosmético.
+- **Q-063 · P3 · FIXED (Claude cloud, 2026-10-16; pendiente de despliegue):** Hardening::author_request convierte ?author=/author_name en 404 en el filtro `request` (sin sesión, fuera de wp-admin). Original: /?author=1 da 404 (correcto), pero con el título «José | Dra. Irina González Sáez»: muestra el nombre visible del administrador. No expone el usuario ni el correo. Propuesta: que el 404 de Hardening use el título de la 404.
+- **Q-064 · P3 · FIXED (Claude cloud, 2026-10-16; pendiente de despliegue):** setup.php convierte el archivo de condicion/tratamiento/recurso en 404 en el filtro `request`; también /padecimientos/ y /tratamientos/, que tenían el mismo «… Archive» con index (comprobado en vivo). Original: /recursos/ da 404 con el título «Recursos Archive» (en inglés) y `index, follow` en el HTML. Google no lo indexa por el 404; es solo cosmético.
 
 **Límites**
 - Los registros de acceso (404 y 5xx de visitas reales) solo se pueden ver en hPanel, no por SSH. El monitor 404 de Rank Math está apagado.

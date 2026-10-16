@@ -227,3 +227,7 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Siete de ocho REVIEW DONE;11.2REVIEW por Android explícito pendiente.5.4DONE;5.3/12.1DOING.197/237=83,12%,76/90DONE incluyendo11.6 por aprobación concurrente de José D-086;9.5OWNER.
 - Checklist/mantenimiento/rollback documentados con evidencia y límites. Q-062 falta descripciónGBP literal; URLUTM/contacto coherentes sin entrar a perfiles.
 - Nueva evidencia80vistas y capturas, señales de lazy/captcha aclaradas; sin cambios web, despliegue, formulario, secretos ni publicaciones.
+
+## 2026-10-16 · Claude cloud · títulos de 404 (Q-063/Q-064)
+
+- Q-063/Q-064 (P3): `?author=` y los archivos /padecimientos/, /tratamientos/ y /recursos/ pasan a 404 al interpretar la petición (filtro `request`), así que Rank Math usa el título «Página no encontrada» y noindex en lugar del nombre del autor o «… Archive» con index. Sin cambios en fichas, vistas previas, /sueno/{slug}/ ni wp-admin. Pendiente de despliegue y verificación de la sesión local.

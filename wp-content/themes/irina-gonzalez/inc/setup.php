@@ -108,6 +108,22 @@ add_filter(
 
 // D-076 (propietario, 2026-10-13): sitio corto, sin fichas ni recursos públicos. Los archivos /padecimientos/, /tratamientos/ y
 // /recursos/ responden 404 aunque algún día haya entradas publicadas por error; las fichas siguen archivadas en borrador.
+// Q-064: el 404 se decide al interpretar la petición, para que Rank Math use el título y el noindex de la 404 en lugar de
+// «Recursos Archive» e index. Solo el archivo (post_type sin entrada concreta); fichas, vistas previas y /sueno/{slug}/ no cambian.
+add_filter(
+	'request',
+	static function ( array $query_vars ): array {
+		if ( is_admin() || ! isset( $query_vars['post_type'] ) || ! in_array( $query_vars['post_type'], [ 'condicion', 'tratamiento', 'recurso' ], true ) ) {
+			return $query_vars;
+		}
+		foreach ( [ 'name', 'p', 'page_id', 'preview', 'condicion', 'tratamiento', 'recurso', 'di_sueno_slug' ] as $irina_single_var ) {
+			if ( ! empty( $query_vars[ $irina_single_var ] ) ) {
+				return $query_vars;
+			}
+		}
+		return [ 'error' => '404' ];
+	}
+);
 add_action(
 	'template_redirect',
 	static function (): void {
