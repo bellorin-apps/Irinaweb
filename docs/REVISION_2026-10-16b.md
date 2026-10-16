@@ -56,3 +56,7 @@ Claude: pull. Avance88,70%,78/87DONE;12.1FIX→DONE y12.2DONE,9.5OWNER/11.2REVIE
 Consola: public.json registra consoleErrors, no se declara consola vacía. El follow-up de Home/Contacto identifica origen de bloqueos GA y telemetría POST de Maps abortados por el harness, más diagnósticos de challenges.cloudflare.com. Se registran solo host/flags, sin URLs ni mensajes completos que puedan incluir claves. Cero pageerror en las30vistas y mapas renderizados; no se convierte un diagnóstico del captcha automatizado en prueba de fallo del envío humano. También se confirma HTTPSwwwCPAP→apexCPAP301 como segundo salto de HTTPwww.
 
 Integración al subir: commit concurrente91c1b09 preservado (fase5).5.1/5.2/5.3/5.5 pasan aREVIEW y Q-042FIXED_LOCAL, sin auditarlos en este lote ni sumarDONE. El avance sigue204/230=88,70%;78/87DONE. Sus cambios de código y linters conservan su propia evidencia y autoría.
+
+## Adenda de cierre11.2 por instrucción reciente de José
+
+La auditoría16b se comprometió y subió en dc1c104/c26434c/31eff2b. Pull posterior al día;94a2479,4fa21ca y25a03de ya integrados. José autoriza cerrar11.2 con su prueba GalaxyS24+ y confirmación de barra horizontal y menú wp-admin (QA «Despliegue de D-087 / Q-065»). **11.2DONE**, producción actual declarada **de864bc**; con evidencia Edge/Firefox local y SafariiPhone previa, sin nuevas sesiones Codex y manteniendo límite de consola Firefox. Sustituye las menciones11.2REVIEW y producción inicial de esta auditoría. **206/230=89,57%;79/87DONE**;9.5OWNER, fase5REVIEW. Sin despliegue ni formularios/cuentas/claves.

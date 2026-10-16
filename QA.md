@@ -527,3 +527,7 @@ PHP79/PHPCS/JS y bash19 pasan. No deploy, formularios/SMTP, cuentas, secretos, c
 Durante el trabajo llegaron fd2479d/94a2479/4fa21ca: se preservan atestaciones D-087/Q-065 y decisión D-088 de retirar6.6/7.4/7.5(7pesos,3tareas). No se cambia11.2REVIEW. Denominador230pesos/87tareas,8DESCOPED/23pesos; con12.1/12.2DONE,204/230=88,70%,78/87DONE. No se cuenta scope retirado como trabajo terminado.
 
 Consola16b: se conservan consoleErrors en public.json. FollowupHome/Contacto identifica bloqueos deliberados GA/telemetríaMaps y diagnósticos Cloudflare en automatización, sin origen propio ni pageerror; no se afirma consola vacía. Solo host/flags, sin claves/URLcompleta. HTTPSwwwCPAP→apex301 confirmado como segundo salto de HTTPwww.
+
+## Cierre11.2 · Codex · 2026-10-16
+
+DONE por instrucción reciente de José y evidencia94a2479: GalaxyS24+ Chrome, checklist Android y confirmación posterior de barra horizontal Q-065 y menú D-087 en producción de864bc. Se revisaron QA «Android real» y «Despliegue de D-087 / Q-065»; Edge155/Firefox158 de sesión local y SafariiPhone de José completan la matriz. Límite: Firefox sin consola y pruebas reales aceptadas por atestación, no realizadas de nuevo por Codex. No acceso a wp-admin, formularios o secretos. 206/230=89,57%;79/87DONE. Los tres commits solicitados ya son ancestros y la auditoría16b ya estaba en remoto; este cierre actualiza sus estados anteriores.

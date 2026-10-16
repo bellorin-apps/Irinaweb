@@ -154,3 +154,7 @@ SoloDONE suma: backups sin restauración real dejan12.1DOING; móduloNAP con dup
 ## Alcance de aceptación12.1/12.2 · auditoría16b2026-10-16
 
 Se aplica la decisión explícita de José de ensayar restauración en copia aparte: evidencia código/DB aportada y guardas locales verificadas permiten12.1DONE sin exigir rollbackvivo. Límite vivo y comparación solo de cantidades de filas quedan escritos.12.2DONE es validación puntual pública/servidor atestado, no certificación de visitas reales; logs hPanel y monitor404 no inspeccionados, seguimiento12.3. Q-041rige D-065WONTFIX, no se reabre D-059/MapID.9.5OWNER por horario/Doctoralia aunque el literalGBP ya se cotejó. No se cambia11.2ni se despliega Q-065/D-087 en este lote; D-086 intacto.
+
+## Cierre11.2 por confirmación del propietario · 2026-10-16
+
+La instrucción más reciente de José permite cerrar11.2 con94a2479 y QA D-087/Q-065: GalaxyS24+ y menú confirmados sobre producción declarada de864bc. Sustituye el REVIEW de auditoría16b, conserva límites de consola Firefox/atestaciones y no requiere acceso nuevo a cuentas ni despliegue. D-088: denominador230pesos.

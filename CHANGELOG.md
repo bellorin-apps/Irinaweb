@@ -248,3 +248,8 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - 5.3/Q-042: `tools/content/practice.py` como fuente única de la dirección en los builds; `tools/audit/nap-check.py`. JSON regenerado idéntico.
 - 5.5: `tools/lint` (ESLint y stylelint con versiones fijas). Corregidos una «}» suelta en components.css (sin cambio visual: capturas idénticas) y `items` redeclarado en main.js.
 - 5.1/5.2: evidencia actualizada contra el código; pasan a REVIEW.
+
+## 2026-10-16 · Codex · cierre11.2
+
+- 11.2DONE por confirmación de José en GalaxyS24+ (94a2479 y QA D-087/Q-065); producción declarada de864bc.
+- Avance206/230=89,57%,79/87DONE. Pull al día y commits94a2479/4fa21ca/25a03de integrados. Auditoría16b previamente subida; sin despliegue ni nuevas pruebas de cuentas/formulario.

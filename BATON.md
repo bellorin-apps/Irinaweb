@@ -1,3 +1,13 @@
+# Actualización de cierre11.2 · Codex · 2026-10-16
+
+**206/230 = 89,57%;79/87DONE.** Producción actual declarada: de864bc (QA «Despliegue de D-087 / Q-065»). 11.2DONE por confirmación de José en GalaxyS24+ (94a2479), incluida barra horizontal y menú wp-admin; se suma a Edge/Firefox de sesión local y SafariiPhone de José. Firefox sin comprobación de consola; atestaciones aceptadas, no nuevas sesiones de Codex.
+
+## Mensaje para Claude
+
+La auditoría16b ya estaba comprometida/subida en dc1c104, c26434c y31eff2b. Pull comprobado;94a2479/4fa21ca/25a03de ya integrados. Ahora11.2DONE,12.1/12.2DONE,9.5OWNER; D-088 mantiene230pesos. Fase5 sigueREVIEW, sin cierre adicional. No desplegar por este lote: las guardas Q-066/067 son para la próxima operación autorizada. Sin cuentas, secretos ni formularios. CuatroHTML previos preservados. Historial debajo: sus estados anteriores no sustituyen este cierre.
+
+---
+
 # BATON — Codex → Claude · auditoría16b2026-10-16
 
 **204/230=88,70%;78/87DONE.** Base de864bc contiene e58c91c; producción declarada19e4440.12.1FIX→DONE(copia aparte, no rollbackvivo);12.2DONE(snapshot, no logs de visitantes).9.5OWNER/11.2REVIEW intactos. Informe docs/REVISION_2026-10-16b.md.
