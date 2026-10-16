@@ -13,19 +13,24 @@ echo "→ Preparando carpetas"
 rssh "mkdir -p '$DEST' '$DATA_DIR' && chmod 700 '$DATA_DIR'"
 
 echo "→ Subiendo archivos"
-rscp "$SRC/index.html" "$SRC/guardar.php" "$SRC/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/"
+rscp "$SRC/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/"   # primero el .htaccess: protege lo que se sube después
+rscp "$SRC/index.html" "$SRC/guardar.php" "$SSH_USER@$SSH_HOST:$DEST/"
 
 echo "→ Subiendo cuestionario de fichas (fichas/)"
 rssh "mkdir -p '$DEST/fichas'"
-rscp "$SRC/fichas/index.html" "$SRC/fichas/guardar.php" "$SRC/fichas/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/fichas/"
+rscp "$SRC/fichas/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/fichas/"
+rscp "$SRC/fichas/index.html" "$SRC/fichas/guardar.php" "$SSH_USER@$SSH_HOST:$DEST/fichas/"
 
 echo "→ Subiendo mini app de revisión médica (revision/)"
 rssh "mkdir -p '$DEST/revision'"
-rscp "$SRC/revision/index.html" "$SRC/revision/revisar.php" "$SRC/revision/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/revision/"
+rscp "$SRC/revision/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/revision/"
+rscp "$SRC/revision/index.html" "$SRC/revision/revisar.php" "$SSH_USER@$SSH_HOST:$DEST/revision/"
 
 echo "→ Subiendo guía de revisión (guia/)"
 rssh "mkdir -p '$DEST/guia'"
-rscp "$SRC/guia/index.html" "$SRC/guia/paginas.json" "$SRC/guia/paginas-en.json" "$SRC/guia/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/guia/"
+# El .htaccess antes que los JSON (incidencia 2026-10-16: un corte de SSH dejó paginas-en.json en 200 unos minutos).
+rscp "$SRC/guia/.htaccess" "$SSH_USER@$SSH_HOST:$DEST/guia/"
+rscp "$SRC/guia/index.html" "$SRC/guia/paginas.json" "$SRC/guia/paginas-en.json" "$SSH_USER@$SSH_HOST:$DEST/guia/"
 
 echo "→ Token y config.php (se conserva el token existente si ya hay config.php; sin correo por decisión del propietario 2026-10-09)"
 TOKEN="$(rssh "if [ -f '$DEST/config.php' ]; then php -r 'echo (require \"$DEST/config.php\")[\"token\"];'; fi")"

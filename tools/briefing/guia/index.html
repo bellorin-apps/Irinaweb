@@ -142,7 +142,7 @@ function render(){
   $("#count").textContent = ok + " de " + pages.length + " aprobadas";
   let shownEn = false;
   $("#pages").innerHTML = pages.map(p => { const [c, l] = pill(p.review); const r = p.review || {};
-    const head = p.lang === "en" && !shownEn ? (shownEn = true, `<section><h2>Versión en inglés</h2><p class="muted">Revisa que el inglés diga lo mismo que el español, sin añadir ni prometer nada. Debajo de cada bloque puedes desplegar el original. Si ves algo que cambiar, escríbelo en español: nosotros lo corregimos.</p></section>`) : "";
+    const head = p.lang === "en" && !shownEn ? (shownEn = true, `<section><h2>Versión en inglés</h2><p class="muted">Revisa que el inglés diga lo mismo que el español, sin añadir ni prometer nada. Debajo de cada bloque puedes desplegar el original. Si ves algo que cambiar, escríbelo en español: nosotros lo corregimos. Las 5 fichas de sueño en inglés se revisan aparte: <a href="../revision/?t=${encodeURIComponent(TOKEN)}">abrir las fichas en inglés</a>.</p></section>`) : "";
     return head + `<section><div class="card page" data-slug="${esc(p.slug)}">
       <header><h2>${esc(p.nombre)}</h2><span class="pill ${c}">${esc(l)}</span></header>
       ${(p.bloques || []).map(block).join("")}

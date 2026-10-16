@@ -395,8 +395,12 @@ document.addEventListener("visibilitychange", () => { if (document.hidden) flush
 async function loadList(){
   try {
     const d = await api({ action: "list" });
-    items = d.items; states = d.states;
-    if (d.reviewer) $("#intro").textContent = "Hola, " + d.reviewer + ". Lee cada ficha, corrige lo que quieras directamente en el texto y apruébala. Nada se publica sin tu aprobación; la publicación la hacemos nosotros después.";
+    const want0 = parseInt(new URLSearchParams(location.search).get("id") || "0", 10);
+    // D-095: el sitio corto (D-076) solo pide revisar las fichas en inglés (traducción de las 5 de sueño ya aprobadas);
+    // un enlace directo ?id=<ficha> sigue abriendo cualquier ficha (uso interno).
+    items = d.items.filter(i => i.lang === "en" || i.id === want0); states = d.states;
+    $("#title").textContent = "Fichas en inglés";
+    $("#intro").innerHTML = esc((d.reviewer ? "Hola, " + d.reviewer + ". " : "") + "Son las 5 fichas de sueño que ya aprobaste, traducidas al inglés. Revisa que digan lo mismo que en español, corrige lo que quieras directamente en el texto y apruébalas. Nada se publica sin tu aprobación.") + ` <a href="../guia/?t=${encodeURIComponent(TOKEN)}">Las páginas (en español e inglés) están en la guía de revisión.</a>`;
     renderList(); updateProgress();
     // Enlace directo desde la guía (guia/): ?id=<ficha> abre esa ficha una sola vez al cargar.
     const want = parseInt(new URLSearchParams(location.search).get("id") || "0", 10);
@@ -406,16 +410,8 @@ async function loadList(){
     $("#count").textContent = "";
   }
 }
-// D-076 (propietario, 2026-10-13): el sitio se queda corto y las fichas no se publican. La Dra. revisa solo dos páginas en la guía.
-const SCOPE_PAGES = true;
+// D-076: las fichas españolas no se revisan aquí (sitio corto, 5 publicadas). D-095: solo las fichas en inglés (ver loadList).
 if (!TOKEN){ $("#list").innerHTML = `<div class="note warn">Este enlace no trae la clave de acceso. Pide a José el enlace completo.</div>`; $("#count").textContent = ""; }
-// Un enlace directo ?id=<ficha> sigue abriendo esa ficha (uso interno); sin él se muestra el aviso.
-else if (SCOPE_PAGES && !new URLSearchParams(location.search).get("id")){
-  $("#title").textContent = "Revisión médica";
-  $("#intro").textContent = "Ya no hace falta revisar fichas: el sitio se quedó corto. Solo necesitamos tu visto bueno en dos páginas.";
-  $("#count").textContent = ""; $("#filters").innerHTML = "";
-  $("#list").innerHTML = `<a class="item" href="../guia/?t=${encodeURIComponent(TOKEN)}"><span><span class="t">Revisar Otorrinolaringología y Sueño</span><br><span class="m">Dos páginas cortas · unos minutos</span></span><span class="pill pending">Abrir</span></a>`;
-}
 else loadList();
 })();
 </script>
