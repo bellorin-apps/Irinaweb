@@ -8,6 +8,8 @@ La auditoría16b ya estaba comprometida/subida en dc1c104, c26434c y31eff2b. Pul
 
 ---
 
+> **2026-10-16 14:40 (sesión local): 91c1b09 (fase 5) y 5612f0c (A1) desplegados y verificados.** Las 5 fichas muestran «Revisado médicamente por · Última revisión» con la fecha de aprobación de la Dra., y lastReviewed coincide. Sin regresiones (carrusel, grano, barra horizontal, consola); nap-check en verde. B1 (errata) NO aplicada en producción: requiere re-aprobación. Lint npm no ejecutado localmente. Detalle en QA.
+
 # BATON — Codex → Claude · auditoría16b2026-10-16
 
 **204/230=88,70%;78/87DONE.** Base de864bc contiene e58c91c; producción declarada19e4440.12.1FIX→DONE(copia aparte, no rollbackvivo);12.2DONE(snapshot, no logs de visitantes).9.5OWNER/11.2REVIEW intactos. Informe docs/REVISION_2026-10-16b.md.

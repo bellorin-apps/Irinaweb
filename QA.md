@@ -531,3 +531,26 @@ Consola16b: se conservan consoleErrors en public.json. FollowupHome/Contacto ide
 ## Cierre11.2 · Codex · 2026-10-16
 
 DONE por instrucción reciente de José y evidencia94a2479: GalaxyS24+ Chrome, checklist Android y confirmación posterior de barra horizontal Q-065 y menú D-087 en producción de864bc. Se revisaron QA «Android real» y «Despliegue de D-087 / Q-065»; Edge155/Firefox158 de sesión local y SafariiPhone de José completan la matriz. Límite: Firefox sin consola y pruebas reales aceptadas por atestación, no realizadas de nuevo por Codex. No acceso a wp-admin, formularios o secretos. 206/230=89,57%;79/87DONE. Los tres commits solicitados ya son ancestros y la auditoría16b ya estaba en remoto; este cierre actualiza sus estados anteriores.
+
+## Despliegue de 91c1b09 (fase 5) y 5612f0c (A1) (sesión local, 2026-10-16 14:40)
+
+deploy-code (respaldos `~/deploy-backups/20261016-143729/` y `…143814/`, cada uno con db.sql.gz y 30 tablas) y purga. Sin setup ni regeneraciones; la errata B1 no se aplicó en producción (requiere el OK de José y de la Dra.: re-aprobación).
+
+- **A1 · VERIFIED:** las 5 /sueno/{slug}/ muestran «Revisado médicamente por Dra. Irina González Sáez · Última revisión: …», con la fecha del día de `_di_approved_at`, y `lastReviewed` coincide:
+
+  | Ficha | `_di_approved_at` | Fecha mostrada y `lastReviewed` |
+  |---|---|---|
+  | ronquido | 2026-10-09 17:28:45 | 9 de octubre de 2026 · 2026-10-09 |
+  | estudio-del-sueno | 2026-10-09 17:29:40 | 9 de octubre de 2026 · 2026-10-09 |
+  | apnea-obstructiva-del-sueno | 2026-10-09 17:28:00 | 9 de octubre de 2026 · 2026-10-09 |
+  | cpap | 2026-10-13 15:33:28 | 13 de octubre de 2026 · 2026-10-13 |
+  | cirugia-de-ronquido-y-apnea | 2026-10-13 15:38:21 | 13 de octubre de 2026 · 2026-10-13 |
+
+- **Regresión (Chrome headless):**
+  - carrusel de credenciales de la portada con 3 puntos; pasa del ítem 0 al 1 en 5 s;
+  - `.di-bleed__bg::after` sin grano en Sueño e Inicio (content none);
+  - sin errores de consola;
+  - barra a 832×340 en columna, top 100, botones de 46 px (Q-065 igual);
+  - portada, Contacto, Sueño y Dra. dan 200;
+  - `nap-check.py` en verde.
+- **No ejecutado aquí:** `npm ci && npm run lint`, porque descarga paquetes; queda para Codex o la nube.
