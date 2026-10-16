@@ -285,5 +285,5 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - 5 fichas de sueño en inglés desde el texto aprobado en producción (`build-fichas-en.py`), cargadas en borrador «requiere revisión médica» por setup-en.sh.
 - Guía de revisión de la Dra. con las 8 páginas inglesas y el original español desplegable; las fichas inglesas, en su app con la etiqueta «Inglés».
 - Fecha de la revisión médica traducible («October 20, 2026»); migas de las fichas inglesas hacia /en/sleep/.
-- Q-070: build-medical.py alineado con el texto aprobado.
+- Q-071: build-medical.py alineado con el texto aprobado.
 

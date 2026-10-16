@@ -705,7 +705,7 @@ Las 5 fichas de sueño en inglés y el paquete de revisión de la Dra.
   Después se devolvieron a borrador y a «requiere revisión».
 - **Guía de revisión** (/briefing/guia/, con token): `build-en.py` exporta `paginas-en.json`, es decir, las 8 páginas inglesas por bloques con el bloque español desplegable. revisar.php las sirve y acepta «Aprobar página» o «Pedir cambios» para los slugs ingleses; guarda `_di_page_approved_at` y nunca publica. Probado en local: 10 tarjetas, aprobar en/sleep deja la página en draft con la fecha de aprobación, y un slug ajeno da `error: page`. `.htaccess` deniega paginas(-en).json (no verificable con el servidor PHP local, que ignora .htaccess) y deploy-briefing.sh sube el nuevo JSON.
 - **App de revisión de fichas:** las inglesas llevan la etiqueta «Inglés» (4e57fcf).
-- **Q-070 · P3 · FIXED_LOCAL:** build-medical.py y medical-drafts.json diferían del texto aprobado en 3 campos (apnea síntomas; CPAP candidatos y recuperación). Ahora coinciden; la única diferencia es la corrección B1 («un otorrinolaringólogo»), pendiente de la aprobación de la Dra. setup-medical no toca fichas publicadas, así que no hay efecto en producción.
+- **Q-071 · P3 · FIXED_LOCAL:** build-medical.py y medical-drafts.json diferían del texto aprobado en 3 campos (apnea síntomas; CPAP candidatos y recuperación). Ahora coinciden; la única diferencia es la corrección B1 («un otorrinolaringólogo»), pendiente de la aprobación de la Dra. setup-medical no toca fichas publicadas, así que no hay efecto en producción.
 - PHPCS, ESLint/stylelint, sintaxis bash y JS de la guía en verde.
 - **Límite:** traducción de Claude; la aprobación clínica es de la Dra. en su app (13.6).
 
