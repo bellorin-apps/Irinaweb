@@ -663,3 +663,9 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 @keyframes di-logos { to { transform: translateX(-50%); } }
 @media (max-width: 899px) { .di-logos { padding-block: clamp(4rem, 10vh, 6rem); } .di-logos__item img { height: 44px; max-width: 170px; } .di-logos__item--emblem img { height: 60px; } .di-logos__item--wide img { height: 34px; max-width: 180px; } .di-logos__track { gap: 2.75rem; animation-duration: 45s; } }
 @media (prefers-reduced-motion: reduce) { .di-logos__track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; row-gap: 2rem; } .di-logos__item[aria-hidden="true"] { display: none; } .di-logos__rail { mask-image: none; -webkit-mask-image: none; } }
+
+/* Opiniones de Doctoralia (D-012, D-091): widget oficial; la sección solo existe si está activada en Consultorio. */
+.di-opiniones { text-align: center; }
+.di-opiniones__widget { margin-top: var(--space-xl); min-height: 120px; display: grid; justify-items: center; }
+.di-opiniones__widget .zl-url { font-weight: 600; }
+

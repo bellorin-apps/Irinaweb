@@ -1,6 +1,6 @@
 # SECURITY — Dra. Irina González Sáez
 
-Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las pruebas de visitante anónimo las hizo la sesión local desde la PC de José (ver «Límites»). PLAN 10.3.
+Actualizado: 2026-10-16 · Claude cloud. Estado verificado en producción; las pruebas de visitante anónimo las hizo la sesión local desde la PC de José (ver «Límites»). PLAN 10.3.
 
 ## Medidas activas
 
@@ -16,6 +16,7 @@ Actualizado: 2026-10-14 · Claude cloud. Estado verificado en producción; las p
 | Mini apps de la Dra. | `/briefing/` con token (config.php fuera del repo), noindex, `paginas.json` denegado, la app de revisión nunca publica | `tools/briefing/` | D-040, D-076 |
 | Publicación clínica | Gate médico del plugin: nada clínico se publica sin aprobación de la revisora | `Workflow/MedicalReview.php` | D-078/D-082 |
 | Secretos | `env.sh`, `config.php` y `*.local.txt` fuera de Git; las sesiones no los imprimen durante esta auditoría; las exposiciones históricas aceptadas se registran en D-078/D-085; claves de Turnstile cargadas sin mostrarlas | `.gitignore`, AGENTS.md | D-085 |
+| Archivos sensibles | `wp-config.php` con permisos 600 (antes 644); PHP corre con el mismo usuario y el sitio sigue en 200 (portada, Contacto, una ficha, wp-login, wp-json) | Servidor (sesión local, 2026-10-16) | GAP A3, QA |
 | Copias | Respaldo automático antes de cada despliegue (`~/deploy-backups/`), también del `.htaccess`; copias del hosting | `tools/deploy/*.sh` | BATON |
 
 ## Decisiones y riesgos aceptados

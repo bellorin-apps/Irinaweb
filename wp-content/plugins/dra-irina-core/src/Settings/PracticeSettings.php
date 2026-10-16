@@ -52,6 +52,8 @@ final class PracticeSettings {
 			'linkedin'             => [ 'LinkedIn (URL)', 'url', true ],
 			'tiktok'               => [ 'TikTok (URL)', 'url', true ],
 			'doctoralia_url'       => [ 'Perfil de Doctoralia (URL)', 'url', true ],
+			'doctoralia_opiniones' => [ 'Doctoralia: mostrar opiniones con su widget oficial (activar solo tras la revisión publicitaria de Codex; D-012, D-091)', 'checkbox', false ],
+			'doctoralia_widget_id' => [ 'Doctoralia: identificador del widget (valor de data-zlw-doctor en el código que da Doctoralia)', 'text', false ],
 			'gbp_url'              => [ 'Ficha de Google (URL)', 'url', true ],
 			'ga4_id'               => [ 'Google Analytics 4: ID de medición (G-XXXXXXX; vacío = sin medición)', 'text', true ],
 			'cedula_medicina'      => [ 'Cédula profesional (medicina)', 'text', false ],
