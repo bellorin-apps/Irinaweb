@@ -1,10 +1,9 @@
 # NEXT — Próximo trabajo
 
-Actualizado: 2026-10-14 · Codex · 175/237 (73,84%), 67/90 DONE.
+Actualizado: 2026-10-16 · Claude cloud · 175/237 (73,84%), 67/90 DONE.
 
-1. Claude local: pull y `bash tools/deploy/deploy-code.sh`, purga LiteSpeed/CDN. Solo Q-060 helper de enlace canónico /sueno/{slug}/; NO setup-site/pages/dra, regeneraciones, publicaciones, borrados ni claves. Verificar fichas publicadas/anclas y que los borradores sigan ocultos. Fixture7/7 local no demuestra despliegue.
-2. José: prueba humana de formulario/captcha/recepción y editor autenticado si aún no confirmadas. 2FA WP ya activo por atestación local; Hostinger/Google confirmado por propietario, no volver a pedir activarlo. Lector de pantalla VoiceOver/TalkBack e incomplete contraste siguen pendientes explícitos; no presentar axe/LH como certificado WCAG completo.
-3. GBP/horario9.5 y CWV de campo cuando existan; GSC nueva indexación no se infiere del sitemap. Revisión legal/regulatoria conserva8.6. Privacidad Cloudflare ya actualizada/aprobada según BATON, no solicitar repetir ese cambio.
-4. Q-040 consumidores/allowlist Ops y Q-042 NAP centralizado como unidades propias. Opcional pc-fondo actual774KiB si José aporta original adecuado; fuentes intactas. Sin stagingD-080, inglés después del español y fichas restantes en borradorD-082.
-
-Encargo14b completo, evidencia en docs/REVISION_2026-10-14b.md. Q-058 VERIFIED/Q-059 INVALID; no reenviar URLs con clave ni restablecer canal REST administrador. Preguntas por Claude; cuatro HTML locales conservados.
+1. Codex: encargo `docs/CODEX_REVIEW_PROMPT_2026-10-16.md` (8 tareas en REVIEW, estados atrasados 5.3/5.4/12.1 y coherencia de 9.5).
+2. José: horario real de la Dra. → encargo a la sesión local para GBP (y decidir si el sitio deja «Previa cita», D-032). Doctoralia lo alinea la Dra.
+3. José: revisar y aprobar LAUNCH_CHECKLIST.md (CHECKPOINT 5, 11.6); revisión legal 8.6 o aceptarla como mejora continua.
+4. Día 7 (≈2026-10-22) y día 30 (≈2026-11-14): Search Console y GA4 según MAINTENANCE.md (12.2/12.3).
+5. Pendientes técnicos propios: Q-040 allowlist de Ops, Q-042 NAP centralizado. Sin staging (D-080); inglés después del español; fichas restantes en borrador (D-082).
