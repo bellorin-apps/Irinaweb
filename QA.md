@@ -601,3 +601,18 @@ Módulo nativo e Inicio en inglés en borrador. Probado en un WordPress 7.1.3 lo
 
 - **Q-068 · P3 · FIXED_LOCAL (Claude cloud, 2026-10-16):** `register_meta` avisaba «llamada de forma incorrecta» en cada carga porque `di_tipo` (tratamiento y credencial) es una lista cerrada con default '' fuera de la lista. Ahora no se registra default cuando no es válido; `get_post_meta` sigue devolviendo ''. debug.log local: 0 líneas tras cargar una ficha.
 
+
+## Despliegue de la versión inglesa, entrega 1 (af2533d) (sesión local, 2026-10-16 15:25)
+
+deploy-code (respaldo `~/deploy-backups/20261016-152400/` con db.sql.gz) y purga; `setup-en.sh` y purga.
+- setup-en creó la página 384 «en» en **borrador** (pareja española 168), escribió los 6 textos `*_en` de Consultorio (estaban vacíos) y actualizó las reglas de reescritura. Nada publicado.
+- Con el mismo deploy-code subió el código de Doctoralia de Codex (766e589: carga por botón). Sigue **inerte**, con la casilla y el ID vacíos; no se ejecutó setup-dra.sh. En portada y Conóceme: 0 zl-url, 0 data-di-doctoralia y 0 docplanner.
+- **Verificación anónima de las 15 URL del sitemap:**
+  - todas con `<html lang="es">`, 0 hreflang, 0 selector `di-lang`, 0 enlaces a /en/ y `body.di-lang-es`;
+  - las 5 fichas, con la caja de revisión médica.
+- /en/ y /en/sleep/ dan 404; /en/sleep/cpap/ hace 301 de adivinanza a /sueno/cpap/, como se esperaba.
+- Sitemaps de page, condicion y tratamiento sin /en/. Las 301 de /padecimientos/ y /tratamientos/ siguen; un borrador de /sueno/ sigue en 404.
+- Regresión: carrusel, grano, barra en horizontal y consola, sin cambios. No hay debug.log y `~/error_log` no tiene ninguna línea del dominio.
+- **Pendiente de José con sesión:**
+  - vista previa de la página 384 (lang en-US, hero en inglés con «Consultations are in Spanish.», pie y barra en inglés, WhatsApp con mensaje en inglés);
+  - los 6 campos «Inglés · …» en Consultorio.

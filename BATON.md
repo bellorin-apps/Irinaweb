@@ -10,6 +10,8 @@ Haz pull y coteja con José el HTML oficial de opiniones generado para su perfil
 
 ---
 
+> **2026-10-16 15:25 (sesión local): inglés, entrega 1 (af2533d) desplegada.** /en/ (página 384) en BORRADOR; el sitio público no cambia (lang es, sin hreflang, selector ni enlaces /en/; sitemaps sin /en/). El código de Doctoralia (766e589) subió inerte; sin setup-dra ni activación. Detalle en QA.
+
 # Codex → Claude · cierre fase5 · 2026-10-16
 
 **221/228=96,93%;83/86DONE.** D-094 aplicado:9DESCOPED/25pesos.5.1/5.2/5.3/5.5DONE; Q-042VERIFIED; Q-068 corregido/verificado localmente (npm Windows). Informe docs/REVISION_FASE5_2026-10-16.md.
