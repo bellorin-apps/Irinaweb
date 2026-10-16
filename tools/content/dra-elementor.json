@@ -295,7 +295,7 @@
         "settings": {
           "eyebrow": "Opiniones",
           "title": "Lo que dicen <em>sus pacientes</em>",
-          "text": "Opiniones de pacientes publicadas en Doctoralia, mostradas con su widget oficial y sin editar."
+          "text": "Opiniones publicadas en Doctoralia. Son experiencias personales y no garantizan resultados."
         },
         "elements": []
       }

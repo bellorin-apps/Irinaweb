@@ -44,7 +44,7 @@ page = [
     container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "<b>Formación</b> continua en <em>cirugía de sueño</em>"}),
     # Opiniones de Doctoralia con su widget oficial (D-012, D-091): no muestra nada hasta activarlo en Consultorio tras la revisión de Codex.
     container("dra-opiniones", "di-opiniones", {"eyebrow": "Opiniones", "title": "Lo que dicen <em>sus pacientes</em>",
-        "text": "Opiniones de pacientes publicadas en Doctoralia, mostradas con su widget oficial y sin editar."}),
+        "text": "Opiniones publicadas en Doctoralia. Son experiencias personales y no garantizan resultados."}),
     container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu<br>primera <em>consulta</em>",
         "text": "30 minutos para escucharte, explorar y proponerte un plan.", "message": ""}),
 ]

@@ -1,0 +1,24 @@
+{
+  "php": {
+    "count": 81,
+    "failures": []
+  },
+  "bash": {
+    "count": 19,
+    "failures": []
+  },
+  "officialScript": {
+    "url": "https://platform.docplanner.com/js/widget.js",
+    "bytes": 18022,
+    "sha256": "d0d191fef76ec2fb669880d746d1d834b090d4528ea65062ccd96e61d2f8e78e",
+    "markers": {
+      "data-zlw-doctor": true,
+      "data-zlw-type": true,
+      "data-zlw-opinion": true,
+      "data-zlw-hide-branding": true,
+      "zl-url": true,
+      "iframe": true
+    }
+  },
+  "limits": "Public script downloaded as text, not executed. Marker presence is not confirmation of the profile-specific generated code. No script source or patient content saved."
+}

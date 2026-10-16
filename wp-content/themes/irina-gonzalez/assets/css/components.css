@@ -666,6 +666,6 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 
 /* Opiniones de Doctoralia (D-012, D-091): widget oficial; la sección solo existe si está activada en Consultorio. */
 .di-opiniones { text-align: center; }
-.di-opiniones__widget { margin-top: var(--space-xl); min-height: 120px; display: grid; justify-items: center; }
+.di-opiniones__widget { margin-top: var(--space-xl); height: clamp(320px, 60vh, 520px); overflow: auto; display: grid; justify-items: center; align-content: start; gap: var(--space-md); }
 .di-opiniones__widget .zl-url { font-weight: 600; }
 

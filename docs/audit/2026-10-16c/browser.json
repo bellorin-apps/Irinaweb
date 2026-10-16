@@ -1,0 +1,82 @@
+{
+  "rows": [
+    {
+      "width": 390,
+      "requestsBeforeAction": 0,
+      "requestsAfterTwoClicks": 1,
+      "outerShiftPx": 0,
+      "boxHeight": 520,
+      "overflow": false,
+      "errors": [],
+      "outboundEvent": "doctoralia_click",
+      "accessibleButton": "Cargar opiniones de Doctoralia",
+      "linkName": "Ver opiniones en Doctoralia",
+      "failedLoadAndKeyboardRetry": true
+    },
+    {
+      "width": 1440,
+      "requestsBeforeAction": 0,
+      "requestsAfterTwoClicks": 1,
+      "outerShiftPx": 0,
+      "boxHeight": 520,
+      "overflow": false,
+      "errors": [],
+      "outboundEvent": "doctoralia_click",
+      "accessibleButton": "Cargar opiniones de Doctoralia",
+      "linkName": "Ver opiniones en Doctoralia",
+      "failedLoadAndKeyboardRetry": true
+    }
+  ],
+  "publicRows": [
+    {
+      "path": "/",
+      "status": 200,
+      "hasWidget": false,
+      "csp": "upgrade-insecure-requests"
+    },
+    {
+      "path": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "hasWidget": false,
+      "csp": "upgrade-insecure-requests"
+    },
+    {
+      "path": "/contacto/",
+      "status": 200,
+      "hasWidget": false,
+      "csp": "upgrade-insecure-requests"
+    },
+    {
+      "path": "/primera-consulta/",
+      "status": 200,
+      "hasWidget": false,
+      "csp": "upgrade-insecure-requests"
+    },
+    {
+      "path": "/sueno/",
+      "status": 200,
+      "hasWidget": false,
+      "csp": "upgrade-insecure-requests"
+    },
+    {
+      "path": "/otorrinolaringologia/",
+      "status": 200,
+      "hasWidget": false,
+      "csp": "upgrade-insecure-requests"
+    },
+    {
+      "path": "/preguntas-frecuentes/",
+      "status": 200,
+      "hasWidget": false,
+      "csp": "upgrade-insecure-requests"
+    },
+    {
+      "path": "/sueno/cpap/",
+      "status": 200,
+      "hasWidget": false,
+      "csp": "upgrade-insecure-requests"
+    }
+  ],
+  "noJsFallback": true,
+  "limits": "Local synthetic HTML + real theme CSS/JS/template and analytics; synthetic iframe, never real widget. Zero actual third-party requests allowed. Outer geometry stability is not real-widget CLS/LCP certification. Public checks are GET source only, not authenticated deployment or activation."
+}

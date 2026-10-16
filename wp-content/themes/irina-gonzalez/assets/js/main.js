@@ -417,20 +417,27 @@
   // Barra móvil: reserva espacio inferior.
   if (document.querySelector('.di-mobile-bar')) { document.body.classList.add('has-mobile-bar'); }
 
-  // Opiniones de Doctoralia (D-012, D-091): el script oficial se carga solo cuando la sección se acerca a la pantalla.
+  // Opiniones (D-012, D-091): sin conexión con Doctoralia hasta una acción explícita.
   var doctoralia = document.querySelector('[data-di-doctoralia]');
-  if (doctoralia) {
-    var loadDoctoralia = function () {
-      if (document.getElementById('zl-widget-s')) { return; }
+  if (doctoralia && doctoralia.querySelector('[data-di-doctoralia-load]')) {
+    var doctoraliaButton = doctoralia.querySelector('[data-di-doctoralia-load]');
+    var doctoraliaStatus = doctoralia.querySelector('[data-di-doctoralia-status]');
+    doctoraliaButton.hidden = false;
+    doctoraliaButton.addEventListener('click', function () {
+      if (document.getElementById('zl-widget-s') || doctoraliaButton.getAttribute('aria-disabled') === 'true') { return; }
+      doctoraliaButton.setAttribute('aria-disabled', 'true');
+      doctoraliaStatus.textContent = 'Cargando opiniones de Doctoralia…';
       var s = document.createElement('script');
       s.id = 'zl-widget-s'; s.async = true; s.src = 'https://platform.docplanner.com/js/widget.js';
+      s.addEventListener('load', function () {
+        doctoraliaStatus.textContent = 'Si las opiniones no aparecen, puedes abrir el enlace de Doctoralia.';
+      });
+      s.addEventListener('error', function () {
+        s.remove();
+        doctoraliaButton.removeAttribute('aria-disabled');
+        doctoraliaStatus.textContent = 'No se han podido cargar las opiniones. Puedes reintentar o abrir el enlace de Doctoralia.';
+      });
       document.body.appendChild(s);
-    };
-    if ('IntersectionObserver' in window) {
-      var dio = new IntersectionObserver(function (entries) {
-        if (entries.some(function (e) { return e.isIntersecting; })) { dio.disconnect(); loadDoctoralia(); }
-      }, { rootMargin: '400px 0px' });
-      dio.observe(doctoralia);
-    } else { loadDoctoralia(); }
+    });
   }
 })();

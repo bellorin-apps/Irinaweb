@@ -1,0 +1,9 @@
+{
+    "cases": {
+        "off": true,
+        "missingId": true,
+        "missingProfile": true,
+        "valid": true
+    },
+    "limits": "Synthetic settings and WP helpers; no real options, account, widget id, publication or script execution."
+}
