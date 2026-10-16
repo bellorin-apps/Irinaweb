@@ -32,8 +32,14 @@
           "eyebrow": "Otorrinolaringología",
           "title": "<b>Oído, nariz</b> y garganta,<br><em>desde los 0 meses</em>",
           "lead": "Consulta de oído, nariz y garganta para niños, adolescentes, adultos y adultos mayores en Monterrey.",
-          "variant": "sand",
-          "crumb": "Otorrinolaringología"
+          "variant": "warm",
+          "crumb": "Otorrinolaringología",
+          "image": {
+            "id": "__ORL_HERO_ID__",
+            "url": "__ORL_HERO_URL__"
+          },
+          "focus": "50% 0%",
+          "focus_mobile": "88% 50%"
         },
         "elements": []
       }

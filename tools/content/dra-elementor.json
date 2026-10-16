@@ -125,7 +125,7 @@
         "widgetType": "di-credenciales",
         "settings": {
           "eyebrow": "Formación y certificaciones",
-          "title": "Credenciales <em>verificables</em>",
+          "title": "<b>Credenciales</b> <em>verificables</em>",
           "tags_title": "",
           "extra_tags": ""
         },
@@ -164,7 +164,7 @@
         "widgetType": "di-logos",
         "settings": {
           "eyebrow": "",
-          "title": "Membresías y <em>hospitales</em>",
+          "title": "<b>Membresías</b> y <em>hospitales</em>",
           "items": [
             {
               "name": "CHRISTUS MUGUERZA Sistema de Salud",
@@ -294,7 +294,7 @@
         "widgetType": "di-opiniones",
         "settings": {
           "eyebrow": "Opiniones",
-          "title": "Lo que dicen <em>sus pacientes</em>",
+          "title": "<b>Lo que</b> dicen <em>sus pacientes</em>",
           "text": "Opiniones publicadas en Doctoralia. Son experiencias personales y no garantizan resultados."
         },
         "elements": []
@@ -332,7 +332,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "Agenda tu<br>primera <em>consulta</em>",
+          "title": "<b>Agenda</b> tu<br>primera <em>consulta</em>",
           "text": "30 minutos para escucharte, explorar y proponerte un plan.",
           "message": ""
         },

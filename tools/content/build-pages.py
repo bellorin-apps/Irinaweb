@@ -24,7 +24,9 @@ pages = {}
 pages["otorrinolaringologia"] = [
     container("orl-bleed", "di-bleed", {"eyebrow": "Otorrinolaringología", "title": "<b>Oído, nariz</b> y garganta,<br><em>desde los 0 meses</em>",
         "lead": "Consulta de oído, nariz y garganta para niños, adolescentes, adultos y adultos mayores en Monterrey.",
-        "variant": "sand", "crumb": "Otorrinolaringología"}),
+        # Foto de cabecera como las demás páginas (propietario, 2026-10-16): adjunto hero-orl (Recursos (Irina)/hero-orl.png), tono cálido
+        # como Primera consulta y Contacto; sustituido por setup-pages.sh. Sin adjunto, degradado cálido.
+        "variant": "warm", "crumb": "Otorrinolaringología", "image": {"id": "__ORL_HERO_ID__", "url": "__ORL_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "88% 50%"}),
     container("orl-oido", "di-listado", {"eyebrow": "Oído", "title": "<b>Lo que</b> atiendo <em>del oído</em>", "post_type": "", "anchor": "oido",
         "items": rep([("Otitis", "Infección o inflamación del oído", ""), ("Tapón de cerumen", "Oído tapado por cerilla", ""), ("Hipoacusia", "Pérdida de audición", ""), ("Tinnitus", "Zumbido o pitido en el oído", ""), ("Vértigo", "Mareo o sensación de giro", "")], "label", "sub", "url")}),
     container("orl-nariz", "di-listado", {"eyebrow": "Nariz", "title": "<b>Lo que</b> atiendo <em>de la nariz</em>", "post_type": "", "anchor": "nariz", "tight": "yes",
@@ -87,7 +89,7 @@ pages["primera-consulta"] = [
         ("¿Atienden niños?", "Sí, desde los 0 meses."),
         ("¿Dónde está el consultorio y hay estacionamiento?", f"{DIRECCION_COMPLETA}. Estacionamiento gratuito; elevador y acceso para silla de ruedas."),
     ], "pregunta", "text")}),
-    container("pc-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu<br><em>primera consulta</em>", "text": "Escríbenos por WhatsApp y te confirmamos horario.", "message": ""}),
+    container("pc-cta", "di-cta", {"eyebrow": "Agenda", "title": "<b>Agenda</b> tu<br><em>primera consulta</em>", "text": "Escríbenos por WhatsApp y te confirmamos horario.", "message": ""}),
 ]
 
 pages["contacto"] = [
@@ -109,13 +111,13 @@ pages["gracias"] = [
     container("gr-bleed", "di-bleed", {"eyebrow": "Mensaje enviado", "title": "<b>Recibido</b>, <em>gracias</em>",
         "lead": "Te contactamos en horario de consultorio por teléfono o WhatsApp. Si es urgente, acude al servicio de urgencias más cercano.",
         "variant": "sand", "crumb": "Gracias"}),
-    container("gr-narr", "di-narrativa", {"eyebrow": "Mientras tanto", "title": "Lo que <b>puedes</b> ir <em>preparando</em>",
+    container("gr-narr", "di-narrativa", {"eyebrow": "Mientras tanto", "title": "<b>Lo que</b> puedes ir <em>preparando</em>",
         "lead": "Estudios previos, lista de medicamentos y, si es por ronquido o apnea, lo que te ha contado quien duerme contigo.", "text": ""}),
-    container("gr-cta", "di-cta", {"eyebrow": "¿Prisa?", "title": "Si prefieres, <em>escríbenos ahora</em>", "text": "WhatsApp es el canal más rápido para agendar.", "message": ""}),
+    container("gr-cta", "di-cta", {"eyebrow": "¿Prisa?", "title": "<b>Si</b> prefieres, <em>escríbenos ahora</em>", "text": "WhatsApp es el canal más rápido para agendar.", "message": ""}),
 ]
 
 pages["preguntas-frecuentes"] = [
-    container("faq-bleed", "di-bleed", {"eyebrow": "Preguntas frecuentes", "title": "Lo que <b>más</b> <em>nos preguntan</em>",
+    container("faq-bleed", "di-bleed", {"eyebrow": "Preguntas frecuentes", "title": "<b>Lo que</b> más <em>nos preguntan</em>",
         "lead": "Horario, costos, seguros, niños y qué pasa en la consulta. Las dudas sobre tu caso se resuelven en la valoración.", "variant": "sand", "crumb": "Preguntas frecuentes"}),
     container("faq-serv", "di-faq", {"eyebrow": "Servicio", "title": "<b>Consulta</b> y <em>agenda</em>", "items": rep([
         ("¿Cómo agendo?", "Por WhatsApp, en un toque desde cualquier página del sitio, o por teléfono. La consulta es previa cita."),
@@ -128,7 +130,7 @@ pages["preguntas-frecuentes"] = [
         ("¿Atienden niños?", "Sí, desde los 0 meses."),
         ("¿En qué hospitales opera la Dra.?", "Christus Muguerza, Hospital Zambrano Hellion y Hospital Ángeles Valle Oriente."),
     ], "pregunta", "text")}),
-    container("faq-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Otra duda?", "text": "Escríbenos por WhatsApp.", "message": ""}),
+    container("faq-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿<b>Otra</b> <em>duda</em>?", "text": "Escríbenos por WhatsApp.", "message": ""}),
 ]
 
 pages["links"] = [container("links", "di-enlaces", {"title": "", "subtitle": "", "extra": []})]

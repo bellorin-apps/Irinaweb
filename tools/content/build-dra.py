@@ -25,11 +25,11 @@ page = [
         "text": "", "draft": "",  # Texto confirmado por la Dra. (propietario, 2026-10-10): se retira la marca de borrador (D-058)
         "image": {"id": "__DRA_ENDO_ID__", "url": "__DRA_ENDO_URL__"}, "image_pos": "right", "image_alt": "Cabezal de cámara de endoscopia que la Dra. utiliza en consultorio"}),
     container("dra-creds", "di-credenciales", {
-        "eyebrow": "Formación y certificaciones", "title": "Credenciales <em>verificables</em>",
+        "eyebrow": "Formación y certificaciones", "title": "<b>Credenciales</b> <em>verificables</em>",
         "tags_title": "",  # vacío: membresías y hospitales van en la sección de logos (di-logos)
         "extra_tags": ""}),
     container("dra-logos", "di-logos", {
-        "eyebrow": "", "title": "Membresías y <em>hospitales</em>",
+        "eyebrow": "", "title": "<b>Membresías</b> y <em>hospitales</em>",
         "items": rep([
             ("CHRISTUS MUGUERZA Sistema de Salud", "christus-muguerza", ""),
             ("Hospital Zambrano Hellion · TecSalud", "zambrano-hellion", ""),
@@ -43,9 +43,9 @@ page = [
         ], "name", "slug", "url")}),
     container("dra-timeline", "di-trayectoria", {"eyebrow": "Trayectoria", "title": "<b>Formación</b> continua en <em>cirugía de sueño</em>"}),
     # Opiniones de Doctoralia con su widget oficial (D-012, D-091): no muestra nada hasta activarlo en Consultorio tras la revisión de Codex.
-    container("dra-opiniones", "di-opiniones", {"eyebrow": "Opiniones", "title": "Lo que dicen <em>sus pacientes</em>",
+    container("dra-opiniones", "di-opiniones", {"eyebrow": "Opiniones", "title": "<b>Lo que</b> dicen <em>sus pacientes</em>",
         "text": "Opiniones publicadas en Doctoralia. Son experiencias personales y no garantizan resultados."}),
-    container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu<br>primera <em>consulta</em>",
+    container("dra-cta", "di-cta", {"eyebrow": "Agenda", "title": "<b>Agenda</b> tu<br>primera <em>consulta</em>",
         "text": "30 minutos para escucharte, explorar y proponerte un plan.", "message": ""}),
 ]
 # slug, título, tipo, institucion, lugar, anio, mostrar, orden. Fuente: DISCOVERY.md §Credenciales (CV, títulos, briefing confirmado).

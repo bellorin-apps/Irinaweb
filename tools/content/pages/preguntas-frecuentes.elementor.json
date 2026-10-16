@@ -30,7 +30,7 @@
         "widgetType": "di-bleed",
         "settings": {
           "eyebrow": "Preguntas frecuentes",
-          "title": "Lo que <b>más</b> <em>nos preguntan</em>",
+          "title": "<b>Lo que</b> más <em>nos preguntan</em>",
           "lead": "Horario, costos, seguros, niños y qué pasa en la consulta. Las dudas sobre tu caso se resuelven en la valoración.",
           "variant": "sand",
           "crumb": "Preguntas frecuentes"
@@ -154,7 +154,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "¿Otra duda?",
+          "title": "¿<b>Otra</b> <em>duda</em>?",
           "text": "Escríbenos por WhatsApp.",
           "message": ""
         },

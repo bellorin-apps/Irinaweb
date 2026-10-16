@@ -70,7 +70,7 @@
         "widgetType": "di-narrativa",
         "settings": {
           "eyebrow": "Mientras tanto",
-          "title": "Lo que <b>puedes</b> ir <em>preparando</em>",
+          "title": "<b>Lo que</b> puedes ir <em>preparando</em>",
           "lead": "Estudios previos, lista de medicamentos y, si es por ronquido o apnea, lo que te ha contado quien duerme contigo.",
           "text": ""
         },
@@ -109,7 +109,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "¿Prisa?",
-          "title": "Si prefieres, <em>escríbenos ahora</em>",
+          "title": "<b>Si</b> prefieres, <em>escríbenos ahora</em>",
           "text": "WhatsApp es el canal más rápido para agendar.",
           "message": ""
         },

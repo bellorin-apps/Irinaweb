@@ -767,3 +767,20 @@ José subió `Recursos (Irina)/hero-sueno.png` (2040×1349: la Dra. a la derecha
     - Otorrino, cabecera: «**Oído, nariz** y garganta, *desde los 0 meses*»;
     - Otorrino, cierre: «¿**Un síntoma** que *no se va*?».
   - **Carga:** solo las páginas 170 y 171, en una sesión SSH (mismos pasos que setup-pages), con cache flush y purga. Verificado en el HTML y en capturas de 1440 y 390 px.
+
+## Cabecera de Otorrino con foto y títulos con la secuencia del sitio (propietario, 2026-10-16 17:20, sesión local)
+
+Decisiones de José (AskUserQuestion): Otorrino con tono **cálido** como Primera consulta y Contacto; **ajustar todos los títulos** fuera de secuencia; quiere foto en FAQ (la subirá); confirma que la Dra. **sí ofrece consulta en línea**.
+- **Otorrino:**
+  - `upload-media.sh` → adjunto 423 `hero-orl` (2040×1405, WebP q100 3526 KB; escritorio q95 1104 KB; irina-movil 1600).
+  - build-pages: orl-bleed `variant` sand → warm, image `__ORL_HERO__`, focus «50% 0%», focus_mobile «88% 50%» (comparado con 78 % y 96 % a 390 px: con 88 % el otoscopio sale del cuadro y el título queda limpio). setup-pages.sh sustituye `__ORL_HERO__`.
+  - Carga solo de la 170.
+  - Escritorio: escritorio q95 en 50% 0%; móvil: irina-movil en 88% 50%; sin desborde.
+- **Títulos** (mismas palabras; `<b>` al inicio, `<em>` al final), sustituidos en producción solo en `settings.title`, sin recargar las páginas:
+  - Primera consulta (172): cierre «**Agenda** tu *primera consulta*».
+  - FAQ (173): «**Lo que** más *nos preguntan*» y «¿**Otra** *duda*?».
+  - Gracias (335): «**Lo que** puedes ir *preparando*» y «**Si** prefieres, *escríbenos ahora*».
+  - Conóceme (169), 3 títulos: «**Credenciales** *verificables*», «**Membresías** y *hospitales*» y «**Agenda** tu primera *consulta*».
+  - El título de opiniones («**Lo que** dicen *sus pacientes*») solo cambia en build-dra/dra-elementor.json: la sección no está en producción (sin setup-dra hasta el GO de Codex).
+  - Sin cambios: «¿*Agendamos*?» de Contacto (una palabra, definido así por José) y los títulos de Inicio (llevan negrita y cursiva juntas al final, otro patrón; pendiente de consultar a José).
+- **Contradicción para resolver:** la FAQ de Primera consulta dice «¿Hay consulta en línea? Solo para seguimiento de pacientes ya valorados en consultorio», pero José confirma que la Dra. ofrece consulta en línea (y así lo muestra Doctoralia). Pendiente: decidir el texto con la Dra.

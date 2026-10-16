@@ -257,7 +257,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "Agenda tu<br><em>primera consulta</em>",
+          "title": "<b>Agenda</b> tu<br><em>primera consulta</em>",
           "text": "Escríbenos por WhatsApp y te confirmamos horario.",
           "message": ""
         },
