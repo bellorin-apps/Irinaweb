@@ -470,7 +470,7 @@ Todo en solo lectura: sin formularios, SMTP, despliegues ni cambios de ajustes.
   - producción solo se leyó;
   - el archivo temporal de credenciales en el servidor quedó borrado (0 restantes).
   La «distinta» del informe era una línea vacía de la lista de tablas, no una tabla; el script ya la ignora.
-  José borra la base y el usuario «drill» y el archivo local.
+  José borra la base y el usuario «drill» y el archivo local. **Hecho (José, 2026-10-16):** base u855694717_drill y su usuario eliminados en hPanel y drill-db.local.txt borrado de su PC.
   Con el ensayo del código y este, **12.1 → REVIEW** para Codex. Límite: la restauración sobre el sitio en vivo no se ensayó, por decisión de José («copia aparte»).
 
 ## Android real, PLAN 11.2 (José, 2026-10-16)
