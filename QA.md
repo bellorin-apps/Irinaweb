@@ -355,3 +355,20 @@ Support14b: comprobación GET nueva de OG JPEG1200×630, sitemap10/2/3 y cinco30
 - **11.2, Firefox 158 headless** (descargado por Selenium Manager a su caché con OK de José, sin instalarlo en el sistema): las mismas 32 vistas, todas con un h1, main, cabecera y pie, sin scroll horizontal ni imágenes rotas, con CSS y la tipografía Iskra cargados; menú móvil abierto en top 92. Firefox no expone la consola a Selenium, así que no se comprobó.
 - **Pendiente para 11.2:** Safari en iPhone real, lo prueba José.
 
+
+## Perfil de Negocio de Google, PLAN 9.5 (sesión local, 2026-10-16 12:30)
+
+Editado en el Chrome del consultorio (cuenta que administra el perfil), con Claude in Chrome y el OK de José a cada decisión. Sin contraseñas ni verificaciones; no se tocaron nombre, dirección, mapa, teléfonos, horario, áreas de servicio, fotos, reseñas ni publicaciones.
+
+| Campo | Antes | Después | Estado en Google |
+|---|---|---|---|
+| Sitio web | https://www.drairinagonzalez.com/ | https://drairinagonzalez.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp | Aplicado |
+| Facebook | profile.php?id=61578579501339&mibextid=wwXIfr&mibextid=wwXIfr | profile.php?id=61578579501339 (Instagram igual) | Pendiente (≈10 min) |
+| Descripción | «Otorrinolaringólogo, especialista en desórdenes respiratorios del sueño, ronquido, apnea y Rinologia» | Texto del encargo (383 caracteres) | Aplicado |
+| Categorías | Otorrinolaringólogo | Otorrinolaringólogo (principal) + Clínica del sueño | Guardada (en revisión con los servicios) |
+| Reservas | www.doctoralia.com.mx | Doctoralia + https://wa.me/528123685381 | Guardado |
+| Servicios | 6 (estudios de sueño, rinología, trastornos respiratorios del sueño, limpieza de oídos, cuerdas vocales, endoscopia de oído) | +7 sin precio: Consulta de otorrinolaringología, Ronquido y apnea del sueño, Estudio del sueño en casa, CPAP, Cirugía de ronquido y apnea, Endoscopia nasal, Rinoplastia funcional y estética | Pendiente de revisión (hasta 1 día) |
+
+- Catálogo de categorías: «sueño» → solo Clínica del sueño; «otorrino» → nada (ya es la principal); «cirujano» → Cirujano, Cirujano oral/oncólogo/plástico, ninguna de ORL.
+- Solo reportado: horario lun cerrado, mar–vie 10:00–12:30, sáb 9:00–15:00, dom cerrado (pendiente de la Dra.); áreas de servicio García, Mitras Poniente, Escobedo, Parque Industrial Mitras 66023; aviso «Google actualizó tus atributos» de accesibilidad sin aceptar.
+- Límite: «aplicado» es lo que muestra el editor; la ficha pública puede tardar en reflejarlo.

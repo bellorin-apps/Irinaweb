@@ -150,7 +150,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | DONE | Sitemap page10/condicion2/tratamiento3 sin archivos404/recursos, robots público correcto. Dominio aparcado raíz301 confirmado; cinco rutas antiguas301 recomprobadas en support.json. Informe: docs/REVISION_2026-10-14b.md |
 | 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | DONE | Q-058 confirmado: Physician+Person único, ProfilePage/ContactPage/FAQPage/MedicalWebPage de áreas/fichas y BreadcrumbList. Validator0/0 Sueño/Dra. por atestación local, no nueva validación externa universal. Informe: docs/REVISION_2026-10-14b.md |
 | 9.4 | GA4 + Search Console + eventos de conversión | 2 | DONE | FIX→DONE: GA4 único tras load; seis eventos, DNT y exclusión de editores/ID inválido probados sin enviar a Google. GSC confirmado en DISCOVERY §1.6/D-022; cobertura actual sigue 1.4. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | Requiere acceso |
+| 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | GBP editado 2026-10-16 por la sesión local con OK de José (QA «Perfil de Negocio»): web con UTM, Facebook limpio, descripción, categoría adicional Clínica del sueño, reserva WhatsApp y 7 servicios. Faltan horario real (Dra.) y Doctoralia |
 | 9.6 | Codex: QA SEO | 2 | DONE | QA quince200/h1/main/canónicas, longitudes≤62/158 y OG/schema/migas. Robots/redirecciones/sitemaps contrastados; sin inferir indexación. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 10 — Performance, seguridad, accesibilidad
