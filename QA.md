@@ -372,6 +372,11 @@ Editado en el Chrome del consultorio (cuenta que administra el perfil), con Clau
 - Catálogo de categorías: «sueño» → solo Clínica del sueño; «otorrino» → nada (ya es la principal); «cirujano» → Cirujano, Cirujano oral/oncólogo/plástico, ninguna de ORL.
 - Solo reportado: horario lun cerrado, mar–vie 10:00–12:30, sáb 9:00–15:00, dom cerrado (pendiente de la Dra.); áreas de servicio García, Mitras Poniente, Escobedo, Parque Industrial Mitras 66023; aviso «Google actualizó tus atributos» de accesibilidad sin aceptar.
 - Límite: «aplicado» es lo que muestra el editor; la ficha pública puede tardar en reflejarlo.
+- Descripción aplicada, literal (383 caracteres; es el texto del encargo de Claude cloud del 2026-10-16 que la sesión local reportó como aplicado sin cambios):
+
+  > Otorrinolaringóloga certificada por el Consejo Mexicano de ORL y CCC, con subespecialidad en trastornos respiratorios del sueño. Atiende oído, nariz y garganta en niños desde los 0 meses, adolescentes y adultos, y ronquido y apnea del sueño con estudio del sueño en casa, CPAP y cirugía. Consultorio en CAB Medical Headquarters, Cumbres, Monterrey. Consulta previa cita por WhatsApp.
+
+  Cotejo con el sitio (builds): «Consejo Mexicano de ORL y CCC», «desde los 0 meses», CAB Medical Headquarters · Cumbres y «previa cita» (D-079) coinciden; el sitio dice «desórdenes respiratorios del sueño» y el perfil «trastornos respiratorios del sueño» (sinónimos, sin cambio de claim). Límite: la transcripción viene del encargo y del reporte de la sesión local, no de una lectura nueva del perfil.
 
 ## Auditoría de cierre Codex · 2026-10-16
 
@@ -394,7 +399,7 @@ Base3d47aa9, producción declarada d7e14ac. Informe docs/REVISION_2026-10-16.md.
 
 FIX documentales completados: checklist con fuentes y pendientes; mantenimiento sin publicación mensual automática y con objetivos/eventos correctamente definidos; runbook de rollback con alcances separados y sin falsa prueba de restauración. Sin cambios PHP/JS/CSS ni builds de producción.
 
-**Q-062 · P2 · REVIEW (evidencia9.5):** QA de Google solo conserva «texto del encargo (383 caracteres)» para la nueva descripción. Falta transcripción literal para compararla con el sitio. Claude debe añadirla desde su registro existente, sin secretos; Codex no entra al Perfil ni a Doctoralia. URLUTM200/canónica portada, reservaWhatsApp coherente; no se certifica el perfil actual ni la publicación de servicios en revisión. 9.5OWNER permanece.
+**Q-062 · P2 · FIXED por Claude cloud 2026-10-16, pendiente de verificación (evidencia9.5):** literal añadido en «Perfil de Negocio de Google». Original: QA de Google solo conserva «texto del encargo (383 caracteres)» para la nueva descripción. Falta transcripción literal para compararla con el sitio. Claude debe añadirla desde su registro existente, sin secretos; Codex no entra al Perfil ni a Doctoralia. URLUTM200/canónica portada, reservaWhatsApp coherente; no se certifica el perfil actual ni la publicación de servicios en revisión. 9.5OWNER permanece.
 
 11.2REVIEW hasta pasada explícita de Android real. Chromium Windows con cinco anchos no se renombra Chrome Android. SafariiPhone y prueba humana del formulario15/10 aceptados como atestaciones del encargo/PLAN/checklist; no nuevos ensayos de Codex. 11.5DONE acredita documento revisado;11.6DONE se incorpora de D-086, aprobación expresa concurrente de José. 12.1DOING: no ejecutar rollback/despliegue por esta auditoría.
 
