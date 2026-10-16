@@ -646,3 +646,45 @@ Páginas base y legales en inglés en borrador. Probado en el WordPress 7.1.3 lo
   - apnea-obstructiva-del-sueno: `resumen` (una letra: la concordancia de B1 está en el repo, no en producción) y `sintomas` (producción añade «Somnolencia excesiva diurna»);
   - cpap: `candidatos` (producción añade «El CPAP es considerado el tratamiento gold standard para la apnea del sueño») y `recuperacion` («algunas semanas» en el repo → «algunos días» en producción).
   - Solo de formato: relacionados, tratamientos y que_resuelve guardados como IDs (en el repo, slugs) y la `nota` interna del borrador.
+
+## Doctoralia: prueba del widget REAL en entorno aislado (sesión local, 2026-10-16 16:00)
+
+Encargo: docs/REVISION_DOCTORALIA_2026-10-16c.md, GO condicionado. **El widget sigue apagado en producción.** No se ejecutó setup-dra.sh ni se tocaron la casilla ni el ID; el código de la carga por botón (766e589) ya está en producción e inerte.
+
+**Entorno:** copia local de Conóceme en http://localhost:8765, solo en la PC de José, sin publicar nada.
+- HTML vivo, con GA sustituido por un stub que no envía nada.
+- Sección de opiniones idéntica a blocks/opiniones.php, con el CSS y el JS de producción.
+- Chrome headless a 390 px (UA Android) y 1440 px.
+- Script de la prueba: dp_harness.py, en el scratchpad de la sesión (no versionado).
+
+**Identificador PROVISIONAL:** `data-zlw-doctor="irina-gonzalez-saez"` y `href` https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez (el doctoralia_url del sitio; 200 y canónica propia). **Todavía no se ha cotejado con el HTML oficial del generador**: falta que José lo copie.
+
+**Resultados con el widget real:**
+- **Privacidad antes del clic:** 0 peticiones a docplanner o doctoralia y 0 cookies, también tras recorrer toda la página.
+- **Después del clic:**
+  - peticiones a `platform.docplanner.com/js/widget.js` y `widgets.doctoralia.com.mx/doctor/widget/big/irina-gonzalez-saez`;
+  - 0 cookies de Doctoralia observadas. Límite: Chrome headless sin perfil; Safari, Firefox o un perfil real pueden comportarse distinto.
+- **Perfil:** correcto (nombre, «Otorrinolaringólogo», 13 opiniones).
+- **Contenido del tipo `big` con `opinion=true`:**
+  - es una tarjeta de **reserva** de Doctoralia (foto, estrellas, «13 opiniones», «Ofrece consultas online», botón azul «Agendar cita») con **una sola** opinión, la más reciente, truncada y con «Ver todas las opiniones (13)»;
+  - aparece el logotipo de Doctoralia;
+  - 212 caracteres de texto en el iframe; 0 coincidencias de palabras de riesgo (cura, garantiza, 100 %, milagro, «el/la mejor», definitivo);
+  - el texto de la opinión no se copia aquí (D-012).
+- **Accesibilidad:**
+  - iframe con title «Docplanner Booking Widget» (en inglés, lo pone el proveedor);
+  - con teclado, 4 tabulaciones desde el botón: entra en el iframe y sale de la sección sin trampa.
+- **Layout y rendimiento:**
+  - caja exterior estable (506 px a 390 y 449 px a 1440, antes y después), sin desborde horizontal;
+  - iframe de 358×350 y 745×350;
+  - CLS tras el clic de 0,0085 (390) y 0,0035 (1440).
+  - Tras cargar siguen visibles el aviso de cookies, el botón (aria-disabled) y el estado «Si las opiniones no aparecen…», así que la caja necesita desplazamiento interno aunque el widget mide 350 px.
+- **Fallo del proveedor** (dominios bloqueados): estado «No se han podido cargar las opiniones. Puedes reintentar…», botón habilitado para reintentar y enlace alternativo presente.
+- **Analítica:** clic en el enlace alternativo = 1 `doctoralia_click` y 0 peticiones del widget. El botón de carga no se midió en esta ronda (Codex lo probó con su harness).
+- **Consola:** sin errores del widget. Los errores del sprite SVG y del manifiesto son del entorno local (origen cruzado), no de producción.
+- **No medido:** LCP y CLS reales de Conóceme en producción con el widget (requiere activarlo), un lector de pantalla dentro del iframe y Safari/Firefox.
+
+**Para decidir (José, Codex y la nube):**
+1. El tipo `big` muestra sobre todo una tarjeta de reserva con UNA opinión, no un listado. Con el título «Lo que dicen sus pacientes» el resultado no es lo que promete la sección. El código oficial del generador puede ofrecer otro formato (otro data-zlw-type).
+2. El botón «Agendar cita» de Doctoralia compite con WhatsApp, el CTA principal (D-011).
+3. «Ofrece consultas online» viene del perfil de Doctoralia: confirmar que es cierto.
+4. Tras cargar conviene ocultar el aviso, el botón y el estado, para que el widget quepa sin desplazamiento interno.
