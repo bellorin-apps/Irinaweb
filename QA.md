@@ -554,3 +554,12 @@ deploy-code (respaldos `~/deploy-backups/20261016-143729/` y `…143814/`, cada 
   - portada, Contacto, Sueño y Dra. dan 200;
   - `nap-check.py` en verde.
 - **No ejecutado aquí:** `npm ci && npm run lint`, porque descarga paquetes; queda para Codex o la nube.
+
+## Despliegue de a89f14a: opiniones de Doctoralia apagadas, D-091 (sesión local, 2026-10-16 14:45)
+
+deploy-code (respaldo `~/deploy-backups/20261016-144154/`) y purga. Sin setup-dra.sh, por indicación de la nube: la sección se carga solo tras el GO de Codex (docs/CODEX_REVIEW_PROMPT_2026-10-16c.md) y con la casilla activada por José.
+- PHP lint en el servidor de Opiniones.php y blocks/opiniones.php: sin errores.
+- Ajustes: `doctoralia_opiniones` y `doctoralia_widget_id` sin valor (NULL), es decir, apagado.
+- Portada, Conóceme, Contacto y /sueno/cpap/: 0 «zl-url», 0 `data-di-doctoralia`, 0 «docplanner» y ninguna sección `di-opiniones`.
+- Regresión: el carrusel de credenciales rota, sin grano, la barra horizontal igual y sin errores de consola.
+- Pendiente de José: que «Dra. Irina › Consultorio» muestre los 2 campos nuevos y guarde. No activar la casilla hasta el GO de Codex.

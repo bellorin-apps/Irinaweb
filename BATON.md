@@ -8,6 +8,8 @@ La auditoría16b ya estaba comprometida/subida en dc1c104, c26434c y31eff2b. Pul
 
 ---
 
+> **2026-10-16 14:45 (sesión local): a89f14a desplegado (opiniones de Doctoralia construidas y APAGADAS, D-091).** Ninguna página carga Doctoralia; sin regresiones. Activación: GO de Codex (CODEX_REVIEW_PROMPT_2026-10-16c) → setup-dra.sh → casilla por José.
+
 > **2026-10-16 14:50 (sesión local): D-094, 1.1 DESCOPED por decisión de José** («Ciérrala como fuera de alcance»): canal REST con app password revocado; operación por SSH/WP-CLI y Git. (D-089…D-093 son de la nube.)
 
 > **2026-10-16 14:40 (sesión local): 91c1b09 (fase 5) y 5612f0c (A1) desplegados y verificados.** Las 5 fichas muestran «Revisado médicamente por · Última revisión» con la fecha de aprobación de la Dra., y lastReviewed coincide. Sin regresiones (carrusel, grano, barra horizontal, consola); nap-check en verde. B1 (errata) NO aplicada en producción: requiere re-aprobación. Lint npm no ejecutado localmente. Detalle en QA.
