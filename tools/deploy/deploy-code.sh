@@ -5,7 +5,7 @@ TS="$(stamp)"
 BK="\$HOME/deploy-backups/$TS"   # FUERA de wp-content: una copia dentro de plugins/ aparece como plugin en WordPress.
 # 12.1 (José, 2026-10-16): copia privada de la base antes de cada despliegue, comprobada; si falla, no se despliega.
 echo "→ base de datos"
-rssh "set -e; mkdir -p $BK; umask 077; cd '$WEBROOT'; /opt/alt/php84/usr/bin/php /usr/local/bin/wp db export $BK/db.sql --skip-plugins --skip-themes --quiet; \
+rssh "set -e; umask 077; mkdir -p $BK; cd '$WEBROOT'; /opt/alt/php84/usr/bin/php /usr/local/bin/wp db export $BK/db.sql --skip-plugins --skip-themes --quiet; \
   tail -c 200 $BK/db.sql | grep -q 'Dump completed'; gzip $BK/db.sql; gzip -t $BK/db.sql.gz; chmod 600 $BK/db.sql.gz; \
   echo \"  db.sql.gz \$(du -h $BK/db.sql.gz | cut -f1), \$(zcat $BK/db.sql.gz | grep -c '^CREATE TABLE') tablas\""
 for pair in "wp-content/plugins/dra-irina-core" "wp-content/themes/irina-gonzalez"; do

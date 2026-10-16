@@ -1,0 +1,80 @@
+{
+  "consoleRows": [
+    {
+      "route": "/",
+      "host": "www.googletagmanager.com",
+      "flags": [
+        "ERR_FAILED"
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "host": "maps.googleapis.com",
+      "flags": [
+        "ERR_FAILED"
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "host": "www.googletagmanager.com",
+      "flags": [
+        "ERR_FAILED"
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "host": "challenges.cloudflare.com",
+      "flags": [
+        "Cloudflare",
+        "challenge"
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "host": "challenges.cloudflare.com",
+      "flags": [
+        "Cloudflare",
+        "challenge"
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "host": "challenges.cloudflare.com",
+      "flags": [
+        "fetch"
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "host": "challenges.cloudflare.com",
+      "flags": []
+    },
+    {
+      "route": "/contacto/",
+      "host": "challenges.cloudflare.com",
+      "flags": []
+    }
+  ],
+  "blocked": [
+    {
+      "route": "/",
+      "host": "www.googletagmanager.com",
+      "method": "GET"
+    },
+    {
+      "route": "/contacto/",
+      "host": "maps.googleapis.com",
+      "method": "POST"
+    },
+    {
+      "route": "/contacto/",
+      "host": "www.googletagmanager.com",
+      "method": "GET"
+    }
+  ],
+  "redirect": {
+    "status": 301,
+    "location": "https://drairinagonzalez.com/sueno/cpap/"
+  },
+  "limits": "Targeted browser-console diagnostics, only host/known flags recorded; no full message/URLs/keys. GA/profile/own POST blocked, provider allowed."
+}

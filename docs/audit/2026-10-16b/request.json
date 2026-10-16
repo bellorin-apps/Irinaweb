@@ -1,0 +1,61 @@
+{
+    "rows": [
+        {
+            "case": "author",
+            "pass": true
+        },
+        {
+            "case": "author_name",
+            "pass": true
+        },
+        {
+            "case": "admin_author",
+            "pass": true
+        },
+        {
+            "case": "logged_author",
+            "pass": true
+        },
+        {
+            "case": "admin_no_session",
+            "pass": true
+        },
+        {
+            "case": "condition_archive",
+            "pass": true
+        },
+        {
+            "case": "treatment_archive",
+            "pass": true
+        },
+        {
+            "case": "resource_archive",
+            "pass": true
+        },
+        {
+            "case": "page",
+            "pass": true
+        },
+        {
+            "case": "single_slug",
+            "pass": true
+        },
+        {
+            "case": "single_id",
+            "pass": true
+        },
+        {
+            "case": "preview",
+            "pass": true
+        },
+        {
+            "case": "sleep",
+            "pass": true
+        },
+        {
+            "case": "front",
+            "pass": true
+        }
+    ],
+    "limits": "Real callback code, synthetic query vars\/auth flags; no authenticated WP browser or DB."
+}

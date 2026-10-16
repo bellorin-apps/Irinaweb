@@ -1,0 +1,237 @@
+{
+  "rows": [
+    {
+      "script": "drill-db",
+      "scenario": "ok",
+      "exit": 0,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "production_target",
+      "exit": 3,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": false,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "nonempty",
+      "exit": 6,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "connection_fail",
+      "exit": 5,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "corrupt_dump",
+      "exit": 4,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "import_fail",
+      "exit": 7,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "decompress_fail",
+      "exit": 7,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "list_fail",
+      "exit": 22,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "list_empty",
+      "exit": 8,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "production_count_fail",
+      "exit": 23,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "test_count_fail",
+      "exit": 8,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "mismatch",
+      "exit": 9,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "lookup_empty",
+      "exit": 3,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": false,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "invalid_timestamp",
+      "exit": 2,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": false,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "transport_fail",
+      "exit": 40,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": false,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "deploy-code",
+      "scenario": "ok",
+      "exit": 0,
+      "imported": false,
+      "codeCopied": true,
+      "cleanup": true,
+      "chmodRequested": true,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "deploy-code",
+      "scenario": "export_fail",
+      "exit": 21,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": false,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "deploy-code",
+      "scenario": "export_truncated",
+      "exit": 1,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": false,
+      "passwordNotInOutput": true,
+      "pass": true
+    },
+    {
+      "script": "deploy-code",
+      "scenario": "gzip_test_fail",
+      "exit": 26,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": false,
+      "passwordNotInOutput": true,
+      "pass": true
+    }
+  ],
+  "baselineRegressions": [
+    {
+      "script": "drill-db",
+      "scenario": "mismatch",
+      "exit": 0,
+      "imported": true,
+      "codeCopied": false,
+      "cleanup": true,
+      "chmodRequested": false,
+      "passwordNotInOutput": true
+    },
+    {
+      "script": "drill-db",
+      "scenario": "transport_fail",
+      "exit": 40,
+      "imported": false,
+      "codeCopied": false,
+      "cleanup": false,
+      "chmodRequested": false,
+      "passwordNotInOutput": true
+    }
+  ],
+  "regressionsReproduced": true,
+  "limits": "Sanitized script copies and synthetic data/stubs only; lib/env excluded, no SSH/MySQL server or real secrets. HOME tokens virtualized to workspace fixtures without changing HOME. chmod requested is checked, not Linux permissions on Windows."
+}

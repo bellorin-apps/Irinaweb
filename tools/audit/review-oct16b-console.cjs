@@ -1,0 +1,9 @@
+// Targeted console origin diagnostics; no raw messages, full URLs, tokens or keys retained.
+const {chromium}=require(process.env.IRINA_PLAYWRIGHT||'playwright');const fs=require('node:fs');
+(async()=>{
+ const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});const p=await b.newPage({viewport:{width:390,height:900}});const consoleRows=[],blocked=[];let route='';
+ await p.route('**/*',r=>{const h=new URL(r.request().url()).hostname;if(/googletagmanager|google-analytics|doctoralia|docplanner/.test(h)||(r.request().method()!=='GET'&&!h.endsWith('challenges.cloudflare.com'))){blocked.push({route,host:h,method:r.request().method()});return r.abort();}return r.continue();});
+ p.on('console',m=>{if(m.type()!=='error')return;let host='';try{host=new URL(m.location().url).hostname;}catch{}const t=m.text();consoleRows.push({route,host,flags:['Cloudflare','Turnstile','Private Access Token','Permissions policy','401','403','ERR_FAILED','challenge','fetch','storage','unload'].filter(x=>t.toLowerCase().includes(x.toLowerCase())),code:(t.match(/Error: (\d{6})/)||[])[1]});});
+ for(const r of ['/','/contacto/']){route=r;await p.goto('https://drairinagonzalez.com'+r,{waitUntil:'networkidle'});await p.waitForTimeout(1600);}
+ const r=await p.request.get('https://www.drairinagonzalez.com/sueno/cpap/',{maxRedirects:0});const redirect={status:r.status(),location:r.headers().location};await b.close();fs.writeFileSync('docs/audit/2026-10-16b/console-followup.json',JSON.stringify({consoleRows,blocked,redirect,limits:'Targeted browser-console diagnostics, only host/known flags recorded; no full message/URLs/keys. GA/profile/own POST blocked, provider allowed.'},null,2)+'\n');console.log('Console origin metadata saved; no raw messages retained.');
+})().catch(e=>{console.error(e.name);process.exit(1);});

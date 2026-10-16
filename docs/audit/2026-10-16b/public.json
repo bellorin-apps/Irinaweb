@@ -1,0 +1,837 @@
+{
+  "sitemaps": [
+    {
+      "path": "/page-sitemap.xml",
+      "status": 200,
+      "urls": [
+        "https://drairinagonzalez.com/",
+        "https://drairinagonzalez.com/terminos-de-uso/",
+        "https://drairinagonzalez.com/aviso-medico/",
+        "https://drairinagonzalez.com/aviso-de-privacidad/",
+        "https://drairinagonzalez.com/otorrinolaringologia/",
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/preguntas-frecuentes/",
+        "https://drairinagonzalez.com/contacto/",
+        "https://drairinagonzalez.com/primera-consulta/",
+        "https://drairinagonzalez.com/dra-irina-gonzalez-saez/"
+      ]
+    },
+    {
+      "path": "/condicion-sitemap.xml",
+      "status": 200,
+      "urls": [
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+        "https://drairinagonzalez.com/sueno/ronquido/"
+      ]
+    },
+    {
+      "path": "/tratamiento-sitemap.xml",
+      "status": 200,
+      "urls": [
+        "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cpap/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "route": "/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ],
+      "map": {
+        "rendered": true,
+        "visible": true,
+        "width": 628,
+        "classic": true,
+        "link": "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      },
+      "topics": {
+        "orl": true,
+        "apnea": true,
+        "homeStudy": false,
+        "cpap": true,
+        "surgery": false,
+        "nasalEndoscopy": true,
+        "rhinoplasty": false,
+        "council": true,
+        "infants": true,
+        "clinic": true,
+        "appointment": true
+      }
+    },
+    {
+      "route": "/terminos-de-uso/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Términos de uso | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/terminos-de-uso/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/aviso-medico/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "miss"
+      },
+      "title": "Aviso médico | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/aviso-medico/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/aviso-de-privacidad/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Aviso de privacidad | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/aviso-de-privacidad/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/otorrinolaringologia/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Otorrinolaringología en Monterrey: oído, nariz y garganta",
+      "canonical": "https://drairinagonzalez.com/otorrinolaringologia/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ],
+      "topics": {
+        "orl": true,
+        "apnea": true,
+        "homeStudy": false,
+        "cpap": false,
+        "surgery": false,
+        "nasalEndoscopy": true,
+        "rhinoplasty": true,
+        "council": false,
+        "infants": true,
+        "clinic": false,
+        "appointment": false
+      }
+    },
+    {
+      "route": "/sueno/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Especialista en ronquido y apnea del sueño en Monterrey",
+      "canonical": "https://drairinagonzalez.com/sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ],
+      "topics": {
+        "orl": false,
+        "apnea": true,
+        "homeStudy": true,
+        "cpap": true,
+        "surgery": true,
+        "nasalEndoscopy": false,
+        "rhinoplasty": false,
+        "council": false,
+        "infants": false,
+        "clinic": false,
+        "appointment": false
+      }
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Preguntas frecuentes | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/preguntas-frecuentes/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "miss"
+      },
+      "title": "Contacto y ubicación | Dra. Irina González Sáez, Cumbres",
+      "canonical": "https://drairinagonzalez.com/contacto/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ],
+      "map": {
+        "rendered": true,
+        "visible": true,
+        "width": 628,
+        "classic": true,
+        "link": "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      }
+    },
+    {
+      "route": "/primera-consulta/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Primera consulta con la Dra. Irina González Sáez | Qué esperar",
+      "canonical": "https://drairinagonzalez.com/primera-consulta/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Dra. Irina González Sáez | Otorrino especialista en sueño",
+      "canonical": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/apnea-obstructiva-del-sueno/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Apnea obstructiva del sueño en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/ronquido/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Tratamiento del ronquido en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/ronquido/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/estudio-del-sueno/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Estudio del sueño en casa en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/cpap/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "CPAP para apnea del sueño en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/cpap/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/cirugia-de-ronquido-y-apnea/",
+      "status": 200,
+      "tls": {
+        "issuer": "YE1",
+        "subject": "drairinagonzalez.com",
+        "validTo": 1799322593
+      },
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "title": "Cirugía de ronquido y apnea en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "h1": 1,
+      "main": 1,
+      "views": [
+        {
+          "width": 390,
+          "overflow": 0,
+          "failedImages": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "failedImages": []
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "path": "/?author=1",
+      "status": 404,
+      "redirect": false,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex"
+    },
+    {
+      "path": "/?author_name=audit-fixture",
+      "status": 404,
+      "redirect": false,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex"
+    },
+    {
+      "path": "/author/audit-fixture/",
+      "status": 404,
+      "redirect": false,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex"
+    },
+    {
+      "path": "/recursos/",
+      "status": 404,
+      "redirect": false,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex"
+    },
+    {
+      "path": "/padecimientos/",
+      "status": 404,
+      "redirect": false,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex"
+    },
+    {
+      "path": "/tratamientos/",
+      "status": 404,
+      "redirect": false,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex"
+    },
+    {
+      "path": "/?post_type=condicion",
+      "status": 404,
+      "redirect": false,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex"
+    },
+    {
+      "path": "/audit-missing16b/",
+      "status": 404,
+      "redirect": false,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex"
+    },
+    {
+      "path": "/links/",
+      "status": 200,
+      "redirect": false,
+      "title": "Links | Dra. Irina González Sáez",
+      "robots": "nofollow, noindex"
+    },
+    {
+      "path": "/gracias/",
+      "status": 200,
+      "redirect": false,
+      "title": "Mensaje recibido | Dra. Irina González Sáez",
+      "robots": "nofollow, noindex"
+    },
+    {
+      "path": "/readme.html",
+      "status": 403,
+      "redirect": false,
+      "title": " 403 Forbidden\r\n"
+    },
+    {
+      "path": "/xmlrpc.php",
+      "status": 403,
+      "redirect": false
+    },
+    {
+      "path": "/wp-json/wp/v2/users",
+      "status": 404,
+      "redirect": false
+    }
+  ],
+  "redirects": [
+    {
+      "url": "http://drairinagonzalez.com/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/"
+    },
+    {
+      "url": "https://www.drairinagonzalez.com/contacto/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/contacto/"
+    },
+    {
+      "url": "http://www.drairinagonzalez.com/sueno/cpap/",
+      "status": 301,
+      "location": "https://www.drairinagonzalez.com/sueno/cpap/"
+    },
+    {
+      "url": "https://drairinagonzalez.com/padecimientos/ronquido/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/ronquido/"
+    },
+    {
+      "url": "https://drairinagonzalez.com/padecimientos/apnea-obstructiva-del-sueno/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/"
+    },
+    {
+      "url": "https://drairinagonzalez.com/tratamientos/estudio-del-sueno/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/estudio-del-sueno/"
+    },
+    {
+      "url": "https://drairinagonzalez.com/tratamientos/cpap/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/cpap/"
+    },
+    {
+      "url": "https://drairinagonzalez.com/tratamientos/cirugia-de-ronquido-y-apnea/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+    }
+  ],
+  "utm": {
+    "status": 200,
+    "canonical": "https://drairinagonzalez.com/",
+    "whatsapp": [
+      "528123685381"
+    ]
+  },
+  "robots": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://drairinagonzalez.com/sitemap_index.xml\n",
+  "errors": [],
+  "consoleErrors": [
+    {
+      "route": "/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/terminos-de-uso/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/aviso-medico/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/aviso-de-privacidad/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/otorrinolaringologia/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/sueno/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/contacto/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/contacto/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/contacto/",
+      "category": "unclassified"
+    },
+    {
+      "route": "/contacto/",
+      "category": "unclassified"
+    },
+    {
+      "route": "/contacto/",
+      "category": "captcha-provider"
+    },
+    {
+      "route": "/contacto/",
+      "category": "captcha-provider"
+    },
+    {
+      "route": "/contacto/",
+      "category": "captcha-provider"
+    },
+    {
+      "route": "/contacto/",
+      "category": "unclassified"
+    },
+    {
+      "route": "/primera-consulta/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/sueno/apnea-obstructiva-del-sueno/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/sueno/ronquido/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/sueno/estudio-del-sueno/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/sueno/cpap/",
+      "category": "resource-load"
+    },
+    {
+      "route": "/sueno/cirugia-de-ronquido-y-apnea/",
+      "category": "resource-load"
+    }
+  ],
+  "markerWarnings": 2,
+  "limits": "Chrome Windows anonymous, not Android hardware. GA/profiles/form POST blocked; provider Cloudflare requests allowed. Map DOM inspected without opening Google Maps or Business Profile. No server checksums/logs/account data fetched."
+}
