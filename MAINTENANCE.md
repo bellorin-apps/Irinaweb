@@ -24,7 +24,7 @@ Actualizado: 2026-10-16 · Codex · revisión de evidencia y límites. PLAN 12.4
 ## Plan SEO 6–12 meses
 
 1. **Perfil de Google (GBP)** — mayor impacto local: NAP idéntico al sitio, horario real, categorías «Otorrinolaringólogo» y relacionadas con sueño, fotos del consultorio, publicaciones mensuales y respuesta a cada reseña.
-2. **Reseñas**: pedir reseña en Google y Doctoralia tras la consulta (tarjeta o mensaje de WhatsApp con enlace directo). Meta: +4 al mes.
+2. **Reseñas**: pedir reseña en Google y Doctoralia tras la consulta a **todas** las pacientes, sin incentivos (política de Google). Enlace directo de Google: https://g.page/r/CUfia9HEij5cEAE/review (mensaje de WhatsApp guardado como respuesta rápida `/resena`). La Dra. responde cada reseña sin confirmar que es paciente ni mencionar salud. Meta: +4 al mes.
 3. **Doctoralia y directorios**: mismo nombre, dirección y teléfono; enlace al sitio.
 4. **Enlaces de confianza**: perfiles en hospitales (Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente), Consejo, sociedades y colegio con enlace al sitio.
 5. **Contenido opcional**: revisar demanda real de Search Console sin compromiso de publicar una ficha al mes. D-076/D-082 mantienen el sitio corto y las 21 archivadas; ampliar solo si José lo decide, con revisión médica vigente y posterior OK de publicación. No reabrir la enciclopedia por una rutina SEO.
@@ -50,4 +50,4 @@ Actualizado: 2026-10-16 · Codex · revisión de evidencia y límites. PLAN 12.4
 
 Las metas SEO son objetivos sin volumen/ranking prometido, no resultados ni garantía de indexación. Registrar baseline, fecha, filtros y fuente; no generar clics de conversión o envíos por agentes para rellenar métricas. GA4 mide eventos y la visita a Gracias no prueba entrega SMTP. Cookies observadas en la muestra de 15/10 fueron GA4; revisar cambios de terceros tras actualizaciones sin guardar tokens ni datos de pacientes.
 
-Fechas orientativas de seguimiento de la ronda QA del 15/10: día7 22/10 y día30 14/11. No son una declaración de CHECKPOINT5 aprobado ni una automatización creada; 11.6 sigue OWNER y el cierre lo decide José. 12.2/12.3 conservan su estado hasta disponer de evidencia de cada revisión. GBP/Doctoralia los gestiona el canal autorizado: esta auditoría no accede a esas cuentas. Horario real pendiente de la Dra.; sitio Previa cita D-032.
+Fechas orientativas de seguimiento de la ronda QA del 15/10: día7 22/10 y día30 14/11. No son por sí mismas una aprobación ni una automatización creada; José ya aprobó CHECKPOINT5 por D-086 (11.6DONE). Horario/Doctoralia/legal continúan como mejora continua, no como bloqueos del lanzamiento. 12.2/12.3 conservan su estado hasta disponer de evidencia de cada revisión. GBP/Doctoralia los gestiona el canal autorizado: esta auditoría no accede a esas cuentas. Horario real pendiente de la Dra.; sitio Previa cita D-032.

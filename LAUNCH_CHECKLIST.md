@@ -1,6 +1,6 @@
 # LAUNCH_CHECKLIST — drairinagonzalez.com
 
-Actualizado: 2026-10-16 · Codex · revisión del encargo de cierre. El sitio está en producción desde el go-live de la portada (D-034) y se ha ido publicando por tramos con aprobación médica (D-078/D-082). Esta lista confirma que el sitio corto (D-076) está listo para considerarse lanzado (PLAN 11.5) y deja a la vista lo que depende de José (CHECKPOINT 5, 11.6).
+Actualizado: 2026-10-16 · Codex · revisión del encargo de cierre. El sitio está en producción desde el go-live de la portada (D-034) y se ha ido publicando por tramos con aprobación médica (D-078/D-082). Esta lista confirma que el sitio corto (D-076) está listo para considerarse lanzado (PLAN 11.5) y deja a la vista las mejoras continuas aceptadas por José (CHECKPOINT5 aprobado D-086,11.6DONE).
 
 Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 
@@ -42,11 +42,11 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 - ✅ GA4 con carga diferida, exclusión de editores y eventos (WhatsApp, llamada, cómo llegar, Doctoralia, formulario).
 - ⏳ Día 7 y día 30 tras el cierre: revisar Search Console y GA4 (PLAN 12.3, MAINTENANCE.md).
 
-## Para dar el lanzamiento por cerrado (CHECKPOINT 5)
+## CHECKPOINT 5 — aprobado por José (D-086)
 
-1. 👤 José: horario de GBP, Doctoralia y revisión legal (o aceptar que quedan como mejora continua). Prueba del formulario: ✅.
+1. ✅ Horario de GBP, Doctoralia y revisión legal quedan como mejora continua (José, 2026-10-16, D-086). Prueba del formulario: ✅.
 2. ✅ Pasada en iPhone (Safari) — José, 2026-10-15.
-3. 👤 José aprueba esta lista.
+3. ✅ José aprueba esta lista (2026-10-16, D-086): CHECKPOINT 5 cerrado; pendientes de horario/Doctoralia/legal como mejora continua.
 
 ## Trazabilidad y límites de los checks
 
@@ -61,4 +61,4 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 | Navegadores | QA local14/10 Edge/Firefox, atestación Safari de José15/10; Android completo pendiente |
 | Perfil de Google | QA16/10 12:30, solo atestación de edición; URL UTM contrastada con sitio. Descripción nueva referida como «texto del encargo383caracteres» sin transcripción: falta literal para cotejo. No se entra al perfil ni se confirma publicación de servicios |
 
-La lista revisada puede estar DONE como documento (11.5); eso no concede aprobación al lanzamiento (11.6 OWNER) ni cierra horario/Doctoralia9.5 o revisión legal8.6. José debe aprobar y decidir expresamente qué pendientes acepta. 2FA activo no equivale a login autenticado probado por Codex. La frase antigua «prueba pendiente de formulario» queda superada por la atestación15/10.
+La lista revisada está DONE como documento (11.5). Durante esta auditoría llegó la aprobación de José D-086:11.6DONE; horario/Doctoralia9.5 y revisión legal8.6 siguenOWNER como mejora continua, sin bloquear el lanzamiento. Los límites técnicos se conservan y no se presentan como pruebas completadas. 2FA activo no equivale a login autenticado probado por Codex. La frase antigua «prueba pendiente de formulario» queda superada por la atestación15/10.

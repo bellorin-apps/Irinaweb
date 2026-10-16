@@ -1,6 +1,6 @@
 # BATON — Codex → Claude · cierre auditado2026-10-16
 
-**195/237=82,28%;75/90DONE.** Base3d47aa9; producción declarada d7e14ac. Informe docs/REVISION_2026-10-16.md. Siete de ocho REVIEW cerradas;11.2REVIEW(Android real).5.4DONE;5.3/12.1DOING;9.5OWNER.
+**197/237=83,12%;76/90DONE.** Base3d47aa9; producción declarada d7e14ac. Informe docs/REVISION_2026-10-16.md. Siete de ocho REVIEW cerradas;11.2REVIEW(Android real).5.4DONE;5.3/12.1DOING;9.5OWNER.
 
 ## MENSAJE PARA EL OTRO AGENTE
 
@@ -8,7 +8,7 @@ Haz pull; no hay código web ni contenido nuevos que desplegar. FIX documentales
 
 Pendiente Android real para11.2; fuente únicaNAP Q-042 para5.3; restauración controlada aún no ensayada para12.1. Q-062: añade literal de nueva descripciónGBP desde el registro existente; QA solo dice383caracteres. URLUTM200/canónica limpia y reservaWhatsApp coinciden;9.5OWNER mantiene horario real/Doctoralia. No se entró al Perfil ni a Doctoralia, no se solicitan claves. José ya probó formulario y Safari15/10 según atestación.
 
-80vistas sin desborde,15internos200/15canónicas,6auxiliaresnoindex, sitemap10/2/3; capturas versionadas/revisadas. Candidatos de imagen eran lazy y cargan18/18; TurnstileError inicial se debía al bloqueo del proveedor y desaparece en followup sin permitir POSTsitio. No hay fallo de producción confirmado. PHP79/PHPCS/JS/bash pasan. Cuatro HTML locales conservados; no despliegue por Codex.11.5DONE no aprueba11.6; legal/GBP y Q-040/Q-042 con sus responsables. Historial de despliegues debajo, no repetir relevos antiguos como instrucciones actuales.
+80vistas sin desborde,15internos200/15canónicas,6auxiliaresnoindex, sitemap10/2/3; capturas versionadas/revisadas. Candidatos de imagen eran lazy y cargan18/18; TurnstileError inicial se debía al bloqueo del proveedor y desaparece en followup sin permitir POSTsitio. No hay fallo de producción confirmado. PHP79/PHPCS/JS/bash pasan. Cuatro HTML locales conservados; no despliegue por Codex.D-086 concurrente integra aprobación de José:11.6DONE; legal/GBP como mejora continua y Q-040/Q-042 con sus responsables. Historial de despliegues debajo, no repetir relevos antiguos como instrucciones actuales.
 
 ---
 
@@ -23,6 +23,8 @@ Haz pull y `bash tools/deploy/deploy-code.sh`, después purga LiteSpeed/CDN. Sol
 Quince URL SEO y axe quince+404×dos anchos pasan; LH a11y100 en Contacto/CPAP/Dra. móvil/escritorio. PHP79/PHPCS/JS+inline/bash18 y permisosREST7/7 pasan. Q-058 VERIFIED, Q-059 INVALID; REST anónimo401/404, canaladmin revocado. 2FA WP por atestación local/HostingerGoogle por propietario. Docs alineados con D-076…085. No certificado AA/CWV de campo ni nuevo login. Incomplete contraste/lector de pantalla y pruebas humanas/editor a cargo de José; agentes no SMTP. Q-040/Q-042/GBP/campo conservan alcance. Cuatro HTML previos de José no incluidos.
 
 ---
+
+> **2026-10-16 (Claude cloud): CHECKPOINT 5 aprobado por José (11.6 DONE, D-086).** Lanzamiento del sitio corto cerrado; horario de GBP, Doctoralia y legal 8.6 quedan como mejora continua. Encargo para Codex: docs/CODEX_REVIEW_PROMPT_2026-10-16.md.
 
 > **2026-10-16 12:30 (sesión local): Perfil de Negocio de Google editado (9.5)** con OK de José: web con UTM y descripción aplicadas; Facebook limpio, categoría adicional Clínica del sueño, reserva por WhatsApp (Doctoralia se conserva) y 7 servicios en revisión de Google. Sin tocar NAP, horario ni áreas. 9.5 sigue OWNER: horario real (Dra.) y Doctoralia. Detalle en QA.
 

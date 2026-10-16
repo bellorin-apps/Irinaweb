@@ -137,7 +137,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 8.3 | Contacto completo (mapa, acceso, estacionamiento, horario, formulario) | 3 | DONE | Contacto público completo: dirección/mapa/Cómo llegar, estacionamiento/acceso, previa cita D-079, WhatsApp/tel, formulario y urgencias. Captcha DOM presente; entrega real la prueba José, no agentes. Informe: docs/REVISION_2026-10-14.md |
 | 8.4 | Formulario con minimización de datos + SMTP + gracias (noindex) | 3 | DONE | En vivo 2026-10-10 (D-050); SMTP por constantes con contraseña de aplicación |
 | 8.5 | Legal: borradores aviso de privacidad (integral/simplificado), cookies, términos, disclaimer, emergencias | 3 | DONE | Publicados 2026-10-10 (D-051); el propietario puede pedir cambios (8.6) |
-| 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | ext |
+| 8.6 | Revisión legal/regulatoria del propietario (COFEPRIS, privacidad) | 3 | OWNER | Mejora continua por decisión de José (D-086); no bloquea el lanzamiento |
 | 8.7 | 404 útil (noindex), búsqueda interna si procede | 2 | DONE | `404.php`: cabecera a sangre, rutas publicadas (omite borradores), WhatsApp, nota para enlaces del dominio viejo; sin buscador (sitio pequeño) |
 | 8.8 | Navegador de síntomas (orientación, no diagnóstico) | 3 | DESCOPED | D-076: la portada enlaza los motivos a las anclas de ORL y Sueño |
 | 8.9 | Favicon/app icons, OG template | 1 | DONE | FIX→DONE: JPEG OG/Twitter 1200×630 e iconos públicos verificados en once rutas; manifest e integración con site icon preparados y probados localmente. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
@@ -150,7 +150,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | DONE | Sitemap page10/condicion2/tratamiento3 sin archivos404/recursos, robots público correcto. Dominio aparcado raíz301 confirmado; cinco rutas antiguas301 recomprobadas en support.json. Informe: docs/REVISION_2026-10-14b.md |
 | 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | DONE | Q-058 confirmado: Physician+Person único, ProfilePage/ContactPage/FAQPage/MedicalWebPage de áreas/fichas y BreadcrumbList. Validator0/0 Sueño/Dra. por atestación local, no nueva validación externa universal. Informe: docs/REVISION_2026-10-14b.md |
 | 9.4 | GA4 + Search Console + eventos de conversión | 2 | DONE | FIX→DONE: GA4 único tras load; seis eventos, DNT y exclusión de editores/ID inválido probados sin enviar a Google. GSC confirmado en DISCOVERY §1.6/D-022; cobertura actual sigue 1.4. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | EdiciónGBP16/10 por sesión local atestada; URLUTM200/canónica limpia y WhatsApp coinciden con sitio. Q-062 falta literal descripción nueva383caracteres para cotejo; no se accede al perfil. Siguen horario real y Doctoralia. Informe: docs/REVISION_2026-10-16.md |
+| 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | EdiciónGBP16/10 por sesión local atestada; URLUTM200/canónica limpia y WhatsApp coinciden con sitio. Q-062 falta literal descripción nueva383caracteres para cotejo; no se accede al perfil. Siguen horario real y Doctoralia como mejora continua D-086. Informe: docs/REVISION_2026-10-16.md |
 | 9.6 | Codex: QA SEO | 2 | DONE | QA quince200/h1/main/canónicas, longitudes≤62/158 y OG/schema/migas. Robots/redirecciones/sitemaps contrastados; sin inferir indexación. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 10 — Performance, seguridad, accesibilidad
@@ -172,7 +172,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 11.3 | QA contenido (consistencia NAP, nombres, títulos, claims, fechas) | 2 | DONE | NAP idéntico en10nodos profesionales; contacto/footer coherentes, horario oculto y Previa cita. FAQ vieja ausente, e434d2a en vivo; sin Borrador/placeholders. Claims/fechas por aprobación D-078/D-082, sin nueva revisión clínica. Informe: docs/REVISION_2026-10-16.md |
 | 11.4 | Consistency check de Codex contra MASTER_PROMPT | 2 | DONE | FIX documentos activos y coordinación coherentes con D-076…085. README/HANDOFF sin staging ni envío de URL con token; historia etiquetada, gate médico intacto. Informe: docs/REVISION_2026-10-14b.md |
 | 11.5 | `LAUNCH_CHECKLIST.md` completado | 2 | DONE | FIX checklist con trazabilidad por bloque y límites: auxiliaresnoindex, validaciónschema no universal, GSC fechado, Android y rollback pendientes. 9.5/8.6/11.6 OWNER siguen explícitos; documentoDONE no aprueba lanzamiento. Informe: docs/REVISION_2026-10-16.md |
-| 11.6 | CHECKPOINT 5: pre-launch aprobado | 2 | OWNER | ext |
+| 11.6 | CHECKPOINT 5: pre-launch aprobado | 2 | DONE | 2026-10-16: José aprueba LAUNCH_CHECKLIST.md; horario de GBP, Doctoralia y revisión legal quedan como mejora continua (D-086) |
 
 ## FASE 12 — Launch y post-launch
 
