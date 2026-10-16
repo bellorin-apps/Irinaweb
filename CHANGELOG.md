@@ -265,3 +265,11 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - GO con cambios condicionado, sin activar. Q-069: script solo tras botón/aviso; Q-070: caja estable con scroll y fallback/reintento accesibles.
 - Entradilla build-dra/JSON aclara experiencias personales sin garantía; sin transcribir opiniones. Marcado del perfil e integración real aún pendientes.
 - PHP81/PHPCS/JS/ESLint/stylelint/bash19, guards4/4, teclado/analítica/layout sintéticos pasan;8páginas públicas siguen sinwidget. No despliegue/cuentas/claves/formulario. Informe docs/REVISION_DOCTORALIA_2026-10-16c.md.
+
+## 2026-10-16 · Claude cloud · versión en inglés, entrega 1 (D-095)
+
+- Módulo `DraIrina\Core\I18n\Language`: /en/ como páginas hijas de la raíz `en`, fichas en /en/sleep/{slug}/, locale en_US (también en vista previa), hreflang solo entre páginas publicadas, inLanguage por página y selector de idioma oculto hasta publicar.
+- Catálogos en_US (`tools/i18n/strings_en.py` → `build-mo.py`), menús `*_en`, textos del consultorio en inglés (`*_en` en Consultorio).
+- Inicio en inglés en borrador: `tools/content/build-en.py`, `tools/deploy/setup-en.sh`.
+- Q-068: sin el aviso de register_meta.
+

@@ -1,0 +1,440 @@
+[
+  {
+    "id": "276097e",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "2bdb0fc",
+        "elType": "widget",
+        "widgetType": "di-hero",
+        "settings": {
+          "eyebrow": "Your ENT|in Monterrey",
+          "title": "<b>Breathe</b> well,<br>sleep well,<br>hear <b><em>well</em></b>",
+          "lead": "Dr. Irina González Sáez, board-certified otolaryngologist (ENT) with subspecialty training in snoring and sleep apnea. Ear, nose and throat care for children and adults in Cumbres, Monterrey. Consultations are in Spanish.",
+          "lead_mobile": "Board-certified ENT with subspecialty training in snoring and sleep apnea. Children and adults, in Cumbres. Consultations are in Spanish.",
+          "trust": "Mexican Board of Otolaryngology–Head and Neck Surgery\nSubspecialty in sleep-disordered breathing\nCAB Medical Headquarters · Cumbres, Monterrey",
+          "image": {
+            "id": "__HERO_ID__",
+            "url": "__HERO_URL__"
+          },
+          "secondary_label": "Meet Dr. Irina",
+          "secondary_url": "/en/dr-irina-gonzalez-saez/",
+          "ticker": "Snoring and sleep apnea\nBlocked nose\nSinusitis\nBlocked ear\nHearing loss and tinnitus\nVertigo\nTonsils and adenoids\nVoice and reflux"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "4046db4",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "1985ec9",
+        "elType": "widget",
+        "widgetType": "di-areas",
+        "settings": {
+          "eyebrow": "Areas of care",
+          "title": "Two <b>specialties</b>, one <br class=\"di-brd\">way of <b><em>caring</em></b>",
+          "orl_eyebrow": "Otolaryngology (ENT)",
+          "orl_title": "Ear, nose and throat, from birth",
+          "orl_items": "Ear infections\nHearing loss\nTinnitus\nVertigo\nRhinitis\nSinusitis\nDeviated septum\nTonsils\nVoice",
+          "orl_link": "/en/ent/",
+          "orl_link_label": "See what I treat",
+          "orl_image": {
+            "id": "__ORL_IMG_ID__",
+            "url": "__ORL_IMG_URL__"
+          },
+          "sleep_eyebrow": "Sleep and breathing",
+          "sleep_title": "Snoring and sleep apnea, with complete diagnosis and treatment",
+          "sleep_items": "Home sleep test\nSleep endoscopy\nCPAP\nPharyngoplasty\nNasal surgery",
+          "sleep_link": "/en/sleep/",
+          "sleep_link_label": "See the full pathway",
+          "sleep_image": {
+            "id": "__SUENO_IMG_ID__",
+            "url": "__SUENO_IMG_URL__"
+          }
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "22accab",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "d0c8d8a",
+        "elType": "widget",
+        "widgetType": "di-motivos",
+        "settings": {
+          "eyebrow": "What are you feeling?",
+          "title": "Common <b>reasons</b> to <b><em>visit</em></b>",
+          "note": "A guide to finding the right information. It does not replace a medical evaluation.",
+          "items": [
+            {
+              "_id": "84ae168",
+              "label": "I snore, or I’ve been told I stop breathing",
+              "sub": "Snoring, sleep apnea",
+              "url": "/en/sleep/#conditions"
+            },
+            {
+              "_id": "604f0dc",
+              "label": "My nose is always blocked",
+              "sub": "Nasal obstruction, septum, turbinates",
+              "url": "/en/ent/#nose"
+            },
+            {
+              "_id": "9f570b3",
+              "label": "Sinusitis that won’t go away",
+              "sub": "Acute and chronic sinusitis",
+              "url": "/en/ent/#nose"
+            },
+            {
+              "_id": "577b741",
+              "label": "Ear pain or a blocked ear",
+              "sub": "Ear infection, earwax blockage",
+              "url": "/en/ent/#ear"
+            },
+            {
+              "_id": "a8ac821",
+              "label": "I hear less or my ear rings",
+              "sub": "Hearing loss, tinnitus",
+              "url": "/en/ent/#ear"
+            },
+            {
+              "_id": "8bc0962",
+              "label": "Sneezing and allergies",
+              "sub": "Allergic rhinitis",
+              "url": "/en/ent/#nose"
+            },
+            {
+              "_id": "1d4fb7e",
+              "label": "Frequent sore throat",
+              "sub": "Tonsillitis, tonsils in children",
+              "url": "/en/ent/#throat"
+            },
+            {
+              "_id": "e4b6fa6",
+              "label": "Hoarseness or voice changes",
+              "sub": "Larynx, laryngopharyngeal reflux",
+              "url": "/en/ent/#throat"
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "7085ad2",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "1c80053",
+        "elType": "widget",
+        "widgetType": "di-doctora",
+        "settings": {
+          "eyebrow": "Dr. Irina González Sáez",
+          "quote": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <b><em>treatment</em></b>”",
+          "text": "Medical degree from <abbr title=\"Universidad Nacional Experimental Francisco de Miranda\">UNEFM</abbr> and specialty in Otolaryngology from <abbr title=\"Universidad Centroccidental Lisandro Alvarado\">UCLA</abbr>, Venezuela. Subspecialty training in sleep-disordered breathing, snoring and applied rhinology at ISSSTE in Monterrey.",
+          "creds": "Board-certified by the Mexican Board of Otolaryngology–Head and Neck Surgery\nIbero-American Society of Sleep Surgery · Nuevo León College of Otolaryngology\nPractices at Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente, Hospital Universitario and Hospitaria",
+          "link": "/en/dr-irina-gonzalez-saez/",
+          "link_label": "Meet Dr. Irina",
+          "image": {
+            "id": "__DRA_IMG_ID__",
+            "url": "__DRA_IMG_URL__"
+          },
+          "bg": {
+            "id": "__DRA_BG_ID__",
+            "url": "__DRA_BG_URL__"
+          },
+          "bg_tone": "light"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "39f98e1",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "770f772",
+        "elType": "widget",
+        "widgetType": "di-pasos",
+        "settings": {
+          "eyebrow": "How we work",
+          "title": "What to <b>expect</b> at your <b><em>visit</em></b>",
+          "steps": [
+            {
+              "_id": "47a3a0b",
+              "title": "Listen",
+              "text": "Your symptoms, how long you’ve had them and how they affect your day. Bring previous tests and your list of medications.",
+              "img": "paso-escuchar"
+            },
+            {
+              "_id": "26421f2",
+              "title": "Examine",
+              "text": "Ear, nose and throat; nasal endoscopy or laryngoscopy in the office when needed.",
+              "img": "paso-explorar"
+            },
+            {
+              "_id": "0c048d4",
+              "title": "Diagnose",
+              "text": "If the problem is sleep-related, respiratory polygraphy or a home sleep test performed by Dr. Irina herself.",
+              "img": "paso-diagnosticar"
+            },
+            {
+              "_id": "c9a8438",
+              "title": "Support",
+              "text": "A clear plan, with medical and surgical options explained, and follow-up in person or online.",
+              "img": "paso-acompanar"
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "4a12bbe",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "c08b903",
+        "elType": "widget",
+        "widgetType": "di-sueno",
+        "settings": {
+          "eyebrow": "Sleep specialization",
+          "title": "From <b>snoring</b><br>to rest, all in<br>one <b><em>place</em></b>",
+          "lead": "In Monterrey, snoring and sleep apnea often go through several specialists. Dr. Irina evaluates the airway, performs the study, interprets the result and offers everything from CPAP to palate and nasal surgery.",
+          "link": "/en/sleep/",
+          "link_label": "Explore the treatment pathway",
+          "steps": "Airway evaluation and sleep endoscopy\nRespiratory polygraphy or home sleep test, interpreted by Dr. Irina\nTreatment: CPAP with follow-up, positional therapy, palate or nasal surgery\nFollow-up and adjustment until you sleep well"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "07c1e57",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "d9f3119",
+        "elType": "widget",
+        "widgetType": "di-ubicacion",
+        "settings": {
+          "eyebrow": "Office",
+          "title": "",
+          "facts": [
+            {
+              "_id": "892f635",
+              "label": "Parking",
+              "value": "Free"
+            },
+            {
+              "_id": "492c3ff",
+              "label": "Access",
+              "value": "Elevator and wheelchair access"
+            },
+            {
+              "_id": "f9a0374",
+              "label": "Language",
+              "value": "Consultations are in Spanish"
+            }
+          ],
+          "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.777590213581!2d-100.3765032!3d25.7117869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297c19d8eb1cb%3A0x5c3e8ac4d16be247!2sDra%20Irina%20Gonz%C3%A1lez%20S%C3%A1ez!5e0!3m2!1sen!2smx!4v1791433463370!5m2!1sen!2smx"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "f02d9f8",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "3750747",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "Book",
+          "title": "Shall we talk about <br class=\"di-brd\">what’s keeping you <br class=\"di-brd\">from <em>resting</em>?",
+          "text": "Message us on WhatsApp and we’ll help you choose the right type of visit. Consultations are in Spanish.",
+          "message": ""
+        },
+        "elements": []
+      }
+    ]
+  }
+]

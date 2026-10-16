@@ -237,7 +237,7 @@ function irina_social_circles( string $css_class = 'di-social' ): string {
  * @param array<int, array{0:string,1:string}> $trail Pares [etiqueta, url]; el último sin url.
  */
 function irina_breadcrumbs( array $trail ): string {
-	$items = [ sprintf( '<li><a href="%s">%s</a></li>', esc_url( home_url( '/' ) ), esc_html__( 'Inicio', 'irina-gonzalez' ) ) ];
+	$items = [ sprintf( '<li><a href="%s">%s</a></li>', esc_url( function_exists( 'irina_home_url' ) ? irina_home_url() : home_url( '/' ) ), esc_html__( 'Inicio', 'irina-gonzalez' ) ) ];
 	$last  = count( $trail ) - 1;
 	foreach ( array_values( $trail ) as $i => [ $label, $url ] ) {
 		// Sin enlace: la página actual (último) o un pilar aún en borrador (texto sin aria-current).

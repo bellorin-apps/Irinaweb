@@ -669,3 +669,9 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-opiniones__widget { margin-top: var(--space-xl); height: clamp(320px, 60vh, 520px); overflow: auto; display: grid; justify-items: center; align-content: start; gap: var(--space-md); }
 .di-opiniones__widget .zl-url { font-weight: 600; }
 
+
+/* Selector de idioma (D-095): solo aparece cuando la portada inglesa está publicada. */
+.di-lang { display: inline-grid; place-items: center; min-width: 42px; height: 42px; padding: 0 12px; border: 1px solid currentColor; border-radius: 999px; color: inherit; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-decoration: none; transition: background var(--motion-base) var(--ease-out), color var(--motion-base) var(--ease-out); }
+.di-lang:hover, .di-lang:focus-visible { background: rgb(36 31 35 / 0.08); color: inherit; }
+.di-lang--panel { border-color: rgb(36 31 35 / 0.12); color: var(--color-text); }
+body.di-dark .di-lang--panel { border-color: rgb(255 255 255 / 0.2); color: #fff; }

@@ -1,0 +1,45 @@
+# Generado por tools/i18n/build-mo.py desde tools/i18n/strings_en.py (D-095). No editar a mano.
+msgid ""
+msgstr "Project-Id-Version: drairinagonzalez.com\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: dra-irina-core\n"
+
+msgid "Agendar por WhatsApp"
+msgstr "Book via WhatsApp"
+
+msgid "Cómo llegar"
+msgstr "Get directions"
+
+msgid "El correo no parece válido. Puedes dejarlo vacío."
+msgstr "That email doesn’t look valid. You can leave it blank."
+
+msgid "Elige el motivo de tu consulta."
+msgstr "Please choose the reason for your visit."
+
+msgid "Escribe tu nombre."
+msgstr "Please enter your name."
+
+msgid "Escribe un teléfono válido de 10 dígitos (o con lada internacional)."
+msgstr "Please enter a valid 10-digit phone number (or include the international code)."
+
+msgid "Hemos recibido varios mensajes desde tu conexión. Espera unos minutos o escríbenos por WhatsApp."
+msgstr "We’ve received several messages from your connection. Please wait a few minutes or message us on WhatsApp."
+
+msgid "Necesitamos tu consentimiento para contactarte."
+msgstr "We need your consent to contact you."
+
+msgid "No pudimos comprobar que eres una persona. Espera un momento e inténtalo de nuevo, o escríbenos por WhatsApp."
+msgstr "We couldn’t verify that you’re a person. Please wait a moment and try again, or message us on WhatsApp."
+
+msgid "No pudimos enviar tu mensaje. Escríbenos por WhatsApp y te atendemos enseguida."
+msgstr "We couldn’t send your message. Please message us on WhatsApp and we’ll reply right away."
+
+msgid "No pudimos validar el origen del envío. Vuelve a cargar la página e inténtalo de nuevo."
+msgstr "We couldn’t validate where the submission came from. Please reload the page and try again."
+
+msgid "Revisa los campos del formulario."
+msgstr "Please check the form fields."
+
+msgid "Revisa los datos e inténtalo de nuevo."
+msgstr "Please check your details and try again."
+
+msgid "Vuelve a cargar el formulario."
+msgstr "Please reload the form."

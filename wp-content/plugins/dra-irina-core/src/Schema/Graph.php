@@ -302,7 +302,7 @@ final class Graph {
 			'@type'      => 'FAQPage',
 			'@id'        => get_permalink( $post_id ) . '#faq',
 			'url'        => get_permalink( $post_id ),
-			'inLanguage' => 'es-MX',
+			'inLanguage' => \DraIrina\Core\I18n\Language::TAGS[ \DraIrina\Core\I18n\Language::of( $post_id ) ], // D-095.
 			'mainEntity' => $questions,
 		] : [];
 	}
@@ -318,7 +318,7 @@ final class Graph {
 			'@type'      => 'MedicalWebPage',
 			'url'        => get_permalink( $post_id ),
 			'name'       => get_the_title( $post_id ),
-			'inLanguage' => 'es-MX',
+			'inLanguage' => \DraIrina\Core\I18n\Language::TAGS[ \DraIrina\Core\I18n\Language::of( $post_id ) ], // D-095.
 			'specialty'  => 'https://schema.org/Otolaryngologic',
 			'reviewedBy' => [ '@id' => self::physician_id() ],
 		];
@@ -347,7 +347,7 @@ final class Graph {
 			'@type'        => 'MedicalWebPage',
 			'url'          => get_permalink( $post_id ),
 			'name'         => get_the_title( $post_id ),
-			'inLanguage'   => 'es-MX',
+			'inLanguage'   => \DraIrina\Core\I18n\Language::TAGS[ \DraIrina\Core\I18n\Language::of( $post_id ) ], // D-095.
 			'reviewedBy'   => [ '@id' => self::physician_id() ],
 			'dateModified' => get_the_modified_date( 'c', $post_id ),
 		];

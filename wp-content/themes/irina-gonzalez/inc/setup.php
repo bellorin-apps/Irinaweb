@@ -68,13 +68,21 @@ add_filter(
  * @param array<string, mixed> $args Argumentos de wp_nav_menu.
  */
 function irina_nav_fallback( array $args = [] ): void {
-	$items = [
-		'otorrinolaringologia'    => __( 'Otorrino', 'irina-gonzalez' ), // D-083.
-		'sueno'                   => __( 'Sueño', 'irina-gonzalez' ),
-		'dra-irina-gonzalez-saez' => __( 'Dra. Irina', 'irina-gonzalez' ),
-		'primera-consulta'        => __( 'Primera consulta', 'irina-gonzalez' ),
-		'contacto'                => __( 'Contacto', 'irina-gonzalez' ),
-	];
+	$items = 'en' === ( function_exists( 'irina_lang' ) ? irina_lang() : 'es' )
+		? [ // D-095: mismas páginas bajo /en/.
+			'en/ent'                    => __( 'Otorrino', 'irina-gonzalez' ),
+			'en/sleep'                  => __( 'Sueño', 'irina-gonzalez' ),
+			'en/dr-irina-gonzalez-saez' => __( 'Dra. Irina', 'irina-gonzalez' ),
+			'en/first-visit'            => __( 'Primera consulta', 'irina-gonzalez' ),
+			'en/contact'                => __( 'Contacto', 'irina-gonzalez' ),
+		]
+		: [
+			'otorrinolaringologia'    => __( 'Otorrino', 'irina-gonzalez' ), // D-083.
+			'sueno'                   => __( 'Sueño', 'irina-gonzalez' ),
+			'dra-irina-gonzalez-saez' => __( 'Dra. Irina', 'irina-gonzalez' ),
+			'primera-consulta'        => __( 'Primera consulta', 'irina-gonzalez' ),
+			'contacto'                => __( 'Contacto', 'irina-gonzalez' ),
+		];
 	$out   = '';
 	foreach ( $items as $slug => $label ) {
 		$page = get_page_by_path( $slug );

@@ -587,3 +587,17 @@ PHP81/PHPCS/bash19 pasan; registro4CPT/3tax/43metas y permisos7/7; regresión28c
 - Q-070 · P2 · FIXED_LOCAL:120px mínimos no contienen embed variable; caja clamp320/60vh/520 con scroll/región. Iframe sintético1000px,390/1440: desplazamiento exterior0px. No equivale a CLS/LCP real ni accesibilidad del proveedor.
 
 GuardsPHP4/4; Enter/Espacio, foco, doble activación1script, error/reintento, enlace sinJS y eventoexterno1doctoralia_click pasan. Cargar opiniones no cuenta conversión; eventos dentro del iframe no se miden. OchoGETpúblicos200 sinwidget; CSPupgrade-insecure-requests sin allowlist ni cambios. Scriptoficial200 reconoce marcado, no verifica panel. PHP81/PHPCS/JS/ESLint/stylelint/bash19 pasan. Dos capturas locales sintéticas revisadas. Evidencia docs/audit/2026-10-16c/. Sin deploy/activación/cuentas/claves/forms; cuatroHTML preservados.221/228=96,93% sin cambios,9.5/8.6OWNER.
+
+## Versión en inglés: entrega 1 (Claude cloud, 2026-10-16, D-095)
+
+Módulo nativo e Inicio en inglés en borrador. Probado en un WordPress 7.1.3 local (SQLite, Elementor y Rank Math libres, tema y plugin del repo enlazados; scratchpad de la sesión cloud):
+- **Visitante anónimo, con /en/ en borrador:** la portada sigue en `lang="es"`, sin `<link hreflang>`, sin selector (`a.di-lang` = 0) y sin enlaces a /en/. `/en/` y la vista previa sin sesión dan 404.
+- **Administrador, vista previa del borrador (`?page_id=…&preview=true`):** `lang="en-US"`, textos del tema en inglés («Skip to content», «Book via WhatsApp», pie «© 2026 Dr. Irina González Sáez. All rights reserved.»), barra «WhatsApp / Call» y mensaje de WhatsApp en inglés. El hero dice «Consultations are in Spanish.».
+- **Publicando /en/ solo en local (después se volvió a borrador):** selector «EN» en la portada hacia /en/ y «ES» en /en/ hacia /; hreflang es-MX / en-US / x-default recíproco en las dos. De vuelta a borrador, /en/ da 404.
+- **Fichas:** /sueno/{slug}/ solo resuelve fichas españolas y /en/sleep/{slug}/ solo inglesas (`_di_lang`). Las URL cruzadas usan la redirección de adivinanza de WordPress (301), como cualquier slug inexistente.
+- **setup-en.php idempotente:** crea la raíz `en` en borrador, empareja con page_on_front, título y descripción de Rank Math (49/143), textos del consultorio en inglés solo si están vacíos y flush de rewrites. No modifica páginas inglesas publicadas.
+- PHP lint, PHPCS (tema, plugin y loader), ESLint/stylelint y nap-check en verde.
+- Límite: en local no hay fotos, Rank Math sin configurar ni Elementor Pro. La verificación real la hace la sesión local en producción.
+
+- **Q-068 · P3 · FIXED_LOCAL (Claude cloud, 2026-10-16):** `register_meta` avisaba «llamada de forma incorrecta» en cada carga porque `di_tipo` (tratamiento y credencial) es una lista cerrada con default '' fuera de la lista. Ahora no se registra default cuando no es válido; `get_post_meta` sigue devolviendo ''. debug.log local: 0 líneas tras cargar una ficha.
+

@@ -38,7 +38,7 @@ if ( irina_elementor_main() ) {
 		<div class="di-footer__cols">
 			<div>
 				<div class="di-footer__brand">
-					<a class="di-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo irina_brand_block( 'footer' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="di-brand" href="<?php echo esc_url( irina_home_url() ); ?>"><?php echo irina_brand_block( 'footer' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					<p class="di-footer__tag"><?php echo esc_html( (string) irina_practice( 'subespecialidad' ) ); ?></p>
 				</div>
 				<?php if ( '' !== $irina_cedul ) : ?>

@@ -1,0 +1,375 @@
+# Generado por tools/i18n/build-mo.py desde tools/i18n/strings_en.py (D-095). No editar a mano.
+msgid ""
+msgstr "Project-Id-Version: drairinagonzalez.com\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: irina-gonzalez\n"
+
+msgid "<b>Respirar</b> bien, dormir bien, oír <b><em>bien</em></b>"
+msgstr "<b>Breathe</b> well, sleep well, hear <b><em>well</em></b>"
+
+msgid "<b>Respirar</b> bien,<br>dormir bien,<br>oír <b><em>bien</em></b>"
+msgstr "<b>Breathe</b> well,<br>sleep well,<br>hear <b><em>well</em></b>"
+
+msgid "Abrir menú"
+msgstr "Open menu"
+
+msgid "Acciones rápidas"
+msgstr "Quick actions"
+
+msgid "Acepto que se usen mis datos para contactarme y agendar, conforme al %s."
+msgstr "I agree that my details may be used to contact me and book an appointment, as described in the %s."
+
+msgid "Agenda"
+msgstr "Book"
+
+msgid "Agenda en un toque por WhatsApp."
+msgstr "Book in one tap on WhatsApp."
+
+msgid "Agendar por WhatsApp"
+msgstr "Book via WhatsApp"
+
+msgid "Agendar valoración de ronquido y apnea"
+msgstr "Book a snoring and sleep apnea evaluation"
+
+msgid "Atención"
+msgstr "Care"
+
+msgid "Aviso de Funcionamiento n.º"
+msgstr "Operating notice no."
+
+msgid "Aviso de Publicidad COFEPRIS n.º"
+msgstr "COFEPRIS advertising notice no."
+
+msgid "Bajar a la siguiente sección"
+msgstr "Scroll to the next section"
+
+msgid "Borrador: pendiente de revisión de la Dra."
+msgstr "Draft: pending Dr. Irina’s review."
+
+msgid "Causas"
+msgstr "Causes"
+
+msgid "Certificación"
+msgstr "Certification"
+
+msgid "Coautora: "
+msgstr "Co-author: "
+
+msgid "Conocer a la Dra."
+msgstr "Meet the doctor"
+
+msgid "Conocer a la Dra. Irina"
+msgstr "Meet Dr. Irina"
+
+msgid "Consultorio"
+msgstr "Office"
+
+msgid "Consultorio, mapa y WhatsApp."
+msgstr "Office, map and WhatsApp."
+
+msgid "Contacto"
+msgstr "Contact"
+
+msgid "Correo (opcional)"
+msgstr "Email (optional)"
+
+msgid "Credenciales"
+msgstr "Credentials"
+
+msgid "Cuéntanos brevemente. No es necesario incluir detalles clínicos: los vemos en consulta."
+msgstr "Tell us briefly. There’s no need to include clinical details: we’ll go over them at your visit."
+
+msgid "Cédulas:"
+msgstr "Professional licenses (cédulas):"
+
+msgid "Cómo llegar"
+msgstr "Get directions"
+
+msgid "Cómo llegar al consultorio"
+msgstr "Directions to the office"
+
+msgid "Cómo se diagnostica"
+msgstr "How it’s diagnosed"
+
+msgid "Cómo se realiza"
+msgstr "How it’s done"
+
+msgid "Datos mínimos: no guardamos tu mensaje en el sitio; llega directo al consultorio. Si es una urgencia, acude a un servicio de urgencias."
+msgstr "Minimal data: we don’t store your message on this site; it goes straight to the office. In an emergency, go to an emergency department."
+
+msgid "Del ronquido al descanso."
+msgstr "From snoring to restful sleep."
+
+msgid "Dirección"
+msgstr "Address"
+
+msgid "Docencia"
+msgstr "Teaching"
+
+msgid "Dra. Irina González Sáez"
+msgstr "Dr. Irina González Sáez"
+
+msgid "Déjanos tu nombre y teléfono y te contactamos en horario de consultorio. Para agendar más rápido, WhatsApp."
+msgstr "Leave your name and phone number and we’ll contact you during office hours. For faster booking, use WhatsApp."
+
+msgid "El correo no parece válido. Puedes dejarlo vacío."
+msgstr "That email doesn’t look valid. You can leave it blank."
+
+msgid "El enfoque de la Dra."
+msgstr "Dr. Irina’s approach"
+
+msgid "Elige el motivo de tu consulta."
+msgstr "Please choose the reason for your visit."
+
+msgid "Elige una opción"
+msgstr "Choose an option"
+
+msgid "En esta página"
+msgstr "On this page"
+
+msgid "En qué consiste"
+msgstr "What it involves"
+
+msgid "Enviando…"
+msgstr "Sending…"
+
+msgid "Enviar solicitud"
+msgstr "Send request"
+
+msgid "Error 404"
+msgstr "Error 404"
+
+msgid "Escribe tu nombre."
+msgstr "Please enter your name."
+
+msgid "Escribe un teléfono válido de 10 dígitos."
+msgstr "Please enter a valid 10-digit phone number."
+
+msgid "Escríbenos"
+msgstr "Write to us"
+
+msgid "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta."
+msgstr "Message us on WhatsApp and we’ll help you choose the right type of visit."
+
+msgid "Especialidad"
+msgstr "Specialty"
+
+msgid "Esta página <em>no existe</em>"
+msgstr "This page <em>doesn’t exist</em>"
+
+msgid "Estudio previo"
+msgstr "Tests beforehand"
+
+msgid "Explorar la ruta de tratamiento"
+msgstr "Explore the treatment pathway"
+
+msgid "Formación y certificaciones"
+msgstr "Training and certifications"
+
+msgid "Formación, certificaciones y enfoque."
+msgstr "Training, certifications and approach."
+
+msgid "Fuentes"
+msgstr "Sources"
+
+msgid "Hemos recibido varios mensajes desde tu conexión. Espera unos minutos o escríbenos por WhatsApp."
+msgstr "We’ve received several messages from your connection. Please wait a few minutes or message us on WhatsApp."
+
+msgid "Hola, llegué a una página que no existe en el sitio de la Dra. Irina González Sáez y quisiera agendar una consulta."
+msgstr "Hello, I reached a page that doesn’t exist on Dr. Irina González Sáez’s website and would like to book an appointment."
+
+msgid "Hola, quisiera agendar una consulta sobre %s con la Dra. Irina González Sáez."
+msgstr "Hello, I would like to book an appointment about %s with Dr. Irina González Sáez."
+
+msgid "Horario"
+msgstr "Hours"
+
+msgid "Inicio"
+msgstr "Home"
+
+msgid "Ir al contenido"
+msgstr "Skip to content"
+
+msgid "La Dra. Irina"
+msgstr "Dr. Irina"
+
+msgid "La información de este sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias."
+msgstr "The information on this site is educational and does not replace a medical consultation. This is not an emergency channel."
+
+msgid "Llamar"
+msgstr "Call"
+
+msgid "Lo que dicen <em>sus pacientes</em>"
+msgstr "What <em>patients say</em>"
+
+msgid "Mapa"
+msgstr "Map"
+
+msgid "Mapa del consultorio"
+msgstr "Office map"
+
+msgid "Medicina"
+msgstr "Medicine"
+
+msgid "Membresías y <em>hospitales</em>"
+msgstr "Memberships and <em>hospitals</em>"
+
+msgid "Membresías y hospitales"
+msgstr "Memberships and hospitals"
+
+msgid "Mensaje (opcional)"
+msgstr "Message (optional)"
+
+msgid "Migas de pan"
+msgstr "Breadcrumbs"
+
+msgid "Motivo"
+msgstr "Reason for your visit"
+
+msgid "Necesitamos tu consentimiento para contactarte."
+msgstr "We need your consent to contact you."
+
+msgid "No pudimos comprobar que eres una persona. Espera un momento e inténtalo de nuevo, o escríbenos por WhatsApp."
+msgstr "We couldn’t verify that you’re a person. Please wait a moment and try again, or message us on WhatsApp."
+
+msgid "No pudimos enviar tu mensaje. Escríbenos por WhatsApp y te atendemos enseguida."
+msgstr "We couldn’t send your message. Please message us on WhatsApp and we’ll reply right away."
+
+msgid "Nombre"
+msgstr "Name"
+
+msgid "Opiniones"
+msgstr "Reviews"
+
+msgid "Opiniones en Doctoralia"
+msgstr "Reviews on Doctoralia"
+
+msgid "Otorrino"
+msgstr "ENT"
+
+msgid "Otorrinolaringología"
+msgstr "ENT (otolaryngology)"
+
+msgid "Otorrinolaringólogo en Monterrey."
+msgstr "ENT physician in Monterrey."
+
+msgid "Oído, nariz y garganta, desde los 0 meses."
+msgstr "Ear, nose and throat, from birth."
+
+msgid "Para quién está indicado"
+msgstr "Who it’s for"
+
+msgid "Ponente: "
+msgstr "Speaker: "
+
+msgid "Preguntas frecuentes"
+msgstr "Frequently asked questions"
+
+msgid "Previa cita. Agenda por WhatsApp."
+msgstr "By appointment only. Book via WhatsApp."
+
+msgid "Primera consulta"
+msgstr "First visit"
+
+msgid "Principal"
+msgstr "Main"
+
+msgid "Puede que el enlace haya cambiado o que tenga un error. Aquí tienes los caminos más útiles."
+msgstr "The link may have changed or contain a typo. Here are the most useful places to go."
+
+msgid "Página no encontrada"
+msgstr "Page not found"
+
+msgid "Qué es"
+msgstr "What it is"
+
+msgid "Qué esperar, qué llevar y cómo agendar."
+msgstr "What to expect, what to bring and how to book."
+
+msgid "Qué resuelve"
+msgstr "What it treats"
+
+msgid "Recuperación"
+msgstr "Recovery"
+
+msgid "Recursos para pacientes"
+msgstr "Patient resources"
+
+msgid "Relacionado"
+msgstr "Related"
+
+msgid "Revisa los datos e inténtalo de nuevo."
+msgstr "Please check your details and try again."
+
+msgid "Revisado médicamente por"
+msgstr "Medically reviewed by"
+
+msgid "Riesgos y alternativas"
+msgstr "Risks and alternatives"
+
+msgid "Ronquido y apnea del sueño"
+msgstr "Snoring and sleep apnea"
+
+msgid "Si llegaste desde un enlace antiguo de otorrino-monterrey.com, el contenido vive ahora en este sitio."
+msgstr "If you followed an old link from otorrino-monterrey.com, that content now lives on this site."
+
+msgid "Sitio web"
+msgstr "Website"
+
+msgid "Subespecialización"
+msgstr "Subspecialty"
+
+msgid "Sueño"
+msgstr "Sleep"
+
+msgid "Síntomas frecuentes"
+msgstr "Common symptoms"
+
+msgid "Teléfono"
+msgstr "Phone"
+
+msgid "Teléfono o WhatsApp"
+msgstr "Phone or WhatsApp"
+
+msgid "Todos los derechos reservados."
+msgstr "All rights reserved."
+
+msgid "Trabajo presentado: "
+msgstr "Presented work: "
+
+msgid "Tratamientos"
+msgstr "Treatments"
+
+msgid "Trayectoria"
+msgstr "Career"
+
+msgid "Tu otorrino|en Monterrey"
+msgstr "Your ENT|in Monterrey"
+
+msgid "Una valoración de 30 minutos define el siguiente paso."
+msgstr "A 30-minute evaluation sets the next step."
+
+msgid "Ver opiniones en Doctoralia"
+msgstr "See reviews on Doctoralia"
+
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+msgid "aviso de privacidad"
+msgstr "privacy notice"
+
+msgid "¿Cuándo consultar?"
+msgstr "When to see a doctor"
+
+msgid "¿Hablamos de lo que te está quitando el descanso?"
+msgstr "Shall we talk about what’s keeping you from resting?"
+
+msgid "¿Prefieres que <b>te</b> <em>llamemos</em>?"
+msgstr "Would you like us to <em>call you</em>?"
+
+msgid "¿Quieres una valoración?"
+msgstr "Would you like an evaluation?"
+
+msgid "¿Tienes dudas sobre tu caso?"
+msgstr "Questions about your case?"
+
+msgid "Última revisión:"
+msgstr "Last reviewed:"

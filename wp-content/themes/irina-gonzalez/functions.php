@@ -18,7 +18,7 @@ if ( ! defined( 'IRINA_ADOBE_FONTS_KIT' ) ) {
 	define( 'IRINA_ADOBE_FONTS_KIT', 'nlo5pss' );
 }
 
-foreach ( [ 'setup', 'enqueue', 'performance', 'accessibility', 'elementor', 'template-tags' ] as $irina_inc ) {
+foreach ( [ 'setup', 'enqueue', 'performance', 'accessibility', 'elementor', 'template-tags', 'i18n' ] as $irina_inc ) {
 	require_once IRINA_THEME_DIR . '/inc/' . $irina_inc . '.php';
 }
 unset( $irina_inc );

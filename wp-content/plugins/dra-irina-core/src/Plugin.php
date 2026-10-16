@@ -10,6 +10,7 @@ declare( strict_types=1 );
 namespace DraIrina\Core;
 
 use DraIrina\Core\Fields\MetaRegistry;
+use DraIrina\Core\I18n\Language;
 use DraIrina\Core\Contact\Form as ContactForm;
 use DraIrina\Core\Media\WebpUpload;
 use DraIrina\Core\Ops\Endpoints as OpsEndpoints;
@@ -67,6 +68,7 @@ final class Plugin {
 			new SecurityHeaders(),
 			new SecurityHardening(),
 			new WebpUpload(),
+			new Language(),
 		];
 	}
 

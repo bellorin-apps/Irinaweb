@@ -144,18 +144,20 @@ final class MetaRegistry {
 	public function register_meta(): void {
 		foreach ( self::definitions() as $post_type => $fields ) {
 			foreach ( $fields as $key => $def ) {
-				register_post_meta(
-					$post_type,
-					'di_' . $key,
-					[
-						'type'              => $def['type'],
-						'single'            => true,
-						'default'           => $def['default'] ?? ( 'array' === $def['type'] ? [] : ( 'boolean' === $def['type'] ? false : ( 'integer' === $def['type'] ? 0 : '' ) ) ),
-						'show_in_rest'      => [ 'schema' => self::rest_schema( $def ) ],
-						'sanitize_callback' => static fn( $value ) => self::sanitize( $value, $def ),
-						'auth_callback'     => static fn( $allowed, $meta_key, $post_id ): bool => current_user_can( 'edit_post', (int) $post_id ),
-					]
-				);
+				$args = [
+					'type'              => $def['type'],
+					'single'            => true,
+					'default'           => $def['default'] ?? ( 'array' === $def['type'] ? [] : ( 'boolean' === $def['type'] ? false : ( 'integer' === $def['type'] ? 0 : '' ) ) ),
+					'show_in_rest'      => [ 'schema' => self::rest_schema( $def ) ],
+					'sanitize_callback' => static fn( $value ) => self::sanitize( $value, $def ),
+					'auth_callback'     => static fn( $allowed, $meta_key, $post_id ): bool => current_user_can( 'edit_post', (int) $post_id ),
+				];
+				// Una lista cerrada (enum) sin valor por defecto propio no admite '' como default: WordPress avisaba «register_meta
+				// llamada de forma incorrecta» en cada carga. Sin default, get_post_meta devuelve '' igual que antes.
+				if ( isset( $def['enum'] ) && ! isset( $def['default'] ) && ! in_array( $args['default'], $def['enum'], true ) ) {
+					unset( $args['default'] );
+				}
+				register_post_meta( $post_type, 'di_' . $key, $args );
 			}
 		}
 	}
@@ -246,7 +248,9 @@ final class MetaRegistry {
 			return $permalink;
 		}
 		if ( has_term( 'sueno', 'area', $post ) ) {
-			return home_url( user_trailingslashit( 'sueno/' . $post->post_name ) );
+			// D-095: la versión inglesa vive en /en/sleep/{slug}/.
+			$base = \DraIrina\Core\I18n\Language::EN === \DraIrina\Core\I18n\Language::of( $post->ID ) ? \DraIrina\Core\I18n\Language::SLEEP_EN : 'sueno';
+			return home_url( user_trailingslashit( $base . '/' . $post->post_name ) );
 		}
 		return $permalink;
 	}
@@ -272,6 +276,23 @@ final class MetaRegistry {
 				}
 				$q->set( 'post_type', [ 'condicion', 'tratamiento' ] );
 				$q->set( 'name', sanitize_title( $slug ) );
+				// D-095: /sueno/{slug}/ solo resuelve fichas en español y /en/sleep/{slug}/ solo las inglesas.
+				$q->set(
+					'meta_query',
+					'en' === $q->get( 'di_lang' )
+						? [
+							[
+								'key'   => \DraIrina\Core\I18n\Language::META,
+								'value' => 'en',
+							],
+						]
+						: [
+							[
+								'key'     => \DraIrina\Core\I18n\Language::META,
+								'compare' => 'NOT EXISTS',
+							],
+						]
+				); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
 				$q->set(
 					'tax_query',
 					[
