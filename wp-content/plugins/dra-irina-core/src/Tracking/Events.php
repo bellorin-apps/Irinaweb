@@ -37,7 +37,7 @@ final class Events {
 		if ( '' === $id || ( is_user_logged_in() && current_user_can( 'edit_posts' ) ) ) {
 			return;
 		}
-		$thanks = is_page( 'gracias' ) ? "gtag('event','contact_submit',{page_path:location.pathname});" : '';
+		$thanks = is_page( 'gracias' ) || is_page( 'thank-you' ) ? "gtag('event','contact_submit',{page_path:location.pathname});" : '';
 		// Q-047: la cola existe desde el principio; una salida antes de descargar gtag.js todavía puede perder eventos.
 		// pero gtag.js se descarga después de «load» y en tiempo ocioso, para no bloquear el primer pintado en móvil.
 		$script = "if(navigator.doNotTrack!=='1'&&window.doNotTrack!=='1'){"

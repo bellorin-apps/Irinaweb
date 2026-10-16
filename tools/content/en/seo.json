@@ -2,5 +2,45 @@
   "en": {
     "title": "ENT doctor in Monterrey | Dr. Irina González Sáez",
     "description": "Board-certified ENT in Cumbres, Monterrey: ear, nose and throat for children and adults, snoring and sleep apnea. Consultations are in Spanish."
+  },
+  "dr-irina-gonzalez-saez": {
+    "title": "Dr. Irina González Sáez | ENT and sleep specialist",
+    "description": "Board-certified by the Mexican Board of ORL–HNS, trained in two countries, with a subspecialty in sleep-disordered breathing. Cumbres, Monterrey."
+  },
+  "ent": {
+    "title": "ENT in Monterrey: ear, nose and throat | Dr. Irina González",
+    "description": "ENT in Cumbres, Monterrey: ear, nose and throat care for children from birth and adults. What I treat, how I work and how to book. In Spanish."
+  },
+  "sleep": {
+    "title": "Snoring and sleep apnea specialist in Monterrey",
+    "description": "Snoring and sleep apnea in Monterrey: airway evaluation, home sleep test, CPAP and surgery. Dr. Irina González Sáez, ENT. Consultations in Spanish."
+  },
+  "first-visit": {
+    "title": "First visit with Dr. Irina González Sáez | What to expect",
+    "description": "What an ENT visit is like: about 30 minutes, a complete examination and a clear plan. What to bring, costs and insurance. Consultations in Spanish."
+  },
+  "contact": {
+    "title": "Contact and location | Dr. Irina González Sáez, Cumbres",
+    "description": "Office at CAB Medical Headquarters, Cumbres, Monterrey. Map, parking and WhatsApp booking. Consultations are in Spanish."
+  },
+  "faq": {
+    "title": "Frequently asked questions | Dr. Irina González Sáez",
+    "description": "Hours, cost, insurance, children, hospitals and language of the visits at Dr. Irina González Sáez’s ENT office in Monterrey."
+  },
+  "thank-you": {
+    "title": "Message received | Dr. Irina González Sáez",
+    "description": "We received your request; we’ll contact you during office hours."
+  },
+  "privacy-notice": {
+    "title": "Privacy notice | Dr. Irina González Sáez",
+    "description": "How we process your personal data under Mexico’s LFPDPPP: what we collect, why, with whom we share it and how to exercise your ARCO rights."
+  },
+  "medical-disclaimer": {
+    "title": "Medical disclaimer | Dr. Irina González Sáez",
+    "description": "The information on this site is educational and does not replace a medical consultation. This is not an emergency channel."
+  },
+  "terms-of-use": {
+    "title": "Terms of use | Dr. Irina González Sáez",
+    "description": "Terms of use of Dr. Irina González Sáez’s website."
   }
 }

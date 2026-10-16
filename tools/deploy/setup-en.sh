@@ -7,6 +7,8 @@ WP="cd '$WEBROOT' && /opt/alt/php84/usr/bin/php /usr/local/bin/wp --skip-plugins
 TMP="/tmp/di-en-$(stamp)"
 rssh "mkdir -p '$TMP' && chmod 700 '$TMP'"
 trap 'rssh "rm -rf '"'$TMP'"'"' EXIT
-rscp "$REPO"/tools/content/en/*.json "$REPO/tools/deploy/en/setup-en.php" "$SSH_USER@$SSH_HOST:$TMP/"
+rscp "$REPO"/tools/content/en/*.json "$REPO"/tools/content/en/*.html "$REPO/tools/deploy/en/setup-en.php" "$SSH_USER@$SSH_HOST:$TMP/"
 rssh "$WP eval-file '$TMP/setup-en.php'"
+rssh "cd '$WEBROOT' && /opt/alt/php84/usr/bin/php /usr/local/bin/wp cache flush" >/dev/null 2>&1 || true
+curl -s -o /dev/null "$SITE_URL/?cb=$(date +%s)"   # regenera las reglas de reescritura con todos los plugins
 echo "Listo: páginas inglesas en borrador. Purga LiteSpeed/CDN; /en/ no debe ser visible para visitantes."

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "0171945",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "c609cf8",
+        "elType": "widget",
+        "widgetType": "di-bleed",
+        "settings": {
+          "eyebrow": "Frequently asked questions",
+          "title": "What we’re <b>asked</b> <em>most</em>",
+          "lead": "Hours, costs, insurance, children and what happens at the visit. Questions about your own case are answered at the evaluation.",
+          "variant": "sand",
+          "crumb": "FAQ"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "3873115",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "e3730dc",
+        "elType": "widget",
+        "widgetType": "di-faq",
+        "settings": {
+          "eyebrow": "Service",
+          "title": "<b>Visits</b> and <em>booking</em>",
+          "items": [
+            {
+              "_id": "48e328e",
+              "pregunta": "How do I book?",
+              "text": "Via WhatsApp, in one tap from any page of the site, or by phone. Visits are by appointment only."
+            },
+            {
+              "_id": "32d33e1",
+              "pregunta": "What are the hours?",
+              "text": "By appointment only: book via WhatsApp and we’ll confirm the available time."
+            },
+            {
+              "_id": "81904ef",
+              "pregunta": "How long is the visit?",
+              "text": "About 30 minutes."
+            },
+            {
+              "_id": "aa900d9",
+              "pregunta": "How much does it cost?",
+              "text": "We confirm the cost when you book via WhatsApp. Surgeries and tests, after an evaluation."
+            },
+            {
+              "_id": "cfba8f4",
+              "pregunta": "Do you accept insurance?",
+              "text": "Private patients and reimbursement with Mexican private health insurance."
+            },
+            {
+              "_id": "db1e2db",
+              "pregunta": "How can I pay?",
+              "text": "Cash, card and bank transfer. Invoices available."
+            },
+            {
+              "_id": "a0a74b6",
+              "pregunta": "Do you offer online visits?",
+              "text": "Only follow-up of patients already evaluated in the office."
+            },
+            {
+              "_id": "c91fd50",
+              "pregunta": "Do you see children?",
+              "text": "Yes, from birth."
+            },
+            {
+              "_id": "3114906",
+              "pregunta": "In what language are visits?",
+              "text": "Consultations are in Spanish."
+            },
+            {
+              "_id": "4fc1d17",
+              "pregunta": "At which hospitals does Dr. Irina operate?",
+              "text": "Christus Muguerza, Hospital Zambrano Hellion and Hospital Ángeles Valle Oriente."
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "9f0bccf",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "e94de52",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "Book",
+          "title": "Another question?",
+          "text": "Message us on WhatsApp.",
+          "message": ""
+        },
+        "elements": []
+      }
+    ]
+  }
+]

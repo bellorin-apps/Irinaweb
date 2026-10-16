@@ -21,9 +21,10 @@ $irina_a = wp_parse_args(
 
 $irina_core    = class_exists( '\DraIrina\Core\Contact\Form' );
 $irina_action  = $irina_core ? \DraIrina\Core\Contact\Form::action_url() : '';
-$irina_motivos = $irina_core ? \DraIrina\Core\Contact\Form::MOTIVOS : [];
+$irina_motivos = $irina_core ? \DraIrina\Core\Contact\Form::motivos() : [];
 $irina_thanks  = $irina_core ? \DraIrina\Core\Contact\Form::thanks_url() : home_url( '/' );
-$irina_priv    = get_page_by_path( 'aviso-de-privacidad', OBJECT, 'page' );
+$irina_priv    = get_page_by_path( 'en' === irina_lang() ? 'en/privacy-notice' : 'aviso-de-privacidad', OBJECT, 'page' );
+$irina_priv    = $irina_priv && 'publish' === $irina_priv->post_status ? $irina_priv : get_page_by_path( 'aviso-de-privacidad', OBJECT, 'page' );
 $irina_priv_ur = $irina_priv ? (string) get_permalink( $irina_priv ) : home_url( '/aviso-de-privacidad/' );
 $irina_error   = isset( $_GET['di_error'] ) ? sanitize_key( wp_unslash( $_GET['di_error'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- solo para mostrar un aviso tras la redirección sin JS.
 $irina_errors  = [
@@ -68,6 +69,9 @@ if ( ! $irina_core ) {
 		<form class="di-form di-reveal di-reveal--d2" method="post" action="<?php echo esc_url( $irina_action ); ?>" data-thanks="<?php echo esc_url( $irina_thanks ); ?>" novalidate>
 			<input type="hidden" name="action" value="di_contact">
 			<input type="hidden" name="di_t" value="<?php echo esc_attr( (string) time() ); ?>">
+			<?php if ( 'en' === irina_lang() ) : ?>
+				<input type="hidden" name="di_lang" value="en">
+			<?php endif; ?>
 			<p class="di-form__hp" aria-hidden="true"><label>Sitio web<input type="text" name="di_web" tabindex="-1" autocomplete="off"></label></p>
 			<div class="di-form__status" role="alert" aria-live="assertive"<?php echo '' === $irina_error ? ' hidden' : ''; ?>>
 				<?php echo esc_html( $irina_errors[ $irina_error ] ?? ( '' !== $irina_error ? __( 'Revisa los datos e inténtalo de nuevo.', 'irina-gonzalez' ) : '' ) ); ?>

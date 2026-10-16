@@ -1,0 +1,343 @@
+[
+  {
+    "id": "848defc",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "2ac2d2c",
+        "elType": "widget",
+        "widgetType": "di-bleed",
+        "settings": {
+          "eyebrow": "Your ENT | Sleep specialist",
+          "title": "<b>Dr.</b> Irina<br>González <em>Sáez</em>",
+          "lead": "Board-certified otolaryngologist (ENT) in Monterrey, with subspecialty training in sleep-disordered breathing, snoring and rhinology. Children from birth, teenagers, adults and older adults. Consultations are in Spanish.",
+          "variant": "warm",
+          "crumb": "About",
+          "image": {
+            "id": "__DRA_HERO_ID__",
+            "url": "__DRA_HERO_URL__"
+          },
+          "focus": "50% 0%",
+          "focus_mobile": "92% 8%",
+          "secondary_short": "Doctoralia",
+          "secondary_label": "Reviews on Doctoralia",
+          "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "14a2f77",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "690b176",
+        "elType": "widget",
+        "widgetType": "di-narrativa",
+        "settings": {
+          "eyebrow": "Approach",
+          "title": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <b><em>treatment</em></b>”",
+          "lead": "The first visit lasts about 30 minutes. It starts by understanding what is happening to you and since when; it continues with a complete ear, nose and throat examination, with endoscopy in the office when needed, and ends with a clearly explained plan, without promises that cannot be kept.",
+          "text": "",
+          "draft": "",
+          "image": {
+            "id": "__DRA_ENDO_ID__",
+            "url": "__DRA_ENDO_URL__"
+          },
+          "image_pos": "right",
+          "image_alt": "Endoscopy camera head Dr. Irina uses in the office"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "d24d2fe",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "b86d393",
+        "elType": "widget",
+        "widgetType": "di-credenciales",
+        "settings": {
+          "eyebrow": "Training and certifications",
+          "title": "Verifiable <em>credentials</em>",
+          "tags_title": "",
+          "extra_tags": ""
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "123c806",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "6c5cc16",
+        "elType": "widget",
+        "widgetType": "di-logos",
+        "settings": {
+          "eyebrow": "",
+          "title": "Memberships and <em>hospitals</em>",
+          "items": [
+            {
+              "_id": "96a48da",
+              "name": "CHRISTUS MUGUERZA Health System",
+              "slug": "christus-muguerza",
+              "url": ""
+            },
+            {
+              "_id": "c9fcebc",
+              "name": "Hospital Zambrano Hellion · TecSalud",
+              "slug": "zambrano-hellion",
+              "url": ""
+            },
+            {
+              "_id": "5702dd3",
+              "name": "Hospital Ángeles Valle Oriente",
+              "slug": "angeles-valle-oriente",
+              "url": ""
+            },
+            {
+              "_id": "18f19e2",
+              "name": "Hospital Universitario «Dr. José Eleuterio González», UANL",
+              "slug": "hospital-universitario",
+              "url": ""
+            },
+            {
+              "_id": "50c0165",
+              "name": "Hospitaria",
+              "slug": "hospitaria",
+              "url": ""
+            },
+            {
+              "_id": "73ca755",
+              "name": "Mexican Board of Otolaryngology–Head and Neck Surgery (CMORL y CCC)",
+              "slug": "consejo-orl",
+              "url": ""
+            },
+            {
+              "_id": "623ffda",
+              "name": "Mexican Federation of Otolaryngology–Head and Neck Surgery (FESORMEX)",
+              "slug": "fesormex",
+              "url": ""
+            },
+            {
+              "_id": "0e483c5",
+              "name": "Ibero-American Society of Sleep Surgery (SIBECS)",
+              "slug": "sociedad-iberoamericana-sueno",
+              "url": ""
+            },
+            {
+              "_id": "38ec994",
+              "name": "Nuevo León College of Otolaryngology",
+              "slug": "colegio-orl-nl",
+              "url": ""
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "220e79d",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "44ebb81",
+        "elType": "widget",
+        "widgetType": "di-trayectoria",
+        "settings": {
+          "eyebrow": "Career",
+          "title": "Ongoing <b>training</b> in <em>sleep surgery</em>"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "90845cf",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "7a65e40",
+        "elType": "widget",
+        "widgetType": "di-opiniones",
+        "settings": {
+          "eyebrow": "Reviews",
+          "title": "What <em>patients say</em>",
+          "text": "Reviews published on Doctoralia (in Spanish). They are personal experiences and do not guarantee results."
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "95167c7",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "ed937e4",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "Book",
+          "title": "Book your<br>first <em>visit</em>",
+          "text": "30 minutes to listen to you, examine you and propose a plan. Consultations are in Spanish.",
+          "message": ""
+        },
+        "elements": []
+      }
+    ]
+  }
+]

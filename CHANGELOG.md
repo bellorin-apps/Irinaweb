@@ -273,3 +273,10 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Inicio en inglés en borrador: `tools/content/build-en.py`, `tools/deploy/setup-en.sh`.
 - Q-068: sin el aviso de register_meta.
 
+## 2026-10-16 · Claude cloud · versión en inglés, entrega 2 (D-095)
+
+- Conóceme, ENT, Sleep, First visit, Contact, FAQ, Thank you y legales (privacy notice, medical disclaimer, terms of use) en borrador; credenciales y menús en inglés.
+- Formulario por idioma: motivos y errores en inglés, gracias en inglés; el correo al consultorio sigue en español con el idioma indicado.
+- 404 y título de la 404 en inglés bajo /en/; enlaces /en/ solo a páginas publicadas (irina_url_if_published_en).
+- setup-en: regeneración de rewrites sin perder las reglas de Elementor.
+

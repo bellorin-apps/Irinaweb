@@ -1,0 +1,273 @@
+[
+  {
+    "id": "3ef03fa",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "c3f0c82",
+        "elType": "widget",
+        "widgetType": "di-bleed",
+        "settings": {
+          "eyebrow": "First visit",
+          "title": "<b>What</b> to expect<br>at your <em>visit</em>",
+          "lead": "About 30 minutes to listen to you, examine you and propose a plan. Children from birth, teenagers, adults and older adults. Consultations are in Spanish.",
+          "variant": "warm",
+          "crumb": "First visit",
+          "image": {
+            "id": "__PC_HERO_ID__",
+            "url": "__PC_HERO_URL__"
+          },
+          "focus": "50% 6%",
+          "focus_mobile": "85% 20%"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "7a5622f",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "e9f884c",
+        "elType": "widget",
+        "widgetType": "di-pasos",
+        "settings": {
+          "eyebrow": "Step by step",
+          "title": "<b>How</b> the <em>visit</em> works",
+          "steps": [
+            {
+              "_id": "9aff447",
+              "title": "Listen",
+              "text": "Your symptoms, when they started and how they affect your day and your rest.",
+              "img": "paso-escuchar"
+            },
+            {
+              "_id": "4133234",
+              "title": "Examine",
+              "text": "Ear, nose and throat, with nasal endoscopy or laryngoscopy when needed.",
+              "img": "paso-explorar"
+            },
+            {
+              "_id": "b3819c2",
+              "title": "Diagnose",
+              "text": "If the problem is sleep-related, a home study interpreted by Dr. Irina herself.",
+              "img": "paso-diagnosticar"
+            },
+            {
+              "_id": "2edd897",
+              "title": "Support",
+              "text": "A clear plan with medical and surgical options, and close follow-up.",
+              "img": "paso-acompanar"
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "9a76898",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "319d3a4",
+        "elType": "widget",
+        "widgetType": "di-narrativa",
+        "settings": {
+          "eyebrow": "What to bring",
+          "title": "<b>Bring</b> what you <em>already have</em>",
+          "bg_image": {
+            "id": "__PC_BG_ID__",
+            "url": "__PC_BG_URL__"
+          },
+          "bg_pos": "top",
+          "text": "<ul><li>ID.</li><li>Previous tests (audiometry, CT scan, sleep study) if you have them.</li><li>A list of the medications you take.</li><li>A medical referral, if you have one.</li><li>If you are coming for snoring or sleep apnea: what your partner or family has noticed while you sleep.</li><li>For children: vaccination record and history of ear or throat infections.</li></ul>",
+          "draft": ""
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "1700921",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "cb67922",
+        "elType": "widget",
+        "widgetType": "di-faq",
+        "settings": {
+          "eyebrow": "Frequently asked questions",
+          "title": "<b>Cost,</b> payments and <em>insurance</em>",
+          "bg_image": {
+            "id": "__PC_BG_ID__",
+            "url": "__PC_BG_URL__"
+          },
+          "bg_pos": "bottom",
+          "items": [
+            {
+              "_id": "52dc446",
+              "pregunta": "How much does a visit cost?",
+              "text": "We confirm the cost when you book via WhatsApp. Surgeries and tests are quoted after the evaluation."
+            },
+            {
+              "_id": "b4e56b5",
+              "pregunta": "Do you accept health insurance?",
+              "text": "We see private patients and offer reimbursement with Mexican private health insurance; Dr. Irina provides the paperwork for your insurer."
+            },
+            {
+              "_id": "0115e2d",
+              "pregunta": "How can I pay?",
+              "text": "Cash, card and bank transfer. Invoices available."
+            },
+            {
+              "_id": "fd2ac46",
+              "pregunta": "Are online visits available?",
+              "text": "Only for follow-up of patients already evaluated in the office."
+            },
+            {
+              "_id": "fdd9ad9",
+              "pregunta": "Do you see children?",
+              "text": "Yes, from birth."
+            },
+            {
+              "_id": "f0088c0",
+              "pregunta": "In what language are visits?",
+              "text": "Consultations are in Spanish."
+            },
+            {
+              "_id": "81846a9",
+              "pregunta": "Where is the office and is there parking?",
+              "text": "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Office 6, 2nd floor, Cumbres 2.º Sector, Monterrey. Free parking; elevator and wheelchair access."
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "edab947",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "50ef6e8",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "Book",
+          "title": "Book your<br><em>first visit</em>",
+          "text": "Message us on WhatsApp and we’ll confirm a time.",
+          "message": ""
+        },
+        "elements": []
+      }
+    ]
+  }
+]

@@ -101,3 +101,27 @@ function irina_nav_fallback_legal_en( array $args = [] ): void {
 		printf( '<ul class="%s">%s</ul>', esc_attr( (string) ( $args['menu_class'] ?? 'menu' ) ), $out ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapado arriba.
 	}
 }
+
+/**
+ * Texto de una credencial en el idioma de la página: en /en/ usa la traducción guardada en `_di_en` (setup-en.sh) si existe.
+ *
+ * @param WP_Post $credential Credencial.
+ * @param string  $field      «titulo», «institucion» o «lugar».
+ */
+function irina_cred_text( WP_Post $credential, string $field ): string {
+	if ( 'en' === irina_lang() ) {
+		$en = get_post_meta( $credential->ID, '_di_en', true );
+		if ( is_array( $en ) && ! empty( $en[ $field ] ) ) {
+			return (string) $en[ $field ];
+		}
+	}
+	return 'titulo' === $field ? $credential->post_title : (string) get_post_meta( $credential->ID, 'di_' . $field, true );
+}
+
+// Título de la 404 bajo /en/: Rank Math usa el de Ajustes (en español, Q-061).
+add_filter(
+	'rank_math/frontend/title',
+	static function ( string $title ): string {
+		return is_404() && 'en' === irina_lang() ? 'Page not found | ' . wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES ) : $title;
+	}
+);

@@ -616,3 +616,15 @@ deploy-code (respaldo `~/deploy-backups/20261016-152400/` con db.sql.gz) y purga
 - **Pendiente de José con sesión:**
   - vista previa de la página 384 (lang en-US, hero en inglés con «Consultations are in Spanish.», pie y barra en inglés, WhatsApp con mensaje en inglés);
   - los 6 campos «Inglés · …» en Consultorio.
+
+## Versión en inglés: entrega 2 (Claude cloud, 2026-10-16, D-095)
+
+Páginas base y legales en inglés en borrador. Probado en el WordPress 7.1.3 local con páginas españolas de referencia (builds del repo) y las 16 credenciales:
+- **setup-en.php** crea 10 borradores hijos de /en/ (contact, dr-irina-gonzalez-saez, ent, faq, first-visit, sleep, thank-you y los 3 legales en HTML con shortcodes), cada uno emparejado con su página española, más las credenciales `_di_en` (16) y los menús primary_en, footer_en y legal_en.
+- **Anónimo, con todo en borrador:** /en/, /en/ent/ y /en/privacy-notice/ dan 404 (/en/contact/ hace la 301 de adivinanza de WordPress a /contacto/). La portada, Contacto y Conóceme en español: 0 hreflang, 0 selector y 0 enlaces a /en/.
+- **Publicando todo solo en local (después se volvió a borrador):** las 11 URL en 200 con `lang="en-US"` y hreflang recíproco; /en/nope/ da 404 con «Page not found». El menú inglés muestra Home, ENT, Sleep, About, First visit y Contact; el legal inglés, Privacy notice, Medical disclaimer y Terms of use. Selector «ES» hacia la portada española. Las credenciales salen en inglés en Conóceme (Specialty, Subspecialty, Certification). Sin desborde a 1440 ni a 390 en 5 páginas y sin errores JS.
+- **Formulario en inglés:** etiquetas y motivos en inglés. Por fetch, un error de validación devuelve «Please enter your name.» (en español con `di_lang=es`). El correo generado, capturado con un filtro local sin enviarlo, va en español con la fila «Idioma: Inglés: escribió desde /en/. La consulta es en español.».
+- **Rewrites:** setup-en.php ya no hace `flush_rewrite_rules` con Elementor desactivado (perdería sus reglas, como advierte setup-site.sh). Borra `rewrite_rules` y setup-en.sh visita la portada para regenerarlas con todos los plugins. **Producción:** la entrega 1 sí hizo el flush; conviene borrar `rewrite_rules` y visitar la portada una vez.
+- PHPCS, ESLint/stylelint y nap-check en verde. Catálogo del tema: 128 cadenas (más las 3 de la carga de Doctoralia por botón de Codex y «Dr. Irina»).
+- **Límite:** traducción de Claude, pendiente de la revisión de la Dra. (13.6). Sin fotos ni Rank Math configurado en local (los títulos de Rank Math se escriben en `rank_math_title`).
+

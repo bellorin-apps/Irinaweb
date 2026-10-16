@@ -1,6 +1,57 @@
 {
   "en": {
     "title": "Home",
-    "es": "__front__"
+    "es": "__front__",
+    "kind": "elementor"
+  },
+  "dr-irina-gonzalez-saez": {
+    "title": "Dr. Irina González Sáez",
+    "es": "dra-irina-gonzalez-saez",
+    "kind": "elementor"
+  },
+  "ent": {
+    "title": "Otolaryngology (ENT)",
+    "es": "otorrinolaringologia",
+    "kind": "elementor"
+  },
+  "sleep": {
+    "title": "Snoring and sleep apnea",
+    "es": "sueno",
+    "kind": "elementor"
+  },
+  "first-visit": {
+    "title": "First visit",
+    "es": "primera-consulta",
+    "kind": "elementor"
+  },
+  "contact": {
+    "title": "Contact",
+    "es": "contacto",
+    "kind": "elementor"
+  },
+  "thank-you": {
+    "title": "Thank you",
+    "es": "gracias",
+    "kind": "elementor"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "es": "preguntas-frecuentes",
+    "kind": "elementor"
+  },
+  "privacy-notice": {
+    "title": "Privacy notice",
+    "es": "aviso-de-privacidad",
+    "kind": "html"
+  },
+  "medical-disclaimer": {
+    "title": "Medical disclaimer",
+    "es": "aviso-medico",
+    "kind": "html"
+  },
+  "terms-of-use": {
+    "title": "Terms of use",
+    "es": "terminos-de-uso",
+    "kind": "html"
   }
 }

@@ -1,0 +1,120 @@
+[
+  {
+    "id": "4d25396",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "517ab13",
+        "elType": "widget",
+        "widgetType": "di-bleed",
+        "settings": {
+          "eyebrow": "Message sent",
+          "title": "<b>Received</b>, <em>thank you</em>",
+          "lead": "We’ll contact you during office hours by phone or WhatsApp. If it’s urgent, go to the nearest emergency department.",
+          "variant": "sand",
+          "crumb": "Thank you"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "50440ed",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "c6b2284",
+        "elType": "widget",
+        "widgetType": "di-narrativa",
+        "settings": {
+          "eyebrow": "In the meantime",
+          "title": "What you <b>can</b> get <em>ready</em>",
+          "lead": "Previous tests, a list of your medications and, if it’s about snoring or sleep apnea, what the person who sleeps with you has noticed.",
+          "text": ""
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "1a295d2",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "46a3dca",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "In a hurry?",
+          "title": "If you prefer, <em>message us now</em>",
+          "text": "WhatsApp is the fastest channel for booking.",
+          "message": ""
+        },
+        "elements": []
+      }
+    ]
+  }
+]

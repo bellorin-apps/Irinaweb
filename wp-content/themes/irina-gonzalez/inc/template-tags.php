@@ -39,6 +39,9 @@ function irina_part( string $name, array $args = [] ): void {
 function irina_url_if_published( string $url ): string {
 	$path = (string) wp_parse_url( $url, PHP_URL_PATH );
 	$host = wp_parse_url( $url, PHP_URL_HOST );
+	if ( ( ! $host || wp_parse_url( home_url(), PHP_URL_HOST ) === $host ) && preg_match( '#^/en(/|$)#', $path ) ) {
+		return irina_url_if_published_en( $path, (string) wp_parse_url( $url, PHP_URL_FRAGMENT ) );
+	}
 	if ( ( $host && wp_parse_url( home_url(), PHP_URL_HOST ) !== $host ) || ! preg_match( '#^/(otorrinolaringologia|sueno|padecimientos|tratamientos)(/|$)#', $path ) ) {
 		return $url;
 	}
@@ -67,19 +70,46 @@ function irina_url_if_published( string $url ): string {
 	return (string) get_permalink( $posts[0] ) . ( '' !== $frag ? '#' . rawurlencode( $frag ) : '' );
 }
 
+/**
+ * Versión inglesa (D-095): /en/… solo enlaza si la página inglesa está publicada; /en/sleep/{slug}/ busca la ficha inglesa.
+ *
+ * @param string $path Ruta bajo /en/.
+ * @param string $frag Ancla, sin «#».
+ */
+function irina_url_if_published_en( string $path, string $frag ): string {
+	$hash = '' !== $frag ? '#' . rawurlencode( $frag ) : '';
+	if ( preg_match( '#^/en/sleep/([^/]+)/?$#', $path, $m ) ) {
+		$posts = get_posts(
+			[
+				'post_type'      => [ 'condicion', 'tratamiento' ],
+				'name'           => sanitize_title( $m[1] ),
+				'post_status'    => 'publish',
+				'posts_per_page' => 1,
+				'meta_key'       => '_di_lang', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- una ficha por slug.
+				'meta_value'     => 'en', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			]
+		);
+		if ( $posts ) {
+			return (string) get_permalink( $posts[0] ) . $hash;
+		}
+	}
+	$page = get_page_by_path( trim( $path, '/' ) );
+	return $page instanceof WP_Post && 'publish' === $page->post_status ? (string) get_permalink( $page ) . $hash : '';
+}
+
 /** Evita 404 desde Home mientras los pilares y fichas esperan aprobación médica: si no está publicado, Primera consulta o Contacto. */
 function irina_public_content_url( string $url ): string {
 	$public = irina_url_if_published( $url );
 	if ( '' !== $public ) {
 		return $public;
 	}
-	foreach ( [ 'primera-consulta', 'contacto' ] as $fallback ) {
+	foreach ( ( function_exists( 'irina_lang' ) && 'en' === irina_lang() ? [ 'en/first-visit', 'en/contact' ] : [ 'primera-consulta', 'contacto' ] ) as $fallback ) {
 		$page = get_page_by_path( $fallback );
 		if ( $page && 'publish' === $page->post_status ) {
 			return (string) get_permalink( $page );
 		}
 	}
-	return home_url( '/' );
+	return function_exists( 'irina_home_url' ) ? irina_home_url() : home_url( '/' );
 }
 
 /**

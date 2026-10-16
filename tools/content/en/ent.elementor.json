@@ -1,0 +1,402 @@
+[
+  {
+    "id": "bc064bc",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "7e5c013",
+        "elType": "widget",
+        "widgetType": "di-bleed",
+        "settings": {
+          "eyebrow": "Otolaryngology (ENT)",
+          "title": "Ear, <b>nose and throat,</b><br><em>from birth</em>",
+          "lead": "Ear, nose and throat consultations for children, teenagers, adults and older adults in Monterrey. Consultations are in Spanish.",
+          "variant": "sand",
+          "crumb": "ENT"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "95fa167",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "c3cd992",
+        "elType": "widget",
+        "widgetType": "di-listado",
+        "settings": {
+          "eyebrow": "Ear",
+          "title": "<b>What</b> I treat <em>in the ear</em>",
+          "post_type": "",
+          "anchor": "ear",
+          "items": [
+            {
+              "_id": "7d523fe",
+              "label": "Ear infections (otitis)",
+              "sub": "Infection or inflammation of the ear",
+              "url": ""
+            },
+            {
+              "_id": "4141274",
+              "label": "Earwax blockage",
+              "sub": "Ear blocked by earwax",
+              "url": ""
+            },
+            {
+              "_id": "8090bcd",
+              "label": "Hearing loss",
+              "sub": "Reduced hearing",
+              "url": ""
+            },
+            {
+              "_id": "ca56238",
+              "label": "Tinnitus",
+              "sub": "Ringing or buzzing in the ear",
+              "url": ""
+            },
+            {
+              "_id": "3617c5d",
+              "label": "Vertigo",
+              "sub": "Dizziness or a spinning sensation",
+              "url": ""
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "842f486",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "026d694",
+        "elType": "widget",
+        "widgetType": "di-listado",
+        "settings": {
+          "eyebrow": "Nose",
+          "title": "<b>What</b> I treat <em>in the nose</em>",
+          "post_type": "",
+          "anchor": "nose",
+          "tight": "yes",
+          "items": [
+            {
+              "_id": "af399e3",
+              "label": "Rhinitis",
+              "sub": "Frequent stuffy nose, sneezing or runny nose",
+              "url": ""
+            },
+            {
+              "_id": "7319c53",
+              "label": "Sinusitis",
+              "sub": "Inflammation of the sinuses",
+              "url": ""
+            },
+            {
+              "_id": "aba06b2",
+              "label": "Deviated septum",
+              "sub": "Difficulty breathing through the nose",
+              "url": ""
+            },
+            {
+              "_id": "c1bc079",
+              "label": "Nasal polyps",
+              "sub": "Growths inside the nose",
+              "url": ""
+            },
+            {
+              "_id": "c8af5f8",
+              "label": "Nosebleeds",
+              "sub": "Epistaxis",
+              "url": ""
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "2a798fb",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "d168872",
+        "elType": "widget",
+        "widgetType": "di-listado",
+        "settings": {
+          "eyebrow": "Throat and voice",
+          "title": "<b>What</b> I treat <em>in the throat</em>",
+          "post_type": "",
+          "anchor": "throat",
+          "tight": "yes",
+          "items": [
+            {
+              "_id": "4a1dfc6",
+              "label": "Tonsillitis",
+              "sub": "Frequent sore throat",
+              "url": ""
+            },
+            {
+              "_id": "1000322",
+              "label": "Hoarseness and voice changes",
+              "sub": "Including laryngopharyngeal reflux",
+              "url": ""
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "bbaafe7",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "205e9c2",
+        "elType": "widget",
+        "widgetType": "di-listado",
+        "settings": {
+          "eyebrow": "Procedures",
+          "title": "<b>Office</b> and <em>surgery</em>",
+          "post_type": "",
+          "anchor": "procedures",
+          "tight": "yes",
+          "note": "Any surgery is recommended only after an evaluation, where options and alternatives are explained.",
+          "items": [
+            {
+              "_id": "309f111",
+              "label": "Nasal endoscopy and laryngoscopy",
+              "sub": "In the office, when needed",
+              "url": ""
+            },
+            {
+              "_id": "04b182b",
+              "label": "Septoplasty",
+              "sub": "Surgery of the nasal septum",
+              "url": ""
+            },
+            {
+              "_id": "44a92d0",
+              "label": "Turbinoplasty",
+              "sub": "Surgery of the turbinates",
+              "url": ""
+            },
+            {
+              "_id": "6e61a09",
+              "label": "Tonsils and adenoids",
+              "sub": "Surgery in children and adults",
+              "url": ""
+            },
+            {
+              "_id": "6b3a908",
+              "label": "Endoscopic sinus surgery",
+              "sub": "Surgery of the sinuses",
+              "url": ""
+            },
+            {
+              "_id": "0f564dc",
+              "label": "Functional and cosmetic rhinoplasty",
+              "sub": "Nose surgery for function and for shape",
+              "url": ""
+            },
+            {
+              "_id": "f95d074",
+              "label": "Sleep surgery",
+              "sub": "Snoring and obstructive sleep apnea",
+              "url": ""
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "834cfe1",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "32fda4a",
+        "elType": "widget",
+        "widgetType": "di-narrativa",
+        "settings": {
+          "eyebrow": "How I work",
+          "title": "<b>First</b> listen, then <em>examine</em>",
+          "lead": "The first visit lasts about 30 minutes. It starts by understanding what is happening to you and since when; it continues with a complete ear, nose and throat examination, with endoscopy in the office when needed, and ends with a clearly explained plan. If your case needs another specialist, I will tell you and refer you.",
+          "text": ""
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "6221cb2",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "d54966e",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "Book",
+          "title": "A <b>symptom</b> that <em>won’t go away</em>?",
+          "text": "Message us on WhatsApp and we’ll help you choose the right type of visit. Consultations are in Spanish.",
+          "message": "Hello, I would like to book an ENT appointment with Dr. Irina González Sáez."
+        },
+        "elements": []
+      }
+    ]
+  }
+]

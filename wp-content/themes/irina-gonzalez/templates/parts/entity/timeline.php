@@ -36,14 +36,14 @@ $irina_rows = [];
 foreach ( $irina_q as $irina_c ) {
 	$irina_tipo   = (string) get_post_meta( $irina_c->ID, 'di_tipo', true );
 	$irina_anio   = (string) get_post_meta( $irina_c->ID, 'di_anio', true );
-	$irina_inst   = (string) get_post_meta( $irina_c->ID, 'di_institucion', true );
-	$irina_lug    = (string) get_post_meta( $irina_c->ID, 'di_lugar', true );
+	$irina_inst   = irina_cred_text( $irina_c, 'institucion' );
+	$irina_lug    = irina_cred_text( $irina_c, 'lugar' );
 	$irina_pre    = [
 		'conferencia' => __( 'Ponente: ', 'irina-gonzalez' ),
 		'publicacion' => __( 'Coautora: ', 'irina-gonzalez' ),
 		'trabajo'     => __( 'Trabajo presentado: ', 'irina-gonzalez' ),
 	][ $irina_tipo ] ?? '';
-	$irina_rows[] = [ '' !== $irina_anio ? $irina_anio : __( 'Docencia', 'irina-gonzalez' ), $irina_pre . $irina_c->post_title . ( '' !== $irina_inst ? ', ' . $irina_inst : '' ) . ( '' !== $irina_lug ? ', ' . $irina_lug : '' ) ];
+	$irina_rows[] = [ '' !== $irina_anio ? $irina_anio : __( 'Docencia', 'irina-gonzalez' ), $irina_pre . irina_cred_text( $irina_c, 'titulo' ) . ( '' !== $irina_inst ? ', ' . $irina_inst : '' ) . ( '' !== $irina_lug ? ', ' . $irina_lug : '' ) ];
 }
 if ( ! $irina_rows ) {
 	return;

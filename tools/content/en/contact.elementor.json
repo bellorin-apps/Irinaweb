@@ -1,0 +1,220 @@
+[
+  {
+    "id": "4b8506a",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "42f8e35",
+        "elType": "widget",
+        "widgetType": "di-bleed",
+        "settings": {
+          "eyebrow": "Contact",
+          "title": "<b>Office</b> in<br>Cumbres, <em>Monterrey</em>",
+          "lead": "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Office 6, 2nd floor. By appointment only: book via WhatsApp. Consultations are in Spanish.",
+          "variant": "warm",
+          "crumb": "Contact",
+          "image": {
+            "id": "__CO_HERO_ID__",
+            "url": "__CO_HERO_URL__"
+          },
+          "focus": "50% 6%",
+          "focus_mobile": "85% 20%"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "b64dc53",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "2542d25",
+        "elType": "widget",
+        "widgetType": "di-ubicacion",
+        "settings": {
+          "eyebrow": "Getting here",
+          "title": "<b>CAB</b> Medical,<br><em>Headquarters</em>",
+          "facts": [
+            {
+              "_id": "892f635",
+              "label": "Parking",
+              "value": "Free"
+            },
+            {
+              "_id": "492c3ff",
+              "label": "Access",
+              "value": "Elevator and wheelchair access"
+            },
+            {
+              "_id": "f9a0374",
+              "label": "Language",
+              "value": "Consultations are in Spanish"
+            }
+          ],
+          "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.777590213581!2d-100.3765032!3d25.7117869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297c19d8eb1cb%3A0x5c3e8ac4d16be247!2sDra%20Irina%20Gonz%C3%A1lez%20S%C3%A1ez!5e0!3m2!1sen!2smx!4v1791433463370!5m2!1sen!2smx"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "6db8ef3",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "8277f6c",
+        "elType": "widget",
+        "widgetType": "di-form",
+        "settings": {
+          "eyebrow": "Write to us",
+          "title": "Would you like<br>us to <em>call you</em>?",
+          "lead": "Leave your name and phone number and we’ll contact you during office hours. For faster booking, use WhatsApp.",
+          "button": "Send request"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "e646907",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "1a21a96",
+        "elType": "widget",
+        "widgetType": "di-narrativa",
+        "settings": {
+          "eyebrow": "Emergencies",
+          "title": "<b>This website</b> is not an<br><em>emergency</em> channel",
+          "lead": "If you have difficulty breathing, a nosebleed that won’t stop or severe pain, go to the nearest emergency department or call 911. For appointments and questions, message us on WhatsApp.",
+          "text": ""
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "efa49d6",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "fd18f08",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "Book",
+          "title": "Shall we <em>book</em>?",
+          "text": "WhatsApp is the fastest channel for appointments.",
+          "message": ""
+        },
+        "elements": []
+      }
+    ]
+  }
+]

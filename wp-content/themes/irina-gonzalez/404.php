@@ -21,13 +21,16 @@ irina_part(
 		'cta'     => irina_whatsapp_button( '', __( 'Hola, llegué a una página que no existe en el sitio de la Dra. Irina González Sáez y quisiera agendar una consulta.', 'irina-gonzalez' ) ),
 	]
 );
+// D-095: bajo /en/ (si la versión inglesa está publicada) las salidas son las páginas inglesas.
+$irina_en     = 'en' === irina_lang() && home_url( '/' ) !== irina_home_url();
+$irina_paths  = $irina_en ? [ 'en/', 'en/ent/', 'en/sleep/', 'en/dr-irina-gonzalez-saez/', 'en/first-visit/', 'en/contact/' ] : [ '', 'otorrinolaringologia/', 'sueno/', 'dra-irina-gonzalez-saez/', 'primera-consulta/', 'contacto/' ];
 $irina_routes = [
-	[ home_url( '/' ), __( 'Inicio', 'irina-gonzalez' ), __( 'Otorrinolaringólogo en Monterrey.', 'irina-gonzalez' ) ],
-	[ home_url( '/otorrinolaringologia/' ), __( 'Otorrinolaringología', 'irina-gonzalez' ), __( 'Oído, nariz y garganta, desde los 0 meses.', 'irina-gonzalez' ) ],
-	[ home_url( '/sueno/' ), __( 'Ronquido y apnea del sueño', 'irina-gonzalez' ), __( 'Del ronquido al descanso.', 'irina-gonzalez' ) ],
-	[ home_url( '/dra-irina-gonzalez-saez/' ), __( 'Dra. Irina González Sáez', 'irina-gonzalez' ), __( 'Formación, certificaciones y enfoque.', 'irina-gonzalez' ) ],
-	[ home_url( '/primera-consulta/' ), __( 'Primera consulta', 'irina-gonzalez' ), __( 'Qué esperar, qué llevar y cómo agendar.', 'irina-gonzalez' ) ],
-	[ home_url( '/contacto/' ), __( 'Contacto', 'irina-gonzalez' ), __( 'Consultorio, mapa y WhatsApp.', 'irina-gonzalez' ) ],
+	[ home_url( '/' . $irina_paths[0] ), __( 'Inicio', 'irina-gonzalez' ), __( 'Otorrinolaringólogo en Monterrey.', 'irina-gonzalez' ) ],
+	[ home_url( '/' . $irina_paths[1] ), __( 'Otorrinolaringología', 'irina-gonzalez' ), __( 'Oído, nariz y garganta, desde los 0 meses.', 'irina-gonzalez' ) ],
+	[ home_url( '/' . $irina_paths[2] ), __( 'Ronquido y apnea del sueño', 'irina-gonzalez' ), __( 'Del ronquido al descanso.', 'irina-gonzalez' ) ],
+	[ home_url( '/' . $irina_paths[3] ), __( 'Dra. Irina González Sáez', 'irina-gonzalez' ), __( 'Formación, certificaciones y enfoque.', 'irina-gonzalez' ) ],
+	[ home_url( '/' . $irina_paths[4] ), __( 'Primera consulta', 'irina-gonzalez' ), __( 'Qué esperar, qué llevar y cómo agendar.', 'irina-gonzalez' ) ],
+	[ home_url( '/' . $irina_paths[5] ), __( 'Contacto', 'irina-gonzalez' ), __( 'Consultorio, mapa y WhatsApp.', 'irina-gonzalez' ) ],
 ];
 ?>
 <div class="di-container--narrow di-section">
@@ -45,7 +48,9 @@ $irina_routes = [
 			<li><b><?php echo esc_html( sprintf( '%02d', $irina_n ) ); ?></b><span><a href="<?php echo esc_url( $irina_url ); ?>"><?php echo esc_html( $irina_label ); ?></a><br><span class="di-muted"><?php echo esc_html( $irina_desc ); ?></span></span></li>
 		<?php endforeach; ?>
 	</ol>
-	<p class="di-muted di-reveal" style="margin-top:var(--space-lg)"><?php esc_html_e( 'Si llegaste desde un enlace antiguo de otorrino-monterrey.com, el contenido vive ahora en este sitio.', 'irina-gonzalez' ); ?></p>
+	<?php if ( ! $irina_en ) : ?>
+		<p class="di-muted di-reveal" style="margin-top:var(--space-lg)"><?php esc_html_e( 'Si llegaste desde un enlace antiguo de otorrino-monterrey.com, el contenido vive ahora en este sitio.', 'irina-gonzalez' ); ?></p>
+	<?php endif; ?>
 </div>
 <?php
 irina_part( 'cta-bleed' );

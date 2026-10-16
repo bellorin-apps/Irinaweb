@@ -13,7 +13,10 @@ Salida en tools/content/en/: <slug>.elementor.json por página, seo.json (títul
 Las anclas inglesas de las páginas de área son #ear, #nose, #throat y #procedures (ENT), y #conditions y #pathway (Sleep).
 """
 import hashlib, json, pathlib
-from practice import CENTRO, CIUDAD, ZONA
+from practice import CALLE, CENTRO, CIUDAD, COLONIA, ZONA
+
+DIRECCION_EN_CORTA = f"{CENTRO}, {CALLE}, Office 6, 2nd floor"
+DIRECCION_EN = f"{DIRECCION_EN_CORTA}, {COLONIA}, {CIUDAD}"
 
 OUT = pathlib.Path(__file__).with_name("en")
 
@@ -101,9 +104,187 @@ pages["en"] = ("Home", "__front__", [
         "text": f"Message us on WhatsApp and we’ll help you choose the right type of visit. {SPANISH_NOTE}", "message": ""}),
 ])
 
+
+pages["dr-irina-gonzalez-saez"] = ("Dr. Irina González Sáez", "dra-irina-gonzalez-saez", [
+    container("dra-bleed", "di-bleed", {
+        "eyebrow": "Your ENT | Sleep specialist",
+        "title": "<b>Dr.</b> Irina<br>González <em>Sáez</em>",
+        "lead": f"Board-certified otolaryngologist (ENT) in Monterrey, with subspecialty training in sleep-disordered breathing, snoring and rhinology. Children from birth, teenagers, adults and older adults. {SPANISH_NOTE}",
+        "variant": "warm", "crumb": "About", "image": {"id": "__DRA_HERO_ID__", "url": "__DRA_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "92% 8%", "secondary_short": "Doctoralia",
+        "secondary_label": "Reviews on Doctoralia", "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"}),
+    container("dra-enfoque", "di-narrativa", {
+        "eyebrow": "Approach", "title": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <b><em>treatment</em></b>”",
+        "lead": "The first visit lasts about 30 minutes. It starts by understanding what is happening to you and since when; it continues with a complete ear, nose and throat examination, with endoscopy in the office when needed, and ends with a clearly explained plan, without promises that cannot be kept.",
+        "text": "", "draft": "",
+        "image": {"id": "__DRA_ENDO_ID__", "url": "__DRA_ENDO_URL__"}, "image_pos": "right", "image_alt": "Endoscopy camera head Dr. Irina uses in the office"}),
+    container("dra-creds", "di-credenciales", {"eyebrow": "Training and certifications", "title": "Verifiable <em>credentials</em>", "tags_title": "", "extra_tags": ""}),
+    container("dra-logos", "di-logos", {
+        "eyebrow": "", "title": "Memberships and <em>hospitals</em>",
+        "items": rep([
+            ("CHRISTUS MUGUERZA Health System", "christus-muguerza", ""),
+            ("Hospital Zambrano Hellion · TecSalud", "zambrano-hellion", ""),
+            ("Hospital Ángeles Valle Oriente", "angeles-valle-oriente", ""),
+            ("Hospital Universitario «Dr. José Eleuterio González», UANL", "hospital-universitario", ""),
+            ("Hospitaria", "hospitaria", ""),
+            ("Mexican Board of Otolaryngology–Head and Neck Surgery (CMORL y CCC)", "consejo-orl", ""),
+            ("Mexican Federation of Otolaryngology–Head and Neck Surgery (FESORMEX)", "fesormex", ""),
+            ("Ibero-American Society of Sleep Surgery (SIBECS)", "sociedad-iberoamericana-sueno", ""),
+            ("Nuevo León College of Otolaryngology", "colegio-orl-nl", ""),
+        ], "name", "slug", "url")}),
+    container("dra-timeline", "di-trayectoria", {"eyebrow": "Career", "title": "Ongoing <b>training</b> in <em>sleep surgery</em>"}),
+    container("dra-opiniones", "di-opiniones", {"eyebrow": "Reviews", "title": "What <em>patients say</em>",
+        "text": "Reviews published on Doctoralia (in Spanish). They are personal experiences and do not guarantee results."}),
+    container("dra-cta", "di-cta", {"eyebrow": "Book", "title": "Book your<br>first <em>visit</em>",
+        "text": f"30 minutes to listen to you, examine you and propose a plan. {SPANISH_NOTE}", "message": ""}),
+])
+
+pages["ent"] = ("Otolaryngology (ENT)", "otorrinolaringologia", [
+    container("orl-bleed", "di-bleed", {"eyebrow": "Otolaryngology (ENT)", "title": "Ear, <b>nose and throat,</b><br><em>from birth</em>",
+        "lead": f"Ear, nose and throat consultations for children, teenagers, adults and older adults in Monterrey. {SPANISH_NOTE}",
+        "variant": "sand", "crumb": "ENT"}),
+    container("orl-oido", "di-listado", {"eyebrow": "Ear", "title": "<b>What</b> I treat <em>in the ear</em>", "post_type": "", "anchor": "ear",
+        "items": rep([("Ear infections (otitis)", "Infection or inflammation of the ear", ""), ("Earwax blockage", "Ear blocked by earwax", ""), ("Hearing loss", "Reduced hearing", ""), ("Tinnitus", "Ringing or buzzing in the ear", ""), ("Vertigo", "Dizziness or a spinning sensation", "")], "label", "sub", "url")}),
+    container("orl-nariz", "di-listado", {"eyebrow": "Nose", "title": "<b>What</b> I treat <em>in the nose</em>", "post_type": "", "anchor": "nose", "tight": "yes",
+        "items": rep([("Rhinitis", "Frequent stuffy nose, sneezing or runny nose", ""), ("Sinusitis", "Inflammation of the sinuses", ""), ("Deviated septum", "Difficulty breathing through the nose", ""), ("Nasal polyps", "Growths inside the nose", ""), ("Nosebleeds", "Epistaxis", "")], "label", "sub", "url")}),
+    container("orl-garganta", "di-listado", {"eyebrow": "Throat and voice", "title": "<b>What</b> I treat <em>in the throat</em>", "post_type": "", "anchor": "throat", "tight": "yes",
+        "items": rep([("Tonsillitis", "Frequent sore throat", ""), ("Hoarseness and voice changes", "Including laryngopharyngeal reflux", "")], "label", "sub", "url")}),
+    container("orl-proc", "di-listado", {"eyebrow": "Procedures", "title": "<b>Office</b> and <em>surgery</em>", "post_type": "", "anchor": "procedures", "tight": "yes",
+        "note": "Any surgery is recommended only after an evaluation, where options and alternatives are explained.",
+        "items": rep([("Nasal endoscopy and laryngoscopy", "In the office, when needed", ""), ("Septoplasty", "Surgery of the nasal septum", ""), ("Turbinoplasty", "Surgery of the turbinates", ""), ("Tonsils and adenoids", "Surgery in children and adults", ""), ("Endoscopic sinus surgery", "Surgery of the sinuses", ""), ("Functional and cosmetic rhinoplasty", "Nose surgery for function and for shape", ""), ("Sleep surgery", "Snoring and obstructive sleep apnea", "")], "label", "sub", "url")}),
+    container("orl-como", "di-narrativa", {"eyebrow": "How I work", "title": "<b>First</b> listen, then <em>examine</em>",
+        "lead": "The first visit lasts about 30 minutes. It starts by understanding what is happening to you and since when; it continues with a complete ear, nose and throat examination, with endoscopy in the office when needed, and ends with a clearly explained plan. If your case needs another specialist, I will tell you and refer you.",
+        "text": ""}),
+    container("orl-cta", "di-cta", {"eyebrow": "Book", "title": "A <b>symptom</b> that <em>won’t go away</em>?", "text": f"Message us on WhatsApp and we’ll help you choose the right type of visit. {SPANISH_NOTE}", "message": "Hello, I would like to book an ENT appointment with Dr. Irina González Sáez."}),
+])
+
+pages["sleep"] = ("Snoring and sleep apnea", "sueno", [
+    container("su-bleed", "di-bleed", {"eyebrow": "Sleep and breathing", "title": "From <b>snoring</b><br><em>to rest</em>",
+        "lead": f"Otolaryngologist with subspecialty training in sleep-disordered breathing, snoring and rhinology. {SPANISH_NOTE}",
+        "variant": "night", "crumb": "Sleep", "whatsapp_label": "Book a snoring and sleep apnea evaluation"}),
+    container("su-cond", "di-listado", {"eyebrow": "What I treat", "title": "<b>Snoring</b> and <em>sleep apnea</em>", "post_type": "", "anchor": "conditions",
+        "items": rep([("Snoring", "In adults and children", "/en/sleep/snoring/"), ("Obstructive sleep apnea", "Pauses in breathing during sleep", "/en/sleep/obstructive-sleep-apnea/")], "label", "sub", "url")}),
+    container("su-ruta", "di-listado", {"eyebrow": "Tests and treatments", "title": "<b>The</b> full <em>pathway</em>", "post_type": "", "anchor": "pathway", "tight": "yes",
+        "note": "Treatment is decided with the study results in hand and according to where the airway narrows.",
+        "items": rep([("Home sleep test", "Respiratory polygraphy interpreted by Dr. Irina herself", "/en/sleep/home-sleep-test/"), ("Sleep endoscopy", "Shows where the airway closes during sleep", ""), ("CPAP", "Prescription, adjustment and follow-up", "/en/sleep/cpap-therapy/"), ("Snoring and sleep apnea surgery", "Nose, palate or tonsils, depending on the case", "/en/sleep/snoring-and-sleep-apnea-surgery/"), ("Mandibular advancement device", "With a dentist specialized in sleep", "")], "label", "sub", "url")}),
+    container("su-como", "di-narrativa", {"eyebrow": "How I work", "title": "<b>An</b> ENT for the <em>airway</em>",
+        "lead": "Nose, palate, tonsils and tongue: as an otolaryngologist I directly examine where the airway narrows during sleep. The evaluation starts in the office; with the study results in hand I explain the options and we decide on the treatment together.",
+        "text": ""}),
+    container("su-cta", "di-cta", {"eyebrow": "Book", "title": "Shall we talk about what’s <b>keeping</b> you from <em>resting</em>?", "text": f"A 30-minute evaluation determines whether you need a study. {SPANISH_NOTE}", "message": "Hello, I would like to book a snoring or sleep apnea evaluation with Dr. Irina González Sáez."}),
+])
+
+pages["first-visit"] = ("First visit", "primera-consulta", [
+    container("pc-bleed", "di-bleed", {"eyebrow": "First visit", "title": "<b>What</b> to expect<br>at your <em>visit</em>",
+        "lead": f"About 30 minutes to listen to you, examine you and propose a plan. Children from birth, teenagers, adults and older adults. {SPANISH_NOTE}",
+        "variant": "warm", "crumb": "First visit", "image": {"id": "__PC_HERO_ID__", "url": "__PC_HERO_URL__"}, "focus": "50% 6%", "focus_mobile": "85% 20%"}),
+    container("pc-pasos", "di-pasos", {"eyebrow": "Step by step", "title": "<b>How</b> the <em>visit</em> works", "steps": rep([
+        ("Listen", "Your symptoms, when they started and how they affect your day and your rest.", "paso-escuchar"),
+        ("Examine", "Ear, nose and throat, with nasal endoscopy or laryngoscopy when needed.", "paso-explorar"),
+        ("Diagnose", "If the problem is sleep-related, a home study interpreted by Dr. Irina herself.", "paso-diagnosticar"),
+        ("Support", "A clear plan with medical and surgical options, and close follow-up.", "paso-acompanar"),
+    ], "title", "text", "img")}),
+    container("pc-narr", "di-narrativa", {"eyebrow": "What to bring", "title": "<b>Bring</b> what you <em>already have</em>",
+        "bg_image": {"id": "__PC_BG_ID__", "url": "__PC_BG_URL__"}, "bg_pos": "top",
+        "text": "<ul><li>ID.</li><li>Previous tests (audiometry, CT scan, sleep study) if you have them.</li><li>A list of the medications you take.</li><li>A medical referral, if you have one.</li><li>If you are coming for snoring or sleep apnea: what your partner or family has noticed while you sleep.</li><li>For children: vaccination record and history of ear or throat infections.</li></ul>", "draft": ""}),
+    container("pc-faq", "di-faq", {"eyebrow": "Frequently asked questions", "title": "<b>Cost,</b> payments and <em>insurance</em>",
+        "bg_image": {"id": "__PC_BG_ID__", "url": "__PC_BG_URL__"}, "bg_pos": "bottom", "items": rep([
+        ("How much does a visit cost?", "We confirm the cost when you book via WhatsApp. Surgeries and tests are quoted after the evaluation."),
+        ("Do you accept health insurance?", "We see private patients and offer reimbursement with Mexican private health insurance; Dr. Irina provides the paperwork for your insurer."),
+        ("How can I pay?", "Cash, card and bank transfer. Invoices available."),
+        ("Are online visits available?", "Only for follow-up of patients already evaluated in the office."),
+        ("Do you see children?", "Yes, from birth."),
+        ("In what language are visits?", "Consultations are in Spanish."),
+        ("Where is the office and is there parking?", f"{DIRECCION_EN}. Free parking; elevator and wheelchair access."),
+    ], "pregunta", "text")}),
+    container("pc-cta", "di-cta", {"eyebrow": "Book", "title": "Book your<br><em>first visit</em>", "text": "Message us on WhatsApp and we’ll confirm a time.", "message": ""}),
+])
+
+pages["contact"] = ("Contact", "contacto", [
+    container("co-bleed", "di-bleed", {"eyebrow": "Contact", "title": "<b>Office</b> in<br>Cumbres, <em>Monterrey</em>",
+        "lead": f"{DIRECCION_EN_CORTA}. By appointment only: book via WhatsApp. {SPANISH_NOTE}",
+        "variant": "warm", "crumb": "Contact", "image": {"id": "__CO_HERO_ID__", "url": "__CO_HERO_URL__"}, "focus": "50% 6%", "focus_mobile": "85% 20%"}),
+    container("co-ubic", "di-ubicacion", {"eyebrow": "Getting here", "title": "<b>CAB</b> Medical,<br><em>Headquarters</em>",
+        "facts": rep([("Parking", "Free"), ("Access", "Elevator and wheelchair access"), ("Language", "Consultations are in Spanish")], "label", "value"),
+        "map_embed": MAP_EMBED}),
+    container("co-form", "di-form", {"eyebrow": "Write to us", "title": "Would you like<br>us to <em>call you</em>?",
+        "lead": "Leave your name and phone number and we’ll contact you during office hours. For faster booking, use WhatsApp.", "button": "Send request"}),
+    container("co-narr", "di-narrativa", {"eyebrow": "Emergencies", "title": "<b>This website</b> is not an<br><em>emergency</em> channel",
+        "lead": "If you have difficulty breathing, a nosebleed that won’t stop or severe pain, go to the nearest emergency department or call 911. For appointments and questions, message us on WhatsApp.", "text": ""}),
+    container("co-cta", "di-cta", {"eyebrow": "Book", "title": "Shall we <em>book</em>?", "text": "WhatsApp is the fastest channel for appointments.", "message": ""}),
+])
+
+pages["thank-you"] = ("Thank you", "gracias", [
+    container("gr-bleed", "di-bleed", {"eyebrow": "Message sent", "title": "<b>Received</b>, <em>thank you</em>",
+        "lead": "We’ll contact you during office hours by phone or WhatsApp. If it’s urgent, go to the nearest emergency department.",
+        "variant": "sand", "crumb": "Thank you"}),
+    container("gr-narr", "di-narrativa", {"eyebrow": "In the meantime", "title": "What you <b>can</b> get <em>ready</em>",
+        "lead": "Previous tests, a list of your medications and, if it’s about snoring or sleep apnea, what the person who sleeps with you has noticed.", "text": ""}),
+    container("gr-cta", "di-cta", {"eyebrow": "In a hurry?", "title": "If you prefer, <em>message us now</em>", "text": "WhatsApp is the fastest channel for booking.", "message": ""}),
+])
+
+pages["faq"] = ("Frequently asked questions", "preguntas-frecuentes", [
+    container("faq-bleed", "di-bleed", {"eyebrow": "Frequently asked questions", "title": "What we’re <b>asked</b> <em>most</em>",
+        "lead": "Hours, costs, insurance, children and what happens at the visit. Questions about your own case are answered at the evaluation.", "variant": "sand", "crumb": "FAQ"}),
+    container("faq-serv", "di-faq", {"eyebrow": "Service", "title": "<b>Visits</b> and <em>booking</em>", "items": rep([
+        ("How do I book?", "Via WhatsApp, in one tap from any page of the site, or by phone. Visits are by appointment only."),
+        ("What are the hours?", "By appointment only: book via WhatsApp and we’ll confirm the available time."),
+        ("How long is the visit?", "About 30 minutes."),
+        ("How much does it cost?", "We confirm the cost when you book via WhatsApp. Surgeries and tests, after an evaluation."),
+        ("Do you accept insurance?", "Private patients and reimbursement with Mexican private health insurance."),
+        ("How can I pay?", "Cash, card and bank transfer. Invoices available."),
+        ("Do you offer online visits?", "Only follow-up of patients already evaluated in the office."),
+        ("Do you see children?", "Yes, from birth."),
+        ("In what language are visits?", "Consultations are in Spanish."),
+        ("At which hospitals does Dr. Irina operate?", "Christus Muguerza, Hospital Zambrano Hellion and Hospital Ángeles Valle Oriente."),
+    ], "pregunta", "text")}),
+    container("faq-cta", "di-cta", {"eyebrow": "Book", "title": "Another question?", "text": "Message us on WhatsApp.", "message": ""}),
+])
+
+# Legales: HTML (como en español) con los shortcodes del consultorio; nota de prevalencia del español (Anexo A, 13.6).
+legal = {
+    "privacy-notice": ("Privacy notice", "aviso-de-privacidad"),
+    "medical-disclaimer": ("Medical disclaimer", "aviso-medico"),
+    "terms-of-use": ("Terms of use", "terminos-de-uso"),
+}
+
+# Credenciales: traducción por slug de la credencial (setup-en.sh la guarda en la meta _di_en). Nombres propios sin traducir.
+credentials_en = {
+    "medico-cirujano": {"titulo": "Medical Degree (Physician and Surgeon)", "lugar": "Santa Ana de Coro, Venezuela"},
+    "especialista-orl": {"titulo": "Specialist in Otolaryngology", "lugar": "Barquisimeto, Venezuela"},
+    "subespecializacion-sueno": {"titulo": "Subspecialty in Sleep-Disordered Breathing, Snoring and Applied Rhinology"},
+    "consejo-orl": {"titulo": "Mexican Board of Otolaryngology–Head and Neck Surgery (Consejo Mexicano de ORL y CCC)", "institucion": "Certification valid through 2030"},
+    "sociedad-iberoamericana-cirugia-sueno": {"titulo": "Ibero-American Society of Sleep Surgery"},
+    "colegio-orl-nuevo-leon": {"titulo": "Nuevo León College of Otolaryngology"},
+    "curso-faringoplastia-2024": {"titulo": "6th Theoretical and Practical Course on Advanced Pharyngoplasty with Barbed Sutures and Sleep Endoscopy"},
+    "miembro-fundador-sics-2020": {"titulo": "Founding member of the Ibero-American Society of Sleep Surgery"},
+    "curso-cirugia-medicina-sueno-2019": {"titulo": "International Course on Sleep Surgery and Sleep Medicine"},
+    "conferencia-cpap-2018": {"titulo": "“CPAP management”", "institucion": "Triological Course"},
+    "conferencia-faringoplastia-2017": {"titulo": "“The evolution of pharyngoplasty in OSAHS, beyond UPPP”", "institucion": "68th National Congress of Otolaryngology"},
+    "hu-jose-eleuterio-gonzalez": {"titulo": "Attending physician, Otolaryngology Department, Medical Services of Hospital Universitario «Dr. José Eleuterio González»"},
+    "trabajo-herniacion-duramadre-2016": {"titulo": "“Dural herniation into the middle ear”", "institucion": "9th Venezuelan Triological Meeting of ORL"},
+    "trabajo-carcinoma-nasofaringeo-2016": {"titulo": "“Classic presentation of nasopharyngeal carcinoma: a case report”", "institucion": "9th Venezuelan Triological Meeting of ORL"},
+    "trabajo-rinoescleroma-2016": {"titulo": "“Rhinoscleroma: a case report”", "institucion": "9th Venezuelan Triological Meeting of ORL"},
+    "docencia-pregrado": {"titulo": "Undergraduate otolaryngology professor at UNEFM, ULA and UNERG"},
+}
+
 seo = {
     "en": ("ENT doctor in Monterrey | Dr. Irina González Sáez",
            "Board-certified ENT in Cumbres, Monterrey: ear, nose and throat for children and adults, snoring and sleep apnea. Consultations are in Spanish."),
+    "dr-irina-gonzalez-saez": ("Dr. Irina González Sáez | ENT and sleep specialist",
+           "Board-certified by the Mexican Board of ORL–HNS, trained in two countries, with a subspecialty in sleep-disordered breathing. Cumbres, Monterrey."),
+    "ent": ("ENT in Monterrey: ear, nose and throat | Dr. Irina González",
+           "ENT in Cumbres, Monterrey: ear, nose and throat care for children from birth and adults. What I treat, how I work and how to book. In Spanish."),
+    "sleep": ("Snoring and sleep apnea specialist in Monterrey",
+           "Snoring and sleep apnea in Monterrey: airway evaluation, home sleep test, CPAP and surgery. Dr. Irina González Sáez, ENT. Consultations in Spanish."),
+    "first-visit": ("First visit with Dr. Irina González Sáez | What to expect",
+           "What an ENT visit is like: about 30 minutes, a complete examination and a clear plan. What to bring, costs and insurance. Consultations in Spanish."),
+    "contact": ("Contact and location | Dr. Irina González Sáez, Cumbres",
+           "Office at CAB Medical Headquarters, Cumbres, Monterrey. Map, parking and WhatsApp booking. Consultations are in Spanish."),
+    "faq": ("Frequently asked questions | Dr. Irina González Sáez",
+           "Hours, cost, insurance, children, hospitals and language of the visits at Dr. Irina González Sáez’s ENT office in Monterrey."),
+    "thank-you": ("Message received | Dr. Irina González Sáez", "We received your request; we’ll contact you during office hours."),
+    "privacy-notice": ("Privacy notice | Dr. Irina González Sáez", "How we process your personal data under Mexico’s LFPDPPP: what we collect, why, with whom we share it and how to exercise your ARCO rights."),
+    "medical-disclaimer": ("Medical disclaimer | Dr. Irina González Sáez", "The information on this site is educational and does not replace a medical consultation. This is not an emergency channel."),
+    "terms-of-use": ("Terms of use | Dr. Irina González Sáez", "Terms of use of Dr. Irina González Sáez’s website."),
 }
 
 practice_en = {
@@ -118,9 +299,14 @@ practice_en = {
 OUT.mkdir(exist_ok=True)
 for slug, (title, es, data) in pages.items():
     (OUT / f"{slug}.elementor.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-(OUT / "pages.json").write_text(json.dumps({s: {"title": t, "es": e} for s, (t, e, _) in pages.items()}, ensure_ascii=False, indent=2), encoding="utf-8")
+index = {s: {"title": t, "es": e, "kind": "elementor"} for s, (t, e, _) in pages.items()}
+index.update({s: {"title": t, "es": e, "kind": "html"} for s, (t, e) in legal.items()})
+for s_ in legal:
+    (OUT / f"{s_}.html").write_text((OUT / "legal" / f"{s_}.html").read_text(encoding="utf-8").strip() + "\n", encoding="utf-8")
+(OUT / "pages.json").write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
+(OUT / "credentials-en.json").write_text(json.dumps(credentials_en, ensure_ascii=False, indent=2), encoding="utf-8")
 (OUT / "seo.json").write_text(json.dumps({s: {"title": t, "description": d} for s, (t, d) in seo.items()}, ensure_ascii=False, indent=2), encoding="utf-8")
 (OUT / "practice-en.json").write_text(json.dumps(practice_en, ensure_ascii=False, indent=2), encoding="utf-8")
 for s, (t, d) in seo.items():
     assert len(t) <= 62 and len(d) <= 158, (s, len(t), len(d))
-print(f"{len(pages)} página(s) en {OUT}")
+print(f"{len(pages)} páginas Elementor, {len(legal)} legales, {len(credentials_en)} credenciales en {OUT}")

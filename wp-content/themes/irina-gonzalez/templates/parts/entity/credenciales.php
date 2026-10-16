@@ -37,17 +37,17 @@ $irina_cards  = [];
 $irina_tags   = [];
 foreach ( $irina_q as $irina_c ) {
 	$irina_tipo = (string) get_post_meta( $irina_c->ID, 'di_tipo', true );
-	$irina_inst = (string) get_post_meta( $irina_c->ID, 'di_institucion', true );
-	$irina_lug  = (string) get_post_meta( $irina_c->ID, 'di_lugar', true );
+	$irina_inst = irina_cred_text( $irina_c, 'institucion' );
+	$irina_lug  = irina_cred_text( $irina_c, 'lugar' );
 	$irina_anio = (string) get_post_meta( $irina_c->ID, 'di_anio', true );
 	if ( 'membresia' === $irina_tipo ) {
-		$irina_tags[] = $irina_c->post_title;
+		$irina_tags[] = irina_cred_text( $irina_c, 'titulo' );
 	} elseif ( in_array( $irina_tipo, [ 'formacion', 'especialidad', 'certificacion' ], true ) ) {
 		$irina_label = $irina_labels[ $irina_tipo ];
 		if ( 'especialidad' === $irina_tipo && str_contains( strtolower( $irina_c->post_title ), 'subespecial' ) ) {
 			$irina_label = $irina_labels['subespecialidad'];
 		}
-		$irina_cards[] = [ $irina_label, $irina_c->post_title, trim( implode( ', ', array_filter( [ $irina_inst, $irina_lug ] ) ) . ( '' !== $irina_anio ? '. ' . $irina_anio . '.' : '' ) ) ];
+		$irina_cards[] = [ $irina_label, irina_cred_text( $irina_c, 'titulo' ), trim( implode( ', ', array_filter( [ $irina_inst, $irina_lug ] ) ) . ( '' !== $irina_anio ? '. ' . $irina_anio . '.' : '' ) ) ];
 	}
 }
 $irina_extra = array_map( 'strval', (array) $irina_a['extra_tags'] );

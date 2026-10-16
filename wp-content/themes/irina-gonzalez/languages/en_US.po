@@ -29,6 +29,9 @@ msgstr "Book via WhatsApp"
 msgid "Agendar valoración de ronquido y apnea"
 msgstr "Book a snoring and sleep apnea evaluation"
 
+msgid "Al cargar las opiniones conectarás con Doctoralia, que puede utilizar sus propias cookies."
+msgstr "Loading the reviews connects you to Doctoralia, which may use its own cookies."
+
 msgid "Atención"
 msgstr "Care"
 
@@ -43,6 +46,9 @@ msgstr "Scroll to the next section"
 
 msgid "Borrador: pendiente de revisión de la Dra."
 msgstr "Draft: pending Dr. Irina’s review."
+
+msgid "Cargar opiniones de Doctoralia"
+msgstr "Load Doctoralia reviews"
 
 msgid "Causas"
 msgstr "Causes"
@@ -103,6 +109,9 @@ msgstr "Address"
 
 msgid "Docencia"
 msgstr "Teaching"
+
+msgid "Dra. Irina"
+msgstr "Dr. Irina"
 
 msgid "Dra. Irina González Sáez"
 msgstr "Dr. Irina González Sáez"
@@ -238,6 +247,9 @@ msgstr "Name"
 
 msgid "Opiniones"
 msgstr "Reviews"
+
+msgid "Opiniones de Doctoralia"
+msgstr "Doctoralia reviews"
 
 msgid "Opiniones en Doctoralia"
 msgstr "Reviews on Doctoralia"

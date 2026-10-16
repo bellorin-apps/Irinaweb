@@ -32,6 +32,16 @@ final class Form {
 		'otro'     => 'Otro / no lo sé',
 	];
 
+	/** Etiquetas en inglés para /en/ (D-095); el correo al consultorio siempre usa las españolas. */
+	public const MOTIVOS_EN = [
+		'sueno'    => 'Snoring or sleep apnea',
+		'oido'     => 'Ear',
+		'nariz'    => 'Nose and sinuses',
+		'garganta' => 'Throat and voice',
+		'ninos'    => 'Children',
+		'otro'     => 'Other / not sure',
+	];
+
 	private const MIN_SECONDS  = 4;
 	private const MAX_PER_HOUR = 5;
 
@@ -45,20 +55,43 @@ final class Form {
 		return admin_url( 'admin-post.php' );
 	}
 
-	public static function thanks_url(): string {
-		$page = get_page_by_path( 'gracias', OBJECT, 'page' );
+	/** Motivos en el idioma de la página. */
+	public static function motivos(): array {
+		return \DraIrina\Core\I18n\Language::EN === \DraIrina\Core\I18n\Language::current() ? self::MOTIVOS_EN : self::MOTIVOS;
+	}
+
+	/**
+	 * Página de gracias del idioma del formulario (D-095: /en/thank-you/ si está publicada).
+	 *
+	 * @param string $lang «es», «en» o vacío para el idioma actual.
+	 */
+	public static function thanks_url( string $lang = '' ): string {
+		$lang = '' !== $lang ? $lang : \DraIrina\Core\I18n\Language::current();
+		$page = 'en' === $lang ? get_page_by_path( 'en/thank-you', OBJECT, 'page' ) : null;
+		if ( ! $page || 'publish' !== $page->post_status ) {
+			$page = get_page_by_path( 'gracias', OBJECT, 'page' );
+		}
 		return $page && 'publish' === $page->post_status ? (string) get_permalink( $page ) : home_url( '/' );
+	}
+
+	/** Idioma del formulario enviado (campo oculto di_lang; admin-post.php no lleva /en/). */
+	private static function posted_lang(): string {
+		return isset( $_POST['di_lang'] ) && 'en' === $_POST['di_lang'] ? 'en' : 'es'; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- solo elige el idioma de los mensajes.
 	}
 
 	/** Procesa el envío (POST) tanto con JS (JSON) como sin él (redirección). */
 	public function handle(): void {
 		$ajax = isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && 'fetch' === strtolower( sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_REQUESTED_WITH'] ) ) );
-		$res  = $this->process();
+		$lang = self::posted_lang();
+		if ( 'en' === $lang ) {
+			switch_to_locale( 'en_US' ); // Mensajes de error en inglés; el correo al consultorio se compone en español (send()).
+		}
+		$res = $this->process();
 		if ( $ajax ) {
 			wp_send_json( $res, $res['ok'] ? 200 : 422 );
 		}
 		if ( $res['ok'] ) {
-			wp_safe_redirect( self::thanks_url(), 303 );
+			wp_safe_redirect( self::thanks_url( $lang ), 303 );
 			exit;
 		}
 		$back = wp_get_referer() ? remove_query_arg( [ 'di_error' ], wp_get_referer() ) : home_url( '/contacto/' );
@@ -225,6 +258,10 @@ final class Form {
 	private static string $alt_body = '';
 
 	private function send( string $name, string $phone, string $email, string $motivo, string $message ): bool {
+		$reswitch = is_locale_switched();
+		if ( $reswitch ) {
+			restore_previous_locale(); // El consultorio recibe el correo en español aunque el formulario sea el inglés.
+		}
 		$to = (string) PracticeSettings::get( 'email' );
 		if ( '' === $to || ! is_email( $to ) ) {
 			$to = (string) get_option( 'admin_email' );
@@ -246,6 +283,7 @@ final class Form {
 				'WhatsApp: https://wa.me/' . $wa,
 				'Correo:   ' . ( '' !== $email ? $email : '(no indicado)' ),
 				'Motivo:   ' . $motivo,
+				'Idioma:   ' . ( 'en' === self::posted_lang() ? 'inglés (formulario de /en/; la consulta es en español)' : 'español' ),
 				'',
 				'Mensaje:',
 				'' !== $message ? $message : '(sin mensaje)',
@@ -268,6 +306,9 @@ final class Form {
 		self::$alt_body = $text;
 		$sent           = wp_mail( $to, $subject, $html, $headers );
 		self::$alt_body = '';
+		if ( $reswitch ) {
+			switch_to_locale( 'en_US' );
+		}
 		return $sent;
 	}
 
@@ -285,12 +326,17 @@ final class Form {
 		$value     = 'style="padding:10px 0;border-bottom:1px solid #eee4dc;color:#241f23;font-size:16px;line-height:1.4;vertical-align:top;' . $font . '"';
 		$link      = 'style="color:#2a787d;text-decoration:none;font-weight:600;"';
 		$esc       = static fn( string $v ): string => esc_html( $v );
-		$rows      = [
-			[ 'Nombre', $esc( $name ) ],
-			[ 'Teléfono', sprintf( '<a href="tel:%1$s" %3$s>%2$s</a> &nbsp;·&nbsp; <a href="https://wa.me/%4$s" %3$s>WhatsApp</a>', esc_attr( $phone ), $esc( $phone ), $link, esc_attr( $wa ) ) ],
-			[ 'Motivo', '<span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#efe6f4;color:#6b3a86;font-size:14px;font-weight:600;">' . $esc( $motivo ) . '</span>' ],
-			[ 'Correo', '' !== $email ? sprintf( '<a href="mailto:%1$s" %2$s>%1$s</a>', esc_attr( $email ), $link ) : '<span style="color:#75696f;">No indicado</span>' ],
-		];
+		$rows      = array_merge(
+			[
+				[ 'Nombre', $esc( $name ) ],
+				[ 'Teléfono', sprintf( '<a href="tel:%1$s" %3$s>%2$s</a> &nbsp;·&nbsp; <a href="https://wa.me/%4$s" %3$s>WhatsApp</a>', esc_attr( $phone ), $esc( $phone ), $link, esc_attr( $wa ) ) ],
+				[ 'Motivo', '<span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#efe6f4;color:#6b3a86;font-size:14px;font-weight:600;">' . $esc( $motivo ) . '</span>' ],
+			],
+			'en' === self::posted_lang() ? [ [ 'Idioma', 'Inglés: escribió desde /en/. La consulta es en español.' ] ] : [],
+			[
+				[ 'Correo', '' !== $email ? sprintf( '<a href="mailto:%1$s" %2$s>%1$s</a>', esc_attr( $email ), $link ) : '<span style="color:#75696f;">No indicado</span>' ],
+			]
+		);
 		$rows_html = '';
 		foreach ( $rows as [ $k, $v ] ) {
 			$rows_html .= '<tr><td ' . $label . '>' . $esc( $k ) . '</td><td ' . $value . '>' . $v . '</td></tr>';

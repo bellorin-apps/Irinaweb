@@ -1,0 +1,247 @@
+[
+  {
+    "id": "51be245",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "ae97dfc",
+        "elType": "widget",
+        "widgetType": "di-bleed",
+        "settings": {
+          "eyebrow": "Sleep and breathing",
+          "title": "From <b>snoring</b><br><em>to rest</em>",
+          "lead": "Otolaryngologist with subspecialty training in sleep-disordered breathing, snoring and rhinology. Consultations are in Spanish.",
+          "variant": "night",
+          "crumb": "Sleep",
+          "whatsapp_label": "Book a snoring and sleep apnea evaluation"
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "33e4d23",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "f5e51b8",
+        "elType": "widget",
+        "widgetType": "di-listado",
+        "settings": {
+          "eyebrow": "What I treat",
+          "title": "<b>Snoring</b> and <em>sleep apnea</em>",
+          "post_type": "",
+          "anchor": "conditions",
+          "items": [
+            {
+              "_id": "8efaf45",
+              "label": "Snoring",
+              "sub": "In adults and children",
+              "url": "/en/sleep/snoring/"
+            },
+            {
+              "_id": "775341d",
+              "label": "Obstructive sleep apnea",
+              "sub": "Pauses in breathing during sleep",
+              "url": "/en/sleep/obstructive-sleep-apnea/"
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "21315fa",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "3e16abb",
+        "elType": "widget",
+        "widgetType": "di-listado",
+        "settings": {
+          "eyebrow": "Tests and treatments",
+          "title": "<b>The</b> full <em>pathway</em>",
+          "post_type": "",
+          "anchor": "pathway",
+          "tight": "yes",
+          "note": "Treatment is decided with the study results in hand and according to where the airway narrows.",
+          "items": [
+            {
+              "_id": "8768a27",
+              "label": "Home sleep test",
+              "sub": "Respiratory polygraphy interpreted by Dr. Irina herself",
+              "url": "/en/sleep/home-sleep-test/"
+            },
+            {
+              "_id": "b2be7ce",
+              "label": "Sleep endoscopy",
+              "sub": "Shows where the airway closes during sleep",
+              "url": ""
+            },
+            {
+              "_id": "1cf6695",
+              "label": "CPAP",
+              "sub": "Prescription, adjustment and follow-up",
+              "url": "/en/sleep/cpap-therapy/"
+            },
+            {
+              "_id": "993922f",
+              "label": "Snoring and sleep apnea surgery",
+              "sub": "Nose, palate or tonsils, depending on the case",
+              "url": "/en/sleep/snoring-and-sleep-apnea-surgery/"
+            },
+            {
+              "_id": "37f4e2d",
+              "label": "Mandibular advancement device",
+              "sub": "With a dentist specialized in sleep",
+              "url": ""
+            }
+          ]
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "8b6860b",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "71d72ee",
+        "elType": "widget",
+        "widgetType": "di-narrativa",
+        "settings": {
+          "eyebrow": "How I work",
+          "title": "<b>An</b> ENT for the <em>airway</em>",
+          "lead": "Nose, palate, tonsils and tongue: as an otolaryngologist I directly examine where the airway narrows during sleep. The evaluation starts in the office; with the study results in hand I explain the options and we decide on the treatment together.",
+          "text": ""
+        },
+        "elements": []
+      }
+    ]
+  },
+  {
+    "id": "6ea153e",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "1aefa3d",
+        "elType": "widget",
+        "widgetType": "di-cta",
+        "settings": {
+          "eyebrow": "Book",
+          "title": "Shall we talk about what’s <b>keeping</b> you from <em>resting</em>?",
+          "text": "A 30-minute evaluation determines whether you need a study. Consultations are in Spanish.",
+          "message": "Hello, I would like to book a snoring or sleep apnea evaluation with Dr. Irina González Sáez."
+        },
+        "elements": []
+      }
+    ]
+  }
+]
