@@ -709,3 +709,23 @@ Las 5 fichas de sueño en inglés y el paquete de revisión de la Dra.
 - PHPCS, ESLint/stylelint, sintaxis bash y JS de la guía en verde.
 - **Límite:** traducción de Claude; la aprobación clínica es de la Dra. en su app (13.6).
 
+
+## Inglés, entrega 3 (6643e9b): 5 fichas en borrador y paquete de revisión (sesión local, 2026-10-16 16:00)
+
+- deploy-code (respaldo `~/deploy-backups/20261016-154610/`) y purga.
+- `setup-en.sh`: páginas 384–397 actualizadas (borrador). Fichas inglesas creadas en **borrador** con `medical_review_required` y su pareja española:
+  - 412 snoring (256)
+  - 413 obstructive-sleep-apnea (205)
+  - 414 home-sleep-test (261)
+  - 415 cpap-therapy (262)
+  - 416 snoring-and-sleep-apnea-surgery (263)
+
+  Las 5 españolas siguen publish + medically_approved.
+- **Público:**
+  - las 15 URL dan 200, sin hreflang, selector ni /en/;
+  - las 5 /sueno/{slug}/ con la caja en español («9/13 de octubre de 2026»);
+  - las 5 /en/sleep/{slug}/ dan 404.
+- `deploy-briefing.sh`: el primer intento se cortó al subir guia/ (Hostinger reinició la conexión SSH). **Durante unos 5 minutos (15:48–15:53) `/briefing/guia/paginas-en.json` respondió 200**: se subió antes que el .htaccess nuevo. Contiene las traducciones en borrador, sin datos personales ni token. El segundo intento terminó: paginas-en.json y paginas.json dan 403; config.php 403; revisar.php sin token 403; el token se conserva.
+- **Con token** (sin imprimirlo ni aprobar nada): la guía muestra 10 tarjetas, 8 marcadas «(inglés)».
+- **Hallazgo:** la app de revisión (/briefing/revision/) muestra todavía el modo de sitio corto («Ya no hace falta revisar fichas… dos páginas») y **no lista fichas**, así que las 5 inglesas no aparecen con la etiqueta «Inglés». La Dra. no puede revisarlas ahí hasta que la nube ajuste esa vista.
+- **Menor:** /favicon.ico da 404 (el icono del sitio sí carga por `<link>`). Lo vio la consola de la app de revisión.

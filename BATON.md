@@ -10,6 +10,8 @@ Haz pull y coteja con José el HTML oficial de opiniones generado para su perfil
 
 ---
 
+> **2026-10-16 16:00 (sesión local): inglés, entrega 3 (6643e9b) desplegada.** 5 fichas EN en borrador con medical_review_required (412–416); el sitio público no cambia. Guía de la Dra.: 10 tarjetas (8 EN). Hallazgo: la app de revisión sigue en modo sitio corto y no lista las fichas EN. paginas-en.json estuvo 200 unos 5 min por un corte de SSH; ya 403. Detalle en QA.
+
 > **2026-10-16 16:00 (sesión local): Doctoralia, widget REAL probado en entorno aislado (localhost), con ID provisional.** Privacidad antes del clic: 0 peticiones y 0 cookies; teclado sin trampa; caja estable; fallo con reintento; 1 doctoralia_click. Hallazgo: el tipo big muestra una tarjeta de reserva con UNA opinión y «Agendar cita»; falta el HTML oficial de José y decidir el formato. Sigue APAGADO. Detalle en QA.
 
 > **2026-10-16 15:25 (sesión local): inglés, entrega 1 (af2533d) desplegada.** /en/ (página 384) en BORRADOR; el sitio público no cambia (lang es, sin hreflang, selector ni enlaces /en/; sitemaps sin /en/). El código de Doctoralia (766e589) subió inerte; sin setup-dra ni activación. Detalle en QA.
