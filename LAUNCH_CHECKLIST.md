@@ -1,6 +1,6 @@
 # LAUNCH_CHECKLIST — drairinagonzalez.com
 
-Actualizado: 2026-10-15 · Claude cloud. El sitio está en producción desde el go-live de la portada (D-034) y se ha ido publicando por tramos con aprobación médica (D-078/D-082). Esta lista confirma que el sitio corto (D-076) está listo para considerarse lanzado (PLAN 11.5) y deja a la vista lo que depende de José (CHECKPOINT 5, 11.6).
+Actualizado: 2026-10-16 · Claude cloud. El sitio está en producción desde el go-live de la portada (D-034) y se ha ido publicando por tramos con aprobación médica (D-078/D-082). Esta lista confirma que el sitio corto (D-076) está listo para considerarse lanzado (PLAN 11.5) y deja a la vista lo que depende de José (CHECKPOINT 5, 11.6).
 
 Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 
@@ -28,7 +28,8 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 - ✅ Schema validado sin errores ni advertencias (Physician+Person, ProfilePage, ContactPage, FAQPage, MedicalWebPage, BreadcrumbList).
 - ✅ 301 del dominio aparcado y de las rutas de tipo a /sueno/{slug}/.
 - ✅ Search Console: portada, Conóceme, Primera consulta y Contacto indexadas; motivos de no indexación revisados sin problemas.
-- 👤 Google Business Profile y Doctoralia alineados con el NAP del sitio (PLAN 9.5; horario de GBP).
+- ✅ Perfil de Google editado el 2026-10-16 (sesión local con OK de José; QA «Perfil de Negocio»): web con UTM, descripción, Facebook limpio, categoría adicional Clínica del sueño, reserva por WhatsApp y 7 servicios. Nombre, dirección y teléfonos sin cambios.
+- 👤 Horario de GBP pendiente de que la Dra. confirme el real (hoy en Google: lun cerrado, mar–vie 10:00–12:30, sáb 9:00–15:00); el sitio sigue con «Previa cita» (D-032). Doctoralia lo alinea la Dra. (PLAN 9.5).
 
 ## Rendimiento y accesibilidad
 
@@ -43,6 +44,6 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 
 ## Para dar el lanzamiento por cerrado (CHECKPOINT 5)
 
-1. 👤 José: GBP/Doctoralia y revisión legal (o aceptar que quedan como mejora continua). Prueba del formulario: ✅.
+1. 👤 José: horario de GBP, Doctoralia y revisión legal (o aceptar que quedan como mejora continua). Prueba del formulario: ✅.
 2. ✅ Pasada en iPhone (Safari) — José, 2026-10-15.
 3. 👤 José aprueba esta lista.
