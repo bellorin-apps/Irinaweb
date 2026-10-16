@@ -117,9 +117,9 @@ pages["dr-irina-gonzalez-saez"] = ("Dr. Irina González Sáez", "dra-irina-gonza
         "lead": "The first visit lasts about 30 minutes. It starts by understanding what is happening to you and since when; it continues with a complete ear, nose and throat examination, with endoscopy in the office when needed, and ends with a clearly explained plan, without promises that cannot be kept.",
         "text": "", "draft": "",
         "image": {"id": "__DRA_ENDO_ID__", "url": "__DRA_ENDO_URL__"}, "image_pos": "right", "image_alt": "Endoscopy camera head Dr. Irina uses in the office"}),
-    container("dra-creds", "di-credenciales", {"eyebrow": "Training and certifications", "title": "Verifiable <em>credentials</em>", "tags_title": "", "extra_tags": ""}),
+    container("dra-creds", "di-credenciales", {"eyebrow": "Training and certifications", "title": "<b>Verifiable</b> <em>credentials</em>", "tags_title": "", "extra_tags": ""}),
     container("dra-logos", "di-logos", {
-        "eyebrow": "", "title": "Memberships and <em>hospitals</em>",
+        "eyebrow": "", "title": "<b>Memberships</b> and <em>hospitals</em>",
         "items": rep([
             ("CHRISTUS MUGUERZA Health System", "christus-muguerza", ""),
             ("Hospital Zambrano Hellion · TecSalud", "zambrano-hellion", ""),
@@ -132,16 +132,17 @@ pages["dr-irina-gonzalez-saez"] = ("Dr. Irina González Sáez", "dra-irina-gonza
             ("Nuevo León College of Otolaryngology", "colegio-orl-nl", ""),
         ], "name", "slug", "url")}),
     container("dra-timeline", "di-trayectoria", {"eyebrow": "Career", "title": "Ongoing <b>training</b> in <em>sleep surgery</em>"}),
-    container("dra-opiniones", "di-opiniones", {"eyebrow": "Reviews", "title": "What <em>patients say</em>",
+    container("dra-opiniones", "di-opiniones", {"eyebrow": "Reviews", "title": "<b>What</b> patients <em>say</em>",
         "text": "Reviews published on Doctoralia (in Spanish). They are personal experiences and do not guarantee results."}),
-    container("dra-cta", "di-cta", {"eyebrow": "Book", "title": "Book your<br>first <em>visit</em>",
+    container("dra-cta", "di-cta", {"eyebrow": "Book", "title": "<b>Book</b> your<br>first <em>visit</em>",
         "text": f"30 minutes to listen to you, examine you and propose a plan. {SPANISH_NOTE}", "message": ""}),
 ])
 
 pages["ent"] = ("Otolaryngology (ENT)", "otorrinolaringologia", [
     container("orl-bleed", "di-bleed", {"eyebrow": "Otolaryngology (ENT)", "title": "<b>Ear, nose</b> and throat,<br><em>from birth</em>",
         "lead": f"Ear, nose and throat consultations for children, teenagers, adults and older adults in Monterrey. {SPANISH_NOTE}",
-        "variant": "sand", "crumb": "ENT"}),
+        # Foto de cabecera como /otorrinolaringologia/ (propietario, 2026-10-16): adjunto hero-orl, tono cálido.
+        "variant": "warm", "crumb": "ENT", "image": {"id": "__ORL_HERO_ID__", "url": "__ORL_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "88% 50%"}),
     container("orl-oido", "di-listado", {"eyebrow": "Ear", "title": "<b>What</b> I treat <em>in the ear</em>", "post_type": "", "anchor": "ear",
         "items": rep([("Ear infections (otitis)", "Infection or inflammation of the ear", ""), ("Earwax blockage", "Ear blocked by earwax", ""), ("Hearing loss", "Reduced hearing", ""), ("Tinnitus", "Ringing or buzzing in the ear", ""), ("Vertigo", "Dizziness or a spinning sensation", "")], "label", "sub", "url")}),
     container("orl-nariz", "di-listado", {"eyebrow": "Nose", "title": "<b>What</b> I treat <em>in the nose</em>", "post_type": "", "anchor": "nose", "tight": "yes",
@@ -197,7 +198,7 @@ pages["first-visit"] = ("First visit", "primera-consulta", [
         ("In what language are visits?", "Consultations are in Spanish."),
         ("Where is the office and is there parking?", f"{DIRECCION_EN}. Free parking; elevator and wheelchair access."),
     ], "pregunta", "text")}),
-    container("pc-cta", "di-cta", {"eyebrow": "Book", "title": "Book your<br><em>first visit</em>", "text": "Message us on WhatsApp and we’ll confirm a time.", "message": ""}),
+    container("pc-cta", "di-cta", {"eyebrow": "Book", "title": "<b>Book</b> your<br><em>first visit</em>", "text": "Message us on WhatsApp and we’ll confirm a time.", "message": ""}),
 ])
 
 pages["contact"] = ("Contact", "contacto", [
@@ -218,13 +219,13 @@ pages["thank-you"] = ("Thank you", "gracias", [
     container("gr-bleed", "di-bleed", {"eyebrow": "Message sent", "title": "<b>Received</b>, <em>thank you</em>",
         "lead": "We’ll contact you during office hours by phone or WhatsApp. If it’s urgent, go to the nearest emergency department.",
         "variant": "sand", "crumb": "Thank you"}),
-    container("gr-narr", "di-narrativa", {"eyebrow": "In the meantime", "title": "What you <b>can</b> get <em>ready</em>",
+    container("gr-narr", "di-narrativa", {"eyebrow": "In the meantime", "title": "<b>What</b> you can get <em>ready</em>",
         "lead": "Previous tests, a list of your medications and, if it’s about snoring or sleep apnea, what the person who sleeps with you has noticed.", "text": ""}),
-    container("gr-cta", "di-cta", {"eyebrow": "In a hurry?", "title": "If you prefer, <em>message us now</em>", "text": "WhatsApp is the fastest channel for booking.", "message": ""}),
+    container("gr-cta", "di-cta", {"eyebrow": "In a hurry?", "title": "<b>If</b> you prefer, <em>message us now</em>", "text": "WhatsApp is the fastest channel for booking.", "message": ""}),
 ])
 
 pages["faq"] = ("Frequently asked questions", "preguntas-frecuentes", [
-    container("faq-bleed", "di-bleed", {"eyebrow": "Frequently asked questions", "title": "What we’re <b>asked</b> <em>most</em>",
+    container("faq-bleed", "di-bleed", {"eyebrow": "Frequently asked questions", "title": "<b>What</b> we’re asked <em>most</em>",
         "lead": "Hours, costs, insurance, children and what happens at the visit. Questions about your own case are answered at the evaluation.", "variant": "sand", "crumb": "FAQ"}),
     container("faq-serv", "di-faq", {"eyebrow": "Service", "title": "<b>Visits</b> and <em>booking</em>", "items": rep([
         ("How do I book?", "Via WhatsApp, in one tap from any page of the site, or by phone. Visits are by appointment only."),
@@ -238,7 +239,7 @@ pages["faq"] = ("Frequently asked questions", "preguntas-frecuentes", [
         ("In what language are visits?", "Consultations are in Spanish."),
         ("At which hospitals does Dr. Irina operate?", "Christus Muguerza, Hospital Zambrano Hellion and Hospital Ángeles Valle Oriente."),
     ], "pregunta", "text")}),
-    container("faq-cta", "di-cta", {"eyebrow": "Book", "title": "Another question?", "text": "Message us on WhatsApp.", "message": ""}),
+    container("faq-cta", "di-cta", {"eyebrow": "Book", "title": "<b>Another</b> <em>question</em>?", "text": "Message us on WhatsApp.", "message": ""}),
 ])
 
 # Legales: HTML (como en español) con los shortcodes del consultorio; nota de prevalencia del español (Anexo A, 13.6).

@@ -70,7 +70,7 @@
         "widgetType": "di-narrativa",
         "settings": {
           "eyebrow": "In the meantime",
-          "title": "What you <b>can</b> get <em>ready</em>",
+          "title": "<b>What</b> you can get <em>ready</em>",
           "lead": "Previous tests, a list of your medications and, if it’s about snoring or sleep apnea, what the person who sleeps with you has noticed.",
           "text": ""
         },
@@ -109,7 +109,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "In a hurry?",
-          "title": "If you prefer, <em>message us now</em>",
+          "title": "<b>If</b> you prefer, <em>message us now</em>",
           "text": "WhatsApp is the fastest channel for booking.",
           "message": ""
         },

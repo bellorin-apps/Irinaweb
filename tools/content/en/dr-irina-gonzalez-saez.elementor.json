@@ -125,7 +125,7 @@
         "widgetType": "di-credenciales",
         "settings": {
           "eyebrow": "Training and certifications",
-          "title": "Verifiable <em>credentials</em>",
+          "title": "<b>Verifiable</b> <em>credentials</em>",
           "tags_title": "",
           "extra_tags": ""
         },
@@ -164,7 +164,7 @@
         "widgetType": "di-logos",
         "settings": {
           "eyebrow": "",
-          "title": "Memberships and <em>hospitals</em>",
+          "title": "<b>Memberships</b> and <em>hospitals</em>",
           "items": [
             {
               "_id": "96a48da",
@@ -294,7 +294,7 @@
         "widgetType": "di-opiniones",
         "settings": {
           "eyebrow": "Reviews",
-          "title": "What <em>patients say</em>",
+          "title": "<b>What</b> patients <em>say</em>",
           "text": "Reviews published on Doctoralia (in Spanish). They are personal experiences and do not guarantee results."
         },
         "elements": []
@@ -332,7 +332,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Book",
-          "title": "Book your<br>first <em>visit</em>",
+          "title": "<b>Book</b> your<br>first <em>visit</em>",
           "text": "30 minutes to listen to you, examine you and propose a plan. Consultations are in Spanish.",
           "message": ""
         },

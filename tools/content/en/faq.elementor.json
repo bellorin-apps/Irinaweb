@@ -30,7 +30,7 @@
         "widgetType": "di-bleed",
         "settings": {
           "eyebrow": "Frequently asked questions",
-          "title": "What we’re <b>asked</b> <em>most</em>",
+          "title": "<b>What</b> we’re asked <em>most</em>",
           "lead": "Hours, costs, insurance, children and what happens at the visit. Questions about your own case are answered at the evaluation.",
           "variant": "sand",
           "crumb": "FAQ"
@@ -159,7 +159,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Book",
-          "title": "Another question?",
+          "title": "<b>Another</b> <em>question</em>?",
           "text": "Message us on WhatsApp.",
           "message": ""
         },
