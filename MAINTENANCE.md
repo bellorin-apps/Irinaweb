@@ -1,6 +1,6 @@
 # MAINTENANCE — Mantenimiento, plan SEO 6–12 meses y KPIs
 
-Actualizado: 2026-10-15 · Claude cloud. PLAN 12.4. Sitio corto (D-076): punto de encuentro para conocer a la Dra., no enciclopedia.
+Actualizado: 2026-10-16 · Claude cloud. PLAN 12.4. Sitio corto (D-076): punto de encuentro para conocer a la Dra., no enciclopedia.
 
 ## Rutinas
 
@@ -24,7 +24,7 @@ Actualizado: 2026-10-15 · Claude cloud. PLAN 12.4. Sitio corto (D-076): punto d
 ## Plan SEO 6–12 meses
 
 1. **Perfil de Google (GBP)** — mayor impacto local: NAP idéntico al sitio, horario real, categorías «Otorrinolaringólogo» y relacionadas con sueño, fotos del consultorio, publicaciones mensuales y respuesta a cada reseña.
-2. **Reseñas**: pedir reseña en Google y Doctoralia tras la consulta (tarjeta o mensaje de WhatsApp con enlace directo). Meta: +4 al mes.
+2. **Reseñas**: pedir reseña en Google y Doctoralia tras la consulta a **todas** las pacientes, sin incentivos (política de Google). Enlace directo de Google: https://g.page/r/CUfia9HEij5cEAE/review (mensaje de WhatsApp guardado como respuesta rápida `/resena`). La Dra. responde cada reseña sin confirmar que es paciente ni mencionar salud. Meta: +4 al mes.
 3. **Doctoralia y directorios**: mismo nombre, dirección y teléfono; enlace al sitio.
 4. **Enlaces de confianza**: perfiles en hospitales (Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente), Consejo, sociedades y colegio con enlace al sitio.
 5. **Contenido gradual** (sin volver a la enciclopedia): si Search Console muestra demanda, publicar 1 ficha aprobada al mes de las 21 archivadas (empezando por las más buscadas) y enlazarla desde su página corta.
