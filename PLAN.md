@@ -189,9 +189,9 @@ Criterio de entrada: contenido español base aprobado por la Dra. + CP3 superado
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 13.1 | Decisión de herramienta (plugin multiidioma vs. nativo en el core) · OD-008 | 2 | OWNER | Propuesta con opciones, pros y contras y recomendación (nativo): docs/OD-008_PROPUESTA_INGLES.md (D-092). Decide José |
+| 13.1 | Decisión de herramienta (plugin multiidioma vs. nativo en el core) · OD-008 | 2 | DONE | D-095 (José, 2026-10-16): módulo nativo en dra-irina-core; propuesta y comparación en docs/OD-008_PROPUESTA_INGLES.md |
 | 13.2 | Glosario clínico es/en en `docs/GLOSSARY_EN.md` y keyword map en inglés propio | 2 | REVIEW | docs/GLOSSARY_EN.md (especialidad, sueño, ORL, interfaz y legal, con términos a confirmar por la Dra.) y docs/KEYWORDS_EN.md (intenciones y URL /en/ propias, sin volúmenes inventados; límite: idiomas de consulta pendientes). D-092 |
-| 13.3 | Páginas base en inglés (Home, Dra., ORL, Sueño, Primera consulta, Contacto, legales) en borrador | 5 | TODO | Nada se publica sin revisión de la Dra. |
+| 13.3 | Páginas base en inglés (Home, Dra., ORL, Sueño, Primera consulta, Contacto, legales) en borrador | 5 | DOING | D-095: Inicio, Conóceme, Otorrino, Sueño, Primera consulta, Contacto, FAQ y legales en borrador bajo /en/; consulta en español (sin prometer atención en inglés). Objetivo: lista para la revisión de la Dra. ≈30-oct |
 | 13.4 | Condiciones/tratamientos elegidos por la Dra. | 3 | TODO | |
 | 13.5 | hreflang recíproco + x-default, sitemap, OG, schema `inLanguage`, selector de idioma, WhatsApp, 404/gracias | 3 | TODO | |
 | 13.6 | Revisión de la Dra. y legal (nota de prevalencia del español) | 2 | OWNER | ext |
