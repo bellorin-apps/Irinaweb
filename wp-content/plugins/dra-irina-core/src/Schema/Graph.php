@@ -351,7 +351,7 @@ final class Graph {
 			'reviewedBy'   => [ '@id' => self::physician_id() ],
 			'dateModified' => get_the_modified_date( 'c', $post_id ),
 		];
-		$last = (string) get_post_meta( $post_id, 'di_fecha_revision_medica', true );
+		$last = \DraIrina\Core\Workflow\MedicalReview::last_review_date( $post_id );
 		if ( $last ) {
 			$page['lastReviewed'] = $last;
 		}
