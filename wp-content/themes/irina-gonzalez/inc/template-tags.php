@@ -86,7 +86,7 @@ function irina_public_content_url( string $url ): string {
  * Caja "Revisado médicamente por" para contenido clínico.
  */
 function irina_medical_review_badge( int $post_id ): string {
-	$date = (string) get_post_meta( $post_id, 'di_fecha_revision_medica', true );
+	$date = class_exists( '\DraIrina\Core\Workflow\MedicalReview' ) ? \DraIrina\Core\Workflow\MedicalReview::last_review_date( $post_id ) : (string) get_post_meta( $post_id, 'di_fecha_revision_medica', true );
 	if ( '' === $date ) {
 		return '';
 	}
@@ -96,8 +96,8 @@ function irina_medical_review_badge( int $post_id ): string {
 		esc_html__( 'Revisado médicamente por', 'irina-gonzalez' ),
 		esc_html( $name ),
 		esc_html__( 'Última revisión:', 'irina-gonzalez' ),
-		esc_attr( $date ),
-		esc_html( wp_date( 'j \d\e F \d\e Y', (int) strtotime( $date ) ) )
+		esc_attr( substr( $date, 0, 10 ) ),
+		esc_html( wp_date( 'j \d\e F \d\e Y', (int) strtotime( substr( $date, 0, 10 ) . ' 12:00 UTC' ), new DateTimeZone( 'UTC' ) ) ) // Fecha de calendario: sin desplazarla por la zona horaria del sitio.
 	);
 }
 

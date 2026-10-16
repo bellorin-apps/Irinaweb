@@ -87,6 +87,23 @@ final class MedicalReview {
 		return is_array( $terms ) && $terms ? (string) $terms[0] : EstadoMedico::DRAFT;
 	}
 
+	/**
+	 * Fecha de la última revisión médica (AAAA-MM-DD) para la caja «Revisado médicamente por» y lastReviewed del schema.
+	 * Usa di_fecha_revision_medica si se cargó; si no, la fecha real en que la revisora aprobó la ficha en su app (_di_approved_at,
+	 * D-040), que se borra sola si el texto cambia (require_new_review). Vacío si no hay ninguna (GAP A1, 2026-10-16).
+	 */
+	public static function last_review_date( int $post_id ): string {
+		$date = trim( (string) get_post_meta( $post_id, 'di_fecha_revision_medica', true ) );
+		if ( '' === $date ) {
+			$date = trim( (string) get_post_meta( $post_id, '_di_approved_at', true ) );
+		}
+		if ( '' === $date ) {
+			return '';
+		}
+		$time = strtotime( $date );
+		return false === $time ? '' : gmdate( 'Y-m-d', $time );
+	}
+
 	public static function is_publishable( int $post_id ): bool {
 		return in_array( self::state( $post_id ), EstadoMedico::PUBLISHABLE, true );
 	}
