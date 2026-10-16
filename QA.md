@@ -431,10 +431,32 @@ Todo en solo lectura: sin formularios, SMTP, despliegues ni cambios de ajustes.
 - Sin errores PHP del dominio: no hay error_log ni debug.log en el dominio, `~/error_log` no tiene ninguna línea del dominio y WP_DEBUG y la depuración de LiteSpeed están apagados.
 
 **Hallazgos nuevos (P3, para la nube)**
-- **Q-063 · P3 · FIXED (Claude cloud, 2026-10-16; pendiente de despliegue):** Hardening::author_request convierte ?author=/author_name en 404 en el filtro `request` (sin sesión, fuera de wp-admin). Original: /?author=1 da 404 (correcto), pero con el título «José | Dra. Irina González Sáez»: muestra el nombre visible del administrador. No expone el usuario ni el correo. Propuesta: que el 404 de Hardening use el título de la 404.
-- **Q-064 · P3 · FIXED (Claude cloud, 2026-10-16; pendiente de despliegue):** setup.php convierte el archivo de condicion/tratamiento/recurso en 404 en el filtro `request`; también /padecimientos/ y /tratamientos/, que tenían el mismo «… Archive» con index (comprobado en vivo). Original: /recursos/ da 404 con el título «Recursos Archive» (en inglés) y `index, follow` en el HTML. Google no lo indexa por el 404; es solo cosmético.
+- **Q-063 · P3 · VERIFIED (19e4440, desplegado 16/10 13:37):** Hardening::author_request convierte ?author=/author_name en 404 en el filtro `request` (sin sesión, fuera de wp-admin). Original: /?author=1 da 404 (correcto), pero con el título «José | Dra. Irina González Sáez»: muestra el nombre visible del administrador. No expone el usuario ni el correo. Propuesta: que el 404 de Hardening use el título de la 404.
+- **Q-064 · P3 · VERIFIED (19e4440, desplegado 16/10 13:37):** setup.php convierte el archivo de condicion/tratamiento/recurso en 404 en el filtro `request`; también /padecimientos/ y /tratamientos/, que tenían el mismo «… Archive» con index (comprobado en vivo). Original: /recursos/ da 404 con el título «Recursos Archive» (en inglés) y `index, follow` en el HTML. Google no lo indexa por el 404; es solo cosmético.
 
 **Límites**
 - Los registros de acceso (404 y 5xx de visitas reales) solo se pueden ver en hPanel, no por SSH. El monitor 404 de Rank Math está apagado.
 - No se probó el formulario; José lo probó el 15/10.
 - 12.2 queda en REVIEW; el seguimiento del día 7 (≈22/10) es la 12.3.
+
+## Despliegue de Q-063/Q-064 y ensayo de restauración 12.1 (sesión local, 2026-10-16 13:40)
+
+**Q-063/Q-064 (19e4440).** Desplegado con deploy-code (respaldo `~/deploy-backups/20261016-133733/`) y purga de LiteSpeed; sin builds, contenido ni ajustes.
+- Sin sesión: /?author=1, /?author_name=…, /author/admin/, /recursos/, /padecimientos/, /tratamientos/ y /?post_type=condicion dan 404 con el título «Página no encontrada | Dra. Irina González Sáez» y `follow, noindex`.
+- Regresión: portada y 4 páginas en 200; las 5 /sueno/{slug}/ en 200 con su título; /links/ en 200 con noindex; las 301 de /padecimientos/ronquido/ y /tratamientos/cpap/ siguen; los borradores (reflujo-laringofaringeo en /sueno/ y /padecimientos/) siguen en 404. Sitemaps 3 / 10 / 2 / 3 loc, sin cambios.
+- Con sesión, por WP-CLI aplicando el filtro `request` (sin entrar a wp-admin): con el admin, ?author=1 pasa y la vista previa de un borrador pasa; sin sesión, ?author=1 y el archivo de condicion dan 404, y /sueno/{slug}/ pasa. Falta que José compruebe en wp-admin el listado de fichas y el filtro por autor.
+
+**Ensayo de restauración 12.1 (solo código, sin tocar producción; decisión de José: «Ensayo en copia aparte»).** Se siguió docs/ROLLBACK.md en una carpeta de prueba fuera del webroot:
+1. Respaldo elegido: `~/deploy-backups/20261014-183634/` (previo al despliegue de 3928e49). Contiene style.css, functions.php y dra-irina-core.php; 73 archivos del tema y 44 del plugin.
+2. Copia del estado actual de los dos árboles, para poder deshacer.
+3. Restauración de los árboles completos en el destino de prueba (no encima): 39 ms.
+4. Verificación:
+   - lo restaurado es idéntico al respaldo (diff -r);
+   - PHP lint de 79 archivos, sin errores;
+   - la única diferencia con producción es `inc/template-tags.php`, igual que `git diff cae491d 3928e49` en esas carpetas;
+   - producción quedó sin tocar.
+5. La carpeta de ensayo se borró.
+
+**Límites del ensayo.** No se cambió producción y no se purgó caché: la restauración real en vivo no se ensayó.
+- **Base de datos:** no hay volcado propio en ~/deploy-backups. El usuario MySQL solo tiene permisos sobre la base del sitio, así que no se puede crear una base aparte por SSH. Los respaldos de la base son los diarios de Hostinger (hPanel).
+- **12.1 sigue DOING** hasta que José decida cómo cubrir la base de datos.
