@@ -14,6 +14,5 @@ Informe actual docs/REVISION_FASE5_2026-10-16.md. Sin web/builds nuevos, sin SMT
 
 6. Codex: revisión publicitaria y de privacidad de las opiniones de Doctoralia, construidas y apagadas: docs/CODEX_REVIEW_PROMPT_2026-10-16c.md (D-091). Con GO, José activa la casilla y la sesión local ejecuta setup-dra.sh.
 7. José/Dra.: B1, errata de la ficha de apnea ya corregida en la fuente. Aplicarla en producción requiere que la Dra. la apruebe otra vez (D-090).
-8. José: OD-008 (docs/OD-008_PROPUESTA_INGLES.md, recomendado: nativo), idiomas de consulta de la Dra. y qué fichas traducir. 13.2 en REVIEW (GLOSSARY_EN, KEYWORDS_EN).
+8. ✅ OD-008 resuelta (D-095): módulo nativo; consulta en español; páginas base, legales y 5 fichas. **Fecha: versión inglesa lista para la revisión de la Dra. hacia el 30-oct-2026** (Claude cloud construye 13.3/13.4/13.5 en borrador; nada se publica sin su aprobación).
 9. José: monitoreo con UptimeRobot (D-093); al tenerlo, registrarlo en SECURITY y MAINTENANCE.
-
