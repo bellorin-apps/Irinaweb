@@ -1,6 +1,6 @@
 # MAINTENANCE — Mantenimiento, plan SEO 6–12 meses y KPIs
 
-Actualizado: 2026-10-15 · Claude cloud. PLAN 12.4. Sitio corto (D-076): punto de encuentro para conocer a la Dra., no enciclopedia.
+Actualizado: 2026-10-16 · Codex · revisión de evidencia y límites. PLAN 12.4. Sitio corto (D-076): punto de encuentro para conocer a la Dra., no enciclopedia.
 
 ## Rutinas
 
@@ -17,9 +17,9 @@ Actualizado: 2026-10-15 · Claude cloud. PLAN 12.4. Sitio corto (D-076): punto d
 ## Cambios y despliegue
 
 - Todo cambio de código o contenido pasa por la rama `ccr-6254502d-xly8ww`: la nube o Codex escriben, la sesión local despliega con `tools/deploy/*.sh` (respaldo previo automático en `~/deploy-backups/`) y verifica en vivo.
-- Contenido clínico nuevo: solo con aprobación de la Dra. en su app y OK de José (D-078). Fichas archivadas: se pueden publicar más adelante (ya aprobadas) con la misma regla.
+- Contenido clínico nuevo: solo con aprobación de la Dra. en su app y OK de José (D-078). Fichas archivadas: cualquier publicación futura requiere decisión expresa de José y aprobación médica vigente de la versión concreta; una aprobación antigua no autoriza contenido modificado ni un calendario automático.
 - Fotos: subir en PNG/JPEG; el sitio genera WebP, versión móvil q95 y, en cabeceras, escritorio q95 (D-081).
-- Rollback: restaurar desde `~/deploy-backups/<fecha>/` (tema/plugin) o `htaccess-<fecha>`; `harden-htaccess.sh --remove` quita el bloque de seguridad.
+- Rollback: procedimiento revisado en docs/ROLLBACK.md. Restauración real no ensayada: 12.1 sigue DOING. Código, .htaccess, base de datos, medios y mini apps tienen respaldos/alcances distintos; retirar el bloque de hardening no equivale a restaurar todo el sitio.
 
 ## Plan SEO 6–12 meses
 
@@ -27,21 +27,27 @@ Actualizado: 2026-10-15 · Claude cloud. PLAN 12.4. Sitio corto (D-076): punto d
 2. **Reseñas**: pedir reseña en Google y Doctoralia tras la consulta (tarjeta o mensaje de WhatsApp con enlace directo). Meta: +4 al mes.
 3. **Doctoralia y directorios**: mismo nombre, dirección y teléfono; enlace al sitio.
 4. **Enlaces de confianza**: perfiles en hospitales (Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente), Consejo, sociedades y colegio con enlace al sitio.
-5. **Contenido gradual** (sin volver a la enciclopedia): si Search Console muestra demanda, publicar 1 ficha aprobada al mes de las 21 archivadas (empezando por las más buscadas) y enlazarla desde su página corta.
+5. **Contenido opcional**: revisar demanda real de Search Console sin compromiso de publicar una ficha al mes. D-076/D-082 mantienen el sitio corto y las 21 archivadas; ampliar solo si José lo decide, con revisión médica vigente y posterior OK de publicación. No reabrir la enciclopedia por una rutina SEO.
 6. **Search Console**: cada mes, consultas con impresiones y CTR bajo → ajustar títulos y descripciones en `seo.json`.
 
 ## KPIs
 
 | Indicador | Fuente | Meta a 6 meses |
 |---|---|---|
-| Contactos (clics en WhatsApp + llamadas + formularios) | GA4 | Tendencia creciente mes a mes |
+| Eventos de contacto (WhatsApp, llamada, formulario), no pacientes únicos | GA4 | Tendencia creciente mes a mes; no sumar eventos duplicados de un mismo clic ni interpretar Gracias como correo recibido |
 | Clics orgánicos | Search Console | Tendencia creciente; base: primer mes completo tras el cierre |
 | Posición media en «otorrino monterrey», «otorrino cumbres», «apnea del sueño monterrey», «ronquido tratamiento monterrey» | Search Console | Top 10 en al menos 2 |
-| Páginas indexadas / publicadas | Search Console | 100 % de lo publicado |
+| Páginas indexadas / indexables canónicas | Search Console | Objetivo sobre las 15 URLs indexables; excluir Links/Gracias, borradores y archivos404. Indexación decidida por Google, sin garantía |
 | Core Web Vitals (campo) | Search Console › Experiencia | «Buenas» en móvil y escritorio |
 | Reseñas en Google | GBP | +24 en 6 meses |
 
 ## Revisiones de día 7 y día 30 (PLAN 12.2/12.3)
 
-- **Día 7**: Search Console (cobertura, errores), GA4 recibiendo eventos, formulario con una prueba real, sin errores 404 nuevos.
+- **Día 7**: Search Console (cobertura, errores), GA4 recibiendo eventos, recepción del formulario confirmada por José y sin errores 404 nuevos. Solo José realiza cualquier nuevo envío real; los agentes no prueban formulario/SMTP en producción.
 - **Día 30**: indexación de las 15 URL, primeras consultas y clics, contactos por canal; ajustar títulos según datos.
+
+## Medición y responsabilidades
+
+Las metas SEO son objetivos sin volumen/ranking prometido, no resultados ni garantía de indexación. Registrar baseline, fecha, filtros y fuente; no generar clics de conversión o envíos por agentes para rellenar métricas. GA4 mide eventos y la visita a Gracias no prueba entrega SMTP. Cookies observadas en la muestra de 15/10 fueron GA4; revisar cambios de terceros tras actualizaciones sin guardar tokens ni datos de pacientes.
+
+Fechas orientativas de seguimiento de la ronda QA del 15/10: día7 22/10 y día30 14/11. No son una declaración de CHECKPOINT5 aprobado ni una automatización creada; 11.6 sigue OWNER y el cierre lo decide José. 12.2/12.3 conservan su estado hasta disponer de evidencia de cada revisión. GBP/Doctoralia los gestiona el canal autorizado: esta auditoría no accede a esas cuentas. Horario real pendiente de la Dra.; sitio Previa cita D-032.

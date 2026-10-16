@@ -1,6 +1,6 @@
 # LAUNCH_CHECKLIST — drairinagonzalez.com
 
-Actualizado: 2026-10-16 · Claude cloud. El sitio está en producción desde el go-live de la portada (D-034) y se ha ido publicando por tramos con aprobación médica (D-078/D-082). Esta lista confirma que el sitio corto (D-076) está listo para considerarse lanzado (PLAN 11.5) y deja a la vista lo que depende de José (CHECKPOINT 5, 11.6).
+Actualizado: 2026-10-16 · Codex · revisión del encargo de cierre. El sitio está en producción desde el go-live de la portada (D-034) y se ha ido publicando por tramos con aprobación médica (D-078/D-082). Esta lista confirma que el sitio corto (D-076) está listo para considerarse lanzado (PLAN 11.5) y deja a la vista lo que depende de José (CHECKPOINT 5, 11.6).
 
 Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 
@@ -19,23 +19,23 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 - ✅ 2FA en WordPress, Hostinger y Google; sin contraseñas de aplicación activas.
 - ✅ Formulario con datos mínimos, antispam y captcha; SMTP operativo desde el 10-oct.
 - ✅ Prueba real del formulario con «PRUEBA» hecha por José (2026-10-15).
-- ✅ Respaldo automático antes de cada despliegue y copias del hosting.
+- ✅ Respaldo de código antes de deploy-code y copias del hosting según reporte. ⏳ Restauración/rollback real sin ensayar (12.1 DOING); docs/ROLLBACK.md no es una prueba de restauración.
 
 ## SEO
 
-- ✅ Títulos y descripciones dentro de límites; canónicas propias; index en todo lo público.
+- ✅ Títulos y descripciones dentro de límites; canónicas propias e index en las 15 URLs indexables. Links/Gracias públicos noindex; archivos404 y borradores fuera del sitemap.
 - ✅ Sitemaps de Rank Math solo con lo publicado (sin archivos 404 ni recursos); reenviado en Search Console.
-- ✅ Schema validado sin errores ni advertencias (Physician+Person, ProfilePage, ContactPage, FAQPage, MedicalWebPage, BreadcrumbList).
+- ✅ Tipos/duplicados de schema contrastados en las páginas públicas. Validator.schema.org 0/0 aportado por la sesión local para Sueño y Dra.; no se afirma validación externa individual de todas las URLs (Q-058, auditoría14b).
 - ✅ 301 del dominio aparcado y de las rutas de tipo a /sueno/{slug}/.
-- ✅ Search Console: portada, Conóceme, Primera consulta y Contacto indexadas; motivos de no indexación revisados sin problemas.
-- ✅ Perfil de Google editado el 2026-10-16 (sesión local con OK de José; QA «Perfil de Negocio»): web con UTM, descripción, Facebook limpio, categoría adicional Clínica del sueño, reserva por WhatsApp y 7 servicios. Nombre, dirección y teléfonos sin cambios.
+- ✅ Evidencia aportada de Search Console del14/10: portada, Conóceme, Primera consulta y Contacto indexadas; motivos históricos revisados. No afirma cobertura de hoy sin una nueva consulta del propietario.
+- ✅ Edición de Perfil de Google atestada (no cierre de9.5): Perfil de Google editado el 2026-10-16 (sesión local con OK de José; QA «Perfil de Negocio»): web con UTM, descripción, Facebook limpio, categoría adicional Clínica del sueño, reserva por WhatsApp y 7 servicios. Nombre, dirección y teléfonos sin cambios.
 - 👤 Horario de GBP pendiente de que la Dra. confirme el real (hoy en Google: lun cerrado, mar–vie 10:00–12:30, sáb 9:00–15:00); el sitio sigue con «Previa cita» (D-032). Doctoralia lo alinea la Dra. (PLAN 9.5).
 
 ## Rendimiento y accesibilidad
 
-- ✅ Lighthouse «antes/después» (PERFORMANCE.md): CLS de portada 0,236 → 0,001; escritorio a menos de la mitad de peso con fotos q95.
+- ✅ Lighthouse «antes/después» (PERFORMANCE.md): CLS de portada 0,236 → 0,001; Dra./Primera consulta/Contacto escritorio a menos de la mitad con q95. Home 5204→4070KiB en las tandas registradas; no es medición CWV de campo.
 - ✅ Accesibilidad: axe WCAG 2.2 AA sin violaciones reales; Lighthouse a11y 100 en las páginas medidas; menú con teclado.
-- ✅ Chromium, Edge, Firefox y Safari en iPhone real sin incidencias (11.2). ⏳ Lector de pantalla manual (VoiceOver/TalkBack), opcional.
+- ✅ Chromium medido; Edge/Firefox por reporte local y Safari iPhone real por atestación de José15/10. ⏳ Android real: falta pasada explícita de cierre, 11.2 permanece REVIEW. ⏳ Lector de pantalla manual (VoiceOver/TalkBack), fuera del alcance automático y sin certificar WCAG completo.
 
 ## Medición
 
@@ -47,3 +47,18 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 1. 👤 José: horario de GBP, Doctoralia y revisión legal (o aceptar que quedan como mejora continua). Prueba del formulario: ✅.
 2. ✅ Pasada en iPhone (Safari) — José, 2026-10-15.
 3. 👤 José aprueba esta lista.
+
+## Trazabilidad y límites de los checks
+
+| Bloque | Evidencia |
+|---|---|
+| Páginas, títulos, responsive y enlaces | qa-cierre15/10 + nueva auditoría16/10 y public.json/capturas; estados clínicos según atestación local D-078/D-082 |
+| Aprobación médica y publicación | PLAN7.6/7.7, BATON13/10 18:50, D-082; no nuevas aprobaciones por Codex |
+| Legales publicados | HTTP y builds; actualización Cloudflare aprobada por José y desplegada según BATON14/10 16:55; no equivale a revisión regulatoria8.6 |
+| Seguridad/2FA/backup | SECURITY, reportes locales14/10 y scripts; no nuevo login ni restore por auditor |
+| Formulario real | Atestación de José15/10 aportada por el encargo y esta lista; no repetida por agentes, sin datos del mensaje guardados |
+| SEO/schema/GA4 | Auditorías14b/16, PERFORMANCE y fixtures de eventos; no se certifica cobertura Google ni conversiones recibidas en backend |
+| Navegadores | QA local14/10 Edge/Firefox, atestación Safari de José15/10; Android completo pendiente |
+| Perfil de Google | QA16/10 12:30, solo atestación de edición; URL UTM contrastada con sitio. Descripción nueva referida como «texto del encargo383caracteres» sin transcripción: falta literal para cotejo. No se entra al perfil ni se confirma publicación de servicios |
+
+La lista revisada puede estar DONE como documento (11.5); eso no concede aprobación al lanzamiento (11.6 OWNER) ni cierra horario/Doctoralia9.5 o revisión legal8.6. José debe aprobar y decidir expresamente qué pendientes acepta. 2FA activo no equivale a login autenticado probado por Codex. La frase antigua «prueba pendiente de formulario» queda superada por la atestación15/10.

@@ -372,3 +372,32 @@ Editado en el Chrome del consultorio (cuenta que administra el perfil), con Clau
 - Catálogo de categorías: «sueño» → solo Clínica del sueño; «otorrino» → nada (ya es la principal); «cirujano» → Cirujano, Cirujano oral/oncólogo/plástico, ninguna de ORL.
 - Solo reportado: horario lun cerrado, mar–vie 10:00–12:30, sáb 9:00–15:00, dom cerrado (pendiente de la Dra.); áreas de servicio García, Mitras Poniente, Escobedo, Parque Industrial Mitras 66023; aviso «Google actualizó tus atributos» de accesibilidad sin aceptar.
 - Límite: «aplicado» es lo que muestra el editor; la ficha pública puede tardar en reflejarlo.
+
+## Auditoría de cierre Codex · 2026-10-16
+
+Base3d47aa9, producción declarada d7e14ac. Informe docs/REVISION_2026-10-16.md.
+
+| Tarea | Veredicto / estado | Evidencia y límites |
+|---|---|---|
+| 1.3 | DONE | Quince200/h1/main/canónicas propias, 80vistas, noindex auxiliares6, sitemap10/2/3, robots/cabeceras/cache contrastados; baseline PERFORMANCE, sin datos de campo nuevos. |
+| 6.7 | DONE | 16rutas×5anchos sin overflow; hero final y reduced-motion/transition comprobados. Q-050 A/B14/10 vigente, no nuevo CWV. Logos pendientes lazy resueltos, error captcha del harness aclarado. |
+| 6.8 | DONE | Dos hojas de contacto versionadas390/1440 (16rutas top/medio/pie) vistas; cuatro capturas nativas Home390/768/1440 y Contacto390 revisadas. Sin cambios visuales ni certificación Safari. |
+| 11.1 | DONE | Quince destinos internos200, WhatsApp/tel/mapa únicos; formulario soloContacto, prueba humanaJosé15/10 según atestación, no repetida. CookiesGA4 por muestra escrita15/10; GA bloqueado en nueva prueba. |
+| 11.2 | REVIEW | Chromium80vistas; Edge155/Firefox158 por reporte local32cadauno; SafariiPhone por atestaciónJosé15/10. Falta pasada explícita actual Android real; emulación de ancho y Samsung de composición anterior no la sustituyen. Firefox sin comprobación de consola. |
+| 11.3 | DONE | NAP idéntico en10nodos profesionales; contacto/footer coherentes, horario oculto y Previa cita. FAQ vieja ausente, e434d2a en vivo; sin Borrador/placeholders. Claims/fechas por aprobación D-078/D-082, sin nueva revisión clínica. |
+| 11.5 | DONE | FIX checklist con trazabilidad por bloque y límites: auxiliaresnoindex, validaciónschema no universal, GSC fechado, Android y rollback pendientes. 9.5/8.6/11.6 OWNER siguen explícitos; documentoDONE no aprueba lanzamiento. |
+| 12.4 | DONE | FIX rutinas/KPIs sin cadencia automática de fichas; eventos no pacientes/correos, objetivo indexación solo15indexables. Runbook código/htaccess/DB/medios/miniapps con rollback no probado; seguimiento7/30 no crea automatización. |
+| 5.3 | DOING | PracticeSettings existe y alimenta schema/helpers/formulario; NAP duplicado en builds (FAQ/Contacto), Q-042 OPEN. No fuente única completa todavía. |
+| 5.4 | DONE | Graph propio y filtro RankMath contrastados: fixture conserva WebSite/WebPage/Breadcrumb/Image y elimina duplicados profesionales. Diez nodos públicos, uno por página, mismoNAP; Q-058 verificado. |
+| 12.1 | DOING | Backups previos de tema/core y despliegues atestados; docs/ROLLBACK.md revisado, restauración real no ensayada. NoDONE; respaldo de código no revierte DB/contenido. |
+| 9.5 | OWNER | EdiciónGBP16/10 por sesión local atestada; URLUTM200/canónica limpia y WhatsApp coinciden con sitio. Q-062 falta literal descripción nueva383caracteres para cotejo; no se accede al perfil. Siguen horario real y Doctoralia. |
+
+FIX documentales completados: checklist con fuentes y pendientes; mantenimiento sin publicación mensual automática y con objetivos/eventos correctamente definidos; runbook de rollback con alcances separados y sin falsa prueba de restauración. Sin cambios PHP/JS/CSS ni builds de producción.
+
+**Q-062 · P2 · REVIEW (evidencia9.5):** QA de Google solo conserva «texto del encargo (383 caracteres)» para la nueva descripción. Falta transcripción literal para compararla con el sitio. Claude debe añadirla desde su registro existente, sin secretos; Codex no entra al Perfil ni a Doctoralia. URLUTM200/canónica portada, reservaWhatsApp coherente; no se certifica el perfil actual ni la publicación de servicios en revisión. 9.5OWNER permanece.
+
+11.2REVIEW hasta pasada explícita de Android real. Chromium Windows con cinco anchos no se renombra Chrome Android. SafariiPhone y prueba humana del formulario15/10 aceptados como atestaciones del encargo/PLAN/checklist; no nuevos ensayos de Codex. 11.5DONE solo acredita documento revisado, no 11.6aprobado. 12.1DOING: no ejecutar rollback/despliegue por esta auditoría.
+
+80vistas sin desbordes;15destinos internos200,15canónicas propias,10nodos profesionales con unNAP. Seis auxiliaresnoindex; sitemap10/2/3. Logos marcados inicialmente como imageCandidates estaban pendientes lazy: eager soloDOM carga18/18, sin rotos. Un TurnstileError inicial por bloquear tráfico noGET del proveedor; followup permite Cloudflare manteniendo POSTsitio bloqueado y no registra errores. No borrar estas señales ni tratarlas como fallos de producción.
+
+Fotos/hojas nuevas inspeccionadas; resumen comprimido no mide proporciones/legibilidad, cuatro PNG nativos complementan móvil/tablet/escritorio. GA y Doctoralia bloqueados; cookiesGA4 por evidencia escrita15/10, no nueva garantía de terceros. PHP79/PHPCS/JS2+harnesses/bash18 pasan; fixture schema sin DB ni validador externo. Sin formulario/SMTP, secretos, claves, publicación, borrado, despliegue ni acceso a perfiles. Evidencia en docs/audit/2026-10-16/.

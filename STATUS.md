@@ -1,13 +1,13 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado: 2026-10-14 · Codex · segunda auditoría, base44221ba.
+Actualizado: 2026-10-16 · Codex · auditoría de cierre sobre3d47aa9.
 
-**73,84% español: 175/237 pesos, 67/90 DONE.** Cinco DESCOPED/16 pesos fuera de total; inglés aparte. PLAN→PROGRESS.
+**82,28% español:195/237 pesos,75/90DONE.** Solo DONE suma; cincoDESCOPED/16pesos e inglés aparte se conservan. PLAN→PROGRESS.
 
-Trece tareas del encargo14b DONE: 1.9/2.6/3.8/5.7/6.9/9.6/10.5/11.4 y 9.1/9.2/9.3/10.3/10.4. Informe docs/REVISION_2026-10-14b.md. Estrategia/mapa/arquitectura/SEO/diseño/plugins/seguridad y coordinación actualizados al sitio corto, cinco fichas y decisiones vigentes. Historia etiquetada; sin nuevas publicaciones.
+Siete de ocho REVIEW cerradas:1.3/6.7/6.8/11.1/11.3/11.5/12.4. 11.2REVIEW por Android real sin pasada explícita actual; Edge/Firefox locales y SafariiPhone por atestación identificados. 5.4DONE;5.3/12.1DOING por Q-042 y rollback real sin ensayar. 9.5OWNER: URLUTM y contacto coherentes, falta literal de descripción nueva Q-062, horario real y Doctoralia.
 
-Producción declarada edf8c45; quince200 y404, title/meta dentro de límites, schema Physician+Person/migas contrastados. Q-058 VERIFIED; Q-059 INVALID tras revocación y nuevas pruebas anónimas. 2FA WP activo por atestación local y Hostinger/Google por propietario. Lecturas privilegiadas solo SSH/WP-CLI local.
+Producción declarada d7e14ac, Q-060/061 y FAQ ya desplegados según BATON. Nueva prueba80vistas sin overflow,15internos200 y15canónicas, noindex6auxiliares, sitemap10/2/3. Diez nodosNAP idénticos y horario oculto; FAQ vieja ausente. Logos pendientes lazy y error de captcha provocado por bloqueo del harness aclarados en followup; sin fallo confirmado del sitio. Capturas nuevas versionadas y revisadas.
 
-Q-060 FIXED_LOCAL: helper reconoce CPT publicados en /sueno/{slug}/, con área y ancla, excluyendo borradores. Fixture7/7. Claude despliega solo código; no contenido/builds ni claves. Cuatro HTML de José preservados.
+FIX solo documentales: checklist trazada y limitada, mantenimiento coherente con sitio corto, runbook rollback separado de contenido/DB y explícitamente no probado. No hay cambios web/builds ni despliegue que realizar por este lote. PHP79/PHPCS/JS/bash pasan. No se probaron formulario/SMTP ni cuentas; prueba humanaJosé15/10 aceptada sin repetir. Cookies y revisiones médicas respaldadas por evidencia escrita, no recertificadas. Cuatro HTML locales preservados.
 
-PHP79/PHPCS/JS externo2+inline4/bash18 pasan. Axe32 muestras sin violaciones detectadas; LH a11y seis100. Incomplete contraste y lector de pantalla/manual no equivalen a aprobado; no certificado universal AA ni CWV de campo. Sin stagingD-080, sin secretos/SMTP/borrados/deploy por Codex. Pendientes manuales, GBP, campo y Q-040/Q-042 conservan alcance en NEXT.
+No stagingD-080. Pendientes en NEXT:Android, rollback, Q-040/Q-042, literalGBP/horario/Doctoralia, legal8.6 y aprobación11.6; seguimiento7/30 con evidencia futura. No se concede lanzamiento global por cerrar su documento.

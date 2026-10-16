@@ -221,3 +221,9 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - LAUNCH_CHECKLIST.md y MAINTENANCE.md creados. PLAN: 1.3, 6.7, 6.8, 11.1, 11.3, 11.5 y 12.4 a REVIEW; 11.2 queda TODO (Safari/Firefox reales).
 - Q-061: `setup-site.sh` fija el título de la 404 en Rank Math como «Página no encontrada %sep% %sitename%» (antes «Page Not Found»).
 
+
+## 2026-10-16 · Codex · auditoría de cierre
+
+- Siete de ocho REVIEW DONE;11.2REVIEW por Android explícito pendiente.5.4DONE;5.3/12.1DOING.195/237=82,28%,75/90DONE;9.5OWNER.
+- Checklist/mantenimiento/rollback documentados con evidencia y límites. Q-062 falta descripciónGBP literal; URLUTM/contacto coherentes sin entrar a perfiles.
+- Nueva evidencia80vistas y capturas, señales de lazy/captcha aclaradas; sin cambios web, despliegue, formulario, secretos ni publicaciones.

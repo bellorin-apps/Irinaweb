@@ -45,7 +45,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 1.1 | Canal técnico: red amplia del entorno + Application Password del WordPress NUEVO (REST); SSH solo desde la PC | 2 | OWNER | D-018, D-021 |
 | 1.2 | Inventario completo de producción + clasificación KEEP/REPLACE/REMOVE | 3 | DONE | CSV 44 IDs únicos y clasificación (26 KEEP/17 REMOVE/1 REPLACE opcional), pie/legal detallados; retirada D-075 atestada con respaldo y 322 preservado. 27 adjuntos actuales reportados, páginas sin roturas observadas. Informe: docs/REVISION_2026-10-14.md |
-| 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | REVIEW | Rastreo 2026-10-14/15: robots.txt con sitemap, sitemaps solo publicados (Q-048), canónicas propias en 15/15, index en lo público y noindex en gracias/links/preview/briefing, cabeceras de seguridad (SECURITY.md); evidencia en CHANGELOG SEO y docs/audit/2026-10-15/qa-cierre.md |
+| 1.3 | Auditoría pública: robots, sitemap, canonicals, noindex, headers, cache, CWV baseline | 2 | DONE | Quince200/h1/main/canónicas propias, 80vistas, noindex auxiliares6, sitemap10/2/3, robots/cabeceras/cache contrastados; baseline PERFORMANCE, sin datos de campo nuevos. Informe: docs/REVISION_2026-10-16.md |
 | 1.4 | Revisar Search Console: cobertura, URLs indexadas/excluidas, sitemap enviado | 2 | DONE | Capturas de José (datos al 8/10), cinco motivos y ejemplos explicados, sitemap Correcto y reenviado 14/10. Sitemap actual incluye cinco fichas y excluye archivos 404; no se infiere cobertura nueva. Informe: docs/REVISION_2026-10-14.md |
 | 1.5 | Limpieza y configuración base: idioma, zona horaria, formatos, Site Kit fuera, Astra fuera, Hello activo, hardening wp-config | 2 | DONE | InformeWP-CLI13/10: es_MX,Monterrey,formatos,Hello/child,ausenciaAstra/SiteKit y hardening confirmados. DISPLAY=true sinDEBUG no bloquea. Ver docs/audit/2026-10-13/veredictos-inventario.md |
 | 1.6 | Verificar backups del hosting y crear backup completo verificado (archivos + BD) | 3 | DONE | Manual 2026-10-07 16:41 descargado; semanal automático activo |
@@ -95,8 +95,8 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 |---|---|---|---|---|
 | 5.1 | Child theme `irina-gonzalez` (estructura, enqueue, hooks Hello, setup) | 5 | DOING | Scaffold en repo: style, functions, inc/*, tokens, base, components, sleep, main.js, templates placeholder. Falta: fuentes, sprite Lucide completo, header/footer, templates reales (Fase 6) |
 | 5.2 | Plugin `dra-irina-core`: CPT, taxonomías, campos, settings centrales (NAP, horarios, enlaces) | 5 | DOING | Scaffold: 4 CPT, 3 taxonomías, MetaRegistry (REST schema + sanitización), PracticeSettings, workflow médico por capacidades, schema Graph, shortcodes, tracking. Falta: UI de meta boxes (repetidores), widgets Elementor, pruebas en WP real |
-| 5.3 | Fuente única de verdad: módulo de datos de contacto/profesionales reutilizable | 3 | TODO | |
-| 5.4 | Schema JSON-LD propio sin duplicar con el plugin SEO | 3 | TODO | |
+| 5.3 | Fuente única de verdad: módulo de datos de contacto/profesionales reutilizable | 3 | DOING | PracticeSettings existe y alimenta schema/helpers/formulario; NAP duplicado en builds (FAQ/Contacto), Q-042 OPEN. No fuente única completa todavía. Informe: docs/REVISION_2026-10-16.md |
+| 5.4 | Schema JSON-LD propio sin duplicar con el plugin SEO | 3 | DONE | Graph propio y filtro RankMath contrastados: fixture conserva WebSite/WebPage/Breadcrumb/Image y elimina duplicados profesionales. Diez nodos públicos, uno por página, mismoNAP; Q-058 verificado. Informe: docs/REVISION_2026-10-16.md |
 | 5.5 | Tooling: linters (PHPCS WPCS, stylelint, eslint), build de assets, fuentes WOFF2 locales | 2 | DOING | PHPCS + WPCS configurados y en verde. Falta: stylelint/eslint, build de sprite, fuentes |
 | 5.6 | Instalación/configuración plugins aprobados en staging | 2 | DESCOPED | D-080: sin staging; los plugins ya están en producción con respaldo previo |
 | 5.7 | Codex: auditoría de código (PHP/JS/CSS/seguridad) | 3 | DONE | PHPCS/PHP79/JS externo+inline/bash18 pasan; permisos REST propios 7/7, corpus antispam/regresiones, escapes/nonces/admin/revisar revisados. Sin mutaciones; Q-040/Q-042 conservan alcance. Informe: docs/REVISION_2026-10-14b.md |
@@ -111,8 +111,8 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 6.4 | Página Dra. Irina (entidad/autora) | 5 | DONE | FIX→DONE: pública 200/h1/main/schema/migas, narrativa y reduced-motion verificados. Teclado de logos y dos títulos D-049 corregidos y probados localmente; despliegue pendiente. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
 | 6.5 | Template página médica (condición/servicio) + 1 página representativa | 5 | DONE | Cinco fichas /sueno/ 200, h1/main, sin Borrador, schema y migas/canónicas correctas. Cinco rutas antiguas del tipo correspondiente 301; diez borradores 404. Relacionados filtrados por publish. Informe: docs/REVISION_2026-10-14.md |
 | 6.6 | Template artículo con metadatos de autoría y revisión médica | 3 | DOING | single-recurso.php |
-| 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | REVIEW | 5 anchos (360/390/768/1024/1440) sin desbordes en 15 URL + 404; movimiento con prefers-reduced-motion (D-084). docs/audit/2026-10-15/qa-cierre.md |
-| 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | REVIEW | Hojas de contacto a 390 y 1440 de las 16 vistas revisadas (2026-10-15); capturas en el entorno cloud, no versionadas. docs/audit/2026-10-15/qa-cierre.md |
+| 6.7 | Responsive real (5 tamaños) y motion con `prefers-reduced-motion` | 3 | DONE | 16rutas×5anchos sin overflow; hero final y reduced-motion/transition comprobados. Q-050 A/B14/10 vigente, no nuevo CWV. Logos pendientes lazy resueltos, error captcha del harness aclarado. Informe: docs/REVISION_2026-10-16.md |
+| 6.8 | QA visual (screenshots desktop/tablet/móvil) | 2 | DONE | Dos hojas de contacto versionadas390/1440 (16rutas top/medio/pie) vistas; cuatro capturas nativas Home390/768/1440 y Contacto390 revisadas. Sin cambios visuales ni certificación Safari. Informe: docs/REVISION_2026-10-16.md |
 | 6.9 | Codex: auditoría del núcleo | 3 | DONE | FIX Q-060 helper para CPT publicados en /sueno/{slug}/ con taxonomía/ancla; 7/7 fixtures. Widgets/templates/filtros publish revisados, sin borrar legacy. Correctivo local pendiente despliegue. Informe: docs/REVISION_2026-10-14b.md |
 | 6.10 | CHECKPOINT 3: Home + sistema visual aprobados | 2 | DONE | 2026-10-08: portada = Home v2, logotipo completo, foto autorizada (D-034) |
 
@@ -150,7 +150,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | 9.2 | Sitemap, robots, redirects 301 (mapa OLD → NEW) | 2 | DONE | Sitemap page10/condicion2/tratamiento3 sin archivos404/recursos, robots público correcto. Dominio aparcado raíz301 confirmado; cinco rutas antiguas301 recomprobadas en support.json. Informe: docs/REVISION_2026-10-14b.md |
 | 9.3 | Validación de schema (Physician/Person/WebSite/Article/Breadcrumb) | 2 | DONE | Q-058 confirmado: Physician+Person único, ProfilePage/ContactPage/FAQPage/MedicalWebPage de áreas/fichas y BreadcrumbList. Validator0/0 Sueño/Dra. por atestación local, no nueva validación externa universal. Informe: docs/REVISION_2026-10-14b.md |
 | 9.4 | GA4 + Search Console + eventos de conversión | 2 | DONE | FIX→DONE: GA4 único tras load; seis eventos, DNT y exclusión de editores/ID inválido probados sin enviar a Google. GSC confirmado en DISCOVERY §1.6/D-022; cobertura actual sigue 1.4. Informe: docs/REVISION_CINCO_TAREAS_2026-10-13.md |
-| 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | GBP editado 2026-10-16 por la sesión local con OK de José (QA «Perfil de Negocio»): web con UTM, Facebook limpio, descripción, categoría adicional Clínica del sueño, reserva WhatsApp y 7 servicios. Faltan horario real (Dra.) y Doctoralia |
+| 9.5 | Alineación Google Business Profile y Doctoralia (NAP) | 2 | OWNER | EdiciónGBP16/10 por sesión local atestada; URLUTM200/canónica limpia y WhatsApp coinciden con sitio. Q-062 falta literal descripción nueva383caracteres para cotejo; no se accede al perfil. Siguen horario real y Doctoralia. Informe: docs/REVISION_2026-10-16.md |
 | 9.6 | Codex: QA SEO | 2 | DONE | QA quince200/h1/main/canónicas, longitudes≤62/158 y OG/schema/migas. Robots/redirecciones/sitemaps contrastados; sin inferir indexación. Informe: docs/REVISION_2026-10-14b.md |
 
 ## FASE 10 — Performance, seguridad, accesibilidad
@@ -167,21 +167,21 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 11.1 | QA funcional (enlaces, forms, email, agenda, WhatsApp, maps, 404, cookies, analytics) | 3 | REVIEW | 80 vistas: 200/404 correctos, un h1, 0 desbordes, 0 imágenes rotas, 0 errores JS propios; WhatsApp, tel y mapa únicos y correctos; cookies solo GA4; formulario no enviado (correos reales). docs/audit/2026-10-15/qa-cierre.md |
-| 11.2 | QA dispositivos (Chrome, Edge, Safari, Firefox, Android, iOS) | 2 | REVIEW | Chromium (5 anchos, nube), Edge 155 y Firefox 158 headless (sesión local) y Safari en iPhone real (José: «todo bien», 2026-10-15): sin incidencias |
-| 11.3 | QA contenido (consistencia NAP, nombres, títulos, claims, fechas) | 2 | REVIEW | NAP idéntico en texto y schema; corregida la entradilla de FAQ que remitía a páginas de padecimiento (build-pages, pendiente de setup-pages); claims solo aprobados. docs/audit/2026-10-15/qa-cierre.md |
+| 11.1 | QA funcional (enlaces, forms, email, agenda, WhatsApp, maps, 404, cookies, analytics) | 3 | DONE | Quince destinos internos200, WhatsApp/tel/mapa únicos; formulario soloContacto, prueba humanaJosé15/10 según atestación, no repetida. CookiesGA4 por muestra escrita15/10; GA bloqueado en nueva prueba. Informe: docs/REVISION_2026-10-16.md |
+| 11.2 | QA dispositivos (Chrome, Edge, Safari, Firefox, Android, iOS) | 2 | REVIEW | Chromium80vistas; Edge155/Firefox158 por reporte local32cadauno; SafariiPhone por atestaciónJosé15/10. Falta pasada explícita actual Android real; emulación de ancho y Samsung de composición anterior no la sustituyen. Firefox sin comprobación de consola. Informe: docs/REVISION_2026-10-16.md |
+| 11.3 | QA contenido (consistencia NAP, nombres, títulos, claims, fechas) | 2 | DONE | NAP idéntico en10nodos profesionales; contacto/footer coherentes, horario oculto y Previa cita. FAQ vieja ausente, e434d2a en vivo; sin Borrador/placeholders. Claims/fechas por aprobación D-078/D-082, sin nueva revisión clínica. Informe: docs/REVISION_2026-10-16.md |
 | 11.4 | Consistency check de Codex contra MASTER_PROMPT | 2 | DONE | FIX documentos activos y coordinación coherentes con D-076…085. README/HANDOFF sin staging ni envío de URL con token; historia etiquetada, gate médico intacto. Informe: docs/REVISION_2026-10-14b.md |
-| 11.5 | `LAUNCH_CHECKLIST.md` completado | 2 | REVIEW | LAUNCH_CHECKLIST.md (2026-10-15): técnica, SEO, rendimiento, accesibilidad y medición en verde; quedan explícitos los puntos de José (prueba del formulario, GBP/Doctoralia, legal) y Safari/Firefox |
+| 11.5 | `LAUNCH_CHECKLIST.md` completado | 2 | DONE | FIX checklist con trazabilidad por bloque y límites: auxiliaresnoindex, validaciónschema no universal, GSC fechado, Android y rollback pendientes. 9.5/8.6/11.6 OWNER siguen explícitos; documentoDONE no aprueba lanzamiento. Informe: docs/REVISION_2026-10-16.md |
 | 11.6 | CHECKPOINT 5: pre-launch aprobado | 2 | OWNER | ext |
 
 ## FASE 12 — Launch y post-launch
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 12.1 | Deploy a producción con backup y rollback (sin staging, D-080) | 5 | TODO | Scripts de tools/deploy/ con respaldo en ~/deploy-backups/; falta documentar y probar el rollback |
+| 12.1 | Deploy a producción con backup y rollback (sin staging, D-080) | 5 | DOING | Backups previos de tema/core y despliegues atestados; docs/ROLLBACK.md revisado, restauración real no ensayada. NoDONE; respaldo de código no revierte DB/contenido. Informe: docs/REVISION_2026-10-16.md |
 | 12.2 | Día 0 validación; Día 1 errores críticos | 2 | TODO | |
 | 12.3 | Día 7 Search Console + analytics; Día 30 indexación/keywords/conversiones/CWV | 2 | TODO | |
-| 12.4 | `MAINTENANCE.md` + plan SEO 6–12 meses + KPIs | 3 | REVIEW | MAINTENANCE.md (2026-10-15): rutinas, despliegue y rollback, plan SEO 6–12 meses (GBP, reseñas, directorios, enlaces, contenido gradual) y KPIs |
+| 12.4 | `MAINTENANCE.md` + plan SEO 6–12 meses + KPIs | 3 | DONE | FIX rutinas/KPIs sin cadencia automática de fichas; eventos no pacientes/correos, objetivo indexación solo15indexables. Runbook código/htaccess/DB/medios/miniapps con rollback no probado; seguimiento7/30 no crea automatización. Informe: docs/REVISION_2026-10-16.md |
 
 ## FASE 13 — Versión en inglés (`/en/`, Anexo A) · cuenta aparte, no infla el avance del sitio en español
 

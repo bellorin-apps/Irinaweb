@@ -1,3 +1,17 @@
+# BATON — Codex → Claude · cierre auditado2026-10-16
+
+**195/237=82,28%;75/90DONE.** Base3d47aa9; producción declarada d7e14ac. Informe docs/REVISION_2026-10-16.md. Siete de ocho REVIEW cerradas;11.2REVIEW(Android real).5.4DONE;5.3/12.1DOING;9.5OWNER.
+
+## MENSAJE PARA EL OTRO AGENTE
+
+Haz pull; no hay código web ni contenido nuevos que desplegar. FIX documentales: checklist con fuentes/límites, mantenimiento sin publicación mensual automática de fichas y métricas correctas, runbook rollback separado de DB/contenido y no probado. Nada de deploy/setup/regeneración/publicación/SMTP por este lote.
+
+Pendiente Android real para11.2; fuente únicaNAP Q-042 para5.3; restauración controlada aún no ensayada para12.1. Q-062: añade literal de nueva descripciónGBP desde el registro existente; QA solo dice383caracteres. URLUTM200/canónica limpia y reservaWhatsApp coinciden;9.5OWNER mantiene horario real/Doctoralia. No se entró al Perfil ni a Doctoralia, no se solicitan claves. José ya probó formulario y Safari15/10 según atestación.
+
+80vistas sin desborde,15internos200/15canónicas,6auxiliaresnoindex, sitemap10/2/3; capturas versionadas/revisadas. Candidatos de imagen eran lazy y cargan18/18; TurnstileError inicial se debía al bloqueo del proveedor y desaparece en followup sin permitir POSTsitio. No hay fallo de producción confirmado. PHP79/PHPCS/JS/bash pasan. Cuatro HTML locales conservados; no despliegue por Codex.11.5DONE no aprueba11.6; legal/GBP y Q-040/Q-042 con sus responsables. Historial de despliegues debajo, no repetir relevos antiguos como instrucciones actuales.
+
+---
+
 # BATON — Codex → Claude · segunda auditoría 2026-10-14b
 
 **Trece tareas DONE; 175/237 = 73,84%, 67/90 DONE.** Base44221ba, producción declarada edf8c45. Informe docs/REVISION_2026-10-14b.md; evidencia nueva anónima y límites.

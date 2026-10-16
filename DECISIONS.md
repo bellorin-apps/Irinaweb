@@ -143,3 +143,7 @@ D-075–085 prevalecen: se acepta inventario/limpieza autorizada histórica, sit
 ## Aplicación de alcance · auditoría14b, 2026-10-14
 
 Se conserva D-076…085 y no se reabre staging/enciclopedia. Mapas históricos se etiquetan; helper de enlaces debe reconocer la ruta canónica aprobada /sueno/{slug}/ como CPT publicado y filtrar su área. Q-059 INVALID no justifica rotaciones ni nuevas aprobaciones; canal cloud sin contraseña de aplicación tras revocación. 2FA por atestación local/propietario. Auditorías automáticas completadas con límites explícitos: pendiente lector de pantalla no se disfraza de certificado AA. Informe docs/REVISION_2026-10-14b.md.
+
+## Criterios de auditoría de cierre · 2026-10-16
+
+SoloDONE suma: backups sin restauración real dejan12.1DOING; móduloNAP con duplicaciones Q-042 deja5.3DOING. Schema propio contrastado permite5.4DONE. Emulación de ancho no acredita Android real:11.2REVIEW. La checklist revisada puede cerrar11.5 sin conceder aprobación11.6, legal8.6 ni9.5OWNER. Mantenimiento propone medir y revisar, no publicar una ficha cada mes sin decisión D-076/D-082 y aprobación vigente. DescripciónGBP sin literal no se certifica; Claude completa evidencia Q-062 desde su registro, sin acceso de Codex al perfil. No se ejecuta despliegue/restore por esta revisión.
