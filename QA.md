@@ -460,3 +460,7 @@ Todo en solo lectura: sin formularios, SMTP, despliegues ni cambios de ajustes.
 **Límites del ensayo.** No se cambió producción y no se purgó caché: la restauración real en vivo no se ensayó.
 - **Base de datos:** no hay volcado propio en ~/deploy-backups. El usuario MySQL solo tiene permisos sobre la base del sitio, así que no se puede crear una base aparte por SSH. Los respaldos de la base son los diarios de Hostinger (hPanel).
 - **12.1 sigue DOING** hasta que José decida cómo cubrir la base de datos.
+- **Base de datos (decisión de José, 2026-10-16):** «respaldo propio + ensayo en base de prueba».
+  - `deploy-code.sh` guarda ahora `db.sql.gz` (privado, 600, fuera del webroot) antes de cada despliegue y aborta si el volcado no termina bien. Probado con un despliegue del mismo código: `~/deploy-backups/20261016-134414/db.sql.gz`, 412 KB, 30 tablas (igual que en vivo).
+  - `tools/deploy/drill-db.sh` restaura ese volcado en una base de prueba que José crea en hPanel y compara las filas de cada tabla con producción. Protecciones probadas: se detiene si apunta a la base de producción o si no conecta, y borra su archivo de credenciales. La clave se lee de `drill-db.local.txt`, fuera de Git, y nunca se imprime.
+  - Pendiente: que José cree la base de prueba.
