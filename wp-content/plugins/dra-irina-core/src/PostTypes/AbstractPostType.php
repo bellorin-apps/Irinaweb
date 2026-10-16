@@ -29,6 +29,7 @@ abstract class AbstractPostType {
 			'has_archive'  => false,
 			'supports'     => [ 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'author' ],
 			'menu_icon'    => 'dashicons-heart',
+			'show_in_menu' => \DraIrina\Core\Settings\PracticeSettings::MENU_SLUG, // dentro de «Dra. Irina» (propietario, 2026-10-16).
 			'map_meta_cap' => true,
 		];
 		register_post_type( static::SLUG, array_merge( $defaults, $this->args() ) );

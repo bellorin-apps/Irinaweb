@@ -231,3 +231,9 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 ## 2026-10-16 · Claude cloud · títulos de 404 (Q-063/Q-064)
 
 - Q-063/Q-064 (P3): `?author=` y los archivos /padecimientos/, /tratamientos/ y /recursos/ pasan a 404 al interpretar la petición (filtro `request`), así que Rank Math usa el título «Página no encontrada» y noindex en lugar del nombre del autor o «… Archive» con index. Sin cambios en fichas, vistas previas, /sueno/{slug}/ ni wp-admin. Pendiente de despliegue y verificación de la sesión local.
+
+## 2026-10-16 · Claude cloud · menú de wp-admin y barra en horizontal (D-087)
+
+- wp-admin: un solo menú «Dra. Irina» con Consultorio, los tipos de contenido y sus taxonomías como submenús.
+- Q-065: en teléfono horizontal la barra de acciones pasa a columna de botones redondos bajo el ☰.
+- Q-041 alineado con D-065 (sin Map ID).

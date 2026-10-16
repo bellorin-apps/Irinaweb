@@ -483,6 +483,17 @@ body.menu-open { overflow: hidden; }
 body.menu-open .di-mobile-bar { visibility: hidden; opacity: 0; transition: opacity var(--motion-fast) var(--ease-out), visibility 0s linear var(--motion-fast); }
 body.has-mobile-bar { padding-bottom: 72px; }
 @media (min-width: 900px) { body.has-mobile-bar { padding-bottom: 0; } }
+/* Propietario (2026-10-16, Galaxy S24+ en horizontal): con poca altura la barra inferior restaba espacio; pasa a una columna de
+   botones redondos a la derecha, bajo el menú (mismo tamaño y eje que el botón ☰). El texto sigue en el enlace como nombre accesible. */
+@media (max-width: 899px) and (orientation: landscape) and (max-height: 500px) {
+  .di-mobile-bar { inset: 100px var(--gutter) auto auto; display: flex; flex-direction: column; gap: 10px; padding: 0; background: none; border-top: 0; backdrop-filter: none; }
+  .admin-bar .di-mobile-bar { top: 132px; }
+  .di-mobile-bar a { width: 46px; height: 46px; padding: 0; gap: 0; place-items: center; place-content: center; font-size: 0; line-height: 0; border-radius: 50%; border: 1px solid var(--color-border); background: rgb(251 247 242 / 0.94); box-shadow: 0 6px 18px rgb(40 20 50 / 0.12); }
+  .di-mobile-bar .di-icon { width: 22px; height: 22px; flex: none; } /* el icono se mide en em y el texto va a 0 */
+  .di-mobile-bar a:hover, .di-mobile-bar a:focus-visible { background: var(--color-surface); }
+  body.has-mobile-bar { padding-bottom: 0; }
+  .di-bleed { --di-peek: 4.5rem; }
+}
 
 /* Interiores: artículo, TOC, revisión, FAQ, fuentes */
 .di-crumbs { font-size: 0.85rem; color: var(--color-muted); margin-bottom: var(--space-md); }

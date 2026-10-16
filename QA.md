@@ -102,7 +102,7 @@ _(Fase 11.)_
 | Q-038 | P2 | contrast.json; overline anterior 4,1:1 sobre foto  `wp-content/themes/irina-gonzalez/assets/css/components.css:261` | FIXED_LOCAL | `03db275`: tokens más oscuros, glass conservado; overline 4,9 y botón 6,46 |
 | Q-039 | P1 | baseline-360.png, 851 px y retrato 40,5 % visible  `wp-content/themes/irina-gonzalez/assets/css/components.css:317` | VERIFIED | `03db275` y posteriores (D-069, encaje alfa). 2026-10-12: José lo revisó en su Samsung en producción, «Listo, todo perfecto» (con los logos y el hero de Primera consulta) |
 | Q-040 | P2 | Ops/Endpoints.php::DENY: superficie de opciones extensa para admin  `wp-content/plugins/dra-irina-core/src/Ops/Endpoints.php:19` | OPEN | Propuesta técnica: inventariar consumidores y pasar a allowlist; permiso manage_options y veto de secretos ya activos |
-| Q-041 | P2 | assets/js/map.js, Marker obsoleto  `wp-content/themes/irina-gonzalez/assets/js/map.js:18` | OWNER | Mantener hasta mapId; guard contra mapa duplicado corregido en `03db275` |
+| Q-041 | P2 | assets/js/map.js, Marker obsoleto  `wp-content/themes/irina-gonzalez/assets/js/map.js:18` | WONTFIX | D-065 vigente (sustituye a D-059): sin Map ID, estilo JSON y marcador clásico; el aviso de Marker es cosmético. Se retoma solo si José lo pide o Google anuncia la retirada. Antes: mantener hasta mapId; guard contra mapa duplicado corregido en `03db275` |
 | Q-042 | P2 | NAP/horarios/hospitales repetidos en builds/defaults; fuente central existe  `tools/content/build-home.py:55` | OPEN | Migración a datos centrales al renderizar como próxima unidad técnica, sin cambiar textos aprobados |
 | Q-043 | P1 | build-pages.py pc-narr y build-dra.py narrativa draft=yes; marcas visibles en Dra./Primera consulta  `tools/content/build-pages.py:68` | VERIFIED | Dra.: marca retirada el 2026-10-10 con el texto confirmado (D-058). Primera consulta «Qué llevar»: aprobado por el propietario el 2026-10-12 con la captura del bloque y marca retirada en build-pages. Quedan marcas en ORL y Sueño (orl-narr, su-narr), páginas aún en borrador |
 | Q-044 | P2 | Ocho defaults de títulos Elementor conservaban punto final en em, contrario a D-049  `wp-content/plugins/dra-irina-core/src/Rendering/Elementor/Faq.php:31` | FIXED_LOCAL | e87c29b: retirar solo el punto; sin cambiar textos publicados ni reparto de acentos |
@@ -472,3 +472,10 @@ Todo en solo lectura: sin formularios, SMTP, despliegues ni cambios de ajustes.
   La «distinta» del informe era una línea vacía de la lista de tablas, no una tabla; el script ya la ignora.
   José borra la base y el usuario «drill» y el archivo local.
   Con el ensayo del código y este, **12.1 → REVIEW** para Codex. Límite: la restauración sobre el sitio en vivo no se ensayó, por decisión de José («copia aparte»).
+
+## Android real, PLAN 11.2 (José, 2026-10-16)
+
+Samsung Galaxy S24+, Chrome, con la checklist de 7 puntos (Inicio, menú, WhatsApp/Llamar, Primera consulta, Contacto con mapa y «Cómo llegar» sin enviar el formulario, una ficha de Sueño, giro a horizontal). Reporte de José: «todo bien». Única observación: en horizontal la barra inferior «WhatsApp / Llamar / Cómo llegar» restaba alto útil.
+
+- **Q-065 · P3 · FIXED_LOCAL (Claude cloud, 2026-10-16; probado en harness, sin desplegar):** con `max-width: 899px`, `orientation: landscape` y `max-height: 500px` la barra pasa a una columna de 3 botones redondos de 46 px a la derecha, bajo el ☰ (mismo eje y tamaño), sin reservar alto abajo. Propuesta de José. El texto sigue dentro del enlace como nombre accesible. Comprobado con Chromium sobre el HTML público y el CSS local a 832×340 (Inicio, Contacto, Sueño): columna en x=754 alineada con el ☰ (x=754), sin desborde, `padding-bottom` 0; en vertical (384×760) la barra inferior sigue igual. Límite: harness con CSS local, no demuestra el despliegue; falta que José lo vea en su S24+.
+

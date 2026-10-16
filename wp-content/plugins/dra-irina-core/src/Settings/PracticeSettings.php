@@ -14,6 +14,9 @@ final class PracticeSettings {
 
 	public const OPTION = 'dra_irina_practice';
 
+	/** Menú «Dra. Irina» de wp-admin (antes «Consultorio»); el slug se conserva para no romper enlaces guardados. */
+	public const MENU_SLUG = 'dra-irina-practice';
+
 	/**
 	 * Campos: clave => [label, tipo, público].
 	 *
@@ -65,21 +68,52 @@ final class PracticeSettings {
 	}
 
 	public function register(): void {
-		add_action( 'admin_menu', [ $this, 'menu' ] );
+		add_action( 'admin_menu', [ $this, 'menu' ], 9 );
+		add_action( 'admin_menu', [ $this, 'taxonomy_menu' ], 11 );
+		add_filter( 'parent_file', [ $this, 'taxonomy_parent' ] );
 		add_action( 'admin_init', [ $this, 'settings' ] );
 		add_action( 'rest_api_init', [ $this, 'rest' ] );
 	}
 
+	/**
+	 * Propietario (2026-10-16): un solo elemento «Dra. Irina» en el menú de wp-admin. Dentro van Consultorio (estos ajustes), los
+	 * tipos de contenido (show_in_menu = MENU_SLUG, AbstractPostType) y sus taxonomías. El slug de la página no cambia.
+	 */
 	public function menu(): void {
 		add_menu_page(
 			__( 'Consultorio', 'dra-irina-core' ),
-			__( 'Consultorio', 'dra-irina-core' ),
+			__( 'Dra. Irina', 'dra-irina-core' ),
 			'manage_options',
-			'dra-irina-practice',
+			self::MENU_SLUG,
 			[ $this, 'render' ],
-			'dashicons-location',
+			'dashicons-heart',
 			20
 		);
+		add_submenu_page( self::MENU_SLUG, __( 'Consultorio', 'dra-irina-core' ), __( 'Consultorio', 'dra-irina-core' ), 'manage_options', self::MENU_SLUG, [ $this, 'render' ] );
+	}
+
+	/** Las taxonomías no aparecen solas cuando su tipo de contenido es un submenú: se añaden al final del grupo. */
+	public function taxonomy_menu(): void {
+		foreach ( [ 'area', 'zona', 'estado_medico' ] as $taxonomy ) {
+			$tax = get_taxonomy( $taxonomy );
+			if ( $tax ) {
+				add_submenu_page( self::MENU_SLUG, $tax->labels->name, $tax->labels->name, $tax->cap->manage_terms, 'edit-tags.php?taxonomy=' . $taxonomy );
+			}
+		}
+	}
+
+	/**
+	 * Al editar términos de esas taxonomías, el menú abierto y resaltado es «Dra. Irina».
+	 *
+	 * @param string $parent_file Menú padre actual.
+	 */
+	public function taxonomy_parent( string $parent_file ): string {
+		global $submenu_file, $taxonomy;
+		if ( in_array( $taxonomy, [ 'area', 'zona', 'estado_medico' ], true ) ) {
+			$submenu_file = 'edit-tags.php?taxonomy=' . $taxonomy; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited -- así resalta WordPress el submenú.
+			return self::MENU_SLUG;
+		}
+		return $parent_file;
 	}
 
 	public function settings(): void {
