@@ -79,7 +79,7 @@
         "widgetType": "di-narrativa",
         "settings": {
           "eyebrow": "Approach",
-          "title": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <b><em>treatment</em></b>”",
+          "title": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <em>treatment</em>”",
           "lead": "The first visit lasts about 30 minutes. It starts by understanding what is happening to you and since when; it continues with a complete ear, nose and throat examination, with endoscopy in the office when needed, and ends with a clearly explained plan, without promises that cannot be kept.",
           "text": "",
           "draft": "",

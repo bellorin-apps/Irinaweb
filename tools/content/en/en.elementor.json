@@ -30,7 +30,7 @@
         "widgetType": "di-hero",
         "settings": {
           "eyebrow": "Your ENT|in Monterrey",
-          "title": "<b>Breathe</b> well,<br>sleep well,<br>hear <b><em>well</em></b>",
+          "title": "<b>Breathe</b> well,<br>sleep well,<br>hear <em>well</em>",
           "lead": "Dr. Irina González Sáez, board-certified otolaryngologist (ENT) with subspecialty training in snoring and sleep apnea. Ear, nose and throat care for children and adults in Cumbres, Monterrey. Consultations are in Spanish.",
           "lead_mobile": "Board-certified ENT with subspecialty training in snoring and sleep apnea. Children and adults, in Cumbres. Consultations are in Spanish.",
           "trust": "Mexican Board of Otolaryngology–Head and Neck Surgery\nSubspecialty in sleep-disordered breathing\nCAB Medical Headquarters · Cumbres, Monterrey",
@@ -77,7 +77,7 @@
         "widgetType": "di-areas",
         "settings": {
           "eyebrow": "Areas of care",
-          "title": "Two <b>specialties</b>, one <br class=\"di-brd\">way of <b><em>caring</em></b>",
+          "title": "<b>Two specialties</b>, one <br class=\"di-brd\">way of <em>caring</em>",
           "orl_eyebrow": "Otolaryngology (ENT)",
           "orl_title": "Ear, nose and throat, from birth",
           "orl_items": "Ear infections\nHearing loss\nTinnitus\nVertigo\nRhinitis\nSinusitis\nDeviated septum\nTonsils\nVoice",
@@ -132,7 +132,7 @@
         "widgetType": "di-motivos",
         "settings": {
           "eyebrow": "What are you feeling?",
-          "title": "Common <b>reasons</b> to <b><em>visit</em></b>",
+          "title": "<b>Common reasons</b> to <em>visit</em>",
           "note": "A guide to finding the right information. It does not replace a medical evaluation.",
           "items": [
             {
@@ -220,7 +220,7 @@
         "widgetType": "di-doctora",
         "settings": {
           "eyebrow": "Dr. Irina González Sáez",
-          "quote": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <b><em>treatment</em></b>”",
+          "quote": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <em>treatment</em>”",
           "text": "Medical degree from <abbr title=\"Universidad Nacional Experimental Francisco de Miranda\">UNEFM</abbr> and specialty in Otolaryngology from <abbr title=\"Universidad Centroccidental Lisandro Alvarado\">UCLA</abbr>, Venezuela. Subspecialty training in sleep-disordered breathing, snoring and applied rhinology at ISSSTE in Monterrey.",
           "creds": "Board-certified by the Mexican Board of Otolaryngology–Head and Neck Surgery\nIbero-American Society of Sleep Surgery · Nuevo León College of Otolaryngology\nPractices at Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente, Hospital Universitario and Hospitaria",
           "link": "/en/dr-irina-gonzalez-saez/",
@@ -270,7 +270,7 @@
         "widgetType": "di-pasos",
         "settings": {
           "eyebrow": "How we work",
-          "title": "What to <b>expect</b> at your <b><em>visit</em></b>",
+          "title": "<b>What</b> to expect at your <em>visit</em>",
           "steps": [
             {
               "_id": "47a3a0b",
@@ -333,7 +333,7 @@
         "widgetType": "di-sueno",
         "settings": {
           "eyebrow": "Sleep specialization",
-          "title": "From <b>snoring</b><br>to rest, all in<br>one <b><em>place</em></b>",
+          "title": "<b>From snoring</b><br>to rest, all in<br>one <em>place</em>",
           "lead": "In Monterrey, snoring and sleep apnea often go through several specialists. Dr. Irina evaluates the airway, performs the study, interprets the result and offers everything from CPAP to palate and nasal surgery.",
           "link": "/en/sleep/",
           "link_label": "Explore the treatment pathway",
@@ -429,7 +429,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Book",
-          "title": "Shall we talk about <br class=\"di-brd\">what’s keeping you <br class=\"di-brd\">from <em>resting</em>?",
+          "title": "<b>Shall we talk</b> about <br class=\"di-brd\">what’s keeping you <br class=\"di-brd\">from <em>resting</em>?",
           "text": "Message us on WhatsApp and we’ll help you choose the right type of visit. Consultations are in Spanish.",
           "message": ""
         },

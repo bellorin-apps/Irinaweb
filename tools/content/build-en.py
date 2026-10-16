@@ -46,7 +46,7 @@ pages = {}
 pages["en"] = ("Home", "__front__", [
     container("hero", "di-hero", {
         "eyebrow": "Your ENT|in Monterrey",
-        "title": "<b>Breathe</b> well,<br>sleep well,<br>hear <b><em>well</em></b>",
+        "title": "<b>Breathe</b> well,<br>sleep well,<br>hear <em>well</em>",
         "lead": f"Dr. Irina González Sáez, board-certified otolaryngologist (ENT) with subspecialty training in snoring and sleep apnea. Ear, nose and throat care for children and adults in Cumbres, Monterrey. {SPANISH_NOTE}",
         "lead_mobile": f"Board-certified ENT with subspecialty training in snoring and sleep apnea. Children and adults, in Cumbres. {SPANISH_NOTE}",
         "trust": f"Mexican Board of Otolaryngology–Head and Neck Surgery\nSubspecialty in sleep-disordered breathing\n{CENTRO} · {ZONA}, {CIUDAD}",
@@ -54,7 +54,7 @@ pages["en"] = ("Home", "__front__", [
         "secondary_label": "Meet Dr. Irina", "secondary_url": "/en/dr-irina-gonzalez-saez/",
         "ticker": "Snoring and sleep apnea\nBlocked nose\nSinusitis\nBlocked ear\nHearing loss and tinnitus\nVertigo\nTonsils and adenoids\nVoice and reflux"}),
     container("areas", "di-areas", {
-        "eyebrow": "Areas of care", "title": "Two <b>specialties</b>, one <br class=\"di-brd\">way of <b><em>caring</em></b>",
+        "eyebrow": "Areas of care", "title": "<b>Two specialties</b>, one <br class=\"di-brd\">way of <em>caring</em>",
         "orl_eyebrow": "Otolaryngology (ENT)", "orl_title": "Ear, nose and throat, from birth",
         "orl_items": "Ear infections\nHearing loss\nTinnitus\nVertigo\nRhinitis\nSinusitis\nDeviated septum\nTonsils\nVoice",
         "orl_link": "/en/ent/", "orl_link_label": "See what I treat",
@@ -64,7 +64,7 @@ pages["en"] = ("Home", "__front__", [
         "sleep_link": "/en/sleep/", "sleep_link_label": "See the full pathway",
         "sleep_image": {"id": "__SUENO_IMG_ID__", "url": "__SUENO_IMG_URL__"}}),
     container("motivos", "di-motivos", {
-        "eyebrow": "What are you feeling?", "title": "Common <b>reasons</b> to <b><em>visit</em></b>",
+        "eyebrow": "What are you feeling?", "title": "<b>Common reasons</b> to <em>visit</em>",
         "note": "A guide to finding the right information. It does not replace a medical evaluation.",
         "items": rep([
             ("I snore, or I’ve been told I stop breathing", "Snoring, sleep apnea", "/en/sleep/#conditions"),
@@ -77,13 +77,13 @@ pages["en"] = ("Home", "__front__", [
             ("Hoarseness or voice changes", "Larynx, laryngopharyngeal reflux", "/en/ent/#throat"),
         ], "label", "sub", "url")}),
     container("doctora", "di-doctora", {
-        "eyebrow": "Dr. Irina González Sáez", "quote": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <b><em>treatment</em></b>”",
+        "eyebrow": "Dr. Irina González Sáez", "quote": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <em>treatment</em>”",
         "text": "Medical degree from <abbr title=\"Universidad Nacional Experimental Francisco de Miranda\">UNEFM</abbr> and specialty in Otolaryngology from <abbr title=\"Universidad Centroccidental Lisandro Alvarado\">UCLA</abbr>, Venezuela. Subspecialty training in sleep-disordered breathing, snoring and applied rhinology at ISSSTE in Monterrey.",
         "creds": "Board-certified by the Mexican Board of Otolaryngology–Head and Neck Surgery\nIbero-American Society of Sleep Surgery · Nuevo León College of Otolaryngology\nPractices at Christus Muguerza, Zambrano Hellion, Ángeles Valle Oriente, Hospital Universitario and Hospitaria",
         "link": "/en/dr-irina-gonzalez-saez/", "link_label": "Meet Dr. Irina",
         "image": {"id": "__DRA_IMG_ID__", "url": "__DRA_IMG_URL__"}, "bg": {"id": "__DRA_BG_ID__", "url": "__DRA_BG_URL__"}, "bg_tone": "light"}),
     container("pasos", "di-pasos", {
-        "eyebrow": "How we work", "title": "What to <b>expect</b> at your <b><em>visit</em></b>",
+        "eyebrow": "How we work", "title": "<b>What</b> to expect at your <em>visit</em>",
         "steps": rep([
             ("Listen", "Your symptoms, how long you’ve had them and how they affect your day. Bring previous tests and your list of medications.", "paso-escuchar"),
             ("Examine", "Ear, nose and throat; nasal endoscopy or laryngoscopy in the office when needed.", "paso-explorar"),
@@ -91,7 +91,7 @@ pages["en"] = ("Home", "__front__", [
             ("Support", "A clear plan, with medical and surgical options explained, and follow-up in person or online.", "paso-acompanar"),
         ], "title", "text", "img")}),
     container("sueno", "di-sueno", {
-        "eyebrow": "Sleep specialization", "title": "From <b>snoring</b><br>to rest, all in<br>one <b><em>place</em></b>",
+        "eyebrow": "Sleep specialization", "title": "<b>From snoring</b><br>to rest, all in<br>one <em>place</em>",
         "lead": "In Monterrey, snoring and sleep apnea often go through several specialists. Dr. Irina evaluates the airway, performs the study, interprets the result and offers everything from CPAP to palate and nasal surgery.",
         "link": "/en/sleep/", "link_label": "Explore the treatment pathway",
         "steps": "Airway evaluation and sleep endoscopy\nRespiratory polygraphy or home sleep test, interpreted by Dr. Irina\nTreatment: CPAP with follow-up, positional therapy, palate or nasal surgery\nFollow-up and adjustment until you sleep well"}),
@@ -100,7 +100,7 @@ pages["en"] = ("Home", "__front__", [
         "facts": rep([("Parking", "Free"), ("Access", "Elevator and wheelchair access"), ("Language", "Consultations are in Spanish")], "label", "value"),
         "map_embed": MAP_EMBED}),
     container("cta", "di-cta", {
-        "eyebrow": "Book", "title": "Shall we talk about <br class=\"di-brd\">what’s keeping you <br class=\"di-brd\">from <em>resting</em>?",
+        "eyebrow": "Book", "title": "<b>Shall we talk</b> about <br class=\"di-brd\">what’s keeping you <br class=\"di-brd\">from <em>resting</em>?",
         "text": f"Message us on WhatsApp and we’ll help you choose the right type of visit. {SPANISH_NOTE}", "message": ""}),
 ])
 
@@ -113,7 +113,7 @@ pages["dr-irina-gonzalez-saez"] = ("Dr. Irina González Sáez", "dra-irina-gonza
         "variant": "warm", "crumb": "About", "image": {"id": "__DRA_HERO_ID__", "url": "__DRA_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "92% 8%", "secondary_short": "Doctoralia",
         "secondary_label": "Reviews on Doctoralia", "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"}),
     container("dra-enfoque", "di-narrativa", {
-        "eyebrow": "Approach", "title": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <b><em>treatment</em></b>”",
+        "eyebrow": "Approach", "title": "“<b>Listening</b> <br class=\"di-brd\">is also part <br class=\"di-brd\">of <em>treatment</em>”",
         "lead": "The first visit lasts about 30 minutes. It starts by understanding what is happening to you and since when; it continues with a complete ear, nose and throat examination, with endoscopy in the office when needed, and ends with a clearly explained plan, without promises that cannot be kept.",
         "text": "", "draft": "",
         "image": {"id": "__DRA_ENDO_ID__", "url": "__DRA_ENDO_URL__"}, "image_pos": "right", "image_alt": "Endoscopy camera head Dr. Irina uses in the office"}),
@@ -142,7 +142,7 @@ pages["ent"] = ("Otolaryngology (ENT)", "otorrinolaringologia", [
     container("orl-bleed", "di-bleed", {"eyebrow": "Otolaryngology (ENT)", "title": "<b>Ear, nose</b> and throat,<br><em>from birth</em>",
         "lead": f"Ear, nose and throat consultations for children, teenagers, adults and older adults in Monterrey. {SPANISH_NOTE}",
         # Foto de cabecera como /otorrinolaringologia/ (propietario, 2026-10-16): adjunto hero-orl, tono cálido.
-        "variant": "warm", "crumb": "ENT", "image": {"id": "__ORL_HERO_ID__", "url": "__ORL_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "88% 50%"}),
+        "variant": "warm", "crumb": "ENT", "image": {"id": "__ORL_HERO_ID__", "url": "__ORL_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "64% 50%"}),
     container("orl-oido", "di-listado", {"eyebrow": "Ear", "title": "<b>What</b> I treat <em>in the ear</em>", "post_type": "", "anchor": "ear",
         "items": rep([("Ear infections (otitis)", "Infection or inflammation of the ear", ""), ("Earwax blockage", "Ear blocked by earwax", ""), ("Hearing loss", "Reduced hearing", ""), ("Tinnitus", "Ringing or buzzing in the ear", ""), ("Vertigo", "Dizziness or a spinning sensation", "")], "label", "sub", "url")}),
     container("orl-nariz", "di-listado", {"eyebrow": "Nose", "title": "<b>What</b> I treat <em>in the nose</em>", "post_type": "", "anchor": "nose", "tight": "yes",
@@ -163,7 +163,7 @@ pages["sleep"] = ("Snoring and sleep apnea", "sueno", [
         "lead": f"Otolaryngologist with subspecialty training in sleep-disordered breathing, snoring and rhinology. {SPANISH_NOTE}",
         # Misma foto de cabecera que /sueno/ (propietario, 2026-10-16): adjunto hero-sueno; sin él, el degradado nocturno.
         "variant": "night", "crumb": "Sleep", "whatsapp_label": "Book a snoring and sleep apnea evaluation",
-        "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "100% 50%"}),
+        "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "68% 50%"}),
     container("su-cond", "di-listado", {"eyebrow": "What I treat", "title": "<b>Snoring</b> and <em>sleep apnea</em>", "post_type": "", "anchor": "conditions",
         "items": rep([("Snoring", "In adults and children", "/en/sleep/snoring/"), ("Obstructive sleep apnea", "Pauses in breathing during sleep", "/en/sleep/obstructive-sleep-apnea/")], "label", "sub", "url")}),
     container("su-ruta", "di-listado", {"eyebrow": "Tests and treatments", "title": "<b>The</b> full <em>pathway</em>", "post_type": "", "anchor": "pathway", "tight": "yes",
