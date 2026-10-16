@@ -1,0 +1,23 @@
+{
+  "php": {
+    "files": 81,
+    "failures": []
+  },
+  "bash": {
+    "files": 19,
+    "failures": []
+  },
+  "phpcs": {
+    "exit": 0,
+    "output": ""
+  },
+  "regression": {
+    "exit": 0,
+    "output": "OK fecha de revisión inexistente rechazada\nOK fecha válida conservada\nOK enlace externo conservado\nOK destino clínico no publicado usa salida pública\nOK destino publicado resuelto por permalink\nOK REST omite clave, Bcc y horario oculto\nOK horario público al desmarcar oculto\nOK asignación REST exige aprobación médica\nOK condicion publish sin aprobación queda pending\nOK condicion publish aprobado conserva estado\nOK condicion future sin aprobación queda pending\nOK condicion future aprobado conserva estado\nOK tratamiento publish sin aprobación queda pending\nOK tratamiento publish aprobado conserva estado\nOK tratamiento future sin aprobación queda pending\nOK tratamiento future aprobado conserva estado\nOK recurso publish sin aprobación queda pending\nOK recurso publish aprobado conserva estado\nOK recurso future sin aprobación queda pending\nOK recurso future aprobado conserva estado\nOK editar clínica aprobada sin autoridad médica exige nueva revisión\nOK edición de revisora conserva autoridad médica\nOK FAQ única, desde widgets y shortcodes visibles\nOK FAQ no se emite fuera de Preguntas frecuentes\nOK nueve FAQ reales del build sin contenido duplicado\nOK JSON-LD no puede cerrar el elemento script\nOK campo array rechazado sin enviar correo\nOK GET rechazado sin enviar correo"
+  },
+  "permissions": {
+    "exit": 0,
+    "output": "REST permissions: 7/7 pass"
+  },
+  "limits": "PHP and bash syntax only; fixtures stub WordPress and never invoke real mutation callbacks or send mail. PHPCS configured project scope. npm result documented separately."
+}

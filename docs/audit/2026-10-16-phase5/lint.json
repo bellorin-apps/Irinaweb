@@ -1,0 +1,6 @@
+{
+  "exit": 0,
+  "output": "\n> lint\n> npm run lint:js && npm run lint:css\n\n\n> lint:js\n> cd ../.. && eslint --config tools/lint/eslint.config.cjs wp-content/themes/irina-gonzalez/assets/js\n\n\n> lint:css\n> stylelint --config stylelint.config.cjs \"../../wp-content/themes/irina-gonzalez/assets/css/*.css\"\n\n",
+  "fix": "Use npm PATH for eslint instead of slash executable; run from repository root to include target files outside config folder.",
+  "install": "npm ci --ignore-scripts --no-audit --no-fund: 187 packages; pinned ESLint 9.39.5 reported deprecated. No upgrades in this audit."
+}

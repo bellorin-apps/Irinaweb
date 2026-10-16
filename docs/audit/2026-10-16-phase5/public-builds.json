@@ -1,0 +1,252 @@
+{
+  "base": "c2d2ccfc24c09abe28178f3f649d6a151d348514",
+  "public": [
+    {
+      "path": "/",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "main": true,
+      "adobe": true,
+      "icons": [
+        "arrow-down",
+        "arrow-right",
+        "brand-doctoralia",
+        "brand-facebook",
+        "brand-instagram",
+        "brand-tiktok",
+        "brand-whatsapp",
+        "check-circle",
+        "map-pin",
+        "menu",
+        "phone"
+      ],
+      "missingIcons": []
+    },
+    {
+      "path": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "main": true,
+      "adobe": true,
+      "icons": [
+        "arrow-right",
+        "brand-doctoralia",
+        "brand-facebook",
+        "brand-instagram",
+        "brand-tiktok",
+        "brand-whatsapp",
+        "map-pin",
+        "menu",
+        "phone"
+      ],
+      "missingIcons": []
+    },
+    {
+      "path": "/primera-consulta/",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "main": true,
+      "adobe": true,
+      "icons": [
+        "brand-doctoralia",
+        "brand-facebook",
+        "brand-instagram",
+        "brand-tiktok",
+        "brand-whatsapp",
+        "map-pin",
+        "menu",
+        "phone"
+      ],
+      "missingIcons": []
+    },
+    {
+      "path": "/contacto/",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "main": true,
+      "adobe": true,
+      "icons": [
+        "arrow-right",
+        "brand-doctoralia",
+        "brand-facebook",
+        "brand-instagram",
+        "brand-tiktok",
+        "brand-whatsapp",
+        "map-pin",
+        "menu",
+        "phone"
+      ],
+      "missingIcons": []
+    },
+    {
+      "path": "/otorrinolaringologia/",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "main": true,
+      "adobe": true,
+      "icons": [
+        "brand-doctoralia",
+        "brand-facebook",
+        "brand-instagram",
+        "brand-tiktok",
+        "brand-whatsapp",
+        "map-pin",
+        "menu",
+        "phone"
+      ],
+      "missingIcons": []
+    },
+    {
+      "path": "/sueno/",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "main": true,
+      "adobe": true,
+      "icons": [
+        "arrow-right",
+        "brand-doctoralia",
+        "brand-facebook",
+        "brand-instagram",
+        "brand-tiktok",
+        "brand-whatsapp",
+        "map-pin",
+        "menu",
+        "phone"
+      ],
+      "missingIcons": []
+    },
+    {
+      "path": "/preguntas-frecuentes/",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "main": true,
+      "adobe": true,
+      "icons": [
+        "brand-doctoralia",
+        "brand-facebook",
+        "brand-instagram",
+        "brand-tiktok",
+        "brand-whatsapp",
+        "map-pin",
+        "menu",
+        "phone"
+      ],
+      "missingIcons": []
+    },
+    {
+      "path": "/sueno/cpap/",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "main": true,
+      "adobe": true,
+      "icons": [
+        "brand-doctoralia",
+        "brand-facebook",
+        "brand-instagram",
+        "brand-tiktok",
+        "brand-whatsapp",
+        "map-pin",
+        "menu",
+        "phone"
+      ],
+      "missingIcons": []
+    }
+  ],
+  "sprite": {
+    "symbols": 24,
+    "used": [
+      "arrow-down",
+      "arrow-right",
+      "brand-doctoralia",
+      "brand-facebook",
+      "brand-instagram",
+      "brand-tiktok",
+      "brand-whatsapp",
+      "check-circle",
+      "map-pin",
+      "menu",
+      "phone"
+    ],
+    "missing": []
+  },
+  "practice": {
+    "status": 200,
+    "matches": {
+      "centro": true,
+      "calle": true,
+      "interior": true,
+      "colonia": true,
+      "cp": true,
+      "ciudad": true,
+      "estado": true,
+      "telefono": true,
+      "whatsapp": true
+    },
+    "privateFieldsAbsent": true,
+    "hiddenHoursAbsent": true
+  },
+  "assets": [
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/css/tokens.css",
+      "status": 200,
+      "bytes": 5219,
+      "publicSha256": "9bf9e0ab1f58871949aa284571c76524476b26b9ec2d3976b04b058554daded3",
+      "localSha256": "9bf9e0ab1f58871949aa284571c76524476b26b9ec2d3976b04b058554daded3",
+      "sameAfterEolNormalization": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/css/base.css",
+      "status": 200,
+      "bytes": 6420,
+      "publicSha256": "127328d805ca8484f967c8c71ff15808ded068541c92414d2ba3b837deebdeec",
+      "localSha256": "127328d805ca8484f967c8c71ff15808ded068541c92414d2ba3b837deebdeec",
+      "sameAfterEolNormalization": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/css/components.css",
+      "status": 200,
+      "bytes": 73725,
+      "publicSha256": "0a36ee6ee1e4375be30d2992b32ce8f75f20cb2f86b6b51677bc30f006882664",
+      "localSha256": "0a36ee6ee1e4375be30d2992b32ce8f75f20cb2f86b6b51677bc30f006882664",
+      "sameAfterEolNormalization": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/css/sleep.css",
+      "status": 200,
+      "bytes": 3596,
+      "publicSha256": "1aae580155ddb5bc276fbae1fd8f9385cc5b5f2d7c76470cd1752da0c2874642",
+      "localSha256": "1aae580155ddb5bc276fbae1fd8f9385cc5b5f2d7c76470cd1752da0c2874642",
+      "sameAfterEolNormalization": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/js/main.js",
+      "status": 200,
+      "bytes": 27644,
+      "publicSha256": "e823d3f3b52f61663428821bf3cce6c46c9c97b56997e12a324065a29d3d2126",
+      "localSha256": "e823d3f3b52f61663428821bf3cce6c46c9c97b56997e12a324065a29d3d2126",
+      "sameAfterEolNormalization": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/js/map.js",
+      "status": 200,
+      "bytes": 2362,
+      "publicSha256": "429e13beb16f06123a13559b2f66c091e7f6456d31b7fade33396a77bb616e0e",
+      "localSha256": "429e13beb16f06123a13559b2f66c091e7f6456d31b7fade33396a77bb616e0e",
+      "sameAfterEolNormalization": true
+    }
+  ],
+  "builds": {
+    "outputsChecked": 14,
+    "changed": []
+  },
+  "napNegativeDetected": true,
+  "limits": "Anonymous GET only; no browser execution, form, authenticated editor or server account. Public assets do not prove server Git SHA. Builds regenerated locally, no upload. NAP has a central runtime option and a build mirror checked for drift, not automatic bidirectional sync."
+}

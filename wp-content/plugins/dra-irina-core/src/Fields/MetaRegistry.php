@@ -1,7 +1,7 @@
 <?php
 /**
  * Registro de campos (post meta) con schema REST. Fuente del content model (ARCHITECTURE.md §4).
- * La UI de edición (meta boxes) se implementa en MetaBoxes.php en la Fase 5.
+ * Los arrays se cargan por builds; revisión médica en la app (D-040/D-076), sin UI de repetidores en wp-admin.
  *
  * @package DraIrina\Core
  */

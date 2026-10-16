@@ -1,0 +1,22 @@
+{
+    "checks": {
+        "fourTypes": true,
+        "threeTaxonomies": true,
+        "menuAndRest": true,
+        "medicalTaxonomyGate": true,
+        "registeredMetaSchemaAndPermissions": true
+    },
+    "types": [
+        "condicion",
+        "tratamiento",
+        "recurso",
+        "credencial"
+    ],
+    "taxonomies": [
+        "area",
+        "zona",
+        "estado_medico"
+    ],
+    "metas": 43,
+    "limits": "Stubbed registration and capabilities, no WP database, role mutation, editor, activation or publication."
+}

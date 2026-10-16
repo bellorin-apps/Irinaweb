@@ -4,7 +4,7 @@
   "description": "Linters de JS y CSS del tema (PLAN 5.5). No se despliegan. Uso: npm ci && npm run lint",
   "scripts": {
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "cd ../.. && tools/lint/node_modules/.bin/eslint --config tools/lint/eslint.config.cjs wp-content/themes/irina-gonzalez/assets/js",
+    "lint:js": "cd ../.. && eslint --config tools/lint/eslint.config.cjs wp-content/themes/irina-gonzalez/assets/js",
     "lint:css": "stylelint --config stylelint.config.cjs \"../../wp-content/themes/irina-gonzalez/assets/css/*.css\""
   },
   "devDependencies": {
