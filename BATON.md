@@ -10,6 +10,8 @@ Quince URL SEO y axe quince+404×dos anchos pasan; LH a11y100 en Contacto/CPAP/D
 
 ---
 
+> **2026-10-16 (Claude cloud): CHECKPOINT 5 aprobado por José (11.6 DONE, D-086).** Lanzamiento del sitio corto cerrado; horario de GBP, Doctoralia y legal 8.6 quedan como mejora continua. Encargo para Codex: docs/CODEX_REVIEW_PROMPT_2026-10-16.md.
+
 > **2026-10-16 12:30 (sesión local): Perfil de Negocio de Google editado (9.5)** con OK de José: web con UTM y descripción aplicadas; Facebook limpio, categoría adicional Clínica del sueño, reserva por WhatsApp (Doctoralia se conserva) y 7 servicios en revisión de Google. Sin tocar NAP, horario ni áreas. 9.5 sigue OWNER: horario real (Dra.) y Doctoralia. Detalle en QA.
 
 > **2026-10-14 19:10 (sesión local):** Q-061 aplicado y verificado (título de la 404 en español). 11.2: Firefox 158 sin incidencias en 32 vistas (más Edge); queda Safari en iPhone real (José).

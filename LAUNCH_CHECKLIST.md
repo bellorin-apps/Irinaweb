@@ -44,6 +44,6 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 
 ## Para dar el lanzamiento por cerrado (CHECKPOINT 5)
 
-1. 👤 José: horario de GBP, Doctoralia y revisión legal (o aceptar que quedan como mejora continua). Prueba del formulario: ✅.
+1. ✅ Horario de GBP, Doctoralia y revisión legal quedan como mejora continua (José, 2026-10-16, D-086). Prueba del formulario: ✅.
 2. ✅ Pasada en iPhone (Safari) — José, 2026-10-15.
-3. 👤 José aprueba esta lista.
+3. ✅ José aprueba esta lista (2026-10-16): **CHECKPOINT 5 cerrado, lanzamiento del sitio corto completo.**
