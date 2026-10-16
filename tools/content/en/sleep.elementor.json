@@ -34,7 +34,13 @@
           "lead": "Otolaryngologist with subspecialty training in sleep-disordered breathing, snoring and rhinology. Consultations are in Spanish.",
           "variant": "night",
           "crumb": "Sleep",
-          "whatsapp_label": "Book a snoring and sleep apnea evaluation"
+          "whatsapp_label": "Book a snoring and sleep apnea evaluation",
+          "image": {
+            "id": "__SU_HERO_ID__",
+            "url": "__SU_HERO_URL__"
+          },
+          "focus": "50% 0%",
+          "focus_mobile": "86% 50%"
         },
         "elements": []
       }

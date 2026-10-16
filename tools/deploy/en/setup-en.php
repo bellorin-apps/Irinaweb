@@ -34,6 +34,7 @@
 		'PC_HERO'   => 'hero-primera',
 		'PC_BG'     => 'pc-fondo',
 		'CO_HERO'   => 'hero-contacto',
+		'SU_HERO'   => 'hero-sueno',
 	];
 	$fill  = static function ( string $json ) use ( $media ): string {
 		foreach ( $media as $marker => $slug ) {

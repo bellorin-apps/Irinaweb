@@ -160,7 +160,9 @@ pages["ent"] = ("Otolaryngology (ENT)", "otorrinolaringologia", [
 pages["sleep"] = ("Snoring and sleep apnea", "sueno", [
     container("su-bleed", "di-bleed", {"eyebrow": "Sleep and breathing", "title": "From <b>snoring</b><br><em>to rest</em>",
         "lead": f"Otolaryngologist with subspecialty training in sleep-disordered breathing, snoring and rhinology. {SPANISH_NOTE}",
-        "variant": "night", "crumb": "Sleep", "whatsapp_label": "Book a snoring and sleep apnea evaluation"}),
+        # Misma foto de cabecera que /sueno/ (propietario, 2026-10-16): adjunto hero-sueno; sin él, el degradado nocturno.
+        "variant": "night", "crumb": "Sleep", "whatsapp_label": "Book a snoring and sleep apnea evaluation",
+        "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "86% 50%"}),
     container("su-cond", "di-listado", {"eyebrow": "What I treat", "title": "<b>Snoring</b> and <em>sleep apnea</em>", "post_type": "", "anchor": "conditions",
         "items": rep([("Snoring", "In adults and children", "/en/sleep/snoring/"), ("Obstructive sleep apnea", "Pauses in breathing during sleep", "/en/sleep/obstructive-sleep-apnea/")], "label", "sub", "url")}),
     container("su-ruta", "di-listado", {"eyebrow": "Tests and treatments", "title": "<b>The</b> full <em>pathway</em>", "post_type": "", "anchor": "pathway", "tight": "yes",
