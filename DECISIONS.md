@@ -169,3 +169,7 @@ La instrucción más reciente de José permite cerrar11.2 con94a2479 y QA D-087/
 ## Criterio de cierre fase5 · Codex · 2026-10-16
 
 D-010 sustituye WOFF2 locales por Adobe; sprite estático no exige un bundler. D-040/D-076: builds y app médica son el flujo clínico vigente, no se exige UI de repetidores wp-admin. PracticeSettings centraliza runtime y practice.py centraliza builds, con cotejo de deriva y actualización coordinada explícita (sin sync automática): Q-042VERIFIED. Se corrige comando ESLint para Windows sin cambiar reglas/lock. D-094 reduce total a228; cierre4tareas añade15pesos:221/228=96,93%,83/86DONE. Q-040 y GO Doctoralia permanecen encargos aparte; sin despliegue.
+
+## Revisión D-091 · auditoría16c · Codex · 2026-10-16
+
+GO con cambios condicionado, no activar todavía: opción(a), cargar Doctoralia solo con botón/aviso previo. Q-069/070 corregidos localmente; contenedor estable con scroll/fallback y entradilla de experiencias personales sin garantía, sin editar reseñas D-012. Código oficial del perfil y embed real pendientes de cotejo/verificación; script público respalda formato, no certifica el panel ni contenido dinámico. No asesoría legal/COFEPRIS,8.6OWNER mejora continua intacta. Informe docs/REVISION_DOCTORALIA_2026-10-16c.md. Sin deploy, setup, activación o acceso a cuentas por este lote; la autorización original D-091 no se interpreta como orden automática tras un GO condicionado.

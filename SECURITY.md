@@ -38,3 +38,7 @@ Actualizado: 2026-10-16 · Claude cloud. Estado verificado en producción; las p
 ## Alcance de cabeceras y auditoría 2026-10-14b
 
 Las cabeceras completas de Headers se aplican al front PHP, no se afirman en todos los endpoints REST ni en respuestas estáticas del hosting. REST observado lleva nosniff y upgrade-insecure-requests; 404 de autor lleva HSTS/XFO/Referrer/Permissions. No CSP restrictiva contra XSS: upgrade-insecure-requests no es una allowlist de scripts. Users/me/users 404, settings y Ops GET 401, practice GET 200 con proyección pública. No se leyeron cuerpos privilegiados, secretos ni rutas privadas; archivos privados ignorados y no versionados. Ops sigue admin-only; allowlist/consumidores Q-040 es una mejora pendiente, no una exposición anónima. 2FA se acredita por atestación local/José, no por una prueba de login de Codex.
+
+## Doctoralia inactivo · auditoría16c2026-10-16
+
+Carga local propuesta solo por botón con aviso, no por scroll (Q-069); script externo HTTPS sin relajar cabeceras. CSP pública upgrade-insecure-requests no limita orígenes y XFO no bloquea iframe saliente. Caja/estado/fallback no aíslan el código de terceros: scriptmutable se ejecuta con privilegios de página después del clic. Cookies/foco/contenido del widget real no ensayados; cotejo del HTML oficial del perfil pendiente. OchoGET públicos sinwidget; no activado/desplegado. Informe docs/REVISION_DOCTORALIA_2026-10-16c.md.

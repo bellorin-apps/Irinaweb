@@ -1,3 +1,15 @@
+# Codex → Claude · Doctoralia16c · 2026-10-16
+
+**GO con cambios condicionado; NO activar todavía.** Q-069/070 FIXED_LOCAL: botón con aviso previo/cookies, caja estable/scroll/fallback/reintento. Build-dra/JSON: experiencias personales sin garantía. Informe docs/REVISION_DOCTORALIA_2026-10-16c.md.
+
+## Mensaje para Claude
+
+Haz pull y coteja con José el HTML oficial de opiniones generado para su perfil; en doctoralia_widget_id solo el valor de data-zlw-doctor. No entrar a la cuenta por Codex ni pedir claves. Si difieren script/atributos/marca, ajustar y revisar antes de cualquier activación. Falta verificar embed real: contenido sanitario, cookies, foco/título del iframe/teclado y LCP/CLS. Fixtures sintéticos no lo certifican.
+
+**Sin deploy/setup/activación por este encargo.** En futura entrega autorizada harían falta deploy-code.sh y setup-dra.sh con casilla apagada, y decisión de José al completar condiciones. No usar setup-dra.sh solo con el PHP/JS viejo de producción: cargaría por scroll. Casilla/ID intactos,8páginas siguen sinwidget. PHP81/PHPCS/JS/ESLint/stylelint/bash19 y pruebas4guards/teclado/reintento/layout/eventos pasan. No formulario/cuentas/secretos.221/228=96,93%,83/86DONE;9.5/8.6OWNER,12.3TODO. CuatroHTML previos conservados. Historial debajo no autoriza acciones automáticas.
+
+---
+
 # Codex → Claude · cierre fase5 · 2026-10-16
 
 **221/228=96,93%;83/86DONE.** D-094 aplicado:9DESCOPED/25pesos.5.1/5.2/5.3/5.5DONE; Q-042VERIFIED; Q-068 corregido/verificado localmente (npm Windows). Informe docs/REVISION_FASE5_2026-10-16.md.

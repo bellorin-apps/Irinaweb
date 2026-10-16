@@ -578,3 +578,12 @@ deploy-code (respaldo `~/deploy-backups/20261016-144154/`) y purga. Sin setup-dr
 Q-068 · P2 · VERIFIED local: npm run lint fallaba en Windows por ruta Unix del ejecutable; corregido PATH npm/cwd raíz y ESLint+stylelint pasan. Sin reglas relajadas ni paquetes actualizados.
 
 PHP81/PHPCS/bash19 pasan; registro4CPT/3tax/43metas y permisos7/7; regresión28casos. OchoGET públicos,9camposNAP,6assets,14JSON sin cambios y negativo de deriva pasan. Fuentes/límites completos en docs/REVISION_FASE5_2026-10-16.md y evidencia docs/audit/2026-10-16-phase5/. Configuración WordPress y espejo de builds cotejados, no sync automática. Consola/editor/carrusel por atestación anterior, no nueva sesión. Q-040OPEN; sin GO Doctoralia/inglés. Avance221/228=96,93%,83/86DONE; D-094 mantiene9DESCOPED/25pesos. Sin deploy/formulario/cuentas/secretos; cuatroHTML de José conservados.
+
+## Auditoría16c · Doctoralia · Codex · 2026-10-16
+
+**GO con cambios condicionado; no activar todavía.** Informe docs/REVISION_DOCTORALIA_2026-10-16c.md con fuentes oficiales LGS/Reglamento/Docplanner y límites. No certifica expedienteCOFEPRIS ni opiniones reales. Título neutral conservado y entradilla sin garantía en build/JSON; D-012 sin transcripción/filtro/schema de reseñas propio. Cotejo del HTML oficial del perfil y verificación real de privacidad/contenido/accesibilidad pendientes; sin cuenta ni ID real por Codex.
+
+- Q-069 · P2 · FIXED_LOCAL: script antes cargaba al acercarse400px o automáticamente sinIO, contrario a interacción del aviso§9. Ahora botón explícito con aviso previo/cookies, fallback externo y reintento.0peticiones antes del clic; sin modificar aviso legal.
+- Q-070 · P2 · FIXED_LOCAL:120px mínimos no contienen embed variable; caja clamp320/60vh/520 con scroll/región. Iframe sintético1000px,390/1440: desplazamiento exterior0px. No equivale a CLS/LCP real ni accesibilidad del proveedor.
+
+GuardsPHP4/4; Enter/Espacio, foco, doble activación1script, error/reintento, enlace sinJS y eventoexterno1doctoralia_click pasan. Cargar opiniones no cuenta conversión; eventos dentro del iframe no se miden. OchoGETpúblicos200 sinwidget; CSPupgrade-insecure-requests sin allowlist ni cambios. Scriptoficial200 reconoce marcado, no verifica panel. PHP81/PHPCS/JS/ESLint/stylelint/bash19 pasan. Dos capturas locales sintéticas revisadas. Evidencia docs/audit/2026-10-16c/. Sin deploy/activación/cuentas/claves/forms; cuatroHTML preservados.221/228=96,93% sin cambios,9.5/8.6OWNER.

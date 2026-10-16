@@ -259,3 +259,9 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - 5.1/5.2/5.3/5.5DONE: estructura tema/core, NAP y tooling contrastados; Q-042VERIFIED.
 - Q-068 corregido: npm lint Windows usa PATH de npm desde raíz; sin relajar reglas. Comentario MetaRegistry/arquitectura alineados con builds/app médica.
 - PHP81/PHPCS/bash19/ESLint/stylelint y fixtures pasan;8páginas/9camposNAP/6assets,14JSON regenerados idénticos.221/228=96,93%,83/86DONE; sin deploy ni GO Doctoralia.
+
+## 2026-10-16 · Codex · Doctoralia16c
+
+- GO con cambios condicionado, sin activar. Q-069: script solo tras botón/aviso; Q-070: caja estable con scroll y fallback/reintento accesibles.
+- Entradilla build-dra/JSON aclara experiencias personales sin garantía; sin transcribir opiniones. Marcado del perfil e integración real aún pendientes.
+- PHP81/PHPCS/JS/ESLint/stylelint/bash19, guards4/4, teclado/analítica/layout sintéticos pasan;8páginas públicas siguen sinwidget. No despliegue/cuentas/claves/formulario. Informe docs/REVISION_DOCTORALIA_2026-10-16c.md.
