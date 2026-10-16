@@ -22,7 +22,7 @@ pages = {}
 # explicaciones clínicas extensas ni afirmaciones de eficacia. Las 26 fichas quedan archivadas en borrador. La Dra. revisa solo estas
 # dos páginas en /briefing/guia/ (se exportan a tools/briefing/guia/paginas.json al final de este script).
 pages["otorrinolaringologia"] = [
-    container("orl-bleed", "di-bleed", {"eyebrow": "Otorrinolaringología", "title": "Oído, <b>nariz y garganta,</b><br><em>desde los 0 meses</em>",
+    container("orl-bleed", "di-bleed", {"eyebrow": "Otorrinolaringología", "title": "<b>Oído, nariz</b> y garganta,<br><em>desde los 0 meses</em>",
         "lead": "Consulta de oído, nariz y garganta para niños, adolescentes, adultos y adultos mayores en Monterrey.",
         "variant": "sand", "crumb": "Otorrinolaringología"}),
     container("orl-oido", "di-listado", {"eyebrow": "Oído", "title": "<b>Lo que</b> atiendo <em>del oído</em>", "post_type": "", "anchor": "oido",
@@ -38,15 +38,16 @@ pages["otorrinolaringologia"] = [
     container("orl-como", "di-narrativa", {"eyebrow": "Cómo trabajo", "title": "<b>Primero</b> escucharte, luego <em>explorar</em>",
         "lead": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad. Si tu caso necesita a otro especialista, te lo digo y te refiero.",
         "text": ""}),
-    container("orl-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Un <b>síntoma</b> que <em>no se va</em>?", "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": "Hola, quisiera agendar una consulta de otorrinolaringología con la Dra. Irina González Sáez."}),
+    container("orl-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿<b>Un síntoma</b> que <em>no se va</em>?", "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": "Hola, quisiera agendar una consulta de otorrinolaringología con la Dra. Irina González Sáez."}),
 ]
 
 pages["sueno"] = [
-    container("su-bleed", "di-bleed", {"eyebrow": "Sueño y respiración", "title": "Del <b>ronquido</b><br><em>al descanso</em>",
+    container("su-bleed", "di-bleed", {"eyebrow": "Sueño y respiración", "title": "<b>Del ronquido</b><br>al <em>descanso</em>",
         "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología.",
-        # Foto de cabecera como las demás páginas (propietario, 2026-10-16): adjunto hero-sueno (Recursos (Irina)/hero-sueno.png), la Dra.
+        # Títulos con la secuencia del sitio (propietario, 2026-10-16): <b> al inicio, base, <em> al final; mismas palabras.
+        # Foto de cabecera como las demás páginas (propietario, 2026-10-16; móvil al 100 % para ver más estrellas): adjunto hero-sueno (Recursos (Irina)/hero-sueno.png), la Dra.
         # a la derecha bajo un cielo nocturno; sustituido por setup-pages.sh. Sin adjunto, la cabecera usa el degradado nocturno.
-        "variant": "night", "crumb": "Sueño", "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "86% 50%",
+        "variant": "night", "crumb": "Sueño", "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "100% 50%",
         "whatsapp_label": "Agendar valoración de ronquido y apnea"}),
     # D-082: las 5 fichas de sueño enlazan desde aquí; el bloque solo pinta el enlace si la ficha está publicada (irina_url_if_published).
     container("su-cond", "di-listado", {"eyebrow": "Qué atiendo", "title": "<b>Ronquido</b> y <em>apnea</em>", "post_type": "", "anchor": "atiendo",
@@ -57,7 +58,7 @@ pages["sueno"] = [
     container("su-como", "di-narrativa", {"eyebrow": "Cómo trabajo", "title": "<b>Un</b> otorrino para la <em>vía aérea</em>",
         "lead": "Nariz, paladar, amígdalas y lengua: como otorrinolaringólogo exploro directamente dónde se estrecha la vía aérea durante el sueño. La valoración empieza en el consultorio; con el estudio en la mano te explico las opciones y decidimos juntos el tratamiento.",
         "text": ""}),
-    container("su-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿Hablamos de lo que te <b>quita</b> el <em>descanso</em>?", "text": "Una valoración de 30 minutos define si necesitas un estudio.", "message": "Hola, quisiera agendar una valoración de ronquido o apnea con la Dra. Irina González Sáez."}),
+    container("su-cta", "di-cta", {"eyebrow": "Agenda", "title": "¿<b>Hablamos</b> de lo que te quita el <em>descanso</em>?", "text": "Una valoración de 30 minutos define si necesitas un estudio.", "message": "Hola, quisiera agendar una valoración de ronquido o apnea con la Dra. Irina González Sáez."}),
 ]
 
 pages["primera-consulta"] = [

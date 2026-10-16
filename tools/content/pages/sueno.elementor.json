@@ -30,7 +30,7 @@
         "widgetType": "di-bleed",
         "settings": {
           "eyebrow": "Sueño y respiración",
-          "title": "Del <b>ronquido</b><br><em>al descanso</em>",
+          "title": "<b>Del ronquido</b><br>al <em>descanso</em>",
           "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología.",
           "variant": "night",
           "crumb": "Sueño",
@@ -39,7 +39,7 @@
             "url": "__SU_HERO_URL__"
           },
           "focus": "50% 0%",
-          "focus_mobile": "86% 50%",
+          "focus_mobile": "100% 50%",
           "whatsapp_label": "Agendar valoración de ronquido y apnea"
         },
         "elements": []
@@ -242,7 +242,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "¿Hablamos de lo que te <b>quita</b> el <em>descanso</em>?",
+          "title": "¿<b>Hablamos</b> de lo que te quita el <em>descanso</em>?",
           "text": "Una valoración de 30 minutos define si necesitas un estudio.",
           "message": "Hola, quisiera agendar una valoración de ronquido o apnea con la Dra. Irina González Sáez."
         },

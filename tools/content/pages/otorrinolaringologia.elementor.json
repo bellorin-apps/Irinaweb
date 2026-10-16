@@ -30,7 +30,7 @@
         "widgetType": "di-bleed",
         "settings": {
           "eyebrow": "Otorrinolaringología",
-          "title": "Oído, <b>nariz y garganta,</b><br><em>desde los 0 meses</em>",
+          "title": "<b>Oído, nariz</b> y garganta,<br><em>desde los 0 meses</em>",
           "lead": "Consulta de oído, nariz y garganta para niños, adolescentes, adultos y adultos mayores en Monterrey.",
           "variant": "sand",
           "crumb": "Otorrinolaringología"
@@ -391,7 +391,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "¿Un <b>síntoma</b> que <em>no se va</em>?",
+          "title": "¿<b>Un síntoma</b> que <em>no se va</em>?",
           "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.",
           "message": "Hola, quisiera agendar una consulta de otorrinolaringología con la Dra. Irina González Sáez."
         },

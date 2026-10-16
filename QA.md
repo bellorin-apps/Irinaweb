@@ -759,3 +759,11 @@ José subió `Recursos (Irina)/hero-sueno.png` (2040×1349: la Dra. a la derecha
   - 832×340 en horizontal;
   - sin desborde, sin errores de consola y texto legible.
 - **Sin cambios:** las 5 fichas /sueno/{slug}/ siguen con el degradado nocturno y los anillos (sin foto); Primera consulta e Inicio siguen con sombra.
+- **Ajustes del mismo día (propietario):**
+  - **Foto en móvil:** focus_mobile pasa de «86% 50%» a «100% 50%»: la Dra. queda más a la izquierda y se ven más estrellas arriba a la derecha. Comparado en 390 px frente a 96 %.
+  - **Títulos con la secuencia del sitio** (`<b>` al inicio, base, `<em>` al final), mismas palabras:
+    - Sueño, cabecera: «**Del ronquido** al *descanso*»;
+    - Sueño, cierre: «¿**Hablamos** de lo que te quita el *descanso*?»;
+    - Otorrino, cabecera: «**Oído, nariz** y garganta, *desde los 0 meses*»;
+    - Otorrino, cierre: «¿**Un síntoma** que *no se va*?».
+  - **Carga:** solo las páginas 170 y 171, en una sesión SSH (mismos pasos que setup-pages), con cache flush y purga. Verificado en el HTML y en capturas de 1440 y 390 px.
