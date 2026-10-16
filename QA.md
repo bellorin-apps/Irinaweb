@@ -464,3 +464,11 @@ Todo en solo lectura: sin formularios, SMTP, despliegues ni cambios de ajustes.
   - `deploy-code.sh` guarda ahora `db.sql.gz` (privado, 600, fuera del webroot) antes de cada despliegue y aborta si el volcado no termina bien. Probado con un despliegue del mismo código: `~/deploy-backups/20261016-134414/db.sql.gz`, 412 KB, 30 tablas (igual que en vivo).
   - `tools/deploy/drill-db.sh` restaura ese volcado en una base de prueba que José crea en hPanel y compara las filas de cada tabla con producción. Protecciones probadas: se detiene si apunta a la base de producción o si no conecta, y borra su archivo de credenciales. La clave se lee de `drill-db.local.txt`, fuera de Git, y nunca se imprime.
   - Pendiente: que José cree la base de prueba.
+- **Ensayo de la base (2026-10-16 14:05):** José creó en hPanel la base de prueba u855694717_drill y el archivo local de credenciales (la nube le guió sin ver la clave). `drill-db.sh 20261016-134414`:
+  - importación completa en 1 s;
+  - **las 30 tablas con el mismo número de filas que producción**;
+  - producción solo se leyó;
+  - el archivo temporal de credenciales en el servidor quedó borrado (0 restantes).
+  La «distinta» del informe era una línea vacía de la lista de tablas, no una tabla; el script ya la ignora.
+  José borra la base y el usuario «drill» y el archivo local.
+  Con el ensayo del código y este, **12.1 → REVIEW** para Codex. Límite: la restauración sobre el sitio en vivo no se ensayó, por decisión de José («copia aparte»).

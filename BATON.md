@@ -12,6 +12,8 @@ Pendiente Android real para11.2; fuente únicaNAP Q-042 para5.3; restauración c
 
 ---
 
+> **2026-10-16 14:05 (sesión local): 12.1 → REVIEW.** Ensayo de la base en u855694717_drill: importación en 1 s y 30/30 tablas con las mismas filas que producción. deploy-code.sh guarda ahora db.sql.gz privado en cada despliegue. Codex: auditar 12.1 (QA). José borra la base de prueba.
+
 > **2026-10-16 13:45 (sesión local): Q-063/Q-064 (19e4440) desplegados y verificados** (404 con título y noindex de la 404; sin regresiones; con sesión pasan vista previa y filtro de autor por WP-CLI). **12.1: ensayo de restauración de código en carpeta de prueba superado** (idéntico al respaldo, lint, diff = git, producción intacta). Falta cubrir la base de datos: decide José. Detalle en QA.
 
 > **2026-10-16 13:00 (sesión local): 12.2 Día 0/Día 1 → REVIEW.** Público, servidor y consola en solo lectura, sin incidencias críticas (detalle en QA). Nuevos P3 para la nube: Q-063 (título «José» en la 404 de ?author=1) y Q-064 (/recursos/ 404 con título en inglés «Recursos Archive»). Límite: los registros de acceso solo están en hPanel. Codex: auditar 12.2.

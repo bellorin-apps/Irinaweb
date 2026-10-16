@@ -32,6 +32,7 @@ rssh "set -u; trap 'rm -f $CNF' EXIT
   $WP db query \"SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() ORDER BY table_name\" --skip-column-names > /tmp/di-drill-tables-$$
   OK=0; BAD=0
   while read -r t; do
+    [ -n \"\$t\" ] || continue
     a=\$($WP db query \"SELECT COUNT(*) FROM \\\`\$t\\\`\" --skip-column-names)
     b=\$(mysql --defaults-extra-file=$CNF -N -e \"SELECT COUNT(*) FROM \\\`\$t\\\`\" $DB_NAME 2>/dev/null || echo FALTA)
     if [ \"\$a\" = \"\$b\" ]; then OK=\$((OK+1)); else BAD=\$((BAD+1)); echo \"  distinta: \$t producción=\$a prueba=\$b\"; fi
