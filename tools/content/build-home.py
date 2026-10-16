@@ -2,6 +2,7 @@
 """Genera home-elementor.json: contenido inicial del Home (sistema v2) como datos de Elementor con los widgets DI.
 Se guarda con `wp eval` + wp_slash() (ver setup-site.sh), igual que hace Elementor."""
 import json, hashlib, pathlib
+from practice import CENTRO, CIUDAD, ZONA  # 5.3/Q-042: datos del consultorio en un solo sitio
 
 def eid(s):
     return hashlib.md5(s.encode()).hexdigest()[:7]
@@ -22,7 +23,7 @@ data = [
         "title": "<b>Respirar</b> bien,<br>dormir bien,<br>oír <b><em>bien</em></b>",
         "lead": "Dra. Irina González Sáez, otorrinolaringólogo certificado con subespecialización en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos, en Cumbres.",
         "lead_mobile": "Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.",
-        "trust": "Consejo Mexicano de ORL y CCC\nSubespecialidad en desórdenes respiratorios del sueño\nCAB Medical Headquarters · Cumbres, Monterrey",
+        "trust": f"Consejo Mexicano de ORL y CCC\nSubespecialidad en desórdenes respiratorios del sueño\n{CENTRO} · {ZONA}, {CIUDAD}",
         "image": {"id": "__HERO_ID__", "url": "__HERO_URL__"},
         "secondary_label": "Conocer a la Dra. Irina", "secondary_url": "/dra-irina-gonzalez-saez/",
         "ticker": "Ronquido y apnea\nNariz tapada\nSinusitis\nOído tapado\nHipoacusia y tinnitus\nVértigo\nAmígdalas y adenoides\nVoz y reflujo"}),

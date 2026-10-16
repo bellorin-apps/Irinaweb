@@ -82,7 +82,7 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 .di-muted { color: var(--color-muted); }
 .di-lead { font-size: clamp(1.1rem, 1.5vw, 1.35rem); font-weight: 300; line-height: var(--leading-body); max-width: 46ch; margin-top: var(--space-lg); }
 .di-draft { color: var(--color-warning); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
-.screen-reader-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.screen-reader-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
 /* Reveal al hacer scroll (main.js). Sin JS todo es visible. */
 .di-reveal { opacity: 1; transform: none; }

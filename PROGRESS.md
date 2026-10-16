@@ -11,8 +11,8 @@ Fuera de alcance (DESCOPED): 8 tareas, 23 pesos: 1.7, 5.6, 6.6, 7.4, 7.5, 8.1, 8
 | Estado | Tareas |
 |---|---:|
 | DONE | 78 |
-| REVIEW | 1 |
-| DOING | 4 |
+| REVIEW | 5 |
+| DOING | 0 |
 | TODO | 1 |
 | OWNER | 3 |
 | BLOCKED | 0 |

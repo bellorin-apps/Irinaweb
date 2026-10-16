@@ -2,6 +2,7 @@
 """Páginas base (Elementor con widgets DI), legales (HTML) y metadatos SEO. Solo datos confirmados; lo demás va marcado [PENDIENTE DE CONFIRMACIÓN].
 Los textos clínicos se marcan como borrador pendiente de la Dra. Se cargan con tools/deploy/setup-pages.sh sin cambiar el estado de las páginas."""
 import json, hashlib, pathlib
+from practice import DIRECCION_COMPLETA, DIRECCION_CORTA, DIRECCION_SEO  # 5.3/Q-042: dirección en un solo sitio
 
 def eid(s): return hashlib.md5(s.encode()).hexdigest()[:7]
 def container(key, widget, settings):
@@ -80,14 +81,14 @@ pages["primera-consulta"] = [
         ("¿Cómo puedo pagar?", "Efectivo, tarjeta y transferencia. Facturación disponible."),
         ("¿Hay consulta en línea?", "Solo para seguimiento de pacientes ya valorados en consultorio."),
         ("¿Atienden niños?", "Sí, desde los 0 meses."),
-        ("¿Dónde está el consultorio y hay estacionamiento?", "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector, Monterrey. Estacionamiento gratuito; elevador y acceso para silla de ruedas."),
+        ("¿Dónde está el consultorio y hay estacionamiento?", f"{DIRECCION_COMPLETA}. Estacionamiento gratuito; elevador y acceso para silla de ruedas."),
     ], "pregunta", "text")}),
     container("pc-cta", "di-cta", {"eyebrow": "Agenda", "title": "Agenda tu<br><em>primera consulta</em>", "text": "Escríbenos por WhatsApp y te confirmamos horario.", "message": ""}),
 ]
 
 pages["contacto"] = [
     container("co-bleed", "di-bleed", {"eyebrow": "Contacto", "title": "<b>Consultorio</b> en<br>Cumbres, <em>Monterrey</em>",
-        "lead": "CAB Medical Headquarters, Av. Paseo de los Leones 2341, Consultorio 6, Piso 2. Consulta previa cita: agenda por WhatsApp.",
+        "lead": f"{DIRECCION_CORTA}. Consulta previa cita: agenda por WhatsApp.",
         # Foto de cabecera como «Conóceme» y Primera consulta (propietario, 2026-10-13): adjunto hero-contacto, sustituido por setup-pages.sh.
         "variant": "warm", "crumb": "Contacto", "image": {"id": "__CO_HERO_ID__", "url": "__CO_HERO_URL__"}, "focus": "50% 6%", "focus_mobile": "85% 20%"}),
     container("co-ubic", "di-ubicacion", {"eyebrow": "Cómo llegar", "title": "<b>CAB</b> Medical,<br><em>Headquarters</em>",
@@ -140,7 +141,7 @@ seo = {
     "otorrinolaringologia": ("Otorrinolaringología en Monterrey: oído, nariz y garganta", "Otorrino en Cumbres, Monterrey: oído, nariz y garganta en niños desde los 0 meses y adultos. Qué atiendo, cómo trabajo y cómo agendar tu consulta."),
     "sueno": ("Especialista en ronquido y apnea del sueño en Monterrey", "Ronquido y apnea del sueño en Monterrey: valoración de la vía aérea, estudio del sueño en casa, CPAP y cirugía. Dra. Irina González Sáez, otorrino."),
     "primera-consulta": ("Primera consulta con la Dra. Irina González Sáez | Qué esperar", "Cómo es la consulta de otorrinolaringología: 30 minutos, exploración completa y plan claro. Qué llevar, costos y seguros."),
-    "contacto": ("Contacto y ubicación | Dra. Irina González Sáez, Cumbres", "Consultorio en CAB Medical Headquarters, Av. Paseo de los Leones 2341, Cumbres 2.º Sector, Monterrey. Horario, mapa, estacionamiento y WhatsApp."),
+    "contacto": ("Contacto y ubicación | Dra. Irina González Sáez, Cumbres", f"Consultorio en {DIRECCION_SEO}. Horario, mapa, estacionamiento y WhatsApp."),
     "preguntas-frecuentes": ("Preguntas frecuentes | Dra. Irina González Sáez", "Horario, costo de consulta, seguros, atención a niños y hospitales. Respuestas de servicio del consultorio de la Dra. Irina González Sáez."),
     "aviso-de-privacidad": ("Aviso de privacidad | Dra. Irina González Sáez", "Cómo tratamos sus datos personales conforme a la LFPDPPP: qué recabamos, para qué, con quién los compartimos y cómo ejercer sus derechos ARCO."),
     "aviso-medico": ("Aviso médico | Dra. Irina González Sáez", "La información del sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias."),

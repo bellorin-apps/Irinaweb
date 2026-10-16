@@ -243,3 +243,8 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 -12.1FIX→DONE con ensayo en copia aprobado y límites;12.2DONE snapshot operativo.204/230=88,70%,78/87DONE.9.5OWNER/11.2REVIEW sin cambios.
 - Q-063/064VERIFIED y14fixtures request; Q-062VERIFIED383caracteres y siete servicios; Q-041WONTFIXD-065.
 - Q-066/067guardas/drill corregidos,19casos locales y dos regresiones reproducidas. Umask de backup adelantado. Sin deploy, SQL real, cuentas, secretos ni SMTP; herramientas para próxima operación autorizada.
+## 2026-10-16 · Claude cloud · repaso de la fase 5 (5.1, 5.2, 5.3, 5.5)
+
+- 5.3/Q-042: `tools/content/practice.py` como fuente única de la dirección en los builds; `tools/audit/nap-check.py`. JSON regenerado idéntico.
+- 5.5: `tools/lint` (ESLint y stylelint con versiones fijas). Corregidos una «}» suelta en components.css (sin cambio visual: capturas idénticas) y `items` redeclarado en main.js.
+- 5.1/5.2: evidencia actualizada contra el código; pasan a REVIEW.
