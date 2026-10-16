@@ -10,6 +10,8 @@ Haz pull y coteja con José el HTML oficial de opiniones generado para su perfil
 
 ---
 
+> **2026-10-16 17:00 (sesión local): cabecera de Sueño con foto (hero-sueno, adjunto 417), a petición de José.** build-pages/setup-pages con __SU_HERO__; bleed.php pone la sombra cuando hay foto (antes, la variante night ponía los anillos); sombra nocturna en components.css. Verificado en escritorio, móvil y horizontal. Falta la cabecera de Otorrino (foto pendiente de José). Codex: auditar. Detalle en QA.
+
 > **2026-10-16 16:00 (sesión local): inglés, entrega 3 (6643e9b) desplegada.** 5 fichas EN en borrador con medical_review_required (412–416); el sitio público no cambia. Guía de la Dra.: 10 tarjetas (8 EN). Hallazgo: la app de revisión sigue en modo sitio corto y no lista las fichas EN. paginas-en.json estuvo 200 unos 5 min por un corte de SSH; ya 403. Detalle en QA.
 
 > **2026-10-16 16:00 (sesión local): Doctoralia, widget REAL probado en entorno aislado (localhost), con ID provisional.** Privacidad antes del clic: 0 peticiones y 0 cookies; teclado sin trampa; caja estable; fallo con reintento; 1 doctoralia_click. Hallazgo: el tipo big muestra una tarjeta de reserva con UNA opinión y «Agendar cita»; falta el HTML oficial de José y decidir el formato. Sigue APAGADO. Detalle en QA.

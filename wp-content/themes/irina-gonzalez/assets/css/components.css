@@ -585,6 +585,13 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
   .di-bleed--photo .di-bleed__shade { display: block; background: linear-gradient(180deg, rgb(74 42 62 / 0) 0%, rgb(74 42 62 / 0) 42%, rgb(74 42 62 / 0.26) 56%, rgb(74 42 62 / 0.5) 72%, rgb(74 42 62 / 0.66) 100%); mix-blend-mode: multiply; }
   .di-bleed--photo .di-container { padding-top: 6rem; padding-bottom: 1.75rem; } /* Propietario (2026-10-11): contenido al borde inferior; la barra móvil queda fuera por --di-peek. */
 }
+/* Sueño con foto (propietario, 2026-10-16): la foto ya es nocturna; el oscurecido usa el tono noche de la paleta (#0f0c1f) en vez del
+   morado cálido, y sin multiplicar (sobre un cielo oscuro lo apagaría). Mismas direcciones: de izquierda a derecha en escritorio, desde
+   abajo en móvil. */
+.di-bleed--night.di-bleed--photo .di-bleed__shade { background: linear-gradient(90deg, rgb(15 12 31 / 0.55) 0%, rgb(15 12 31 / 0.3) 34%, rgb(15 12 31 / 0.08) 54%, rgb(15 12 31 / 0) 66%); mix-blend-mode: normal; }
+@media (max-width: 899px) {
+  .di-bleed--night.di-bleed--photo .di-bleed__shade { background: linear-gradient(180deg, rgb(15 12 31 / 0) 0%, rgb(15 12 31 / 0) 36%, rgb(15 12 31 / 0.45) 50%, rgb(15 12 31 / 0.78) 64%, rgb(15 12 31 / 0.9) 100%); mix-blend-mode: normal; }
+}
 
 /* Heros interiores (propietario, 2026-10-10): overline + título + copy pegados a los botones. */
 .di-bleed--short .di-lead { margin-bottom: 0; }

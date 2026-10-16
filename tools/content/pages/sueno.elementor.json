@@ -34,6 +34,12 @@
           "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología.",
           "variant": "night",
           "crumb": "Sueño",
+          "image": {
+            "id": "__SU_HERO_ID__",
+            "url": "__SU_HERO_URL__"
+          },
+          "focus": "50% 0%",
+          "focus_mobile": "86% 50%",
           "whatsapp_label": "Agendar valoración de ronquido y apnea"
         },
         "elements": []

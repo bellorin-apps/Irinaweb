@@ -44,7 +44,10 @@ pages["otorrinolaringologia"] = [
 pages["sueno"] = [
     container("su-bleed", "di-bleed", {"eyebrow": "Sueño y respiración", "title": "Del <b>ronquido</b><br><em>al descanso</em>",
         "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología.",
-        "variant": "night", "crumb": "Sueño", "whatsapp_label": "Agendar valoración de ronquido y apnea"}),
+        # Foto de cabecera como las demás páginas (propietario, 2026-10-16): adjunto hero-sueno (Recursos (Irina)/hero-sueno.png), la Dra.
+        # a la derecha bajo un cielo nocturno; sustituido por setup-pages.sh. Sin adjunto, la cabecera usa el degradado nocturno.
+        "variant": "night", "crumb": "Sueño", "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "86% 50%",
+        "whatsapp_label": "Agendar valoración de ronquido y apnea"}),
     # D-082: las 5 fichas de sueño enlazan desde aquí; el bloque solo pinta el enlace si la ficha está publicada (irina_url_if_published).
     container("su-cond", "di-listado", {"eyebrow": "Qué atiendo", "title": "<b>Ronquido</b> y <em>apnea</em>", "post_type": "", "anchor": "atiendo",
         "items": rep([("Ronquido", "En adultos y en niños", "/padecimientos/ronquido/"), ("Apnea obstructiva del sueño", "Pausas en la respiración al dormir", "/padecimientos/apnea-obstructiva-del-sueno/")], "label", "sub", "url")}),

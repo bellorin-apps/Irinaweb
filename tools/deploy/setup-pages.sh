@@ -10,12 +10,13 @@ pid(){ w "post list --post_type=page --post_name__in=$1 --post_status=any --fiel
 PC_HERO_ID="$(w "post list --post_type=attachment --post_name__in=hero-primera --post_status=any --field=ID" | head -1)"; PC_HERO_URL=""; [ -n "$PC_HERO_ID" ] && PC_HERO_URL="$(w "post get $PC_HERO_ID --field=guid")"
 PC_BG_ID="$(w "post list --post_type=attachment --post_name__in=pc-fondo --post_status=any --field=ID" | head -1)"; PC_BG_URL=""; [ -n "$PC_BG_ID" ] && PC_BG_URL="$(w "post get $PC_BG_ID --field=guid")"
 CO_HERO_ID="$(w "post list --post_type=attachment --post_name__in=hero-contacto --post_status=any --field=ID" | head -1)"; CO_HERO_URL=""; [ -n "$CO_HERO_ID" ] && CO_HERO_URL="$(w "post get $CO_HERO_ID --field=guid")"
-echo "  hero-primera: ${PC_HERO_ID:-sin foto} · pc-fondo: ${PC_BG_ID:-sin foto} · hero-contacto: ${CO_HERO_ID:-sin foto}"
+SU_HERO_ID="$(w "post list --post_type=attachment --post_name__in=hero-sueno --post_status=any --field=ID" | head -1)"; SU_HERO_URL=""; [ -n "$SU_HERO_ID" ] && SU_HERO_URL="$(w "post get $SU_HERO_ID --field=guid")"
+echo "  hero-primera: ${PC_HERO_ID:-sin foto} · pc-fondo: ${PC_BG_ID:-sin foto} · hero-contacto: ${CO_HERO_ID:-sin foto} · hero-sueno: ${SU_HERO_ID:-sin foto}"
 
 echo "→ Páginas Elementor"
 for slug in otorrinolaringologia sueno primera-consulta contacto preguntas-frecuentes links gracias; do
   ID="$(pid "$slug")"; [ -n "$ID" ] || { echo "  falta $slug (ejecuta setup-site.sh)"; continue; }
-  sed -e "s#__PC_HERO_ID__#${PC_HERO_ID}#g" -e "s#__PC_HERO_URL__#${PC_HERO_URL}#g" -e "s#__PC_BG_ID__#${PC_BG_ID}#g" -e "s#__PC_BG_URL__#${PC_BG_URL}#g" -e "s#__CO_HERO_ID__#${CO_HERO_ID}#g" -e "s#__CO_HERO_URL__#${CO_HERO_URL}#g" "$SRC/$slug.elementor.json" > "/tmp/$slug.local.json"
+  sed -e "s#__PC_HERO_ID__#${PC_HERO_ID}#g" -e "s#__PC_HERO_URL__#${PC_HERO_URL}#g" -e "s#__PC_BG_ID__#${PC_BG_ID}#g" -e "s#__PC_BG_URL__#${PC_BG_URL}#g" -e "s#__CO_HERO_ID__#${CO_HERO_ID}#g" -e "s#__CO_HERO_URL__#${CO_HERO_URL}#g" -e "s#__SU_HERO_ID__#${SU_HERO_ID}#g" -e "s#__SU_HERO_URL__#${SU_HERO_URL}#g" "$SRC/$slug.elementor.json" > "/tmp/$slug.local.json"
   rscp "/tmp/$slug.local.json" "$SSH_USER@$SSH_HOST:/tmp/$slug.json"; rm -f "/tmp/$slug.local.json"
   # Páginas con plantilla elementor_header_footer: WP-CLI valida la plantilla, por eso el meta va directo.
   w "post meta update $ID _wp_page_template elementor_header_footer" >/dev/null

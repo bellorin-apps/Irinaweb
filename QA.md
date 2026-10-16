@@ -743,3 +743,19 @@ Las 5 fichas de sueño en inglés y el paquete de revisión de la Dra.
 - **/favicon.ico:** `site_icon` = 240 estaba configurado, pero la CDN de Hostinger (hcdn) devuelve 404 a /favicon.ico sin pasar por WordPress. Se copió el `assets/brand/favicon.ico` del tema (isotipo, 16 y 32 px) a la raíz del sitio; es reversible borrando ese archivo.
   - Con parámetro responde 200 image/x-icon.
   - Sin parámetro la CDN sirvió todavía su 404 en caché (Age 36 s) después de purgar LiteSpeed. Caducará solo; no se tocó la CDN.
+
+## Cabecera de Sueño con foto (propietario, 2026-10-16 17:00, sesión local)
+
+José subió `Recursos (Irina)/hero-sueno.png` (2040×1349: la Dra. a la derecha bajo un cielo nocturno) y pidió adaptarla «siguiendo los parámetros de las demás páginas, en escritorio y responsive».
+- **Medios:** `upload-media.sh` → adjunto 417 `hero-sueno` (WebP q100, 2521 KB). `irina-escritorio` q95, 591 KB; `irina-movil` 1600 px.
+- **Build:** build-pages.py `su-bleed` con image `__SU_HERO_ID__`/`__SU_HERO_URL__`, focus «50% 0%» (escritorio; con «50% 30%» se cortaba la cabeza) y focus_mobile «86% 50%». setup-pages.sh sustituye los marcadores. Solo cambia sueno.elementor.json.
+- **Tema:**
+  - bleed.php: con foto va la sombra (`di-bleed__shade`); los anillos de respiración quedan solo sin foto (antes la variante night los ponía en lugar de la sombra y tapaban la cara);
+  - components.css: sombra con el tono noche de la paleta (#0f0c1f, sin multiplicar), de izquierda a derecha en escritorio y desde abajo en móvil.
+- **Carga:** setup-pages actualizó Sueño (171); la conexión SSH se cortó en las páginas siguientes, que no cambiaban (Contacto, FAQ y legales verificados en 200 con su contenido). El ajuste de encuadre se cargó solo en la 171, con los mismos pasos del script. Tras `cache flush` y borrar `_elementor_element_cache`, purga.
+- **Verificación con Chrome:**
+  - 1440 px: escritorio q95 servida, object-position 50% 0%;
+  - 390 px con UA Android y 393 px con UA iPhone: irina-movil 1600, 86% 50%;
+  - 832×340 en horizontal;
+  - sin desborde, sin errores de consola y texto legible.
+- **Sin cambios:** las 5 fichas /sueno/{slug}/ siguen con el degradado nocturno y los anillos (sin foto); Primera consulta e Inicio siguen con sombra.
