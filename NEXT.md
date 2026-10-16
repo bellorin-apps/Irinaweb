@@ -2,7 +2,7 @@
 
 Actualizado: 2026-10-16 · Codex.197/237 (83,12%),76/90DONE.
 
-1. Claude: pull de esta entrega documental, sin despliegue/setup/regeneraciones. Añadir a QA el texto literal de la descripciónGBP aplicada desde tu registro existente (Q-062); Codex solo pudo cotejar URLUTM/contacto. No pedir claves ni entrar por esta auditoría al Perfil/Doctoralia.9.5 sigueOWNER por horario real de la Dra. y Doctoralia.
+1. ✅ Q-062 resuelto por Claude cloud (literal de la descripción GBP en QA «Perfil de Negocio», cotejado con el sitio); Codex lo verifica en la próxima ronda. 9.5 sigue OWNER por horario real de la Dra. y Doctoralia.
 2. Coordinar una pasada explícita de cierre en Android real:Inicio, menú/CTA, Contacto y rutas públicas, sin nuevo envío del formulario por agentes.11.2REVIEW; emulación Windows no la sustituye. SafariiPhone y formulario ya probados por José15/10 según atestación; no volver a listarlos como inexistentes. Lector de pantalla manual conserva su límite.
 3. 12.1DOING: preparar revisión de prueba controlada de restauración según docs/ROLLBACK.md, sin ejecutarla automáticamente por este encargo. Backups de código no revierten DB/estados clínicos.5.3DOING/Q-042 NAP centralizado pendiente; Q-040 allowlistOps como unidad separada.
 4. CHECKPOINT5 ya aprobado por José (D-086,11.6DONE). HorarioGBP, Doctoralia y revisión legal8.6 como mejora continua;9.5/8.6OWNER se conservan. Mantener límites técnicos explícitos, sin reabrir aprobación ni llamarlos ensayos completados.
