@@ -19,9 +19,10 @@ $irina_area  = get_the_terms( $irina_id, 'area' );
 $irina_area  = is_array( $irina_area ) && $irina_area ? $irina_area[0] : null;
 // Migas hacia el pilar si está publicado (sin enlace si no). D-076: los archivos /padecimientos/ y /tratamientos/ dan 404, así que
 // esa miga ya no existe; la ficha cuelga directamente de su página corta.
+$irina_en      = 'en' === irina_lang(); // D-095: la ficha inglesa sube al pilar inglés (/en/sleep/ o /en/ent/).
 $irina_crumb   = $irina_sleep
-	? [ [ __( 'Sueño', 'irina-gonzalez' ), irina_url_if_published( '/sueno/' ) ] ]
-	: [ [ __( 'Otorrinolaringología', 'irina-gonzalez' ), irina_url_if_published( '/otorrinolaringologia/' ) ] ];
+	? [ [ __( 'Sueño', 'irina-gonzalez' ), irina_url_if_published( $irina_en ? '/en/sleep/' : '/sueno/' ) ] ]
+	: [ [ __( 'Otorrinolaringología', 'irina-gonzalez' ), irina_url_if_published( $irina_en ? '/en/ent/' : '/otorrinolaringologia/' ) ] ];
 $irina_crumb[] = [ get_the_title( $irina_id ), '' ];
 
 $irina_sections = [];

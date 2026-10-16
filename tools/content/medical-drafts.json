@@ -935,6 +935,7 @@
     "Dolor de cabeza al despertar y boca seca",
     "Despertares con sensación de ahogo",
     "Dificultad para concentrarse, irritabilidad y bajo rendimiento",
+    "Somnolencia excesiva diurna",
     "Levantarse varias veces a orinar por la noche"
    ],
    "causas": [
@@ -1380,11 +1381,12 @@
     "Apnea obstructiva del sueño confirmada por estudio, moderada o grave",
     "Apnea leve con síntomas importantes o enfermedades asociadas",
     "Personas que no son candidatas a cirugía o prefieren un tratamiento no quirúrgico",
-    "Pacientes que ya usan CPAP y no se adaptan: hay mucho que ajustar"
+    "Pacientes que ya usan CPAP y no se adaptan: hay mucho que ajustar",
+    "El CPAP es considerado el tratamiento gold standard para la apnea del sueño"
    ],
    "estudio_previo": "<p>Estudio del sueño en casa que confirme y gradúe la apnea, y exploración de la nariz y la vía aérea: una nariz obstruida es la causa más frecuente de no tolerar el CPAP y se puede tratar.</p>",
    "como_se_realiza": "<p>La Dra. indica el tipo de equipo y de mascarilla según tu anatomía y tus hábitos, ajusta la presión (por titulación automática o con estudio) y te cita en las primeras semanas para resolver molestias: fugas, resequedad, presión alta o baja. Los equipos modernos registran el uso y permiten ajustar a distancia.</p>",
-   "recuperacion": "<p>No hay recuperación. La adaptación suele tomar algunas semanas; durante ese tiempo el seguimiento cercano es parte del tratamiento. Muchas personas notan la diferencia en su energía desde las primeras noches de uso completo.</p>",
+   "recuperacion": "<p>No hay recuperación. La adaptación suele tomar algunos días ; durante ese tiempo el seguimiento cercano es parte del tratamiento. Muchas personas notan la diferencia en su energía desde las primeras noches de uso completo.</p>",
    "riesgos_y_alternativas": "<p>El CPAP es seguro. Las molestias habituales son resequedad, marcas de la mascarilla o sensación de presión, y todas tienen solución con ajustes. Alternativas cuando no se tolera: cirugía nasal o del paladar, dispositivo de avance mandibular o terapia posicional, según el estudio y la exploración.</p>",
    "enfoque_dra": "<p>La Dra. no entrega un equipo y se despide. Acompaña la adaptación, trata la nariz si es lo que impide tolerarlo y, cuando después de intentarlo el CPAP no es para ti, te propone alternativas con la misma honestidad.</p>",
    "faq": [

@@ -688,3 +688,24 @@ Encargo: docs/REVISION_DOCTORALIA_2026-10-16c.md, GO condicionado. **El widget s
 2. El botón «Agendar cita» de Doctoralia compite con WhatsApp, el CTA principal (D-011).
 3. «Ofrece consultas online» viene del perfil de Doctoralia: confirmar que es cierto.
 4. Tras cargar conviene ocultar el aviso, el botón y el estado, para que el widget quepa sin desplazamiento interno.
+
+## Versión en inglés: entrega 3 (Claude cloud, 2026-10-16, D-095)
+
+Las 5 fichas de sueño en inglés y el paquete de revisión de la Dra.
+- **Fuente:** el texto APROBADO exportado de producción (`tools/content/en/fichas-es-aprobadas.json`, sesión local, solo lectura), no medical-drafts.json. Se traducen las ediciones de la Dra.: «Somnolencia excesiva diurna»; CPAP «gold standard»; «algunos días». La errata española de apnea se traduce por su sentido («explained by an otolaryngologist», D-090).
+- **setup-en.php:** crea 5 CPT en borrador (snoring, obstructive-sleep-apnea, home-sleep-test, cpap-therapy, snoring-and-sleep-apnea-surgery) con `_di_lang=en`, la pareja española, área y zona sueño, estado «requiere revisión médica», metas di_* traducidas (fuentes, tipo y oferta copiadas), relaciones solo entre fichas inglesas y rank_math_title (≤62). No toca fichas inglesas aprobadas ni publicadas. Corregido: las búsquedas usan `post_name__in`, porque `name` con `post_status=any` no encuentra entradas (como advierte setup-site).
+- **Local, aprobándolas y publicándolas solo en prueba:**
+  - /en/sleep/{slug}/ en 200 con lang en-US y hreflang recíproco con /sueno/{slug}/ (también desde la española);
+  - migas Home › Sleep (/en/sleep/);
+  - secciones en inglés y relacionados ingleses;
+  - caja «Medically reviewed by … · Last reviewed: October 20, 2026»; el formato de fecha ya es traducible y en español sigue «13 de octubre de 2026»;
+  - /en/sleep/ enlaza las 5 fichas inglesas;
+  - las URL cruzadas usan la 301 de adivinanza.
+
+  Después se devolvieron a borrador y a «requiere revisión».
+- **Guía de revisión** (/briefing/guia/, con token): `build-en.py` exporta `paginas-en.json`, es decir, las 8 páginas inglesas por bloques con el bloque español desplegable. revisar.php las sirve y acepta «Aprobar página» o «Pedir cambios» para los slugs ingleses; guarda `_di_page_approved_at` y nunca publica. Probado en local: 10 tarjetas, aprobar en/sleep deja la página en draft con la fecha de aprobación, y un slug ajeno da `error: page`. `.htaccess` deniega paginas(-en).json (no verificable con el servidor PHP local, que ignora .htaccess) y deploy-briefing.sh sube el nuevo JSON.
+- **App de revisión de fichas:** las inglesas llevan la etiqueta «Inglés» (4e57fcf).
+- **Q-070 · P3 · FIXED_LOCAL:** build-medical.py y medical-drafts.json diferían del texto aprobado en 3 campos (apnea síntomas; CPAP candidatos y recuperación). Ahora coinciden; la única diferencia es la corrección B1 («un otorrinolaringólogo»), pendiente de la aprobación de la Dra. setup-medical no toca fichas publicadas, así que no hay efecto en producción.
+- PHPCS, ESLint/stylelint, sintaxis bash y JS de la guía en verde.
+- **Límite:** traducción de Claude; la aprobación clínica es de la Dra. en su app (13.6).
+

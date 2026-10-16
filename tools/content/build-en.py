@@ -310,3 +310,45 @@ for s_ in legal:
 for s, (t, d) in seo.items():
     assert len(t) <= 62 and len(d) <= 158, (s, len(t), len(d))
 print(f"{len(pages)} páginas Elementor, {len(legal)} legales, {len(credentials_en)} credenciales en {OUT}")
+
+# Guía de revisión de la Dra. (13.6): cada página inglesa por bloques, con el bloque español equivalente para comparar.
+# La sirve tools/briefing/revision/revisar.php (action=pages) desde tools/briefing/guia/paginas-en.json (no servible: .htaccess).
+import re as _re
+
+
+def _plain(h):
+    h = _re.sub(r"</(li|p)>", "\n", h or "")
+    return _re.sub(r"<br[^>]*>", " ", _re.sub(r"<(?!br)[^>]+>", "", h)).strip()
+
+
+def _blocks(data):
+    out = []
+    keys = ("lead", "text", "quote", "trust", "creds", "orl_eyebrow", "orl_title", "orl_items", "sleep_eyebrow", "sleep_title", "sleep_items", "steps", "ticker")
+    for c in data:
+        w = c["elements"][0]
+        st = w["settings"]
+        items = []
+        for field in ("items", "steps", "facts"):
+            for it in st.get(field, []) if isinstance(st.get(field), list) else []:
+                if isinstance(it, dict):
+                    items.append([_plain(it.get("label") or it.get("title") or it.get("pregunta") or it.get("name") or ""), _plain(it.get("sub") or it.get("text") or it.get("value") or "")])
+        text = "\n".join(_plain(st[k]) for k in keys if isinstance(st.get(k), str) and st.get(k))
+        out.append({"tipo": w["widgetType"], "eyebrow": _plain(st.get("eyebrow", "")).replace("|", " "), "titulo": _plain(st.get("title", "")),
+                    "texto": text, "nota": _plain(st.get("note", "")), "items": items})
+    return out
+
+
+_es_dir = pathlib.Path(__file__).parent
+_es_data = {"__front__": _es_dir / "home-elementor.json", "dra-irina-gonzalez-saez": _es_dir / "dra-elementor.json"}
+_review = {}
+for slug, (title, es, data) in pages.items():
+    es_file = _es_data.get(es, _es_dir / "pages" / f"{es}.elementor.json")
+    es_blocks = _blocks(json.loads(es_file.read_text(encoding="utf-8"))) if es_file.exists() else []
+    en_blocks = _blocks(data)
+    for i, b in enumerate(en_blocks):
+        b["es"] = es_blocks[i] if i < len(es_blocks) else None
+    path = "en" if slug == "en" else f"en/{slug}"
+    _review[path] = {"nombre": f"{title} (inglés)", "url": "/" + path + "/", "es_url": "/" if es == "__front__" else f"/{es}/", "bloques": en_blocks}
+pathlib.Path(__file__).resolve().parents[1].joinpath("briefing", "guia", "paginas-en.json").write_text(json.dumps(_review, ensure_ascii=False, indent=1), encoding="utf-8")
+print(len(_review), "páginas en la guía de revisión (paginas-en.json)")
+

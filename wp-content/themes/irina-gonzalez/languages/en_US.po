@@ -368,6 +368,9 @@ msgstr "WhatsApp"
 msgid "aviso de privacidad"
 msgstr "privacy notice"
 
+msgid "j \\d\\e F \\d\\e Y"
+msgstr "F j, Y"
+
 msgid "¿Cuándo consultar?"
 msgstr "When to see a doctor"
 

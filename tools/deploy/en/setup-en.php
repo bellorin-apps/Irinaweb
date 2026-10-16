@@ -40,7 +40,7 @@
 			$att  = get_posts(
 				[
 					'post_type'      => 'attachment',
-					'name'           => $slug,
+					'post_name__in'  => [ $slug ],
 					'post_status'    => 'any',
 					'posts_per_page' => 1,
 				]
@@ -56,7 +56,7 @@
 		$q = get_posts(
 			[
 				'post_type'      => 'page',
-				'name'           => $slug,
+				'post_name__in'  => [ $slug ],
 				'post_parent'    => $parent_id,
 				'post_status'    => [ 'publish', 'draft', 'pending', 'private', 'future' ],
 				'posts_per_page' => 1,
@@ -143,6 +143,89 @@
 		update_option( \DraIrina\Core\Settings\PracticeSettings::OPTION, $opt );
 	}
 	WP_CLI::log( '  Textos del consultorio en inglés escritos: ' . ( $set ? implode( ', ', $set ) : 'ninguno (ya tenían valor)' ) );
+	// Fichas de sueño en inglés (13.4): CPT en BORRADOR con «requiere revisión médica»; la Dra. las aprueba en su app.
+	// No se tocan las ya publicadas ni las ya aprobadas (lo que aprobó la Dra. es lo que se publica).
+	$fichas_file = "$dir/fichas-en.json";
+	if ( is_readable( $fichas_file ) ) {
+		$fichas = json_decode( (string) file_get_contents( $fichas_file ), true );
+		$en_ids = [];
+		$es_of  = static function ( string $type, string $slug ): int {
+			$q = get_posts(
+				[
+					'post_type'      => $type,
+					'post_name__in'  => [ $slug ],
+					'post_status'    => 'any',
+					'posts_per_page' => 1,
+					'meta_query'     => [
+						[
+							'key'     => \DraIrina\Core\I18n\Language::META,
+							'compare' => 'NOT EXISTS',
+						],
+					], // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+				]
+			);
+			return $q ? (int) $q[0]->ID : 0;
+		};
+		foreach ( (array) $fichas as $f ) {
+			$existing = get_posts(
+				[
+					'post_type'      => $f['post_type'],
+					'post_name__in'  => [ $f['slug'] ],
+					'post_status'    => 'any',
+					'posts_per_page' => 1,
+					'meta_key'       => \DraIrina\Core\I18n\Language::META, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+					'meta_value'     => 'en', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				]
+			);
+			$fid      = $existing ? (int) $existing[0]->ID : 0;
+			if ( $fid && ( 'publish' === get_post_status( $fid ) || \DraIrina\Core\Workflow\MedicalReview::is_publishable( $fid ) ) ) {
+				WP_CLI::log( "  ficha /en/sleep/{$f['slug']}/: aprobada o publicada, sin cambios" );
+				$en_ids[ $f['es_slug'] ] = $fid;
+				continue;
+			}
+			$args = [
+				'post_type'    => $f['post_type'],
+				'post_status'  => 'draft',
+				'post_title'   => $f['title'],
+				'post_name'    => $f['slug'],
+				'post_content' => wp_slash( $f['content'] ),
+			];
+			if ( $fid ) {
+				$args['ID'] = $fid;
+			}
+			$fid = (int) wp_insert_post( $args, true );
+			if ( ! $fid ) {
+				WP_CLI::warning( "No se pudo crear la ficha {$f['slug']}" );
+				continue;
+			}
+			// Primero idioma y estado: así la puerta médica la trata como borrador pendiente de revisión.
+			update_post_meta( $fid, \DraIrina\Core\I18n\Language::META, 'en' );
+			wp_set_object_terms( $fid, \DraIrina\Core\Taxonomies\EstadoMedico::MEDICAL_REVIEW_REQ, \DraIrina\Core\Taxonomies\EstadoMedico::SLUG, false );
+			wp_set_object_terms( $fid, (array) $f['terms']['area'], 'area', false );
+			wp_set_object_terms( $fid, (array) $f['terms']['zona'], 'zona', false );
+			$es_id = $es_of( $f['post_type'], $f['es_slug'] );
+			if ( $es_id ) {
+				update_post_meta( $fid, \DraIrina\Core\I18n\Language::PAIR, $es_id );
+			}
+			foreach ( (array) $f['meta'] as $key => $value ) {
+				update_post_meta( $fid, 'di_' . $key, $value );
+			}
+			update_post_meta( $fid, 'rank_math_title', $f['seo_title'] );
+			$en_ids[ $f['es_slug'] ] = $fid;
+			WP_CLI::log( sprintf( '  ficha /en/sleep/%s/: %d (%s), pareja española %d, estado %s', $f['slug'], $fid, get_post_status( $fid ), $es_id, \DraIrina\Core\Workflow\MedicalReview::state( $fid ) ) );
+		}
+		// Relaciones: slugs españoles → IDs de las fichas inglesas (sin versión inglesa no se enlaza).
+		foreach ( (array) $fichas as $f ) {
+			$fid = $en_ids[ $f['es_slug'] ] ?? 0;
+			if ( ! $fid || 'publish' === get_post_status( $fid ) || \DraIrina\Core\Workflow\MedicalReview::is_publishable( $fid ) ) {
+				continue;
+			}
+			foreach ( (array) $f['relations'] as $key => $slugs ) {
+				update_post_meta( $fid, 'di_' . $key, array_values( array_filter( array_map( static fn( $sl ) => (int) ( $en_ids[ $sl ] ?? 0 ), (array) $slugs ) ) ) );
+			}
+		}
+	}
+
 	// Credenciales en inglés (meta _di_en por slug; la plantilla la usa en /en/).
 	$creds = json_decode( (string) file_get_contents( "$dir/credentials-en.json" ), true );
 	$done  = 0;
@@ -150,7 +233,7 @@
 		$c = get_posts(
 			[
 				'post_type'      => 'credencial',
-				'name'           => $cred_slug,
+				'post_name__in'  => [ $cred_slug ],
 				'post_status'    => 'any',
 				'posts_per_page' => 1,
 			]

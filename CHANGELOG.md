@@ -280,3 +280,10 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - 404 y título de la 404 en inglés bajo /en/; enlaces /en/ solo a páginas publicadas (irina_url_if_published_en).
 - setup-en: regeneración de rewrites sin perder las reglas de Elementor.
 
+## 2026-10-16 · Claude cloud · versión en inglés, entrega 3 (D-095)
+
+- 5 fichas de sueño en inglés desde el texto aprobado en producción (`build-fichas-en.py`), cargadas en borrador «requiere revisión médica» por setup-en.sh.
+- Guía de revisión de la Dra. con las 8 páginas inglesas y el original español desplegable; las fichas inglesas, en su app con la etiqueta «Inglés».
+- Fecha de la revisión médica traducible («October 20, 2026»); migas de las fichas inglesas hacia /en/sleep/.
+- Q-070: build-medical.py alineado con el texto aprobado.
+

@@ -127,7 +127,7 @@ function irina_medical_review_badge( int $post_id ): string {
 		esc_html( $name ),
 		esc_html__( 'Última revisión:', 'irina-gonzalez' ),
 		esc_attr( substr( $date, 0, 10 ) ),
-		esc_html( wp_date( 'j \d\e F \d\e Y', (int) strtotime( substr( $date, 0, 10 ) . ' 12:00 UTC' ), new DateTimeZone( 'UTC' ) ) ) // Fecha de calendario: sin desplazarla por la zona horaria del sitio.
+		esc_html( wp_date( /* translators: formato de fecha de la última revisión médica (PHP date). */ __( 'j \d\e F \d\e Y', 'irina-gonzalez' ), (int) strtotime( substr( $date, 0, 10 ) . ' 12:00 UTC' ), new DateTimeZone( 'UTC' ) ) ) // Fecha de calendario: sin desplazarla por la zona horaria del sitio.
 	);
 }
 

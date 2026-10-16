@@ -43,6 +43,7 @@ THEME = {
     "Sueño": "Sleep",
     "Revisado médicamente por": "Medically reviewed by",
     "Última revisión:": "Last reviewed:",
+    "j \\d\\e F \\d\\e Y": "F j, Y",
     "Agendar por WhatsApp": "Book via WhatsApp",
     "Migas de pan": "Breadcrumbs",
     "Previa cita. Agenda por WhatsApp.": "By appointment only. Book via WhatsApp.",

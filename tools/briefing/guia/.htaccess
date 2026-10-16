@@ -5,7 +5,7 @@ Options -Indexes
 </Files>
 Header set X-Robots-Tag "noindex, nofollow"
 
-# D-076: el texto de las páginas lo sirve revisar.php con token; el JSON no se sirve directo.
-<Files "paginas.json">
+# D-076/D-095: el texto de las páginas (y de la versión inglesa) lo sirve revisar.php con token; los JSON no se sirven directo.
+<FilesMatch "^paginas(-en)?\.json$">
   Require all denied
-</Files>
+</FilesMatch>

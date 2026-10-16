@@ -64,6 +64,7 @@ ul.check li::before{content:"";width:.6rem;height:.6rem;margin-top:.55rem;border
 .item .m{font-size:.8rem;color:var(--muted)}
 .pill{font-size:.72rem;font-weight:700;border-radius:999px;padding:4px 10px;white-space:nowrap}
 .pill.pending{background:var(--purple-soft);color:var(--purple)}
+details.es{margin-top:10px;padding:8px 12px;border-radius:12px;background:var(--bg-soft,#f4efe9)}details.es summary{cursor:pointer;font-size:.9rem;color:var(--muted,#75696f)}details.es .blk{margin-top:8px;opacity:.9}
 .pill.approved{background:var(--ok-soft);color:var(--ok)}
 .pill.changes{background:var(--warn-soft);color:var(--warn)}
 .pill.published{background:var(--teal-soft);color:var(--teal)}
@@ -100,10 +101,10 @@ textarea{width:100%;min-height:96px;border:1.5px solid var(--line);border-radius
       <svg class="mark" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 37 83 130"><path fill="currentColor" d="M41.31 83.83v-.07a5.16 5.16 0 0 1 8.81-3.65c.93.93 1.51 2.22 1.51 3.65v.07a5.16 5.16 0 1 1-10.32 0m-5.9 17.41c-6.09-3.86-10.02-10.82-9.57-18.67.59-10.34 8.94-18.74 19.27-19.4 6.87-.44 13.08 2.49 17.14 7.29 1.95 2.3 5.44 2.44 7.58.31 1.9-1.9 2.03-4.94.29-6.99-5.89-6.95-14.79-11.27-24.69-10.95-16.09.53-29.23 13.54-29.91 29.63-.55 13.23 7.2 24.72 18.46 29.68 1.02.45 2.16-.28 2.16-1.39v-8.2c0-.53-.29-1.02-.74-1.31Zm11.06 49.67a5.16 5.16 0 0 0 5.16-5.16V99.28c0-1.43-.58-2.72-1.51-3.65a5.14 5.14 0 0 0-3.65-1.51 5.16 5.16 0 0 0-5.16 5.16v46.47a5.16 5.16 0 0 0 5.16 5.16m34.55-98.2c-8.61-9.57-21.15-15.55-35.08-15.39C20.9 37.61.39 58.01 0 83.05c-.31 20.06 12.09 37.26 29.66 44.08q2.22.87 4.56 1.5c.97.26 1.92-.48 1.92-1.48v-7.61c0-.66-.43-1.23-1.05-1.44-14.68-4.86-25.18-18.88-24.75-35.28.49-18.82 15.63-34.28 34.44-35.14 11.35-.52 21.61 4.2 28.57 11.95 1.96 2.18 5.37 2.24 7.45.17 1.93-1.93 2.04-5.05.21-7.08Zm-5.01 25.92H61.96c-1.42 0-2.71.58-3.65 1.51-.94.94-1.51 2.22-1.51 3.65a5.16 5.16 0 0 0 5.16 5.16h4.53a20.7 20.7 0 0 1-8.98 12.31c-.44.28-.7.78-.7 1.3v8.18c0 1.11 1.14 1.84 2.16 1.39 9.38-4.14 16.32-12.79 18.06-23.19.29-1.68.43-3.4.43-5.16 0-1.41-.09-2.8-.28-4.16-.08-.57-.58-.99-1.16-.99Zm-16.87 45.06c-1.01-.65-2.34.1-2.34 1.3v9.96c0 .32.1.62.28.88 1.45 2.09 2.3 4.62 2.3 7.35 0 7.09-5.72 12.84-12.79 12.9-2.68.02-5.01 2.01-5.26 4.67a5.16 5.16 0 0 0 5.14 5.65c8.05 0 15.15-4.1 19.32-10.32 2.47-3.69 3.92-8.13 3.92-12.91 0-6.22-2.45-11.88-6.43-16.04-1.24-1.3-2.63-2.45-4.14-3.44"/></svg>
       <div>
         <p class="eyebrow">Sitio web · drairinagonzalez.com</p>
-        <h1>Revisión de dos páginas</h1>
+        <h1>Revisión de páginas</h1>
       </div>
     </div>
-    <p class="muted" id="intro">El sitio se quedó corto: un lugar para que los pacientes te conozcan, sin fichas médicas largas. Solo necesitamos tu visto bueno en estas dos páginas. Nada se publica sin tu aprobación.</p>
+    <p class="muted" id="intro">El sitio se quedó corto: un lugar para que los pacientes te conozcan, sin fichas médicas largas. Necesitamos tu visto bueno en estas páginas. Nada se publica sin tu aprobación.</p>
     <div class="progress"><div class="bar"><i id="bar"></i></div><div class="status" id="count">Cargando…</div></div>
   </header>
 
@@ -131,14 +132,18 @@ function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&"
 function pill(r){ if (!r || !r.exists) return ["changes","No encontrada"]; if (r.state === "approved") return ["approved","Aprobada"]; if (r.state === "changes") return ["changes","Con cambios pedidos"]; return ["pending","Pendiente"]; }
 function block(b){
   const items = (b.items || []).filter(i => i[0]);
-  return `<div class="blk">${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}${b.titulo ? `<span class="t">${esc(b.titulo)}</span>` : ""}${b.texto ? `<p>${esc(b.texto)}</p>` : ""}${b.nota ? `<p class="muted">${esc(b.nota)}</p>` : ""}${items.length ? `<ul>${items.map(i => `<li><b>${esc(i[0])}</b>${i[1] ? ` <span>· ${esc(i[1])}</span>` : ""}</li>`).join("")}</ul>` : ""}</div>`;
+  // D-095: en la versión inglesa, el bloque español equivalente se puede desplegar debajo para comparar.
+  const es = b.es ? `<details class="es"><summary>Ver el original en español</summary>${block(b.es)}</details>` : "";
+  return `<div class="blk">${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}${b.titulo ? `<span class="t">${esc(b.titulo)}</span>` : ""}${b.texto ? `<p style="white-space:pre-line">${esc(b.texto)}</p>` : ""}${b.nota ? `<p class="muted">${esc(b.nota)}</p>` : ""}${items.length ? `<ul>${items.map(i => `<li><b>${esc(i[0])}</b>${i[1] ? ` <span>· ${esc(i[1])}</span>` : ""}</li>`).join("")}</ul>` : ""}${es}</div>`;
 }
 function render(){
   const ok = pages.filter(p => p.review && p.review.state === "approved").length;
   $("#bar").style.width = (pages.length ? Math.round(ok / pages.length * 100) : 0) + "%";
   $("#count").textContent = ok + " de " + pages.length + " aprobadas";
+  let shownEn = false;
   $("#pages").innerHTML = pages.map(p => { const [c, l] = pill(p.review); const r = p.review || {};
-    return `<section><div class="card page" data-slug="${esc(p.slug)}">
+    const head = p.lang === "en" && !shownEn ? (shownEn = true, `<section><h2>Versión en inglés</h2><p class="muted">Revisa que el inglés diga lo mismo que el español, sin añadir ni prometer nada. Debajo de cada bloque puedes desplegar el original. Si ves algo que cambiar, escríbelo en español: nosotros lo corregimos.</p></section>`) : "";
+    return head + `<section><div class="card page" data-slug="${esc(p.slug)}">
       <header><h2>${esc(p.nombre)}</h2><span class="pill ${c}">${esc(l)}</span></header>
       ${(p.bloques || []).map(block).join("")}
       ${r.note ? `<p class="note warn">Tu nota: ${esc(r.note)}</p>` : ""}
@@ -169,7 +174,7 @@ async function load(){
     const d = await r.json().catch(() => null);
     if (!r.ok || !d) throw Object.assign(new Error("HTTP " + r.status), { status: r.status });
     pages = d.pages || [];
-    if (d.reviewer) $("#intro").textContent = "Hola, " + d.reviewer + ". El sitio se quedó corto: un lugar para que los pacientes te conozcan, sin fichas médicas largas. Solo necesitamos tu visto bueno en estas dos páginas. Nada se publica sin tu aprobación.";
+    if (d.reviewer) $("#intro").textContent = "Hola, " + d.reviewer + ". El sitio se quedó corto: un lugar para que los pacientes te conozcan, sin fichas médicas largas. Necesitamos tu visto bueno en estas páginas. Nada se publica sin tu aprobación.";
     render();
   } catch (e) {
     $("#pages").innerHTML = `<div class="note warn">${e.status === 403 ? "Este enlace no es válido. Pide a José el enlace correcto." : "No se pudieron cargar las páginas. Vuelve a intentarlo en un momento."}</div>`;

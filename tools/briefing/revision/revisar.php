@@ -242,6 +242,10 @@ if ( 'GET' === $method && 'get' === $action ) {
 // El texto lo genera tools/content/build-pages.py en ../guia/paginas.json (no servible: .htaccess). La decisión de la Dra. se guarda
 // como meta de la página (_di_page_approved_at/_by o _di_page_review_note + _di_page_review_at) y en el registro; nunca publica.
 $di_pages = [ 'otorrinolaringologia', 'sueno' ];
+// D-095: páginas de la versión inglesa (borradores bajo /en/), con el texto español al lado; ../guia/paginas-en.json (build-en.py).
+$di_pages_en_file = dirname( __DIR__ ) . '/guia/paginas-en.json';
+$di_pages_en      = is_readable( $di_pages_en_file ) ? json_decode( (string) file_get_contents( $di_pages_en_file ), true ) : [];
+$di_pages_en      = is_array( $di_pages_en ) ? $di_pages_en : [];
 function di_page_state( string $slug ): array {
 	$pg = get_page_by_path( $slug, OBJECT, 'page' );
 	if ( ! $pg ) {
@@ -270,6 +274,9 @@ if ( 'GET' === $method && 'pages' === $action ) {
 		if ( isset( $data[ $slug ] ) ) {
 			$out[] = array_merge( [ 'slug' => $slug ], $data[ $slug ], [ 'review' => di_page_state( $slug ) ] );
 		}
+	}
+	foreach ( $di_pages_en as $slug => $page ) {
+		$out[] = array_merge( [ 'slug' => (string) $slug, 'lang' => 'en' ], (array) $page, [ 'review' => di_page_state( (string) $slug ) ] );
 	}
 	di_out( [ 'reviewer' => $reviewer->display_name, 'pages' => $out ] );
 }
@@ -378,7 +385,7 @@ if ( 'POST' === $method && 'page_review' === $action ) {
 	$slug = (string) ( $body['page'] ?? '' );
 	$to   = (string) ( $body['decision'] ?? '' );
 	$note = sanitize_textarea_field( (string) ( $body['note'] ?? '' ) );
-	if ( ! in_array( $slug, $di_pages, true ) || ! in_array( $to, [ 'approve', 'changes' ], true ) ) {
+	if ( ( ! in_array( $slug, $di_pages, true ) && ! isset( $di_pages_en[ $slug ] ) ) || ! in_array( $to, [ 'approve', 'changes' ], true ) ) {
 		di_out( [ 'error' => 'page' ], 400 );
 	}
 	if ( 'changes' === $to && '' === $note ) {
