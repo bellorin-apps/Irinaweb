@@ -32,8 +32,14 @@
           "eyebrow": "Otolaryngology (ENT)",
           "title": "<b>Ear, nose</b> and throat,<br><em>from birth</em>",
           "lead": "Ear, nose and throat consultations for children, teenagers, adults and older adults in Monterrey. Consultations are in Spanish.",
-          "variant": "sand",
-          "crumb": "ENT"
+          "variant": "warm",
+          "crumb": "ENT",
+          "image": {
+            "id": "__ORL_HERO_ID__",
+            "url": "__ORL_HERO_URL__"
+          },
+          "focus": "50% 0%",
+          "focus_mobile": "88% 50%"
         },
         "elements": []
       }

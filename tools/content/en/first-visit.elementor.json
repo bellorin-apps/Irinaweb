@@ -262,7 +262,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Book",
-          "title": "Book your<br><em>first visit</em>",
+          "title": "<b>Book</b> your<br><em>first visit</em>",
           "text": "Message us on WhatsApp and we’ll confirm a time.",
           "message": ""
         },
