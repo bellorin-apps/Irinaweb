@@ -20,7 +20,7 @@ page = [
         "variant": "warm", "crumb": "Conóceme", "image": {"id": "__DRA_HERO_ID__", "url": "__DRA_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "92% 8%", "secondary_short": "Doctoralia",
         "secondary_label": "Opiniones en Doctoralia", "secondary_url": "https://www.doctoralia.com.mx/perfil/irina-gonzalez-saez"}),
     container("dra-enfoque", "di-narrativa", {
-        "eyebrow": "Enfoque", "title": "«<b>Escucharte</b> <br class=\"di-brd\">también es parte <br class=\"di-brd\">del <b><em>tratamiento</em></b>»",
+        "eyebrow": "Enfoque", "title": "«<b>Escucharte</b> <br class=\"di-brd\">también es parte <br class=\"di-brd\">del <em>tratamiento</em>»",
         "lead": "La primera consulta dura alrededor de 30 minutos. Empieza por entender qué te pasa y desde cuándo; sigue con una exploración completa de oído, nariz y garganta, con endoscopia en el consultorio cuando hace falta, y termina con un plan explicado con claridad, sin promesas que no se puedan cumplir.",
         "text": "", "draft": "",  # Texto confirmado por la Dra. (propietario, 2026-10-10): se retira la marca de borrador (D-058)
         "image": {"id": "__DRA_ENDO_ID__", "url": "__DRA_ENDO_URL__"}, "image_pos": "right", "image_alt": "Cabezal de cámara de endoscopia que la Dra. utiliza en consultorio"}),

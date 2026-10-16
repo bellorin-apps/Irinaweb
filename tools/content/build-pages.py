@@ -26,7 +26,7 @@ pages["otorrinolaringologia"] = [
         "lead": "Consulta de oído, nariz y garganta para niños, adolescentes, adultos y adultos mayores en Monterrey.",
         # Foto de cabecera como las demás páginas (propietario, 2026-10-16): adjunto hero-orl (Recursos (Irina)/hero-orl.png), tono cálido
         # como Primera consulta y Contacto; sustituido por setup-pages.sh. Sin adjunto, degradado cálido.
-        "variant": "warm", "crumb": "Otorrinolaringología", "image": {"id": "__ORL_HERO_ID__", "url": "__ORL_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "88% 50%"}),
+        "variant": "warm", "crumb": "Otorrinolaringología", "image": {"id": "__ORL_HERO_ID__", "url": "__ORL_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "64% 50%"}),
     container("orl-oido", "di-listado", {"eyebrow": "Oído", "title": "<b>Lo que</b> atiendo <em>del oído</em>", "post_type": "", "anchor": "oido",
         "items": rep([("Otitis", "Infección o inflamación del oído", ""), ("Tapón de cerumen", "Oído tapado por cerilla", ""), ("Hipoacusia", "Pérdida de audición", ""), ("Tinnitus", "Zumbido o pitido en el oído", ""), ("Vértigo", "Mareo o sensación de giro", "")], "label", "sub", "url")}),
     container("orl-nariz", "di-listado", {"eyebrow": "Nariz", "title": "<b>Lo que</b> atiendo <em>de la nariz</em>", "post_type": "", "anchor": "nariz", "tight": "yes",
@@ -47,9 +47,9 @@ pages["sueno"] = [
     container("su-bleed", "di-bleed", {"eyebrow": "Sueño y respiración", "title": "<b>Del ronquido</b><br>al <em>descanso</em>",
         "lead": "Otorrinolaringólogo con subespecialización en desórdenes respiratorios del dormir, ronquido y rinología.",
         # Títulos con la secuencia del sitio (propietario, 2026-10-16): <b> al inicio, base, <em> al final; mismas palabras.
-        # Foto de cabecera como las demás páginas (propietario, 2026-10-16; móvil al 100 % para ver más estrellas): adjunto hero-sueno (Recursos (Irina)/hero-sueno.png), la Dra.
+        # Foto de cabecera como las demás páginas (propietario, 2026-10-16; móvil: la Dra. a la derecha con cielo a la izquierda, como las demás páginas): adjunto hero-sueno (Recursos (Irina)/hero-sueno.png), la Dra.
         # a la derecha bajo un cielo nocturno; sustituido por setup-pages.sh. Sin adjunto, la cabecera usa el degradado nocturno.
-        "variant": "night", "crumb": "Sueño", "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "100% 50%",
+        "variant": "night", "crumb": "Sueño", "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "68% 50%",
         "whatsapp_label": "Agendar valoración de ronquido y apnea"}),
     # D-082: las 5 fichas de sueño enlazan desde aquí; el bloque solo pinta el enlace si la ficha está publicada (irina_url_if_published).
     container("su-cond", "di-listado", {"eyebrow": "Qué atiendo", "title": "<b>Ronquido</b> y <em>apnea</em>", "post_type": "", "anchor": "atiendo",

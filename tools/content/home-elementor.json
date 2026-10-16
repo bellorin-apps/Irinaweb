@@ -30,7 +30,7 @@
         "widgetType": "di-hero",
         "settings": {
           "eyebrow": "Tu otorrino|en Monterrey",
-          "title": "<b>Respirar</b> bien,<br>dormir bien,<br>oír <b><em>bien</em></b>",
+          "title": "<b>Respirar</b> bien,<br>dormir bien,<br>oír <em>bien</em>",
           "lead": "Dra. Irina González Sáez, otorrinolaringólogo certificado con subespecialización en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos, en Cumbres.",
           "lead_mobile": "Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.",
           "trust": "Consejo Mexicano de ORL y CCC\nSubespecialidad en desórdenes respiratorios del sueño\nCAB Medical Headquarters · Cumbres, Monterrey",
@@ -77,7 +77,7 @@
         "widgetType": "di-areas",
         "settings": {
           "eyebrow": "Áreas de atención",
-          "title": "Dos <b>especialidades</b>, una misma <br class=\"di-brd\">forma de <b><em>atender</em></b>",
+          "title": "<b>Dos especialidades</b>, una misma <br class=\"di-brd\">forma de <em>atender</em>",
           "orl_eyebrow": "Otorrinolaringología",
           "orl_title": "Oído, nariz y garganta, desde los 0 meses",
           "orl_items": "Otitis\nHipoacusia\nTinnitus\nVértigo\nRinitis\nSinusitis\nTabique desviado\nAmígdalas\nVoz",
@@ -132,7 +132,7 @@
         "widgetType": "di-motivos",
         "settings": {
           "eyebrow": "¿Qué estás sintiendo?",
-          "title": "<b>Motivos</b> de consulta <b><em>frecuentes</em></b>",
+          "title": "<b>Motivos</b> de consulta <em>frecuentes</em>",
           "note": "Orientación para encontrar la información adecuada. No sustituye una valoración médica.",
           "items": [
             {
@@ -270,7 +270,7 @@
         "widgetType": "di-pasos",
         "settings": {
           "eyebrow": "Cómo trabajamos",
-          "title": "Qué <b>esperar</b> en tu <b><em>consulta</em></b>",
+          "title": "<b>Qué</b> esperar en tu <em>consulta</em>",
           "steps": [
             {
               "_id": "2433ec6",
@@ -333,7 +333,7 @@
         "widgetType": "di-sueno",
         "settings": {
           "eyebrow": "Especialización en sueño",
-          "title": "Del <b>ronquido</b><br>al descanso, en<br>un solo <b><em>lugar</em></b>",
+          "title": "<b>Del ronquido</b><br>al descanso, en<br>un solo <em>lugar</em>",
           "lead": "En Monterrey, el ronquido y la apnea suelen pasar por varios especialistas. La Dra. Irina evalúa la vía aérea, realiza el estudio, interpreta el resultado y ofrece desde el CPAP hasta la cirugía de paladar y nariz.",
           "link": "/sueno/",
           "link_label": "Explorar la ruta de tratamiento",
@@ -424,7 +424,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Agenda",
-          "title": "¿Hablamos de lo que <br class=\"di-brd\">te está quitando <br class=\"di-brd\">el <em>descanso</em>?",
+          "title": "¿<b>Hablamos</b> de lo que <br class=\"di-brd\">te está quitando <br class=\"di-brd\">el <em>descanso</em>?",
           "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.",
           "message": ""
         },

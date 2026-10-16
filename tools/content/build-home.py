@@ -20,7 +20,7 @@ def rep(items, *keys):
 data = [
     container("hero", "di-hero", {
         "eyebrow": "Tu otorrino|en Monterrey",
-        "title": "<b>Respirar</b> bien,<br>dormir bien,<br>oír <b><em>bien</em></b>",
+        "title": "<b>Respirar</b> bien,<br>dormir bien,<br>oír <em>bien</em>",
         "lead": "Dra. Irina González Sáez, otorrinolaringólogo certificado con subespecialización en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos, en Cumbres.",
         "lead_mobile": "Otorrinolaringólogo certificado, subespecialista en ronquido y apnea del sueño. Niños y adultos, en Cumbres.",
         "trust": f"Consejo Mexicano de ORL y CCC\nSubespecialidad en desórdenes respiratorios del sueño\n{CENTRO} · {ZONA}, {CIUDAD}",
@@ -28,7 +28,7 @@ data = [
         "secondary_label": "Conocer a la Dra. Irina", "secondary_url": "/dra-irina-gonzalez-saez/",
         "ticker": "Ronquido y apnea\nNariz tapada\nSinusitis\nOído tapado\nHipoacusia y tinnitus\nVértigo\nAmígdalas y adenoides\nVoz y reflujo"}),
     container("areas", "di-areas", {
-        "eyebrow": "Áreas de atención", "title": "Dos <b>especialidades</b>, una misma <br class=\"di-brd\">forma de <b><em>atender</em></b>",
+        "eyebrow": "Áreas de atención", "title": "<b>Dos especialidades</b>, una misma <br class=\"di-brd\">forma de <em>atender</em>",
         "orl_eyebrow": "Otorrinolaringología", "orl_title": "Oído, nariz y garganta, desde los 0 meses",
         "orl_items": "Otitis\nHipoacusia\nTinnitus\nVértigo\nRinitis\nSinusitis\nTabique desviado\nAmígdalas\nVoz",
         "orl_link": "/otorrinolaringologia/", "orl_link_label": "Ver qué atiendo",
@@ -38,7 +38,7 @@ data = [
         "sleep_link": "/sueno/", "sleep_link_label": "Ver la ruta completa",
         "sleep_image": {"id": "__SUENO_IMG_ID__", "url": "__SUENO_IMG_URL__"}}),
     container("motivos", "di-motivos", {
-        "eyebrow": "¿Qué estás sintiendo?", "title": "<b>Motivos</b> de consulta <b><em>frecuentes</em></b>",
+        "eyebrow": "¿Qué estás sintiendo?", "title": "<b>Motivos</b> de consulta <em>frecuentes</em>",
         "note": "Orientación para encontrar la información adecuada. No sustituye una valoración médica.",
         "items": rep([
             ("Ronco o me dicen que dejo de respirar", "Ronquido, apnea del sueño", "/sueno/#atiendo"),
@@ -58,7 +58,7 @@ data = [
         "image": {"id": "__DRA_IMG_ID__", "url": "__DRA_IMG_URL__"}, "bg": {"id": "__DRA_BG_ID__", "url": "__DRA_BG_URL__"}, "bg_tone": "light"}),
     # Ilustración sobre cada paso, como en Primera consulta (propietario, 2026-10-13): adjuntos paso-*.
     container("pasos", "di-pasos", {
-        "eyebrow": "Cómo trabajamos", "title": "Qué <b>esperar</b> en tu <b><em>consulta</em></b>",
+        "eyebrow": "Cómo trabajamos", "title": "<b>Qué</b> esperar en tu <em>consulta</em>",
         "steps": rep([
             ("Escuchar", "Tus síntomas, desde cuándo y cómo afectan tu día. Trae estudios previos y tu lista de medicamentos.", "paso-escuchar"),
             ("Explorar", "Oído, nariz y garganta; endoscopia nasal o laringoscopia en el consultorio cuando hace falta.", "paso-explorar"),
@@ -66,7 +66,7 @@ data = [
             ("Acompañar", "Un plan claro, con opciones médicas y quirúrgicas explicadas, y seguimiento presencial o en línea.", "paso-acompanar"),
         ], "title", "text", "img")}),
     container("sueno", "di-sueno", {
-        "eyebrow": "Especialización en sueño", "title": "Del <b>ronquido</b><br>al descanso, en<br>un solo <b><em>lugar</em></b>",
+        "eyebrow": "Especialización en sueño", "title": "<b>Del ronquido</b><br>al descanso, en<br>un solo <em>lugar</em>",
         "lead": "En Monterrey, el ronquido y la apnea suelen pasar por varios especialistas. La Dra. Irina evalúa la vía aérea, realiza el estudio, interpreta el resultado y ofrece desde el CPAP hasta la cirugía de paladar y nariz.",
         "link": "/sueno/", "link_label": "Explorar la ruta de tratamiento",
         "steps": "Valoración de la vía aérea y endoscopia de sueño\nPoligrafía respiratoria o estudio en casa, interpretado por la Dra.\nTratamiento: CPAP con seguimiento, terapia posicional, cirugía de paladar o nasal\nControl y ajuste hasta dormir bien"}),
@@ -75,7 +75,7 @@ data = [
         "facts": rep([("Estacionamiento", "Gratuito"), ("Acceso", "Elevador y acceso para silla de ruedas")], "label", "value"),
         "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.777590213581!2d-100.3765032!3d25.7117869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297c19d8eb1cb%3A0x5c3e8ac4d16be247!2sDra%20Irina%20Gonz%C3%A1lez%20S%C3%A1ez!5e0!3m2!1ses!2smx!4v1791433463370!5m2!1ses!2smx"}),
     container("cta", "di-cta", {
-        "eyebrow": "Agenda", "title": "¿Hablamos de lo que <br class=\"di-brd\">te está quitando <br class=\"di-brd\">el <em>descanso</em>?",
+        "eyebrow": "Agenda", "title": "¿<b>Hablamos</b> de lo que <br class=\"di-brd\">te está quitando <br class=\"di-brd\">el <em>descanso</em>?",
         "text": "Escríbenos por WhatsApp y te ayudamos a elegir el tipo de consulta.", "message": ""}),
 ]
 out = pathlib.Path(__file__).with_name("home-elementor.json")
