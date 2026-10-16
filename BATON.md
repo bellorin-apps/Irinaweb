@@ -12,6 +12,8 @@ Pendiente Android real para11.2; fuente únicaNAP Q-042 para5.3; restauración c
 
 ---
 
+> **2026-10-16 14:25 (sesión local): de864bc (D-087/Q-065) desplegado y verificado.** Barra móvil en columna alineada con el ☰ en horizontal y sin cambios en vertical; menú único «Dra. Irina» con 7 submenús para el admin («Estado médico» solo para revisor_medico, por la puerta médica). Aviso: una prueba de WP-CLI con --context=admin envió a José el correo de «problema técnico» de WordPress; el sitio no se afectó. Falta la mirada de José en wp-admin. Detalle en QA.
+
 > **2026-10-16 14:05 (sesión local): 12.1 → REVIEW.** Ensayo de la base en u855694717_drill: importación en 1 s y 30/30 tablas con las mismas filas que producción. deploy-code.sh guarda ahora db.sql.gz privado en cada despliegue. Codex: auditar 12.1 (QA). José borra la base de prueba.
 
 > **2026-10-16 13:45 (sesión local): Q-063/Q-064 (19e4440) desplegados y verificados** (404 con título y noindex de la 404; sin regresiones; con sesión pasan vista previa y filtro de autor por WP-CLI). **12.1: ensayo de restauración de código en carpeta de prueba superado** (idéntico al respaldo, lint, diff = git, producción intacta). Falta cubrir la base de datos: decide José. Detalle en QA.

@@ -479,3 +479,24 @@ Samsung Galaxy S24+, Chrome, con la checklist de 7 puntos (Inicio, menú, WhatsA
 
 - **Q-065 · P3 · FIXED_LOCAL (Claude cloud, 2026-10-16; probado en harness, sin desplegar):** con `max-width: 899px`, `orientation: landscape` y `max-height: 500px` la barra pasa a una columna de 3 botones redondos de 46 px a la derecha, bajo el ☰ (mismo eje y tamaño), sin reservar alto abajo. Propuesta de José. El texto sigue dentro del enlace como nombre accesible. Comprobado con Chromium sobre el HTML público y el CSS local a 832×340 (Inicio, Contacto, Sueño): columna en x=754 alineada con el ☰ (x=754), sin desborde, `padding-bottom` 0; en vertical (384×760) la barra inferior sigue igual. Límite: harness con CSS local, no demuestra el despliegue; falta que José lo vea en su S24+.
 
+
+## Despliegue de D-087 / Q-065, de864bc (sesión local, 2026-10-16 14:25)
+
+Desplegado con deploy-code (respaldo `~/deploy-backups/20261016-142116/`, con db.sql.gz de 412 KB y 30 tablas) y purga de LiteSpeed. Sin setup, regeneraciones ni flush. PHP lint en el servidor de los dos archivos cambiados: sin errores. Portada, Contacto, Sueño y wp-login dan 200.
+
+- **Q-065 · VERIFIED** (Chrome con emulación de Galaxy S24+, Inicio y Contacto):
+  - 832×340 en horizontal: la barra es una columna flex de 3 botones de 46×46 px (WhatsApp, Llamar, Cómo llegar) en top 100 px y right 32 px. Su eje (cx 777) coincide con el del ☰ (cx 777). Sin desborde y con el padding-bottom del body en 0.
+  - 384×760 en vertical: sin cambios; barra inferior en grid de 3 × 124×52 px y padding-bottom de 72 px.
+- **Menú de wp-admin (D-087)**, comprobado con los ganchos `admin_menu` ejecutados como el admin por WP-CLI, sin Elementor:
+  - un solo elemento de primer nivel «Dra. Irina» [dra-irina-practice];
+  - submenús: Consultorio, Padecimientos, Tratamientos, Recursos, Credenciales, Áreas y Zonas;
+  - los 4 tipos de contenido tienen show_in_menu = dra-irina-practice;
+  - el filtro parent_file resalta «Dra. Irina» en taxonomy=area y no cambia category.
+- **«Estado médico» no aparece al admin, y es lo correcto:** su capacidad es `approve_medical_content`, que solo tiene revisor_medico (admin: no). Es la puerta médica, ya era así antes de D-087 y solo la ve quien aprueba.
+- **Incidencia de la prueba (no del sitio):** un primer intento con `wp eval-file --context=admin` cargó Elementor Pro en un contexto de administración de CLI incompleto y dio un error fatal (`editor-one-trait.php:14`, get_modules() sobre null). WordPress registró el modo de recuperación y **envió al correo del administrador el aviso de «problema técnico»** (recovery_mode_email_last_sent a las 14:21). El sitio en vivo no se vio afectado (200 en las URL comprobadas). No usar `--context=admin` con Elementor activo.
+- **Pendiente de José, en wp-admin con su sesión:**
+  - el menú se ve como arriba;
+  - edit.php?post_type=condicion y edit-tags.php?taxonomy=area abren con «Dra. Irina» desplegado;
+  - los ajustes de Consultorio guardan;
+  - la vista previa de un borrador abre.
+- **11.2:** con Q-065 en producción ya se puede cerrar con la prueba en el S24+ de José (QA «Android real»).
