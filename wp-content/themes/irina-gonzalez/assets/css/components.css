@@ -155,10 +155,9 @@ body.menu-open { overflow: hidden; }
 .di-bleed.di-bleed--light .di-btn--ghost { background: rgb(36 31 35 / 0.08); color: var(--color-text); }
 .di-bleed.di-bleed--light .di-btn--ghost:hover { background: rgb(36 31 35 / 0.14); color: var(--color-text); }
 .di-bleed__bg img { width: 100%; height: 100%; object-fit: cover; object-position: var(--bleed-focus, 65% 40%); } /* encuadre por widget (D-055) */
-}
-.di-bleed__bg::after { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: 0.28; mix-blend-mode: overlay; }
-/* Sin grano sobre fotografías: la textura resta nitidez a la foto del hero (propietario, 2026-10-09). */
-.di-bleed__bg:has(img)::after { display: none; }
+/* 5.5 (stylelint, 2026-10-16): aquí había una «}» suelta desde el 10-oct que anulaba la regla siguiente, el grano de .di-bleed__bg::after.
+   Se quitan la llave y esa regla (y su excepción con foto) para que el sitio se vea exactamente como hoy: sin grano en las cabeceras.
+   Sin grano sobre fotografías (propietario, 2026-10-09); en cabeceras sin foto, reactivarlo sería un cambio visual a aprobar. */
 .di-bleed__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.55) 100%); }
 .di-bleed .di-container { padding-block: clamp(6rem, 14vh, 10rem) clamp(3.5rem, 9vh, 7rem); }
 .di-bleed h1 { color: #fff; max-width: none; }

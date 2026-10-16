@@ -64,3 +64,6 @@ docs/audit/2026-10-10/columns-60-40-*.png
 !docs/audit/2026-10-10/columns-60-40-390.png
 !docs/audit/2026-10-10/columns-60-40-430.png
 !docs/audit/2026-10-10/columns-60-40-1440.png
+
+# Caché de Python de los builds (tools/content/practice.py)
+__pycache__/

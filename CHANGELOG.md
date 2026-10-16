@@ -237,3 +237,9 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - wp-admin: un solo menú «Dra. Irina» con Consultorio, los tipos de contenido y sus taxonomías como submenús.
 - Q-065: en teléfono horizontal la barra de acciones pasa a columna de botones redondos bajo el ☰.
 - Q-041 alineado con D-065 (sin Map ID).
+
+## 2026-10-16 · Claude cloud · repaso de la fase 5 (5.1, 5.2, 5.3, 5.5)
+
+- 5.3/Q-042: `tools/content/practice.py` como fuente única de la dirección en los builds; `tools/audit/nap-check.py`. JSON regenerado idéntico.
+- 5.5: `tools/lint` (ESLint y stylelint con versiones fijas). Corregidos una «}» suelta en components.css (sin cambio visual: capturas idénticas) y `items` redeclarado en main.js.
+- 5.1/5.2: evidencia actualizada contra el código; pasan a REVIEW.

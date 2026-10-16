@@ -87,11 +87,11 @@
   // Credenciales de la sección de la Dra.: un ítem a la vez, rotación automática, puntos y anillo, en todos los anchos (propietario, 2026-10-09/10).
   var creds = document.querySelector('.di-section--doctor-bg .di-creds');
   if (creds && creds.children.length > 1) {
-    var items = Array.prototype.slice.call(creds.children);
+    var credItems = Array.prototype.slice.call(creds.children);
     var dots = null, timer = null, idx = 0;
     function show(i, dir) {
-      idx = (i + items.length) % items.length;
-      items.forEach(function (li, k) {
+      idx = (i + credItems.length) % credItems.length;
+      credItems.forEach(function (li, k) {
         var on = k === idx;
         li.classList.remove('is-in', 'is-out-left');
         li.classList.toggle('is-active', on);
@@ -120,14 +120,14 @@
     function setup() {
       if (creds.classList.contains('di-creds--carousel')) { return; }
       // Altura fija = ítem más alto, para que la sección no salte entre ítems.
-      var h = 0; items.forEach(function (li) { h = Math.max(h, li.getBoundingClientRect().height); });
+      var h = 0; credItems.forEach(function (li) { h = Math.max(h, li.getBoundingClientRect().height); });
       creds.classList.add('di-creds--carousel'); creds.style.minHeight = h ? h + 'px' : '';
       // No anunciar cambios automáticos cada cuatro segundos al lector de pantalla.
       creds.setAttribute('aria-live', 'off');
       dots = document.createElement('div'); dots.className = 'di-creds__dots';
-      items.forEach(function (li, k) {
+      credItems.forEach(function (li, k) {
         var b = document.createElement('button'); b.type = 'button';
-        b.setAttribute('aria-label', 'Credencial ' + (k + 1) + ' de ' + items.length);
+        b.setAttribute('aria-label', 'Credencial ' + (k + 1) + ' de ' + credItems.length);
         b.innerHTML = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="di-ring__track" cx="9" cy="9" r="7.5"/><circle class="di-ring__bar" cx="9" cy="9" r="7.5"/></svg>';
         b.addEventListener('click', function () { show(k, k > idx ? 1 : -1); pauseThenResume(); });
         dots.appendChild(b);
@@ -138,7 +138,7 @@
     setup();
     function measureCards() {
       var h = 0;
-      items.forEach(function (li) {
+      credItems.forEach(function (li) {
         var old = li.getAttribute('style');
         li.style.display = 'flex'; li.style.position = 'absolute'; li.style.visibility = 'hidden';
         h = Math.max(h, li.getBoundingClientRect().height);
@@ -250,11 +250,11 @@
           }
           showError((res.j && res.j.message) || 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', res.j && res.j.error);
           // Captcha Turnstile: cada token sirve una vez; tras un error se pide uno nuevo.
-          if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch (err) { /* sin captcha */ } }
+          if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch { /* sin captcha */ } }
         })
         .catch(function () {
           showError('No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', null);
-          if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch (err) { /* sin captcha */ } }
+          if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch { /* sin captcha */ } }
         })
         .finally(function () { form.classList.remove('is-sending'); form.querySelector('.di-form__label').hidden = false; form.querySelector('.di-form__sending').hidden = true; });
     });
@@ -367,7 +367,7 @@
           var ax = Math.abs(e.clientX - startX), ay = Math.abs(e.clientY - startY);
           if (ax < 6 || ax < ay) { return; } // umbral: un toque, un clic o un gesto vertical no arrastran.
           moved = true; freeze(); rail.classList.add('is-dragging'); dx = e.clientX - lastX;
-          try { rail.setPointerCapture(pid); } catch (err) { /* sin captura */ }
+          try { rail.setPointerCapture(pid); } catch { /* sin captura */ }
         }
         samples.push({ t: e.timeStamp, x: e.clientX });
         while (samples.length > 2 && e.timeStamp - samples[0].t > 70) { samples.shift(); } // ventana de los últimos 70 ms
