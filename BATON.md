@@ -8,7 +8,7 @@ La auditoría16b ya estaba comprometida/subida en dc1c104, c26434c y31eff2b. Pul
 
 ---
 
-> **2026-10-16 14:50 (sesión local): D-089, 1.1 DESCOPED por decisión de José** («Ciérrala como fuera de alcance»): canal REST con app password revocado; operación por SSH/WP-CLI y Git. La nube numera sus decisiones desde D-090.
+> **2026-10-16 14:50 (sesión local): D-094, 1.1 DESCOPED por decisión de José** («Ciérrala como fuera de alcance»): canal REST con app password revocado; operación por SSH/WP-CLI y Git. (D-089…D-093 son de la nube.)
 
 > **2026-10-16 14:40 (sesión local): 91c1b09 (fase 5) y 5612f0c (A1) desplegados y verificados.** Las 5 fichas muestran «Revisado médicamente por · Última revisión» con la fecha de aprobación de la Dra., y lastReviewed coincide. Sin regresiones (carrusel, grano, barra horizontal, consola); nap-check en verde. B1 (errata) NO aplicada en producción: requiere re-aprobación. Lint npm no ejecutado localmente. Detalle en QA.
 

@@ -416,4 +416,21 @@
 
   // Barra móvil: reserva espacio inferior.
   if (document.querySelector('.di-mobile-bar')) { document.body.classList.add('has-mobile-bar'); }
+
+  // Opiniones de Doctoralia (D-012, D-091): el script oficial se carga solo cuando la sección se acerca a la pantalla.
+  var doctoralia = document.querySelector('[data-di-doctoralia]');
+  if (doctoralia) {
+    var loadDoctoralia = function () {
+      if (document.getElementById('zl-widget-s')) { return; }
+      var s = document.createElement('script');
+      s.id = 'zl-widget-s'; s.async = true; s.src = 'https://platform.docplanner.com/js/widget.js';
+      document.body.appendChild(s);
+    };
+    if ('IntersectionObserver' in window) {
+      var dio = new IntersectionObserver(function (entries) {
+        if (entries.some(function (e) { return e.isIntersecting; })) { dio.disconnect(); loadDoctoralia(); }
+      }, { rootMargin: '400px 0px' });
+      dio.observe(doctoralia);
+    } else { loadDoctoralia(); }
+  }
 })();
