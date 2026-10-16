@@ -1,0 +1,266 @@
+{
+  "before": [
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/colegio-orl-nl.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/colegio-orl-nl.svg",
+      "loading": "lazy",
+      "complete": false,
+      "width": 0,
+      "visible": true
+    }
+  ],
+  "after": [
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 256,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 237,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 250,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/colegio-orl-nl.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 152,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 256,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 237,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 250,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 300,
+      "visible": true
+    },
+    {
+      "path": "/wp-content/themes/irina-gonzalez/assets/brand/logos/colegio-orl-nl.svg",
+      "loading": "eager",
+      "complete": true,
+      "width": 152,
+      "visible": true
+    }
+  ],
+  "errors": [],
+  "contact": {
+    "widget": true,
+    "forms": 1,
+    "maps": 3,
+    "faqCopy": true
+  },
+  "limits": "Browser DOM loading=eager diagnostic only; source and server unchanged. Cloudflare provider network allowed, own POST blocked. No form submitted."
+}

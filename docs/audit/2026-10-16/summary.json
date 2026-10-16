@@ -1,0 +1,13 @@
+{
+  "public200": 15,
+  "canonicalSelf": 15,
+  "views": 80,
+  "overflowViews": 0,
+  "internalTargets": 15,
+  "non200InternalTargets": 0,
+  "professionalNodes": 10,
+  "uniqueProfessionalNAP": 1,
+  "exclusionsNoindex": 6,
+  "oldFaqCopy": 0,
+  "limitations": "See public.json/followup.json: unloaded logos resolved; provider blocked request produced initial error; no SMTP/cookies GA verification in this run."
+}

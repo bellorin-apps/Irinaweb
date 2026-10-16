@@ -1,0 +1,2210 @@
+{
+  "rows": [
+    {
+      "route": "/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/dra-irina-gonzalez-saez/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "Dos especialidades, una misma forma de atender",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Motivos de consulta frecuentes",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Qué esperar en tu consulta",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Del ronquidoal descanso, enun solo lugar",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "CAB Medical,Headquarters",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "¿Hablamos de lo que te está quitando el descanso?",
+          "bold": false,
+          "em": true
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Dra. Irina González Sáez | Otorrino especialista en sueño",
+      "canonical": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "«Escucharte también es parte del tratamiento»",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Credenciales verificables",
+          "bold": false,
+          "em": true
+        },
+        {
+          "text": "Membresías y hospitales",
+          "bold": false,
+          "em": true
+        },
+        {
+          "text": "Formación continua en cirugía de sueño",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Agenda tuprimera consulta",
+          "bold": false,
+          "em": true
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": [
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg"
+          ]
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": [
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg"
+          ]
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": [
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg"
+          ]
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": [
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg"
+          ]
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": [
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/christus-muguerza.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/zambrano-hellion.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/angeles-valle-oriente.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospital-universitario.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/hospitaria.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/consejo-orl.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/fesormex.svg",
+            "/wp-content/themes/irina-gonzalez/assets/brand/logos/sociedad-iberoamericana-sueno.svg"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/otorrinolaringologia/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "miss"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Otorrinolaringología en Monterrey: oído, nariz y garganta",
+      "canonical": "https://drairinagonzalez.com/otorrinolaringologia/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "Lo que atiendo del oído",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Lo que atiendo de la nariz",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Lo que atiendo de la garganta",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Consultorio y cirugía",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Primero escucharte, luego explorar",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "¿Un síntoma que no se va?",
+          "bold": true,
+          "em": true
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Especialista en ronquido y apnea del sueño en Monterrey",
+      "canonical": "https://drairinagonzalez.com/sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/sueno/ronquido/",
+        "/sueno/apnea-obstructiva-del-sueno/",
+        "/sueno/estudio-del-sueno/",
+        "/sueno/cpap/",
+        "/sueno/cirugia-de-ronquido-y-apnea/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "Ronquido y apnea",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "La ruta completa",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Un otorrino para la vía aérea",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "¿Hablamos de lo que te quita el descanso?",
+          "bold": true,
+          "em": true
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/primera-consulta/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Primera consulta con la Dra. Irina González Sáez | Qué esperar",
+      "canonical": "https://drairinagonzalez.com/primera-consulta/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "Así es la consulta",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Llega con lo que ya tienes",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Costo, pagos y seguros",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Agenda tuprimera consulta",
+          "bold": false,
+          "em": true
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "miss"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Contacto y ubicación | Dra. Irina González Sáez, Cumbres",
+      "canonical": "https://drairinagonzalez.com/contacto/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/aviso-de-privacidad/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": true,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "CAB Medical,Headquarters",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "¿Prefieres quete llamemos?",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "Este sitio no es uncanal de urgencias",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "¿Agendamos?",
+          "bold": false,
+          "em": true
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Preguntas frecuentes | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/preguntas-frecuentes/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "Consulta y agenda",
+          "bold": true,
+          "em": true
+        },
+        {
+          "text": "¿Otra duda?",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/aviso-de-privacidad/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Aviso de privacidad | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/aviso-de-privacidad/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "1. Responsable del tratamiento",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "2. Datos personales que recabamos",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "3. Finalidades del tratamiento",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "4. Datos sensibles y consentimiento",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "5. Transferencias de datos",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "6. Conservación de los datos",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "7. Derechos ARCO, revocación y limitación de uso",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "8. Medidas de seguridad",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "9. Cookies y tecnologías similares",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "10. Menores de edad",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "11. Cambios a este aviso",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "12. Aviso de privacidad simplificado",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/aviso-medico/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Aviso médico | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/aviso-medico/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "La información no es una consulta",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "No es un canal de urgencias",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Contenido revisado",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Resultados y expectativas",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Publicidad y datos regulatorios",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Enlaces y contenidos de terceros",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/terminos-de-uso/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Términos de uso | Dra. Irina González Sáez",
+      "canonical": "https://drairinagonzalez.com/terminos-de-uso/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/aviso-medico/",
+        "/aviso-de-privacidad/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "1. Objeto del sitio",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "2. Citas y comunicaciones",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "3. Uso permitido",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "4. Propiedad intelectual",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "5. Contenido de terceros y enlaces",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "6. Exclusión de garantías y limitación de responsabilidad",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "7. Privacidad",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "8. Menores de edad",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "9. Modificaciones",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "10. Legislación aplicable y jurisdicción",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "11. Contacto",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/ronquido/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Tratamiento del ronquido en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/ronquido/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/sueno/",
+        "/sueno/estudio-del-sueno/",
+        "/sueno/cirugia-de-ronquido-y-apnea/",
+        "/sueno/ronquido/",
+        "/sueno/apnea-obstructiva-del-sueno/",
+        "/otorrinolaringologia/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "Qué es",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Síntomas frecuentes",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Causas",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se diagnostica",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Tratamientos",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "¿Hablamos de lo que te está quitando el descanso?",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/apnea-obstructiva-del-sueno/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Apnea obstructiva del sueño en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/sueno/",
+        "/sueno/estudio-del-sueno/",
+        "/sueno/cpap/",
+        "/sueno/cirugia-de-ronquido-y-apnea/",
+        "/sueno/apnea-obstructiva-del-sueno/",
+        "/sueno/ronquido/",
+        "/otorrinolaringologia/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "Qué es",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Síntomas frecuentes",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Causas",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se diagnostica",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Tratamientos",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "¿Hablamos de lo que te está quitando el descanso?",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/estudio-del-sueno/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Estudio del sueño en casa en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/sueno/",
+        "/sueno/ronquido/",
+        "/sueno/apnea-obstructiva-del-sueno/",
+        "/sueno/estudio-del-sueno/",
+        "/sueno/cpap/",
+        "/sueno/cirugia-de-ronquido-y-apnea/",
+        "/otorrinolaringologia/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "En qué consiste",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Para quién está indicado",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Estudio previo",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se realiza",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Recuperación",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Riesgos y alternativas",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Qué resuelve",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "¿Hablamos de lo que te está quitando el descanso?",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/cpap/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "hit"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "CPAP para apnea del sueño en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/cpap/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/sueno/",
+        "/sueno/apnea-obstructiva-del-sueno/",
+        "/sueno/cpap/",
+        "/sueno/estudio-del-sueno/",
+        "/sueno/cirugia-de-ronquido-y-apnea/",
+        "/otorrinolaringologia/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "En qué consiste",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Para quién está indicado",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Estudio previo",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se realiza",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Recuperación",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Riesgos y alternativas",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Qué resuelve",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "¿Hablamos de lo que te está quitando el descanso?",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/sueno/cirugia-de-ronquido-y-apnea/",
+      "status": 200,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "miss"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Cirugía de ronquido y apnea en Monterrey | Dra. Irina González",
+      "canonical": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "internal": [
+        "/",
+        "/sueno/",
+        "/sueno/ronquido/",
+        "/sueno/apnea-obstructiva-del-sueno/",
+        "/sueno/cirugia-de-ronquido-y-apnea/",
+        "/sueno/cpap/",
+        "/otorrinolaringologia/",
+        "/primera-consulta/",
+        "/preguntas-frecuentes/",
+        "/contacto/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [
+        {
+          "name": "Dra. Irina González Sáez",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paseo de los Leones 2341, Consultorio 6, Piso 2, Cumbres 2.º Sector",
+            "postalCode": "64610",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528115695744",
+          "url": "https://drairinagonzalez.com/",
+          "types": [
+            "Physician",
+            "Person"
+          ],
+          "openingHours": false
+        }
+      ],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "En qué consiste",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Para quién está indicado",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Estudio previo",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Cómo se realiza",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Recuperación",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Riesgos y alternativas",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Qué resuelve",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "El enfoque de la Dra.",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "Preguntas frecuentes",
+          "bold": false,
+          "em": false
+        },
+        {
+          "text": "¿Hablamos de lo que te está quitando el descanso?",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    },
+    {
+      "route": "/no-existe-audit16/",
+      "status": 404,
+      "headers": {
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-litespeed-cache": "miss"
+      },
+      "h1": 1,
+      "main": 1,
+      "title": "Página no encontrada | Dra. Irina González Sáez",
+      "robots": "follow, noindex",
+      "internal": [
+        "/",
+        "/otorrinolaringologia/",
+        "/sueno/",
+        "/dra-irina-gonzalez-saez/",
+        "/primera-consulta/",
+        "/contacto/",
+        "/preguntas-frecuentes/",
+        "/aviso-de-privacidad/",
+        "/aviso-medico/",
+        "/terminos-de-uso/"
+      ],
+      "whatsapp": [
+        "/528123685381"
+      ],
+      "phone": [
+        "tel:+528115695744"
+      ],
+      "maps": [
+        "https://maps.app.goo.gl/yT1H6zgSCcnZDP9d8"
+      ],
+      "professional": [],
+      "faqOldCopy": false,
+      "draft": false,
+      "form": false,
+      "appointmentOnly": true,
+      "addressVisible": true,
+      "hourPattern": false,
+      "h2": [
+        {
+          "text": "¿Hablamos de lo que te está quitando el descanso?",
+          "bold": false,
+          "em": false
+        }
+      ],
+      "views": [
+        {
+          "width": 360,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "imageCandidates": []
+        },
+        {
+          "width": 1440,
+          "overflow": 0,
+          "imageCandidates": []
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "route": "/dra-irina-gonzalez-saez/",
+      "status": 200
+    },
+    {
+      "route": "/otorrinolaringologia/",
+      "status": 200
+    },
+    {
+      "route": "/sueno/",
+      "status": 200
+    },
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/primera-consulta/",
+      "status": 200
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200
+    },
+    {
+      "route": "/contacto/",
+      "status": 200
+    },
+    {
+      "route": "/aviso-de-privacidad/",
+      "status": 200
+    },
+    {
+      "route": "/aviso-medico/",
+      "status": 200
+    },
+    {
+      "route": "/terminos-de-uso/",
+      "status": 200
+    },
+    {
+      "route": "/sueno/ronquido/",
+      "status": 200
+    },
+    {
+      "route": "/sueno/apnea-obstructiva-del-sueno/",
+      "status": 200
+    },
+    {
+      "route": "/sueno/estudio-del-sueno/",
+      "status": 200
+    },
+    {
+      "route": "/sueno/cpap/",
+      "status": 200
+    },
+    {
+      "route": "/sueno/cirugia-de-ronquido-y-apnea/",
+      "status": 200
+    }
+  ],
+  "exclusions": [
+    {
+      "route": "/links/",
+      "status": 200,
+      "metaRobots": "nofollow, noindex"
+    },
+    {
+      "route": "/gracias/",
+      "status": 200,
+      "metaRobots": "nofollow, noindex"
+    },
+    {
+      "route": "/preview/",
+      "status": 200,
+      "headerRobots": "noindex, nofollow",
+      "metaRobots": "noindex, nofollow"
+    },
+    {
+      "route": "/briefing/",
+      "status": 200,
+      "headerRobots": "noindex, nofollow",
+      "metaRobots": "noindex, nofollow"
+    },
+    {
+      "route": "/briefing/guia/",
+      "status": 200,
+      "headerRobots": "noindex, nofollow",
+      "metaRobots": "noindex, nofollow"
+    },
+    {
+      "route": "/briefing/revision/",
+      "status": 200,
+      "headerRobots": "noindex, nofollow",
+      "metaRobots": "noindex, nofollow"
+    }
+  ],
+  "motion": [
+    {
+      "pref": "no-preference",
+      "route": "/",
+      "hero": [
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "di-hero-photo"
+        },
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "di-hero-rise"
+        },
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "di-hero-rise"
+        },
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "di-hero-rise"
+        }
+      ],
+      "transition": "di-page-in",
+      "headerName": "di-header"
+    },
+    {
+      "pref": "no-preference",
+      "route": "/sueno/",
+      "hero": [
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "di-hero-rise"
+        },
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "di-hero-rise"
+        }
+      ],
+      "transition": "di-page-in",
+      "headerName": "di-header"
+    },
+    {
+      "pref": "reduce",
+      "route": "/",
+      "hero": [
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "none"
+        },
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "none"
+        },
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "none"
+        },
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "none"
+        }
+      ],
+      "transition": "none",
+      "headerName": "none"
+    },
+    {
+      "pref": "reduce",
+      "route": "/sueno/",
+      "hero": [
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "none"
+        },
+        {
+          "opacity": "1",
+          "transform": "none",
+          "name": "none"
+        }
+      ],
+      "transition": "none",
+      "headerName": "none"
+    }
+  ],
+  "robots": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://drairinagonzalez.com/sitemap_index.xml\n",
+  "sitemaps": [
+    {
+      "path": "/page-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/",
+        "https://drairinagonzalez.com/terminos-de-uso/",
+        "https://drairinagonzalez.com/aviso-medico/",
+        "https://drairinagonzalez.com/aviso-de-privacidad/",
+        "https://drairinagonzalez.com/otorrinolaringologia/",
+        "https://drairinagonzalez.com/sueno/",
+        "https://drairinagonzalez.com/preguntas-frecuentes/",
+        "https://drairinagonzalez.com/contacto/",
+        "https://drairinagonzalez.com/primera-consulta/",
+        "https://drairinagonzalez.com/dra-irina-gonzalez-saez/"
+      ]
+    },
+    {
+      "path": "/condicion-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+        "https://drairinagonzalez.com/sueno/ronquido/"
+      ]
+    },
+    {
+      "path": "/tratamiento-sitemap.xml",
+      "status": 200,
+      "locations": [
+        "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+        "https://drairinagonzalez.com/sueno/cpap/",
+        "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/"
+      ]
+    }
+  ],
+  "utm": {
+    "status": 200,
+    "canonical": "https://drairinagonzalez.com/"
+  },
+  "errors": [
+    {
+      "route": "/contacto/",
+      "type": "Uncaught TurnstileError"
+    }
+  ],
+  "resources": [],
+  "limits": "Chrome Windows emulation; GA/Doctoralia and all non-GET requests blocked. No live form/Google Business/Doctoralia navigation. Contact sheets use top/middle/bottom resized samples, not legibility certification. imageCandidates means incomplete OR zero naturalWidth, not confirmed broken; see followup.json (all logos load). Initial Turnstile error occurred while provider POST was blocked; follow-up permits provider and has no pageerror."
+}
