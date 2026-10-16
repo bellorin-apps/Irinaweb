@@ -1,13 +1,13 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado: 2026-10-16 · Codex · auditoría de cierre sobre3d47aa9.
+Actualizado:2026-10-16 · Codex · auditoría16b, base de864bc (incluye e58c91c).
 
-**83,12% español:197/237 pesos,76/90DONE.** Solo DONE suma; cincoDESCOPED/16pesos e inglés aparte se conservan. PLAN→PROGRESS.
+**88,70% español:204/230pesos,78/87DONE.** OchoDESCOPED/23pesos por D-088 e inglés aparte; soloDONEsuma. PLAN→PROGRESS.
 
-Siete de ocho REVIEW cerradas:1.3/6.7/6.8/11.1/11.3/11.5/12.4. 11.2REVIEW por Android real sin pasada explícita actual; Edge/Firefox locales y SafariiPhone por atestación identificados. 5.4DONE;5.3/12.1DOING por Q-042 y rollback real sin ensayar. 9.5OWNER: URLUTM y contacto coherentes, falta literal de descripción nueva Q-062, horario real y Doctoralia.
+12.1FIX→DONE en alcance de copia aparte decidido por José: ensayo código idéntico/lint y DB30tablas con mismas filas por atestación local. Restauración del servicio en vivo no ensayada, sin reabrir ese límite. Q-066/067 herramientas corregidas localmente: señalización de fallos y limpieza de credenciales;19casos con stubs y dos regresiones antiguas reproducidas. No SQL/SSH real ni lectura de volcados por Codex.
 
-Producción declarada d7e14ac, Q-060/061 y FAQ ya desplegados según BATON. Nueva prueba80vistas sin overflow,15internos200 y15canónicas, noindex6auxiliares, sitemap10/2/3. Diez nodosNAP idénticos y horario oculto; FAQ vieja ausente. Logos pendientes lazy y error de captcha provocado por bloqueo del harness aclarados en followup; sin fallo confirmado del sitio. Capturas nuevas versionadas y revisadas.
+12.2DONE:15públicas200/index/canónicas,30vistas sin desborde/pageerror/imágenes fallidas;404español/noindex,301,403seguridad, cabeceras/SSL. Servidor por atestación; sin registros de visitas de hPanel, no garantía de tráfico sin errores.12.3seguimiento pendiente.
 
-FIX solo documentales: checklist trazada y limitada, mantenimiento coherente con sitio corto, runbook rollback separado de contenido/DB y explícitamente no probado. No hay cambios web/builds ni despliegue que realizar por este lote. PHP79/PHPCS/JS/bash pasan. No se probaron formulario/SMTP ni cuentas; prueba humanaJosé15/10 aceptada sin repetir. Cookies y revisiones médicas respaldadas por evidencia escrita, no recertificadas. Cuatro HTML locales preservados.
+Producción inicial declarada19e4440; atestaciones concurrentes D-087/Q-065 desplegados/confirmados preservadas, sin recertificarlas aquí. Q-063/064VERIFIED; Q-062VERIFIED por literal383/sitio,9.5OWNER por horario/Doctoralia (mejora continua D-086). Q-041WONTFIXD-065, mapas clásicos funcionan sin MapID.11.2REVIEW y Q-065/D-087 conservan el estado de la sesión local; no se auditan/despliegan en este lote.
 
-No stagingD-080. Pendientes en NEXT:Android, rollback, Q-040/Q-042, literalGBP/horario/Doctoralia, legal8.6 como mejora continua;11.6DONE por D-086 recibido durante esta auditoría; seguimiento7/30 con evidencia futura. El cierre del lanzamiento procede de la aprobación expresa de José D-086, no del cálculo de tareas.
+No assets web/builds nuevos. Herramientas locales actualizadas para próxima operación autorizada, sin ordenar deploy/ensayo ahora. PHP79/PHPCS/JS/bash19 pasan. CuatroHTML y h.txt de usuario preservados; sin cuentas, claves, formulario, publicación ni aplicación privada. CHECKPOINT5D-086 intacto. Informe docs/REVISION_2026-10-16b.md y relevo BATON/NEXT.

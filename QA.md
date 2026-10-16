@@ -399,7 +399,7 @@ Base3d47aa9, producción declarada d7e14ac. Informe docs/REVISION_2026-10-16.md.
 
 FIX documentales completados: checklist con fuentes y pendientes; mantenimiento sin publicación mensual automática y con objetivos/eventos correctamente definidos; runbook de rollback con alcances separados y sin falsa prueba de restauración. Sin cambios PHP/JS/CSS ni builds de producción.
 
-**Q-062 · P2 · FIXED por Claude cloud 2026-10-16, pendiente de verificación (evidencia9.5):** literal añadido en «Perfil de Negocio de Google». Original: QA de Google solo conserva «texto del encargo (383 caracteres)» para la nueva descripción. Falta transcripción literal para compararla con el sitio. Claude debe añadirla desde su registro existente, sin secretos; Codex no entra al Perfil ni a Doctoralia. URLUTM200/canónica portada, reservaWhatsApp coherente; no se certifica el perfil actual ni la publicación de servicios en revisión. 9.5OWNER permanece.
+**Q-062 · P2 · VERIFIED por Codex16b (literal383 y sitio cotejados; no lectura nueva del perfil):** literal añadido en «Perfil de Negocio de Google». Original: QA de Google solo conserva «texto del encargo (383 caracteres)» para la nueva descripción. Falta transcripción literal para compararla con el sitio. Claude debe añadirla desde su registro existente, sin secretos; Codex no entra al Perfil ni a Doctoralia. URLUTM200/canónica portada, reservaWhatsApp coherente; no se certifica el perfil actual ni la publicación de servicios en revisión. 9.5OWNER permanece.
 
 11.2REVIEW hasta pasada explícita de Android real. Chromium Windows con cinco anchos no se renombra Chrome Android. SafariiPhone y prueba humana del formulario15/10 aceptados como atestaciones del encargo/PLAN/checklist; no nuevos ensayos de Codex. 11.5DONE acredita documento revisado;11.6DONE se incorpora de D-086, aprobación expresa concurrente de José. 12.1DOING: no ejecutar rollback/despliegue por esta auditoría.
 
@@ -419,7 +419,7 @@ Todo en solo lectura: sin formularios, SMTP, despliegues ni cambios de ajustes.
 - /links/ y /gracias/ dan 200 con noindex. La 404 real tiene título en español. /readme.html y /xmlrpc.php dan 403; /wp-json/wp/v2/users da 404.
 - robots.txt y sitemap_index son correctos.
 - Cabeceras: HSTS, nosniff, SAMEORIGIN, Referrer-Policy y Permissions-Policy, sin X-Powered-By. SSL de Let's Encrypt válido hasta el 07-ene-2027.
-- Chrome headless a 390 px (UA Android) y 1440 px, 30 vistas: un h1 por página, sin desborde horizontal ni imágenes rotas. En consola solo aparece, en Inicio y Contacto, el aviso de `google.maps.Marker` obsoleto (Q-041, OWNER: falta el Map ID).
+- Chrome headless a 390 px (UA Android) y 1440 px, 30 vistas: un h1 por página, sin desborde horizontal ni imágenes rotas. En consola solo aparece, en Inicio y Contacto, el aviso de `google.maps.Marker` obsoleto (Q-041 WONTFIX según D-065: estilo JSON y marcador clásico; no se pide Map ID).
 
 **Servidor**
 - WordPress 7.1.3 con checksums correctos; PHP 8.4.26; tema irina-gonzalez 0.1.0 sobre Hello 3.5.1.
@@ -501,3 +501,29 @@ Desplegado con deploy-code (respaldo `~/deploy-backups/20261016-142116/`, con db
   - la vista previa de un borrador abre.
 - **11.2:** con Q-065 en producción ya se puede cerrar con la prueba en el S24+ de José (QA «Android real»).
 - **José en producción (2026-10-16, tras fd2479d):** «todo bien». En el Galaxy S24+ en horizontal, la columna de 3 botones bajo el ☰. En wp-admin: el menú único «Dra. Irina» con 7 submenús, fichas y Áreas con el menú desplegado, Consultorio guarda y la vista previa de un borrador abre. «Estado médico» no se muestra al admin porque su capacidad es approve_medical_content (puerta médica, sin cambios). Con esto, la evidencia de 11.2 (Android real) queda completa para que Codex la cierre.
+
+## Auditoría16b · operación y copia de restauración (Codex,2026-10-16)
+
+Base de864bc contiene e58c91c; producción declarada19e4440. Informe docs/REVISION_2026-10-16b.md. Instrucción reciente de José prevalece sobre el encargo16b histórico que aún pedía proponer Q-063/064 y MapID.
+
+| Tarea | Veredicto | Evidencia / límites |
+|---|---|---|
+| 12.1 | DONE | FIX→DONE: ensayos aportados en copia aparte (código idéntico/lint79; DB30tablas/mismasfilas), alcance decidido por José. Guardas Q-066/067 corregidas localmente y19casos de stubs pasan; no SQL/SSH real por Codex. Restauración en vivo no ensayada, límite aceptado, no exigirla. |
+| 12.2 | DONE | Quince200/index/follow/canónica propia,30vistas390/1440 sin overflow/pageerror/imágenes fallidas;404español/noindex, auxiliaresnoindex,403readme/xmlrpc,301/cabeceras/SSL. Servidor por atestación local. Sin logs de visitas de hPanel: snapshot operativo, no certificado de tráfico real; seguimiento12.3. |
+| 9.5 | OWNER | Q-062VERIFIED: literal383caracteres cotejado con sitio, siete servicios en ORL/Sueño, URLUTM200/canónica limpia y reservaWhatsApp coincidente. Fuente es QA local, no lectura nueva del perfil. Horario real y Doctoralia siguen mejora continua D-086. |
+
+- Q-063/Q-064 VERIFIED por HTTP nuevo: autor, archivos y querycondicion404 con «Página no encontrada»/follow,noindex;15páginas200 y cinco301sin regresión.14fixtures request preservan admin/sesión/single/preview/Sueño, sin nueva sesiónWP.
+- Q-062 VERIFIED: transcripción383caracteres y siete servicios coherentes con el sitio. No se confirma perfil público/servicios en revisión ni se entra a Google/Doctoralia.9.5OWNER intacto.
+- Q-041 WONTFIX D-065: dos avisosMarker, mapas Home/Contacto renderizados/visibles, JSON+marcadorclásico. La referencia de Día0 a OWNER/MapID se corrige; no pedir MapID por D-059 histórico.
+- Q-066 P2 FIXED_LOCAL: drill podía retornar éxito si fallaba lista/conteo o había diferencias. set-euo/pipefail y validación de lista/resultado dan error; pipelines fallidos no quedan ocultos.
+- Q-067 P2 FIXED_LOCAL: credenciales se creaban antes del trap en una conexión distinta. Ahora una conexión con mktemp/chmod600/trap antes de stdin, timestamp validado y guardas adicionales. Nada de secreto en argv.
+
+19casos actuales con stubs pasan; dos regresiones del código e58c91c reproducidas (éxito falso y temporal residual por fallo de transporte), con datos sintéticos y limpieza de ficheros propios. lib/env excluidos; no se usan claves/SSH/MySQL real ni se lee dump. Windows verifica llamada chmod600, no permisosLinux remotos. Los ensayos reales30/30en copia y diff/lintcódigo son atestación local aportada, no un mock presentado como ejecución real.
+
+12.1DONE corresponde a copia aparte acordada por José; no se certifica restauración viva ni igualdad de contenido SQL por checksum. Guardas nuevas probadas localmente, no repetidas con base real.12.2DONE acepta snapshot operativo15/16oct y servidor atestado; no afirma cero404/5xx de visitantes sin hPanel. Monitor404 no se activa; seguimiento12.3.
+
+PHP79/PHPCS/JS y bash19 pasan. No deploy, formularios/SMTP, cuentas, secretos, contenido ni archivos privados. Se conservan cuatroHTML y h.txt preexistentes, sin leer h.txt. 11.2REVIEW/Q-065 y D-087 preexistentes no se alteran; fuente de producción y código local no se confunden.
+
+Durante el trabajo llegaron fd2479d/94a2479/4fa21ca: se preservan atestaciones D-087/Q-065 y decisión D-088 de retirar6.6/7.4/7.5(7pesos,3tareas). No se cambia11.2REVIEW. Denominador230pesos/87tareas,8DESCOPED/23pesos; con12.1/12.2DONE,204/230=88,70%,78/87DONE. No se cuenta scope retirado como trabajo terminado.
+
+Consola16b: se conservan consoleErrors en public.json. FollowupHome/Contacto identifica bloqueos deliberados GA/telemetríaMaps y diagnósticos Cloudflare en automatización, sin origen propio ni pageerror; no se afirma consola vacía. Solo host/flags, sin claves/URLcompleta. HTTPSwwwCPAP→apex301 confirmado como segundo salto de HTTPwww.

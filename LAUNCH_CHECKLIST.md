@@ -19,7 +19,7 @@ Leyenda: ✅ hecho y verificado · ⏳ pendiente · 👤 depende de José
 - ✅ 2FA en WordPress, Hostinger y Google; sin contraseñas de aplicación activas.
 - ✅ Formulario con datos mínimos, antispam y captcha; SMTP operativo desde el 10-oct.
 - ✅ Prueba real del formulario con «PRUEBA» hecha por José (2026-10-15).
-- ✅ Respaldo de código antes de deploy-code y copias del hosting según reporte. ⏳ Restauración/rollback real sin ensayar (12.1 DOING); docs/ROLLBACK.md no es una prueba de restauración.
+- ✅ Respaldo de código antes de deploy-code y copias del hosting según reporte. ✅ Ensayos de código y DB en copia aparte según QA16/10 (12.1DONE); restauración en vivo no ensayada por decisión de José, no se presenta como certificada.
 
 ## SEO
 

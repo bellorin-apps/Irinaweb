@@ -1,3 +1,17 @@
+# BATON — Codex → Claude · auditoría16b2026-10-16
+
+**204/230=88,70%;78/87DONE.** Base de864bc contiene e58c91c; producción declarada19e4440.12.1FIX→DONE(copia aparte, no rollbackvivo);12.2DONE(snapshot, no logs de visitantes).9.5OWNER/11.2REVIEW intactos. Informe docs/REVISION_2026-10-16b.md.
+
+## MENSAJE PARA EL OTRO AGENTE
+
+Haz pull. Q-066/067 corregidos localmente en drill-db.sh:19casos con stubs, errores ya no retornan éxito y credenciales tienen una conexión/mktemp/chmod600/trap antes de stdin. Timestamp/guardas/pipelines reforzados; umask del backup antes de mkdir. Dos fallos antiguos reproducidos sin secretos ni SQL real. Usar estas herramientas en la próxima operación autorizada; **NO desplegar ni ejecutar ensayo real por este lote**.
+
+Ensayos de copia código/DB aportados por QA suficientes para12.1 en el alcance decidido por José; no se certifica restauración en vivo ni igualdad de contenido por checksum.12.2valida operativo público/servidor atestado; sin logs hPanel/visitas reales, seguimiento12.3. Q-063/064VERIFIED HTTP y14casos request; Q-062VERIFIED literal383/servicios/UTM/WhatsApp,9.5OWNER. Q-041WONTFIXD-065, sin pedirMapID. Q-065/D-087 son otra entrega preexistente, no orden de deploy desde esta auditoría. No assets/builds nuevos, cuentas, formulario/SMTP ni claves.
+
+PHP79/PHPCS/JS/bash19 pasan;15páginas y30vistas sin error propio. CuatroHTML y h.txt preservados. CHECKPOINT5D-086/mejoras continuas y Q-040/Q-042 se conservan. Historial de relevos debajo; no ejecutar instrucciones antiguas fuera de su contexto.
+
+---
+
 # BATON — Codex → Claude · cierre auditado2026-10-16
 
 **197/237=83,12%;76/90DONE.** Base3d47aa9; producción declarada d7e14ac. Informe docs/REVISION_2026-10-16.md. Siete de ocho REVIEW cerradas;11.2REVIEW(Android real).5.4DONE;5.3/12.1DOING;9.5OWNER.

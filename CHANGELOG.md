@@ -237,3 +237,9 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - wp-admin: un solo menú «Dra. Irina» con Consultorio, los tipos de contenido y sus taxonomías como submenús.
 - Q-065: en teléfono horizontal la barra de acciones pasa a columna de botones redondos bajo el ☰.
 - Q-041 alineado con D-065 (sin Map ID).
+
+## 2026-10-16 · Codex · auditoría16b
+
+-12.1FIX→DONE con ensayo en copia aprobado y límites;12.2DONE snapshot operativo.204/230=88,70%,78/87DONE.9.5OWNER/11.2REVIEW sin cambios.
+- Q-063/064VERIFIED y14fixtures request; Q-062VERIFIED383caracteres y siete servicios; Q-041WONTFIXD-065.
+- Q-066/067guardas/drill corregidos,19casos locales y dos regresiones reproducidas. Umask de backup adelantado. Sin deploy, SQL real, cuentas, secretos ni SMTP; herramientas para próxima operación autorizada.

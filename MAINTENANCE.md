@@ -19,7 +19,7 @@ Actualizado: 2026-10-16 · Codex · revisión de evidencia y límites. PLAN 12.4
 - Todo cambio de código o contenido pasa por la rama `ccr-6254502d-xly8ww`: la nube o Codex escriben, la sesión local despliega con `tools/deploy/*.sh` (respaldo previo automático en `~/deploy-backups/`) y verifica en vivo.
 - Contenido clínico nuevo: solo con aprobación de la Dra. en su app y OK de José (D-078). Fichas archivadas: cualquier publicación futura requiere decisión expresa de José y aprobación médica vigente de la versión concreta; una aprobación antigua no autoriza contenido modificado ni un calendario automático.
 - Fotos: subir en PNG/JPEG; el sitio genera WebP, versión móvil q95 y, en cabeceras, escritorio q95 (D-081).
-- Rollback: procedimiento revisado en docs/ROLLBACK.md. Restauración real no ensayada: 12.1 sigue DOING. Código, .htaccess, base de datos, medios y mini apps tienen respaldos/alcances distintos; retirar el bloque de hardening no equivale a restaurar todo el sitio.
+- Rollback: procedimiento revisado en docs/ROLLBACK.md. Ensayos de código/DB en copia aparte atestados16/10:12.1DONE en ese alcance; restauración del servicio en vivo no ensayada por decisión de José. Código, .htaccess, base de datos, medios y mini apps tienen respaldos/alcances distintos; retirar el bloque de hardening no equivale a restaurar todo el sitio.
 
 ## Plan SEO 6–12 meses
 

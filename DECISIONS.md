@@ -150,3 +150,7 @@ Se conserva D-076…085 y no se reabre staging/enciclopedia. Mapas históricos s
 ## Criterios de auditoría de cierre · 2026-10-16
 
 SoloDONE suma: backups sin restauración real dejan12.1DOING; móduloNAP con duplicaciones Q-042 deja5.3DOING. Schema propio contrastado permite5.4DONE. Emulación de ancho no acredita Android real:11.2REVIEW. La checklist revisada cierra11.5; la aprobación expresa concurrente D-086 cierra11.6 por José, sin cerrar legal8.6 ni9.5OWNER (mejora continua). Mantenimiento propone medir y revisar, no publicar una ficha cada mes sin decisión D-076/D-082 y aprobación vigente. DescripciónGBP sin literal no se certifica; Claude completa evidencia Q-062 desde su registro, sin acceso de Codex al perfil. No se ejecuta despliegue/restore por esta revisión.
+
+## Alcance de aceptación12.1/12.2 · auditoría16b2026-10-16
+
+Se aplica la decisión explícita de José de ensayar restauración en copia aparte: evidencia código/DB aportada y guardas locales verificadas permiten12.1DONE sin exigir rollbackvivo. Límite vivo y comparación solo de cantidades de filas quedan escritos.12.2DONE es validación puntual pública/servidor atestado, no certificación de visitas reales; logs hPanel y monitor404 no inspeccionados, seguimiento12.3. Q-041rige D-065WONTFIX, no se reabre D-059/MapID.9.5OWNER por horario/Doctoralia aunque el literalGBP ya se cotejó. No se cambia11.2ni se despliega Q-065/D-087 en este lote; D-086 intacto.

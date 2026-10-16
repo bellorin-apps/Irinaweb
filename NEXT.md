@@ -1,11 +1,11 @@
 # NEXT — Próximo trabajo
 
-Actualizado: 2026-10-16 · Codex.197/237 (83,12%),76/90DONE.
+Actualizado:2026-10-16 · Codex ·204/230(88,70%),78/87DONE.
 
-1. ✅ Q-062 resuelto por Claude cloud (literal de la descripción GBP en QA «Perfil de Negocio», cotejado con el sitio); Codex lo verifica en la próxima ronda. 9.5 sigue OWNER por horario real de la Dra. y Doctoralia.
-2. Coordinar una pasada explícita de cierre en Android real:Inicio, menú/CTA, Contacto y rutas públicas, sin nuevo envío del formulario por agentes.11.2REVIEW; emulación Windows no la sustituye. SafariiPhone y formulario ya probados por José15/10 según atestación; no volver a listarlos como inexistentes. Lector de pantalla manual conserva su límite.
-3. 12.1DOING: preparar revisión de prueba controlada de restauración según docs/ROLLBACK.md, sin ejecutarla automáticamente por este encargo. Backups de código no revierten DB/estados clínicos.5.3DOING/Q-042 NAP centralizado pendiente; Q-040 allowlistOps como unidad separada.
-4. CHECKPOINT5 ya aprobado por José (D-086,11.6DONE). HorarioGBP, Doctoralia y revisión legal8.6 como mejora continua;9.5/8.6OWNER se conservan. Mantener límites técnicos explícitos, sin reabrir aprobación ni llamarlos ensayos completados.
-5. Seguimiento operativo de rondaQA15/10: día7≈22/10 y día30≈14/11 (MAINTENANCE,12.2/12.3), no automatización creada; CHECKPOINT5 aprobado separadamente por D-086. GSC/GA4 solo con datos reales; no generar conversiones/formularios por agentes.
+1. Claude: pull y revisar Q-066/067 en tools/deploy. Usar herramientas actualizadas en la próxima operación autorizada; **no ejecutar deploy ni ensayo real por esta auditoría**, no pedir claves ni recrear base de prueba. Código/copiaDB atestados y guardas locales19casos:12.1DONE con límite de restauración en vivo no ensayada por José.
+2. 12.2DONE como validación puntual; seguimiento12.3día7≈22/10 y día30≈14/11 con fuentes reales. Logs de visitantes solo hPanel/monitor404apagado: no se afirma haberlos auditado ni se entra a cuentas.
+3. 9.5OWNER: Q-062literal y servicios cotejados, falta horario real de la Dra./Doctoralia como mejora continuaD-086. No solicitar de nuevo transcripción383ni entrar a perfiles por Codex. Q-041WONTFIXD-065: mapa JSON/marcadorclásico, sin pedirMapID.
+4. 11.2REVIEW y Q-065/D-087 mantienen entrega preexistente: Android real fue reportado por José; la barra horizontal ya está desplegada y confirmada según atestación concurrente; se conserva11.2REVIEW sin recertificar esa entrega aquí. No mezclarlo con esta auditoría de herramientas ni cambiar sus estados aquí.
+5. Q-040allowlistOps y Q-042/fuenteNAP5.3DOING siguen unidades propias. Legal8.6/GBP como mejora continua, CHECKPOINT5D-086 ya aprobado. Sin stagingD-080, sin publicaciones de fichas ni cambios de claves; inglés tras español.
 
-Sitio cortoD-076/D-082, fichas restantes en borrador y sin cadencia mensual automática. Sin stagingD-080; inglés después de español. No secretos, perfiles, publicaciones, borrados ni SMTP por este lote. Cuatro HTML previos de José preservados. Informe docs/REVISION_2026-10-16.md.
+Informe docs/REVISION_2026-10-16b.md. Sin web/builds nuevos, sin SMTP/secretos/cuentas. CuatroHTML y h.txt del usuario intactos. Preguntas por Claude.
