@@ -143,6 +143,8 @@ function di_row( \WP_Post $p, array $states, array $order ): array {
 		'note'        => (string) get_post_meta( $p->ID, '_di_review_note', true ),
 		'modified'    => $p->post_modified_gmt,
 		'order'       => false === $pos ? 100 : $pos,
+		// D-095: las fichas en inglés pasan por la misma revisión; la app las marca como «Inglés».
+		'lang'        => class_exists( '\\DraIrina\\Core\\I18n\\Language' ) ? \DraIrina\Core\I18n\Language::of( $p->ID ) : 'es',
 	];
 }
 function di_log( string $data_dir, array $entry ): void {

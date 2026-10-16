@@ -221,7 +221,7 @@ function renderList(){
   const rows = items.filter(it => filter === "all" || (["condicion", "tratamiento", "recurso"].includes(filter) ? it.type === filter : pillClass(it) === filter || (filter === "approved" && it.published)));
   $("#list").innerHTML = rows.length ? rows.map(it => `
     <button class="item" type="button" data-id="${it.id}">
-      <span><span class="t">${esc(it.title)}</span><br><span class="m">${typeLabel(it.type)}${it.area ? " · " + esc(it.area) : ""}${it.note ? " · nota enviada" : ""}</span></span>
+      <span><span class="t">${esc(it.title)}</span><br><span class="m">${it.lang === "en" ? "Inglés · " : ""}${typeLabel(it.type)}${it.area ? " · " + esc(it.area) : ""}${it.note ? " · nota enviada" : ""}</span></span>
       <span class="pill ${pillClass(it)}">${it.published ? "Publicada" : esc(it.state_label)}</span>
     </button>`).join("") : `<p class="muted">No hay fichas en este filtro.</p>`;
   $("#list").querySelectorAll(".item").forEach(b => b.onclick = () => openFicha(parseInt(b.dataset.id, 10)));
