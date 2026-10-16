@@ -189,8 +189,8 @@ Criterio de entrada: contenido español base aprobado por la Dra. + CP3 superado
 
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
-| 13.1 | Decisión de herramienta (plugin multiidioma vs. nativo en el core) · OD-008 | 2 | OWNER | Prioridad: que no rompa Sensia, el schema único ni el rendimiento |
-| 13.2 | Glosario clínico es/en en `docs/GLOSSARY_EN.md` y keyword map en inglés propio | 2 | TODO | |
+| 13.1 | Decisión de herramienta (plugin multiidioma vs. nativo en el core) · OD-008 | 2 | OWNER | Propuesta con opciones, pros y contras y recomendación (nativo): docs/OD-008_PROPUESTA_INGLES.md (D-092). Decide José |
+| 13.2 | Glosario clínico es/en en `docs/GLOSSARY_EN.md` y keyword map en inglés propio | 2 | REVIEW | docs/GLOSSARY_EN.md (especialidad, sueño, ORL, interfaz y legal, con términos a confirmar por la Dra.) y docs/KEYWORDS_EN.md (intenciones y URL /en/ propias, sin volúmenes inventados; límite: idiomas de consulta pendientes). D-092 |
 | 13.3 | Páginas base en inglés (Home, Dra., ORL, Sueño, Primera consulta, Contacto, legales) en borrador | 5 | TODO | Nada se publica sin revisión de la Dra. |
 | 13.4 | Condiciones/tratamientos elegidos por la Dra. | 3 | TODO | |
 | 13.5 | hreflang recíproco + x-default, sitemap, OG, schema `inLanguage`, selector de idioma, WhatsApp, 404/gracias | 3 | TODO | |
