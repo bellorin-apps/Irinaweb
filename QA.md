@@ -628,3 +628,21 @@ Páginas base y legales en inglés en borrador. Probado en el WordPress 7.1.3 lo
 - PHPCS, ESLint/stylelint y nap-check en verde. Catálogo del tema: 128 cadenas (más las 3 de la carga de Doctoralia por botón de Codex y «Dr. Irina»).
 - **Límite:** traducción de Claude, pendiente de la revisión de la Dra. (13.6). Sin fotos ni Rank Math configurado en local (los títulos de Rank Math se escriben en `rank_math_title`).
 
+
+## Inglés, entrega 2 (cedc216) y exportación de las fichas aprobadas (sesión local, 2026-10-16 15:45)
+
+- **Reglas de reescritura (corrección de la entrega 1):** `option delete rewrite_rules`, `cache flush` y una visita a la portada. Quedan 197 reglas, con las de Elementor (e-floating-buttons), Sensia (^op/) y ^en/sleep. /op/, /inicio-v2/, /wp-json/ y la API del consultorio dan 200; las 15 URL, 200. Falta que José abra el editor de Elementor con su sesión.
+- **Entrega 2:** deploy-code (respaldo `~/deploy-backups/20261016-153449/`) y purga; `setup-en.sh` y purga.
+  - Borradores creados: 385 contact, 386 dr-irina-gonzalez-saez, 387 ent, 388 faq, 389 first-visit, 390 medical-disclaimer, 392 privacy-notice, 394 sleep, 395 terms-of-use y 397 thank-you, cada uno con su pareja española. La 384 «en» se actualizó.
+  - 16 credenciales con texto en inglés; menús primary_en, footer_en y legal_en; reglas regeneradas en la siguiente visita.
+  - Nada publicado.
+- **Verificación anónima:**
+  - las 15 URL y /gracias/: 200, lang es, 0 hreflang, 0 selector, 0 enlaces /en/ y 0 di_lang;
+  - motivos del formulario de Contacto en español;
+  - las 11 /en/… dan 404, salvo /en/contact/, que hace 301 de adivinanza a /contacto/;
+  - sitemaps sin /en/.
+- **Exportación (solo lectura):** `tools/content/en/fichas-es-aprobadas.json` contiene las 5 fichas publicadas (IDs 256, 205, 261, 262 y 263), todas medically_approved y sin `_di_approved_by` ni metas internas.
+- **Diferencias de contenido entre medical-drafts.json y lo aprobado en producción** (ediciones de la Dra. en su app):
+  - apnea-obstructiva-del-sueno: `resumen` (una letra: la concordancia de B1 está en el repo, no en producción) y `sintomas` (producción añade «Somnolencia excesiva diurna»);
+  - cpap: `candidatos` (producción añade «El CPAP es considerado el tratamiento gold standard para la apnea del sueño») y `recuperacion` («algunas semanas» en el repo → «algunos días» en producción).
+  - Solo de formato: relacionados, tratamientos y que_resuelve guardados como IDs (en el repo, slugs) y la `nota` interna del borrador.

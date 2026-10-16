@@ -1,0 +1,415 @@
+{
+    "fuente": "Producción drairinagonzalez.com, exportado por la sesión local con WP-CLI (solo lectura) el 2026-10-16 21:37 UTC",
+    "nota": "Contenido clínico público aprobado por la Dra. (revisión en su app, D-040). Sin _di_approved_by ni metas internas. Los relacionados están en meta di_relacionados (IDs tal como están guardados).",
+    "fichas": [
+        {
+            "ID": 256,
+            "post_type": "condicion",
+            "slug": "ronquido",
+            "post_title": "Ronquido",
+            "post_content": "<p>Roncar no es normal, aunque sea común. El ronquido aparece cuando el aire pasa con dificultad por una vía aérea que se estrecha al dormir: la nariz tapada, el paladar y la campanilla largos, las amígdalas grandes o la lengua que cae hacia atrás hacen vibrar los tejidos y producen el ruido.</p><p>Hay un <strong>ronquido primario</strong>, que es ruido sin pausas en la respiración y afecta sobre todo a quien duerme al lado, y un ronquido que es el síntoma visible de una <strong>apnea obstructiva del sueño</strong>, con pausas, caídas de oxígeno y un descanso que no repara. Saber cuál es el tuyo cambia por completo el tratamiento, y por eso la valoración empieza por ahí.</p>",
+            "post_excerpt": "",
+            "post_modified": "2026-10-13 18:47:05",
+            "_di_approved_at": "2026-10-09 17:28:45",
+            "terms": {
+                "area": [
+                    "sueno"
+                ],
+                "zona": [
+                    "sueno"
+                ],
+                "estado_medico": [
+                    "medically_approved"
+                ]
+            },
+            "meta": {
+                "di_causas": [
+                    "Obstrucción nasal (tabique desviado, rinitis, cornetes grandes)",
+                    "Paladar blando y campanilla largos o amígdalas grandes",
+                    "Sobrepeso y acumulación de grasa en el cuello",
+                    "Dormir boca arriba, alcohol y sedantes por la noche",
+                    "En niños: amígdalas y adenoides grandes"
+                ],
+                "di_cuando_consultar": [
+                    "Cuando la pareja o la familia notan pausas en la respiración",
+                    "Somnolencia durante el día o cansancio aunque duermas suficiente",
+                    "Ronquido en niños, a cualquier edad",
+                    "Ronquido que empezó o empeoró con el aumento de peso",
+                    "Presión alta difícil de controlar o despertares con sensación de ahogo"
+                ],
+                "di_diagnostico": "<p>La Dra. explora la nariz, la boca y la garganta y realiza una endoscopia nasal y de la vía aérea para ver dónde se estrecha el paso del aire. Si sospecha apnea, indica un <strong>estudio del sueño en casa</strong> (poligrafía respiratoria) que ella misma interpreta. En casos seleccionados realiza una endoscopia de sueño (DISE) en quirófano o indica una polisomnografía en laboratorio.</p><p>Cuando la obstrucción es nasal y se plantea cirugía, la Dra. indica una tomografía o resonancia según el caso.</p>",
+                "di_enfoque_dra": "<p>El tratamiento depende de si hablamos de un ronquido primario o de uno secundario a apnea. Por eso la Dra. no trata «el ruido» sin antes saber qué hay detrás. Con el diagnóstico claro, las opciones van desde medidas y tratamiento nasal hasta cirugía del paladar o de la nariz, CPAP o un dispositivo oral, siempre elegidas según dónde se cierra tu vía aérea y qué estás dispuesto a usar.</p>",
+                "di_faq": [
+                    {
+                        "pregunta": "¿Roncar es peligroso?",
+                        "respuesta": "El ronquido simple no, pero puede ser la señal de una apnea del sueño, que sí tiene consecuencias para el corazón, la presión y la concentración. Un estudio del sueño en casa lo aclara."
+                    },
+                    {
+                        "pregunta": "¿Existe una cirugía para dejar de roncar?",
+                        "respuesta": "Sí, cuando la causa está en la nariz o en el paladar y el estudio lo respalda. No todas las personas son candidatas, y la Dra. es clara en eso desde la primera consulta."
+                    },
+                    {
+                        "pregunta": "¿Los niños deben roncar?",
+                        "respuesta": "No. El ronquido frecuente en un niño merece revisión: suele deberse a amígdalas o adenoides grandes y afecta su descanso, su conducta y su crecimiento."
+                    }
+                ],
+                "di_fuentes": [
+                    {
+                        "titulo": "Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea",
+                        "autor": "American Academy of Sleep Medicine (AASM)",
+                        "anio": "2017",
+                        "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+                        "tipo": "guia"
+                    },
+                    {
+                        "titulo": "Clinical Practice Guideline: Tonsillectomy in Children",
+                        "autor": "American Academy of Otolaryngology–Head and Neck Surgery (AAO-HNS)",
+                        "anio": "2019",
+                        "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/",
+                        "tipo": "guia"
+                    },
+                    {
+                        "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+                        "autor": "SMORL y CCC",
+                        "anio": "",
+                        "url": "https://smorlccc.org.mx/",
+                        "tipo": "sociedad"
+                    }
+                ],
+                "di_relacionados": [
+                    205,
+                    251,
+                    254
+                ],
+                "di_resumen_paciente": "El ronquido es el ruido que produce el aire al pasar por una vía aérea estrecha durante el sueño. Puede ser solo molesto o ser el signo visible de una apnea del sueño.",
+                "di_sintomas": [
+                    "Ronquido fuerte y frecuente, la mayoría de las noches",
+                    "Pausas en la respiración que otros notan",
+                    "Sueño poco reparador y cansancio al despertar",
+                    "Boca seca o dolor de cabeza por la mañana",
+                    "Somnolencia durante el día",
+                    "En niños: ronquido, respiración por la boca, sudoración nocturna y cambios en la conducta"
+                ],
+                "di_tratamientos_relacionados": [
+                    261,
+                    263,
+                    257
+                ]
+            }
+        },
+        {
+            "ID": 205,
+            "post_type": "condicion",
+            "slug": "apnea-obstructiva-del-sueno",
+            "post_title": "Apnea obstructiva del sueño",
+            "post_content": "<p>En la apnea obstructiva del sueño, la vía aérea se cierra una y otra vez mientras duermes. Cada cierre interrumpe la respiración durante unos segundos, baja el oxígeno y obliga al cerebro a despertarte brevemente para volver a respirar. Son despertares que no recuerdas, pero que fragmentan el sueño cientos de veces por noche: por eso te levantas cansado aunque hayas dormido «ocho horas».</p><p>No tratarla tiene consecuencias: presión alta, mayor riesgo cardiovascular, somnolencia al manejar, problemas de concentración y de estado de ánimo. La buena noticia es que se diagnostica con un estudio sencillo que puedes hacer en tu propia cama, y que hoy existen varios tratamientos efectivos que se eligen según la causa de la obstrucción y tus preferencias.</p>",
+            "post_excerpt": "",
+            "post_modified": "2026-10-13 18:47:05",
+            "_di_approved_at": "2026-10-09 17:28:00",
+            "terms": {
+                "area": [
+                    "sueno"
+                ],
+                "zona": [
+                    "sueno"
+                ],
+                "estado_medico": [
+                    "medically_approved"
+                ]
+            },
+            "meta": {
+                "di_causas": [
+                    "Estrechez de la vía aérea por anatomía: paladar, lengua, amígdalas, mandíbula pequeña",
+                    "Obstrucción nasal",
+                    "Sobrepeso y obesidad",
+                    "Edad, sexo masculino y menopausia en mujeres",
+                    "Alcohol, sedantes y dormir boca arriba, que la empeoran"
+                ],
+                "di_cuando_consultar": [
+                    "Si roncas y alguien ha visto que dejas de respirar",
+                    "Si te despiertas cansado a pesar de dormir suficiente",
+                    "Si tienes presión alta difícil de controlar",
+                    "Si te quedas dormido viendo televisión, leyendo o manejando",
+                    "Si usas CPAP y no lo toleras: hay alternativas que valorar"
+                ],
+                "di_diagnostico": "<p>La Dra. explora la nariz, la boca y la garganta y realiza una endoscopia nasal y de la vía aérea para ver dónde se estrecha el paso del aire. Si sospecha apnea, indica un <strong>estudio del sueño en casa</strong> (poligrafía respiratoria) que ella misma interpreta. En casos seleccionados realiza una endoscopia de sueño (DISE) en quirófano o indica una polisomnografía en laboratorio.</p><p>El estudio en casa registra tu respiración, el oxígeno, el ronquido y la posición durante una noche normal, y la Dra. lo interpreta personalmente para explicarte el resultado y graduar la apnea. Con eso, y con lo que vio en la exploración, define el tratamiento.</p>",
+                "di_enfoque_dra": "<p>La Dra. tiene subespecialidad en desórdenes respiratorios del sueño y aborda la apnea desde las dos vertientes: la médica, con CPAP, dispositivos orales y medidas, y la quirúrgica, con cirugía nasal y del paladar cuando la anatomía lo indica. Su papel es ayudarte a elegir el tratamiento que puedas sostener en el tiempo, porque la apnea se controla con constancia, y acompañarte hasta que duermas bien.</p>",
+                "di_faq": [
+                    {
+                        "pregunta": "¿El CPAP es la única opción?",
+                        "respuesta": "No. Es el tratamiento más efectivo para la apnea moderada y grave, pero existen alternativas: cirugía nasal o del paladar, dispositivos de avance mandibular, terapia posicional y control de peso. Se eligen según tu caso."
+                    },
+                    {
+                        "pregunta": "¿Puedo hacerme el estudio en casa?",
+                        "respuesta": "Sí. La poligrafía respiratoria en casa es el estudio de primera elección en la mayoría de los adultos con sospecha de apnea. La Dra. te presta el equipo, te explica cómo colocarlo y lo interpreta ella misma."
+                    },
+                    {
+                        "pregunta": "¿La apnea se cura?",
+                        "respuesta": "Depende de la causa. Cuando es por amígdalas grandes o una obstrucción corregible, la cirugía puede resolverla. En otros casos se controla de forma efectiva con tratamiento continuo, igual que la presión alta."
+                    },
+                    {
+                        "pregunta": "¿Los niños pueden tener apnea?",
+                        "respuesta": "Sí, casi siempre por amígdalas y adenoides grandes. La Dra. valora casos pediátricos seleccionados y, cuando conviene, se coordina con pediatría."
+                    }
+                ],
+                "di_fuentes": [
+                    {
+                        "titulo": "Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea",
+                        "autor": "American Academy of Sleep Medicine (AASM)",
+                        "anio": "2017",
+                        "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+                        "tipo": "guia"
+                    },
+                    {
+                        "titulo": "Treatment of Adult Obstructive Sleep Apnea with Positive Airway Pressure",
+                        "autor": "American Academy of Sleep Medicine (AASM)",
+                        "anio": "2019",
+                        "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+                        "tipo": "guia"
+                    },
+                    {
+                        "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+                        "autor": "SMORL y CCC",
+                        "anio": "",
+                        "url": "https://smorlccc.org.mx/",
+                        "tipo": "sociedad"
+                    }
+                ],
+                "di_relacionados": [
+                    256,
+                    251
+                ],
+                "di_resumen_paciente": "Qué es, cómo se diagnostica y qué opciones de tratamiento existen, explicado por una otorrinolaringólogo con subespecialidad en desórdenes respiratorios del sueño.",
+                "di_sintomas": [
+                    "Ronquido fuerte con pausas que otros notan",
+                    "Sueño no reparador y somnolencia durante el día",
+                    "Dolor de cabeza al despertar y boca seca",
+                    "Despertares con sensación de ahogo",
+                    "Dificultad para concentrarse, irritabilidad y bajo rendimiento",
+                    "Somnolencia excesiva diurna",
+                    "Levantarse varias veces a orinar por la noche"
+                ],
+                "di_tratamientos_relacionados": [
+                    261,
+                    262,
+                    263,
+                    264
+                ]
+            }
+        },
+        {
+            "ID": 261,
+            "post_type": "tratamiento",
+            "slug": "estudio-del-sueno",
+            "post_title": "Estudio del sueño en casa",
+            "post_content": "<p>El estudio del sueño en casa, o poligrafía respiratoria, registra durante una noche el flujo de aire por la nariz, el esfuerzo respiratorio, el nivel de oxígeno en la sangre, el ronquido, la frecuencia cardiaca y la posición en la que duermes. Es un equipo pequeño que te colocas antes de dormir y que la Dra. te enseña a usar en consulta.</p><p>Es el estudio de primera elección para confirmar la apnea obstructiva del sueño en la mayoría de los adultos, porque mide lo que importa en una noche normal de tu vida, no en un laboratorio. La Dra. lo interpreta personalmente y te explica el resultado.</p>",
+            "post_excerpt": "",
+            "post_modified": "2026-10-13 18:47:05",
+            "_di_approved_at": "2026-10-09 17:29:40",
+            "terms": {
+                "area": [
+                    "sueno"
+                ],
+                "zona": [
+                    "sueno"
+                ],
+                "estado_medico": [
+                    "medically_approved"
+                ]
+            },
+            "meta": {
+                "di_candidatos": [
+                    "Ronquido con pausas en la respiración",
+                    "Somnolencia o cansancio durante el día",
+                    "Antes de decidir un tratamiento de ronquido o apnea",
+                    "Para verificar el resultado de un tratamiento (CPAP, cirugía, dispositivo oral)",
+                    "Presión alta difícil de controlar o diagnóstico previo de arritmias"
+                ],
+                "di_como_se_realiza": "<p>Recoges el equipo en consultorio con instrucciones por escrito, te lo colocas en casa a la hora habitual de dormir y lo devuelves al día siguiente. La Dra. descarga y analiza el registro y te cita para explicarte el resultado y el plan de tratamiento.</p>",
+                "di_enfoque_dra": "<p>La Dra. realiza e interpreta el estudio ella misma, sin intermediarios: eso permite que el resultado se traduzca en un plan concreto en la misma consulta de revisión. Y si tu caso necesita un estudio en laboratorio, te lo indica con claridad.</p>",
+                "di_estudio_previo": "<p>Consulta de valoración con exploración y endoscopia de la vía aérea. La Dra. revisa tus cuestionarios de somnolencia y riesgo, y decide si el estudio en casa es el adecuado o si tu caso requiere polisomnografía en laboratorio, que indica cuando hay sospecha de otros trastornos del sueño o enfermedades asociadas.</p>",
+                "di_faq": [
+                    {
+                        "pregunta": "¿Es lo mismo que una polisomnografía?",
+                        "respuesta": "No. La polisomnografía se hace en un laboratorio de sueño con registro de la actividad cerebral. El estudio en casa es más sencillo y registra lo respiratorio; es suficiente para diagnosticar apnea obstructiva en la mayoría de los adultos."
+                    },
+                    {
+                        "pregunta": "¿Duermo igual con el equipo puesto?",
+                        "respuesta": "El equipo es ligero y la mayoría de las personas duerme con normalidad. Si una noche no es representativa, se repite."
+                    },
+                    {
+                        "pregunta": "¿Qué pasa después del estudio?",
+                        "respuesta": "La Dra. te cita para revisar los resultados y proponer el tratamiento según el grado de apnea y lo que encontró en la exploración."
+                    }
+                ],
+                "di_fuentes": [
+                    {
+                        "titulo": "Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea",
+                        "autor": "American Academy of Sleep Medicine (AASM)",
+                        "anio": "2017",
+                        "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+                        "tipo": "guia"
+                    }
+                ],
+                "di_oferta": "ofrece",
+                "di_que_resuelve": [
+                    256,
+                    205
+                ],
+                "di_recuperacion": "<p>No hay recuperación: es un estudio sin molestias y sin medicamentos. Al día siguiente haces tu vida normal.</p>",
+                "di_relacionados": [
+                    262,
+                    263
+                ],
+                "di_resumen_paciente": "Poligrafía respiratoria realizada en tu propia cama e interpretada por la propia Dra.: registra respiración, oxígeno y ronquido durante la noche para confirmar y graduar la apnea.",
+                "di_riesgos_y_alternativas": "<p>Es un estudio seguro. Su limitación es que en algunos casos la noche no es representativa (sensores que se desplazan, insomnio esa noche) y hay que repetirlo, o que el caso requiera polisomnografía completa en laboratorio.</p>",
+                "di_tipo": "estudio"
+            }
+        },
+        {
+            "ID": 262,
+            "post_type": "tratamiento",
+            "slug": "cpap",
+            "post_title": "CPAP",
+            "post_content": "<p>El CPAP es un equipo pequeño que envía aire a presión suave a través de una mascarilla mientras duermes. Esa presión funciona como una férula de aire que impide que la vía aérea se cierre, elimina las pausas y el ronquido y permite que el sueño por fin sea reparador. Es el tratamiento más efectivo para la apnea obstructiva moderada y grave.</p><p>El reto del CPAP no es que funcione, sino que lo uses. Por eso el acompañamiento en las primeras semanas, la elección de la mascarilla y el ajuste de la presión hacen la diferencia entre un equipo guardado en el clóset y una persona que vuelve a dormir bien.</p>",
+            "post_excerpt": "",
+            "post_modified": "2026-10-13 18:47:05",
+            "_di_approved_at": "2026-10-13 15:33:28",
+            "terms": {
+                "area": [
+                    "sueno"
+                ],
+                "zona": [
+                    "sueno"
+                ],
+                "estado_medico": [
+                    "medically_approved"
+                ]
+            },
+            "meta": {
+                "di_candidatos": [
+                    "Apnea obstructiva del sueño confirmada por estudio, moderada o grave",
+                    "Apnea leve con síntomas importantes o enfermedades asociadas",
+                    "Personas que no son candidatas a cirugía o prefieren un tratamiento no quirúrgico",
+                    "Pacientes que ya usan CPAP y no se adaptan: hay mucho que ajustar",
+                    "El CPAP es considerado el tratamiento gold standard para la apnea del sueño"
+                ],
+                "di_como_se_realiza": "<p>La Dra. indica el tipo de equipo y de mascarilla según tu anatomía y tus hábitos, ajusta la presión (por titulación automática o con estudio) y te cita en las primeras semanas para resolver molestias: fugas, resequedad, presión alta o baja. Los equipos modernos registran el uso y permiten ajustar a distancia.</p>",
+                "di_enfoque_dra": "<p>La Dra. no entrega un equipo y se despide. Acompaña la adaptación, trata la nariz si es lo que impide tolerarlo y, cuando después de intentarlo el CPAP no es para ti, te propone alternativas con la misma honestidad.</p>",
+                "di_estudio_previo": "<p>Estudio del sueño en casa que confirme y gradúe la apnea, y exploración de la nariz y la vía aérea: una nariz obstruida es la causa más frecuente de no tolerar el CPAP y se puede tratar.</p>",
+                "di_faq": [
+                    {
+                        "pregunta": "¿Tendré que usarlo toda la vida?",
+                        "respuesta": "Mientras la apnea esté presente, sí, igual que un tratamiento para la presión. Si la causa cambia (peso, cirugía), se reevalúa con un nuevo estudio."
+                    },
+                    {
+                        "pregunta": "¿Puedo viajar con el CPAP?",
+                        "respuesta": "Sí. Los equipos son compactos y se permiten en cabina. La Dra. te orienta sobre cómo llevarlo."
+                    },
+                    {
+                        "pregunta": "No tolero la mascarilla, ¿qué hago?",
+                        "respuesta": "No lo abandones sin consultar. Cambiar de mascarilla, ajustar la presión o tratar la nariz resuelve la mayoría de los problemas de adaptación."
+                    }
+                ],
+                "di_fuentes": [
+                    {
+                        "titulo": "Treatment of Adult Obstructive Sleep Apnea with Positive Airway Pressure",
+                        "autor": "American Academy of Sleep Medicine (AASM)",
+                        "anio": "2019",
+                        "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+                        "tipo": "guia"
+                    }
+                ],
+                "di_oferta": "ofrece",
+                "di_que_resuelve": [
+                    205
+                ],
+                "di_recuperacion": "<p>No hay recuperación. La adaptación suele tomar algunos días ; durante ese tiempo el seguimiento cercano es parte del tratamiento. Muchas personas notan la diferencia en su energía desde las primeras noches de uso completo.</p>",
+                "di_relacionados": [
+                    261,
+                    264,
+                    263
+                ],
+                "di_resumen_paciente": "Equipo que mantiene abierta la vía aérea con presión de aire durante el sueño. La Dra. lo indica, ajusta la presión y da seguimiento para lograr una buena adaptación y uso constante.",
+                "di_riesgos_y_alternativas": "<p>El CPAP es seguro. Las molestias habituales son resequedad, marcas de la mascarilla o sensación de presión, y todas tienen solución con ajustes. Alternativas cuando no se tolera: cirugía nasal o del paladar, dispositivo de avance mandibular o terapia posicional, según el estudio y la exploración.</p>",
+                "di_tipo": "terapia"
+            }
+        },
+        {
+            "ID": 263,
+            "post_type": "tratamiento",
+            "slug": "cirugia-de-ronquido-y-apnea",
+            "post_title": "Cirugía de ronquido y apnea",
+            "post_content": "<p>La cirugía del ronquido y la apnea busca ensanchar y dar firmeza a la parte de la vía aérea que se cierra al dormir. No es una sola operación: puede ser cirugía nasal (septoplastia, turbinoplastia), cirugía del paladar como la <strong>faringoplastia con suturas barbadas</strong>, que reposiciona y tensa el paladar blando sin cortar tejido, retiro de amígdalas, o una combinación de ellas.</p><p>La clave está en elegir bien. Por eso la Dra. realiza una endoscopia de sueño (DISE) en quirófano, bajo sedación, para ver con exactitud dónde y cómo se cierra tu vía aérea mientras duermes, y propone la cirugía solo cuando la anatomía tiene una solución quirúrgica.</p>",
+            "post_excerpt": "",
+            "post_modified": "2026-10-13 18:47:05",
+            "_di_approved_at": "2026-10-13 15:38:21",
+            "terms": {
+                "area": [
+                    "sueno"
+                ],
+                "zona": [
+                    "sueno"
+                ],
+                "estado_medico": [
+                    "medically_approved"
+                ]
+            },
+            "meta": {
+                "di_candidatos": [
+                    "Ronquido o apnea con obstrucción localizada en paladar o nariz",
+                    "Personas que no toleran el CPAP, según valoración",
+                    "Amígdalas grandes que contribuyen a la apnea",
+                    "Obstrucción nasal que impide usar el CPAP o lo hace ineficaz"
+                ],
+                "di_como_se_realiza": "<p>En hospital, bajo anestesia general. Según el plan, la Dra. corrige la nariz, realiza la faringoplastia con suturas barbadas y, si aplica, retira las amígdalas en el mismo tiempo. La estancia suele ser de una noche.</p>",
+                "di_enfoque_dra": "<p>La Dra. tiene formación específica en cirugía de sueño y es miembro de la Sociedad Iberoamericana de Cirugía de Sueño. Su criterio es claro: operar a quien la anatomía lo permite y decírselo con honestidad a quien no, para que cada persona tenga el tratamiento que de verdad le funcione.</p>",
+                "di_estudio_previo": "<p>Estudio del sueño en casa para graduar la apnea, exploración y endoscopia en consultorio, y endoscopia de sueño (DISE) en quirófano para localizar el sitio de obstrucción. Tomografía cuando la nariz es parte del plan. Estudios de laboratorio y valoración de anestesia.</p>",
+                "di_faq": [
+                    {
+                        "pregunta": "¿La cirugía cura la apnea?",
+                        "respuesta": "En casos bien seleccionados, sobre todo con obstrucción localizada, puede resolverla o reducirla mucho. En otros, mejora el ronquido y facilita tolerar el CPAP. La endoscopia de sueño ayuda a predecir el resultado."
+                    },
+                    {
+                        "pregunta": "¿Qué es la endoscopia de sueño (DISE)?",
+                        "respuesta": "Un estudio breve en quirófano en el que, bajo sedación que simula el sueño, la Dra. observa con un endoscopio dónde se cierra tu vía aérea. Es la base para decidir qué operar."
+                    },
+                    {
+                        "pregunta": "¿Puedo operarme si no quiero usar CPAP?",
+                        "respuesta": "Depende de tu anatomía y del grado de apnea. La Dra. te dice con claridad si eres candidato después del estudio y la endoscopia de sueño."
+                    }
+                ],
+                "di_fuentes": [
+                    {
+                        "titulo": "Referral of Adults with Obstructive Sleep Apnea for Surgical Consultation",
+                        "autor": "American Academy of Sleep Medicine (AASM)",
+                        "anio": "2021",
+                        "url": "https://aasm.org/clinical-resources/practice-standards/practice-guidelines/",
+                        "tipo": "guia"
+                    },
+                    {
+                        "titulo": "Sociedad Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (SMORL y CCC)",
+                        "autor": "SMORL y CCC",
+                        "anio": "",
+                        "url": "https://smorlccc.org.mx/",
+                        "tipo": "sociedad"
+                    }
+                ],
+                "di_oferta": "ofrece",
+                "di_que_resuelve": [
+                    256,
+                    205
+                ],
+                "di_recuperacion": "<p>Dolor de garganta durante una a dos semanas en la cirugía del paladar, controlado con analgésicos y alimentación suave; congestión en la cirugía nasal. La Dra. revisa en consulta y, pasados unos meses, repite el estudio del sueño en casa para medir el resultado.</p>",
+                "di_relacionados": [
+                    257,
+                    259,
+                    262
+                ],
+                "di_resumen_paciente": "Faringoplastia y cirugía nasal para ensanchar la vía aérea cuando la anatomía lo indica. La endoscopia de sueño ayuda a localizar dónde se cierra.",
+                "di_riesgos_y_alternativas": "<p>Como toda cirugía, tiene riesgos: sangrado, infección, molestias por la anestesia y la posibilidad de que la mejoría sea parcial o de que haga falta un procedimiento adicional. La Dra. te explica los riesgos específicos de tu caso y las alternativas antes de que decidas, y entrega el consentimiento informado por escrito.</p><p>En cirugía de apnea, la mejoría puede ser parcial y en algunos casos se combina con CPAP a menor presión o con un dispositivo oral. Alternativas: CPAP, dispositivo de avance mandibular, terapia posicional y control de peso.</p>",
+                "di_tipo": "cirugia"
+            }
+        }
+    ]
+}
