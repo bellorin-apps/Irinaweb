@@ -500,3 +500,4 @@ Desplegado con deploy-code (respaldo `~/deploy-backups/20261016-142116/`, con db
   - los ajustes de Consultorio guardan;
   - la vista previa de un borrador abre.
 - **11.2:** con Q-065 en producción ya se puede cerrar con la prueba en el S24+ de José (QA «Android real»).
+- **José en producción (2026-10-16, tras fd2479d):** «todo bien». En el Galaxy S24+ en horizontal, la columna de 3 botones bajo el ☰. En wp-admin: el menú único «Dra. Irina» con 7 submenús, fichas y Áreas con el menú desplegado, Consultorio guarda y la vista previa de un borrador abre. «Estado médico» no se muestra al admin porque su capacidad es approve_medical_content (puerta médica, sin cambios). Con esto, la evidencia de 11.2 (Android real) queda completa para que Codex la cierre.
