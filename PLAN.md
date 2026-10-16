@@ -179,7 +179,7 @@ Versión: 1.1 · Fecha: 2026-10-08 · Fases: 14 (0–13; la 13 es la versión en
 | ID | Tarea | Peso | Estado | Notas |
 |---|---|---|---|---|
 | 12.1 | Deploy a producción con backup y rollback (sin staging, D-080) | 5 | DOING | Backups previos de tema/core y despliegues atestados; docs/ROLLBACK.md revisado, restauración real no ensayada. NoDONE; respaldo de código no revierte DB/contenido. Informe: docs/REVISION_2026-10-16.md |
-| 12.2 | Día 0 validación; Día 1 errores críticos | 2 | TODO | |
+| 12.2 | Día 0 validación; Día 1 errores críticos | 2 | REVIEW | Sesión local 16/10 (QA «Día 0/Día 1»): 15 URL 200/index/canónica propia, 301 http/www/rutas antiguas, auxiliares noindex, 404 real, caché hit, cabeceras y SSL hasta 07-ene-2027; WP 7.1.3 con checksums, plugins sin actualizaciones, cron sin vencidos, 2FA admin, 0 apps; sin errores PHP del dominio; 30 vistas Chrome sin errores de consola (solo Q-041). Límite: los registros de acceso (404/5xx de visitas reales) solo están en hPanel |
 | 12.3 | Día 7 Search Console + analytics; Día 30 indexación/keywords/conversiones/CWV | 2 | TODO | |
 | 12.4 | `MAINTENANCE.md` + plan SEO 6–12 meses + KPIs | 3 | DONE | FIX rutinas/KPIs sin cadencia automática de fichas; eventos no pacientes/correos, objetivo indexación solo15indexables. Runbook código/htaccess/DB/medios/miniapps con rollback no probado; seguimiento7/30 no crea automatización. Informe: docs/REVISION_2026-10-16.md |
 

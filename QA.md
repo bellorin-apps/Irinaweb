@@ -408,3 +408,33 @@ FIX documentales completados: checklist con fuentes y pendientes; mantenimiento 
 Fotos/hojas nuevas inspeccionadas; resumen comprimido no mide proporciones/legibilidad, cuatro PNG nativos complementan móvil/tablet/escritorio. GA y Doctoralia bloqueados; cookiesGA4 por evidencia escrita15/10, no nueva garantía de terceros. PHP79/PHPCS/JS2+harnesses/bash18 pasan; fixture schema sin DB ni validador externo. Sin formulario/SMTP, secretos, claves, publicación, borrado, despliegue ni acceso a perfiles. Evidencia en docs/audit/2026-10-16/.
 
 Integración remota al subir:27765b2 registra D-086 y11.6DONE; se conserva sin reabrir aprobación. b06ea87 añade enlace público de reseñas y reglas en MAINTENANCE, preservados sin visitar el perfil. Progreso final197/237=83,12%,76/90DONE;9.5/8.6OWNER como mejora continua.
+
+## Día 0 y Día 1 del lanzamiento, PLAN 12.2 (sesión local, 2026-10-16 13:00)
+
+Todo en solo lectura: sin formularios, SMTP, despliegues ni cambios de ajustes.
+
+**Público**
+- Las 15 URL del sitemap (page/condicion/tratamiento) dan 200, `index, follow` y canónica propia. TTFB en caché (hit de LiteSpeed): 0,21–0,29 s; sin caché, 0,54–1,19 s.
+- Redirecciones 301: http → https, www → sin www (con ruta) y /padecimientos/ y /tratamientos/ → /sueno/{slug}/. La URL con UTM del Perfil de Google da 200.
+- /links/ y /gracias/ dan 200 con noindex. La 404 real tiene título en español. /readme.html y /xmlrpc.php dan 403; /wp-json/wp/v2/users da 404.
+- robots.txt y sitemap_index son correctos.
+- Cabeceras: HSTS, nosniff, SAMEORIGIN, Referrer-Policy y Permissions-Policy, sin X-Powered-By. SSL de Let's Encrypt válido hasta el 07-ene-2027.
+- Chrome headless a 390 px (UA Android) y 1440 px, 30 vistas: un h1 por página, sin desborde horizontal ni imágenes rotas. En consola solo aparece, en Inicio y Contacto, el aviso de `google.maps.Marker` obsoleto (Q-041, OWNER: falta el Map ID).
+
+**Servidor**
+- WordPress 7.1.3 con checksums correctos; PHP 8.4.26; tema irina-gonzalez 0.1.0 sobre Hello 3.5.1.
+- Plugins sin actualizaciones pendientes. Checksums de wp.org correctos en 4 de 7; los otros 3 (dra-irina-core, elementor-pro y sensia) no están en wp.org.
+- Cron sin eventos vencidos. 0 transitorios caducados. 89 KB de opciones autocargadas.
+- Usuarios: admin con 2FA y revisor_medico, ninguno con contraseñas de aplicación. Registro cerrado y blog_public 1.
+- Turnstile con claves; contador de SpamGuard en 0.
+- Contenido: 12 páginas publicadas; fichas publicadas: 2 condiciones y 3 tratamientos; el resto en borrador. Sin cambios de contenido desde el 14/10.
+- Sin errores PHP del dominio: no hay error_log ni debug.log en el dominio, `~/error_log` no tiene ninguna línea del dominio y WP_DEBUG y la depuración de LiteSpeed están apagados.
+
+**Hallazgos nuevos (P3, para la nube)**
+- **Q-063 · P3 · OPEN:** /?author=1 da 404 (correcto), pero con el título «José | Dra. Irina González Sáez»: muestra el nombre visible del administrador. No expone el usuario ni el correo. Propuesta: que el 404 de Hardening use el título de la 404.
+- **Q-064 · P3 · OPEN:** /recursos/ da 404 con el título «Recursos Archive» (en inglés) y `index, follow` en el HTML. Google no lo indexa por el 404; es solo cosmético.
+
+**Límites**
+- Los registros de acceso (404 y 5xx de visitas reales) solo se pueden ver en hPanel, no por SSH. El monitor 404 de Rank Math está apagado.
+- No se probó el formulario; José lo probó el 15/10.
+- 12.2 queda en REVIEW; el seguimiento del día 7 (≈22/10) es la 12.3.

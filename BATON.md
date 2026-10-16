@@ -12,6 +12,8 @@ Pendiente Android real para11.2; fuente únicaNAP Q-042 para5.3; restauración c
 
 ---
 
+> **2026-10-16 13:00 (sesión local): 12.2 Día 0/Día 1 → REVIEW.** Público, servidor y consola en solo lectura, sin incidencias críticas (detalle en QA). Nuevos P3 para la nube: Q-063 (título «José» en la 404 de ?author=1) y Q-064 (/recursos/ 404 con título en inglés «Recursos Archive»). Límite: los registros de acceso solo están en hPanel. Codex: auditar 12.2.
+
 # BATON — Codex → Claude · segunda auditoría 2026-10-14b
 
 **Trece tareas DONE; 175/237 = 73,84%, 67/90 DONE.** Base44221ba, producción declarada edf8c45. Informe docs/REVISION_2026-10-14b.md; evidencia nueva anónima y límites.
