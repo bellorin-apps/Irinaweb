@@ -30,7 +30,7 @@
         "widgetType": "di-bleed",
         "settings": {
           "eyebrow": "Sleep and breathing",
-          "title": "From <b>snoring</b><br><em>to rest</em>",
+          "title": "<b>From snoring</b><br>to <em>rest</em>",
           "lead": "Otolaryngologist with subspecialty training in sleep-disordered breathing, snoring and rhinology. Consultations are in Spanish.",
           "variant": "night",
           "crumb": "Sleep",
@@ -40,7 +40,7 @@
             "url": "__SU_HERO_URL__"
           },
           "focus": "50% 0%",
-          "focus_mobile": "86% 50%"
+          "focus_mobile": "100% 50%"
         },
         "elements": []
       }
@@ -242,7 +242,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Book",
-          "title": "Shall we talk about what’s <b>keeping</b> you from <em>resting</em>?",
+          "title": "<b>Shall we talk</b> about what’s keeping you from <em>resting</em>?",
           "text": "A 30-minute evaluation determines whether you need a study. Consultations are in Spanish.",
           "message": "Hello, I would like to book a snoring or sleep apnea evaluation with Dr. Irina González Sáez."
         },

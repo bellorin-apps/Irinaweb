@@ -30,7 +30,7 @@
         "widgetType": "di-bleed",
         "settings": {
           "eyebrow": "Otolaryngology (ENT)",
-          "title": "Ear, <b>nose and throat,</b><br><em>from birth</em>",
+          "title": "<b>Ear, nose</b> and throat,<br><em>from birth</em>",
           "lead": "Ear, nose and throat consultations for children, teenagers, adults and older adults in Monterrey. Consultations are in Spanish.",
           "variant": "sand",
           "crumb": "ENT"
@@ -391,7 +391,7 @@
         "widgetType": "di-cta",
         "settings": {
           "eyebrow": "Book",
-          "title": "A <b>symptom</b> that <em>won’t go away</em>?",
+          "title": "<b>A symptom</b> that <em>won’t go away</em>?",
           "text": "Message us on WhatsApp and we’ll help you choose the right type of visit. Consultations are in Spanish.",
           "message": "Hello, I would like to book an ENT appointment with Dr. Irina González Sáez."
         },

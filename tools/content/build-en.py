@@ -139,7 +139,7 @@ pages["dr-irina-gonzalez-saez"] = ("Dr. Irina González Sáez", "dra-irina-gonza
 ])
 
 pages["ent"] = ("Otolaryngology (ENT)", "otorrinolaringologia", [
-    container("orl-bleed", "di-bleed", {"eyebrow": "Otolaryngology (ENT)", "title": "Ear, <b>nose and throat,</b><br><em>from birth</em>",
+    container("orl-bleed", "di-bleed", {"eyebrow": "Otolaryngology (ENT)", "title": "<b>Ear, nose</b> and throat,<br><em>from birth</em>",
         "lead": f"Ear, nose and throat consultations for children, teenagers, adults and older adults in Monterrey. {SPANISH_NOTE}",
         "variant": "sand", "crumb": "ENT"}),
     container("orl-oido", "di-listado", {"eyebrow": "Ear", "title": "<b>What</b> I treat <em>in the ear</em>", "post_type": "", "anchor": "ear",
@@ -154,15 +154,15 @@ pages["ent"] = ("Otolaryngology (ENT)", "otorrinolaringologia", [
     container("orl-como", "di-narrativa", {"eyebrow": "How I work", "title": "<b>First</b> listen, then <em>examine</em>",
         "lead": "The first visit lasts about 30 minutes. It starts by understanding what is happening to you and since when; it continues with a complete ear, nose and throat examination, with endoscopy in the office when needed, and ends with a clearly explained plan. If your case needs another specialist, I will tell you and refer you.",
         "text": ""}),
-    container("orl-cta", "di-cta", {"eyebrow": "Book", "title": "A <b>symptom</b> that <em>won’t go away</em>?", "text": f"Message us on WhatsApp and we’ll help you choose the right type of visit. {SPANISH_NOTE}", "message": "Hello, I would like to book an ENT appointment with Dr. Irina González Sáez."}),
+    container("orl-cta", "di-cta", {"eyebrow": "Book", "title": "<b>A symptom</b> that <em>won’t go away</em>?", "text": f"Message us on WhatsApp and we’ll help you choose the right type of visit. {SPANISH_NOTE}", "message": "Hello, I would like to book an ENT appointment with Dr. Irina González Sáez."}),
 ])
 
 pages["sleep"] = ("Snoring and sleep apnea", "sueno", [
-    container("su-bleed", "di-bleed", {"eyebrow": "Sleep and breathing", "title": "From <b>snoring</b><br><em>to rest</em>",
+    container("su-bleed", "di-bleed", {"eyebrow": "Sleep and breathing", "title": "<b>From snoring</b><br>to <em>rest</em>",
         "lead": f"Otolaryngologist with subspecialty training in sleep-disordered breathing, snoring and rhinology. {SPANISH_NOTE}",
         # Misma foto de cabecera que /sueno/ (propietario, 2026-10-16): adjunto hero-sueno; sin él, el degradado nocturno.
         "variant": "night", "crumb": "Sleep", "whatsapp_label": "Book a snoring and sleep apnea evaluation",
-        "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "86% 50%"}),
+        "image": {"id": "__SU_HERO_ID__", "url": "__SU_HERO_URL__"}, "focus": "50% 0%", "focus_mobile": "100% 50%"}),
     container("su-cond", "di-listado", {"eyebrow": "What I treat", "title": "<b>Snoring</b> and <em>sleep apnea</em>", "post_type": "", "anchor": "conditions",
         "items": rep([("Snoring", "In adults and children", "/en/sleep/snoring/"), ("Obstructive sleep apnea", "Pauses in breathing during sleep", "/en/sleep/obstructive-sleep-apnea/")], "label", "sub", "url")}),
     container("su-ruta", "di-listado", {"eyebrow": "Tests and treatments", "title": "<b>The</b> full <em>pathway</em>", "post_type": "", "anchor": "pathway", "tight": "yes",
@@ -171,7 +171,7 @@ pages["sleep"] = ("Snoring and sleep apnea", "sueno", [
     container("su-como", "di-narrativa", {"eyebrow": "How I work", "title": "<b>An</b> ENT for the <em>airway</em>",
         "lead": "Nose, palate, tonsils and tongue: as an otolaryngologist I directly examine where the airway narrows during sleep. The evaluation starts in the office; with the study results in hand I explain the options and we decide on the treatment together.",
         "text": ""}),
-    container("su-cta", "di-cta", {"eyebrow": "Book", "title": "Shall we talk about what’s <b>keeping</b> you from <em>resting</em>?", "text": f"A 30-minute evaluation determines whether you need a study. {SPANISH_NOTE}", "message": "Hello, I would like to book a snoring or sleep apnea evaluation with Dr. Irina González Sáez."}),
+    container("su-cta", "di-cta", {"eyebrow": "Book", "title": "<b>Shall we talk</b> about what’s keeping you from <em>resting</em>?", "text": f"A 30-minute evaluation determines whether you need a study. {SPANISH_NOTE}", "message": "Hello, I would like to book a snoring or sleep apnea evaluation with Dr. Irina González Sáez."}),
 ])
 
 pages["first-visit"] = ("First visit", "primera-consulta", [
