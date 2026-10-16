@@ -731,3 +731,15 @@ Las 5 fichas de sueño en inglés y el paquete de revisión de la Dra.
 - **Menor:** /favicon.ico da 404 (el icono del sitio sí carga por `<link>`). Lo vio la consola de la app de revisión.
 - **Corrección de la entrega 3 (Claude cloud, 2026-10-16):** la app de revisión de fichas seguía en el modo de sitio corto (aviso fijo «Ya no hace falta revisar fichas», sin lista), así que la Dra. no veía las fichas inglesas (hallazgo de la sesión local). Ahora lista solo las fichas con `lang=en`; `?id=` sigue abriendo cualquier ficha, para uso interno. Título «Fichas en inglés», con enlace a la guía y desde la guía a las fichas. Local: 5 fichas «Inglés · … · Pendiente de tu revisión», «0 de 5 aprobadas», la ficha abre con su editor y botones, sin errores JS. deploy-briefing.sh sube cada `.htaccess` antes que los demás archivos, por la incidencia de los 5 minutos con paginas-en.json en 200.
 
+
+## App de revisión con las fichas en inglés (5214a99) y /favicon.ico (sesión local, 2026-10-16 16:00)
+
+- `deploy-briefing.sh`: config.php y token conservados. paginas(-en).json y config.php dan 403; revisar.php sin token, 403.
+- **Con token, solo lectura:**
+  - /briefing/revision/ muestra «Fichas en inglés», «0 de 5 aprobadas» y 5 ítems «Inglés · Padecimiento/Tratamiento · Sueño · Pendiente de tu revisión»;
+  - al abrir una ficha aparecen su texto y el editor (12 campos). **No se aprobó ni se guardó nada.**
+  - La guía mantiene 8 tarjetas «(inglés)» y el enlace a las fichas.
+  - Sin errores de JS.
+- **/favicon.ico:** `site_icon` = 240 estaba configurado, pero la CDN de Hostinger (hcdn) devuelve 404 a /favicon.ico sin pasar por WordPress. Se copió el `assets/brand/favicon.ico` del tema (isotipo, 16 y 32 px) a la raíz del sitio; es reversible borrando ese archivo.
+  - Con parámetro responde 200 image/x-icon.
+  - Sin parámetro la CDN sirvió todavía su 404 en caché (Age 36 s) después de purgar LiteSpeed. Caducará solo; no se tocó la CDN.
