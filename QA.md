@@ -804,3 +804,31 @@ Decisiones de José (AskUserQuestion): Otorrino con tono **cálido** como Primer
 - PHP -l, PHPCS (sin errores nuevos; el aviso meta_query de setup-en.php ya existía), stylelint y bash -n en verde.
 - **Límites:** aprobaciones simuladas en local, no las de la Dra.; servidor PHP local sin LiteSpeed ni .htaccess; la parte remota del .sh (purga, curl) no se ejecutó. Nada desplegado ni publicado en producción.
 
+
+## Despliegue de 4dab820: Sueño nocturno en inglés, separadores azul-morados y publish-en en revisión (sesión local, 2026-10-17 10:05)
+
+- deploy-code (respaldo `~/deploy-backups/20261017-100022/` con db.sql.gz) y purga. Sin setup-en.
+- **Regresión del español:** los tipos de schema y `body.di-dark` de /, /otorrinolaringologia/, /sueno/, /preguntas-frecuentes/ (FAQPage), /contacto/ (ContactPage) y /sueno/cpap/ son **idénticos antes y después** del despliegue (instantánea comparada).
+- **Separadores en producción:** `--color-border` es #342b56 en /sueno/ y en /sueno/cpap/ (borde de la caja de revisión rgb(52,43,86)). Capturas a 1440 y 390 px de «Ronquido y apnea» y «La ruta completa»: líneas onduladas y separadores en azul-morado tenue, sin crema ni blanco.
+- **Inglés** (vistas previas simuladas por WP-CLI como el admin, porque la sesión local no inicia sesión): la 394 (/en/sleep/) da `irina_is_page('sueno')` = sí y `body.di-dark` = sí, con es_slug sueno; la 387 (/en/ent/) no es nocturna. La traducción de «Sueño» en en_US es «Sleep» (eyebrow de las fichas EN, área sueno, _di_lang en). Falta la mirada de José en la vista previa real.
+- **`publish-en.sh` en modo revisión** (sin --yes ni --legal-ok), salida literal:
+```
+  /en/                                         draft    falta la aprobación de la Dra. en la guía
+  /en/dr-irina-gonzalez-saez/                  draft    falta la aprobación de la Dra. en la guía
+  /en/ent/                                     draft    falta la aprobación de la Dra. en la guía
+  /en/sleep/                                   draft    falta la aprobación de la Dra. en la guía
+  /en/first-visit/                             draft    falta la aprobación de la Dra. en la guía
+  /en/contact/                                 draft    falta la aprobación de la Dra. en la guía
+  /en/thank-you/                               draft    falta la aprobación de la Dra. en la guía
+  /en/faq/                                     draft    falta la aprobación de la Dra. en la guía
+  /en/privacy-notice/                          draft    legal: falta --legal-ok (OK de José)
+  /en/medical-disclaimer/                      draft    legal: falta --legal-ok (OK de José)
+  /en/terms-of-use/                            draft    legal: falta --legal-ok (OK de José)
+  /en/sleep/snoring/                           draft    estado medical_review_required: falta la aprobación de la Dra.
+  /en/sleep/obstructive-sleep-apnea/           draft    estado medical_review_required: falta la aprobación de la Dra.
+  /en/sleep/home-sleep-test/                   draft    estado medical_review_required: falta la aprobación de la Dra.
+  /en/sleep/cpap-therapy/                      draft    estado medical_review_required: falta la aprobación de la Dra.
+  /en/sleep/snoring-and-sleep-apnea-surgery/   draft    estado medical_review_required: falta la aprobación de la Dra.
+Warning: No se publica nada (todo o nada). Pendiente: /en/: falta la aprobación de la Dra. en la guía; /en/dr-irina-gonzalez-saez/: falta la aprobación de la Dra. en la guía; /en/ent/: falta la aprobación de la Dra. en la guía; /en/sleep/: falta la aprobación de la Dra. en la guía; /en/first-visit/: falta la aprobación de la Dra. en la guía; /en/contact/: falta la aprobación de la Dra. en la guía; /en/thank-you/: falta la aprobación de la Dra. en la guía; /en/faq/: falta la aprobación de la Dra. en la guía; /en/privacy-notice/: legal: falta --legal-ok (OK de José); /en/medical-disclaimer/: legal: falta --legal-ok (OK de José); /en/terms-of-use/: legal: falta --legal-ok (OK de José); ficha snoring: medical_review_required; ficha obstructive-sleep-apnea: medical_review_required; ficha home-sleep-test: medical_review_required; ficha cpap-therapy: medical_review_required; ficha snoring-and-sleep-apnea-surgery: medical_review_required
+```
+  Tras el dry-run, /en/, /en/sleep/ y /en/sleep/snoring/ siguen en 404: no se publicó nada.
