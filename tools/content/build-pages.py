@@ -85,7 +85,8 @@ pages["primera-consulta"] = [
         ("¿Cuánto cuesta la consulta?", "Te confirmamos el costo al agendar por WhatsApp. Cirugías y estudios se cotizan después de la valoración."),
         ("¿Aceptan seguros de gastos médicos?", "Atención a pacientes particulares y reembolso de seguros de gastos médicos; la Dra. entrega la documentación para tu aseguradora."),
         ("¿Cómo puedo pagar?", "Efectivo, tarjeta y transferencia. Facturación disponible."),
-        ("¿Hay consulta en línea?", "Solo para seguimiento de pacientes ya valorados en consultorio."),
+        # Consulta en línea para cualquier paciente (propietario, 2026-10-17; antes «solo seguimiento»).
+        ("¿Hay consulta en línea?", "Sí. Agenda por WhatsApp y te indicamos cómo conectarte."),
         ("¿Atienden niños?", "Sí, desde los 0 meses."),
         ("¿Dónde está el consultorio y hay estacionamiento?", f"{DIRECCION_COMPLETA}. Estacionamiento gratuito; elevador y acceso para silla de ruedas."),
     ], "pregunta", "text")}),
@@ -126,7 +127,7 @@ pages["preguntas-frecuentes"] = [
         ("¿Cuánto cuesta?", "Te confirmamos el costo al agendar por WhatsApp. Cirugías y estudios, previa valoración."),
         ("¿Aceptan seguros?", "Particulares y reembolso de seguros de gastos médicos."),
         ("¿Cómo puedo pagar?", "Efectivo, tarjeta y transferencia. Facturación disponible."),
-        ("¿Atienden en línea?", "Solo seguimiento de pacientes ya valorados en consultorio."),
+        ("¿Atienden en línea?", "Sí. Agenda por WhatsApp y te indicamos cómo conectarte."),
         ("¿Atienden niños?", "Sí, desde los 0 meses."),
         ("¿En qué hospitales opera la Dra.?", "Christus Muguerza, Hospital Zambrano Hellion y Hospital Ángeles Valle Oriente."),
     ], "pregunta", "text")}),
