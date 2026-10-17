@@ -790,3 +790,17 @@ Decisiones de José (AskUserQuestion): Otorrino con tono **cálido** como Primer
   - **«Dos especialidades»** se mantiene: José lo dictó en d3344b3, después de D-047, que proponía «Dos áreas». D-047 queda superada en ese punto.
 - **Consulta en línea (2026-10-17, José):** la Dra. ofrece consulta en línea a cualquier paciente. Texto aprobado por José: «Sí. Agenda por WhatsApp y te indicamos cómo conectarte.» Sustituye «Solo (para) seguimiento de pacientes ya valorados en consultorio» en la FAQ de Primera consulta (172) y en Preguntas frecuentes (173). Cambio solo de ese valor exacto en `_elementor_data`, con cache flush y purga. En vivo: 0 restos del texto anterior; en Preguntas frecuentes aparece 2 veces (visible + FAQPage). El inglés lo cambia la nube.
 - `1b90a6d` (inglés: encuadres 68/64 %, títulos de Inicio y cita, D-096) desplegado con setup-en; lo público no cambia.
+
+## Publicación de /en/ y registro nocturno de /en/sleep/ (Claude cloud, 2026-10-17, D-098)
+
+- **publish-en.sh** (WordPress 7.1.3 local con las 8 páginas, 3 legales y 5 fichas en borrador):
+  - sin aprobaciones: lista las 16 entradas con su motivo y «No se publica nada (todo o nada)»;
+  - con aprobaciones simuladas y sin `legal-ok`: bloquea solo por los 3 legales; con `legal-ok` y sin `yes`: «16 entradas listas» (dry-run, nada cambia);
+  - texto cambiado en faq y terms-of-use y setup-en.sh de nuevo: avisa «el texto cambió» y borra la aprobación; publish-en bloquea por /en/faq/. Sin cambios, setup-en no revoca nada;
+  - `legal-ok yes`: publica raíz, 10 hijas y 5 fichas (16 → publish); repetirlo no hace nada; setup-en ya no toca las 11 páginas publicadas.
+  - eval-file recibe `yes`/`legal-ok` posicionales (rechaza opciones desconocidas); el .sh traduce `--yes`/`--legal-ok` y rechaza cualquier otra.
+- **/en/sleep/ nocturno:** body `di-dark` y sleep.css en /sueno/ y /en/sleep/ (antes solo /sueno/). Schema inglés: /en/faq/ FAQPage, /en/contact/ ContactPage, /en/sleep/ MedicalWebPage con «Obstructive sleep apnea» y «Snoring», /en/ con Physician. Capturas 1440 px de /sueno/, /en/sleep/ y /en/sleep/snoring/.
+- **Separadores y lombrices:** `.di-dark` redefine `--color-border` y `--worm-border` (azul-morado tenue); filas, rutas, FAQ, índice, migas y caja de revisión los heredan. El pie no cambia.
+- PHP -l, PHPCS (sin errores nuevos; el aviso meta_query de setup-en.php ya existía), stylelint y bash -n en verde.
+- **Límites:** aprobaciones simuladas en local, no las de la Dra.; servidor PHP local sin LiteSpeed ni .htaccess; la parte remota del .sh (purga, curl) no se ejecutó. Nada desplegado ni publicado en producción.
+

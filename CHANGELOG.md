@@ -287,3 +287,11 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Fecha de la revisión médica traducible («October 20, 2026»); migas de las fichas inglesas hacia /en/sleep/.
 - Q-071: build-medical.py alineado con el texto aprobado.
 
+## 2026-10-17 · Claude cloud · publicación de /en/ y Sueño nocturno en inglés (D-098)
+
+- `tools/deploy/publish-en.sh` + `en/publish-en.php`: publica la versión inglesa todo o nada, solo con las 8 páginas aprobadas por la Dra., las 5 fichas aprobadas y `--legal-ok` (José); sin `--yes` solo revisa; purga y verifica las 15 URL, hreflang y selector.
+- setup-en.sh borra la aprobación de una página si su texto cambia.
+- /en/sleep/ en registro nocturno como /sueno/ (antes salía clara: la regla solo miraba el slug `sueno`); `Language::is_page()` / `irina_is_page()` reconocen la pareja inglesa. También corrige el schema inglés de FAQ, área (con condiciones en inglés), contacto y portada.
+- Registro nocturno: separadores y lombrices en azul-morado tenue (#342b56 / #4a3f7a) en lugar de crema o blanco, en español y en inglés.
+- Fichas inglesas: el eyebrow dice «Sleep», no «Sueño».
+

@@ -16,3 +16,5 @@ Informe actual docs/REVISION_FASE5_2026-10-16.md. Sin web/builds nuevos, sin SMT
 7. José/Dra.: B1, errata de la ficha de apnea ya corregida en la fuente. Aplicarla en producción requiere que la Dra. la apruebe otra vez (D-090).
 8. ✅ OD-008 resuelta (D-095): módulo nativo; consulta en español; páginas base, legales y 5 fichas. **Fecha: versión inglesa lista para la revisión de la Dra. hacia el 30-oct-2026** (Claude cloud construye 13.3/13.4/13.5 en borrador; nada se publica sin su aprobación).
 9. José: monitoreo con UptimeRobot (D-093); al tenerlo, registrarlo en SECURITY y MAINTENANCE.
+10. **Publicar /en/ (13.7, D-098):** cuando la Dra. apruebe las 8 páginas (guía) y las 5 fichas (app) y José dé el OK a los legales, la sesión local despliega código y tema, ejecuta `bash tools/deploy/publish-en.sh` (revisión) y luego `--legal-ok --yes`. Si algo falta, el script no publica nada.
+
