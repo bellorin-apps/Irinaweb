@@ -56,7 +56,7 @@ irina_part(
 	'bleed',
 	[
 		'title'    => get_the_title( $irina_id ),
-		'eyebrow'  => $irina_area ? $irina_area->name : '',
+		'eyebrow'  => $irina_area ? ( 'sueno' === $irina_area->slug ? __( 'Sueño', 'irina-gonzalez' ) : $irina_area->name ) : '', // El término no se traduce; «Sueño» sí (Sleep en /en/).
 		'lead'     => (string) $irina_meta( 'resumen_paciente' ),
 		'variant'  => $irina_sleep ? 'night' : 'default',
 		'breath'   => $irina_sleep,

@@ -221,7 +221,7 @@ add_filter(
 			$classes[] = 'has-bleed';
 		}
 		// Registro nocturno de la sub-marca Sueño en el pilar (las hijas lo aplican en su template).
-		if ( is_page( 'sueno' ) ) {
+		if ( irina_is_page( 'sueno' ) ) {
 			$classes[] = 'di-dark';
 		}
 		return $classes;

@@ -11,6 +11,7 @@ declare( strict_types=1 );
 
 namespace DraIrina\Core\Schema;
 
+use DraIrina\Core\I18n\Language;
 use DraIrina\Core\Settings\PracticeSettings;
 
 final class Graph {
@@ -224,7 +225,7 @@ final class Graph {
 	/** Grafo por tipo de página. */
 	public function graph(): array {
 		$nodes = [];
-		if ( is_page( 'preguntas-frecuentes' ) && 'publish' === get_post_status( get_queried_object_id() ) ) {
+		if ( Language::is_page( 'preguntas-frecuentes' ) && 'publish' === get_post_status( get_queried_object_id() ) ) {
 			$faq = $this->faq_page( get_queried_object_id() );
 			if ( $faq ) {
 				$nodes[] = $faq;
@@ -234,7 +235,7 @@ final class Graph {
 		if ( '' === trim( (string) PracticeSettings::get( 'nombre_profesional' ) ) ) {
 			return apply_filters( 'dra_irina_schema_graph', $nodes );
 		}
-		if ( is_front_page() ) {
+		if ( Language::is_home() ) {
 			$nodes[] = self::physician();
 		} elseif ( is_page() && 'dra-irina-gonzalez-saez' === get_post_field( 'post_name', get_queried_object_id() ) ) {
 			$nodes[] = self::physician();
@@ -246,11 +247,11 @@ final class Graph {
 		} elseif ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) ) {
 			$nodes[] = self::physician();
 			$nodes[] = $this->medical_web_page( get_queried_object_id() );
-		} elseif ( is_page( [ 'otorrinolaringologia', 'sueno' ] ) && 'publish' === get_post_status( get_queried_object_id() ) ) {
+		} elseif ( Language::is_page( [ 'otorrinolaringologia', 'sueno' ] ) && 'publish' === get_post_status( get_queried_object_id() ) ) {
 			// D-076/D-082: las dos páginas cortas de área, revisadas por la Dra. en /briefing/guia/.
 			$nodes[] = self::physician();
 			$nodes[] = $this->area_page( get_queried_object_id() );
-		} elseif ( is_page( 'contacto' ) ) {
+		} elseif ( Language::is_page( 'contacto' ) ) {
 			$nodes[] = self::physician();
 			$nodes[] = [
 				'@type' => 'ContactPage',
@@ -302,7 +303,7 @@ final class Graph {
 			'@type'      => 'FAQPage',
 			'@id'        => get_permalink( $post_id ) . '#faq',
 			'url'        => get_permalink( $post_id ),
-			'inLanguage' => \DraIrina\Core\I18n\Language::TAGS[ \DraIrina\Core\I18n\Language::of( $post_id ) ], // D-095.
+			'inLanguage' => Language::TAGS[ Language::of( $post_id ) ], // D-095.
 			'mainEntity' => $questions,
 		] : [];
 	}
@@ -318,7 +319,7 @@ final class Graph {
 			'@type'      => 'MedicalWebPage',
 			'url'        => get_permalink( $post_id ),
 			'name'       => get_the_title( $post_id ),
-			'inLanguage' => \DraIrina\Core\I18n\Language::TAGS[ \DraIrina\Core\I18n\Language::of( $post_id ) ], // D-095.
+			'inLanguage' => Language::TAGS[ Language::of( $post_id ) ], // D-095.
 			'specialty'  => 'https://schema.org/Otolaryngologic',
 			'reviewedBy' => [ '@id' => self::physician_id() ],
 		];
@@ -326,15 +327,16 @@ final class Graph {
 		if ( '' !== $approved ) {
 			$page['lastReviewed'] = substr( $approved, 0, 10 );
 		}
-		if ( 'sueno' === get_post_field( 'post_name', $post_id ) ) {
+		if ( 'sueno' === Language::es_slug( $post_id ) ) {
+			$en            = Language::EN === Language::of( $post_id );
 			$page['about'] = [
 				[
 					'@type' => 'MedicalCondition',
-					'name'  => 'Apnea obstructiva del sueño',
+					'name'  => $en ? 'Obstructive sleep apnea' : 'Apnea obstructiva del sueño',
 				],
 				[
 					'@type' => 'MedicalCondition',
-					'name'  => 'Ronquido',
+					'name'  => $en ? 'Snoring' : 'Ronquido',
 				],
 			];
 		}
@@ -347,7 +349,7 @@ final class Graph {
 			'@type'        => 'MedicalWebPage',
 			'url'          => get_permalink( $post_id ),
 			'name'         => get_the_title( $post_id ),
-			'inLanguage'   => \DraIrina\Core\I18n\Language::TAGS[ \DraIrina\Core\I18n\Language::of( $post_id ) ], // D-095.
+			'inLanguage'   => Language::TAGS[ Language::of( $post_id ) ], // D-095.
 			'reviewedBy'   => [ '@id' => self::physician_id() ],
 			'dateModified' => get_the_modified_date( 'c', $post_id ),
 		];

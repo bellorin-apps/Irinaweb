@@ -1,9 +1,12 @@
 /* Sub-marca Sueño: registro nocturno solo en /sueno/ y sus hijas (D-026). */
 .di-dark { background: var(--color-night); color: #efe9f7; }
+/* Separadores y lombrices del registro nocturno en azul-morado tenue, no en crema ni blanco (propietario, 2026-10-17): mismos
+   tokens que el resto del sitio, redefinidos aquí para que listas, rutas, FAQ, migas y credenciales los hereden. */
+.di-dark { --color-border: #342b56; --worm-border: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M0 4c1.3-2.6 2.7-2.6 4 0s2.7 2.6 4 0' fill='none' stroke='%234a3f7a' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E"); }
 .di-dark h1, .di-dark h2, .di-dark h3, .di-dark h4 { color: #fff; }
 .di-dark .di-eyebrow { color: var(--color-accent); }
 .di-dark .di-callout, .di-dark .di-inline-cta { background: rgb(255 255 255 / 0.06); }
-.di-dark .di-review-badge, .di-dark .di-faq details, .di-dark .di-toc, .di-dark .di-path > li, .di-dark .di-symptom, .di-dark .di-symptoms { border-color: rgb(255 255 255 / 0.15); }
+.di-dark .di-review-badge, .di-dark .di-faq details, .di-dark .di-toc, .di-dark .di-path > li, .di-dark .di-symptom, .di-dark .di-symptoms { border-color: var(--color-border); }
 .di-dark .di-toc a, .di-dark .di-muted, .di-dark .di-sources, .di-dark .di-review-badge { color: rgb(255 255 255 / 0.6); }
 .di-dark .di-review-badge strong, .di-dark .di-inline-cta b { color: #fff; }
 .di-dark a { color: var(--color-accent); }
@@ -30,6 +33,6 @@ body.di-dark .di-symptom__n, body.di-dark .di-symptom small { color: rgb(255 255
 @keyframes di-breath { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.08); opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .di-breath { animation: none; } }
 /* Franja de migas bajo el hero (D-071) en el registro nocturno: tono noche, no la franja crema. */
-.di-dark .di-crumbs-bar { background: var(--color-night-2); border-bottom-color: rgb(255 255 255 / 0.1); }
+.di-dark .di-crumbs-bar { background: var(--color-night-2); border-bottom-color: var(--color-border); }
 .di-dark .di-crumbs-bar .di-crumbs, .di-dark .di-crumbs-bar .di-crumbs a { color: rgb(255 255 255 / 0.62); }
 .di-dark .di-crumbs-bar .di-crumbs a:hover, .di-dark .di-crumbs-bar .di-crumbs a:focus-visible, .di-dark .di-crumbs-bar .di-crumbs [aria-current="page"] { color: #fff; }

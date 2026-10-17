@@ -118,6 +118,29 @@ final class Language {
 		return $found ? (int) $found[0] : 0;
 	}
 
+	/**
+	 * Slug de la página española equivalente (el propio si la página es española), para que las reglas por página
+	 * (registro nocturno de Sueño, schema de FAQ, área y contacto) valgan en los dos idiomas sin repetir slugs ingleses.
+	 */
+	public static function es_slug( int $post_id ): string {
+		$es = self::translation( $post_id, self::ES );
+		return $es ? (string) get_post_field( 'post_name', $es ) : '';
+	}
+
+	/**
+	 * Como is_page( $slugs ), con los slugs españoles, pero también verdadero en su traducción inglesa (/en/sleep/ ↔ sueno).
+	 *
+	 * @param string|string[] $slugs Slugs de las páginas españolas.
+	 */
+	public static function is_page( $slugs ): bool {
+		return is_page() && in_array( self::es_slug( (int) get_queried_object_id() ), (array) $slugs, true );
+	}
+
+	/** Portada en cualquier idioma: la estática española o la raíz /en/ (emparejada con ella). */
+	public static function is_home(): bool {
+		return is_front_page() || ( is_page() && self::root_id() && (int) get_queried_object_id() === self::root_id() );
+	}
+
 	/** Portada de cada idioma: / para español; /en/ solo si la raíz inglesa está publicada. */
 	public static function home_url( string $lang ): string {
 		if ( self::EN === $lang ) {

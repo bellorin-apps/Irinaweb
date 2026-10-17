@@ -13,6 +13,15 @@ function irina_lang(): string {
 	return class_exists( '\DraIrina\Core\I18n\Language' ) ? \DraIrina\Core\I18n\Language::current() : 'es';
 }
 
+/**
+ * Versión de is_page() con slugs españoles que vale también en la traducción inglesa (/en/sleep/ se comporta como /sueno/).
+ *
+ * @param string|string[] $slugs Slugs de las páginas españolas.
+ */
+function irina_is_page( $slugs ): bool {
+	return class_exists( '\DraIrina\Core\I18n\Language' ) ? \DraIrina\Core\I18n\Language::is_page( $slugs ) : is_page( $slugs );
+}
+
 /** Portada del idioma actual (en /en/ solo si la raíz inglesa está publicada; si no, la española). */
 function irina_home_url(): string {
 	if ( 'en' === irina_lang() && class_exists( '\DraIrina\Core\I18n\Language' ) ) {

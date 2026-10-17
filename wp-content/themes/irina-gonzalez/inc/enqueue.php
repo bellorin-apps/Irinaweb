@@ -22,7 +22,7 @@ add_action(
 		wp_enqueue_style( 'irina-base', IRINA_THEME_URI . '/assets/css/base.css', [ 'irina-tokens' ], irina_asset_version( 'assets/css/base.css' ) );
 		wp_enqueue_style( 'irina-components', IRINA_THEME_URI . '/assets/css/components.css', [ 'irina-base' ], irina_asset_version( 'assets/css/components.css' ) );
 
-		if ( ( is_singular( [ 'condicion', 'tratamiento' ] ) && has_term( 'sueno', 'area' ) ) || is_page( 'sueno' ) ) {
+		if ( ( is_singular( [ 'condicion', 'tratamiento' ] ) && has_term( 'sueno', 'area' ) ) || irina_is_page( 'sueno' ) ) {
 			wp_enqueue_style( 'irina-sleep', IRINA_THEME_URI . '/assets/css/sleep.css', [ 'irina-components' ], irina_asset_version( 'assets/css/sleep.css' ) );
 		}
 
