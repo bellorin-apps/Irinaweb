@@ -99,20 +99,28 @@
 		if ( 'en' === $slug ) {
 			$root = $id;
 		}
-		if ( 'html' === ( $def['kind'] ?? 'elementor' ) ) {
+		// Si el texto cambia, la aprobación previa de la Dra. en su guía deja de valer (publish-en.sh la exige de nuevo).
+		$is_html = 'html' === ( $def['kind'] ?? 'elementor' );
+		$new     = $is_html ? (string) file_get_contents( "$dir/{$slug}.html" ) : $fill( (string) file_get_contents( "$dir/{$slug}.elementor.json" ) );
+		$old     = $post ? ( $is_html ? (string) $post->post_content : (string) get_post_meta( $id, '_elementor_data', true ) ) : '';
+		if ( $post && $old !== $new && get_post_meta( $id, '_di_page_approved_at', true ) ) {
+			delete_post_meta( $id, '_di_page_approved_at' );
+			delete_post_meta( $id, '_di_page_approved_by' );
+			WP_CLI::warning( "/en/ {$slug}: el texto cambió; la Dra. debe aprobarla de nuevo en su guía." );
+		}
+		if ( $is_html ) {
 			// Legales: HTML con los shortcodes del consultorio, plantilla por defecto (como en español).
 			wp_update_post(
 				[
 					'ID'           => $id,
-					'post_content' => wp_slash( (string) file_get_contents( "$dir/{$slug}.html" ) ),
+					'post_content' => wp_slash( $new ),
 				]
 			);
 			delete_post_meta( $id, '_wp_page_template' );
 		} else {
-			$data = $fill( (string) file_get_contents( "$dir/{$slug}.elementor.json" ) );
 			update_post_meta( $id, '_wp_page_template', 'elementor_header_footer' );
 			update_post_meta( $id, '_elementor_edit_mode', 'builder' );
-			update_post_meta( $id, '_elementor_data', wp_slash( $data ) );
+			update_post_meta( $id, '_elementor_data', wp_slash( $new ) );
 			delete_post_meta( $id, '_elementor_css' );
 			delete_post_meta( $id, '_elementor_element_cache' );
 		}
