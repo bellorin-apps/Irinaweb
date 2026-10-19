@@ -31,8 +31,12 @@ for rel in themes/irina-gonzalez plugins/dra-irina-core; do
 	[ -d "$(dirname "$dst")" ] || alto "falta $(dirname "$dst")"
 	if [ -e "$dst" ]; then
 		if find "$dst" -type l | grep -q .; then alto "$dst contiene enlaces; no se borra"; fi
-		rm -rf -- "$dst"
 	fi
+done
+# Validar ambos destinos antes de cambiar el primero: un plugin inválido no debe dejar el tema actualizado a medias.
+for rel in themes/irina-gonzalez plugins/dra-irina-core; do
+	dst="$LAB/site/wp-content/$rel"
+	if [ -e "$dst" ]; then rm -rf -- "$dst"; fi
 	cp -r -- "$R/wp-content/$rel" "$dst"
 done
 echo "sync: $(git -C "$R" rev-parse --short HEAD)"

@@ -199,3 +199,7 @@ D-100 prevalece: Q-078 ACCEPTED, sin reabrir decisión de IndexNow ni cambiar co
 ## Aplicación D-101 · Codex · 2026-10-19
 
 GO limitado a entrega de código por Claude local con respaldo/verificación, EN en borrador; no autoriza setup-en/publish-en ni lanzamiento. Q-079 corresponde al laboratorio y no entra en deploy-code.sh: no bloquea esta entrega, pero impide reutilizar sync inseguro. D-100 mantiene IndexNow aceptado. Codex no despliega. Informe de entrega, apartado GO de código D-101.
+
+## Auditoría9b52e1e y bloqueo operativo D-101 · Codex · 2026-10-19
+
+Q-079 VERIFIED_LOCAL con30/30 y prevalidación final de ambos destinos. D-101 no ejecutado por control de permisos local; no se elude ni se atribuye respaldo/despliegue. GO de código sigue vigente, sin autorizar publicación; resolución de permisos por flujo normal en sesión local. Q-078 ACCEPTED D-100 y tareas/avance intactos. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md.

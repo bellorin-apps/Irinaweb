@@ -1,5 +1,9 @@
 # STATUS — Dra. Irina González Sáez
 
+**Auditoría Codex sobre9b52e1e:** Q-079 **VERIFIED_LOCAL**,30/30 repetidos y ajuste de prevalidación de ambos destinos con regresión independiente. D-101 **NO EJECUTADO**, bloqueado por permisos locales según QA, sin respaldo nuevo ni verificación posterior. GO de código b83d9ee sigue vigente; resolver permisos por flujo normal, sin eludirlos. EN en borrador, sin publicar. Informe `docs/REVISION_D101_POSTDEPLOY_2026-10-19.md`.
+
+## Historial (prevalece la auditoría anterior)
+
 **Auditoría posterior solicitada:** pull/ramas remotas aún en b83d9ee, sin evidencia nueva del despliegue D-101 o corrección posterior Q-079. Despliegue/verificaciones REVIEW no acreditados; Q-079 FIX/OPEN. Solicitar SHA de entrega, sin repetir despliegue si ya se hizo. Informe `docs/REVISION_D101_POSTDEPLOY_2026-10-19.md`.
 
 **GO de código D-101 (Codex, base72dbf9a):** Claude local puede ejecutar solo deploy-code.sh con respaldo y verificación posterior, manteniendo EN en borrador. Sin setup-en/publish-en ni activación Doctoralia. Q-079 no bloquea este alcance: sync.sh del laboratorio no forma parte de la entrega y no debe usarse. 13.5REVIEW/13.7DOING/13.6OWNER sin cambio. Evidencia y pasos en BATON e informe de entrega.

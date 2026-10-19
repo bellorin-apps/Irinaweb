@@ -1,0 +1,24 @@
+{
+  "base": "9b52e1e + auditor prevalidation",
+  "seo_failures": [],
+  "seo_warnings": [],
+  "en_routes": 15,
+  "es_home_inLanguage": [
+    "es"
+  ],
+  "sitemap": 30,
+  "baseline_c151258": {
+    "exit": 0,
+    "outside_lab_sentinels_intact": false
+  },
+  "sync_ancestor_link": {
+    "exit": 3,
+    "outside_lab_sentinels_intact": true,
+    "stdout": "",
+    "stderr": "ALTO: /c/Users/bellg/Documents/Irinaweb/tmp/audit-q079-s9v1t7xp/repo/tmp/lab/site/wp-content es un enlace o junction; no se toca"
+  },
+  "prevalidate_both_destinations": {
+    "exit": 3,
+    "local_theme_intact": true
+  }
+}

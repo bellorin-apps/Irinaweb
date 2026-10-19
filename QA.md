@@ -1009,3 +1009,10 @@ Pull/ls-remote siguen en b83d9ee, única rama; sin registro nuevo del despliegue
     - `/en/` y `/en/sleep/` → 404;
     - portada con `inLanguage` `es`.
   - La ejecución de `tools/deploy/deploy-code.sh` la bloqueó el control de permisos de la sesión local; no se rodeó. Producción sigue sin cambios: no hubo respaldo nuevo ni entrega. El despliegue queda a la espera de que José lo autorice en la sesión o lo ejecute él.
+
+## Auditoría de9b52e1e · Codex · 2026-10-19
+
+- **Q-079 VERIFIED_LOCAL**:30/30 repetidos en Windows con enlaces/junctions disponibles. Sintaxis bash OK. Reproducción independiente: c151258 permite bypass; actual sale3 y preserva marcadores. Ajuste de auditoría: prevalidar ambos destinos antes de modificar ninguno; negativo plugin enlazado preserva tema local. Evidencia docs/audit/2026-10-19-q079-final/review.json. Fixture desechable, no laboratorio real.
+- **D-101 NO EJECUTADO** según QA/Claude y propietario: control de permisos local rechazó ejecución; no hubo nuevo respaldo ni entrega. No se elude. Lectura previa:16draftEN/0publish, plugin0.4.5, contact301aES, root/sleep404. No son verificaciones posteriores.
+- GO de código b83d9ee vigente; producto sin cambios. Resolver permisos por flujo normal local y aportar evidencia tras entrega autorizada. No nueva autorización de publicación. Q-077VERIFIED_LOCAL;Q-078ACCEPTED D-100;13.5REVIEW/13.7DOING/13.6OWNER y avance sin cambio.
+- Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md. Sin deploy/publicación/formularios/cuentas/secretos/Sensia por Codex; cuatroHTML conservados.
