@@ -160,6 +160,9 @@
 		if ( is_wp_error( $r ) || 'publish' !== get_post_status( $id ) ) {
 			$rollback_failed = [];
 			foreach ( array_reverse( $changed, true ) as $restore_id => $restore_status ) {
+				if ( get_post_status( $restore_id ) === $restore_status ) {
+					continue; // No llegó a cambiar (p. ej., la entrada que falló): ya está en su estado previo (Q-076).
+				}
 				try {
 					$restored = wp_update_post(
 						[

@@ -9,7 +9,8 @@ for a in "$@"; do
   case "$a" in --yes) ARGS+=" yes" ;; --legal-ok) ARGS+=" legal-ok" ;; *) echo "Opción desconocida: $a" >&2; exit 2 ;; esac
 done
 . "$(dirname "${BASH_SOURCE[0]}")/lib.sh"
-WP="cd '$WEBROOT' && /opt/alt/php84/usr/bin/php /usr/local/bin/wp --skip-plugins=elementor,elementor-pro"
+# Con Elementor cargado (Q-076): sin él, wp_update_post rechaza la plantilla elementor_header_footer (invalid_page_template).
+WP="cd '$WEBROOT' && /opt/alt/php84/usr/bin/php /usr/local/bin/wp"
 TMP="/tmp/di-en-pub-$(stamp)"
 rssh "mkdir -p '$TMP' && chmod 700 '$TMP'"
 trap 'rssh "rm -rf '"'$TMP'"'"' EXIT
