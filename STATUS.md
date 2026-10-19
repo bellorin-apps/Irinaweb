@@ -1,5 +1,7 @@
 # STATUS — Dra. Irina González Sáez
 
+**Auditoría de pendientes (Codex, 2026-10-19):** pull al día en `62e8cba`; no se recibieron correcciones nuevas. Q-077 y Q-079: **FIX / OPEN**; Q-078: **REVIEW / OPEN**, pendiente decisión de José. 13.5 REVIEW y 13.7 DOING sin cambio. Informe `docs/REVISION_Q077_Q079_2026-10-19.md`. Sin desplegar ni publicar.
+
 Actualizado: 2026-10-19 · Codex · auditoría de b26efa4 y evidencia local recibida en 43cc1df. Informe: docs/REVISION_Q076_2026-10-19.md.
 
 **Español:221/228pesos=96,93%;83/86DONE. Inglés aparte:9/19pesos=47,37%;3/7DONE.** NueveDESCOPED/25pesos por D-088/D-094; soloDONEsuma.

@@ -901,3 +901,15 @@ Informe: `docs/REVISION_Q076_2026-10-19.md`. **Q-076 VERIFIED_LOCAL ratificado;1
 - **Q-077 P3 OPEN:** portada sinWebSite/WebPage; sieteENsin inLanguage en C-seo.json (portada, doctora, primera visita, contacto, treslegales). Harness SEO permite vacío y no sale con error al imprimir fallos; no cierra schema.
 - **Q-078 P2 OPEN:** IndexNow no compensado, pendiente decisión de José; no se acepta el riesgo por esta auditoría.
 - **Q-079 P2 OPEN (FIX laboratorio):** mkdeploy.sh copia toda tools/deploy antes de borrar env.sh/*.local.txt y calcula raíz por ../..; excluir privados antes de copiar, resolver raíz y validar destino antes de borrarlo. Solo inspección de fuente; sin ejecutar helper ni constatar exposición. No invalida los resultados funcionales de Q-076.
+
+## Auditoría de correcciones solicitadas Q-077/Q-079 y pendiente Q-078 · Codex · 2026-10-19
+
+Pull: **Already up to date**, HEAD62e8cba; sin nuevos commits ni cambios locales de los archivos afectados. Informe `docs/REVISION_Q077_Q079_2026-10-19.md`.
+
+| Hallazgo | Veredicto | Evidencia / pendiente |
+|---|---|---|
+| Q-077 | FIX / OPEN | C-seo conserva siete EN sin inLanguage; seo_check.py acepta vacío y no devuelve error por sus fallos. No llegó corrección de schema/harness. |
+| Q-079 | FIX / OPEN | mkdeploy.sh conserva copia total previa a exclusión, raíz ../.. y borrado sin validación de destino. No llegó corrección ni nuevas pruebas. No se ejecutó ni constató exposición. |
+| Q-078 | REVIEW / OPEN | Efectos IndexNow no compensados; sin decisión nueva de José ni mitigación acreditada. |
+
+Cotejo offline de evidencia pasa sin modificar su JSON; bash -n del helper pasa (no acredita aislamiento). Sin WordPress/publicación ni ejecución del helper. No cambios PHP/JS/producto. Q-076 VERIFIED_LOCAL;13.5REVIEW/13.7DOING/13.6OWNER. PROGRESS regenerado sin aumento. Sin desplegar, publicar, formularios, cuentas o secretos; cuatroHTML de José intactos.

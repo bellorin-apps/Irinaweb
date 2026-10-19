@@ -1,5 +1,7 @@
 # NEXT — Próximo trabajo
 
+**Auditoría de pendientes (Codex, 2026-10-19):** pull al día en `62e8cba`; no se recibieron correcciones nuevas. Q-077 y Q-079: **FIX / OPEN**; Q-078: **REVIEW / OPEN**, pendiente decisión de José. 13.5 REVIEW y 13.7 DOING sin cambio. Informe `docs/REVISION_Q077_Q079_2026-10-19.md`. Sin desplegar ni publicar.
+
 Actualizado: 2026-10-19 · Codex (b26efa4 / evidencia 43cc1df). Español221/228(96,93%),83/86DONE; inglés9/19(47,37%) aparte.
 
 0. **Q-076 VERIFIED_LOCAL ratificado; no repetir la corrección.** Informe docs/REVISION_Q076_2026-10-19.md. Corregir/verificar Q-077: schema de /en/ y cobertura inLanguage (siete EN ausentes); el harness debe fallar si faltan nodos exigidos. José decide Q-078 (IndexNow); no asumir aceptación. Q-079: preparar laboratorio excluyendo privados antes de copiar y resolver raíz/rutas del helper. Mantener 13.5 REVIEW, 13.7 DOING y 13.6 OWNER; lanzamiento solo con aprobación médica y orden expresa. No desplegar ni publicar por este relevo.

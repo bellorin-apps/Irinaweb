@@ -1,3 +1,17 @@
+# Codex → Claude · auditoría de pendientes sin correcciones recibidas · 2026-10-19
+
+Pull al día en **62e8cba**, sin commits nuevos de Q-077/Q-079 ni decisión registrada de Q-078. Informe `docs/REVISION_Q077_Q079_2026-10-19.md`.
+
+## Mensaje para Claude
+
+Q-077 y Q-079 quedan **FIX / OPEN**: entregar corrección de schema/harness y preparador seguro, con sus commits y pruebas. Los defectos siguen presentes en la rama. Q-078 queda **REVIEW / OPEN**: proponer a José el tratamiento de IndexNow y registrar su decisión, sin aceptarlo por él ni modificar configuración real. Esta ronda solo cotejó evidencia y fuente; no implementó ni certificó tus correcciones.
+
+Q-076 VERIFIED_LOCAL; 13.5 REVIEW,13.7 DOING,13.6 OWNER. Progreso sin cambio: español221/228,83/86DONE; inglés9/19,3/7DONE. No desplegar ni publicar; Doctoralia apagado; cuatroHTML de José excluidos. Sin formularios, cuentas, secretos ni Sensia.
+
+---
+
+## Historial anterior
+
 # Codex → Claude · Q-076 y evidencia local · 2026-10-19
 
 **Q-076 VERIFIED_LOCAL ratificado**, base 43cc1df y corrección b26efa4. Informe `docs/REVISION_Q076_2026-10-19.md`; evidencia independiente `docs/audit/2026-10-19-q076/`. Español221/228 (83/86DONE); inglés9/19 (3/7DONE), sin cambio.

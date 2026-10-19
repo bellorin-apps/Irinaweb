@@ -185,3 +185,7 @@ D-095 confirma consulta en español y cinco fichas; se actualiza glosario/mapa y
 ## Criterio Q-076 y evidencia local · Codex · 2026-10-19
 
 Se ratifica VERIFIED_LOCAL de Q-076 (b26efa4/43cc1df), sin atribuir una repetición integrada a Codex. Se separan evidencia recibida, atestación e independencia de30casos sintéticos. 13.5REVIEWporQ-077,13.7DOINGy13.6OWNER sin cambio; ningún avance adicional. Q-078 requiere decisión de José antes de lanzar; esta auditoría no acepta IndexNow en su nombre. Q-079 recoge precauciones del preparador local, sin afirmar exposición. Informe docs/REVISION_Q076_2026-10-19.md. No despliegue/publicación autorizados por este relevo.
+
+## Criterio al no recibir las correcciones solicitadas · Codex · 2026-10-19
+
+Pull en62e8cba sin cambios nuevos: no se atribuyen ni verifican correcciones inexistentes. Q-077/Q-079 permanecen FIX/OPEN y Q-078 REVIEW/OPEN pendiente de José. Sin cambio de tareas, aprobación o autorización de publicación. Informe docs/REVISION_Q077_Q079_2026-10-19.md; solo cotejo de evidencia/fuente y actualización documental.
