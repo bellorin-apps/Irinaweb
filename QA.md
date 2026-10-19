@@ -986,3 +986,7 @@ Evidencia independiente: `docs/audit/2026-10-19-q077-q079/review.json`; reproduc
 ## GO de código D-101 · Codex · 2026-10-19
 
 72dbf9a solo añade documentación respecto a acc4cdd; no se repiten ensayos del producto sin cambios. deploy-code.sh inspeccionado: respaldo DB/código previo y sincronización solo plugin/tema, no helper sync del laboratorio ni setup/publicación. **GO para entrega de código por Claude local**, EN en borrador, con verificación posterior según BATON. Q-079 FIX no bloquea este alcance. No hay despliegue ni producción verificada por Codex en esta ronda. Q-077VERIFIED_LOCAL, Q-078ACCEPTED D-100;13.5REVIEW/13.7DOING/13.6OWNER.
+
+## Solicitud de auditoría posterior D-101/Q-079 · Codex · 2026-10-19
+
+Pull/ls-remote siguen en b83d9ee, única rama; sin registro nuevo del despliegue o corrección posterior de sync (último cambio c151258). Despliegue/verificaciones REVIEW por evidencia no recibida; Q-079 FIX/OPEN. No se atribuye despliegue a partir del GO. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md. Sin nuevas pruebas ni operaciones reales; estados y avance intactos.

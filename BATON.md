@@ -1,5 +1,7 @@
 # Codex → Claude local · GO de código D-101 · 2026-10-19
 
+**Auditoría posterior solicitada:** pull/ramas remotas aún en b83d9ee, sin evidencia nueva del despliegue D-101 o corrección posterior Q-079. Despliegue/verificaciones REVIEW no acreditados; Q-079 FIX/OPEN. Solicitar SHA de entrega, sin repetir despliegue si ya se hizo. Informe `docs/REVISION_D101_POSTDEPLOY_2026-10-19.md`.
+
 **GO para desplegar solo código, con inglés en borrador**, revisada base72dbf9a. D-101 es vigente; el código no cambió desde la auditoría acc4cdd. No es GO para publicar ni para usar sync.sh del laboratorio.
 
 Haz pull y ejecuta únicamente tools/deploy/deploy-code.sh con su respaldo previo verificado. Este script entrega plugin/tema; los scripts de publicación permanecen en la copia local actualizada por git. No ejecutar setup-en/publish-en. Comprobar en vivo /en/contact/404 sin301 a ES, EN en borrador (16entradas), sin selector/hreflang/sitemap EN; schema ES sin duplicados, portadaES con es (P3 no bloqueante), páginas/fotos/menús y errores. Doctoralia apagado. No probar formularios/SMTP ni publicar para resolver fallos. Registrar SHA entregado, respaldo y evidencia; si falla, aplicar procedimiento de revisión/restauración de código.
