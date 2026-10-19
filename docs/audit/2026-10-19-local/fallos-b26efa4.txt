@@ -1,0 +1,17 @@
+== Fallos de escritura (fallo en /en/contact/, 6.ª entrada)
+  wp_error                 exit 1  éxito anunciado: no  publicadas tras el fallo: -
+      Error: Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados.
+      inyección: 2026-10-19T19:25:11+00:00 wperror en 97
+  estado-retenido          exit 1  éxito anunciado: no  publicadas tras el fallo: -
+      Error: Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados.
+      inyección: 2026-10-19T19:25:15+00:00 retenido en 97
+  excepcion                exit 1  éxito anunciado: no  publicadas tras el fallo: -
+      Error: Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados.
+      inyección: 2026-10-19T19:25:19+00:00 excepcion en 97
+  restauracion-falla       exit 1  éxito anunciado: no  publicadas tras el fallo: 99:ent
+      Error: Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. REVISIÓN MANUAL: no restaurados IDs 99
+      inyección: 2026-10-19T19:25:23+00:00 excepcion en 97
+      inyección: 2026-10-19T19:25:23+00:00 restauracion falla en 99
+  falla-en-la-raiz         exit 1  éxito anunciado: no  publicadas tras el fallo: -
+      Error: Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados.
+      inyección: 2026-10-19T19:25:26+00:00 wperror en 96

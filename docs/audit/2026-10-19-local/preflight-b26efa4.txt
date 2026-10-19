@@ -1,0 +1,18 @@
+== Preflight (debe bloquear con yes legal-ok y no cambiar nada)
+  manifiesto-vacio             exit 1  SIN CAMBIOS  Error: Manifiesto inglés incompleto o inesperado; no se publica nada.
+  manifiesto-truncado          exit 1  SIN CAMBIOS  Error: Manifiesto inglés incompleto o inesperado; no se publica nada.
+  json-invalido                exit 1  SIN CAMBIOS  Error: Faltan pages.json, fichas-en.json o el módulo de idioma.
+  ficha-duplicada              exit 1  SIN CAMBIOS  Error: Manifiesto de fichas incorrecto; no se publica nada.
+  fichas-incompletas           exit 1  SIN CAMBIOS  Error: Manifiesto inglés incompleto o inesperado; no se publica nada.
+  tipo-pagina-incorrecto       exit 1  SIN CAMBIOS  Error: Tipo de página inglés inesperado; no se publica nada.
+  tipo-ficha-incorrecto        exit 1  SIN CAMBIOS  Error: Manifiesto de fichas incorrecto; no se publica nada.
+  pagina-ausente               exit 1  SIN CAMBIOS  Error: Publicación bloqueada por preflight.
+  ficha-sin-idioma             exit 1  SIN CAMBIOS  Error: Publicación bloqueada por preflight.
+  pagina-idioma-incorrecto     exit 1  SIN CAMBIOS  Error: Publicación bloqueada por preflight.
+  pareja-es-no-publicada       exit 1  SIN CAMBIOS  Error: Publicación bloqueada por preflight.
+  ficha-es-no-publicada        exit 1  SIN CAMBIOS  Error: Publicación bloqueada por preflight.
+  falta-aprobacion-pagina      exit 1  SIN CAMBIOS  Error: Publicación bloqueada por preflight.
+  falta-aprobacion-ficha       exit 1  SIN CAMBIOS  Error: Publicación bloqueada por preflight.
+  falta-legal-ok               exit 1  SIN CAMBIOS  Error: Publicación bloqueada por preflight.
+  argumento-desconocido        exit 1  SIN CAMBIOS  Error: Argumentos desconocidos; no se publica nada.
+  pagina-bajo-en-marcada-es    exit 0  CAMBIÓ      

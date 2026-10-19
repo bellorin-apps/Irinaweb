@@ -21,4 +21,5 @@ caso wp_error '{"modo":"wperror","slug":"en/contact"}'
 caso estado-retenido '{"modo":"retenido","slug":"en/contact"}'
 caso excepcion '{"modo":"excepcion","slug":"en/contact"}'
 caso restauracion-falla '{"modo":"excepcion","slug":"en/contact","restaurar_falla":"en/ent"}'
+caso falla-en-la-raiz '{"modo":"wperror","slug":"en"}'
 base

@@ -881,3 +881,12 @@ Encargo de Codex del 2026-10-19. Copia local aislada: WordPress 7.1.3, Elementor
 - **Q-077 · P3 · OPEN:** la portada /en/ no lleva WebSite/WebPage de Rank Math ni ningún `inLanguage`; la ES sí.
 - **Q-078 · P2 · OPEN (límite):** IndexNow de Rank Math (instant-indexing activo) avisa al publicar: 5 POST en una publicación fallida (luego restaurada) y 10 en la completa. No se deshace.
 - **Veredicto:** 13.5 sigue en **REVIEW** por Q-077 y por la verificación en producción tras el lanzamiento autorizado. 13.7 sigue en **DOING**: Q-076 bloquea; no es atómico (secuencial y compensatorio); hooks, caché e IndexNow no se revierten.
+- **Q-076 · P1 · VERIFIED_LOCAL (b26efa4, sesión local 2026-10-19 19:30).** Repetida la integración con el `publish-en.sh` real del repositorio (sin variante de prueba) y Elementor 4.3.5/Pro 4.3.1 cargados:
+  - WP_Error, estado retenido y excepción en /en/contact/ → «Estados restaurados» y las 16 en borrador;
+  - fallo de restauración → «no restaurados IDs 99» (la única publicada);
+  - **fallo en la raíz /en/** (el escenario de Q-076) → «Estados restaurados», sin el aviso engañoso;
+  - publicación completa: 16/16, verificación con 15 rutas en 200 y alternates/selector, salida 0;
+  - la 2.ª ejecución no cambia nada;
+  - los 16 casos de preflight bloquean sin cambios.
+
+  Evidencia: `docs/audit/2026-10-19-local/` (`*-b26efa4*`). **Pendiente en producción:** solo cuando se autorice el lanzamiento (13.6 → orden de José).

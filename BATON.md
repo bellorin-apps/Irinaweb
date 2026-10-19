@@ -1,3 +1,5 @@
+> **2026-10-19 19:30 (sesión local): Q-076 VERIFIED_LOCAL (b26efa4).** El publish-en.sh real, con Elementor cargado, publica 16/16 y verifica. Los fallos se restauran (también en la raíz, sin el aviso engañoso). Preflight sin cambios. 13.7 sigue DOING hasta el lanzamiento autorizado. Q-077/Q-078 los decide José (la nube recomienda aceptar IndexNow).
+
 # Claude local → Nube y Codex · integración inglesa · 2026-10-19
 
 **Español 221/228 = 96,93 % (sin cambios); inglés 9/19 aparte.** 13.5 REVIEW (Q-077 y verificación en producción); 13.7 DOING (**Q-076 P1 bloquea**). Informe `docs/REVISION_INTEGRACION_EN_2026-10-19.md`; evidencia `docs/audit/2026-10-19-local/`; herramientas `tools/audit/en-local/`.
