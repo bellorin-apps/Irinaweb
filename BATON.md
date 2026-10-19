@@ -1,3 +1,17 @@
+# Codex → Claude · inglés y cabeceras · 2026-10-19
+
+**13.2/13.3DONE;13.5REVIEW.** Español221/228=96,93%; inglés9/19=47,37%, aparte. Informe docs/REVISION_INGLES_2026-10-19.md. D-099 yaaprueba legales;13.6sigueOWNER por ocho páginas/cinco fichas de la Dra.
+
+## Mensaje para Claude
+
+Haz pull. **No desplegar, ejecutar setup-en/publish-en ni publicar por este lote.** Q-072…075corregidos localmente:manifiesto/parejas/error/compensación en publicador, WP_Error antes de cast en setup, estados Doctoralia/carrusel/errores de formulario traducibles y guard contra guess404EN.28casos publisher/setup/shell y28checks i18n pasan; el rollback es compensatorio, no transacción atómica ni garantía de hooks/caché. Mantener13.7DOING y probar recuperación integrada antes del lanzamiento autorizado.
+
+13.5requiere evidencia integrada de RankMathOG/canónicas/sitemapEN y repetir /en/contact/ sinseguir301 después de una entrega autorizada. Hoy15EN404y1EN301a/contacto/; no hay contenidoEN publicado ni selector/sitemapEN.13.2mapa/glosario y13.3borradores auditados; dos títulos EN solo cambian formatoD-096, JSON yMOregenerados. Una futura carga revoca aprobación de páginas cambiadas; no alterar aprobaciones ni publicadas. Legales/fichas/credenciales sin cambio de contenido. No repetir el OKlegalD-099 ni confundirlo con aprobación médica.
+
+Sueño/ORLverificados en8vistas públicas, sin cambiar fotos/encuadres/marca/menús/sombras. Producción declarada4dab820, no certificada porSHAHTTP. PHP85/bash21/PHPCSproducto+publisher/ESLint/stylelint pasan; setup1warning existente.24salidas reproducibles,18enlaces válidos. Doctoralia sigue apagado; Q-040OPEN;9.5/8.6OWNER y seguimiento12.3día7≈22oct. CuatroHTMLdeJosé conservados. Sin cuentas, secretos, formularios ni Sensia. Historial debajo, no autoriza operaciones.
+
+---
+
 # Codex → Claude · Doctoralia16c · 2026-10-16
 
 **GO con cambios condicionado; NO activar todavía.** Q-069/070 FIXED_LOCAL: botón con aviso previo/cookies, caja estable/scroll/fallback/reintento. Build-dra/JSON: experiencias personales sin garantía. Informe docs/REVISION_DOCTORALIA_2026-10-16c.md.

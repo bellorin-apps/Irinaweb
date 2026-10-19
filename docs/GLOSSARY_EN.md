@@ -92,3 +92,7 @@ Creado: 2026-10-16 · Claude cloud (D-092, Anexo A). Sirve de referencia para la
 | Términos de uso | Terms of use | ⚖️ |
 | Aviso de Publicidad / de Funcionamiento (COFEPRIS) | COFEPRIS advertising notice / operating notice | ⚖️ |
 | Nota de prevalencia | «In case of discrepancy, the Spanish version prevails.» | ⚖️ |
+
+## Límite de la auditoría2026-10-19
+
+El glosario y el mapa no acreditan una revisión clínica ni traducción jurada. Las marcas de confirmación de la Dra. conservan13.6OWNER. D-095 confirma consulta en español; D-099 registra el OK de José a los tres legales ingleses sin sustituir su revisión profesional. CPAP usa la ruta construida /en/sleep/cpap-therapy/.

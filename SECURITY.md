@@ -42,3 +42,7 @@ Las cabeceras completas de Headers se aplican al front PHP, no se afirman en tod
 ## Doctoralia inactivo · auditoría16c2026-10-16
 
 Carga local propuesta solo por botón con aviso, no por scroll (Q-069); script externo HTTPS sin relajar cabeceras. CSP pública upgrade-insecure-requests no limita orígenes y XFO no bloquea iframe saliente. Caja/estado/fallback no aíslan el código de terceros: scriptmutable se ejecuta con privilegios de página después del clic. Cookies/foco/contenido del widget real no ensayados; cotejo del HTML oficial del perfil pendiente. OchoGET públicos sinwidget; no activado/desplegado. Informe docs/REVISION_DOCTORALIA_2026-10-16c.md.
+
+## Protecciones de inglés · auditoría2026-10-19
+
+Q-072/073FIXED_LOCAL:publish-en valida manifiesto completo/parejas/aprobaciones/flags y falla con estado no publicado o error; intenta compensar estados sin ocultar fallo de recuperación. Shell validaHTTP/alternates y rechaza flags antes de lib/env. setup comprueba WP_Error antes de usar IDs.28casos en stubs sinenv/SSH/DB reales; no garantía transaccional ni de hooks/caché. Q-075guard local evita adivinación canónica bajo/en/,15rutas públicas404y/en/contact/301aESpendiente de origen/verificación. No deploy/publicación. Informe docs/REVISION_INGLES_2026-10-19.md.

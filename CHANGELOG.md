@@ -295,3 +295,10 @@ Con el snapshot seguro de Claude local,1.5/3.6pasanDONE;1.2permaneceREVIEW por d
 - Registro nocturno: separadores y lombrices en azul-morado tenue (#342b56 / #4a3f7a) en lugar de crema o blanco, en español y en inglés.
 - Fichas inglesas: el eyebrow dice «Sleep», no «Sueño».
 
+
+## 2026-10-19 · Codex · auditoría inglés y cabeceras
+
+- 13.2/13.3FIX→DONE (referencia/borrador),13.5REVIEW por integración SEO y301pendientes. Inglés9/19 aparte; español221/228sin cambio.
+- Q-072/073:preflight completo/parejas/error/compensación y verificaciónHTTP; setup abortaWP_Error antes de cast.28casos de stubs con dos fallos originales reproducidos; no atomicidad ni rollbackreal certificados.
+- Q-074/075:estados Doctoralia traducidos y guard de guess404EN; no activación. Dos títulosEN reformatadosD-096, JSON/catálogos regenerados. Sueño/ORLverificados en8vistas, sin alterar fotos/sombras/marca/menú.
+- Informe docs/REVISION_INGLES_2026-10-19.md. Sin despliegue, publicación, aprobación médica ficticia, claves, cuentas ni SMTP.

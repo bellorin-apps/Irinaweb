@@ -1,13 +1,15 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado:2026-10-16 · Codex · Doctoralia16c, base a22b3eb, pull al día.
+Actualizado:2026-10-19 · Codex · auditoría inglés/cabeceras, base6d96ae1 tras pull.
 
-**96,93% español:221/228pesos,83/86DONE.** NueveDESCOPED/25pesos (D-088/D-094); inglés aparte. PLAN→PROGRESS; soloDONEsuma.
+**Español:221/228pesos=96,93%;83/86DONE. Inglés aparte:9/19pesos=47,37%;3/7DONE.** NueveDESCOPED/25pesos por D-088/D-094; soloDONEsuma.
 
-5.1DONE (tema y assets);5.2FIX documental→DONE (core y flujo médico sin UI clínica de repetidores);5.3DONE/Q-042VERIFIED (NAP central por ámbito y espejo cotejado);5.5FIX→DONE/Q-068VERIFIED local (npm Windows). OchoGET públicos,9camposNAP,6assets,14JSON regenerados sin cambios y prueba negativa de deriva;4CPT/3tax/43metas,permisos7/7,regresión28casos,PHP81/PHPCS/bash19/ESLint/stylelint pasan. Sin sincronización automática WordPress↔builds; ESLint deprecado registrado para mantenimiento.
+13.2FIX documental→DONE (glosario/mapa actualizados D-095/CPAP);13.3FIX→DONE en borrador (8páginas+3legales, enlaces/catálogos/builds).13.5REVIEW:callbacks28checks pasan, falta WordPress+RankMath OG/canónicas/sitemapEN y comprobar301de /en/contact/.13.4/13.7DOING;13.6OWNER por aprobación médica real. Legales yaaprobados por José D-099; sin nueva petición de OK ni publicación.
 
-Producción más reciente atestada en QA/BATON:a89f14a, opiniones Doctoralia apagadas; fase5 desplegada por sesión local14:40. HTTP no prueba SHA. No despliegue por Codex; cambios16c locales en plantilla/JS/CSS y entradilla build/JSON, sin carga en servidor. Doctoralia16c: GO con cambios condicionado; no activar todavía. Q-069/070 FIXED_LOCAL (botón/aviso, caja estable/scroll/fallback), build/JSON sin garantía. Marcado específico y privacidad/contenido/accesibilidad/rendimiento reales pendientes; fixtures sintéticos no certifican embed. Sin deploy/setup/activación por Codex. Inglés13.2 fuera de este lote.
+Q-072/073FIXED_LOCAL:publicador valida16entradas/parejas/aprobaciones y fallos, intenta compensar estados y devuelve error; setup comprueba WP_Error antes de cast.28casos con stubs,2regresiones antiguas reproducidas. No transacción atómica ni restauración real ensayada;13.7no cerrado. Q-074estados Doctoralia/carrusel/errores de formulario localizados; Q-075desactiva guess404bajoEN (causa301vivo aún no acreditada). Ningún cambio desplegado.
 
-11.2DONE con confirmación José S24+/Safari y Edge/Firefox por sesión local; límites Firefox intactos.12.1DONE en copia aparte, no rollbackvivo;12.2DONE snapshot, no logs de visitantes.9.5/8.6OWNER;12.3TODO con seguimiento día7/30. Q-040OPEN. CHECKPOINT5D-086 vigente.
+Sueño/Otorrino públicosVERIFIED:8vistas390/393/832/1440, fotos/encuadres68/64 y50%0%, títulos/sombras/nocturno/borde#342b56 según decisiones. Sin cambios propios de fotos, marca, menú ni sombras. Inglés15rutas404+1ruta301aES; sitemap15españolas, sin selector nihreflangEN. Producción declarada4dab820; HTTP no certificaSHA. Vista realEN/nocturno por atestación anterior, no nueva sesión autenticada.
 
-Informes docs/REVISION_DOCTORALIA_2026-10-16c.md y docs/REVISION_FASE5_2026-10-16.md; evidencia16c yfase5. CuatroHTML de José preservados/excluidos. Sin cuentas, claves, formularios/SMTP, publicaciones ni Sensia.
+PHP85/bash21/PHPCSproducto+publisher/ESLint/stylelint pasan;setup conserva1warning meta_query preexistente.24salidas reproducibles,18enlaces válidos. Los mocks no equivalen a WordPress/SEO publicados. Informe docs/REVISION_INGLES_2026-10-19.md y evidencia docs/audit/2026-10-19/.
+
+Doctoralia sigue apagado, GO condicionado y código oficial pendiente.9.5/8.6OWNER,12.3TODO; CHECKPOINT5D-086 intacto. Q-040OPEN. CuatroHTML previos conservados/excluidos. Sin deploy/setup/publicación, formularios/SMTP, cuentas, secretos ni Sensia.
