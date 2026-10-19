@@ -1,0 +1,11 @@
+  OK    preparación normal: salida
+  OK    env.sh no copiado
+  OK    solo lista permitida (sin deploy-code.sh)
+  OK    lib.sh = lib.local.sh
+  OK    repetible
+  OK    laboratorio fuera de <repo>/tmp → ALTO
+  OK    raíz sin .git → ALTO
+  OK    deploy es enlace → ALTO
+  OK    destino del enlace intacto
+q079_selftest: 9 OK, 0 fallos
+exit 0

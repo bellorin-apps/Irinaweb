@@ -1,0 +1,12 @@
+  OK caso base sin fallos
+  OK inLanguage vacío → 1 fallo(s)
+  OK inLanguage español en EN → 1 fallo(s)
+  OK canónica a la pareja ES → 1 fallo(s)
+  OK hreflang sin x-default → 2 fallo(s)
+  OK og:locale es_MX en EN → 1 fallo(s)
+  OK sitemap 29 → 1 fallo(s)
+  OK thank-you indexable → 1 fallo(s)
+  OK selector a la portada → 1 fallo(s)
+  OK dos nodos Physician → 1 fallo(s)
+  OK portada EN sin WebSite/WebPage → 1 fallo(s)
+exit 0

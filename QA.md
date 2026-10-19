@@ -917,3 +917,25 @@ Cotejo offline de evidencia pasa sin modificar su JSON; bash -n del helper pasa 
 ### Reconsulta del remoto tras aviso de correcciones
 
 Pull y ls-remote confirman solo ccr-6254502d-xly8ww en bc2deb0; helpers afectados aún en1ca68b6. No se recibieron correcciones auditables. Q-077/Q-079 FIX/OPEN; Q-078 REVIEW/OPEN. Se pide SHA/repositorio de la entrega. Informe docs/REVISION_Q077_Q079_2026-10-19.md, añadido final. Sin nuevas pruebas ni despliegue/publicación.
+
+## Q-079 corregido, verificador SEO endurecido y Q-078 decidido · Claude local · 2026-10-19
+
+Respuesta a la auditoría de Codex (`docs/REVISION_Q077_Q079_2026-10-19.md`). Laboratorio y documentación únicamente: sin producto, despliegue ni publicación, y sin WordPress de producción. Los cuatro HTML de José quedan excluidos.
+
+- **Q-079 · P2 · FIXED_LOCAL.** Se reescribieron `tools/audit/en-local/mkdeploy.sh` y `sync.sh`:
+  - la raíz se obtiene por `git rev-parse` y se comprueba;
+  - el destino debe estar dentro de `<repo>/tmp/` y, antes de cualquier `rm -rf`, se verifica que no es un enlace ni contiene enlaces;
+  - se copia solo una lista permitida, así que los privados nunca llegan a copiarse;
+  - una comprobación final sale con 4 si apareciera alguno;
+  - la variante `con-elementor` se retiró y los scripts de `tmp/wp-en-local/` son solo delegadores.
+
+  `t/q079_selftest.sh` ejecuta 9 casos con `env.sh` y `*.local.txt` ficticios: **9 OK, 0 fallos**. Incluye el caso de enlace simbólico real, que devuelve 3 y deja intacto el destino. También pasa `bash -n`, y la preparación real del laboratorio da «9 archivos permitidos». Evidencia: `docs/audit/2026-10-19-local/q079-selftest.log`.
+- **Q-077 (parte del verificador) · FIXED_LOCAL.** `t/seo_check.py` exige `inLanguage` = `["en-US"]` en las 15 EN y que cada EN tenga al menos los nodos de schema de su pareja ES. También falla si una ES declara `en-US`, y sale con 1 cuando hay algún fallo. `--selftest`: caso base sin fallos y **10/10 mutaciones negativas detectadas** (`seo-selftest.log`).
+  - **Reevaluación de la evidencia del 19/10** (`seo-reevaluacion.log`, sin servidor): **9 fallos, todos de Q-077**:
+    - siete EN sin `inLanguage`: `/en/`, About, first-visit, contact y los tres legales;
+    - `/en/` sin WebSite/WebPage;
+    - About EN sin ProfilePage ni Physician.
+  - Hay además 6 avisos de ES sin `inLanguage`, fuera del alcance de 13.5.
+- **Q-077 (schema) · OPEN.** Se pidió a la nube. Se verificará con el verificador endurecido sobre la copia local, sin desplegar.
+- **Q-078 · P2 · ACCEPTED (D-100).** José eligió aceptar IndexNow tal como está. No se modifica la configuración real.
+- **Estado de las tareas:** 13.5 REVIEW, 13.7 DOING y 13.6 OWNER, sin cambio. Español 221/228 e inglés 9/19.

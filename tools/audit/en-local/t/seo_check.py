@@ -1,5 +1,6 @@
 """13.5 integrado (WordPress 7.1.3 + Rank Math 1.0.280 locales): OG, canónicas, hreflang, sitemap, selector, schema, 404 y Gracias.
-Solo lectura sobre http://127.0.0.1:8890 (copia aislada). Uso: python -I seo_check.py <salida.json>"""
+Solo lectura sobre http://127.0.0.1:8890 (copia aislada). Uso: python -I seo_check.py <salida.json>  ·  python -I seo_check.py --selftest
+Sale con 1 si alguna aserción falla (Q-079)."""
 import json
 import re
 import sys
@@ -66,60 +67,105 @@ def head(h):
     }
 
 
-out = {"en": {}, "es": {}, "sitemap": {}, "extra": {}}
-for p in EN:
-    code, h = get(p)
-    out["en"][p] = {"code": code, **head(h)}
-for p in sorted(set(PAIR.values())) + ["/gracias/"]:
-    code, h = get(p)
-    out["es"][p] = {"code": code, **head(h)}
-code, h = get("/en/thank-you/")
-out["extra"]["/en/thank-you/"] = {"code": code, **head(h)}
-code, h = get("/en/no-existe-prueba/")
-out["extra"]["/en/no-existe-prueba/"] = {"code": code, "h1": re.findall(r"<h1[^>]*>(.*?)</h1>", h, re.S)[:1], **head(h)}
-code, h = get("/no-existe-prueba/")
-out["extra"]["/no-existe-prueba/"] = {"code": code, **head(h)}
-code, h = get("/en/contact/")
-out["extra"]["form_en"] = {"di_lang": re.findall(r'name="di_lang" value="([^"]*)"', h), "privacy_link": re.findall(r'href="([^"]*privacy[^"]*)"', h)[:2],
-                          "motivos": re.findall(r"<option[^>]*>([^<]+)", h)[:8], "redirect": re.findall(r'name="di_redirect" value="([^"]*)"', h)}
-code, h = get("/contacto/")
-out["extra"]["form_es"] = {"di_lang": re.findall(r'name="di_lang" value="([^"]*)"', h), "motivos": re.findall(r"<option[^>]*>([^<]+)", h)[:8]}
-locs = []
-for m in ("page-sitemap", "condicion-sitemap", "tratamiento-sitemap"):
-    code, h = get("/%s.xml" % m)
-    locs += [u.replace(S, "") for u in re.findall(r"<loc>([^<]+)</loc>", h)]
-out["sitemap"] = {"total": len(locs), "en": sorted(u for u in locs if u.startswith("/en/")), "es": sorted(u for u in locs if not u.startswith("/en/")),
-                  "thank_you": [u for u in locs if "thank-you" in u or "gracias" in u]}
-json.dump(out, open(sys.argv[1], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+def collect():
+    out = {"en": {}, "es": {}, "sitemap": {}, "extra": {}}
+    for p in EN:
+        code, h = get(p)
+        out["en"][p] = {"code": code, **head(h)}
+    for p in sorted(set(PAIR.values())) + ["/gracias/"]:
+        code, h = get(p)
+        out["es"][p] = {"code": code, **head(h)}
+    code, h = get("/en/thank-you/")
+    out["extra"]["/en/thank-you/"] = {"code": code, **head(h)}
+    code, h = get("/en/no-existe-prueba/")
+    out["extra"]["/en/no-existe-prueba/"] = {"code": code, "h1": re.findall(r"<h1[^>]*>(.*?)</h1>", h, re.S)[:1], **head(h)}
+    code, h = get("/no-existe-prueba/")
+    out["extra"]["/no-existe-prueba/"] = {"code": code, **head(h)}
+    code, h = get("/en/contact/")
+    out["extra"]["form_en"] = {"di_lang": re.findall(r'name="di_lang" value="([^"]*)"', h), "privacy_link": re.findall(r'href="([^"]*privacy[^"]*)"', h)[:2],
+                              "motivos": re.findall(r"<option[^>]*>([^<]+)", h)[:8], "redirect": re.findall(r'name="di_redirect" value="([^"]*)"', h)}
+    code, h = get("/contacto/")
+    out["extra"]["form_es"] = {"di_lang": re.findall(r'name="di_lang" value="([^"]*)"', h), "motivos": re.findall(r"<option[^>]*>([^<]+)", h)[:8]}
+    locs = []
+    for m in ("page-sitemap", "condicion-sitemap", "tratamiento-sitemap"):
+        code, h = get("/%s.xml" % m)
+        locs += [u.replace(S, "") for u in re.findall(r"<loc>([^<]+)</loc>", h)]
+    out["sitemap"] = {"total": len(locs), "en": sorted(u for u in locs if u.startswith("/en/")), "es": sorted(u for u in locs if not u.startswith("/en/")),
+                      "thank_you": [u for u in locs if "thank-you" in u or "gracias" in u]}
+    return out
 
-# Resumen y aserciones
-fail = []
-for p, r in out["en"].items():
-    es = PAIR[p]
-    if r["code"] != 200: fail.append(f"{p}: HTTP {r['code']}")
-    if r["lang"] != "en-US": fail.append(f"{p}: lang {r['lang']}")
-    if r["canonical"] != p: fail.append(f"{p}: canonical {r['canonical']}")
-    if r["og"]["locale"] != "en_US": fail.append(f"{p}: og:locale {r['og']['locale']}")
-    if (r["og"]["url"] or "").replace(S, "") != p: fail.append(f"{p}: og:url {r['og']['url']}")
-    if r["hreflang"] != {"es-MX": es, "en-US": p, "x-default": es}: fail.append(f"{p}: hreflang {r['hreflang']}")
-    if r["inLanguage"] and r["inLanguage"] != ["en-US"]: fail.append(f"{p}: inLanguage {r['inLanguage']}")
-    if r["physician_nodes"] > 1: fail.append(f"{p}: {r['physician_nodes']} nodos Physician")
-    if r["selector"] != [es]: fail.append(f"{p}: selector {r['selector']}")
-for es, r in out["es"].items():
-    if es == "/gracias/": continue
-    en = [k for k, v in PAIR.items() if v == es][0]
-    if r["hreflang"] != {"es-MX": es, "en-US": en, "x-default": es}: fail.append(f"{es}: hreflang {r['hreflang']}")
-    if r["og"]["locale"] != "es_MX": fail.append(f"{es}: og:locale {r['og']['locale']}")
-    if r["selector"] != [en]: fail.append(f"{es}: selector {r['selector']}")
-if out["sitemap"]["total"] != 30 or out["sitemap"]["thank_you"]: fail.append(f"sitemap {out['sitemap']['total']} / gracias {out['sitemap']['thank_you']}")
-ty = out["extra"]["/en/thank-you/"]
-if "noindex" not in (ty["robots"] or ""): fail.append(f"/en/thank-you/ robots {ty['robots']}")
-nf = out["extra"]["/en/no-existe-prueba/"]
-print("404 EN:", nf["code"], nf["lang"], nf["title"], "· 404 ES:", out["extra"]["/no-existe-prueba/"]["code"], out["extra"]["/no-existe-prueba/"]["title"])
-print("Gracias EN:", ty["code"], ty["robots"], "· formulario EN:", out["extra"]["form_en"], "· ES di_lang:", out["extra"]["form_es"]["di_lang"])
-print("Sitemap:", out["sitemap"]["total"], "URL (", len(out["sitemap"]["en"]), "EN +", len(out["sitemap"]["es"]), "ES ) · gracias/thank-you en sitemap:", out["sitemap"]["thank_you"])
-print("OG imagen EN (muestra):", sorted({(v["og"]["image"] or "").replace(S, "") for v in out["en"].values()})[:3])
-print("Tipos de schema EN (muestra):", {p: out["en"][p]["schema_types"] for p in ("/en/", "/en/faq/", "/en/sleep/cpap-therapy/", "/en/contact/")})
-print("FAQ preguntas schema /en/faq/:", out["en"]["/en/faq/"]["faq_questions"], "· <details> visibles:", out["en"]["/en/faq/"]["details_visible"])
-print("WhatsApp EN (muestra):", out["en"]["/en/"]["wa_text"])
-print("FALLOS:" if fail else "TODAS LAS ASERCIONES PASAN", *fail, sep="\n  ")
+
+def evaluate(out):
+    """Aserciones de 13.5. Devuelve (fallos, avisos). inLanguage es OBLIGATORIO (en-US) en las 15 EN y cada EN lleva al menos
+    los nodos de schema de su pareja ES (WebSite/WebPage en /en/, ProfilePage/Physician en About; Q-077, endurecido 2026-10-19)."""
+    fail, warn = [], []
+    for p, r in out["en"].items():
+        es = PAIR[p]
+        if r["code"] != 200: fail.append(f"{p}: HTTP {r['code']}")
+        if r["lang"] != "en-US": fail.append(f"{p}: lang {r['lang']}")
+        if r["canonical"] != p: fail.append(f"{p}: canonical {r['canonical']}")
+        if r["og"]["locale"] != "en_US": fail.append(f"{p}: og:locale {r['og']['locale']}")
+        if (r["og"]["url"] or "").replace(S, "") != p: fail.append(f"{p}: og:url {r['og']['url']}")
+        if r["hreflang"] != {"es-MX": es, "en-US": p, "x-default": es}: fail.append(f"{p}: hreflang {r['hreflang']}")
+        if r["inLanguage"] != ["en-US"]: fail.append(f"{p}: inLanguage {r['inLanguage'] or 'VACÍO'}")
+        if r["physician_nodes"] > 1: fail.append(f"{p}: {r['physician_nodes']} nodos Physician")
+        falta = sorted(set(out["es"][es]["schema_types"]) - set(r["schema_types"]))
+        if falta: fail.append(f"{p}: faltan nodos de su pareja ES {falta}")
+        if r["selector"] != [es]: fail.append(f"{p}: selector {r['selector']}")
+    for es, r in out["es"].items():
+        if es == "/gracias/": continue
+        en = [k for k, v in PAIR.items() if v == es][0]
+        if r["hreflang"] != {"es-MX": es, "en-US": en, "x-default": es}: fail.append(f"{es}: hreflang {r['hreflang']}")
+        if r["og"]["locale"] != "es_MX": fail.append(f"{es}: og:locale {r['og']['locale']}")
+        if r["selector"] != [en]: fail.append(f"{es}: selector {r['selector']}")
+        if "en-US" in r["inLanguage"]: fail.append(f"{es}: inLanguage inglés en página española")
+        if not r["inLanguage"]: warn.append(f"{es}: sin inLanguage (español; fuera del alcance de 13.5)")
+    if out["sitemap"]["total"] != 30 or out["sitemap"]["thank_you"]: fail.append(f"sitemap {out['sitemap']['total']} / gracias {out['sitemap']['thank_you']}")
+    ty = out["extra"]["/en/thank-you/"]
+    if "noindex" not in (ty["robots"] or ""): fail.append(f"/en/thank-you/ robots {ty['robots']}")
+    return fail, warn
+
+
+def selftest():
+    """Casos negativos sintéticos: cada mutación debe producir al menos un fallo; el caso base, ninguno."""
+    import copy
+    def page(p, lang, inl, alts, sel):
+        return {"code": 200, "lang": lang, "canonical": p, "og": {"locale": "en_US" if lang == "en-US" else "es_MX", "url": S + p},
+                "hreflang": alts, "inLanguage": inl, "physician_nodes": 1, "selector": sel,
+                "schema_types": ["BreadcrumbList", "Physician+Person", "WebPage"] + (["WebSite"] if p in ("/", "/en/") else [])}
+    base = {"en": {}, "es": {}, "sitemap": {"total": 30, "thank_you": []}, "extra": {"/en/thank-you/": {"robots": "nofollow, noindex"}}}
+    for en, es in PAIR.items():
+        alts = {"es-MX": es, "en-US": en, "x-default": es}
+        base["en"][en] = page(en, "en-US", ["en-US"], alts, [es])
+        base["es"][es] = page(es, "es", ["es-MX"], alts, [en])
+    muts = {
+        "inLanguage vacío": lambda o: o["en"]["/en/"].__setitem__("inLanguage", []),
+        "inLanguage español en EN": lambda o: o["en"]["/en/faq/"].__setitem__("inLanguage", ["es-MX"]),
+        "canónica a la pareja ES": lambda o: o["en"]["/en/ent/"].__setitem__("canonical", "/otorrinolaringologia/"),
+        "hreflang sin x-default": lambda o: o["en"]["/en/sleep/"]["hreflang"].pop("x-default"),
+        "og:locale es_MX en EN": lambda o: o["en"]["/en/contact/"]["og"].__setitem__("locale", "es_MX"),
+        "sitemap 29": lambda o: o["sitemap"].__setitem__("total", 29),
+        "thank-you indexable": lambda o: o["extra"]["/en/thank-you/"].__setitem__("robots", "index, follow"),
+        "selector a la portada": lambda o: o["en"]["/en/faq/"].__setitem__("selector", ["/"]),
+        "dos nodos Physician": lambda o: o["en"]["/en/"].__setitem__("physician_nodes", 2),
+        "portada EN sin WebSite/WebPage": lambda o: o["en"]["/en/"].__setitem__("schema_types", ["BreadcrumbList", "Physician+Person"]),
+    }
+    ok = not evaluate(base)[0]
+    print(("  OK " if ok else "  FALLO ") + "caso base sin fallos")
+    for name, m in muts.items():
+        o = copy.deepcopy(base); m(o); f, _ = evaluate(o)
+        print(("  OK " if f else "  FALLO ") + f"{name} → {len(f)} fallo(s)")
+        ok = ok and bool(f)
+    return ok
+
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--selftest":
+        sys.exit(0 if selftest() else 1)
+    out = collect()
+    json.dump(out, open(sys.argv[1], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    fail, warn = evaluate(out)
+    print("Sitemap:", out["sitemap"]["total"], "URL ·", len(out["sitemap"]["en"]), "EN +", len(out["sitemap"]["es"]), "ES")
+    for w in warn: print("  aviso:", w)
+    print("FALLOS:" if fail else "TODAS LAS ASERCIONES PASAN", *fail, sep="\n  ")
+    sys.exit(1 if fail else 0)

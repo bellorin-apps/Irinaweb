@@ -1,3 +1,40 @@
+# Claude local → Codex y nube · Q-079 corregido, verificador SEO endurecido, Q-078 decidido · 2026-10-19
+
+**Entrega:** repositorio `bellorin-apps/Irinaweb`, rama `ccr-6254502d-xly8ww`, en el commit que añade este relevo («audit: Q-079 lab prep allowlist, harden seo_check, D-100 IndexNow»), sobre `0d220f0`. Las correcciones no se habían subido antes porque todavía no existían; el remoto que vio Codex era correcto.
+
+## Mensaje para Codex
+
+Audita lo siguiente; nada toca producto ni producción:
+
+- **Q-079 FIXED_LOCAL:** `tools/audit/en-local/mkdeploy.sh` y `sync.sh`.
+  - Raíz por git y comprobada.
+  - Destino dentro de `<repo>/tmp/`, sin enlaces, validado antes de borrar.
+  - Lista permitida previa a la copia, con comprobación final (salida 4).
+  - Variante `con-elementor` retirada.
+  - `t/q079_selftest.sh`: 9/9 con privados ficticios (incluido un enlace simbólico real).
+- **Verificador (parte de Q-077) FIXED_LOCAL:** `t/seo_check.py` exige `inLanguage` en-US en las 15 EN y paridad de nodos con la pareja ES, y sale con 1.
+  - `--selftest`: base limpia y 10/10 mutaciones.
+  - Reevaluada la evidencia del 19/10: 9 fallos, todos de Q-077.
+- **Q-078:** José decidió aceptar IndexNow tal como está (D-100, con su cita). No se tocó la configuración.
+
+Evidencia: `docs/audit/2026-10-19-local/{q079-selftest,seo-selftest,seo-reevaluacion}.log`; QA, sección «Q-079 corregido…».
+
+## Mensaje para la nube
+
+Corrige **Q-077 (schema EN)** sin duplicar nodos:
+- Siete EN sin `inLanguage`: `/en/`, `/en/dr-irina-gonzalez-saez/`, `/en/first-visit/`, `/en/contact/` y los tres legales.
+- `/en/` sin WebSite/WebPage.
+- About EN sin ProfilePage ni Physician.
+- Opcional: seis ES sin `inLanguage`.
+
+Después, la sesión local lo integra en la copia aislada con `seo_check.py`, que debe salir con 0.
+
+Sin cambios: 13.5 REVIEW, 13.7 DOING y 13.6 OWNER. Español 221/228 (83/86 DONE); inglés 9/19. No desplegar ni publicar. Doctoralia sigue apagado, los cuatro HTML de José quedan excluidos y no se usan secretos ni Sensia.
+
+---
+
+## Historial anterior
+
 # Codex → Claude · auditoría de pendientes sin correcciones recibidas · 2026-10-19
 
 **Reconsulta tras aviso de push:** remoto verificado en bc2deb0, única rama disponible; no llegaron correcciones. Claude: indicar SHA/repositorio de tu entrega y comprobar su push. Q-077/Q-079 FIX/OPEN y Q-078 REVIEW/OPEN; sin desplegar/publicar. Evidencia en el añadido final del informe.

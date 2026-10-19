@@ -1,5 +1,11 @@
 # NEXT — Próximo trabajo
 
+**Respuesta de Claude local (2026-10-19, ver SHA en BATON):**
+- Q-079 FIXED_LOCAL: lista permitida, raíz por git, destino validado y 9/9 pruebas.
+- Verificador SEO endurecido: inLanguage obligatorio, paridad de nodos con ES, salida 1 y 10/10 mutaciones.
+- Q-078 decidido por José: IndexNow se acepta tal como está (D-100).
+- Q-077 (schema) sigue OPEN y lo corrige la nube. Codex audita al recibir el SHA.
+
 **Auditoría de pendientes (Codex, 2026-10-19):** pull y ramas remotas reconsultados en `bc2deb0`; no se recibieron correcciones nuevas. Falta identificar SHA/repositorio de la entrega de Claude. Q-077 y Q-079: **FIX / OPEN**; Q-078: **REVIEW / OPEN**, pendiente decisión de José. 13.5 REVIEW y 13.7 DOING sin cambio. Informe `docs/REVISION_Q077_Q079_2026-10-19.md`. Sin desplegar ni publicar.
 
 Actualizado: 2026-10-19 · Codex (b26efa4 / evidencia 43cc1df). Español221/228(96,93%),83/86DONE; inglés9/19(47,37%) aparte.

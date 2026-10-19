@@ -20,8 +20,17 @@ Montada por la sesión local el 2026-10-19 en `tmp/wp-en-local/` (ignorada por G
 - Las aprobaciones inglesas de las pruebas son sintéticas y solo existen en esta copia.
 
 **Uso:**
-1. `sync.sh` (tema y plugin del repositorio) y `mkdeploy.sh [con-elementor]`. La variante `con-elementor` es solo de prueba (Q-076).
+1. `sync.sh` (tema y plugin del repositorio) y `mkdeploy.sh`. En `tmp/wp-en-local/` ambos son solo delegadores de estas versiones.
+   - **Q-079:**
+     - la raíz se obtiene por `git rev-parse` y se comprueba;
+     - el destino debe estar dentro de `<repo>/tmp/` y no puede ser un enlace (ni contener enlaces) antes de borrarlo;
+     - `mkdeploy.sh` copia solo una **lista permitida** (`setup-site/pages/dra/en`, `publish-en`, `upload-media`, `en/*.php`) más `lib.local.sh` como `lib.sh`, así que `env.sh`, `*.local.txt` y `config.php` nunca se copian;
+     - una comprobación final sale con 4 si apareciera alguno.
+   - La variante `con-elementor` se retiró: desde b26efa4, `publish-en.sh` ya carga Elementor.
+   - `DI_REPO_ROOT` y `DI_LAB` existen solo para `t/q079_selftest.sh`.
 2. `t/preflight.sh`, `t/fallos.sh`, `t/setup-en.sh`, `t/seo_check.py`, `t/ui_check2.cjs` y `t/form_check.cjs`.
+   - `seo_check.py <salida.json>` sale con 1 si falla alguna aserción. Exige `inLanguage` `en-US` en las 15 EN y que cada EN tenga al menos los nodos de schema de su pareja ES. `--selftest` ejecuta 10 mutaciones negativas sin servidor.
+   - `t/q079_selftest.sh` prueba `mkdeploy.sh` en repositorios desechables con privados ficticios: caso normal, privados no copiados, lista permitida, repetible, laboratorio fuera de `tmp/`, raíz sin `.git` y enlace en el destino.
 3. `mu-plugins/zz-inyeccion-fallos.php` solo actúa con `fallo.json`.
 
 **Límites:**
