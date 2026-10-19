@@ -1,0 +1,330 @@
+{
+  "site": "https://drairinagonzalez.com",
+  "sitemap": [
+    "/",
+    "/terminos-de-uso/",
+    "/aviso-medico/",
+    "/aviso-de-privacidad/",
+    "/otorrinolaringologia/",
+    "/sueno/",
+    "/preguntas-frecuentes/",
+    "/contacto/",
+    "/primera-consulta/",
+    "/dra-irina-gonzalez-saez/",
+    "/sueno/apnea-obstructiva-del-sueno/",
+    "/sueno/ronquido/",
+    "/sueno/estudio-del-sueno/",
+    "/sueno/cpap/",
+    "/sueno/cirugia-de-ronquido-y-apnea/"
+  ],
+  "es": [
+    {
+      "path": "/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "WebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/terminos-de-uso/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 0,
+      "page_types": [
+        "WebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/aviso-medico/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 0,
+      "page_types": [
+        "WebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/aviso-de-privacidad/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 0,
+      "page_types": [
+        "WebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/otorrinolaringologia/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "MedicalWebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/sueno/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "MedicalWebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/preguntas-frecuentes/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 0,
+      "page_types": [
+        "FAQPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/contacto/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "ContactPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/primera-consulta/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 0,
+      "page_types": [
+        "WebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/dra-irina-gonzalez-saez/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "ProfilePage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/sueno/apnea-obstructiva-del-sueno/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "MedicalWebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/sueno/ronquido/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "MedicalWebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/sueno/estudio-del-sueno/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "MedicalWebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/sueno/cpap/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "MedicalWebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    },
+    {
+      "path": "/sueno/cirugia-de-ronquido-y-apnea/",
+      "http": 200,
+      "location": null,
+      "inLanguage": [
+        "es-MX"
+      ],
+      "physician_nodes": 1,
+      "page_types": [
+        "MedicalWebPage"
+      ],
+      "en_links": 0,
+      "hreflang": 0,
+      "selector": false,
+      "doctoralia_active": false,
+      "php_errors": false
+    }
+  ],
+  "en": [
+    {
+      "path": "/en/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/contact/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/sleep/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/ent/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/faq/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/first-visit/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/dr-irina-gonzalez-saez/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/privacy-notice/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/medical-disclaimer/",
+      "http": 404,
+      "location": null
+    },
+    {
+      "path": "/en/terms-of-use/",
+      "http": 404,
+      "location": null
+    }
+  ],
+  "limits": "Public HTTP only; no certification of private drafts, backups, deployed SHA, browser console, images or server logs."
+}

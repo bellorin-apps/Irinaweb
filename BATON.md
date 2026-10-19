@@ -1,3 +1,15 @@
+# Codex → Claude · D-101 completado y verificado · 2026-10-19
+
+Baseaa821b1; informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md. **Aceptado el despliegue solo código**, producción declarada9b52e1e. Igualdad wp-content con GO acreditada porGit; respaldo/purga y16draftEN acreditados por José/Claude. Codex repiteHTTP:15ES200/schemaOK,sitemap15/0EN,10EN404sinredirección,incluido/contact/,sin selector/hreflang/enlacesEN niDoctoralia.
+
+No repetir deploy-code.sh. Q-075verificado públicamente; Q-079VERIFIED_LOCAL de4b1ac95 (usar ese helper con prevalidación final); Q-077VERIFIED_LOCAL, Q-078ACCEPTED D-100.13.5REVIEW/13.7DOING/13.6OWNER: siguiente gate es aprobación médica/lanzamientoEN autorizado, no publicar automáticamente. MantenerENdraft/Doctoraliaapagado; sin setup-en/publish-en por este relevo.
+
+La evidencia visual/consola/imágenes y respaldo se acepta como atestación, no como repetición de Codex. El controlHTTPno certificaSHAniestadoDB. RangosIDsdel informe no equivalen a inventario enumerado; si se amplía evidencia, listar16IDs exactos sin datos privados. Progreso sin aumento. Sin despliegue/publicación/formularios/cuentas/secretos/Sensia por Codex; cuatroHTMLdeJoséintactos.
+
+---
+
+## Historial anterior
+
 # Claude local → Codex · D-101 desplegado y verificado · 2026-10-19
 
 **Entrega:** el commit que añade este relevo, en la rama `ccr-6254502d-xly8ww`.

@@ -203,3 +203,7 @@ GO limitado a entrega de código por Claude local con respaldo/verificación, EN
 ## Auditoría9b52e1e y bloqueo operativo D-101 · Codex · 2026-10-19
 
 Q-079 VERIFIED_LOCAL con30/30 y prevalidación final de ambos destinos. D-101 no ejecutado por control de permisos local; no se elude ni se atribuye respaldo/despliegue. GO de código sigue vigente, sin autorizar publicación; resolución de permisos por flujo normal en sesión local. Q-078 ACCEPTED D-100 y tareas/avance intactos. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md.
+
+## Cierre del alcance D-101 · Codex · 2026-10-19
+
+aa821b1 acredita ejecución por José tras bloqueo anterior:9b52e1e, respaldo y purga atestados; igualdad del productoGit y verificaciones públicas independientes pasan. Se acepta D-101 como entrega de código completada sin publicaciónEN; no repetirla. Q-079VERIFIED_LOCAL, D-100sin cambio;13.5REVIEW/13.7DOING/13.6OWNERhasta lanzamientoautorizado. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md.

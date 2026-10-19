@@ -1,3 +1,29 @@
+# Auditoría del despliegue D-101 recibido en aa821b1 · Codex · 2026-10-19
+
+## Veredicto vigente
+
+**D-101 COMPLETADO Y VERIFICADO dentro del alcance de código, sin publicación EN.** Entregaaa821b1: José ejecutó deploy-code.sh a las16:38 locales sobre9b52e1e. El estado anterior de bloqueo queda superado por esta ejecución atestada; no se repitió ni se rodeó el control de permisos por Codex.
+
+| Elemento | Veredicto / evidencia |
+|---|---|
+| Correspondencia con GO | Los árboles Git wp-content de b83d9ee,9b52e1e y aa821b1 son iguales:4e908bc75f35f24b252819f81a094fd9b2b64741. Acredita igualdad del producto versionado, no todos los bytes del servidor. |
+| Despliegue y respaldo | VERIFIED por atestación José/Claude:9b52e1e entregado, respaldo ~/deploy-backups/20261019-163838/ con DB460K/30tablas y plugin/tema, purga LiteSpeed. No se accedió al respaldo/base/configuración privada. |
+| Q-075 | VERIFIED en HTTP público: /en/contact/404 sin Location; otras9rutasEN también404. |
+| EN sin anunciar | Sitemap15/0EN;15ESsin selector/hreflang/enlacesEN; Doctoralia ausente. Comprobación independiente de Codex pasa. |
+| Schema y páginas ES |15/15HTTP200;14es-MX y portadaes (P3); máximo1Physician y sin tipos de página repetidos en cada salida recogida; sin mensajes PHPFatal/Warning en HTML. |
+| Estado EN |16draft/0publish por atestación del propietario/Claude. El404público corrobora inaccesibilidad, no distingue draft/private/trash. El informe usa rangos de IDs, no un inventario enumerado auditable; no derivar un recuento independiente de esos rangos. |
+| Fotos/menú/consola/logs | Atestación de6páginas clave con0imágenes rotas, menú/capturaSueño correctos, consola sin errores. La ausencia declarada de debug.log/error_log no prueba ausencia universal de errores. Codex no repitió navegador ni accedió al servidor. |
+
+Evidencia aportada: docs/audit/2026-10-19-d101/verificacion.md. Comprobación nueva: tools/audit/review-d101-public.py, docs/audit/2026-10-19-d101-codex/public.json. Solo HTTPGETpúblico y análisis JSON-LD/XML; no formularios, cuentas ni publicación. Los checks prueban las condiciones consultadas; no certifican el SHAservidor porHTTP ni restauración real del respaldo. Los md5aportados están truncados en el informe y no se presentan como hashes completos revalidados por Codex.
+
+**Q-079 permanece VERIFIED_LOCAL** de4b1ac95:30/30 y prevalidación final. El helper de laboratorio no se desplegó ni cambió el producto. Q-077 VERIFIED_LOCAL (EN) con schemaES ahora comprobado públicamente; Q-078 ACCEPTED D-100. Producción declarada9b52e1e. **13.5REVIEW,13.7DOING,13.6OWNER**: falta lanzamientoEN aprobado, no volver a pedir ni repetir el despliegueD-101.
+
+QA/PLAN/STATUS/NEXT/BATON actualizados y PROGRESS regenerado sin aumento: español221/228,83/86DONE; inglés9/19,3/7DONE. Codex no desplegó ni publicó ni accedió a secretos/cuentas/Sensia; cuatroHTML de José intactos y excluidos.
+
+---
+
+## Auditoría histórica anterior (superada en el estado del despliegue)
+
 # Auditoría D-101 y cierre local Q-079 · Codex · 2026-10-19
 
 ## Entrega recibida

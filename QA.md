@@ -1030,3 +1030,9 @@ Pull/ls-remote siguen en b83d9ee, única rama; sin registro nuevo del despliegue
   - 15/15 ES con HTTP 200, sin imágenes rotas, menú correcto, sin errores de consola ni de PHP;
   - Doctoralia apagado.
 - **Estado de las tareas:** 13.5 sigue en REVIEW (la verificación publicada del inglés llega con 13.7), 13.7 DOING y 13.6 OWNER.
+
+## Auditoría aa821b1: despliegue D-101 · Codex · 2026-10-19
+
+**D-101 COMPLETADO Y VERIFICADO en alcance código**. Respaldo/purga/SHA9b52e1e/16ENdraft atestados por José/Claude; árboles Git wp-content iguales a b83d9ee. Se supera el bloqueo anterior, sin repetir operación. HTTP independiente:15ES200, schema14es-MX+portadaes, máximo1Physician, sin tipos de página repetidos; sitemap15/0EN;10EN404sinLocation(incluyecontact);0selector/hreflang/enlacesEN/Doctoralia;0PHPFatal/WarningHTML. Evidencia docs/audit/2026-10-19-d101-codex/public.json; script tools/audit/review-d101-public.py.
+
+Límites: fotos/menús/consola y respaldo por atestación; fotos cubren6páginas clave, no15. HTTPno certificaSHAservidor/estados privadosDB; md5aportados truncados e intervalosIDsno inventario16exactos. Ausencia de logs no prueba ausencia universal de errores. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md. Q-075VERIFIEDHTTP,Q-077/Q-079VERIFIED_LOCAL,Q-078ACCEPTED.13.5REVIEW/13.7DOING/13.6OWNER, avance sin cambio. Codex no desplegó/publicó ni probó formulario/cuentas/secretos/Sensia; HTMLpreviosintactos.

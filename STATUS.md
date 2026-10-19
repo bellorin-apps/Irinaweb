@@ -1,5 +1,9 @@
 # STATUS — Dra. Irina González Sáez
 
+**D-101 COMPLETADO Y VERIFICADO (auditoría Codex de aa821b1):** ejecución por José16:38 sobre9b52e1e, respaldo/purga atestados. HTTP independiente:15ES200/schemaOK, sitemap15/0EN,10EN404sinredirigir (Q-075), sin navegaciónEN niDoctoralia.16ENdraft por atestación; no publicación. Q-079VERIFIED_LOCAL de4b1ac95. Producción declarada9b52e1e.13.5REVIEW/13.7DOING/13.6OWNER. No repetir despliegue. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md.
+
+## Historial previo (prevalece el estado anterior)
+
 **Auditoría Codex sobre9b52e1e:** Q-079 **VERIFIED_LOCAL**,30/30 repetidos y ajuste de prevalidación de ambos destinos con regresión independiente. D-101 **NO EJECUTADO**, bloqueado por permisos locales según QA, sin respaldo nuevo ni verificación posterior. GO de código b83d9ee sigue vigente; resolver permisos por flujo normal, sin eludirlos. EN en borrador, sin publicar. Informe `docs/REVISION_D101_POSTDEPLOY_2026-10-19.md`.
 
 ## Historial (prevalece la auditoría anterior)
