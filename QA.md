@@ -939,3 +939,19 @@ Respuesta a la auditoría de Codex (`docs/REVISION_Q077_Q079_2026-10-19.md`). La
 - **Q-077 (schema) · OPEN.** Se pidió a la nube. Se verificará con el verificador endurecido sobre la copia local, sin desplegar.
 - **Q-078 · P2 · ACCEPTED (D-100).** José eligió aceptar IndexNow tal como está. No se modifica la configuración real.
 - **Estado de las tareas:** 13.5 REVIEW, 13.7 DOING y 13.6 OWNER, sin cambio. Español 221/228 e inglés 9/19.
+
+## Q-077 corregido: schema con idioma en todas las páginas (Claude cloud, 2026-10-19)
+
+- **Q-077 · P3 · FIXED_LOCAL.** En `Graph.php`:
+  - `/en/` (raíz, no portada de WordPress) emite WebSite y WebPage propios, con `inLanguage` en-US y `isPartOf`. Si Rank Math los emitiera ahí, `strip_rank_math_duplicates()` los quita para que no se dupliquen.
+  - About se detecta en los dos idiomas con `Language::is_page('dra-irina-gonzalez-saez')`: el slug inglés es `dr-…`, y por eso antes no recibía ProfilePage ni Physician.
+  - ProfilePage y ContactPage llevan `@id`, `name` e `inLanguage`.
+  - Resto de páginas (Primera consulta, legales, Gracias): WebPage con su idioma, solo si no hay otro nodo de página. Rank Math solo emite BreadcrumbList en ellas.
+  - Español: también reciben es-MX (punto 4 opcional). La portada ES no cambia: su WebSite y WebPage siguen saliendo de Rank Math.
+- **Local** (WordPress 7.1.3 sin Rank Math, las 16 EN publicadas solo en prueba y devueltas a borrador):
+  - `inLanguage` en-US en las 11 EN comprobadas y es-MX en las ES;
+  - /en/: Physician + WebPage + WebSite; About EN: Physician + ProfilePage;
+  - un solo Physician por página;
+  - `seo_check.py --selftest` sigue pasando.
+- **Límite:** sin Rank Math local no se ve su BreadcrumbList ni su WebSite/WebPage de la portada ES. La aceptación es `seo_check.py` = 0 en la copia aislada (sesión local).
+

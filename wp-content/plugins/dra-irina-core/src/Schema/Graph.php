@@ -235,31 +235,60 @@ final class Graph {
 		if ( '' === trim( (string) PracticeSettings::get( 'nombre_profesional' ) ) ) {
 			return apply_filters( 'dra_irina_schema_graph', $nodes );
 		}
+		$id = (int) get_queried_object_id();
 		if ( Language::is_home() ) {
 			$nodes[] = self::physician();
-		} elseif ( is_page() && 'dra-irina-gonzalez-saez' === get_post_field( 'post_name', get_queried_object_id() ) ) {
+			if ( ! is_front_page() ) {
+				// Q-077: la raíz /en/ no es la portada de WordPress, así que Rank Math no emite su WebSite/WebPage; los damos aquí.
+				$nodes[] = [
+					'@type'      => 'WebSite',
+					'@id'        => get_permalink( $id ) . '#website',
+					'url'        => get_permalink( $id ),
+					'name'       => (string) PracticeSettings::get( 'nombre_profesional' ),
+					'inLanguage' => Language::TAGS[ Language::EN ],
+					'publisher'  => [ '@id' => self::physician_id() ],
+				];
+				$nodes[] = self::web_page( 'WebPage', $id, [ 'isPartOf' => [ '@id' => get_permalink( $id ) . '#website' ] ] );
+			}
+		} elseif ( Language::is_page( 'dra-irina-gonzalez-saez' ) ) {
 			$nodes[] = self::physician();
-			$nodes[] = [
-				'@type'      => 'ProfilePage',
-				'mainEntity' => [ '@id' => self::physician_id() ],
-				'url'        => get_permalink(),
-			];
+			$nodes[] = self::web_page( 'ProfilePage', $id, [ 'mainEntity' => [ '@id' => self::physician_id() ] ] );
 		} elseif ( is_singular( [ 'condicion', 'tratamiento', 'recurso' ] ) ) {
 			$nodes[] = self::physician();
-			$nodes[] = $this->medical_web_page( get_queried_object_id() );
-		} elseif ( Language::is_page( [ 'otorrinolaringologia', 'sueno' ] ) && 'publish' === get_post_status( get_queried_object_id() ) ) {
+			$nodes[] = $this->medical_web_page( $id );
+		} elseif ( Language::is_page( [ 'otorrinolaringologia', 'sueno' ] ) && 'publish' === get_post_status( $id ) ) {
 			// D-076/D-082: las dos páginas cortas de área, revisadas por la Dra. en /briefing/guia/.
 			$nodes[] = self::physician();
-			$nodes[] = $this->area_page( get_queried_object_id() );
+			$nodes[] = $this->area_page( $id );
 		} elseif ( Language::is_page( 'contacto' ) ) {
 			$nodes[] = self::physician();
-			$nodes[] = [
-				'@type' => 'ContactPage',
-				'url'   => get_permalink(),
-				'about' => [ '@id' => self::physician_id() ],
-			];
+			$nodes[] = self::web_page( 'ContactPage', $id, [ 'about' => [ '@id' => self::physician_id() ] ] );
+		} elseif ( is_page() && ! $nodes ) {
+			// Q-077: resto de páginas (Primera consulta, legales, Gracias) con su idioma; Rank Math solo emite BreadcrumbList en ellas.
+			$nodes[] = self::web_page( 'WebPage', $id );
 		}
 		return apply_filters( 'dra_irina_schema_graph', $nodes );
+	}
+
+	/**
+	 * Nodo de página con su idioma (D-095, Q-077).
+	 *
+	 * @param string               $type  Tipo schema.org (WebPage, ProfilePage, ContactPage).
+	 * @param int                  $id    Página.
+	 * @param array<string, mixed> $extra Propiedades adicionales.
+	 * @return array<string, mixed>
+	 */
+	private static function web_page( string $type, int $id, array $extra = [] ): array {
+		return array_merge(
+			[
+				'@type'      => $type,
+				'@id'        => get_permalink( $id ) . '#webpage',
+				'url'        => get_permalink( $id ),
+				'name'       => get_the_title( $id ),
+				'inLanguage' => Language::TAGS[ Language::of( $id ) ],
+			],
+			$extra
+		);
 	}
 
 	/** FAQ desde los mismos widgets y respuestas que se muestran, sin duplicar contenido. */
@@ -432,11 +461,18 @@ final class Graph {
 	 * @return array
 	 */
 	public function strip_rank_math_duplicates( array $data ): array {
+		$dup = [ 'Person', 'LocalBusiness', 'MedicalBusiness', 'Physician', 'MedicalClinic', 'Organization' ];
+		if ( Language::is_home() && ! is_front_page() ) {
+			$dup = array_merge( $dup, [ 'WebSite', 'WebPage' ] ); // Q-077: en /en/ los emite graph().
+		}
 		foreach ( $data as $key => $node ) {
+			if ( ! is_array( $node ) ) {
+				continue;
+			}
 			$type  = $node['@type'] ?? '';
 			$types = is_array( $type ) ? $type : [ $type ];
 			foreach ( $types as $t ) {
-				if ( in_array( $t, [ 'Person', 'LocalBusiness', 'MedicalBusiness', 'Physician', 'MedicalClinic', 'Organization' ], true ) ) {
+				if ( in_array( $t, $dup, true ) ) {
 					unset( $data[ $key ] );
 					break;
 				}
