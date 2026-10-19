@@ -44,7 +44,10 @@ $irina_id = 'di-opiniones-title';
 		<?php if ( '' !== $irina_a['text'] ) : ?>
 			<p class="di-lead"><?php echo esc_html( $irina_a['text'] ); ?></p>
 		<?php endif; ?>
-		<div class="di-opiniones__widget" data-di-doctoralia role="region" aria-label="<?php esc_attr_e( 'Opiniones de Doctoralia', 'irina-gonzalez' ); ?>" tabindex="0">
+		<div class="di-opiniones__widget" data-di-doctoralia role="region" aria-label="<?php esc_attr_e( 'Opiniones de Doctoralia', 'irina-gonzalez' ); ?>" tabindex="0"
+			data-di-status-loading="<?php esc_attr_e( 'Cargando opiniones de Doctoralia…', 'irina-gonzalez' ); ?>"
+			data-di-status-loaded="<?php esc_attr_e( 'Si las opiniones no aparecen, puedes abrir el enlace de Doctoralia.', 'irina-gonzalez' ); ?>"
+			data-di-status-error="<?php esc_attr_e( 'No se han podido cargar las opiniones. Puedes reintentar o abrir el enlace de Doctoralia.', 'irina-gonzalez' ); ?>">
 			<p><?php esc_html_e( 'Al cargar las opiniones conectarás con Doctoralia, que puede utilizar sus propias cookies.', 'irina-gonzalez' ); ?></p>
 			<button type="button" class="di-btn" data-di-doctoralia-load hidden><?php esc_html_e( 'Cargar opiniones de Doctoralia', 'irina-gonzalez' ); ?></button>
 			<p role="status" data-di-doctoralia-status></p>

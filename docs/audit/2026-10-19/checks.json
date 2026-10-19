@@ -1,0 +1,34 @@
+{
+  "php": {
+    "files": 85,
+    "errors": []
+  },
+  "bash": {
+    "files": 21,
+    "errors": []
+  },
+  "phpcsProduct": {
+    "exit": 0,
+    "output": ""
+  },
+  "phpcsPublisher": {
+    "exit": 0,
+    "output": ". 1 / 1 (100%)\r\n\r\n\r\nTime: 549ms; Memory: 18MB\r\n\r\n"
+  },
+  "phpcsSetup": {
+    "exit": 1,
+    "output": "W 1 / 1 (100%)\r\n\r\n\r\n\r\nFILE: C:\\Users\\bellg\\Documents\\Irinaweb\\tools\\deploy\\en\\setup-en.php\r\n--------------------------------------------------------------------------------\r\nFOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE\r\n--------------------------------------------------------------------------------\r\n 170 | WARNING | Detected usage of meta_query, possible slow query.\r\n     |         | (WordPress.DB.SlowDBQuery.slow_db_query_meta_query)\r\n--------------------------------------------------------------------------------\r\n\r\nTime: 606ms; Memory: 20MB\r\n\r\n"
+  },
+  "limits": "Product PHPCS clean. Setup has one pre-existing meta_query performance warning; no new errors. Syntax includes theme/core and deploy/en PHP; no env.sh read. Actual remote scripts not executed.",
+  "finalChangedPhpSyntax": {
+    "files": [
+      "wp-content/themes/irina-gonzalez/templates/parts/blocks/form.php",
+      "wp-content/themes/irina-gonzalez/templates/parts/home/doctora.php",
+      "wp-content/themes/irina-gonzalez/templates/parts/blocks/opiniones.php",
+      "tools/deploy/en/publish-en.php",
+      "tools/deploy/en/setup-en.php",
+      "wp-content/plugins/dra-irina-core/src/I18n/Language.php"
+    ],
+    "exit": 0
+  }
+}

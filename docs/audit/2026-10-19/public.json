@@ -1,0 +1,278 @@
+{
+  "rows": [
+    {
+      "path": "/sueno/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "dark": true,
+      "border": "#342b56",
+      "title": "Del ronquidoal descanso",
+      "bold": "Del ronquido",
+      "italic": "descanso",
+      "photo": true,
+      "shade": true,
+      "breath": false,
+      "focus": "68% 50%",
+      "image": {
+        "path": "/wp-content/uploads/2026/10/hero-sueno-v20261016164232-1600x1058.webp",
+        "width": 1600,
+        "height": 1058,
+        "loaded": true
+      },
+      "htmlLang": "es"
+    },
+    {
+      "path": "/sueno/",
+      "width": 393,
+      "height": 852,
+      "status": 200,
+      "overflow": false,
+      "dark": true,
+      "border": "#342b56",
+      "title": "Del ronquidoal descanso",
+      "bold": "Del ronquido",
+      "italic": "descanso",
+      "photo": true,
+      "shade": true,
+      "breath": false,
+      "focus": "68% 50%",
+      "image": {
+        "path": "/wp-content/uploads/2026/10/hero-sueno-v20261016164232-1600x1058.webp",
+        "width": 1600,
+        "height": 1058,
+        "loaded": true
+      },
+      "htmlLang": "es"
+    },
+    {
+      "path": "/sueno/",
+      "width": 832,
+      "height": 340,
+      "status": 200,
+      "overflow": false,
+      "dark": true,
+      "border": "#342b56",
+      "title": "Del ronquidoal descanso",
+      "bold": "Del ronquido",
+      "italic": "descanso",
+      "photo": true,
+      "shade": true,
+      "breath": false,
+      "focus": "68% 50%",
+      "image": {
+        "path": "/wp-content/uploads/2026/10/hero-sueno-v20261016164232-1600x1058.webp",
+        "width": 1600,
+        "height": 1058,
+        "loaded": true
+      },
+      "htmlLang": "es"
+    },
+    {
+      "path": "/sueno/",
+      "width": 1440,
+      "height": 1000,
+      "status": 200,
+      "overflow": false,
+      "dark": true,
+      "border": "#342b56",
+      "title": "Del ronquidoal descanso",
+      "bold": "Del ronquido",
+      "italic": "descanso",
+      "photo": true,
+      "shade": true,
+      "breath": false,
+      "focus": "50% 0%",
+      "image": {
+        "path": "/wp-content/uploads/2026/10/hero-sueno-v20261016164232-escritorio.webp",
+        "width": 2040,
+        "height": 1349,
+        "loaded": true
+      },
+      "htmlLang": "es"
+    },
+    {
+      "path": "/otorrinolaringologia/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "dark": false,
+      "border": "#e6dcd3",
+      "title": "Oído, nariz y garganta,desde los 0 meses",
+      "bold": "Oído, nariz",
+      "italic": "desde los 0 meses",
+      "photo": true,
+      "shade": true,
+      "breath": false,
+      "focus": "64% 50%",
+      "image": {
+        "path": "/wp-content/uploads/2026/10/hero-orl-v20261016171317-1600x1102.webp",
+        "width": 1600,
+        "height": 1102,
+        "loaded": true
+      },
+      "htmlLang": "es"
+    },
+    {
+      "path": "/otorrinolaringologia/",
+      "width": 393,
+      "height": 852,
+      "status": 200,
+      "overflow": false,
+      "dark": false,
+      "border": "#e6dcd3",
+      "title": "Oído, nariz y garganta,desde los 0 meses",
+      "bold": "Oído, nariz",
+      "italic": "desde los 0 meses",
+      "photo": true,
+      "shade": true,
+      "breath": false,
+      "focus": "64% 50%",
+      "image": {
+        "path": "/wp-content/uploads/2026/10/hero-orl-v20261016171317-1600x1102.webp",
+        "width": 1600,
+        "height": 1102,
+        "loaded": true
+      },
+      "htmlLang": "es"
+    },
+    {
+      "path": "/otorrinolaringologia/",
+      "width": 832,
+      "height": 340,
+      "status": 200,
+      "overflow": false,
+      "dark": false,
+      "border": "#e6dcd3",
+      "title": "Oído, nariz y garganta,desde los 0 meses",
+      "bold": "Oído, nariz",
+      "italic": "desde los 0 meses",
+      "photo": true,
+      "shade": true,
+      "breath": false,
+      "focus": "64% 50%",
+      "image": {
+        "path": "/wp-content/uploads/2026/10/hero-orl-v20261016171317-1600x1102.webp",
+        "width": 1600,
+        "height": 1102,
+        "loaded": true
+      },
+      "htmlLang": "es"
+    },
+    {
+      "path": "/otorrinolaringologia/",
+      "width": 1440,
+      "height": 1000,
+      "status": 200,
+      "overflow": false,
+      "dark": false,
+      "border": "#e6dcd3",
+      "title": "Oído, nariz y garganta,desde los 0 meses",
+      "bold": "Oído, nariz",
+      "italic": "desde los 0 meses",
+      "photo": true,
+      "shade": true,
+      "breath": false,
+      "focus": "50% 0%",
+      "image": {
+        "path": "/wp-content/uploads/2026/10/hero-orl-v20261016171317-escritorio.webp",
+        "width": 2040,
+        "height": 1405,
+        "loaded": true
+      },
+      "htmlLang": "es"
+    }
+  ],
+  "drafts": [
+    {
+      "path": "/en/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/dr-irina-gonzalez-saez/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/ent/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/sleep/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/first-visit/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/contact/",
+      "status": 301,
+      "location": "https://drairinagonzalez.com/contacto/"
+    },
+    {
+      "path": "/en/thank-you/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/faq/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/privacy-notice/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/medical-disclaimer/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/terms-of-use/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/sleep/snoring/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/sleep/obstructive-sleep-apnea/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/sleep/home-sleep-test/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/sleep/cpap-therapy/",
+      "status": 404,
+      "lang": "en-US"
+    },
+    {
+      "path": "/en/sleep/snoring-and-sleep-apnea-surgery/",
+      "status": 404,
+      "lang": "en-US"
+    }
+  ],
+  "live": {
+    "sitemapCount": 15,
+    "englishInSitemap": 0,
+    "englishHreflang": false,
+    "switchVisible": false
+  },
+  "errors": [],
+  "limits": "Chrome Windows at 390/393/832/1440, not physical iOS/Android. Only Spanish areas publicly rendered; EN15x404 and /en/contact/301 to ES, recorded as local FIX pending deployment. No English preview/account, real form, SMTP, GA conversion, deployment or publication. OG/hreflang/sitemap of published EN not verified."
+}

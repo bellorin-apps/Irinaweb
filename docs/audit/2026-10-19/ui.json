@@ -1,0 +1,11 @@
+{
+  "requestsBeforeClick": 0,
+  "requestsAfterClick": 1,
+  "status": "The reviews could not be loaded. You can try again or open the Doctoralia link.",
+  "label": "Credential 1 of 3",
+  "fieldsStatus": "Please check the highlighted fields.",
+  "consentStatus": "We need your consent to contact you.",
+  "sendStatus": "We could not send your message. Please message us on WhatsApp.",
+  "syntheticFetchCalls": 1,
+  "limits": "Real JS with synthetic template helpers and English attributes from compiled GNU catalog. Form submit events use a stubbed fetch, no real form/network/SMTP. No real Doctoralia, cookies, patient data, activation, WordPress gettext stack or English page preview."
+}

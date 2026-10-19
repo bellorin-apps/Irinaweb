@@ -86,7 +86,8 @@ $irina_a = wp_parse_args(
 			<?php
 			if ( $irina_a['creds'] ) :
 				?>
-				<ul class="di-creds di-reveal di-reveal--d3">
+				<?php /* translators: 1: current credential number, 2: total credentials. */ ?>
+				<ul class="di-creds di-reveal di-reveal--d3" data-label="<?php esc_attr_e( 'Credencial %1$d de %2$d', 'irina-gonzalez' ); ?>">
 				<?php
 				foreach ( (array) $irina_a['creds'] as $irina_c ) :
 					?>

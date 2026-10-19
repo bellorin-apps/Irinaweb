@@ -1,0 +1,27 @@
+{
+  "elementorPages": 8,
+  "legalPages": {
+    "privacy-notice": true,
+    "medical-disclaimer": true,
+    "terms-of-use": true
+  },
+  "fichas": 5,
+  "internalLinks": 18,
+  "badLinks": [],
+  "trackedOutputsChecked": 24,
+  "rebuildChanged": [],
+  "catalogSample": {
+    "Cargando opiniones de Doctoralia…": "Loading Doctoralia reviews…",
+    "Cómo llegar": "Get directions",
+    "No se han podido cargar las opiniones. Puedes reintentar o abrir el enlace de Doctoralia.": "The reviews could not be loaded. You can try again or open the Doctoralia link.",
+    "Credencial %1$d de %2$d": "Credential %1$d of %2$d",
+    "Revisa los campos marcados.": "Please check the highlighted fields.",
+    "No pudimos enviar tu mensaje. Escríbenos por WhatsApp.": "We could not send your message. Please message us on WhatsApp.",
+    "Necesitamos tu consentimiento para contactarte.": "We need your consent to contact you."
+  },
+  "limits": "Static content/link/catalog/build check, not clinical validation or English rendering in WordPress. Existing medical/legal approval requirements preserved.",
+  "compiledCounts": {
+    "theme": 135,
+    "plugin": 14
+  }
+}

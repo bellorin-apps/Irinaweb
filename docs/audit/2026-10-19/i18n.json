@@ -1,0 +1,33 @@
+{
+    "checks": {
+        "language by page hierarchy": true,
+        "switch hidden while root draft": true,
+        "draft counterpart has no hreflang": true,
+        "reciprocal hreflang three tags": true,
+        "EN switch to paired ES": true,
+        "missing published counterpart fallback": true,
+        "EN Sleep maps to ES Sleep": true,
+        "locale \/en\/": true,
+        "locale \/en\/sleep\/": true,
+        "locale \/en\/nonexistent\/": true,
+        "prefix is boundary aware": true,
+        "EN404 never guesses a Spanish destination": true,
+        "ES canonical guessing unchanged": true,
+        "admin locale unchanged": true,
+        "anonymous preview does not choose draft locale": true,
+        "authorized preview locale": true,
+        "sleep CSS\/body 11": true,
+        "sleep CSS\/body 101": true,
+        "sleep CSS\/body 12": true,
+        "sleep CSS\/body 102": true,
+        "area schema es-MX": true,
+        "area schema en-US": true,
+        "FAQ schema from ten real build questions": true,
+        "English WhatsApp message": true,
+        "English form categories without submission": true,
+        "English thanks destination": true,
+        "unpublished thanks safe fallback": true,
+        "EN clinical rewrite": true
+    },
+    "limits": "Real callbacks on synthetic posts\/capabilities and fixture publication states; not real WordPress, Rank Math integration, sitemap, authentication, SMTP, medical review or production publication."
+}

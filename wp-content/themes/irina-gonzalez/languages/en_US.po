@@ -47,6 +47,9 @@ msgstr "Scroll to the next section"
 msgid "Borrador: pendiente de revisión de la Dra."
 msgstr "Draft: pending Dr. Irina’s review."
 
+msgid "Cargando opiniones de Doctoralia…"
+msgstr "Loading Doctoralia reviews…"
+
 msgid "Cargar opiniones de Doctoralia"
 msgstr "Load Doctoralia reviews"
 
@@ -76,6 +79,9 @@ msgstr "Contact"
 
 msgid "Correo (opcional)"
 msgstr "Email (optional)"
+
+msgid "Credencial %1$d de %2$d"
+msgstr "Credential %1$d of %2$d"
 
 msgid "Credenciales"
 msgstr "Credentials"
@@ -242,6 +248,12 @@ msgstr "We couldn’t verify that you’re a person. Please wait a moment and tr
 msgid "No pudimos enviar tu mensaje. Escríbenos por WhatsApp y te atendemos enseguida."
 msgstr "We couldn’t send your message. Please message us on WhatsApp and we’ll reply right away."
 
+msgid "No pudimos enviar tu mensaje. Escríbenos por WhatsApp."
+msgstr "We could not send your message. Please message us on WhatsApp."
+
+msgid "No se han podido cargar las opiniones. Puedes reintentar o abrir el enlace de Doctoralia."
+msgstr "The reviews could not be loaded. You can try again or open the Doctoralia link."
+
 msgid "Nombre"
 msgstr "Name"
 
@@ -308,6 +320,9 @@ msgstr "Patient resources"
 msgid "Relacionado"
 msgstr "Related"
 
+msgid "Revisa los campos marcados."
+msgstr "Please check the highlighted fields."
+
 msgid "Revisa los datos e inténtalo de nuevo."
 msgstr "Please check your details and try again."
 
@@ -319,6 +334,9 @@ msgstr "Risks and alternatives"
 
 msgid "Ronquido y apnea del sueño"
 msgstr "Snoring and sleep apnea"
+
+msgid "Si las opiniones no aparecen, puedes abrir el enlace de Doctoralia."
+msgstr "If the reviews do not appear, you can open the Doctoralia link."
 
 msgid "Si llegaste desde un enlace antiguo de otorrino-monterrey.com, el contenido vive ahora en este sitio."
 msgstr "If you followed an old link from otorrino-monterrey.com, that content now lives on this site."

@@ -83,7 +83,7 @@
 			}
 			continue;
 		}
-		$id = $post ? (int) $post->ID : (int) wp_insert_post(
+		$result = $post ? (int) $post->ID : wp_insert_post(
 			[
 				'post_type'   => 'page',
 				'post_status' => 'draft',
@@ -93,9 +93,10 @@
 			],
 			true
 		);
-		if ( ! $id ) {
+		if ( is_wp_error( $result ) || ! $result ) {
 			WP_CLI::error( "No se pudo crear {$slug}" );
 		}
+		$id = (int) $result;
 		if ( 'en' === $slug ) {
 			$root = $id;
 		}
@@ -203,11 +204,11 @@
 			if ( $fid ) {
 				$args['ID'] = $fid;
 			}
-			$fid = (int) wp_insert_post( $args, true );
-			if ( ! $fid ) {
-				WP_CLI::warning( "No se pudo crear la ficha {$f['slug']}" );
-				continue;
+			$result = wp_insert_post( $args, true );
+			if ( is_wp_error( $result ) || ! $result ) {
+				WP_CLI::error( "No se pudo crear la ficha {$f['slug']}" );
 			}
+			$fid = (int) $result;
 			// Primero idioma y estado: así la puerta médica la trata como borrador pendiente de revisión.
 			update_post_meta( $fid, \DraIrina\Core\I18n\Language::META, 'en' );
 			wp_set_object_terms( $fid, \DraIrina\Core\Taxonomies\EstadoMedico::MEDICAL_REVIEW_REQ, \DraIrina\Core\Taxonomies\EstadoMedico::SLUG, false );

@@ -127,7 +127,7 @@
       dots = document.createElement('div'); dots.className = 'di-creds__dots';
       credItems.forEach(function (li, k) {
         var b = document.createElement('button'); b.type = 'button';
-        b.setAttribute('aria-label', 'Credencial ' + (k + 1) + ' de ' + credItems.length);
+        b.setAttribute('aria-label', (creds.getAttribute('data-label') || 'Credencial %1$d de %2$d').replace('%1$d', String(k + 1)).replace('%2$d', String(credItems.length)));
         b.innerHTML = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="di-ring__track" cx="9" cy="9" r="7.5"/><circle class="di-ring__bar" cx="9" cy="9" r="7.5"/></svg>';
         b.addEventListener('click', function () { show(k, k > idx ? 1 : -1); pauseThenResume(); });
         dots.appendChild(b);
@@ -234,7 +234,7 @@
       if (form.classList.contains('is-sending')) { return; }
       if (!form.checkValidity()) {
         var bad = form.querySelector(':invalid');
-        showError(bad && bad.name === 'di_consent' ? 'Necesitamos tu consentimiento para contactarte.' : 'Revisa los campos marcados.', null);
+        showError(bad && bad.name === 'di_consent' ? (form.getAttribute('data-error-consent') || 'Necesitamos tu consentimiento para contactarte.') : (form.getAttribute('data-error-fields') || 'Revisa los campos marcados.'), null);
         if (bad) { bad.classList.add('is-invalid'); bad.setAttribute('aria-invalid', 'true'); bad.focus(); }
         return;
       }
@@ -248,12 +248,12 @@
             window.location.assign(form.getAttribute('data-thanks') || '/');
             return;
           }
-          showError((res.j && res.j.message) || 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', res.j && res.j.error);
+          showError((res.j && res.j.message) || form.getAttribute('data-error-send') || 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', res.j && res.j.error);
           // Captcha Turnstile: cada token sirve una vez; tras un error se pide uno nuevo.
           if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch { /* sin captcha */ } }
         })
         .catch(function () {
-          showError('No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', null);
+          showError(form.getAttribute('data-error-send') || 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', null);
           if (window.turnstile && form.querySelector('.cf-turnstile')) { try { window.turnstile.reset(form.querySelector('.cf-turnstile')); } catch { /* sin captcha */ } }
         })
         .finally(function () { form.classList.remove('is-sending'); form.querySelector('.di-form__label').hidden = false; form.querySelector('.di-form__sending').hidden = true; });
@@ -426,16 +426,16 @@
     doctoraliaButton.addEventListener('click', function () {
       if (document.getElementById('zl-widget-s') || doctoraliaButton.getAttribute('aria-disabled') === 'true') { return; }
       doctoraliaButton.setAttribute('aria-disabled', 'true');
-      doctoraliaStatus.textContent = 'Cargando opiniones de Doctoralia…';
+      doctoraliaStatus.textContent = doctoralia.getAttribute('data-di-status-loading') || 'Cargando opiniones de Doctoralia…';
       var s = document.createElement('script');
       s.id = 'zl-widget-s'; s.async = true; s.src = 'https://platform.docplanner.com/js/widget.js';
       s.addEventListener('load', function () {
-        doctoraliaStatus.textContent = 'Si las opiniones no aparecen, puedes abrir el enlace de Doctoralia.';
+        doctoraliaStatus.textContent = doctoralia.getAttribute('data-di-status-loaded') || 'Si las opiniones no aparecen, puedes abrir el enlace de Doctoralia.';
       });
       s.addEventListener('error', function () {
         s.remove();
         doctoraliaButton.removeAttribute('aria-disabled');
-        doctoraliaStatus.textContent = 'No se han podido cargar las opiniones. Puedes reintentar o abrir el enlace de Doctoralia.';
+        doctoraliaStatus.textContent = doctoralia.getAttribute('data-di-status-error') || 'No se han podido cargar las opiniones. Puedes reintentar o abrir el enlace de Doctoralia.';
       });
       document.body.appendChild(s);
     });

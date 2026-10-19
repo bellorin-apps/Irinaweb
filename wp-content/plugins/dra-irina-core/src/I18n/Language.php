@@ -41,6 +41,7 @@ final class Language {
 		add_action( 'wp', [ $this, 'reset_current' ], 0 );
 		add_action( 'wp_head', [ $this, 'hreflang' ], 2 );
 		add_filter( 'body_class', [ $this, 'body_class' ] );
+		add_filter( 'do_redirect_guess_404_permalink', [ $this, 'guess_404' ] );
 	}
 
 	/** Idioma de una entrada: inglés si es la raíz `en`, una página bajo ella o una entrada marcada con `_di_lang = en`. */
@@ -95,6 +96,11 @@ final class Language {
 
 	public function reset_current(): void {
 		self::$current = null;
+	}
+
+	/** No adivinar slugs ingleses inexistentes con páginas españolas (p. ej. /en/contact/ → /contacto/). */
+	public function guess_404( bool $guess ): bool {
+		return self::EN === self::from_path() ? false : $guess;
 	}
 
 	/** Entrada equivalente en el otro idioma (cualquier estado); 0 si no hay. */

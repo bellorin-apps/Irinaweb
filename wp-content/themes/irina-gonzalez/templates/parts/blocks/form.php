@@ -66,7 +66,10 @@ if ( ! $irina_core ) {
 			<?php endif; ?>
 			<?php echo irina_whatsapp_button( '', '', 'di-btn di-btn--whatsapp di-reveal di-reveal--d3' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		</div>
-		<form class="di-form di-reveal di-reveal--d2" method="post" action="<?php echo esc_url( $irina_action ); ?>" data-thanks="<?php echo esc_url( $irina_thanks ); ?>" novalidate>
+		<form class="di-form di-reveal di-reveal--d2" method="post" action="<?php echo esc_url( $irina_action ); ?>" data-thanks="<?php echo esc_url( $irina_thanks ); ?>"
+			data-error-consent="<?php esc_attr_e( 'Necesitamos tu consentimiento para contactarte.', 'irina-gonzalez' ); ?>"
+			data-error-fields="<?php esc_attr_e( 'Revisa los campos marcados.', 'irina-gonzalez' ); ?>"
+			data-error-send="<?php esc_attr_e( 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp.', 'irina-gonzalez' ); ?>" novalidate>
 			<input type="hidden" name="action" value="di_contact">
 			<input type="hidden" name="di_t" value="<?php echo esc_attr( (string) time() ); ?>">
 			<?php if ( 'en' === irina_lang() ) : ?>

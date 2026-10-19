@@ -131,7 +131,7 @@
         "widgetType": "di-form",
         "settings": {
           "eyebrow": "Write to us",
-          "title": "Would you like<br>us to <em>call you</em>?",
+          "title": "<b>Would you</b> like<br>us to <em>call you</em>?",
           "lead": "Leave your name and phone number and we’ll contact you during office hours. For faster booking, use WhatsApp.",
           "button": "Send request"
         },
