@@ -1,0 +1,34 @@
+  /en/                                         publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/dr-irina-gonzalez-saez/                  publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/ent/                                     publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/                                   publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/first-visit/                             publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/contact/                                 publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/thank-you/                               publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/faq/                                     publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/privacy-notice/                          publish  legal aceptado por José (--legal-ok)
+  /en/medical-disclaimer/                      publish  legal aceptado por José (--legal-ok)
+  /en/terms-of-use/                            publish  legal aceptado por José (--legal-ok)
+  /en/sleep/snoring/                           publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/obstructive-sleep-apnea/           publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/home-sleep-test/                   publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/cpap-therapy/                      publish  aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/snoring-and-sleep-apnea-surgery/   publish  aprobada por la Dra. 2026-10-19 12:54:32
+Success: Versión inglesa publicada.
+→ Verificación pública
+  /en/                                       200
+  /en/ent/                                   200
+  /en/sleep/                                 200
+  /en/dr-irina-gonzalez-saez/                200
+  /en/first-visit/                           200
+  /en/contact/                               200
+  /en/faq/                                   500
+  /en/privacy-notice/                        200
+  /en/medical-disclaimer/                    200
+  /en/terms-of-use/                          200
+  /en/sleep/snoring/                         200
+  /en/sleep/obstructive-sleep-apnea/         200
+  /en/sleep/home-sleep-test/                 200
+  /en/sleep/cpap-therapy/                    200
+  /en/sleep/snoring-and-sleep-apnea-surgery/ 200
+ERROR: verificación pública incompleta; revisar el estado real y la caché antes de dar el lanzamiento por válido.

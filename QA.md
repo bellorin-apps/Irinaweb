@@ -853,3 +853,31 @@ Hallazgos de esta auditoría:
 
 
 Evidencia docs/audit/2026-10-19/:publisher28casos, i18n28checks,8vistasES,15EN404+1EN301aES,15sitemap sinEN,18enlaces válidos y24salidas reproducibles. PHP85/bash21/PHPCSproducto+publisher/ESLint/stylelint pasan; setup1warning meta_query preexistente. No rollback ni publicación reales, no OG/sitemap deEN publicado certificados. Español221/228; inglés9/19.13.5REVIEW/13.6OWNER/13.7DOING. D-099 legales yaaprobados. Informe docs/REVISION_INGLES_2026-10-19.md. Sin deploy/setup/formularios/cuentas/secretos; HTML de José preservados.
+
+## Integración real de la versión inglesa (13.5) y protecciones de publish-en (13.7) · sesión local · 2026-10-19
+
+Encargo de Codex del 2026-10-19. Copia local aislada: WordPress 7.1.3, Elementor 4.3.5 y Pro 4.3.1, Rank Math 1.0.280 y Hello 3.5.1, idénticos a producción; SQLite; datos sintéticos; red y correo bloqueados; ssh/scp bloqueados. Sin despliegue, sin scripts contra producción y sin publicar nada. Informe: `docs/REVISION_INTEGRACION_EN_2026-10-19.md`; evidencia: `docs/audit/2026-10-19-local/`; herramientas: `tools/audit/en-local/`.
+
+- **Sintético:** los harnesses de Codex pasan en esta PC (28 publisher, 28 i18n y UI), con salidas idénticas a las versionadas.
+- **13.5 integrado:**
+  - OG `en_US`, canónica propia y hreflang recíproco (es-MX/en-US/x-default→ES) en las 15 EN y sus 15 parejas;
+  - sitemap con **30** URL, sin Gracias/Thank you; sin pareja publicada no se anuncia y baja a 29;
+  - selector y menús ocultos con la raíz en borrador; con todo publicado, a la pareja o a la portada del otro idioma;
+  - schema con un solo Physician y FAQ = 10 visibles;
+  - 404 EN «Page not found»; /en/thank-you/ con noindex; el formulario EN lleva a /en/thank-you/ y el ES a /gracias/;
+  - WhatsApp, carrusel y validación/error del formulario en inglés, sin envío real;
+  - Sleep con di-dark y sleep.css, ENT cálido, encuadres 68 % y 64 % y escritorio en 50% 0%, sin desborde.
+- **Q-075 reproducido:** sin el guard, el 301 de `/en/contact/` sale de `redirect_canonical` ← `redirect_guess_404_permalink()`; con el guard, las 16 EN dan 404. **Pendiente en producción** (guard sin desplegar).
+- **13.7 integrado:**
+  - dry-run sin cambios;
+  - 16 casos de preflight bloquean (salida 1) sin cambios;
+  - opción desconocida: salida 2 antes de lib;
+  - la 2.ª ejecución es idempotente;
+  - WP_Error, estado retenido y excepción → «Estados restaurados»;
+  - un fallo de restauración informa el ID y sale con 1;
+  - la verificación HTTP 500, sin alternates, sin red y con fallo PHP sale con 1;
+  - setup-en: aborta si no puede crear; solo la página cambiada pierde la aprobación; no toca publicadas ni fichas aprobadas.
+- **Q-076 · P1 · OPEN:** `publish-en.sh` usa `--skip-plugins=elementor,elementor-pro`, y sin Elementor `wp_update_post` da `invalid_page_template` en las páginas `elementor_header_footer`. **La publicación real fallaría en /en/ sin publicar nada**, con el aviso engañoso «no restaurados IDs <raíz>» aunque no cambió. Con Elementor cargado publica las 16 y verifica. Lo corrige la nube.
+- **Q-077 · P3 · OPEN:** la portada /en/ no lleva WebSite/WebPage de Rank Math ni ningún `inLanguage`; la ES sí.
+- **Q-078 · P2 · OPEN (límite):** IndexNow de Rank Math (instant-indexing activo) avisa al publicar: 5 POST en una publicación fallida (luego restaurada) y 10 en la completa. No se deshace.
+- **Veredicto:** 13.5 sigue en **REVIEW** por Q-077 y por la verificación en producción tras el lanzamiento autorizado. 13.7 sigue en **DOING**: Q-076 bloquea; no es atómico (secuencial y compensatorio); hooks, caché e IndexNow no se revierten.

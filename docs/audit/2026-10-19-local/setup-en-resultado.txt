@@ -1,0 +1,32 @@
+== setup-en
+  S1-sin-cambios (base base-en-aprobado, contenido orig): exit 0
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+    print('      sin cambios' if not d else '\n'.join('      %s: %s \u2192 %s'%(k,v[0],v[1]) for k,v in d.items()))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bellg\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 104: character maps to <undefined>
+  S2-faq-cambia (base base-en-aprobado, contenido mod): exit 0
+      log: Warning: /en/ faq: el texto cambió; la Dra. debe aprobarla de nuevo en su guía.
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+    print('      sin cambios' if not d else '\n'.join('      %s: %s \u2192 %s'%(k,v[0],v[1]) for k,v in d.items()))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bellg\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 96: character maps to <undefined>
+  S3-publicado-y-cambio (base en-publicado, contenido mod): exit 0
+      log:   /en/ en: PUBLICADA, no se modifica (cambios con aprobación de la Dra., 13.6)
+      log:   /en/ contact: PUBLICADA, no se modifica (cambios con aprobación de la Dra., 13.6)
+      log:   /en/ dr-irina-gonzalez-saez: PUBLICADA, no se modifica (cambios con aprobación de la Dra., 13.6)
+      log:   /en/ ent: PUBLICADA, no se modifica (cambios con aprobación de la Dra., 13.6)
+      log:   /en/ faq: PUBLICADA, no se modifica (cambios con aprobación de la Dra., 13.6)
+      log:   /en/ first-visit: PUBLICADA, no se modifica (cambios con aprobación de la Dra., 13.6)
+      sin cambios
+  S4-error-al-crear (base base-en-aprobado, contenido orig): exit 1
+      log: Error: No se pudo crear faq
+      sin cambios
+      inyección: 2026-10-19T19:11:25+00:00 crear-falla en faq

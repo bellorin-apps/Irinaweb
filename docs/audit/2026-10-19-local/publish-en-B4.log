@@ -1,0 +1,49 @@
+  /en/                                         draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/dr-irina-gonzalez-saez/                  draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/ent/                                     draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/                                   draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/first-visit/                             draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/contact/                                 draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/thank-you/                               draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/faq/                                     draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/privacy-notice/                          draft    legal aceptado por José (--legal-ok)
+  /en/medical-disclaimer/                      draft    legal aceptado por José (--legal-ok)
+  /en/terms-of-use/                            draft    legal aceptado por José (--legal-ok)
+  /en/sleep/snoring/                           draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/obstructive-sleep-apnea/           draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/home-sleep-test/                   draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/cpap-therapy/                      draft    aprobada por la Dra. 2026-10-19 12:54:32
+  /en/sleep/snoring-and-sleep-apnea-surgery/   draft    aprobada por la Dra. 2026-10-19 12:54:32
+  publicada http://127.0.0.1:8890/en/ → publish
+  publicada http://127.0.0.1:8890/en/dr-irina-gonzalez-saez/ → publish
+  publicada http://127.0.0.1:8890/en/ent/ → publish
+  publicada http://127.0.0.1:8890/en/sleep/ → publish
+  publicada http://127.0.0.1:8890/en/first-visit/ → publish
+  publicada http://127.0.0.1:8890/en/contact/ → publish
+  publicada http://127.0.0.1:8890/en/thank-you/ → publish
+  publicada http://127.0.0.1:8890/en/faq/ → publish
+  publicada http://127.0.0.1:8890/en/privacy-notice/ → publish
+  publicada http://127.0.0.1:8890/en/medical-disclaimer/ → publish
+  publicada http://127.0.0.1:8890/en/terms-of-use/ → publish
+  publicada http://127.0.0.1:8890/en/sleep/snoring/ → publish
+  publicada http://127.0.0.1:8890/en/sleep/obstructive-sleep-apnea/ → publish
+  publicada http://127.0.0.1:8890/en/sleep/home-sleep-test/ → publish
+  publicada http://127.0.0.1:8890/en/sleep/cpap-therapy/ → publish
+  publicada http://127.0.0.1:8890/en/sleep/snoring-and-sleep-apnea-surgery/ → publish
+Success: Versión inglesa publicada.
+→ Verificación pública
+  /en/                                       200
+  /en/ent/                                   200
+  /en/sleep/                                 200
+  /en/dr-irina-gonzalez-saez/                200
+  /en/first-visit/                           200
+  /en/contact/                               200
+  /en/faq/                                   200
+  /en/privacy-notice/                        200
+  /en/medical-disclaimer/                    200
+  /en/terms-of-use/                          200
+  /en/sleep/snoring/                         200
+  /en/sleep/obstructive-sleep-apnea/         200
+  /en/sleep/home-sleep-test/                 200
+  /en/sleep/cpap-therapy/                    200
+  /en/sleep/snoring-and-sleep-apnea-surgery/ 200

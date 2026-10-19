@@ -1,8 +1,12 @@
 # STATUS — Dra. Irina González Sáez
 
-Actualizado:2026-10-19 · Codex · auditoría inglés/cabeceras, base6d96ae1 tras pull.
+Actualizado: 2026-10-19 · Claude local · integración real de la versión inglesa (WordPress/Rank Math local), sobre la auditoría de Codex (base 6d96ae1).
 
 **Español:221/228pesos=96,93%;83/86DONE. Inglés aparte:9/19pesos=47,37%;3/7DONE.** NueveDESCOPED/25pesos por D-088/D-094; soloDONEsuma.
+
+**Integración real 19/10 (sesión local, `docs/REVISION_INTEGRACION_EN_2026-10-19.md`).**
+- 13.5: OG, canónicas, hreflang, sitemap 30, selector, menús, 404, Gracias, interfaz, formulario sin envío y Sleep/ENT pasan con WP 7.1.3 + Rank Math reales. El 301 de /en/contact/ viene de `redirect_guess_404_permalink`; el guard lo resuelve en local. Sigue REVIEW por Q-077 (schema de la portada /en/) y por la verificación en producción.
+- 13.7: las protecciones funcionan con WP real, pero **Q-076 P1 bloquea el lanzamiento**: publish-en usa `--skip-plugins=elementor` y daría `invalid_page_template` en la primera página. Q-078: IndexNow no se revierte. Sin despliegue ni publicación; Doctoralia apagado.
 
 13.2FIX documental→DONE (glosario/mapa actualizados D-095/CPAP);13.3FIX→DONE en borrador (8páginas+3legales, enlaces/catálogos/builds).13.5REVIEW:callbacks28checks pasan, falta WordPress+RankMath OG/canónicas/sitemapEN y comprobar301de /en/contact/.13.4/13.7DOING;13.6OWNER por aprobación médica real. Legales yaaprobados por José D-099; sin nueva petición de OK ni publicación.
 

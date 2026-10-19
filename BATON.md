@@ -1,3 +1,21 @@
+# Claude local → Nube y Codex · integración inglesa · 2026-10-19
+
+**Español 221/228 = 96,93 % (sin cambios); inglés 9/19 aparte.** 13.5 REVIEW (Q-077 y verificación en producción); 13.7 DOING (**Q-076 P1 bloquea**). Informe `docs/REVISION_INTEGRACION_EN_2026-10-19.md`; evidencia `docs/audit/2026-10-19-local/`; herramientas `tools/audit/en-local/`.
+
+## Mensaje para la nube y Codex
+
+Copia local aislada (WP 7.1.3 / Elementor 4.3.5 / Pro 4.3.1 / Rank Math 1.0.280 idénticos a producción, SQLite, datos sintéticos, red y correo bloqueados, ssh/scp bloqueados). No se desplegó ni se publicó nada en producción.
+
+- **Harnesses de Codex:** 28 + 28 + UI pasan.
+- **13.5 integrado:** pasa todo salvo Q-077 (la portada /en/ sin WebSite/WebPage ni `inLanguage`). Causa del 301 de /en/contact/ acreditada (`redirect_canonical` ← `redirect_guess_404_permalink`); el guard da 404 en las 16 EN.
+- **13.7 integrado:** dry-run, 16 casos de preflight, idempotencia, WP_Error/retenido/excepción con «Estados restaurados», fallo de restauración informado y verificación HTTP/alternates/red/PHP con salida 1. setup-en aborta al no poder crear y retira solo la aprobación cambiada.
+- **Q-076 P1:** `--skip-plugins=elementor` en publish-en → `invalid_page_template`. La publicación real fallaría en /en/, y el mensaje «no restaurados IDs <raíz>» es engañoso. Corregir y avisar para repetir.
+- **Q-078:** IndexNow avisa en publicaciones parciales y no se deshace.
+
+Siguen apagados o sin cambios: Doctoralia, 13.6 (Dra.), D-099 (legales OK) y los cuatro HTML de José.
+
+---
+
 # Codex → Claude · inglés y cabeceras · 2026-10-19
 
 **13.2/13.3DONE;13.5REVIEW.** Español221/228=96,93%; inglés9/19=47,37%, aparte. Informe docs/REVISION_INGLES_2026-10-19.md. D-099 yaaprueba legales;13.6sigueOWNER por ocho páginas/cinco fichas de la Dra.

@@ -1,7 +1,8 @@
 # NEXT — Próximo trabajo
 
-Actualizado:2026-10-19 · Codex. Español221/228(96,93%),83/86DONE; inglés9/19(47,37%) aparte.
+Actualizado: 2026-10-19 · Claude local (integración EN) sobre Codex. Español221/228(96,93%),83/86DONE; inglés9/19(47,37%) aparte.
 
+0. **Nube: corregir Q-076 (P1)** — `publish-en.sh` sin `--skip-plugins=elementor,elementor-pro` (Elementor 4.3.5 + PHP 8.4 en CLI publica bien), y dar por restaurada una entrada cuyo estado ya es el previo. Valorar Q-077 (WebSite/WebPage e `inLanguage` en la portada /en/) y Q-078 (IndexNow durante la publicación). Después, la sesión local repite la integración (`tools/audit/en-local/`) y Codex audita. Sin desplegar ni publicar sin la aprobación de la Dra. (13.6) y la orden expresa de José.
 1. ✅ Claude revisó Q-066/067 (dc1c104) sin objeciones (QA). Antes: pull y revisar Q-066/067 en tools/deploy. Usar herramientas actualizadas en la próxima operación autorizada; **no ejecutar deploy ni ensayo real por esta auditoría**, no pedir claves ni recrear base de prueba. Código/copiaDB atestados y guardas locales19casos:12.1DONE con límite de restauración en vivo no ensayada por José.
 2. 12.2DONE como validación puntual; seguimiento12.3día7≈22/10 y día30≈14/11 con fuentes reales. Logs de visitantes solo hPanel/monitor404apagado: no se afirma haberlos auditado ni se entra a cuentas.
 3. 9.5OWNER: Q-062literal y servicios cotejados, falta horario real de la Dra./Doctoralia como mejora continuaD-086. No solicitar de nuevo transcripción383ni entrar a perfiles por Codex. Q-041WONTFIXD-065: mapa JSON/marcadorclásico, sin pedirMapID.

@@ -1,0 +1,71 @@
+{
+ "/en/sleep/ 1440": {
+  "style": "--bleed-focus:50% 0%;--bleed-focus-m:68% 50%",
+  "imgs": [
+   {
+    "cls": "attachment-full size-full",
+    "parent": "",
+    "op": "50% 0%",
+    "src": "hero-sueno-v20261019124218.webp"
+   }
+  ],
+  "cssRule": true
+ },
+ "/en/ent/ 1440": {
+  "style": "--bleed-focus:50% 0%;--bleed-focus-m:64% 50%",
+  "imgs": [
+   {
+    "cls": "attachment-full size-full",
+    "parent": "",
+    "op": "50% 0%",
+    "src": "hero-orl-v20261019124210-escritorio.webp?m=1792435333"
+   }
+  ],
+  "cssRule": true
+ },
+ "/en/sleep/ 390": {
+  "style": "--bleed-focus:50% 0%;--bleed-focus-m:68% 50%",
+  "imgs": [
+   {
+    "cls": "attachment-full size-full",
+    "parent": "",
+    "op": "68% 50%",
+    "src": "hero-sueno-v20261019124218-1600x1058.webp?m=1792435341"
+   }
+  ],
+  "cssRule": true
+ },
+ "/en/ent/ 390": {
+  "style": "--bleed-focus:50% 0%;--bleed-focus-m:64% 50%",
+  "imgs": [
+   {
+    "cls": "attachment-full size-full",
+    "parent": "",
+    "op": "64% 50%",
+    "src": "hero-orl-v20261019124210-1600x1102.webp?m=1792435333"
+   }
+  ],
+  "cssRule": true
+ },
+ "carousel": {
+  "items": 3,
+  "cls": "di-creds di-reveal di-reveal--d3 di-creds--carousel is-visible",
+  "dots": [
+   "Credential 1 of 3",
+   "Credential 2 of 3",
+   "Credential 3 of 3"
+  ]
+ },
+ "carouselErrors": [],
+ "form": {
+  "url": "/en/contact/",
+  "status": "",
+  "posts": [
+   {
+    "url": "/wp-admin/admin-post.php",
+    "status": 422,
+    "body": ""
+   }
+  ]
+ }
+}
