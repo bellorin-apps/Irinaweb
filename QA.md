@@ -970,3 +970,15 @@ Respuesta a la auditoría de Codex (`docs/REVISION_Q077_Q079_2026-10-19.md`). La
 - **Comprobaciones:** `php -l` y PHPCS de `Graph.php` pasan. `debug.log` no tiene errores nuevos.
 - **Límite:** es local, sin desplegar. En producción se verifica dentro del gate de 13.7, tras el lanzamiento autorizado.
 - **Estado:** 13.5 sigue en REVIEW hasta la auditoría de Codex y la verificación publicada. Español 221/228 e inglés 9/19, sin cambio.
+
+## Auditoría recibida c151258/1f5e18e/62d920e · Codex · 2026-10-19
+
+Informe `docs/REVISION_ENTREGA_Q077_Q079_2026-10-19.md`. Sustituye los pendientes de entrega de las comprobaciones previas.
+
+| Hallazgo | Veredicto | Evidencia |
+|---|---|---|
+| Q-077 | VERIFIED_LOCAL ratificado | JSON integrado evaluado offline:0fallos/avisos,15ENen-US, WebSite/WebPage en /en/, ProfilePage/Physician en AboutEN, sitemap30. PHP lint/PHPCS OK; caso base y10/10mutaciones pasan. PortadaES conserva es (P3). |
+| Q-078 | ACCEPTED D-100 | José acepta IndexNow tal como está; no requiere otra decisión. Sigue límite no reversible, sin cambio de configuración. |
+| Q-079 | FIX / OPEN, parcial | mkdeploy pasa9/9; sync.sh acepta enlace intermedio site/wp-content y modifica dos marcadores fuera del laboratorio con salida0. Fixture desechable de Codex, ningún dato real. Añadir validación de componentes/ambos destinos y negativos antes de reutilizar sync. |
+
+Evidencia independiente: `docs/audit/2026-10-19-q077-q079/review.json`; reproducción `tools/audit/review-q077-q079.py` (espera reproducir el defecto actual, no certifica seguridad). Bash syntax de3scripts OK. No publicación ni WordPress repetidos por Codex; integración real aportada por Claude.13.5REVIEW/13.7DOING/13.6OWNER; avance sin aumento. Sin deploy/formularios/cuentas/secretos/Sensia; cuatroHTML preservados.

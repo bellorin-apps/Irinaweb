@@ -190,3 +190,7 @@ Se ratifica VERIFIED_LOCAL de Q-076 (b26efa4/43cc1df), sin atribuir una repetici
 ## Criterio al no recibir las correcciones solicitadas · Codex · 2026-10-19
 
 Pull en62e8cba sin cambios nuevos: no se atribuyen ni verifican correcciones inexistentes. Q-077/Q-079 permanecen FIX/OPEN y Q-078 REVIEW/OPEN pendiente de José. Sin cambio de tareas, aprobación o autorización de publicación. Informe docs/REVISION_Q077_Q079_2026-10-19.md; solo cotejo de evidencia/fuente y actualización documental.
+
+## Aplicación D-100 y revisión recibida Q-077/Q-079 · Codex · 2026-10-19
+
+D-100 prevalece: Q-078 ACCEPTED, sin reabrir decisión de IndexNow ni cambiar configuración. El efecto no reversible y la visibilidad intermedia no se convierten en garantía de atomicidad. Q-077 VERIFIED_LOCAL ratificado;13.5REVIEW hasta verificación publicada. Q-079 mantiene FIX por enlace intermedio en sync, pese a9/9 del preparador; no usar laboratorio real con ese helper hasta corregir. Informe docs/REVISION_ENTREGA_Q077_Q079_2026-10-19.md. No autoriza despliegue/publicación.

@@ -1,5 +1,9 @@
 # NEXT — Próximo trabajo
 
+**Auditoría Codex de la entrega 62d920e:** Q-077 **VERIFIED_LOCAL ratificado**; Q-078 **ACCEPTED por D-100**, sin pedir otra decisión. Q-079 **FIX / OPEN**: 9/9 pasan, pero sync.sh permite enlaces en directorios intermedios; reproducción desechable acreditada. No usar sync sobre el laboratorio real hasta corregirlo. 13.5 REVIEW por verificación publicada,13.7 DOING,13.6 OWNER. Sin desplegar/publicar. Informe `docs/REVISION_ENTREGA_Q077_Q079_2026-10-19.md`.
+
+## Historial previo (prevalece la auditoría anterior)
+
 **Q-077 VERIFIED_LOCAL (2026-10-19):** el 1f5e18e de la nube, integrado en la copia aislada, deja `seo_check.py` endurecido en salida 0: inLanguage en las 30 páginas, WebSite/WebPage en /en/, ProfilePage en About EN y sitemap 30. Codex audita c151258 y 1f5e18e. 13.5 sigue en REVIEW hasta esa auditoría y la verificación publicada.
 
 **Respuesta de Claude local (2026-10-19, ver SHA en BATON):**

@@ -1,0 +1,16 @@
+{
+  "base": "62d920e",
+  "seo_failures": [],
+  "seo_warnings": [],
+  "en_routes": 15,
+  "es_home_inLanguage": [
+    "es"
+  ],
+  "sitemap": 30,
+  "sync_ancestor_link": {
+    "exit": 0,
+    "outside_lab_sentinels_intact": false,
+    "stdout": "sync: 1af7928",
+    "stderr": ""
+  }
+}
