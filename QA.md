@@ -1016,3 +1016,17 @@ Pull/ls-remote siguen en b83d9ee, única rama; sin registro nuevo del despliegue
 - **D-101 NO EJECUTADO** según QA/Claude y propietario: control de permisos local rechazó ejecución; no hubo nuevo respaldo ni entrega. No se elude. Lectura previa:16draftEN/0publish, plugin0.4.5, contact301aES, root/sleep404. No son verificaciones posteriores.
 - GO de código b83d9ee vigente; producto sin cambios. Resolver permisos por flujo normal local y aportar evidencia tras entrega autorizada. No nueva autorización de publicación. Q-077VERIFIED_LOCAL;Q-078ACCEPTED D-100;13.5REVIEW/13.7DOING/13.6OWNER y avance sin cambio.
 - Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md. Sin deploy/publicación/formularios/cuentas/secretos/Sensia por Codex; cuatroHTML conservados.
+
+### D-101 · despliegue de código EJECUTADO y verificado en vivo · 2026-10-19 16:38
+
+- **Despliegue:** lo ejecutó José desde su terminal con `deploy-code.sh`. Árbol en 9b52e1e, con `wp-content` igual al de b83d9ee (base del GO de Codex).
+- **Respaldo:** `~/deploy-backups/20261019-163838/` (base 460 K y 30 tablas, más el plugin y el tema anteriores). Después se purgó LiteSpeed.
+- **Verificación en vivo** (`docs/audit/2026-10-19-d101/verificacion.md`):
+  - **`/en/contact/` pasa de 301 a 404 (Q-075 VERIFIED en producción)**;
+  - las 16 EN siguen en borrador;
+  - sitemap con 15 URL y 0 EN;
+  - selector, hreflang y enlaces /en/ = 0 en las 15 ES;
+  - schema ES con `es-MX` (portada `es`, P3);
+  - 15/15 ES con HTTP 200, sin imágenes rotas, menú correcto, sin errores de consola ni de PHP;
+  - Doctoralia apagado.
+- **Estado de las tareas:** 13.5 sigue en REVIEW (la verificación publicada del inglés llega con 13.7), 13.7 DOING y 13.6 OWNER.

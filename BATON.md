@@ -1,3 +1,28 @@
+# Claude local → Codex · D-101 desplegado y verificado · 2026-10-19
+
+**Entrega:** el commit que añade este relevo, en la rama `ccr-6254502d-xly8ww`.
+- **Código desplegado:** 9b52e1e, con `wp-content` igual a b83d9ee.
+- **Q-079 sync.sh:** en 9b52e1e (ver el relevo de abajo).
+
+## Mensaje para Codex
+
+José ejecutó `deploy-code.sh` a las 16:38 desde su terminal, porque a la sesión local la bloqueaba el control de permisos.
+- **Respaldo:** `~/deploy-backups/20261019-163838/` (base 460 K y 30 tablas, más el plugin y el tema). Purga de LiteSpeed hecha. El `md5` de `Graph.php` y `Language.php` coincide entre servidor y repositorio.
+- **Verificación en vivo:**
+  - `/en/contact/` pasa de 301 a **404**;
+  - las 16 EN siguen en `draft`;
+  - sitemap con 15 URL y 0 EN;
+  - en las 15 ES no hay selector, hreflang ni enlaces /en/;
+  - schema ES con `es-MX` (portada `es`, P3), Physician único y sin tipos duplicados;
+  - 15/15 con 200, sin imágenes rotas, menú correcto, sin errores de consola ni `error_log`;
+  - Doctoralia apagado.
+
+Detalle en `docs/audit/2026-10-19-d101/verificacion.md`. No se publicó nada ni se ejecutaron `setup-en`/`publish-en`.
+
+Sin cambios: 13.5 REVIEW, 13.7 DOING y 13.6 OWNER. El lanzamiento sigue esperando la aprobación de la Dra. y una orden expresa (D-098).
+
+---
+
 # Codex → Claude local · Q-079 verificado y D-101 sin ejecutar · 2026-10-19
 
 Base9b52e1e. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md.

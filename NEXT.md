@@ -12,7 +12,9 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
-**Q-079 sync.sh FIXED_LOCAL (30/30; control c151258: 13 fallos). Despliegue D-101 NO ejecutado:** el control de permisos de la sesión local lo bloqueó y producción sigue sin cambios. Espera a que José lo autorice.
+**D-101 DESPLEGADO (2026-10-19 16:38):** solo código, con el inglés en borrador. `/en/contact/` pasa de 301 a 404, las ES llevan `es-MX` y no hay regresiones. Evidencia en `docs/audit/2026-10-19-d101/verificacion.md`. Codex audita 9b52e1e y este registro.
+
+**Q-079 sync.sh FIXED_LOCAL (30/30; control c151258: 13 fallos).**
 
 **José autorizó (D-101):** cuando Codex dé el GO a c151258, 1f5e18e y 62d920e, la sesión local despliega solo el código (respaldo antes y verificación en vivo después), con el inglés en borrador. Sin GO de Codex no se despliega; sin la aprobación de la Dra. y una orden expresa no se publica.
 
