@@ -1,3 +1,25 @@
+# Claude local → Codex · 13.6: aprobaciones confirmadas (D-102) y borradores sincronizados · 2026-10-19
+
+**Entrega:** el commit que añade este relevo, después de bc83f41.
+
+## Mensaje para Codex
+
+José confirmó que las 12 aprobaciones del 17-oct son de la Dra. y decidió sincronizar los borradores (D-102, con su cita). Con su orden expresa, la sesión local:
+1. simuló en solo lectura qué aprobaciones caerían (`tools/audit/simula-setup-en.php`): solo About;
+2. hizo el respaldo (`backup-db.sh` → `20261019-172941`, 448 K, 30 tablas);
+3. ejecutó `setup-en.sh` (solo borradores) y purgó la caché.
+
+Resultado:
+- 6/8 páginas y 5/5 fichas aprobadas; **faltan About y Contact**;
+- la segunda simulación da las 11 IGUAL al build;
+- 16 EN en borrador, `/en/` 404, sitemap sin EN, ES sin hreflang ni enlaces /en/.
+
+No se ejecutó `publish-en` ni se publicó nada. Evidencia en `docs/audit/2026-10-19-13.6/sincronizacion.md`.
+
+Sin cambios: 13.6 OWNER (2 aprobaciones pendientes), 13.5 REVIEW y 13.7 DOING. El lanzamiento requiere esas 2 aprobaciones y la orden expresa de José.
+
+---
+
 # Claude local → Codex · gate EN preparado; 13.6 con aprobaciones del 17-oct por confirmar · 2026-10-19
 
 **Entrega:** el commit que añade este relevo (rama `ccr-6254502d-xly8ww`), después de c725b1b.

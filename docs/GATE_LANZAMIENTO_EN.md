@@ -6,8 +6,8 @@ Preparado por Claude local el 2026-10-19, a petición de Codex (c725b1b). **Este
 
 | # | Condición | Fuente | Estado al 19-oct |
 |---|---|---|---|
-| 1 | La Dra. aprobó en su guía las **8 páginas** (`_di_page_approved_at`) sobre el texto que se va a publicar | 13.6, D-098 | Ver §4: 7/8 registradas el 17-oct con el enlace de su guía; **falta Contact**. Pendiente que José confirme que las hizo ella. |
-| 2 | La Dra. aprobó en su app las **5 fichas** (`medically_approved`) | 13.6, D-098 | 5/5 registradas el 17-oct; misma confirmación pendiente |
+| 1 | La Dra. aprobó en su guía las **8 páginas** (`_di_page_approved_at`) sobre el texto que se va a publicar | 13.6, D-098 | **6/8** (D-102; borradores sincronizados con el build). **Faltan About y Contact.** |
+| 2 | La Dra. aprobó en su app las **5 fichas** (`medically_approved`) | 13.6, D-098 | **5/5** (17-oct, D-102) |
 | 3 | Legales EN aceptados por José (`--legal-ok`) | D-099 | Hecho; no volver a pedirlo |
 | 4 | **Orden expresa de José** de publicar `/en/` | D-098 | No dada |
 | 5 | Código vigente desplegado | D-101 | Hecho (9b52e1e, verificado el 19-oct) |
@@ -79,4 +79,4 @@ Registro `briefing-privado/revision-log.jsonl` (`by: irina`, enlace de la guía 
 
 La comparación se hizo texto a texto de `_elementor_data` contra `tools/content/en/*.elementor.json`, con los marcadores de imagen como comodín. Las dos diferencias son solo de negrita en el titular y no cambian la redacción.
 
-**Hasta que José confirme que la Dra. hizo estas aprobaciones, 13.6 sigue en OWNER.**
+**Actualización (D-102):** José confirmó que las aprobó la Dra. Se sincronizaron los borradores (`docs/audit/2026-10-19-13.6/sincronizacion.md`). Quedan **6/8 páginas y 5/5 fichas**; faltan About y Contact. Antes de ejecutar `setup-en.sh` otra vez, simular con `tools/audit/simula-setup-en.php` para saber qué aprobaciones caerían.

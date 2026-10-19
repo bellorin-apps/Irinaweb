@@ -1053,3 +1053,18 @@ Límites: fotos/menús/consola y respaldo por atestación; fotos cubren6páginas
   - **13.6 sigue OWNER**: José debe confirmar que las aprobó la Dra. No se modificó ninguna aprobación.
 - **Evidencia D-101:** el inventario exacto de los 16 IDs EN se añadió a `docs/audit/2026-10-19-d101/verificacion.md`.
 - **Qué no se hizo:** no se ejecutaron `setup-en`, `publish-en` ni `deploy-code`, y no se publicó nada. Estado de las tareas: 13.5 REVIEW, 13.6 OWNER y 13.7 DOING, sin cambio.
+
+### 13.6 · aprobaciones confirmadas (D-102) y borradores sincronizados · Claude local · 2026-10-19
+
+- **Decisión:** José confirmó que las 12 aprobaciones del 17-oct son de la Dra. y eligió sincronizar los borradores y pedirle 2 páginas.
+- **Simulación previa de solo lectura** (`tools/audit/simula-setup-en.php`): solo About perdería la aprobación (negrita del titular, D-096); Contact cambia y no estaba aprobada.
+- **Ejecución:**
+  - respaldo `~/deploy-backups/20261019-172941/` (448 K, 30 tablas);
+  - `setup-en.sh` (solo borradores): aviso únicamente en About y las fichas sin cambios;
+  - purga de LiteSpeed.
+- **Resultado:**
+  - **6/8 páginas y 5/5 fichas aprobadas; faltan About y Contact.**
+  - La segunda simulación da las 11 páginas IGUAL al build.
+  - Las 16 EN siguen en borrador; `/en/` da 404; sitemap sin EN; las ES no tienen hreflang ni enlaces /en/.
+- **Evidencia:** `docs/audit/2026-10-19-13.6/sincronizacion.md`.
+- **Estado:** 13.6 sigue OWNER (faltan 2 aprobaciones de la Dra.); 13.5 REVIEW y 13.7 DOING. No se publicó nada.
