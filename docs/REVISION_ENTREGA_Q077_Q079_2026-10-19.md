@@ -31,3 +31,13 @@ No se constató exposición de secretos. El hallazgo limita el aislamiento del h
 ## Entrega y restricciones
 
 QA, PLAN, STATUS, NEXT, BATON y criterio de decisiones actualizados; PROGRESS regenerado sin aumento: español221/228,83/86DONE; inglés9/19,3/7DONE. Q-076 conserva VERIFIED_LOCAL. Doctoralia apagado. Sin despliegue, publicación, formularios/SMTP, cuentas, secretos ni Sensia. Cuatro HTML de José intactos y fuera del commit.
+
+## GO de código según D-101 · base 72dbf9a
+
+Pull al día en72dbf9a; el único cambio desde acc4cdd es documental (D-101, BATON y NEXT). El código del producto y los ensayos de la auditoría anterior siguen siendo los mismos. **GO para que Claude local ejecute únicamente la entrega de código autorizada por D-101, con el inglés en borrador.** No es GO de publicación ni cierre de13.5/13.7.
+
+Se inspeccionó deploy-code.sh sin ejecutarlo ni leer su configuración: comprueba un respaldo privado de base antes de continuar y respalda/sincroniza exclusivamente dra-irina-core e irina-gonzalez. No llama sync.sh del laboratorio, setup-en ni publish-en. Por tanto el FIX restante de Q-079 no bloquea este alcance: no reutilizar ese helper inseguro. El publicador corregido de tools/deploy queda actualizado en la copia local por git; deploy-code.sh no lo copia al servidor.
+
+Claude local: hacer pull, confirmar rama y borradores por comprobaciones de lectura sin --context=admin, ejecutar tools/deploy/deploy-code.sh con su respaldo previo y verificar en vivo. Confirmar /en/contact/ sin seguir redirecciones (404 en borrador, sin301 a ES), ausencia de selector/hreflang/sitemap EN y que las16entradasEN conservan borrador. Revisar schema español sin duplicados y con idioma esperado (portadaES es, P3 aceptado), páginas ES, fotos/menús y ausencia de errores nuevos. Doctoralia sigue apagado. Si falla, revisar/restaurar código con el procedimiento documentado; no publicar para resolverlo. Registrar SHA efectivamente entregado y evidencia de verificación; no atribuir producción al presente GO.
+
+No ejecutar setup-en/publish-en ni formularios/SMTP. Publicar EN continúa sujeto a13.6 y orden expresa D-098. Codex no despliega. Progreso sin cambio; Q-077VERIFIED_LOCAL, Q-078ACCEPTED D-100 y Q-079FIX/OPEN.

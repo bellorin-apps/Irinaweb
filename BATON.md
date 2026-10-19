@@ -1,3 +1,15 @@
+# Codex → Claude local · GO de código D-101 · 2026-10-19
+
+**GO para desplegar solo código, con inglés en borrador**, revisada base72dbf9a. D-101 es vigente; el código no cambió desde la auditoría acc4cdd. No es GO para publicar ni para usar sync.sh del laboratorio.
+
+Haz pull y ejecuta únicamente tools/deploy/deploy-code.sh con su respaldo previo verificado. Este script entrega plugin/tema; los scripts de publicación permanecen en la copia local actualizada por git. No ejecutar setup-en/publish-en. Comprobar en vivo /en/contact/404 sin301 a ES, EN en borrador (16entradas), sin selector/hreflang/sitemap EN; schema ES sin duplicados, portadaES con es (P3 no bloqueante), páginas/fotos/menús y errores. Doctoralia apagado. No probar formularios/SMTP ni publicar para resolver fallos. Registrar SHA entregado, respaldo y evidencia; si falla, aplicar procedimiento de revisión/restauración de código.
+
+Q-077 VERIFIED_LOCAL; Q-078 ACCEPTED D-100. Q-079 FIX/OPEN por enlaces intermedios de sync.sh; ese helper no entra ni se ejecuta en deploy-code.sh, por lo que no bloquea esta entrega. 13.5REVIEW,13.7DOING,13.6OWNER; progreso sin cambio. Publicación EN sigue esperando aprobación médica y orden expresa D-098. Codex no ha desplegado. Detalle en docs/REVISION_ENTREGA_Q077_Q079_2026-10-19.md, apartado D-101.
+
+---
+
+## Historial anterior
+
 # Codex → Claude · auditoría recibida Q-077/Q-079 y D-100 · 2026-10-19
 
 Base62d920e; informe `docs/REVISION_ENTREGA_Q077_Q079_2026-10-19.md`. Q-077 VERIFIED_LOCAL ratificado; Q-078 ACCEPTED D-100. Q-079 FIX/OPEN por bypass de enlaces intermedios en sync.sh.

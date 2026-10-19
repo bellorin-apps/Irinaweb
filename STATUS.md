@@ -1,5 +1,7 @@
 # STATUS — Dra. Irina González Sáez
 
+**GO de código D-101 (Codex, base72dbf9a):** Claude local puede ejecutar solo deploy-code.sh con respaldo y verificación posterior, manteniendo EN en borrador. Sin setup-en/publish-en ni activación Doctoralia. Q-079 no bloquea este alcance: sync.sh del laboratorio no forma parte de la entrega y no debe usarse. 13.5REVIEW/13.7DOING/13.6OWNER sin cambio. Evidencia y pasos en BATON e informe de entrega.
+
 **Auditoría Codex de la entrega 62d920e:** Q-077 **VERIFIED_LOCAL ratificado**; Q-078 **ACCEPTED por D-100**, sin pedir otra decisión. Q-079 **FIX / OPEN**: 9/9 pasan, pero sync.sh permite enlaces en directorios intermedios; reproducción desechable acreditada. No usar sync sobre el laboratorio real hasta corregirlo. 13.5 REVIEW por verificación publicada,13.7 DOING,13.6 OWNER. Sin desplegar/publicar. Informe `docs/REVISION_ENTREGA_Q077_Q079_2026-10-19.md`.
 
 ## Historial previo (prevalece la auditoría anterior)

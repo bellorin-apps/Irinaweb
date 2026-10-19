@@ -982,3 +982,7 @@ Informe `docs/REVISION_ENTREGA_Q077_Q079_2026-10-19.md`. Sustituye los pendiente
 | Q-079 | FIX / OPEN, parcial | mkdeploy pasa9/9; sync.sh acepta enlace intermedio site/wp-content y modifica dos marcadores fuera del laboratorio con salida0. Fixture desechable de Codex, ningún dato real. Añadir validación de componentes/ambos destinos y negativos antes de reutilizar sync. |
 
 Evidencia independiente: `docs/audit/2026-10-19-q077-q079/review.json`; reproducción `tools/audit/review-q077-q079.py` (espera reproducir el defecto actual, no certifica seguridad). Bash syntax de3scripts OK. No publicación ni WordPress repetidos por Codex; integración real aportada por Claude.13.5REVIEW/13.7DOING/13.6OWNER; avance sin aumento. Sin deploy/formularios/cuentas/secretos/Sensia; cuatroHTML preservados.
+
+## GO de código D-101 · Codex · 2026-10-19
+
+72dbf9a solo añade documentación respecto a acc4cdd; no se repiten ensayos del producto sin cambios. deploy-code.sh inspeccionado: respaldo DB/código previo y sincronización solo plugin/tema, no helper sync del laboratorio ni setup/publicación. **GO para entrega de código por Claude local**, EN en borrador, con verificación posterior según BATON. Q-079 FIX no bloquea este alcance. No hay despliegue ni producción verificada por Codex en esta ronda. Q-077VERIFIED_LOCAL, Q-078ACCEPTED D-100;13.5REVIEW/13.7DOING/13.6OWNER.

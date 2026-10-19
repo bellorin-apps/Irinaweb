@@ -195,3 +195,7 @@ Pull en62e8cba sin cambios nuevos: no se atribuyen ni verifican correcciones ine
 ## Aplicación D-100 y revisión recibida Q-077/Q-079 · Codex · 2026-10-19
 
 D-100 prevalece: Q-078 ACCEPTED, sin reabrir decisión de IndexNow ni cambiar configuración. El efecto no reversible y la visibilidad intermedia no se convierten en garantía de atomicidad. Q-077 VERIFIED_LOCAL ratificado;13.5REVIEW hasta verificación publicada. Q-079 mantiene FIX por enlace intermedio en sync, pese a9/9 del preparador; no usar laboratorio real con ese helper hasta corregir. Informe docs/REVISION_ENTREGA_Q077_Q079_2026-10-19.md. No autoriza despliegue/publicación.
+
+## Aplicación D-101 · Codex · 2026-10-19
+
+GO limitado a entrega de código por Claude local con respaldo/verificación, EN en borrador; no autoriza setup-en/publish-en ni lanzamiento. Q-079 corresponde al laboratorio y no entra en deploy-code.sh: no bloquea esta entrega, pero impide reutilizar sync inseguro. D-100 mantiene IndexNow aceptado. Codex no despliega. Informe de entrega, apartado GO de código D-101.
