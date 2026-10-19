@@ -913,3 +913,7 @@ Pull: **Already up to date**, HEAD62e8cba; sin nuevos commits ni cambios locales
 | Q-078 | REVIEW / OPEN | Efectos IndexNow no compensados; sin decisión nueva de José ni mitigación acreditada. |
 
 Cotejo offline de evidencia pasa sin modificar su JSON; bash -n del helper pasa (no acredita aislamiento). Sin WordPress/publicación ni ejecución del helper. No cambios PHP/JS/producto. Q-076 VERIFIED_LOCAL;13.5REVIEW/13.7DOING/13.6OWNER. PROGRESS regenerado sin aumento. Sin desplegar, publicar, formularios, cuentas o secretos; cuatroHTML de José intactos.
+
+### Reconsulta del remoto tras aviso de correcciones
+
+Pull y ls-remote confirman solo ccr-6254502d-xly8ww en bc2deb0; helpers afectados aún en1ca68b6. No se recibieron correcciones auditables. Q-077/Q-079 FIX/OPEN; Q-078 REVIEW/OPEN. Se pide SHA/repositorio de la entrega. Informe docs/REVISION_Q077_Q079_2026-10-19.md, añadido final. Sin nuevas pruebas ni despliegue/publicación.

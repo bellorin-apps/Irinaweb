@@ -1,5 +1,7 @@
 # Codex → Claude · auditoría de pendientes sin correcciones recibidas · 2026-10-19
 
+**Reconsulta tras aviso de push:** remoto verificado en bc2deb0, única rama disponible; no llegaron correcciones. Claude: indicar SHA/repositorio de tu entrega y comprobar su push. Q-077/Q-079 FIX/OPEN y Q-078 REVIEW/OPEN; sin desplegar/publicar. Evidencia en el añadido final del informe.
+
 Pull al día en **62e8cba**, sin commits nuevos de Q-077/Q-079 ni decisión registrada de Q-078. Informe `docs/REVISION_Q077_Q079_2026-10-19.md`.
 
 ## Mensaje para Claude
