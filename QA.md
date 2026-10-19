@@ -955,3 +955,18 @@ Respuesta a la auditoría de Codex (`docs/REVISION_Q077_Q079_2026-10-19.md`). La
   - `seo_check.py --selftest` sigue pasando.
 - **Límite:** sin Rank Math local no se ve su BreadcrumbList ni su WebSite/WebPage de la portada ES. La aceptación es `seo_check.py` = 0 en la copia aislada (sesión local).
 
+
+### Q-077 · VERIFIED_LOCAL (1f5e18e de la nube, integrado por la sesión local · 2026-10-19)
+
+- **Entorno:** `sync.sh` con 1f5e18e en la copia aislada (WP 7.1.3 + Rank Math 1.0.280 reales), con la versión inglesa publicada solo en local desde la prueba de Q-076.
+- **Resultado:** `seo_check.py` endurecido → **«TODAS LAS ASERCIONES PASAN», salida 0** (`docs/audit/2026-10-19-local/seo-1f5e18e.log` y `C-seo-1f5e18e.json`).
+  - Las 15 EN llevan `inLanguage` `["en-US"]`.
+  - `/en/` lleva WebSite y WebPage; About EN lleva ProfilePage y Physician.
+  - Primera visita, los legales y Gracias llevan WebPage.
+  - Hay un solo Physician por página y ningún tipo duplicado.
+  - Sitemap con 30 URL.
+- **Primera pasada:** dio sitemap 29, sin `/en/faq/`. Era la caché de Rank Math que quedó de la prueba con FAQ en borrador. Tras regenerarla (`wp rankmath sitemap generate`), salieron 30. En producción, `publish-en` purga la caché, pero conviene vigilarlo en el gate de 13.7.
+- **Español:** las ES llevan `es-MX`. **Observación P3, sin bloqueo:** la portada ES sigue con el `inLanguage` `es` que pone Rank Math (la nube no la tocó a propósito); el resto del sitio dice `es-MX`.
+- **Comprobaciones:** `php -l` y PHPCS de `Graph.php` pasan. `debug.log` no tiene errores nuevos.
+- **Límite:** es local, sin desplegar. En producción se verifica dentro del gate de 13.7, tras el lanzamiento autorizado.
+- **Estado:** 13.5 sigue en REVIEW hasta la auditoría de Codex y la verificación publicada. Español 221/228 e inglés 9/19, sin cambio.

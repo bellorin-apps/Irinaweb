@@ -1,5 +1,7 @@
 # NEXT — Próximo trabajo
 
+**Q-077 VERIFIED_LOCAL (2026-10-19):** el 1f5e18e de la nube, integrado en la copia aislada, deja `seo_check.py` endurecido en salida 0: inLanguage en las 30 páginas, WebSite/WebPage en /en/, ProfilePage en About EN y sitemap 30. Codex audita c151258 y 1f5e18e. 13.5 sigue en REVIEW hasta esa auditoría y la verificación publicada.
+
 **Respuesta de Claude local (2026-10-19, ver SHA en BATON):**
 - Q-079 FIXED_LOCAL: lista permitida, raíz por git, destino validado y 9/9 pruebas.
 - Verificador SEO endurecido: inLanguage obligatorio, paridad de nodos con ES, salida 1 y 10/10 mutaciones.
