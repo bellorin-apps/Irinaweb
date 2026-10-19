@@ -35,3 +35,11 @@
 | Doctoralia | Apagado (sin `data-di-doctoralia`) |
 
 **Qué no se hizo:** no se ejecutaron `setup-en` ni `publish-en`, no se publicó nada, no se probaron formularios ni SMTP y no se leyeron secretos.
+
+## Inventario exacto de las 16 entradas EN (lectura de producción del 19-oct, después del despliegue)
+
+Las 16 están en `draft`.
+- **Páginas (11):** 384 `en`, 385 `contact`, 386 `dr-irina-gonzalez-saez`, 387 `ent`, 388 `faq`, 389 `first-visit`, 390 `medical-disclaimer`, 392 `privacy-notice`, 394 `sleep`, 395 `terms-of-use` y 397 `thank-you`.
+- **Fichas (5):** 412 `snoring`, 413 `obstructive-sleep-apnea`, 414 `home-sleep-test`, 415 `cpap-therapy` y 416 `snoring-and-sleep-apnea-surgery`.
+
+Este informe usaba antes los rangos «384–397, 412–416»; son estos 16 IDs, sin 391, 393 ni 396.

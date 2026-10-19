@@ -30,6 +30,7 @@ Montada por la sesión local el 2026-10-19 en `tmp/wp-en-local/` (ignorada por G
    - La variante `con-elementor` se retiró: desde b26efa4, `publish-en.sh` ya carga Elementor.
    - `DI_REPO_ROOT` y `DI_LAB` existen solo para `t/q079_selftest.sh`.
 2. `t/preflight.sh`, `t/fallos.sh`, `t/setup-en.sh`, `t/seo_check.py`, `t/ui_check2.cjs` y `t/form_check.cjs`.
+   - **Producción (gate de 13.5):** `seo_check.py --base https://drairinagonzalez.com --prod <salida.json>`. Solo hace GET, sin seguir redirecciones, y añade la revisión de enlaces internos de las EN, `og:image` y la cabecera de LiteSpeed. La paridad de schema se limita a los nodos acordados; ImageObject y Breadcrumb no cuentan. Procedimiento en `docs/GATE_LANZAMIENTO_EN.md`.
    - `seo_check.py <salida.json>` sale con 1 si falla alguna aserción. Exige `inLanguage` `en-US` en las 15 EN y que cada EN tenga al menos los nodos de schema de su pareja ES. `--selftest` ejecuta 10 mutaciones negativas sin servidor.
    - `t/q079_selftest.sh` (30 casos) prueba `mkdeploy.sh` y `sync.sh` en repositorios desechables con privados y marcadores ficticios:
      - casos normales, privados no copiados y lista permitida;

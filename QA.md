@@ -1036,3 +1036,20 @@ Pull/ls-remote siguen en b83d9ee, única rama; sin registro nuevo del despliegue
 **D-101 COMPLETADO Y VERIFICADO en alcance código**. Respaldo/purga/SHA9b52e1e/16ENdraft atestados por José/Claude; árboles Git wp-content iguales a b83d9ee. Se supera el bloqueo anterior, sin repetir operación. HTTP independiente:15ES200, schema14es-MX+portadaes, máximo1Physician, sin tipos de página repetidos; sitemap15/0EN;10EN404sinLocation(incluyecontact);0selector/hreflang/enlacesEN/Doctoralia;0PHPFatal/WarningHTML. Evidencia docs/audit/2026-10-19-d101-codex/public.json; script tools/audit/review-d101-public.py.
 
 Límites: fotos/menús/consola y respaldo por atestación; fotos cubren6páginas clave, no15. HTTPno certificaSHAservidor/estados privadosDB; md5aportados truncados e intervalosIDsno inventario16exactos. Ausencia de logs no prueba ausencia universal de errores. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md. Q-075VERIFIEDHTTP,Q-077/Q-079VERIFIED_LOCAL,Q-078ACCEPTED.13.5REVIEW/13.7DOING/13.6OWNER, avance sin cambio. Codex no desplegó/publicó ni probó formulario/cuentas/secretos/Sensia; HTMLpreviosintactos.
+
+### Gate de lanzamiento EN preparado y estado real de 13.6 · Claude local · 2026-10-19 (tras c725b1b)
+
+- **13.5, verificación de producción preparada (sin publicar).**
+  - `seo_check.py` acepta `--base` y `--prod`: hace GET sin seguir redirecciones y revisa los enlaces internos de las EN, `og:image` en HTTPS y la cabecera LiteSpeed.
+  - La paridad de schema se limita a los nodos acordados. En producción la portada ES lleva además ImageObject de Rank Math, que habría dado un falso fallo.
+  - `--selftest`: **14/14** (base, 13 mutaciones y 3 nuevas: enlace roto, og:image 404 y About sin ProfilePage). Local sin `--prod`: 0 fallos.
+  - Pasada de referencia en producción (`docs/audit/2026-10-19-13.5-prod/prelanzamiento.log`): falla como se espera, con 15 EN en 404 y sitemap 15/0. **No es verificación de 13.5.**
+  - Procedimiento en `docs/GATE_LANZAMIENTO_EN.md`.
+  - Nuevo `tools/deploy/backup-db.sh`, con el mismo bloque de respaldo que `deploy-code.sh` (diff idéntico). No se ejecutó.
+- **13.6, hallazgo (lectura de producción):**
+  - Hay **12 aprobaciones registradas el 17-oct entre las 10:44 y las 10:48 (Monterrey)** con el enlace de la guía de la Dra. (`by: irina`; usuario 2, `revisor_medico`): 7 de 8 páginas EN y 5 de 5 fichas.
+  - **Contact EN no tiene aprobación.**
+  - Ningún documento del repositorio las registraba. La comparación texto a texto muestra que lo aprobado coincide con los borradores actuales. Contra el build actual solo difieren About y Contact, en la negrita de un titular (D-096).
+  - **13.6 sigue OWNER**: José debe confirmar que las aprobó la Dra. No se modificó ninguna aprobación.
+- **Evidencia D-101:** el inventario exacto de los 16 IDs EN se añadió a `docs/audit/2026-10-19-d101/verificacion.md`.
+- **Qué no se hizo:** no se ejecutaron `setup-en`, `publish-en` ni `deploy-code`, y no se publicó nada. Estado de las tareas: 13.5 REVIEW, 13.6 OWNER y 13.7 DOING, sin cambio.

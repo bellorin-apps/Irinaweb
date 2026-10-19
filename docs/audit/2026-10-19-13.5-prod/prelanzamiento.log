@@ -1,0 +1,122 @@
+# Pasada de REFERENCIA previa al lanzamiento (inglés en borrador, D-101). Debe FALLAR: las 15 EN dan 404. No es una verificación de 13.5.
+Base: https://drairinagonzalez.com · producción
+Sitemap: 15 URL · 0 EN + 15 ES
+FALLOS:
+  /en/: HTTP 404
+  /en/: canonical None
+  /en/: og:url None
+  /en/: hreflang {}
+  /en/: faltan nodos de su pareja ES ['Physician+Person']
+  /en/: selector []
+  /en/dr-irina-gonzalez-saez/: HTTP 404
+  /en/dr-irina-gonzalez-saez/: canonical None
+  /en/dr-irina-gonzalez-saez/: og:url None
+  /en/dr-irina-gonzalez-saez/: hreflang {}
+  /en/dr-irina-gonzalez-saez/: faltan nodos de su pareja ES ['Physician+Person', 'ProfilePage']
+  /en/dr-irina-gonzalez-saez/: selector []
+  /en/ent/: HTTP 404
+  /en/ent/: canonical None
+  /en/ent/: og:url None
+  /en/ent/: hreflang {}
+  /en/ent/: faltan nodos de su pareja ES ['MedicalWebPage', 'Physician+Person']
+  /en/ent/: selector []
+  /en/sleep/: HTTP 404
+  /en/sleep/: canonical None
+  /en/sleep/: og:url None
+  /en/sleep/: hreflang {}
+  /en/sleep/: faltan nodos de su pareja ES ['MedicalWebPage', 'Physician+Person']
+  /en/sleep/: selector []
+  /en/first-visit/: HTTP 404
+  /en/first-visit/: canonical None
+  /en/first-visit/: og:url None
+  /en/first-visit/: hreflang {}
+  /en/first-visit/: selector []
+  /en/contact/: HTTP 404
+  /en/contact/: canonical None
+  /en/contact/: og:url None
+  /en/contact/: hreflang {}
+  /en/contact/: faltan nodos de su pareja ES ['ContactPage', 'Physician+Person']
+  /en/contact/: selector []
+  /en/faq/: HTTP 404
+  /en/faq/: canonical None
+  /en/faq/: og:url None
+  /en/faq/: hreflang {}
+  /en/faq/: faltan nodos de su pareja ES ['FAQPage']
+  /en/faq/: selector []
+  /en/privacy-notice/: HTTP 404
+  /en/privacy-notice/: canonical None
+  /en/privacy-notice/: og:url None
+  /en/privacy-notice/: hreflang {}
+  /en/privacy-notice/: selector []
+  /en/medical-disclaimer/: HTTP 404
+  /en/medical-disclaimer/: canonical None
+  /en/medical-disclaimer/: og:url None
+  /en/medical-disclaimer/: hreflang {}
+  /en/medical-disclaimer/: selector []
+  /en/terms-of-use/: HTTP 404
+  /en/terms-of-use/: canonical None
+  /en/terms-of-use/: og:url None
+  /en/terms-of-use/: hreflang {}
+  /en/terms-of-use/: selector []
+  /en/sleep/snoring/: HTTP 404
+  /en/sleep/snoring/: canonical None
+  /en/sleep/snoring/: og:url None
+  /en/sleep/snoring/: hreflang {}
+  /en/sleep/snoring/: faltan nodos de su pareja ES ['MedicalWebPage', 'Physician+Person']
+  /en/sleep/snoring/: selector []
+  /en/sleep/obstructive-sleep-apnea/: HTTP 404
+  /en/sleep/obstructive-sleep-apnea/: canonical None
+  /en/sleep/obstructive-sleep-apnea/: og:url None
+  /en/sleep/obstructive-sleep-apnea/: hreflang {}
+  /en/sleep/obstructive-sleep-apnea/: faltan nodos de su pareja ES ['MedicalWebPage', 'Physician+Person']
+  /en/sleep/obstructive-sleep-apnea/: selector []
+  /en/sleep/home-sleep-test/: HTTP 404
+  /en/sleep/home-sleep-test/: canonical None
+  /en/sleep/home-sleep-test/: og:url None
+  /en/sleep/home-sleep-test/: hreflang {}
+  /en/sleep/home-sleep-test/: faltan nodos de su pareja ES ['MedicalWebPage', 'Physician+Person']
+  /en/sleep/home-sleep-test/: selector []
+  /en/sleep/cpap-therapy/: HTTP 404
+  /en/sleep/cpap-therapy/: canonical None
+  /en/sleep/cpap-therapy/: og:url None
+  /en/sleep/cpap-therapy/: hreflang {}
+  /en/sleep/cpap-therapy/: faltan nodos de su pareja ES ['MedicalWebPage', 'Physician+Person']
+  /en/sleep/cpap-therapy/: selector []
+  /en/sleep/snoring-and-sleep-apnea-surgery/: HTTP 404
+  /en/sleep/snoring-and-sleep-apnea-surgery/: canonical None
+  /en/sleep/snoring-and-sleep-apnea-surgery/: og:url None
+  /en/sleep/snoring-and-sleep-apnea-surgery/: hreflang {}
+  /en/sleep/snoring-and-sleep-apnea-surgery/: faltan nodos de su pareja ES ['MedicalWebPage', 'Physician+Person']
+  /en/sleep/snoring-and-sleep-apnea-surgery/: selector []
+  /: hreflang {}
+  /: selector []
+  /aviso-de-privacidad/: hreflang {}
+  /aviso-de-privacidad/: selector []
+  /aviso-medico/: hreflang {}
+  /aviso-medico/: selector []
+  /contacto/: hreflang {}
+  /contacto/: selector []
+  /dra-irina-gonzalez-saez/: hreflang {}
+  /dra-irina-gonzalez-saez/: selector []
+  /otorrinolaringologia/: hreflang {}
+  /otorrinolaringologia/: selector []
+  /preguntas-frecuentes/: hreflang {}
+  /preguntas-frecuentes/: selector []
+  /primera-consulta/: hreflang {}
+  /primera-consulta/: selector []
+  /sueno/: hreflang {}
+  /sueno/: selector []
+  /sueno/apnea-obstructiva-del-sueno/: hreflang {}
+  /sueno/apnea-obstructiva-del-sueno/: selector []
+  /sueno/cirugia-de-ronquido-y-apnea/: hreflang {}
+  /sueno/cirugia-de-ronquido-y-apnea/: selector []
+  /sueno/cpap/: hreflang {}
+  /sueno/cpap/: selector []
+  /sueno/estudio-del-sueno/: hreflang {}
+  /sueno/estudio-del-sueno/: selector []
+  /sueno/ronquido/: hreflang {}
+  /sueno/ronquido/: selector []
+  /terminos-de-uso/: hreflang {}
+  /terminos-de-uso/: selector []
+  sitemap 15 / gracias []
+exit 1

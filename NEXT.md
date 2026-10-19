@@ -16,6 +16,8 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
+**Gate de lanzamiento EN preparado (`docs/GATE_LANZAMIENTO_EN.md`).** 13.6: en producción constan 12 aprobaciones del 17-oct hechas con el enlace de la Dra. (7/8 páginas y 5/5 fichas). **Falta Contact** y falta que José confirme que las hizo ella. 13.5 REVIEW, 13.6 OWNER y 13.7 DOING.
+
 **D-101 DESPLEGADO (2026-10-19 16:38):** solo código, con el inglés en borrador. `/en/contact/` pasa de 301 a 404, las ES llevan `es-MX` y no hay regresiones. Evidencia en `docs/audit/2026-10-19-d101/verificacion.md`. Codex audita 9b52e1e y este registro.
 
 **Q-079 sync.sh FIXED_LOCAL (30/30; control c151258: 13 fallos).**

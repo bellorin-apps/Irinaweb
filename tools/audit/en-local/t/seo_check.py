@@ -1,14 +1,21 @@
-"""13.5 integrado (WordPress 7.1.3 + Rank Math 1.0.280 locales): OG, canónicas, hreflang, sitemap, selector, schema, 404 y Gracias.
-Solo lectura sobre http://127.0.0.1:8890 (copia aislada). Uso: python -I seo_check.py <salida.json>  ·  python -I seo_check.py --selftest
-Sale con 1 si alguna aserción falla (Q-079)."""
+"""13.5 integrado (WordPress 7.1.3 + Rank Math 1.0.280): OG, canónicas, hreflang, sitemap, selector, schema, 404 y Gracias.
+Solo lectura (GET; no envía formularios).
+  Copia aislada:  python -I seo_check.py <salida.json>                  (http://127.0.0.1:8890)
+  Producción:     python -I seo_check.py --base https://drairinagonzalez.com --prod <salida.json>
+                  (gate de 13.5 tras un lanzamiento AUTORIZADO; añade enlaces internos de las EN, og:image y caché LiteSpeed)
+  Autoprueba:     python -I seo_check.py --selftest
+Sale con 1 si alguna aserción falla."""
 import json
 import re
 import sys
+import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 sys.stdout.reconfigure(encoding="utf-8")
 S = "http://127.0.0.1:8890"
+PROD = False
 EN = ["/en/", "/en/dr-irina-gonzalez-saez/", "/en/ent/", "/en/sleep/", "/en/first-visit/", "/en/contact/", "/en/faq/",
       "/en/privacy-notice/", "/en/medical-disclaimer/", "/en/terms-of-use/", "/en/sleep/snoring/", "/en/sleep/obstructive-sleep-apnea/",
       "/en/sleep/home-sleep-test/", "/en/sleep/cpap-therapy/", "/en/sleep/snoring-and-sleep-apnea-surgery/"]
@@ -20,12 +27,34 @@ PAIR = {"/en/": "/", "/en/dr-irina-gonzalez-saez/": "/dra-irina-gonzalez-saez/",
         "/en/sleep/snoring-and-sleep-apnea-surgery/": "/sueno/cirugia-de-ronquido-y-apnea/"}
 
 
-def get(path):
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None
+
+
+_OPEN = urllib.request.build_opener(_NoRedirect)
+_UA = {"User-Agent": "di-seo-check/13.5 (solo lectura)"}
+
+
+def fetch(url, cache_bust=False):
+    """GET sin seguir redirecciones (un 301 se ve como 301). Devuelve (código, cuerpo, cabeceras)."""
+    if cache_bust:
+        url += ("&" if "?" in url else "?") + "di_cb=%d" % time.time()
     try:
-        r = urllib.request.urlopen(S + path, timeout=60)
-        return r.status, r.read().decode("utf-8")
+        r = _OPEN.open(urllib.request.Request(url, headers=_UA), timeout=60)
+        return r.status, r.read().decode("utf-8", "replace"), dict(r.headers)
     except urllib.error.HTTPError as e:
-        return e.code, e.read().decode("utf-8", "replace")
+        return e.code, e.read().decode("utf-8", "replace"), dict(e.headers or {})
+
+
+# Nodos acordados para la paridad EN↔ES (Q-077). ImageObject, BreadcrumbList, etc. son auxiliares de Rank Math y pueden
+# variar con la imagen OG o la caché; no forman parte del acuerdo (producción: la portada ES lleva ImageObject).
+NODOS = {"WebSite", "WebPage", "ProfilePage", "ContactPage", "MedicalWebPage", "FAQPage", "Physician+Person"}
+
+
+def get(path):
+    code, body, _ = fetch(S + path)
+    return code, body
 
 
 def meta(h, prop):
@@ -92,7 +121,30 @@ def collect():
         locs += [u.replace(S, "") for u in re.findall(r"<loc>([^<]+)</loc>", h)]
     out["sitemap"] = {"total": len(locs), "en": sorted(u for u in locs if u.startswith("/en/")), "es": sorted(u for u in locs if not u.startswith("/en/")),
                       "thank_you": [u for u in locs if "thank-you" in u or "gracias" in u]}
+    if PROD:
+        out["prod"] = collect_prod(out)
     return out
+
+
+def collect_prod(out):
+    """Solo producción: enlaces internos de las 15 EN, og:image y cabecera de caché (sin seguir redirecciones)."""
+    host = urllib.parse.urlparse(S).netloc
+    links = {}
+    for p in EN:
+        _, h, hd = fetch(S + p)
+        out["en"][p]["cache"] = hd.get("x-litespeed-cache") or hd.get("X-LiteSpeed-Cache")
+        for u in re.findall(r'<a[^>]+href="([^"#]+)"', h):
+            pu = urllib.parse.urlparse(urllib.parse.urljoin(S + p, u))
+            if pu.scheme in ("http", "https") and pu.netloc == host:
+                links.setdefault(pu.path + (("?" + pu.query) if pu.query else ""), set()).add(p)
+    bad = {}
+    for path in sorted(links):
+        code = fetch(S + path)[0]
+        if code != 200:
+            bad[path] = {"code": code, "from": sorted(links[path])}
+    imgs = sorted({r["og"]["image"] for r in out["en"].values() if r["og"]["image"]})
+    return {"links_checked": len(links), "links_bad": bad,
+            "og_images": {u: fetch(u)[0] if u.startswith("https://") else "NO-HTTPS" for u in imgs}}
 
 
 def evaluate(out):
@@ -109,7 +161,7 @@ def evaluate(out):
         if r["hreflang"] != {"es-MX": es, "en-US": p, "x-default": es}: fail.append(f"{p}: hreflang {r['hreflang']}")
         if r["inLanguage"] != ["en-US"]: fail.append(f"{p}: inLanguage {r['inLanguage'] or 'VACÍO'}")
         if r["physician_nodes"] > 1: fail.append(f"{p}: {r['physician_nodes']} nodos Physician")
-        falta = sorted(set(out["es"][es]["schema_types"]) - set(r["schema_types"]))
+        falta = sorted((set(out["es"][es]["schema_types"]) - set(r["schema_types"])) & NODOS)
         if falta: fail.append(f"{p}: faltan nodos de su pareja ES {falta}")
         if r["selector"] != [es]: fail.append(f"{p}: selector {r['selector']}")
     for es, r in out["es"].items():
@@ -123,6 +175,14 @@ def evaluate(out):
     if out["sitemap"]["total"] != 30 or out["sitemap"]["thank_you"]: fail.append(f"sitemap {out['sitemap']['total']} / gracias {out['sitemap']['thank_you']}")
     ty = out["extra"]["/en/thank-you/"]
     if "noindex" not in (ty["robots"] or ""): fail.append(f"/en/thank-you/ robots {ty['robots']}")
+    pr = out.get("prod")
+    if pr is not None:
+        for path, b in pr["links_bad"].items(): fail.append(f"enlace interno {path} → {b['code']} (desde {', '.join(b['from'][:3])})")
+        for u, c in pr["og_images"].items():
+            if c != 200: fail.append(f"og:image {u} → {c}")
+        if not pr["og_images"]: fail.append("ninguna EN declara og:image")
+        for p, r in out["en"].items():
+            if r.get("cache") is None: warn.append(f"{p}: sin cabecera x-litespeed-cache (¿caché desactivada o CDN?)")
     return fail, warn
 
 
@@ -132,7 +192,8 @@ def selftest():
     def page(p, lang, inl, alts, sel):
         return {"code": 200, "lang": lang, "canonical": p, "og": {"locale": "en_US" if lang == "en-US" else "es_MX", "url": S + p},
                 "hreflang": alts, "inLanguage": inl, "physician_nodes": 1, "selector": sel,
-                "schema_types": ["BreadcrumbList", "Physician+Person", "WebPage"] + (["WebSite"] if p in ("/", "/en/") else [])}
+                "schema_types": ["BreadcrumbList", "Physician+Person", "WebPage"] + (["WebSite"] if p in ("/", "/en/") else [])
+                + (["ProfilePage"] if p.endswith("irina-gonzalez-saez/") else [])}
     base = {"en": {}, "es": {}, "sitemap": {"total": 30, "thank_you": []}, "extra": {"/en/thank-you/": {"robots": "nofollow, noindex"}}}
     for en, es in PAIR.items():
         alts = {"es-MX": es, "en-US": en, "x-default": es}
@@ -148,6 +209,9 @@ def selftest():
         "thank-you indexable": lambda o: o["extra"]["/en/thank-you/"].__setitem__("robots", "index, follow"),
         "selector a la portada": lambda o: o["en"]["/en/faq/"].__setitem__("selector", ["/"]),
         "dos nodos Physician": lambda o: o["en"]["/en/"].__setitem__("physician_nodes", 2),
+        "prod: enlace interno roto": lambda o: o.__setitem__("prod", {"links_checked": 1, "links_bad": {"/en/x/": {"code": 404, "from": ["/en/"]}}, "og_images": {"https://e/x.jpg": 200}}),
+        "prod: og:image 404": lambda o: o.__setitem__("prod", {"links_checked": 1, "links_bad": {}, "og_images": {"https://e/x.jpg": 404}}),
+        "About EN sin ProfilePage": lambda o: o["en"]["/en/dr-irina-gonzalez-saez/"].__setitem__("schema_types", ["BreadcrumbList", "Physician+Person", "WebPage"]),
         "portada EN sin WebSite/WebPage": lambda o: o["en"]["/en/"].__setitem__("schema_types", ["BreadcrumbList", "Physician+Person"]),
     }
     ok = not evaluate(base)[0]
@@ -160,10 +224,18 @@ def selftest():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--selftest":
+    args = sys.argv[1:]
+    if args and args[0] == "--selftest":
         sys.exit(0 if selftest() else 1)
+    if "--base" in args:
+        i = args.index("--base"); S = args[i + 1].rstrip("/"); del args[i:i + 2]
+    if "--prod" in args:
+        args.remove("--prod"); PROD = True
+    if len(args) != 1:
+        sys.exit("Uso: seo_check.py [--base URL] [--prod] <salida.json> | --selftest")
+    print("Base:", S, "· producción" if PROD else "")
     out = collect()
-    json.dump(out, open(sys.argv[1], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(out, open(args[0], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     fail, warn = evaluate(out)
     print("Sitemap:", out["sitemap"]["total"], "URL ·", len(out["sitemap"]["en"]), "EN +", len(out["sitemap"]["es"]), "ES")
     for w in warn: print("  aviso:", w)
