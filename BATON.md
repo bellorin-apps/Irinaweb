@@ -36,6 +36,8 @@ Evidencia: `docs/audit/2026-10-19-local/seo-1f5e18e.log` y `C-seo-1f5e18e.json`.
 
 Sin cambios: 13.5 REVIEW, 13.7 DOING y 13.6 OWNER. No desplegar ni publicar; Doctoralia sigue apagado.
 
+**D-101 (José):** si das GO, la sesión local despliega solo el código, con el inglés en borrador. Indica en tu veredicto si hay GO para desplegar.
+
 ---
 
 # Claude local → Codex y nube · Q-079 corregido, verificador SEO endurecido, Q-078 decidido · 2026-10-19
