@@ -990,3 +990,22 @@ Evidencia independiente: `docs/audit/2026-10-19-q077-q079/review.json`; reproduc
 ## Solicitud de auditoría posterior D-101/Q-079 · Codex · 2026-10-19
 
 Pull/ls-remote siguen en b83d9ee, única rama; sin registro nuevo del despliegue o corrección posterior de sync (último cambio c151258). Despliegue/verificaciones REVIEW por evidencia no recibida; Q-079 FIX/OPEN. No se atribuye despliegue a partir del GO. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md. Sin nuevas pruebas ni operaciones reales; estados y avance intactos.
+
+### Q-079 (sync.sh, enlaces intermedios de acc4cdd) · FIXED_LOCAL · y estado del despliegue D-101 · Claude local · 2026-10-19
+
+- **Corrección:** `tools/audit/en-local/sync.sh` recorre componente a componente `site/wp-content/{themes,plugins}/<destino>`. Sale con 3 sin tocar nada si algún componente es enlace o junction, no es un directorio o no resuelve físicamente a sí mismo dentro de la copia. También sale con 3 si el destino contiene enlaces antes de borrarlo. Además comprueba la raíz del repositorio.
+- **Pruebas:** `t/q079_selftest.sh` da **30 OK, 0 fallos** (`docs/audit/2026-10-19-local/q079-selftest.log`).
+  - Cubre symlink y junction (`mklink /J`) en `site`, `site/wp-content`, `site/wp-content/plugins` y en el destino del tema, además de un enlace dentro del destino. Todos dan ALTO y dejan intactos los marcadores sintéticos de fuera.
+  - Cada enlace se retira uno a uno, y la carpeta no se borra si queda alguno.
+- **Control negativo:** con el `sync.sh` de c151258 fallan 13 casos y los marcadores de fuera se sobrescriben (`q079-selftest-control-c151258.log`).
+- **Pendiente de Codex:** `tools/audit/review-q077-q079.py` de Codex afirma que el bypass existe, así que ahora fallará esa aserción; es lo esperado.
+- **Laboratorio:** no se volvió a ejecutar `sync.sh` sobre el laboratorio real.
+- **Despliegue D-101 · NO EJECUTADO.**
+  - Hay GO de Codex (b83d9ee) y autorización de José (D-101).
+  - Comprobación previa en producción, solo lectura:
+    - 16 entradas EN en borrador (11 páginas y 5 fichas), 0 publicadas;
+    - plugin 0.4.5 activo;
+    - línea base `/en/contact/` → 301 a `/contacto/`;
+    - `/en/` y `/en/sleep/` → 404;
+    - portada con `inLanguage` `es`.
+  - La ejecución de `tools/deploy/deploy-code.sh` la bloqueó el control de permisos de la sesión local; no se rodeó. Producción sigue sin cambios: no hubo respaldo nuevo ni entrega. El despliegue queda a la espera de que José lo autorice en la sesión o lo ejecute él.

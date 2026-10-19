@@ -1,0 +1,33 @@
+# Control negativo: mismas pruebas con el sync.sh de c151258 (antes de la corrección). Deben fallar los casos de enlaces.
+  OK    preparación normal: salida
+  OK    env.sh no copiado
+  OK    solo lista permitida (sin deploy-code.sh)
+  OK    lib.sh = lib.local.sh
+  OK    repetible
+  OK    laboratorio fuera de <repo>/tmp → ALTO
+  OK    raíz sin .git → ALTO
+  OK    deploy es enlace → ALTO
+  OK    destino del enlace intacto
+  OK    sync normal: salida
+  OK    sync normal: copia el tema
+  FALLO sync: symlink en site → ALTO (esperado 3, obtenido 0)
+  FALLO sync: symlink en site → marcadores fuera intactos (esperado si, obtenido no)
+  FALLO sync: symlink en site/wp-content → ALTO (esperado 3, obtenido 0)
+  FALLO sync: symlink en site/wp-content → marcadores fuera intactos (esperado si, obtenido no)
+  FALLO sync: symlink en site/wp-content/plugins → ALTO (esperado 3, obtenido 0)
+  FALLO sync: symlink en site/wp-content/plugins → marcadores fuera intactos (esperado si, obtenido no)
+  OK    sync: symlink en site/wp-content/themes/irina-gonzalez → ALTO
+  OK    sync: symlink en site/wp-content/themes/irina-gonzalez → marcadores fuera intactos
+  FALLO sync: junction en site → ALTO (esperado 3, obtenido 0)
+  FALLO sync: junction en site → marcadores fuera intactos (esperado si, obtenido no)
+  FALLO sync: junction en site/wp-content → ALTO (esperado 3, obtenido 0)
+  FALLO sync: junction en site/wp-content → marcadores fuera intactos (esperado si, obtenido no)
+  FALLO sync: junction en site/wp-content/plugins → ALTO (esperado 3, obtenido 0)
+  FALLO sync: junction en site/wp-content/plugins → marcadores fuera intactos (esperado si, obtenido no)
+  OK    sync: junction en site/wp-content/themes/irina-gonzalez → ALTO
+  OK    sync: junction en site/wp-content/themes/irina-gonzalez → marcadores fuera intactos
+  FALLO sync: enlace dentro del destino → ALTO (esperado 3, obtenido 0)
+  OK    sync: enlace dentro del destino → marcador intacto
+  OK    sync: laboratorio fuera de <repo>/tmp → ALTO
+q079_selftest: 17 OK, 13 fallos
+exit 1

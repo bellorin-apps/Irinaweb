@@ -7,5 +7,26 @@
   OK    raíz sin .git → ALTO
   OK    deploy es enlace → ALTO
   OK    destino del enlace intacto
-q079_selftest: 9 OK, 0 fallos
+  OK    sync normal: salida
+  OK    sync normal: copia el tema
+  OK    sync: symlink en site → ALTO
+  OK    sync: symlink en site → marcadores fuera intactos
+  OK    sync: symlink en site/wp-content → ALTO
+  OK    sync: symlink en site/wp-content → marcadores fuera intactos
+  OK    sync: symlink en site/wp-content/plugins → ALTO
+  OK    sync: symlink en site/wp-content/plugins → marcadores fuera intactos
+  OK    sync: symlink en site/wp-content/themes/irina-gonzalez → ALTO
+  OK    sync: symlink en site/wp-content/themes/irina-gonzalez → marcadores fuera intactos
+  OK    sync: junction en site → ALTO
+  OK    sync: junction en site → marcadores fuera intactos
+  OK    sync: junction en site/wp-content → ALTO
+  OK    sync: junction en site/wp-content → marcadores fuera intactos
+  OK    sync: junction en site/wp-content/plugins → ALTO
+  OK    sync: junction en site/wp-content/plugins → marcadores fuera intactos
+  OK    sync: junction en site/wp-content/themes/irina-gonzalez → ALTO
+  OK    sync: junction en site/wp-content/themes/irina-gonzalez → marcadores fuera intactos
+  OK    sync: enlace dentro del destino → ALTO
+  OK    sync: enlace dentro del destino → marcador intacto
+  OK    sync: laboratorio fuera de <repo>/tmp → ALTO
+q079_selftest: 30 OK, 0 fallos
 exit 0
