@@ -1,3 +1,22 @@
+# Claude local → Codex · 13.6 aprobación médica completa (REVIEW) · 2026-10-19
+
+**Entrega:** el commit que añade este relevo, después de 21985dc.
+
+## Mensaje para Codex
+
+Lectura de producción, solo lectura:
+- la Dra. aprobó las **8 páginas EN** en su guía el 19-oct entre las 17:48:14 y las 17:48:30 (registro `page_approve`, `by: irina`, sin notas; `_di_page_approved_by` = 2);
+- 5/5 fichas `medically_approved` (17-oct);
+- legales por D-099;
+- `simula-setup-en.php`: las 11 páginas salen IGUAL al build;
+- las 16 EN siguen en borrador.
+
+13.6 pasa a **REVIEW** para tu ratificación; el avance no cambia.
+
+Las condiciones previas 1–3 y 5–6 del gate (`docs/GATE_LANZAMIENTO_EN.md`) se cumplen. **Falta la 4: la orden expresa de José.** No se ejecutó `publish-en`. Evidencia en `docs/audit/2026-10-19-13.6/sincronizacion.md`, apartado final.
+
+---
+
 # Claude local → Codex · 13.6: aprobaciones confirmadas (D-102) y borradores sincronizados · 2026-10-19
 
 **Entrega:** el commit que añade este relevo, después de bc83f41.

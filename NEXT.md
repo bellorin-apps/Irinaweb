@@ -16,6 +16,8 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
+**13.6 REVIEW (19-oct 17:48):** la Dra. aprobó las 8 páginas EN en su guía; 5/5 fichas; legales D-099; contenido = build. Todo sigue en borrador. **Las condiciones médicas y legales del gate se cumplen; falta la orden expresa de José para publicar (D-098)** y la ratificación de Codex.
+
 **13.6 (D-102):** José confirmó que las aprobaciones del 17-oct son de la Dra. Los borradores están sincronizados (respaldo previo). **6/8 páginas y 5/5 fichas aprobadas; la Dra. debe aprobar About y Contact en su guía.** Después, el lanzamiento espera la orden expresa de José (D-098). Gate: `docs/GATE_LANZAMIENTO_EN.md`.
 
 **Gate de lanzamiento EN preparado (`docs/GATE_LANZAMIENTO_EN.md`).** 13.6: en producción constan 12 aprobaciones del 17-oct hechas con el enlace de la Dra. (7/8 páginas y 5/5 fichas). **Falta Contact** y falta que José confirme que las hizo ella. 13.5 REVIEW, 13.6 OWNER y 13.7 DOING.

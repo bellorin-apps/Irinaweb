@@ -6,7 +6,7 @@ Preparado por Claude local el 2026-10-19, a petición de Codex (c725b1b). **Este
 
 | # | Condición | Fuente | Estado al 19-oct |
 |---|---|---|---|
-| 1 | La Dra. aprobó en su guía las **8 páginas** (`_di_page_approved_at`) sobre el texto que se va a publicar | 13.6, D-098 | **6/8** (D-102; borradores sincronizados con el build). **Faltan About y Contact.** |
+| 1 | La Dra. aprobó en su guía las **8 páginas** (`_di_page_approved_at`) sobre el texto que se va a publicar | 13.6, D-098 | **8/8** (19-oct 17:48, en su guía; contenido = build) |
 | 2 | La Dra. aprobó en su app las **5 fichas** (`medically_approved`) | 13.6, D-098 | **5/5** (17-oct, D-102) |
 | 3 | Legales EN aceptados por José (`--legal-ok`) | D-099 | Hecho; no volver a pedirlo |
 | 4 | **Orden expresa de José** de publicar `/en/` | D-098 | No dada |

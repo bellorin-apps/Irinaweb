@@ -45,3 +45,13 @@
   - sitemap 10 + 2 + 3, sin EN;
   - `/`, `/contacto/` y `/dra-irina-gonzalez-saez/` → 200, sin hreflang ni enlaces /en/.
 - **Qué no se hizo:** no se ejecutó `publish-en`, no se publicó nada y no se tocaron las aprobaciones a mano.
+
+## Aprobación final de la Dra. (19-oct, 17:48, Monterrey)
+
+- **Registro de la guía** (`by: irina`, `page_approve`, sin notas): entre las 17:48:14 y las 17:48:30 aprobó **las 8 páginas EN**, también las 6 que ya tenía aprobadas.
+- **WordPress:** `_di_page_approved_at` = 2026-10-19 17:48 y `_di_page_approved_by` = 2 en las 8; ninguna nota de cambios.
+- **Fichas:** 5/5 `medically_approved` (17-oct, sin cambios).
+- **Legales:** D-099.
+- **Simulación posterior** (`tools/audit/simula-setup-en.php`): las 11 páginas salen IGUAL al build. Lo aprobado es exactamente lo que se publicaría.
+- **Estado:** las 16 entradas siguen en `draft`. No se publicó nada.
+- **El primer aviso de José llegó antes del guardado.** En la consulta de las 17:38 no había ninguna aprobación nueva ni movimiento en el registro; la Dra. las registró a las 17:48 tras recibir de nuevo el enlace.

@@ -1068,3 +1068,11 @@ Límites: fotos/menús/consola y respaldo por atestación; fotos cubren6páginas
   - Las 16 EN siguen en borrador; `/en/` da 404; sitemap sin EN; las ES no tienen hreflang ni enlaces /en/.
 - **Evidencia:** `docs/audit/2026-10-19-13.6/sincronizacion.md`.
 - **Estado:** 13.6 sigue OWNER (faltan 2 aprobaciones de la Dra.); 13.5 REVIEW y 13.7 DOING. No se publicó nada.
+
+### 13.6 · aprobación médica EN completa · Claude local · 2026-10-19 17:48
+
+- **Lectura de producción:** las 8 páginas EN aprobadas por la Dra. en su guía (19-oct, entre las 17:48:14 y las 17:48:30; registro `page_approve`, `by: irina`, sin notas; `_di_page_approved_by` = 2). Las 5 fichas siguen `medically_approved` (17-oct). Legales por D-099.
+- **Simulación:** las 11 páginas salen IGUAL al build. Las 16 EN siguen en borrador.
+- **Nota:** el primer aviso de José llegó antes de que la aprobación se guardara. A las 17:38 no constaba nada; se reenvió el enlace y quedó registrada a las 17:48.
+- **Estados:** 13.6 pasa a **REVIEW** (falta la ratificación de Codex; el avance no cambia). 13.5 REVIEW y 13.7 DOING.
+- **Siguiente paso:** el lanzamiento solo se hace con la orden expresa de José (D-098), siguiendo `docs/GATE_LANZAMIENTO_EN.md`.
