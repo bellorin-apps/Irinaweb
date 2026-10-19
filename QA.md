@@ -1076,3 +1076,9 @@ Límites: fotos/menús/consola y respaldo por atestación; fotos cubren6páginas
 - **Nota:** el primer aviso de José llegó antes de que la aprobación se guardara. A las 17:38 no constaba nada; se reenvió el enlace y quedó registrada a las 17:48.
 - **Estados:** 13.6 pasa a **REVIEW** (falta la ratificación de Codex; el avance no cambia). 13.5 REVIEW y 13.7 DOING.
 - **Siguiente paso:** el lanzamiento solo se hace con la orden expresa de José (D-098), siguiendo `docs/GATE_LANZAMIENTO_EN.md`.
+
+## Ratificación13.6 sobre72a2288 · Codex · 2026-10-19
+
+**13.6DONE**:8page_approve por irina19-oct17:48,5fichas medically_approved17-oct y legalesD-099. Lecturas/registro privados por atestación Claude+propietario/D-102; no nueva entrada de Codex a cuentas/DB. Simulación posterior11IGUAL al contenido del build; inspeccionado el comparador, PHP lintOK. Codex regenera20archivosENsin diferencias y verifica manifiesto11/8Elementor. HTTPpúblico sigue15ES200,sitemap15/0EN,10EN404,ENoculto. Evidencia docs/audit/2026-10-19-13.6-codex/build-check.json; informe docs/REVISION_13_6_2026-10-19.md.
+
+Límites: simulador compara cuerpoHTML/Elementor, no todos los metadatos; aprobación real y16draft por atestación.13.5REVIEW/13.7DOING; orden expresa de publicación aún no dada. Inglés11/19(57,89%),4/7DONE; español221/228sin cambio. Sin deploy/setup/publicación/formularios/cuentas/secretos/Sensia; HTMLpreviospreservados.

@@ -6,7 +6,7 @@ Preparado por Claude local el 2026-10-19, a petición de Codex (c725b1b). **Este
 
 | # | Condición | Fuente | Estado al 19-oct |
 |---|---|---|---|
-| 1 | La Dra. aprobó en su guía las **8 páginas** (`_di_page_approved_at`) sobre el texto que se va a publicar | 13.6, D-098 | **8/8** (19-oct 17:48, en su guía; contenido = build) |
+| 1 | La Dra. aprobó en su guía las **8 páginas** (`_di_page_approved_at`) sobre el texto que se va a publicar | 13.6, D-098 | **8/8** (19-oct 17:48, en su guía; contenido = build;13.6DONE ratificado por Codex) |
 | 2 | La Dra. aprobó en su app las **5 fichas** (`medically_approved`) | 13.6, D-098 | **5/5** (17-oct, D-102) |
 | 3 | Legales EN aceptados por José (`--legal-ok`) | D-099 | Hecho; no volver a pedirlo |
 | 4 | **Orden expresa de José** de publicar `/en/` | D-098 | No dada |
@@ -20,7 +20,7 @@ Si el texto de una página cambia después de aprobarse (por ejemplo, al aplicar
 1. `git pull` en `ccr-6254502d-xly8ww`, con el árbol limpio salvo los HTML de José.
 2. `bash tools/deploy/publish-en.sh`: revisión sin `--yes`. Debe listar las 16 entradas listas y ningún bloqueo.
 3. `bash tools/deploy/backup-db.sh`: respaldo comprobado. Anotar `~/deploy-backups/<ts>/`.
-4. `bash tools/deploy/publish-en.sh --legal-ok --yes`: publicación todo o nada (D-098), con purga de caché y verificación pública. Si sale con 1, no improvisar:
+4. `bash tools/deploy/publish-en.sh --legal-ok --yes`: preflight completo y publicación secuencial con compensación de estados ante fallos (no transacción atómica), con purga de caché y verificación pública. Si sale con 1, no improvisar:
    - leer qué restauró o qué quedó para revisión manual;
    - no volver a publicar para «arreglarlo».
 5. `wp litespeed-purge all`. Si hay CDN, purgarlo también con permiso de José; no tocar la configuración del CDN.
@@ -79,4 +79,6 @@ Registro `briefing-privado/revision-log.jsonl` (`by: irina`, enlace de la guía 
 
 La comparación se hizo texto a texto de `_elementor_data` contra `tools/content/en/*.elementor.json`, con los marcadores de imagen como comodín. Las dos diferencias son solo de negrita en el titular y no cambian la redacción.
 
-**Actualización (D-102):** José confirmó que las aprobó la Dra. Se sincronizaron los borradores (`docs/audit/2026-10-19-13.6/sincronizacion.md`). Quedan **6/8 páginas y 5/5 fichas**; faltan About y Contact. Antes de ejecutar `setup-en.sh` otra vez, simular con `tools/audit/simula-setup-en.php` para saber qué aprobaciones caerían.
+**Histórico intermedio, superado por aprobación final19-oct17:48 y13.6DONE:** José confirmó que las aprobó la Dra. Se sincronizaron los borradores (`docs/audit/2026-10-19-13.6/sincronizacion.md`). Quedan **6/8 páginas y 5/5 fichas**; faltan About y Contact. Antes de ejecutar `setup-en.sh` otra vez, simular con `tools/audit/simula-setup-en.php` para saber qué aprobaciones caerían.
+
+**Ratificación Codex:**13.6DONE sobre72a2288;8/8páginas y5/5fichas aprobadas. Requisito4 sigue NO DADO. No publicar por esta ratificación; informe docs/REVISION_13_6_2026-10-19.md.

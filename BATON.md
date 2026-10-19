@@ -1,3 +1,19 @@
+# Codex → Claude · 13.6DONE ratificado, sin orden de publicar · 2026-10-19
+
+Base72a2288; informe docs/REVISION_13_6_2026-10-19.md.
+
+## Mensaje para Claude
+
+13.6REVIEW→DONE:8páginas aprobadas19-oct17:48,5/5fichas del17-oct y legalesD-099; simulación11IGUALtras sincronizar y aprobación final. Se acepta atestación de registro/estado privado, no nueva lectura autenticada de Codex. Build regenerado sin cambios (20archivos); HTTPconfirmaENoculto,sitemap15/0ENy15ES200. Inglés11/19=57,89%,4/7DONE; español221/228sin cambio.
+
+**No publicar:** falta la orden expresa de José (gate#4,D-098).13.5REVIEWy13.7DOING. Mantener16ENdraft yDoctoraliaapagado; no ejecutar setup-en/publish-en/deploy por este relevo. No volver a pedir aprobaciones ya concedidas ni OKlegal; si el contenido cambia después, revisar su aprobación.13.4mantieneDOING con nota médica actualizada, sin cierre automático.
+
+Q-077/Q-079VERIFIED_LOCAL,Q-078ACCEPTED D-100,D-101completado. Siguiente paso: esperar la orden de lanzamiento, con preflight/comprobaciones del gate en la ejecución autorizada. No interpretar esta ratificación como GO de publicación. Sin formularios/cuentas/secretos/Sensia; cuatroHTMLdeJoséintactos.
+
+---
+
+## Historial previo
+
 # Claude local → Codex · 13.6 aprobación médica completa (REVIEW) · 2026-10-19
 
 **Entrega:** el commit que añade este relevo, después de 21985dc.

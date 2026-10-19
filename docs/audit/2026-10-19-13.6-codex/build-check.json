@@ -1,0 +1,29 @@
+{
+  "base": "72a2288",
+  "tracked_files_unchanged": 20,
+  "manifest_pages": 11,
+  "elementor_pages": 8,
+  "sha256": {
+    "tools/content/en/contact.elementor.json": "7877d48168b654b0eec70f4f96ba0850604f8e9af8404314bca4edd293e0682e",
+    "tools/content/en/credentials-en.json": "abb182f7664f247ee3e33dd268ab9c683b8504f09571dde06e1eaa9f78bd7974",
+    "tools/content/en/dr-irina-gonzalez-saez.elementor.json": "236dea1ea8c58f91ede5c05969c16c1620bd9844b40017e3cfaa325ec6b9760f",
+    "tools/content/en/en.elementor.json": "5d7d913a1901752a4fdb296b98ead446e39f041f730626287ffd07b3513ab13e",
+    "tools/content/en/ent.elementor.json": "f2c62ad7a9499e7816d7612c60095d5a15ce6bcf2eb3cb8ee9771d64cdf0c699",
+    "tools/content/en/faq.elementor.json": "ec6d24f74d9a92e2d7ffab0db9222bade1a211e3cf6e5ba48a72b8f63736eebf",
+    "tools/content/en/fichas-en.json": "e9d340f0c5af00ca96f04eb1a423441dae87bbb3b8c1cd289a37981de1c0d92b",
+    "tools/content/en/fichas-es-aprobadas.json": "b67e50b804f987f477e7520e49fa97c8cbb7ca0ccebb1bf717f542cdb007dc43",
+    "tools/content/en/first-visit.elementor.json": "03e9daa5aa9c491d787970d3364293ede3d32b5b41628082834c9e9bf89ec4a4",
+    "tools/content/en/legal/medical-disclaimer.html": "03b996b5e572956976941caa71eda01c663c1f36b3c4ffacc7a207fc06694b99",
+    "tools/content/en/legal/privacy-notice.html": "ad182b670495ecab2a88d2103699e7dc76eb5049e660c97474d5bfa82f50625d",
+    "tools/content/en/legal/terms-of-use.html": "27ef23b61359150378b09feab897d39f6c8b740ca0b5743c1e24b9469f29b5d5",
+    "tools/content/en/medical-disclaimer.html": "03b996b5e572956976941caa71eda01c663c1f36b3c4ffacc7a207fc06694b99",
+    "tools/content/en/pages.json": "61a594dc8f9c4640013022894c92ab42a71329b4bd6943115d2fc8cdb1e9d8dd",
+    "tools/content/en/practice-en.json": "44366b2844e021a7cab1b1354f16ec7821d937d70065551a92116ab40a2854f4",
+    "tools/content/en/privacy-notice.html": "ad182b670495ecab2a88d2103699e7dc76eb5049e660c97474d5bfa82f50625d",
+    "tools/content/en/seo.json": "390a121de399589ba2a46088319cc7ef47f9d45dbefaa7bd9a411b48f67e6483",
+    "tools/content/en/sleep.elementor.json": "44a7af54311d29bda6eedde0f9cb8042ae1cca56a7cc914e2606078e5e0aafc5",
+    "tools/content/en/terms-of-use.html": "27ef23b61359150378b09feab897d39f6c8b740ca0b5743c1e24b9469f29b5d5",
+    "tools/content/en/thank-you.elementor.json": "b74cfefe7150c9a587a9e51b4ccea7f1417bee39ef6df75a4d0e139be008d7ad"
+  },
+  "limits": "Repository build regeneration only; approvals and remote equality are owner/local-session attestations."
+}

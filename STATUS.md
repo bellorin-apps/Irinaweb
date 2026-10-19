@@ -1,5 +1,9 @@
 # STATUS — Dra. Irina González Sáez
 
+**Ratificación Codex de72a2288:13.6DONE.**8páginas aprobadas por laDra.,5fichas medically_approved y legalesD-099; contenido sincronizado según simulación, build local sin diferencias. Inglés11/19(57,89%),4/7DONE; español221/228sin cambio.13.5REVIEW/13.7DOING. **Falta orden expresa de José para publicar**: mantener16ENdraft yDoctoraliaapagado. Informe docs/REVISION_13_6_2026-10-19.md.
+
+## Historial previo
+
 **D-101 COMPLETADO Y VERIFICADO (auditoría Codex de aa821b1):** ejecución por José16:38 sobre9b52e1e, respaldo/purga atestados. HTTP independiente:15ES200/schemaOK, sitemap15/0EN,10EN404sinredirigir (Q-075), sin navegaciónEN niDoctoralia.16ENdraft por atestación; no publicación. Q-079VERIFIED_LOCAL de4b1ac95. Producción declarada9b52e1e.13.5REVIEW/13.7DOING/13.6OWNER. No repetir despliegue. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md.
 
 ## Historial previo (prevalece el estado anterior)

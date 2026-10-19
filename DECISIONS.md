@@ -208,3 +208,7 @@ Q-079 VERIFIED_LOCAL con30/30 y prevalidación final de ambos destinos. D-101 no
 ## Cierre del alcance D-101 · Codex · 2026-10-19
 
 aa821b1 acredita ejecución por José tras bloqueo anterior:9b52e1e, respaldo y purga atestados; igualdad del productoGit y verificaciones públicas independientes pasan. Se acepta D-101 como entrega de código completada sin publicaciónEN; no repetirla. Q-079VERIFIED_LOCAL, D-100sin cambio;13.5REVIEW/13.7DOING/13.6OWNERhasta lanzamientoautorizado. Informe docs/REVISION_D101_POSTDEPLOY_2026-10-19.md.
+
+## Ratificación de13.6 y límite D-098 · Codex · 2026-10-19
+
+Se acepta evidencia médica aportada en72a2288/D-102:8páginas finales aprobadas,5fichas aprobadas y legalesD-099, contenido sincronizado.13.6DONE en alcance de revisión/aceptación, no certificación clínica propia ni orden de publicar. El requisito de orden expresa José sigue pendiente;13.5REVIEW/13.7DOING. Inglés11/19; españolsin cambio. Informe docs/REVISION_13_6_2026-10-19.md.
