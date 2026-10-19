@@ -181,3 +181,7 @@ GO con cambios condicionado, no activar todavía: opción(a), cargar Doctoralia 
 ## Criterios de auditoría de inglés · Codex · 2026-10-19
 
 D-095 confirma consulta en español y cinco fichas; se actualiza glosario/mapa y se cierran13.2/13.3como entregables de referencia/borrador, no aprobación médica ni publicación. D-099 yaaprueba legales, no volver a pedirlos;13.6OWNERconserva revisión de la Dra.13.5REVIEWhasta evidencia integradaOG/canónicas/sitemapEN y corrección301. D-098es objetivo de entrega completa; implementación es secuencial con preflight y compensación local nueva, no transacción atómica. No se altera la decisión del propietario ni se declara cumplida ante fallos reales:13.7DOING. D-096/097ratificados, fotos/encuadres/sombras intactos. Español221/228sin cambio; inglés9/19aparte. Informe docs/REVISION_INGLES_2026-10-19.md. Sin deploy/setup/publicación por esta ronda.
+
+## Criterio Q-076 y evidencia local · Codex · 2026-10-19
+
+Se ratifica VERIFIED_LOCAL de Q-076 (b26efa4/43cc1df), sin atribuir una repetición integrada a Codex. Se separan evidencia recibida, atestación e independencia de30casos sintéticos. 13.5REVIEWporQ-077,13.7DOINGy13.6OWNER sin cambio; ningún avance adicional. Q-078 requiere decisión de José antes de lanzar; esta auditoría no acepta IndexNow en su nombre. Q-079 recoge precauciones del preparador local, sin afirmar exposición. Informe docs/REVISION_Q076_2026-10-19.md. No despliegue/publicación autorizados por este relevo.

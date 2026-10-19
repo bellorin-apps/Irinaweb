@@ -1,0 +1,35 @@
+{
+  "reviewed_commit": "b26efa4",
+  "evidence_commit": "43cc1df",
+  "publication_log_entries": 16,
+  "http_200_routes": 15,
+  "negative_preflights_unchanged": 16,
+  "positive_control": "Hierarchy determines page language; /en/ page marked es is allowed.",
+  "failed_publications": 5,
+  "restored_cases": 4,
+  "reported_restore_failure_id": 99,
+  "seo_en_routes": 15,
+  "reciprocal_pairs": 15,
+  "sitemap_urls": 30,
+  "missing_inLanguage": [
+    "/en/",
+    "/en/dr-irina-gonzalez-saez/",
+    "/en/first-visit/",
+    "/en/contact/",
+    "/en/privacy-notice/",
+    "/en/medical-disclaimer/",
+    "/en/terms-of-use/"
+  ],
+  "sha256": {
+    "publish-en-completa-b26efa4.log": "5b35069e78e132ce9256f522723852b3c5994f3a320321fb198fb513358e4fb6",
+    "fallos-b26efa4.txt": "25821f9e0a6e008ab631040eb4b38d0684475ed23dbe3cec851be28349e9d16c",
+    "preflight-b26efa4.txt": "921af90290a7f266fe64cb0388c482d1a5305b2b8b8f831578b1a64846a3f35f",
+    "C-seo.json": "729fac8a1c9a8ba5250104e5b34d917baf9db1694f5749ed8b82df4b533d8bc4"
+  },
+  "limits": [
+    "Offline assertions over supplied local evidence, not a fresh WordPress execution.",
+    "Idempotence and final wrapper exit/alternates are attested in QA; no dedicated b26efa4 idempotence log.",
+    "Hashes identify reviewed artifacts, not the executed source or environment.",
+    "SQLite/local HTTP and synthetic approvals do not certify production, caches, external hooks or medical approval."
+  ]
+}

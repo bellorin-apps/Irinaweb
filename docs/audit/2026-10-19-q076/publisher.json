@@ -1,0 +1,318 @@
+{
+  "cases": [
+    {
+      "baseline": false,
+      "case": "setup-error",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "No se pudo crear en"
+    },
+    {
+      "baseline": false,
+      "case": "dry-run",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": null
+    },
+    {
+      "baseline": false,
+      "case": "no-approvals",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Publicación bloqueada por preflight."
+    },
+    {
+      "baseline": false,
+      "case": "no-approvals-dry",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": null
+    },
+    {
+      "baseline": false,
+      "case": "no-legal",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Publicación bloqueada por preflight."
+    },
+    {
+      "baseline": false,
+      "case": "missing-page",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Publicación bloqueada por preflight."
+    },
+    {
+      "baseline": false,
+      "case": "missing-pair",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Publicación bloqueada por preflight."
+    },
+    {
+      "baseline": false,
+      "case": "wrong-language",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Publicación bloqueada por preflight."
+    },
+    {
+      "baseline": false,
+      "case": "unknown",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Argumentos desconocidos; no se publica nada."
+    },
+    {
+      "baseline": false,
+      "case": "empty",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Manifiesto inglés incompleto o inesperado; no se publica nada."
+    },
+    {
+      "baseline": false,
+      "case": "truncated",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Manifiesto inglés incompleto o inesperado; no se publica nada."
+    },
+    {
+      "baseline": false,
+      "case": "wrong-kind",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Tipo de página inglés inesperado; no se publica nada."
+    },
+    {
+      "baseline": false,
+      "case": "duplicate",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": "Manifiesto de fichas incorrecto; no se publica nada."
+    },
+    {
+      "baseline": false,
+      "case": "valid",
+      "pass": true,
+      "writes": 16,
+      "unchanged": false,
+      "error": null
+    },
+    {
+      "baseline": false,
+      "case": "idempotent",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": null
+    },
+    {
+      "baseline": false,
+      "case": "write-error",
+      "pass": true,
+      "writes": 5,
+      "unchanged": true,
+      "error": "Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados."
+    },
+    {
+      "baseline": false,
+      "case": "zero-return",
+      "pass": true,
+      "writes": 5,
+      "unchanged": true,
+      "error": "Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados."
+    },
+    {
+      "baseline": false,
+      "case": "silent-block",
+      "pass": true,
+      "writes": 6,
+      "unchanged": true,
+      "error": "Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados."
+    },
+    {
+      "baseline": false,
+      "case": "throw",
+      "pass": true,
+      "writes": 5,
+      "unchanged": true,
+      "error": "Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados."
+    },
+    {
+      "baseline": false,
+      "case": "rollback-fail",
+      "pass": true,
+      "writes": 5,
+      "unchanged": false,
+      "error": "Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. REVISIÓN MANUAL: no restaurados IDs 100"
+    },
+    {
+      "baseline": false,
+      "case": "root-error",
+      "pass": true,
+      "writes": 1,
+      "unchanged": true,
+      "error": "Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. Estados restaurados."
+    },
+    {
+      "baseline": true,
+      "case": "write-error",
+      "pass": true,
+      "writes": 16,
+      "unchanged": false,
+      "error": null
+    },
+    {
+      "baseline": true,
+      "case": "empty",
+      "pass": true,
+      "writes": 0,
+      "unchanged": true,
+      "error": null
+    },
+    {
+      "baseline": "before-b26efa4",
+      "case": "root-error",
+      "pass": true,
+      "writes": 2,
+      "unchanged": true,
+      "error": "Falló la publicación; se detuvo y se intentó restaurar los estados de esta ejecución. REVISIÓN MANUAL: no restaurados IDs 100"
+    },
+    {
+      "shell": true,
+      "case": "dry-run",
+      "pass": true,
+      "exit": 0,
+      "calls": [
+        "ssh",
+        "scp",
+        "ssh",
+        "ssh"
+      ]
+    },
+    {
+      "shell": true,
+      "case": "unknown",
+      "pass": true,
+      "exit": 2,
+      "calls": []
+    },
+    {
+      "shell": true,
+      "case": "php-fail",
+      "pass": true,
+      "exit": 1,
+      "calls": [
+        "ssh",
+        "scp",
+        "ssh",
+        "ssh"
+      ]
+    },
+    {
+      "shell": true,
+      "case": "http-fail",
+      "pass": true,
+      "exit": 1,
+      "calls": [
+        "ssh",
+        "scp",
+        "ssh",
+        "ssh",
+        "ssh",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "ssh"
+      ]
+    },
+    {
+      "shell": true,
+      "case": "missing-alternates",
+      "pass": true,
+      "exit": 1,
+      "calls": [
+        "ssh",
+        "scp",
+        "ssh",
+        "ssh",
+        "ssh",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "ssh"
+      ]
+    },
+    {
+      "shell": true,
+      "case": "valid",
+      "pass": true,
+      "exit": 0,
+      "calls": [
+        "ssh",
+        "scp",
+        "ssh",
+        "ssh",
+        "ssh",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "curl",
+        "ssh"
+      ]
+    }
+  ],
+  "limits": "Disposable copies and in-memory WP stubs only; no real publication, DB, env, SSH, credentials, hooks, cache, mail or WordPress rollback integration. Old false-success and empty-manifest bypass reproduced."
+}

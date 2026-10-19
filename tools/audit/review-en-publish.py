@@ -6,7 +6,8 @@ import subprocess
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / 'docs/audit/2026-10-19'
+OUT = ROOT / os.environ.get('IRINA_AUDIT_OUTPUT', 'docs/audit/2026-10-19')
+assert OUT.resolve().is_relative_to((ROOT / 'docs/audit').resolve())
 OUT.mkdir(parents=True, exist_ok=True)
 PHP = ROOT / 'tmp/php/php.exe'
 rows = []
@@ -15,7 +16,7 @@ with tempfile.TemporaryDirectory(prefix='audit-en-', dir=ROOT / 'tmp') as folder
     assert lab.resolve().is_relative_to((ROOT / 'tmp').resolve())
     original = subprocess.check_output(['git', 'show', '6d96ae1:tools/deploy/en/publish-en.php'], cwd=ROOT)
     for baseline in [False, True]:
-        for case in (['write-error', 'empty'] if baseline else ['setup-error', 'dry-run', 'no-approvals', 'no-approvals-dry', 'no-legal', 'missing-page', 'missing-pair', 'wrong-language', 'unknown', 'empty', 'truncated', 'wrong-kind', 'duplicate', 'valid', 'idempotent', 'write-error', 'zero-return', 'silent-block', 'throw', 'rollback-fail']):
+        for case in (['write-error', 'empty'] if baseline else ['setup-error', 'dry-run', 'no-approvals', 'no-approvals-dry', 'no-legal', 'missing-page', 'missing-pair', 'wrong-language', 'unknown', 'empty', 'truncated', 'wrong-kind', 'duplicate', 'valid', 'idempotent', 'write-error', 'zero-return', 'silent-block', 'throw', 'rollback-fail', 'root-error']):
             pages = json.loads((ROOT / 'tools/content/en/pages.json').read_text(encoding='utf-8'))
             fichas = json.loads((ROOT / 'tools/content/en/fichas-en.json').read_text(encoding='utf-8'))
             if case == 'empty': pages, fichas = {}, []
@@ -41,11 +42,26 @@ with tempfile.TemporaryDirectory(prefix='audit-en-', dir=ROOT / 'tmp') as folder
                 assert data['unchanged'] and not data['writes'] and not data['error'], data
             elif case == 'rollback-fail':
                 assert data['error'] and 'REVISIÓN MANUAL' in data['error'] and not data['success'], data
+            elif case == 'root-error':
+                assert data['unchanged'] and len(data['writes']) == 1 and not data['success'], data
+                assert 'Estados restaurados.' in data['error'] and 'REVISIÓN MANUAL' not in data['error'], data
             else:
                 assert data['error'] and data['unchanged'] and not data['success'], data
             rows.append({'baseline':baseline, 'case':case, 'pass':True, 'writes':len(data['writes']), 'unchanged':data['unchanged'], 'error':data['error']})
+    # Q-076: before b26efa4 an unchanged root was written again during rollback,
+    # producing a misleading manual-review error. This stub rejects both writes.
+    for name, source_name in [('pages.json', 'pages.json'), ('fichas-en.json', 'fichas-en.json')]:
+        (lab / name).write_bytes((ROOT / 'tools/content/en' / source_name).read_bytes())
+    target.write_bytes(subprocess.check_output(['git', 'show', 'b26efa4^:tools/deploy/en/publish-en.php'], cwd=ROOT))
+    env = dict(os.environ, AUDIT_CASE='root-error', AUDIT_PUBLISH_PATH=str(target))
+    run = subprocess.run([str(PHP), str(ROOT / 'tools/audit/review-en-publish.php')], env=env, capture_output=True, check=True)
+    data = json.loads(run.stdout)
+    assert data['unchanged'] and len(data['writes']) == 2 and 'REVISIÓN MANUAL' in data['error'], data
+    rows.append({'baseline':'before-b26efa4', 'case':'root-error', 'pass':True, 'writes':2, 'unchanged':True, 'error':data['error']})
     # Shell orchestration: replace exactly its lib source with synthetic functions; never execute rssh contents.
     shell = (ROOT / 'tools/deploy/publish-en.sh').read_text(encoding='utf-8')
+    wp_command = next(line for line in shell.splitlines() if line.startswith('WP='))
+    assert '--skip-plugins' not in wp_command and '--context=admin' not in wp_command, wp_command
     source = '. "$(dirname "${BASH_SOURCE[0]}")/lib.sh"'
     assert shell.count(source) == 1
     stub = r'''set -euo pipefail
@@ -72,4 +88,4 @@ fi; }
         if case in ['php-fail','dry-run']: assert 'curl' not in calls
         rows.append({'shell':True,'case':case,'pass':True,'exit':run.returncode,'calls':calls})
 (OUT / 'publisher.json').write_text(json.dumps({'cases':rows,'limits':'Disposable copies and in-memory WP stubs only; no real publication, DB, env, SSH, credentials, hooks, cache, mail or WordPress rollback integration. Old false-success and empty-manifest bypass reproduced.'}, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-print(f'Publisher: {len(rows)} cases pass, including 2 original regressions reproduced.')
+print(f'Publisher: {len(rows)} cases pass, including 2 original regressions and Q-076 reproduced.')

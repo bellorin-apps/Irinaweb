@@ -877,10 +877,10 @@ Encargo de Codex del 2026-10-19. Copia local aislada: WordPress 7.1.3, Elementor
   - un fallo de restauración informa el ID y sale con 1;
   - la verificación HTTP 500, sin alternates, sin red y con fallo PHP sale con 1;
   - setup-en: aborta si no puede crear; solo la página cambiada pierde la aprobación; no toca publicadas ni fichas aprobadas.
-- **Q-076 · P1 · FIXED_LOCAL (Claude cloud, 2026-10-19):** publish-en.sh ya carga Elementor (sin `--skip-plugins`) y la restauración da por restaurada la entrada que no llegó a cambiar. Prueba en WordPress local (sin Elementor): falla forzada en /en/sleep/ tras publicar 3 → «Estados restaurados», 16/16 en borrador; sin fallo, 16 publicadas; devueltas a borrador. Falta repetir la integración con Elementor real (sesión local). Antes: `publish-en.sh` usa `--skip-plugins=elementor,elementor-pro`, y sin Elementor `wp_update_post` da `invalid_page_template` en las páginas `elementor_header_footer`. **La publicación real fallaría en /en/ sin publicar nada**, con el aviso engañoso «no restaurados IDs <raíz>» aunque no cambió. Con Elementor cargado publica las 16 y verifica. Lo corrige la nube.
+- **Q-076 · histórico FIXED_LOCAL, superado por VERIFIED_LOCAL debajo (Claude cloud, 2026-10-19):** publish-en.sh ya carga Elementor (sin `--skip-plugins`) y la restauración da por restaurada la entrada que no llegó a cambiar. Prueba en WordPress local (sin Elementor): falla forzada en /en/sleep/ tras publicar 3 → «Estados restaurados», 16/16 en borrador; sin fallo, 16 publicadas; devueltas a borrador. Falta repetir la integración con Elementor real (sesión local). Antes: `publish-en.sh` usa `--skip-plugins=elementor,elementor-pro`, y sin Elementor `wp_update_post` da `invalid_page_template` en las páginas `elementor_header_footer`. **La publicación real fallaría en /en/ sin publicar nada**, con el aviso engañoso «no restaurados IDs <raíz>» aunque no cambió. Con Elementor cargado publica las 16 y verifica. Lo corrige la nube.
 - **Q-077 · P3 · OPEN:** la portada /en/ no lleva WebSite/WebPage de Rank Math ni ningún `inLanguage`; la ES sí.
 - **Q-078 · P2 · OPEN (límite):** IndexNow de Rank Math (instant-indexing activo) avisa al publicar: 5 POST en una publicación fallida (luego restaurada) y 10 en la completa. No se deshace.
-- **Veredicto:** 13.5 sigue en **REVIEW** por Q-077 y por la verificación en producción tras el lanzamiento autorizado. 13.7 sigue en **DOING**: Q-076 bloquea; no es atómico (secuencial y compensatorio); hooks, caché e IndexNow no se revierten.
+- **Veredicto:** 13.5 sigue en **REVIEW** por Q-077 y por la verificación en producción tras el lanzamiento autorizado. 13.7 sigue en **DOING**; el bloqueo histórico Q-076 queda resuelto localmente por la prueba de b26efa4 indicada debajo; no es atómico (secuencial y compensatorio); hooks, caché e IndexNow no se revierten.
 - **Q-076 · P1 · VERIFIED_LOCAL (b26efa4, sesión local 2026-10-19 19:30).** Repetida la integración con el `publish-en.sh` real del repositorio (sin variante de prueba) y Elementor 4.3.5/Pro 4.3.1 cargados:
   - WP_Error, estado retenido y excepción en /en/contact/ → «Estados restaurados» y las 16 en borrador;
   - fallo de restauración → «no restaurados IDs 99» (la única publicada);
@@ -890,3 +890,14 @@ Encargo de Codex del 2026-10-19. Copia local aislada: WordPress 7.1.3, Elementor
   - los 16 casos de preflight bloquean sin cambios.
 
   Evidencia: `docs/audit/2026-10-19-local/` (`*-b26efa4*`). **Pendiente en producción:** solo cuando se autorice el lanzamiento (13.6 → orden de José).
+
+## Auditoría de b26efa4 y prueba local recibida en 43cc1df · Codex · 2026-10-19
+
+Informe: `docs/REVISION_Q076_2026-10-19.md`. **Q-076 VERIFIED_LOCAL ratificado;13.5 REVIEW (Q-077),13.7 DOING,13.6 OWNER**. Español221/228; inglés9/19. No se repitió publicación ni WordPress; sin despliegue, formulario, cuentas o secretos.
+
+- Código: carga Elementor sin contexto admin; evita restaurar estados que no cambiaron, conserva alertas por restauración fallida. PHP lint, PHPCS del publicador y bash syntax OK.
+- Evidencia recibida: 16 publicaciones, 15 rutasHTTP200 (Thankyou fuera de la lista), 16 negativos de preflight sin cambios y un control positivo por idioma jerárquico; cinco fallos, cuatro restaurados y el restante informa ID99. Idempotencia/alternates/salida final0 atestados en QA; no log dedicado de segunda ejecución b26efa4. Hashes identifican artefactos, no certifican ejecución.
+- Verificación independiente: 30 casos sintéticos (incluye regresión raíz antes/después y restauración fallida) y cotejo offline de15pares/sitemap30; evidencia `docs/audit/2026-10-19-q076/`. No certifica producción ni MariaDB/LiteSpeed/CDN/hooks externos.
+- **Q-077 P3 OPEN:** portada sinWebSite/WebPage; sieteENsin inLanguage en C-seo.json (portada, doctora, primera visita, contacto, treslegales). Harness SEO permite vacío y no sale con error al imprimir fallos; no cierra schema.
+- **Q-078 P2 OPEN:** IndexNow no compensado, pendiente decisión de José; no se acepta el riesgo por esta auditoría.
+- **Q-079 P2 OPEN (FIX laboratorio):** mkdeploy.sh copia toda tools/deploy antes de borrar env.sh/*.local.txt y calcula raíz por ../..; excluir privados antes de copiar, resolver raíz y validar destino antes de borrarlo. Solo inspección de fuente; sin ejecutar helper ni constatar exposición. No invalida los resultados funcionales de Q-076.

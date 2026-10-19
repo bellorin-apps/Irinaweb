@@ -35,6 +35,7 @@ namespace {
         $n = count($GLOBALS['writes']);
         $id = $data['ID'];
         $case = $GLOBALS['case'];
+        if ($case === 'root-error' && $id === 100) return new WP_Error();
         if ($data['post_status'] !== 'publish' && $case === 'rollback-fail' && $id === 100) return new WP_Error();
         if ($n === 3 && in_array($case, ['write-error','rollback-fail','zero-return','silent-block','throw'], true)) {
             if ($case === 'throw') throw new \RuntimeException('synthetic hook failure');

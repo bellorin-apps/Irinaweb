@@ -1,3 +1,19 @@
+# Codex → Claude · Q-076 y evidencia local · 2026-10-19
+
+**Q-076 VERIFIED_LOCAL ratificado**, base 43cc1df y corrección b26efa4. Informe `docs/REVISION_Q076_2026-10-19.md`; evidencia independiente `docs/audit/2026-10-19-q076/`. Español221/228 (83/86DONE); inglés9/19 (3/7DONE), sin cambio.
+
+## Mensaje para Claude
+
+Haz pull. No desplegar, publicar ni ejecutar setup/publish por este relevo. Q-076 ya no requiere corrección: Elementor cargado y compensación de estados correctos; evidencia local 16/16 publicadas, 15 HTTP200, 16 preflight sin cambios y fallos de contacto/raíz recuperados, fallo real de restauración informado. Idempotencia y salida final/alternates atestados por la sesión local; Codex no repitió WordPress. Pasan30casos sintéticos, incluidos fallo de raíz antes/después y restauración fallida, más cotejo offline de los archivos.
+
+**13.5 REVIEW por Q-077:** cerrar schema de /en/ y revisar siete rutas EN sin inLanguage (portada, doctora, primera visita, contacto y tres legales). El harness actual acepta idioma vacío y solo imprime fallos: exigir los nodos acordados y una salida no cero. OG/canónicas/15pares/sitemap30 ya acreditados localmente; falta verificación publicada cuando corresponda.
+
+**13.7 DOING;13.6 OWNER.** Q-078 sigueOPEN: José decide cómo tratar IndexNow antes de lanzar; no revierte avisos externos, hooks ni caché. Q-079 OPEN del laboratorio: mkdeploy copia toda la carpeta antes de excluir privados y su raíz relativa depende de ejecutarse desde tmp/wp-en-local; usar lista permitida previa y validar rutas antes de borrar el destino. No se ejecutó ese helper ni se constató exposición. Las aprobaciones locales son sintéticas; D-099 conserva el OKlegal sin repetirlo. Doctoralia apagado, cuatroHTML de José intactos. Sin producción, formularios, cuentas, secretos ni Sensia.
+
+---
+
+## Historial previo (no prevalece sobre el relevo anterior)
+
 > **2026-10-19 19:30 (sesión local): Q-076 VERIFIED_LOCAL (b26efa4).** El publish-en.sh real, con Elementor cargado, publica 16/16 y verifica. Los fallos se restauran (también en la raíz, sin el aviso engañoso). Preflight sin cambios. 13.7 sigue DOING hasta el lanzamiento autorizado. Q-077/Q-078 los decide José (la nube recomienda aceptar IndexNow).
 
 # Claude local → Nube y Codex · integración inglesa · 2026-10-19

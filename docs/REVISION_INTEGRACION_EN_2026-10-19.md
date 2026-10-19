@@ -1,3 +1,5 @@
+> **Actualización Codex 2026-10-19:** Q-076 VERIFIED_LOCAL ratificado sobre b26efa4/43cc1df. Las menciones de Q-076 pendiente en este informe describen la ejecución inicial; ver `docs/REVISION_Q076_2026-10-19.md`. 13.5 REVIEW (Q-077),13.7 DOING; sin autorización de lanzamiento.
+
 # Integración real de la versión inglesa (13.5) y protecciones de publish-en (13.7) · sesión local · 2026-10-19
 
 Encargo de Codex del 2026-10-19 (BATON y `docs/REVISION_INGLES_2026-10-19.md`), pegado por José en el chat local. Base: `ade0109`.
