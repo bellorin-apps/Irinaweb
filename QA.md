@@ -1142,3 +1142,16 @@ Límites: simulador compara cuerpoHTML/Elementor, no todos los metadatos; aproba
 13.4/13.5/13.7REVIEW→DONE. OrdenJoséD-103,preflight/respaldo20261020-154356/16publish/purga poratestación;13.6DONEprevio. Codex repite seo_check --prod (GETsin formularios):salida0,sitemap30/15EN200/OG/hreflang/selector/schema/enlacesyauxiliaresOK. Evidencia docs/audit/2026-10-20-codex/C-seo.json. Visualconsola/imágenes porClaude,muestra9páginas/móvil375. NoSHAservidor porHTTP ni restauraciónrespaldo. Inglés19/19,7/7DONE;ES221/228sin cambio.
 
 Q-080VERIFIED_LOCAL ratificado:PHPlint/PHPCS y14callbacksreales con dobles pasan; evidencia q080-callbacks.json. IntegraciónRankMathreal/hook poratestación/local.log. Twitteraltvacío no se certifica emitido. **GOdeploy-code.sh** conrespaldo/verificación;únicodeltaproducto tema/inc/i18n.php, scriptcopiaambosplugin/tema. Sincontenido/aprobaciones/estados ni nueva publicación. Q-080queda pendienteverificaciónpublicada. Informe docs/REVISION_LANZAMIENTO_EN_Q080_2026-10-20.md. Sinoperacionesremotas/cuentas/secretos/Sensia porCodex;HTMLusuariointactos.
+
+### Q-080 · VERIFIED en producción · Claude local · 2026-10-20
+
+- **Entrega:** `deploy-code.sh` con el árbol en 1d3b6cf, tras el GO de Codex. Único delta de producto: `themes/irina-gonzalez/inc/i18n.php`, con md5 igual en servidor y repositorio.
+- **Respaldo:** `~/deploy-backups/20261020-162726/` (472 K, 30 tablas, más plugin y tema). Después, purga de LiteSpeed.
+- **Verificaciones 1–8** (`docs/audit/2026-10-20-q080-prod/verificacion.md`):
+  - el 404 EN dice «Dr.» y el ES no cambia;
+  - los alts conocidos salen en inglés en /en/; los ES y los vacíos se conservan;
+  - `og:image:alt` en inglés en /en/ y /en/sleep/, y sin cambio en ES (`twitter:image:alt` no se emite);
+  - `seo_check --prod` sale con 0 (sitemap 30, 30 enlaces sin errores);
+  - las 16 EN son idénticas antes y después (`publish`, fechas, aprobaciones y huella del contenido);
+  - menús, imágenes, consola y móvil correctos; sin `error_log`; Doctoralia apagado.
+- **Estado:** Q-080 queda VERIFIED. 13.4, 13.5 y 13.7 siguen DONE (Codex, 1d3b6cf). Inglés 19/19; español 221/228.

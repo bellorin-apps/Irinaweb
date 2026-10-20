@@ -1,0 +1,47 @@
+# DESPUÉS del despliegue Q-080 (1d3b6cf; delta de producto: themes/irina-gonzalez/inc/i18n.php)
+## 1-2 · 404
+/en/no-existe-q080/ 404 | Page not found | Dr. Irina González Sáez
+/no-existe-q080/ 404 | Página no encontrada | Dra. Irina González Sáez
+## 5 · og:image:alt / twitter:image:alt
+/en/ og:image:alt "Dr. Irina González Sáez · Your ENT and sleep specialist" | twitter:image:alt: 0 etiquetas
+/en/sleep/ og:image:alt "Dr. Irina González Sáez · Your ENT and sleep specialist" | twitter:image:alt: 0 etiquetas
+/ og:image:alt "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño" | twitter:image:alt: 0 etiquetas
+/sueno/ og:image:alt "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño" | twitter:image:alt: 0 etiquetas
+## 3-4 · alts de <img> no vacíos (EN y ES) y recuento de alts vacíos
+/en/  vacíos:5
+     alt="Dr. Irina González Sáez in her office"
+     alt="Dr. Irina González Sáez"
+     alt="Otolaryngology (ENT)"
+     alt="Snoring and sleep apnea"
+/en/dr-irina-gonzalez-saez/  vacíos:9
+     alt="Dr. Irina González Sáez"
+     alt="Endoscopy camera head Dr. Irina uses in the office"
+     alt="Mexican Board of Otolaryngology–Head and Neck Surgery (CMORL y CCC)"
+     alt="Mexican Federation of Otolaryngology–Head and Neck Surgery (FESORMEX)"
+     alt="Nuevo León College of Otolaryngology"
+/en/ent/  vacíos:0
+     alt="Dr. Irina González Sáez — Otolaryngology (ENT)"
+/en/sleep/  vacíos:0
+     alt="Dr. Irina González Sáez — Sleep"
+/en/first-visit/  vacíos:6
+     alt="Dr. Irina González Sáez — First visit"
+/en/contact/  vacíos:0
+     alt="Dr. Irina González Sáez — Contact"
+/  vacíos:5
+     alt="Dra. Irina González Sáez en consultorio"
+     alt="Dra. Irina González Sáez"
+     alt="Otorrinolaringología"
+     alt="Ronquido y apnea del sueño"
+/dra-irina-gonzalez-saez/  vacíos:9
+     alt="Colegio de Otorrinolaringología de Nuevo León"
+     alt="Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello, A.C. (CMORL y CCC)"
+     alt="Dra. Irina González Sáez"
+     alt="Federación Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (FESORMEX)"
+/otorrinolaringologia/  vacíos:0
+     alt="Dra. Irina González Sáez — Otorrinolaringología"
+/sueno/  vacíos:0
+     alt="Dra. Irina González Sáez — Sueño"
+/primera-consulta/  vacíos:6
+     alt="Dra. Irina González Sáez — Primera consulta"
+/contacto/  vacíos:0
+     alt="Dra. Irina González Sáez — Contacto"

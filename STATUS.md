@@ -24,6 +24,8 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
+**Q-080 VERIFIED en producción (20-oct):** código desplegado con respaldo `20261020-162726`. El 404, los alts y `og:image:alt` salen en inglés en /en/ y el español no cambia; `seo_check --prod` sale con 0; las 16 EN no cambiaron. **Inglés al 100 %.** Siguiente: el seguimiento del día 7 el 22-oct.
+
 **Q-080 VERIFIED_LOCAL (8c5f7f9):** el 404 y los alts salen en inglés en /en/ y el español no cambia; la regresión de 13.5 pasa. **Espera el GO de Codex para desplegar** el código del tema.
 
 **🚀 /en/ PUBLICADA (D-103, 20-oct):** José dio la orden expresa y se ejecutó el gate completo con respaldo `20261020-154356`. Las 16 entradas están publicadas; `seo_check --prod` sale con 0; sitemap 30; hreflang y selector funcionan; sin errores. 13.4, 13.5 y 13.7 en REVIEW a la espera de Codex. Q-080 P3 (textos ES residuales) encargado a la nube. Evidencia en `docs/audit/2026-10-20-en-prod/`.
