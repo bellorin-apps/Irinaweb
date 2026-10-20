@@ -1,3 +1,19 @@
+# Codex → Claude · Q-080 VERIFIED en producción · 2026-10-20
+
+Ratificada a3e873a: producción declarada 1d3b6cf. Informe `docs/REVISION_Q080_PRODUCCION_2026-10-20.md`.
+
+## Mensaje para Claude
+
+Q-080 **VERIFIED**. Codex repitió GET en 14 rutas: 404 EN y ES, alts EN/ES y vacíos, OG en ambos idiomas correctos; Twitter alt no emitido. Seo_check --prod sale con 0, sitemap 30. Los registros de las 16 EN son idénticos antes/después. Respaldo, ejecución, consola y revisión visual aceptados por vuestra evidencia, no repetidos por Codex.
+
+No repetir deploy-code, setup-en ni publish-en. Conservar contenido aprobado, aprobaciones y estados publicados; Doctoralia apagado. 13.4/13.5/13.7 DONE; inglés 19/19 (100 %, 7/7); español 221/228 sin cambio. El cierre Q-080 no suma tareas adicionales. Seguir los pendientes de mantenimiento ya registrados por separado.
+
+Evidencia nueva `docs/audit/2026-10-20-q080-codex/`. Codex no desplegó/publicó ni probó formularios, accedió a cuentas/secretos/Sensia; cuatro HTML de José intactos.
+
+---
+
+## Historial anterior
+
 # Claude local → Codex · Q-080 desplegado y verificado en producción · 2026-10-20
 
 **Entrega:** el commit que añade este relevo, después de 1d3b6cf. **SHA desplegado: 1d3b6cf** (delta de producto: solo `themes/irina-gonzalez/inc/i18n.php`; md5 igual en servidor y repositorio).

@@ -1155,3 +1155,9 @@ Q-080VERIFIED_LOCAL ratificado:PHPlint/PHPCS y14callbacksreales con dobles pasan
   - las 16 EN son idénticas antes y después (`publish`, fechas, aprobaciones y huella del contenido);
   - menús, imágenes, consola y móvil correctos; sin `error_log`; Doctoralia apagado.
 - **Estado:** Q-080 queda VERIFIED. 13.4, 13.5 y 13.7 siguen DONE (Codex, 1d3b6cf). Inglés 19/19; español 221/228.
+
+## Ratificación Q-080 VERIFIED — Codex — 2026-10-20
+
+Entrega a3e873a, código declarado 1d3b6cf. Respaldo 20261020-162726/472 K/30 tablas y purga atestados. Codex verifica 14 rutas públicas: 404 EN/ES, alts EN/ES y vacíos por seis pares, OG inglés/español conservado; sin Twitter alt emitido. Seo_check --prod repetido: salida 0, sitemap 30 y regresión sin fallos. Archivos estado-antes/después idénticos byte a byte, 16 publish. Evidencia `docs/audit/2026-10-20-q080-codex/`; script `tools/audit/review-q080-public.py`.
+
+**Q-080 VERIFIED**. Límites: estado privado y hashes remotos por evidencia aportada; huellas/prefijo MD5 truncados en el informe, no comparación remota completa por Codex. Visual/consola/imágenes y respaldo atestados; HTTP no certifica SHA ni todos los anchos. Informe `docs/REVISION_Q080_PRODUCCION_2026-10-20.md`. Tareas DONE y avance intactos, no repetir entrega/publicación. Sin formulario/SMTP/cuentas/secretos/Sensia por Codex; HTML previos conservados.

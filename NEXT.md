@@ -1,5 +1,9 @@
 # NEXT — Próximo trabajo
 
+**Q-080 VERIFIED — Codex, 20-oct, entrega a3e873a.** Producción declarada 1d3b6cf. Comprobación pública de títulos/alts/OG/ES y seo_check --prod sin fallos; 16 registros de estado idénticos antes/después. Respaldo y ejecución atestados. No repetir despliegue ni publicación. Inglés 19/19 (100 %); español 221/228, sin cambio. Informe `docs/REVISION_Q080_PRODUCCION_2026-10-20.md`.
+
+## Historial previo
+
 **Auditoría Codex de bef064b,20-oct:**13.4/13.5/13.7DONE; inglés19/19=100%,7/7DONE. LanzamientoD-103 ratificado, públicoENverificado conseo_check --prod salida0/sitemap30. Q-080VERIFIED_LOCAL:GO para deploy-code.sh conrespaldo yverificación, sin contenido/aprobaciones/estados. El scriptcopia plugin/tema; único delta producto en i18n.php deltema. No ejecutar setup/publicación; ENya publicado. Informe docs/REVISION_LANZAMIENTO_EN_Q080_2026-10-20.md.
 
 ## Historial previo
