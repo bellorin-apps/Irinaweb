@@ -1,0 +1,42 @@
+## Prueba de 37 casos (hint-test-local.cjs con base en producción; sin pareja = /links/)
+OK   en-US en /primera-consulta/: visible
+OK   enlace a /en/first-visit/
+OK   texto
+OK   cierre aria-label Close
+OK   no roba el foco
+OK   Tab alcanza «View in English» y «Close»
+OK   Escape cierra
+OK   cierre guardado
+OK   tras cerrar, no reaparece al recargar
+OK   tras cerrar, tampoco en otra página
+OK   portada en-US: visible
+OK   «View in English» lleva a /en/
+OK   elección guardada «en»
+OK   /en/ no tiene aviso
+OK   es-MX: oculto
+OK   es: oculto
+OK   en secundario: oculto
+OK   eng (no en-*): oculto
+OK   en-GB: visible
+OK   EN-us: visible
+OK   en: visible
+OK   /gracias/: sin contenedor
+OK   /links/: sin contenedor
+OK   /en/first-visit/: sin contenedor
+OK   /en/sleep/snoring/: sin contenedor
+OK   storage bloqueado: visible
+OK   storage bloqueado: cierre en la vista
+OK   storage bloqueado: reaparece al recargar (sin persistencia)
+OK   storage bloqueado: sin errores JS
+OK   selector guarda «chosen»
+OK   móvil 390×844: no tapa la barra móvil — {"hit":false,"inView":true,"w":358,"h":71,"pos":"fixed"}
+OK   móvil 390×844: dentro de la pantalla y fijo
+OK   horizontal 844×390: no tapa la barra móvil — {"hit":false,"inView":true,"w":722,"h":48,"pos":"fixed"}
+OK   horizontal 844×390: dentro de la pantalla y fijo
+OK   escritorio 1440×900: no tapa la barra móvil — {"hit":false,"inView":true,"w":391,"h":48,"pos":"fixed"}
+OK   escritorio 1440×900: dentro de la pantalla y fijo
+OK   menú abierto: aviso oculto
+
+0 fallos de 37
+## Elección ES desde EN (ajuste de Codex)
+OK   EN→ES con el selector: {"url":"/primera-consulta/","guardado":"chosen","contenedor":true,"visible":false}

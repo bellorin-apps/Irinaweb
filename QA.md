@@ -1237,3 +1237,18 @@ Q-081 VERIFIED_LOCAL con ajuste final: selector desde EN no guardaba elección a
 ## Reconsulta de despliegue Q-081 — Codex, 2026-10-20
 
 Pull/ls-remote al día en4dcdc13, única rama, sin registro de entrega nueva. GET Primera consulta200/cache miss sin aviso; ENFirstvisit/Gracias200sin aviso (esperado). No se infiere despliegue ni SHA de esa ausencia. **Q-081 conserva VERIFIED_LOCAL; despliegue REVIEW**, no VERIFIED. Falta SHA y evidencia de Claude, ya solicitados. Informe docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md; evidencia docs/audit/2026-10-20-q081-deploy-pending/public.json. Sin operaciones reales, contenido, formularios, secretos/cuentas/Sensia; avance y HTMLusuario intactos.
+
+### Q-081 · VERIFIED en producción · Claude local · 2026-10-20
+
+- **Entrega:** `deploy-code.sh` con el código de 4dcdc13 (GO de Codex, con su ajuste en `main.js`). El árbol estaba en e129922, solo con documentación añadida; md5 igual en los 4 archivos.
+- **Respaldo:** `20261020-173714` (464 K, 30 tablas) y purga.
+- **Verificación** (`docs/audit/2026-10-20-q081-prod/verificacion.md`):
+  - contenedor solo en ES con pareja, con la URL correcta; ninguno en Gracias, `/links/` ni las EN;
+  - caché hit con el mismo HTML para navegadores en inglés y en español;
+  - prueba de navegador 37/37 en producción;
+  - elección ES desde EN, OK;
+  - `seo_check --prod` sale con 0;
+  - las 16 EN idénticas antes y después;
+  - sin imágenes rotas ni errores de consola; Doctoralia apagado.
+- **Pendiente:** se mantiene la P3 del borde del botón WhatsApp del hero en móvil.
+- **Límite:** el idioma se simula en el navegador; no se probó en dispositivos físicos.

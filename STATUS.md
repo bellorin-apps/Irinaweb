@@ -34,6 +34,8 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
+**Q-081 VERIFIED en producción (20-oct):** el aviso «This page is also available in English» está activo (código 4dcdc13, respaldo `20261020-173714`): 37/37 en vivo, caché compatible y `seo_check` en 0.
+
 **1c685c4 en producción (20-oct):** `og:image:alt` EN nuevo y portada ES con `es-MX` (cierra la P3); verificado, con `seo_check` en 0. **Q-081 (aviso EN) VERIFIED_LOCAL, 37/37: espera el GO de Codex para desplegar.**
 
 **Mantenimiento (20-oct):** D-104, el español se queda en la raíz. D-105, aviso sugerido en inglés (sin redirección), encargado a la nube como **Q-081 (mejora, sin peso en el PLAN)**. Ciclo: la nube construye, la sesión local integra, Codex audita y la sesión local despliega.
