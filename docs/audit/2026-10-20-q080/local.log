@@ -1,0 +1,37 @@
+# Q-080 (8c5f7f9) en la copia aislada (WP 7.1.3 + Rank Math 1.0.280 reales), con los alts de producción copiados a los adjuntos locales.
+## 404
+/en/no-existe-q080/ → 404 | Page not found | Dr. Irina González Sáez
+/no-existe-q080/ → 404 | Página no encontrada | Dra. Irina González Sáez
+## og:image:alt / twitter:image:alt
+/en/ → "Dr. Irina González Sáez · Your ENT and sleep specialist" | 
+/en/sleep/ → "Dr. Irina González Sáez · Your ENT and sleep specialist" | 
+/ → "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño" | 
+/sueno/ → "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño" | 
+## alts de <img> (EN, luego ES)
+  /en/ alt="Dr. Irina González Sáez · Your ENT and sleep specialist"
+  /en/ alt="Dr. Irina González Sáez"
+  /en/ alt="Otolaryngology (ENT)"
+  /en/ alt="Snoring and sleep apnea"
+  /en/dr-irina-gonzalez-saez/ alt="Dr. Irina González Sáez"
+  /en/dr-irina-gonzalez-saez/ alt="Mexican Board of Otolaryngology–Head and Neck Surgery (CMORL y CCC)"
+  /en/dr-irina-gonzalez-saez/ alt="Mexican Federation of Otolaryngology–Head and Neck Surgery (FESORMEX)"
+  /en/dr-irina-gonzalez-saez/ alt="Nuevo León College of Otolaryngology"
+  /en/ent/ alt="Dr. Irina González Sáez — Otolaryngology (ENT)"
+  /en/sleep/ alt="Dr. Irina González Sáez — Sleep"
+  /en/first-visit/ alt="Dr. Irina González Sáez — First visit"
+  /en/contact/ alt="Dr. Irina González Sáez — Contact"
+  / alt="Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño"
+  / alt="Dra. Irina González Sáez"
+  / alt="Otorrinolaringología"
+  / alt="Ronquido y apnea del sueño"
+  /dra-irina-gonzalez-saez/ alt="Colegio de Otorrinolaringología de Nuevo León"
+  /dra-irina-gonzalez-saez/ alt="Consejo Mexicano de Otorrinolaringología y Cirugía de Cabeza y Cuello, A.C. (CMORL y CCC)"
+  /dra-irina-gonzalez-saez/ alt="Dra. Irina González Sáez"
+  /dra-irina-gonzalez-saez/ alt="Federación Mexicana de Otorrinolaringología y Cirugía de Cabeza y Cuello (FESORMEX)"
+  /otorrinolaringologia/ alt="Dra. Irina González Sáez — Otorrinolaringología"
+  /sueno/ alt="Dra. Irina González Sáez — Sueño"
+  /primera-consulta/ alt="Dra. Irina González Sáez — Primera consulta"
+  /contacto/ alt="Dra. Irina González Sáez — Contacto"
+## regresión 13.5
+Sitemap: 30 URL · 15 EN + 15 ES
+TODAS LAS ASERCIONES PASAN

@@ -1122,3 +1122,17 @@ Límites: simulador compara cuerpoHTML/Elementor, no todos los metadatos; aproba
   Adjunto de prueba borrado. PHPCS y php -l en verde.
 - **Límite:** sin Rank Math local. El título de la 404 y el nombre exacto del filtro og (`rank_math/opengraph/{red}/{propiedad con _}`) se verifican en la copia aislada o en producción. Si se edita un alt español en Medios, hay que actualizar su traducción en `irina_alt_en()`.
 
+
+### Q-080 (8c5f7f9 de la nube) · VERIFIED_LOCAL · Claude local · 2026-10-20
+
+- **Revisión de código:**
+  - `php -l` y PHPCS de `inc/i18n.php` pasan.
+  - Los nombres de los filtros están confirmados en el código de Rank Math 1.0.280: `Opengraph::tag()` aplica `rank_math/opengraph/{red}/{propiedad con _}`, así que `og:image:alt` → `rank_math/opengraph/facebook/og_image_alt`.
+- **Cobertura (lectura de producción):** los alts de los 12 adjuntos y de la imagen social por defecto (id 361) coinciden exactamente con las claves del mapa. Las 16 EN publicadas solo muestran alts en español que están en el mapa (portada, About, ENT, Sleep, First visit y Contact). El alt de la cámara de endoscopia ya está en inglés en el widget.
+- **Copia aislada** (WP y Rank Math reales; alts de producción copiados a los adjuntos locales; imagen social por defecto local), en `docs/audit/2026-10-20-q080/local.log`:
+  - 404 EN: «Page not found | Dr. Irina González Sáez»; 404 ES sin cambio.
+  - `og:image:alt` en `/en/` y `/en/sleep/` en inglés; en `/` y `/sueno/` sin cambio. Rank Math no emite `twitter:image:alt` en esta configuración.
+  - Los alts de los heroes y las áreas en las 6 EN, en inglés; las ES, sin cambio.
+  - Regresión de 13.5 (`seo_check.py`): sin fallos.
+  - Efecto del montaje: en la portada local el hero muestra el alt social porque se usó hero-home como imagen social. En producción son adjuntos distintos.
+- **Despliegue:** pendiente del GO de Codex, con `deploy-code.sh`. El contenido aprobado no cambia; es solo código del tema.
