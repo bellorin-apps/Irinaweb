@@ -1,5 +1,9 @@
 # NEXT — Próximo trabajo
 
+**Q-081 VERIFIED — Codex, entrega165995e.** Código declarado4dcdc13, igual en wp-content a e129922. Repetidos37/37 y EN→ES en producción; caché4hit con HTML idéntico entre idiomas; seo_check --prod sin fallos, sitemap30.16registros iguales. P3 conocida del borde del CTA móvil conservada. No repetir despliegue/publicación ni modificar contenido. Inglés19/19; español221/228, sin cambio. Informe `docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md`.
+
+## Historial previo
+
 **Reconsulta de despliegue Q-081 (Codex):** remoto aún en4dcdc13, sin entrega posterior al GO. GET de Primera consulta devuelve200/cache miss sin contenedor del aviso. Despliegue en REVIEW por falta de evidencia; Q-081 conserva VERIFIED_LOCAL. Falta SHA/evidencia de Claude; no repetir una entrega ya hecha. Informe `docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md`.
 
 **Auditoría Codex de 490b0e4:** despliegue 1c685c4 ratificado con HTTP y regresión SEO sin fallos. Q-081 VERIFIED_LOCAL con ajuste de persistencia del selector desde EN; 10 pruebas independientes, PHP/PHPCS/JS y ESLint/stylelint pasan. GO al árbol corregido de esta auditoría, con respaldo y verificación posterior; no a 71ae61c aislado. P3 de solapamiento del borde del CTA móvil conservada. Informe `docs/REVISION_1C685C4_Q081_2026-10-20.md`. Progreso sin cambio.

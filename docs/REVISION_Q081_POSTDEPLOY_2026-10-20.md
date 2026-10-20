@@ -1,3 +1,33 @@
+# Q-081: ratificación en producción — Codex, 2026-10-20
+
+## Veredicto vigente
+
+**Q-081 VERIFIED** sobre la entrega165995e. Código declarado desplegado4dcdc13 desde árbol e129922; sus árboles wp-content son idénticos (a3ab77264093162394b68aff967f2e3721f4c954). Se supera la comprobación histórica sin entrega de e129922: entonces no se había ejecutado; ahora la evidencia documenta ejecución y resultados. No repetir despliegue ni publicación.
+
+## Comprobaciones independientes de Codex
+
+Se reutilizaron las suites de navegación revisadas con runtime disponible, base pública y contextos nuevos mediante tools/audit/q081/review-production.cjs. **37/37** pasan en producción y el caso adicional **EN→ES** confirma rutaES, chosen guardado, contenedor presente y aviso oculto. Sin envíos de formulario ni cambios del servidor; localStorage se usa solo en contextos de prueba desechables.
+
+Se comprueban idioma principal, teclado/Escape, persistencia, almacenamiento bloqueado, selector, Gracias/sin pareja/EN, móvil390x844, horizontal844x390, escritorio1440x900 y ocultación al abrir menú. No se probaron dispositivos físicos, Safari oFirefox. La captura móvil fue inspeccionada: barra inferior libre; **P3 conocida conservada**, el aviso cubre el borde inferior del botón WhatsApp del hero. Se puede cerrar. No se afirma ausencia de todo solapamiento.
+
+GET independientes confirman contenedor oculto en ES con pareja y URLEN correspondiente, sin contenedor en Gracias, /links/ o EN. Cuatro consultas de Primera consulta con Accept-Language en-US/es-MX: **4hit y el mismo SHA-256 del HTML completo**. Esto acredita consistencia de esas respuestas de caché, no todos los estados futuros de LiteSpeed.
+
+Evidencia nueva: docs/audit/2026-10-20-q081-codex-prod/browser.log, public.json y capturas. Los archivos aportados estado-antes/después son idénticos,16publish; cuatro prefijos MD5 de servidor/base coinciden. Es un cotejo de artefactos privados aportados, no lectura independiente de base o archivos remotos; los prefijos no equivalen a hashes completos revalidados por Codex.
+
+La ejecución, respaldo ~/deploy-backups/20261020-173714/ (464 K,30tablas y plugin/tema), purga y ausencia de manipulación temporal se aceptan por atestación del propietario/Claude en docs/audit/2026-10-20-q081-prod/. Codex no accede al respaldo ni ejecuta herramientas remotas. Los registros de estado son huellas recogidas, no copia completa de la base. Consola/imágenes/Doctoralia y ausencia de error_log se aceptan además de la evidencia aportada; no tener error_log no prueba ausencia universal de errores.
+
+## Regresión y cierre
+
+Codex repitió seo_check.py --base https://drairinagonzalez.com --prod: salida0 y sitemap30 (15EN+15ES), sin fallos. C-seo.json y seo.log en el directorio nuevo de evidencia. La salida aportada por Claude también pasa.
+
+Producción declarada4dcdc13. Inglés19/19 (100%,7/7DONE); español221/228 (96,93%,83/86DONE), sin aumento. No ejecutar deploy-code.sh,setup-en ni publish-en por este cierre. Conservar contenido aprobado, aprobaciones y estados publicados, Doctoraliaapagado. La P3 visual queda como observación de mantenimiento separada y no se corrige sin alcance propio.
+
+Codex no desplegó ni publicó, no probó formularios/SMTP, accedió a secretos/cuentas/Sensia ni modificó contenido. CuatroHTMLdeJoséintactos/excluidos. La repetición de las pruebas de navegador no activa servicios ni el widgetDoctoralia.
+
+---
+
+## Registro histórico anterior (superado por entrega165995e)
+
 # Q-081: auditoría de despliegue solicitada — Codex, 2026-10-20
 
 ## Veredicto

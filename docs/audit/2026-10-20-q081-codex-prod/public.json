@@ -1,0 +1,60 @@
+{
+  "supplied_16_state_records_equal": true,
+  "supplied_four_md5_prefixes_equal": true,
+  "cache": [
+    {
+      "language": "en-US,en;q=0.9",
+      "attempt": 1,
+      "cache": "hit",
+      "html_sha256": "f964b5d0bf91b08d501798808518721abe61e47cf524e287ac9450ad0276b9df"
+    },
+    {
+      "language": "en-US,en;q=0.9",
+      "attempt": 2,
+      "cache": "hit",
+      "html_sha256": "f964b5d0bf91b08d501798808518721abe61e47cf524e287ac9450ad0276b9df"
+    },
+    {
+      "language": "es-MX,es;q=0.9",
+      "attempt": 1,
+      "cache": "hit",
+      "html_sha256": "f964b5d0bf91b08d501798808518721abe61e47cf524e287ac9450ad0276b9df"
+    },
+    {
+      "language": "es-MX,es;q=0.9",
+      "attempt": 2,
+      "cache": "hit",
+      "html_sha256": "f964b5d0bf91b08d501798808518721abe61e47cf524e287ac9450ad0276b9df"
+    }
+  ],
+  "routes": {
+    "/": {
+      "hint": true,
+      "en_url": "https://drairinagonzalez.com/en/"
+    },
+    "/primera-consulta/": {
+      "hint": true,
+      "en_url": "https://drairinagonzalez.com/en/first-visit/"
+    },
+    "/sueno/ronquido/": {
+      "hint": true,
+      "en_url": "https://drairinagonzalez.com/en/sleep/snoring/"
+    },
+    "/gracias/": {
+      "hint": false,
+      "en_url": null
+    },
+    "/links/": {
+      "hint": false,
+      "en_url": null
+    },
+    "/en/": {
+      "hint": false,
+      "en_url": null
+    },
+    "/en/thank-you/": {
+      "hint": false,
+      "en_url": null
+    }
+  }
+}

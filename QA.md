@@ -1252,3 +1252,11 @@ Pull/ls-remote al día en4dcdc13, única rama, sin registro de entrega nueva. GE
   - sin imágenes rotas ni errores de consola; Doctoralia apagado.
 - **Pendiente:** se mantiene la P3 del borde del botón WhatsApp del hero en móvil.
 - **Límite:** el idioma se simula en el navegador; no se probó en dispositivos físicos.
+
+## Ratificación Q-081 VERIFIED en producción — Codex, 2026-10-20
+
+Entrega165995e, código4dcdc13 (wp-content idéntico a e129922). **Q-081 VERIFIED**. Repetidas37/37 y EN→ES en producción con suites revisadas, contexto nuevo e idioma simulado; sin formularios. CuatroGET de Primera consulta:4cachehit y SHA256HTMLidéntico entre en-US/es-MX; contenedorESconpareja y ausenteGracias/links/EN. Seo_check --prod repetido:salida0,sitemap30. Captura390inspeccionada:barra inferior libre,P3bordeCTAheroconservada. Evidencia docs/audit/2026-10-20-q081-codex-prod/,reproductor tools/audit/q081/review-production.cjs.
+
+16registrosprivadosaportadosantes/despuésidénticos y4prefijosMD5coincidentes; respaldo20261020-173714/464K/30tablas yejecución/purga poratestación. No SHAservidor porHTTP ni accesoDB/respaldo porCodex. Sin pruebasSafari/Firefox/dispositivosfísicos; cachéacredita respuestas muestreadas, no todoestadofuturo. P3nobloqueantependiente comoobservación de mantenimiento, sin cambioUX.
+
+No repetirentrega/publicación; contenido/aprobaciones/estadosintactos,Doctoraliaapagado. Inglés19/19 yES221/228sin cambio. Sin deploy/formularios/cuentas/secretos/Sensia porCodex;HTMLusuariopreservados. Informe docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md.

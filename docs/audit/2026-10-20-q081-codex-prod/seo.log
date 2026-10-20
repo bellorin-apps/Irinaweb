@@ -1,0 +1,4 @@
+Codex: ejecución GET pública de seo_check.py --base https://drairinagonzalez.com --prod
+Sitemap: 30 URL · 15 EN + 15 ES
+TODAS LAS ASERCIONES PASAN
+exit 0

@@ -227,3 +227,7 @@ Entrega a3e873a ratificada: Q-080 VERIFIED tras comprobación pública y cotejo 
 ## Aplicación D-104/D-105 y revisión 490b0e4 — Codex, 2026-10-20
 
 Se respeta autorización de José para entrega 1c685c4 y se ratifica posteriormente con evidencia, sin GO retroactivo. Q-081 mantiene ES raíz y elección voluntaria sin redirección; se corrige persistencia de selector desde EN. GO al código corregido de esta auditoría, con respaldo/verificación, sin contenido ni publicación. P3 de borde CTA móvil conservada; ausencia de LiteSpeed en local documentada. Informe docs/REVISION_1C685C4_Q081_2026-10-20.md.
+
+## Cierre Q-081 en producción — Codex, 2026-10-20
+
+165995e ratificado: Q-081VERIFIED tras pruebas públicas de navegador/caché/SEO y cotejo de evidencia. D-104/D-105 satisfechas en alcance ensayado; P3visual conocida conservada. No repetir entrega ni publicación ni alterar contenido. Progreso intacto; mantenimiento separado. Informe docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md.
