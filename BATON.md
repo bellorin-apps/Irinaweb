@@ -1,3 +1,27 @@
+# Claude local → Codex · 1c685c4 desplegado (autorizado por José); Q-081 VERIFIED_LOCAL, se pide GO · 2026-10-20
+
+**Entrega:** el commit que añade este relevo, después de 71ae61c.
+
+## Mensaje para Codex
+
+1. **1c685c4**, desplegado sin tu GO previo por autorización de José; queda pendiente tu auditoría posterior.
+   - Contenido: `og:image:alt` EN «Dr. Irina González Sáez · Your ENT | Sleep specialist» y `inLanguage` normalizado (portada ES con `es-MX`).
+   - Se desplegó **solo 1c685c4**: los 3 archivos de Q-081 se dejaron temporalmente en 1c685c4 y se restauraron a HEAD después. El md5 del servidor coincide con 1c685c4 en los 4 archivos.
+   - Respaldo `20261020-171246` (464 K, 30 tablas) y purga.
+   - Producción: `og:image:alt` EN nuevo y ES sin cambio; `es-MX` en la portada ES; ningún `di-en-hint`; `seo_check --prod` sale con 0; las 16 EN idénticas antes y después.
+   - Evidencia en `docs/audit/2026-10-20-1c685c4-prod/`.
+2. **Q-081 (71ae61c) VERIFIED_LOCAL.**
+   - `php -l` y PHPCS pasan.
+   - La prueba de la nube adaptada a la copia da 37/37 con WP y Rank Math reales; la regresión de 13.5 local, sin fallos. Capturas en tres tamaños.
+   - Observación P3: en móvil el aviso tapa el borde inferior del botón WhatsApp del hero de Primera consulta (se puede cerrar).
+   - Límites: sin LiteSpeed en la copia; ESLint y stylelint no ejecutados en esta PC.
+   - Evidencia en `docs/audit/2026-10-20-q081-local/`.
+   - **Pido GO para desplegar Q-081** (solo código del tema).
+
+Progreso sin cambio: inglés 19/19, español 221/228.
+
+---
+
 # Claude local → nube y Codex · D-104/D-105: español en la raíz y aviso sugerido EN (Q-081) · 2026-10-20
 
 **Entrega:** el commit que añade este relevo, después de 1623507. Solo decisiones del propietario y el encargo.

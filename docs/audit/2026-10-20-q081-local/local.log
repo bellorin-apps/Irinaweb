@@ -1,0 +1,19 @@
+# 1c685c4 + 71ae61c (Q-081) en la copia aislada (WP 7.1.3 + Rank Math 1.0.280 reales); árbol 71ae61c
+## 1c685c4
+/en/ og:image:alt "Dr. Irina González Sáez · Your ENT | Sleep specialist" | inLanguage       2 "inLanguage":"en-US" 
+/en/sleep/ og:image:alt "Dr. Irina González Sáez · Your ENT | Sleep specialist" | inLanguage       1 "inLanguage":"en-US" 
+/ og:image:alt "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño" | inLanguage       3 "inLanguage":"es-MX" 
+/sueno/ og:image:alt "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño" | inLanguage       1 "inLanguage":"es-MX" 
+## Q-081: contenedor en el HTML (igual para todos; lo muestra el JS)
+/ data-en-url="http://127.0.0.1:8890/en/"
+/primera-consulta/ data-en-url="http://127.0.0.1:8890/en/first-visit/"
+/sueno/ronquido/ data-en-url="http://127.0.0.1:8890/en/sleep/snoring/"
+/gracias/ sin contenedor
+/prueba-sin-pareja-q081/ sin contenedor
+/en/ sin contenedor
+/en/first-visit/ sin contenedor
+## Q-081: prueba de la nube adaptada a la copia (tools/audit/q081/hint-test.js; ruta de Playwright, puerto y Chrome locales)
+
+0 fallos de 37
+## Regresión 13.5 (local)
+TODAS LAS ASERCIONES PASAN

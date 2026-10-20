@@ -1200,3 +1200,28 @@ Entrega a3e873a, código declarado 1d3b6cf. Respaldo 20261020-162726/472 K/30 ta
 
   Sin desplegar.
 
+
+### 1c685c4 desplegado y verificado; Q-081 VERIFIED_LOCAL (espera GO) · Claude local · 2026-10-20
+
+- **1c685c4** (ajustes de José; él autorizó desplegarlo sin esperar el GO de Codex, que lo audita después):
+  - `og:image:alt` EN = «Dr. Irina González Sáez · Your ENT | Sleep specialist».
+  - `strip_rank_math_duplicates()` normaliza el `inLanguage` de Rank Math (la portada ES pasa de `es` a `es-MX`; **cierra la observación P3**).
+  - **Despliegue solo de 1c685c4:** los 3 archivos del tema de Q-081 se dejaron temporalmente en su versión de 1c685c4 (`git checkout 1c685c4 -- …`), se ejecutó `deploy-code.sh` y se restauraron a HEAD. El repositorio quedó limpio.
+  - Respaldo `~/deploy-backups/20261020-171246/` (464 K, 30 tablas) y purga de LiteSpeed.
+  - El md5 del servidor coincide con 1c685c4 en `i18n.php`, `main.js`, `components.css` y `Graph.php`.
+- **Verificación en producción** (`docs/audit/2026-10-20-1c685c4-prod/`):
+  - `og:image:alt` nuevo en /en/ y /en/sleep/; ES sin cambio;
+  - `inLanguage` `es-MX` en `/` (3 nodos) y en `/sueno/`; EN con `en-US`;
+  - ningún `di-en-hint` en producción (Q-081 sin desplegar);
+  - `seo_check --prod` sale con 0;
+  - las 16 EN idénticas antes y después (estado, fechas, aprobaciones y huella).
+- **Q-081 (71ae61c) · VERIFIED_LOCAL** (`docs/audit/2026-10-20-q081-local/`):
+  - `php -l` y PHPCS pasan.
+  - La prueba de la nube, adaptada a la copia (`tools/audit/q081/hint-test-local.cjs`: Playwright local, Chrome y puerto 8890, con los mismos casos), da **37/37** con WP y Rank Math reales: idioma del navegador, enlace y texto, teclado, Escape, persistencia, `localStorage` bloqueado, selector, Gracias, página sin pareja (una página sintética solo en la copia), páginas EN, móvil, horizontal, escritorio y menú abierto.
+  - El contenedor sale con la URL de la pareja en `/`, `/primera-consulta/` y `/sueno/ronquido/`, y no aparece en Gracias, en la página sin pareja ni en las EN.
+  - Regresión de 13.5 local sin fallos. Capturas en 390×844, 844×390 y 1440×900.
+  - **Observación P3:** en móvil, en la primera pantalla de Primera consulta, el aviso tapa unos píxeles del borde inferior del botón WhatsApp del hero. Se puede cerrar y no impide pulsar el botón.
+  - Límites:
+    - sin LiteSpeed en la copia (el contenedor es igual para todos y la lógica va en el cliente);
+    - ESLint y stylelint no instalados en esta PC (`npx` sin paquetes): no se ejecutaron aquí.
+- **Despliegue de Q-081:** espera el GO de Codex.

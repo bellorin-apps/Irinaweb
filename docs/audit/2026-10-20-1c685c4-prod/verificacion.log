@@ -1,0 +1,10 @@
+# 1c685c4 en producción (respaldo 20261020-171246; Q-081 NO desplegado)
+/en/ og:image:alt "Dr. Irina González Sáez · Your ENT | Sleep specialist" | inLanguage  2 "inLanguage":"en-US"  | di-en-hint: 0
+/en/sleep/ og:image:alt "Dr. Irina González Sáez · Your ENT | Sleep specialist" | inLanguage  1 "inLanguage":"en-US"  | di-en-hint: 0
+/ og:image:alt "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño" | inLanguage  3 "inLanguage":"es-MX"  | di-en-hint: 0
+/sueno/ og:image:alt "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño" | inLanguage  1 "inLanguage":"es-MX"  | di-en-hint: 0
+## seo_check --prod
+Base: https://drairinagonzalez.com · producción
+Sitemap: 30 URL · 15 EN + 15 ES
+TODAS LAS ASERCIONES PASAN
+exit 0
