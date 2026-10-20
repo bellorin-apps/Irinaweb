@@ -32,6 +32,6 @@ Fuera de alcance (DESCOPED): 9 tareas, 25 pesos: 1.1, 1.7, 5.6, 6.6, 7.4, 7.5, 8
 | 10 | 14 | 14 |
 | 11 | 13 | 13 |
 | 12 | 10 | 12 |
-| 13 (EN, aparte) | 11 | 19 |
+| 13 (EN, aparte) | 19 | 19 |
 
 Los DONE conservan la evidencia referida por PLAN; este cálculo no equivale a certificar todos los gates. Auditorías y límites: `QA.md`, `BATON.md`, `docs/AUDITORIA_CODEX_2026-10-10.md` y `docs/REVISION_2026-10-12.md`. La revisión documental no certifica staging, despliegue ni aprobación clínica.

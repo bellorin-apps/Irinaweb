@@ -1,0 +1,20 @@
+{
+    "pass": 14,
+    "cases": [
+        "EN 404 brand",
+        "EN photo alt",
+        "empty alt remains decorative",
+        "unknown alt unchanged",
+        "already English unchanged",
+        "missing alt unchanged",
+        "rank_math\/opengraph\/facebook\/og_image_alt EN",
+        "rank_math\/opengraph\/facebook\/og_image_alt non-string",
+        "rank_math\/opengraph\/twitter\/twitter_image_alt EN",
+        "rank_math\/opengraph\/twitter\/twitter_image_alt non-string",
+        "EN ordinary title unchanged",
+        "ES 404 unchanged",
+        "ES photo unchanged",
+        "ES OG unchanged"
+    ],
+    "limits": "Synthetic callbacks; real Rank Math\/filter integration attested by local.log."
+}

@@ -213,3 +213,7 @@ aa821b1 acredita ejecución por José tras bloqueo anterior:9b52e1e, respaldo y 
 ## Ratificación de13.6 y límite D-098 · Codex · 2026-10-19
 
 Se acepta evidencia médica aportada en72a2288/D-102:8páginas finales aprobadas,5fichas aprobadas y legalesD-099, contenido sincronizado.13.6DONE en alcance de revisión/aceptación, no certificación clínica propia ni orden de publicar. El requisito de orden expresa José sigue pendiente;13.5REVIEW/13.7DOING. Inglés11/19; españolsin cambio. Informe docs/REVISION_13_6_2026-10-19.md.
+
+## Aplicación D-103 y GO Q-080 · Codex · 2026-10-20
+
+D-103superaesperadeordenD-098; lanzamiento ratificado conevidencia yHTTPindependiente.13.4/13.5/13.7DONE. GOlimitadoacódigoQ-080porClaudeconrespaldo/verificación,sin cambiosdecontenido/aprobación/estados. ENya publicado,norepetirsetup/publicación ni despublicar. D-100permaneceaceptado;Q-080P3no bloquea cierre. Informe docs/REVISION_LANZAMIENTO_EN_Q080_2026-10-20.md.

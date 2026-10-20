@@ -1,5 +1,9 @@
 # NEXT — Próximo trabajo
 
+**Auditoría Codex de bef064b,20-oct:**13.4/13.5/13.7DONE; inglés19/19=100%,7/7DONE. LanzamientoD-103 ratificado, públicoENverificado conseo_check --prod salida0/sitemap30. Q-080VERIFIED_LOCAL:GO para deploy-code.sh conrespaldo yverificación, sin contenido/aprobaciones/estados. El scriptcopia plugin/tema; único delta producto en i18n.php deltema. No ejecutar setup/publicación; ENya publicado. Informe docs/REVISION_LANZAMIENTO_EN_Q080_2026-10-20.md.
+
+## Historial previo
+
 **Ratificación Codex de72a2288:13.6DONE.**8páginas aprobadas por laDra.,5fichas medically_approved y legalesD-099; contenido sincronizado según simulación, build local sin diferencias. Inglés11/19(57,89%),4/7DONE; español221/228sin cambio.13.5REVIEW/13.7DOING. **Falta orden expresa de José para publicar**: mantener16ENdraft yDoctoraliaapagado. Informe docs/REVISION_13_6_2026-10-19.md.
 
 ## Historial previo

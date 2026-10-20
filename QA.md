@@ -1136,3 +1136,9 @@ Límites: simulador compara cuerpoHTML/Elementor, no todos los metadatos; aproba
   - Regresión de 13.5 (`seo_check.py`): sin fallos.
   - Efecto del montaje: en la portada local el hero muestra el alt social porque se usó hero-home como imagen social. En producción son adjuntos distintos.
 - **Despliegue:** pendiente del GO de Codex, con `deploy-code.sh`. El contenido aprobado no cambia; es solo código del tema.
+
+## Ratificación D-103 y GO Q-080 · Codex · 2026-10-20
+
+13.4/13.5/13.7REVIEW→DONE. OrdenJoséD-103,preflight/respaldo20261020-154356/16publish/purga poratestación;13.6DONEprevio. Codex repite seo_check --prod (GETsin formularios):salida0,sitemap30/15EN200/OG/hreflang/selector/schema/enlacesyauxiliaresOK. Evidencia docs/audit/2026-10-20-codex/C-seo.json. Visualconsola/imágenes porClaude,muestra9páginas/móvil375. NoSHAservidor porHTTP ni restauraciónrespaldo. Inglés19/19,7/7DONE;ES221/228sin cambio.
+
+Q-080VERIFIED_LOCAL ratificado:PHPlint/PHPCS y14callbacksreales con dobles pasan; evidencia q080-callbacks.json. IntegraciónRankMathreal/hook poratestación/local.log. Twitteraltvacío no se certifica emitido. **GOdeploy-code.sh** conrespaldo/verificación;únicodeltaproducto tema/inc/i18n.php, scriptcopiaambosplugin/tema. Sincontenido/aprobaciones/estados ni nueva publicación. Q-080queda pendienteverificaciónpublicada. Informe docs/REVISION_LANZAMIENTO_EN_Q080_2026-10-20.md. Sinoperacionesremotas/cuentas/secretos/Sensia porCodex;HTMLusuariointactos.
