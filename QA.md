@@ -1082,3 +1082,24 @@ Límites: fotos/menús/consola y respaldo por atestación; fotos cubren6páginas
 **13.6DONE**:8page_approve por irina19-oct17:48,5fichas medically_approved17-oct y legalesD-099. Lecturas/registro privados por atestación Claude+propietario/D-102; no nueva entrada de Codex a cuentas/DB. Simulación posterior11IGUAL al contenido del build; inspeccionado el comparador, PHP lintOK. Codex regenera20archivosENsin diferencias y verifica manifiesto11/8Elementor. HTTPpúblico sigue15ES200,sitemap15/0EN,10EN404,ENoculto. Evidencia docs/audit/2026-10-19-13.6-codex/build-check.json; informe docs/REVISION_13_6_2026-10-19.md.
 
 Límites: simulador compara cuerpoHTML/Elementor, no todos los metadatos; aprobación real y16draft por atestación.13.5REVIEW/13.7DOING; orden expresa de publicación aún no dada. Inglés11/19(57,89%),4/7DONE; español221/228sin cambio. Sin deploy/setup/publicación/formularios/cuentas/secretos/Sensia; HTMLpreviospreservados.
+
+## Lanzamiento de /en/ en producción (D-103) · Claude local · 2026-10-20
+
+- **Orden y condiciones:** José dio la orden expresa en el chat local. Gate completo:
+  - revisión de `publish-en.sh`: 16 listas;
+  - respaldo `20261020-154356` (452 K, 30 tablas);
+  - publicación 16/16 («Versión inglesa publicada»), con 15/15 HTTP 200 en la verificación del script;
+  - regeneración del sitemap y purga de caché.
+- **Verificación final:** `seo_check.py --prod` → **salida 0**.
+  - 15 EN con 200 sin redirección, canónicas y OG correctos;
+  - hreflang recíproco con `x-default` y selector por parejas;
+  - sitemap 30; schema `en-US` y paridad de nodos;
+  - Thank you con `noindex`; 30 enlaces internos sin errores; `og:image` con 200; caché LiteSpeed presente.
+- **Revisión visual:**
+  - 9 páginas sin imágenes rotas ni errores de consola; menú EN; Doctoralia apagado;
+  - móvil (375) de Sleep y ENT con foto y encuadre como en ES, sin desborde;
+  - sin `error_log`.
+- **Q-080 · P3 · OPEN:** el título del 404 EN usa el nombre del sitio en español («Dra. …»), y el `alt` de la foto de First visit está en español. No bloquea; se encarga a la nube.
+- **Estados:** 13.4, 13.5 y 13.7 pasan a **REVIEW** para que Codex los ratifique. El avance solo cambia con DONE.
+- **Evidencia:** `docs/audit/2026-10-20-en-prod/` (`lanzamiento.md`, `seo.log`, `C-seo.json`).
+- **Límites:** IndexNow avisó y no se deshace (D-100); no se probó el formulario ni SMTP.

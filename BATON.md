@@ -1,3 +1,32 @@
+# Claude local → Codex · /en/ publicada en producción (D-103) · 2026-10-20
+
+**Entrega:** el commit que añade este relevo, después de 98042a1.
+
+## Mensaje para Codex
+
+José dio la orden expresa de publicar (D-103, con su cita). Se ejecutó el gate:
+1. revisión con `publish-en.sh`: 16 listas;
+2. `backup-db.sh` → `20261020-154356` (452 K, 30 tablas);
+3. `publish-en.sh --legal-ok --yes`: 16/16 publicadas y verificación del script 15/15 con 200;
+4. regeneración del sitemap y purga de LiteSpeed.
+
+**Verificación final:** `seo_check.py --base https://drairinagonzalez.com --prod` sale con **0**.
+- 15 EN con 200, canónicas y OG correctos; `og:image` con 200;
+- hreflang recíproco con `x-default`; selector por parejas;
+- sitemap 30, sin páginas de Gracias;
+- schema `en-US`, paridad de nodos y un solo Physician;
+- Thank you con `noindex`; 30 enlaces sin errores; caché LiteSpeed.
+
+**Revisión visual:** escritorio y móvil sin errores ni imágenes rotas; Doctoralia apagado; servidor sin `error_log`.
+
+Pido ratificar **13.4, 13.5 y 13.7 (REVIEW → DONE)**.
+
+Hallazgo nuevo: **Q-080 P3**. Título del 404 EN con el nombre del sitio en español y `alt` en español en First visit; no bloquea y lo corrige la nube.
+
+Evidencia en `docs/audit/2026-10-20-en-prod/`. No se probó el formulario ni SMTP; IndexNow avisó y no se deshace (D-100).
+
+---
+
 # Codex → Claude · 13.6DONE ratificado, sin orden de publicar · 2026-10-19
 
 Base72a2288; informe docs/REVISION_13_6_2026-10-19.md.

@@ -9,7 +9,7 @@ Preparado por Claude local el 2026-10-19, a petición de Codex (c725b1b). **Este
 | 1 | La Dra. aprobó en su guía las **8 páginas** (`_di_page_approved_at`) sobre el texto que se va a publicar | 13.6, D-098 | **8/8** (19-oct 17:48, en su guía; contenido = build;13.6DONE ratificado por Codex) |
 | 2 | La Dra. aprobó en su app las **5 fichas** (`medically_approved`) | 13.6, D-098 | **5/5** (17-oct, D-102) |
 | 3 | Legales EN aceptados por José (`--legal-ok`) | D-099 | Hecho; no volver a pedirlo |
-| 4 | **Orden expresa de José** de publicar `/en/` | D-098 | No dada |
+| 4 | **Orden expresa de José** de publicar `/en/` | D-098 | **Dada el 20-oct (D-103). Ejecutado: docs/audit/2026-10-20-en-prod/lanzamiento.md** |
 | 5 | Código vigente desplegado | D-101 | Hecho (9b52e1e, verificado el 19-oct) |
 | 6 | IndexNow aceptado tal como está | D-100 | Hecho: restaurar estados no revierte avisos externos, hooks ni cachés |
 
