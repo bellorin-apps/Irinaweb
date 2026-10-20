@@ -1,0 +1,35 @@
+{
+  "public": {
+    "/en/": {
+      "og_alt": "Dr. Irina González Sáez · Your ENT | Sleep specialist",
+      "schema_languages": [
+        "en-US"
+      ],
+      "hint_present": false
+    },
+    "/en/sleep/": {
+      "og_alt": "Dr. Irina González Sáez · Your ENT | Sleep specialist",
+      "schema_languages": [
+        "en-US"
+      ],
+      "hint_present": false
+    },
+    "/": {
+      "og_alt": "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño",
+      "schema_languages": [
+        "es-MX"
+      ],
+      "hint_present": false
+    },
+    "/sueno/": {
+      "og_alt": "Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño",
+      "schema_languages": [
+        "es-MX"
+      ],
+      "hint_present": false
+    }
+  },
+  "supplied_md5_prefixes_equal": true,
+  "supplied_16_state_records_equal": true,
+  "limits": "Remote file MD5s/private states and backup attested, artifact comparisons only; four MD5 prefixes have no filename labels."
+}

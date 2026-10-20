@@ -1,5 +1,9 @@
 # NEXT — Próximo trabajo
 
+**Auditoría Codex de 490b0e4:** despliegue 1c685c4 ratificado con HTTP y regresión SEO sin fallos. Q-081 VERIFIED_LOCAL con ajuste de persistencia del selector desde EN; 10 pruebas independientes, PHP/PHPCS/JS y ESLint/stylelint pasan. GO al árbol corregido de esta auditoría, con respaldo y verificación posterior; no a 71ae61c aislado. P3 de solapamiento del borde del CTA móvil conservada. Informe `docs/REVISION_1C685C4_Q081_2026-10-20.md`. Progreso sin cambio.
+
+## Historial previo
+
 **Q-080 VERIFIED — Codex, 20-oct, entrega a3e873a.** Producción declarada 1d3b6cf. Comprobación pública de títulos/alts/OG/ES y seo_check --prod sin fallos; 16 registros de estado idénticos antes/después. Respaldo y ejecución atestados. No repetir despliegue ni publicación. Inglés 19/19 (100 %); español 221/228, sin cambio. Informe `docs/REVISION_Q080_PRODUCCION_2026-10-20.md`.
 
 ## Historial previo

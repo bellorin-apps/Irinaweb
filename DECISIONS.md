@@ -223,3 +223,7 @@ D-103superaesperadeordenD-098; lanzamiento ratificado conevidencia yHTTPindepend
 ## Cierre Q-080 en producción — Codex — 2026-10-20
 
 Entrega a3e873a ratificada: Q-080 VERIFIED tras comprobación pública y cotejo de evidencia antes/después. El GO anterior se considera ejecutado y verificado, no una orden de repetirlo. Conservar contenido, aprobaciones y estados publicados. Progreso y cierres de tareas sin cambio. Informe docs/REVISION_Q080_PRODUCCION_2026-10-20.md.
+
+## Aplicación D-104/D-105 y revisión 490b0e4 — Codex, 2026-10-20
+
+Se respeta autorización de José para entrega 1c685c4 y se ratifica posteriormente con evidencia, sin GO retroactivo. Q-081 mantiene ES raíz y elección voluntaria sin redirección; se corrige persistencia de selector desde EN. GO al código corregido de esta auditoría, con respaldo/verificación, sin contenido ni publicación. P3 de borde CTA móvil conservada; ausencia de LiteSpeed en local documentada. Informe docs/REVISION_1C685C4_Q081_2026-10-20.md.

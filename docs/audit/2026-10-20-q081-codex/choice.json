@@ -1,0 +1,16 @@
+{
+  "pass": 10,
+  "checks": [
+    "baseline: EN selector -> ES remembers choice",
+    "fixed: EN selector -> ES remembers choice",
+    "choice persisted on EN without banner",
+    "English: visibility",
+    "close hides",
+    "close survives reload",
+    "Spanish primary: visibility",
+    "blocked storage shows",
+    "blocked storage closes",
+    "blocked storage no JS errors"
+  ],
+  "limits": "Synthetic HTML with actual JS block; old regression reproduced. No WordPress or LiteSpeed integration repeated."
+}

@@ -1,0 +1,1392 @@
+{
+ "en": {
+  "/en/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "ENT doctor in Monterrey | Dr. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/",
+   "og": {
+    "locale": "en_US",
+    "title": "ENT doctor in Monterrey | Dr. Irina González Sáez",
+    "description": "Board-certified ENT in Cumbres, Monterrey: ear, nose and throat for children and adults, snoring and sleep apnea. Consultations are in Spanish.",
+    "url": "https://drairinagonzalez.com/en/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/",
+    "en-US": "/en/",
+    "x-default": "/"
+   },
+   "selector": [
+    "/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "Physician+Person",
+    "WebPage",
+    "WebSite"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0,
+   "cache": "hit"
+  },
+  "/en/dr-irina-gonzalez-saez/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Dr. Irina González Sáez | ENT and sleep specialist",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/dr-irina-gonzalez-saez/",
+   "og": {
+    "locale": "en_US",
+    "title": "Dr. Irina González Sáez | ENT and sleep specialist",
+    "description": "Board-certified by the Mexican Board of ORL–HNS, trained in two countries, with a subspecialty in sleep-disordered breathing. Cumbres, Monterrey.",
+    "url": "https://drairinagonzalez.com/en/dr-irina-gonzalez-saez/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/dra-irina-gonzalez-saez/",
+    "en-US": "/en/dr-irina-gonzalez-saez/",
+    "x-default": "/dra-irina-gonzalez-saez/"
+   },
+   "selector": [
+    "/dra-irina-gonzalez-saez/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "Physician+Person",
+    "ProfilePage"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0,
+   "cache": "miss"
+  },
+  "/en/ent/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "ENT in Monterrey: ear, nose and throat | Dr. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/ent/",
+   "og": {
+    "locale": "en_US",
+    "title": "ENT in Monterrey: ear, nose and throat | Dr. Irina González",
+    "description": "ENT in Cumbres, Monterrey: ear, nose and throat care for children from birth and adults. What I treat, how I work and how to book. In Spanish.",
+    "url": "https://drairinagonzalez.com/en/ent/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/otorrinolaringologia/",
+    "en-US": "/en/ent/",
+    "x-default": "/otorrinolaringologia/"
+   },
+   "selector": [
+    "/otorrinolaringologia/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an ENT appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0,
+   "cache": "hit"
+  },
+  "/en/sleep/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Snoring and sleep apnea specialist in Monterrey",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/sleep/",
+   "og": {
+    "locale": "en_US",
+    "title": "Snoring and sleep apnea specialist in Monterrey",
+    "description": "Snoring and sleep apnea in Monterrey: airway evaluation, home sleep test, CPAP and surgery. Dr. Irina González Sáez, ENT. Consultations in Spanish.",
+    "url": "https://drairinagonzalez.com/en/sleep/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/",
+    "en-US": "/en/sleep/",
+    "x-default": "/sueno/"
+   },
+   "selector": [
+    "/sueno/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book a snoring or sleep apnea evaluation with Dr. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0,
+   "cache": "hit"
+  },
+  "/en/first-visit/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "First visit with Dr. Irina González Sáez | What to expect",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/first-visit/",
+   "og": {
+    "locale": "en_US",
+    "title": "First visit with Dr. Irina González Sáez | What to expect",
+    "description": "What an ENT visit is like: about 30 minutes, a complete examination and a clear plan. What to bring, costs and insurance. Consultations in Spanish.",
+    "url": "https://drairinagonzalez.com/en/first-visit/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/primera-consulta/",
+    "en-US": "/en/first-visit/",
+    "x-default": "/primera-consulta/"
+   },
+   "selector": [
+    "/primera-consulta/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 7,
+   "cache": "hit"
+  },
+  "/en/contact/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Contact and location | Dr. Irina González Sáez, Cumbres",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/contact/",
+   "og": {
+    "locale": "en_US",
+    "title": "Contact and location | Dr. Irina González Sáez, Cumbres",
+    "description": "Office at CAB Medical Headquarters, Cumbres, Monterrey. Map, parking and WhatsApp booking. Consultations are in Spanish.",
+    "url": "https://drairinagonzalez.com/en/contact/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/contacto/",
+    "en-US": "/en/contact/",
+    "x-default": "/contacto/"
+   },
+   "selector": [
+    "/contacto/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "ContactPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0,
+   "cache": "hit"
+  },
+  "/en/faq/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Frequently asked questions | Dr. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/faq/",
+   "og": {
+    "locale": "en_US",
+    "title": "Frequently asked questions | Dr. Irina González Sáez",
+    "description": "Hours, cost, insurance, children, hospitals and language of the visits at Dr. Irina González Sáez’s ENT office in Monterrey.",
+    "url": "https://drairinagonzalez.com/en/faq/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/preguntas-frecuentes/",
+    "en-US": "/en/faq/",
+    "x-default": "/preguntas-frecuentes/"
+   },
+   "selector": [
+    "/preguntas-frecuentes/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "FAQPage"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 10,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 10,
+   "cache": "hit"
+  },
+  "/en/privacy-notice/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Privacy notice | Dr. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/privacy-notice/",
+   "og": {
+    "locale": "en_US",
+    "title": "Privacy notice | Dr. Irina González Sáez",
+    "description": "How we process your personal data under Mexico’s LFPDPPP: what we collect, why, with whom we share it and how to exercise your ARCO rights.",
+    "url": "https://drairinagonzalez.com/en/privacy-notice/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/aviso-de-privacidad/",
+    "en-US": "/en/privacy-notice/",
+    "x-default": "/aviso-de-privacidad/"
+   },
+   "selector": [
+    "/aviso-de-privacidad/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0,
+   "cache": "hit"
+  },
+  "/en/medical-disclaimer/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Medical disclaimer | Dr. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/medical-disclaimer/",
+   "og": {
+    "locale": "en_US",
+    "title": "Medical disclaimer | Dr. Irina González Sáez",
+    "description": "The information on this site is educational and does not replace a medical consultation. This is not an emergency channel.",
+    "url": "https://drairinagonzalez.com/en/medical-disclaimer/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/aviso-medico/",
+    "en-US": "/en/medical-disclaimer/",
+    "x-default": "/aviso-medico/"
+   },
+   "selector": [
+    "/aviso-medico/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0,
+   "cache": "hit"
+  },
+  "/en/terms-of-use/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Terms of use | Dr. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/terms-of-use/",
+   "og": {
+    "locale": "en_US",
+    "title": "Terms of use | Dr. Irina González Sáez",
+    "description": "Terms of use of Dr. Irina González Sáez’s website.",
+    "url": "https://drairinagonzalez.com/en/terms-of-use/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/terminos-de-uso/",
+    "en-US": "/en/terms-of-use/",
+    "x-default": "/terminos-de-uso/"
+   },
+   "selector": [
+    "/terminos-de-uso/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0,
+   "cache": "hit"
+  },
+  "/en/sleep/snoring/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Snoring treatment in Monterrey | Dr. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/sleep/snoring/",
+   "og": {
+    "locale": "en_US",
+    "title": "Snoring treatment in Monterrey | Dr. Irina González",
+    "description": "Snoring is not normal, even though it is common. It happens when air has trouble passing through an airway that narrows during sleep: a blocked nose, a long",
+    "url": "https://drairinagonzalez.com/en/sleep/snoring/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/ronquido/",
+    "en-US": "/en/sleep/snoring/",
+    "x-default": "/sueno/ronquido/"
+   },
+   "selector": [
+    "/sueno/ronquido/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment about Snoring with Dr. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 3,
+   "cache": "hit"
+  },
+  "/en/sleep/obstructive-sleep-apnea/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Obstructive sleep apnea in Monterrey | Dr. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/sleep/obstructive-sleep-apnea/",
+   "og": {
+    "locale": "en_US",
+    "title": "Obstructive sleep apnea in Monterrey | Dr. Irina González",
+    "description": "In obstructive sleep apnea, the airway closes again and again while you sleep. Each closure stops your breathing for a few seconds, lowers your oxygen and",
+    "url": "https://drairinagonzalez.com/en/sleep/obstructive-sleep-apnea/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/apnea-obstructiva-del-sueno/",
+    "en-US": "/en/sleep/obstructive-sleep-apnea/",
+    "x-default": "/sueno/apnea-obstructiva-del-sueno/"
+   },
+   "selector": [
+    "/sueno/apnea-obstructiva-del-sueno/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment about Obstructive sleep apnea with Dr. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 4,
+   "cache": "hit"
+  },
+  "/en/sleep/home-sleep-test/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Home sleep test in Monterrey | Dr. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/sleep/home-sleep-test/",
+   "og": {
+    "locale": "en_US",
+    "title": "Home sleep test in Monterrey | Dr. Irina González",
+    "description": "The home sleep test, or respiratory polygraphy, records over one night the airflow through your nose, your breathing effort, the oxygen level in your blood,",
+    "url": "https://drairinagonzalez.com/en/sleep/home-sleep-test/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/estudio-del-sueno/",
+    "en-US": "/en/sleep/home-sleep-test/",
+    "x-default": "/sueno/estudio-del-sueno/"
+   },
+   "selector": [
+    "/sueno/estudio-del-sueno/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment about Home sleep test with Dr. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 3,
+   "cache": "hit"
+  },
+  "/en/sleep/cpap-therapy/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "CPAP for sleep apnea in Monterrey | Dr. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/sleep/cpap-therapy/",
+   "og": {
+    "locale": "en_US",
+    "title": "CPAP for sleep apnea in Monterrey | Dr. Irina González",
+    "description": "CPAP is a small machine that delivers air at gentle pressure through a mask while you sleep. That pressure works like an air splint that keeps the airway from",
+    "url": "https://drairinagonzalez.com/en/sleep/cpap-therapy/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/cpap/",
+    "en-US": "/en/sleep/cpap-therapy/",
+    "x-default": "/sueno/cpap/"
+   },
+   "selector": [
+    "/sueno/cpap/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment about CPAP with Dr. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 3,
+   "cache": "hit"
+  },
+  "/en/sleep/snoring-and-sleep-apnea-surgery/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Snoring &amp; sleep apnea surgery, Monterrey | Dr. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/en/sleep/snoring-and-sleep-apnea-surgery/",
+   "og": {
+    "locale": "en_US",
+    "title": "Snoring &amp; sleep apnea surgery, Monterrey | Dr. Irina González",
+    "description": "Snoring and sleep apnea surgery aims to widen and firm up the part of the airway that closes during sleep. It is not a single operation: it can be nasal",
+    "url": "https://drairinagonzalez.com/en/sleep/snoring-and-sleep-apnea-surgery/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/cirugia-de-ronquido-y-apnea/",
+    "en-US": "/en/sleep/snoring-and-sleep-apnea-surgery/",
+    "x-default": "/sueno/cirugia-de-ronquido-y-apnea/"
+   },
+   "selector": [
+    "/sueno/cirugia-de-ronquido-y-apnea/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment about Snoring and sleep apnea surgery with Dr. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 3,
+   "cache": "hit"
+  }
+ },
+ "es": {
+  "/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Otorrinolaringólogo en Monterrey | Dra. Irina González Sáez",
+    "description": "Otorrinolaringólogo certificado en Monterrey, especialista en ronquido y apnea del sueño. Oído, nariz y garganta para niños y adultos en Cumbres.",
+    "url": "https://drairinagonzalez.com/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "website"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/",
+    "en-US": "/en/",
+    "x-default": "/"
+   },
+   "selector": [
+    "/en/"
+   ],
+   "schema_types": [
+    "ImageObject",
+    "Physician+Person",
+    "WebPage",
+    "WebSite"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/aviso-de-privacidad/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Aviso de privacidad | Dra. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/aviso-de-privacidad/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Aviso de privacidad | Dra. Irina González Sáez",
+    "description": "Cómo tratamos sus datos personales conforme a la LFPDPPP: qué recabamos, para qué, con quién los compartimos y cómo ejercer sus derechos ARCO.",
+    "url": "https://drairinagonzalez.com/aviso-de-privacidad/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/aviso-de-privacidad/",
+    "en-US": "/en/privacy-notice/",
+    "x-default": "/aviso-de-privacidad/"
+   },
+   "selector": [
+    "/en/privacy-notice/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/aviso-medico/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Aviso médico | Dra. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/aviso-medico/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Aviso médico | Dra. Irina González Sáez",
+    "description": "La información del sitio es educativa y no sustituye la consulta médica. No es un canal de urgencias.",
+    "url": "https://drairinagonzalez.com/aviso-medico/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/aviso-medico/",
+    "en-US": "/en/medical-disclaimer/",
+    "x-default": "/aviso-medico/"
+   },
+   "selector": [
+    "/en/medical-disclaimer/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/contacto/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Contacto y ubicación | Dra. Irina González Sáez, Cumbres",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/contacto/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Contacto y ubicación | Dra. Irina González Sáez, Cumbres",
+    "description": "Consultorio en CAB Medical Headquarters, Av. Paseo de los Leones 2341, Cumbres 2.º Sector, Monterrey. Horario, mapa, estacionamiento y WhatsApp.",
+    "url": "https://drairinagonzalez.com/contacto/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/contacto/",
+    "en-US": "/en/contact/",
+    "x-default": "/contacto/"
+   },
+   "selector": [
+    "/en/contact/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "ContactPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/dra-irina-gonzalez-saez/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Dra. Irina González Sáez | Otorrino especialista en sueño",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/dra-irina-gonzalez-saez/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Dra. Irina González Sáez | Otorrino especialista en sueño",
+    "description": "Certificada por el Consejo Mexicano de ORL y CCC, con formación en dos países y subespecialidad en trastornos respiratorios del dormir. Cumbres, Monterrey.",
+    "url": "https://drairinagonzalez.com/dra-irina-gonzalez-saez/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/dra-irina-gonzalez-saez/",
+    "en-US": "/en/dr-irina-gonzalez-saez/",
+    "x-default": "/dra-irina-gonzalez-saez/"
+   },
+   "selector": [
+    "/en/dr-irina-gonzalez-saez/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "Physician+Person",
+    "ProfilePage"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/otorrinolaringologia/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Otorrinolaringología en Monterrey: oído, nariz y garganta",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/otorrinolaringologia/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Otorrinolaringología en Monterrey: oído, nariz y garganta",
+    "description": "Otorrino en Cumbres, Monterrey: oído, nariz y garganta en niños desde los 0 meses y adultos. Qué atiendo, cómo trabajo y cómo agendar tu consulta.",
+    "url": "https://drairinagonzalez.com/otorrinolaringologia/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/otorrinolaringologia/",
+    "en-US": "/en/ent/",
+    "x-default": "/otorrinolaringologia/"
+   },
+   "selector": [
+    "/en/ent/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hola%2C quisiera agendar una consulta de otorrinolaringolog%C3%ADa con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/preguntas-frecuentes/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Preguntas frecuentes | Dra. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/preguntas-frecuentes/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Preguntas frecuentes | Dra. Irina González Sáez",
+    "description": "Horario, costo de consulta, seguros, atención a niños y hospitales. Respuestas de servicio del consultorio de la Dra. Irina González Sáez.",
+    "url": "https://drairinagonzalez.com/preguntas-frecuentes/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/preguntas-frecuentes/",
+    "en-US": "/en/faq/",
+    "x-default": "/preguntas-frecuentes/"
+   },
+   "selector": [
+    "/en/faq/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "FAQPage"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 9,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 9
+  },
+  "/primera-consulta/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Primera consulta con la Dra. Irina González Sáez | Qué esperar",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/primera-consulta/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Primera consulta con la Dra. Irina González Sáez | Qué esperar",
+    "description": "Cómo es la consulta de otorrinolaringología: 30 minutos, exploración completa y plan claro. Qué llevar, costos y seguros.",
+    "url": "https://drairinagonzalez.com/primera-consulta/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/primera-consulta/",
+    "en-US": "/en/first-visit/",
+    "x-default": "/primera-consulta/"
+   },
+   "selector": [
+    "/en/first-visit/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 6
+  },
+  "/sueno/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Especialista en ronquido y apnea del sueño en Monterrey",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/sueno/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Especialista en ronquido y apnea del sueño en Monterrey",
+    "description": "Ronquido y apnea del sueño en Monterrey: valoración de la vía aérea, estudio del sueño en casa, CPAP y cirugía. Dra. Irina González Sáez, otorrino.",
+    "url": "https://drairinagonzalez.com/sueno/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/",
+    "en-US": "/en/sleep/",
+    "x-default": "/sueno/"
+   },
+   "selector": [
+    "/en/sleep/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hola%2C quisiera agendar una valoraci%C3%B3n de ronquido o apnea con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/sueno/apnea-obstructiva-del-sueno/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Apnea obstructiva del sueño en Monterrey | Dra. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/sueno/apnea-obstructiva-del-sueno/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Apnea obstructiva del sueño en Monterrey | Dra. Irina González",
+    "description": "En la apnea obstructiva del sueño, la vía aérea se cierra una y otra vez mientras duermes. Cada cierre interrumpe la respiración durante unos segundos, baja",
+    "url": "https://drairinagonzalez.com/sueno/apnea-obstructiva-del-sueno/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/apnea-obstructiva-del-sueno/",
+    "en-US": "/en/sleep/obstructive-sleep-apnea/",
+    "x-default": "/sueno/apnea-obstructiva-del-sueno/"
+   },
+   "selector": [
+    "/en/sleep/obstructive-sleep-apnea/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hola%2C quisiera agendar una consulta sobre Apnea obstructiva del sue%C3%B1o con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 4
+  },
+  "/sueno/cirugia-de-ronquido-y-apnea/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Cirugía de ronquido y apnea en Monterrey | Dra. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/sueno/cirugia-de-ronquido-y-apnea/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Cirugía de ronquido y apnea en Monterrey | Dra. Irina González",
+    "description": "La cirugía del ronquido y la apnea busca ensanchar y dar firmeza a la parte de la vía aérea que se cierra al dormir. No es una sola operación: puede ser",
+    "url": "https://drairinagonzalez.com/sueno/cirugia-de-ronquido-y-apnea/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/cirugia-de-ronquido-y-apnea/",
+    "en-US": "/en/sleep/snoring-and-sleep-apnea-surgery/",
+    "x-default": "/sueno/cirugia-de-ronquido-y-apnea/"
+   },
+   "selector": [
+    "/en/sleep/snoring-and-sleep-apnea-surgery/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hola%2C quisiera agendar una consulta sobre Cirug%C3%ADa de ronquido y apnea con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 3
+  },
+  "/sueno/cpap/": {
+   "code": 200,
+   "lang": "es",
+   "title": "CPAP para apnea del sueño en Monterrey | Dra. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/sueno/cpap/",
+   "og": {
+    "locale": "es_MX",
+    "title": "CPAP para apnea del sueño en Monterrey | Dra. Irina González",
+    "description": "El CPAP es un equipo pequeño que envía aire a presión suave a través de una mascarilla mientras duermes. Esa presión funciona como una férula de aire que",
+    "url": "https://drairinagonzalez.com/sueno/cpap/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/cpap/",
+    "en-US": "/en/sleep/cpap-therapy/",
+    "x-default": "/sueno/cpap/"
+   },
+   "selector": [
+    "/en/sleep/cpap-therapy/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hola%2C quisiera agendar una consulta sobre CPAP con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 3
+  },
+  "/sueno/estudio-del-sueno/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Estudio del sueño en casa en Monterrey | Dra. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/sueno/estudio-del-sueno/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Estudio del sueño en casa en Monterrey | Dra. Irina González",
+    "description": "El estudio del sueño en casa, o poligrafía respiratoria, registra durante una noche el flujo de aire por la nariz, el esfuerzo respiratorio, el nivel de",
+    "url": "https://drairinagonzalez.com/sueno/estudio-del-sueno/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/estudio-del-sueno/",
+    "en-US": "/en/sleep/home-sleep-test/",
+    "x-default": "/sueno/estudio-del-sueno/"
+   },
+   "selector": [
+    "/en/sleep/home-sleep-test/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hola%2C quisiera agendar una consulta sobre Estudio del sue%C3%B1o en casa con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 3
+  },
+  "/sueno/ronquido/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Tratamiento del ronquido en Monterrey | Dra. Irina González",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/sueno/ronquido/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Tratamiento del ronquido en Monterrey | Dra. Irina González",
+    "description": "Roncar no es normal, aunque sea común. El ronquido aparece cuando el aire pasa con dificultad por una vía aérea que se estrecha al dormir: la nariz tapada, el",
+    "url": "https://drairinagonzalez.com/sueno/ronquido/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/sueno/ronquido/",
+    "en-US": "/en/sleep/snoring/",
+    "x-default": "/sueno/ronquido/"
+   },
+   "selector": [
+    "/en/sleep/snoring/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "MedicalWebPage",
+    "Physician+Person"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 1,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez.",
+    "Hola%2C quisiera agendar una consulta sobre Ronquido con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 3
+  },
+  "/terminos-de-uso/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Términos de uso | Dra. Irina González Sáez",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "canonical": "/terminos-de-uso/",
+   "og": {
+    "locale": "es_MX",
+    "title": "Términos de uso | Dra. Irina González Sáez",
+    "description": "Condiciones de uso del sitio web de la Dra. Irina González Sáez.",
+    "url": "https://drairinagonzalez.com/terminos-de-uso/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/terminos-de-uso/",
+    "en-US": "/en/terms-of-use/",
+    "x-default": "/terminos-de-uso/"
+   },
+   "selector": [
+    "/en/terms-of-use/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/gracias/": {
+   "code": 200,
+   "lang": "es",
+   "title": "Mensaje recibido | Dra. Irina González Sáez",
+   "robots": "nofollow, noindex",
+   "canonical": null,
+   "og": {
+    "locale": "es_MX",
+    "title": "Mensaje recibido | Dra. Irina González Sáez",
+    "description": "Recibimos tu solicitud; te contactamos en horario de consultorio.",
+    "url": "https://drairinagonzalez.com/gracias/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/gracias/",
+    "en-US": "/en/thank-you/",
+    "x-default": "/gracias/"
+   },
+   "selector": [
+    "/en/thank-you/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  }
+ },
+ "sitemap": {
+  "total": 30,
+  "en": [
+   "/en/",
+   "/en/contact/",
+   "/en/dr-irina-gonzalez-saez/",
+   "/en/ent/",
+   "/en/faq/",
+   "/en/first-visit/",
+   "/en/medical-disclaimer/",
+   "/en/privacy-notice/",
+   "/en/sleep/",
+   "/en/sleep/cpap-therapy/",
+   "/en/sleep/home-sleep-test/",
+   "/en/sleep/obstructive-sleep-apnea/",
+   "/en/sleep/snoring-and-sleep-apnea-surgery/",
+   "/en/sleep/snoring/",
+   "/en/terms-of-use/"
+  ],
+  "es": [
+   "/",
+   "/aviso-de-privacidad/",
+   "/aviso-medico/",
+   "/contacto/",
+   "/dra-irina-gonzalez-saez/",
+   "/otorrinolaringologia/",
+   "/preguntas-frecuentes/",
+   "/primera-consulta/",
+   "/sueno/",
+   "/sueno/apnea-obstructiva-del-sueno/",
+   "/sueno/cirugia-de-ronquido-y-apnea/",
+   "/sueno/cpap/",
+   "/sueno/estudio-del-sueno/",
+   "/sueno/ronquido/",
+   "/terminos-de-uso/"
+  ],
+  "thank_you": []
+ },
+ "extra": {
+  "/en/thank-you/": {
+   "code": 200,
+   "lang": "en-US",
+   "title": "Message received | Dr. Irina González Sáez",
+   "robots": "nofollow, noindex",
+   "canonical": null,
+   "og": {
+    "locale": "en_US",
+    "title": "Message received | Dr. Irina González Sáez",
+    "description": "We received your request; we’ll contact you during office hours.",
+    "url": "https://drairinagonzalez.com/en/thank-you/",
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {
+    "es-MX": "/gracias/",
+    "en-US": "/en/thank-you/",
+    "x-default": "/gracias/"
+   },
+   "selector": [
+    "/gracias/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/en/no-existe-prueba/": {
+   "code": 404,
+   "h1": [
+    "This page <em>doesn’t exist</em>"
+   ],
+   "lang": "en-US",
+   "title": "Page not found | Dr. Irina González Sáez",
+   "robots": "follow, noindex",
+   "canonical": null,
+   "og": {
+    "locale": "en_US",
+    "title": "Page not found | Dr. Irina González Sáez",
+    "description": null,
+    "url": null,
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {},
+   "selector": [
+    "/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage",
+    "WebSite"
+   ],
+   "inLanguage": [
+    "en-US"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hello%2C I reached a page that doesn%E2%80%99t exist on Dr. Irina Gonz%C3%A1lez S%C3%A1ez%E2%80%99s website and would like to book an appointment.",
+    "Hello%2C I would like to book an appointment with Dr. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "/no-existe-prueba/": {
+   "code": 404,
+   "lang": "es",
+   "title": "Página no encontrada | Dra. Irina González Sáez",
+   "robots": "follow, noindex",
+   "canonical": null,
+   "og": {
+    "locale": "es_MX",
+    "title": "Página no encontrada | Dra. Irina González Sáez",
+    "description": null,
+    "url": null,
+    "image": "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg",
+    "type": "article"
+   },
+   "og_locale_alt": [],
+   "hreflang": {},
+   "selector": [
+    "/en/"
+   ],
+   "schema_types": [
+    "BreadcrumbList",
+    "WebPage",
+    "WebSite"
+   ],
+   "inLanguage": [
+    "es-MX"
+   ],
+   "physician_nodes": 0,
+   "faq_questions": 0,
+   "wa_text": [
+    "Hola%2C llegu%C3%A9 a una p%C3%A1gina que no existe en el sitio de la Dra. Irina Gonz%C3%A1lez S%C3%A1ez y quisiera agendar una consulta.",
+    "Hola%2C quisiera agendar una consulta con la Dra. Irina Gonz%C3%A1lez S%C3%A1ez."
+   ],
+   "details_visible": 0
+  },
+  "form_en": {
+   "di_lang": [
+    "en"
+   ],
+   "privacy_link": [
+    "https://drairinagonzalez.com/en/privacy-notice/",
+    "https://drairinagonzalez.com/en/privacy-notice/"
+   ],
+   "motivos": [
+    "Choose an option",
+    "Snoring or sleep apnea",
+    "Ear",
+    "Nose and sinuses",
+    "Throat and voice",
+    "Children",
+    "Other / not sure"
+   ],
+   "redirect": []
+  },
+  "form_es": {
+   "di_lang": [],
+   "motivos": [
+    "Elige una opción",
+    "Ronquido o apnea del sueño",
+    "Oído",
+    "Nariz y senos paranasales",
+    "Garganta y voz",
+    "Niños",
+    "Otro / no lo sé"
+   ]
+  }
+ },
+ "prod": {
+  "links_checked": 30,
+  "links_bad": {},
+  "og_images": {
+   "https://drairinagonzalez.com/wp-content/uploads/2026/10/og-default-v20261010145734.jpg": 200
+  }
+ }
+}

@@ -1225,3 +1225,11 @@ Entrega a3e873a, código declarado 1d3b6cf. Respaldo 20261020-162726/472 K/30 ta
     - sin LiteSpeed en la copia (el contenedor es igual para todos y la lógica va en el cliente);
     - ESLint y stylelint no instalados en esta PC (`npx` sin paquetes): no se ejecutaron aquí.
 - **Despliegue de Q-081:** espera el GO de Codex.
+
+## Auditoría 490b0e4 — 1c685c4 y Q-081 — Codex, 2026-10-20
+
+1c685c4 ratificado: cuatro prefijos MD5 aportados coinciden (sin nombres/hash completo), 16 registros antes/después idénticos; GET comprueba OG alt EN nuevo, es-MX ES, sin hint en producción. Seo_check --prod repetido, salida 0/sitemap30. Respaldo 20261020-171246 y ejecución por atestación José/Claude; no repetidos por Codex.
+
+Q-081 VERIFIED_LOCAL con ajuste final: selector desde EN no guardaba elección al faltar contenedor; Codex registra el listener fuera de esa condición. Diez pruebas reales del bloque JS en navegador sintético pasan y reproducen fallo antiguo; evidence choice.json. PHP lint/PHPCS de Graph/i18n, node --check, ESLint/stylelint OK. Las 37/37 integradas son aportadas; servidor local no atendía y no se inició ni se leyó configuración. Captura390 inspeccionada: P3 borde de CTA hero cubierto, barra inferior accesible. Sin prueba LiteSpeed local.
+
+**GO para versión corregida de auditoría**, no 71ae61c aislado; entrega con respaldo/verificación según BATON. Sin contenido/aprobaciones/estados ni setup/publicación. Q-081 pendiente de verificación en producción. Informe docs/REVISION_1C685C4_Q081_2026-10-20.md; evidencia docs/audit/2026-10-20-q081-codex/. Progreso intacto. Sin deploy/formularios/cuentas/secretos/Sensia por Codex; HTML usuario intactos.

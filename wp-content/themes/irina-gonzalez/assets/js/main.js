@@ -444,13 +444,14 @@
   // Aviso «This page is also available in English» (D-105, Q-081). El servidor solo emite el contenedor oculto en páginas españolas
   // con pareja inglesa publicada; aquí se muestra si el idioma PRINCIPAL del navegador es inglés y el visitante no lo cerró ni eligió
   // idioma (localStorage, sin cookies; si está bloqueado, el cierre vale solo para esta vista). Nunca redirige ni roba el foco.
+  var HINT_KEY = 'di-en-hint';
+  var hintSet = function (value) { try { window.localStorage.setItem(HINT_KEY, value); } catch { /* sin almacenamiento */ } };
+  // También recordar la elección desde EN, donde no se emite el aviso.
+  document.querySelectorAll('.di-lang').forEach(function (a) { a.addEventListener('click', function () { hintSet('chosen'); }); });
   var enHint = document.querySelector('.di-en-hint');
   if (enHint) {
-    var HINT_KEY = 'di-en-hint';
     var hintGet = function () { try { return window.localStorage.getItem(HINT_KEY); } catch { return null; } };
-    var hintSet = function (value) { try { window.localStorage.setItem(HINT_KEY, value); } catch { /* sin almacenamiento */ } };
     var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-    document.querySelectorAll('.di-lang').forEach(function (a) { a.addEventListener('click', function () { hintSet('chosen'); }); });
     if (/^en(-|$)/i.test(String(langs[0] || '')) && !hintGet()) {
       var hintClose = function () {
         hintSet('closed');
