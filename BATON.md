@@ -1,3 +1,36 @@
+# Claude local → nube y Codex · D-104/D-105: español en la raíz y aviso sugerido EN (Q-081) · 2026-10-20
+
+**Entrega:** el commit que añade este relevo, después de 1623507. Solo decisiones del propietario y el encargo.
+
+## Mensaje para la nube (Q-081, mejora de mantenimiento, sin peso en el PLAN)
+
+Construye el aviso sugerido de D-105 **solo en código (tema o plugin)**, sin tocar el contenido Elementor aprobado, los adjuntos ni las aprobaciones:
+- **Cuándo aparece:**
+  - solo en páginas ES que tengan pareja EN **publicada** (la misma que usa el selector, `Language`);
+  - nunca en `/gracias/` ni en páginas sin pareja;
+  - solo si el idioma principal del navegador empieza por `en` (`navigator.languages[0]`, o `navigator.language` si no existe);
+  - no si el visitante ya lo cerró o eligió.
+- **Funcionamiento:**
+  - el servidor solo emite un contenedor oculto con la URL EN (por ejemplo, `data-en-url`), igual para todos los visitantes, para no romper la caché de LiteSpeed;
+  - la decisión se toma en el cliente con JS;
+  - lo que eligió el visitante se recuerda en `localStorage`, envuelto en try/catch; sin cookies.
+- **Texto (UI, sin texto médico):** «This page is also available in English.», enlace «View in English» y botón de cierre con `aria-label="Close"`.
+- **Diseño:**
+  - discreto y coherente con el sistema visual;
+  - **sin cambiar textos de marca, menús ni sombras**;
+  - posición fija sin desplazar el contenido (sin CLS);
+  - en móvil, sin tapar la barra inferior de WhatsApp, Llamar y Cómo llegar.
+- **Accesibilidad:** navegable con teclado y con un rol o etiqueta accesible.
+- **Restricciones:** sin redirección automática, sin dependencias externas y sin seguimiento nuevo.
+- **Pruebas:** casos sintéticos de la lógica (idioma `en` o `es`, con y sin pareja, cerrado, Gracias, `localStorage` bloqueado), más `php -l`, PHPCS y ESLint.
+- **Al terminar:** indica el SHA. La sesión local lo integra en la copia aislada (con el navegador en inglés y en español, en móvil y escritorio) y, tras el GO de Codex, lo despliega. No publiques ni despliegues.
+
+## Mensaje para Codex
+
+D-104 y D-105 los registró José. Audita Q-081 cuando la nube lo entregue y la sesión local lo integre. Sin cambios de progreso: inglés 19/19, español 221/228.
+
+---
+
 # Codex → Claude · Q-080 VERIFIED en producción · 2026-10-20
 
 Ratificada a3e873a: producción declarada 1d3b6cf. Informe `docs/REVISION_Q080_PRODUCCION_2026-10-20.md`.

@@ -28,6 +28,8 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
+**Mantenimiento (20-oct):** D-104, el español se queda en la raíz. D-105, aviso sugerido en inglés (sin redirección), encargado a la nube como **Q-081 (mejora, sin peso en el PLAN)**. Ciclo: la nube construye, la sesión local integra, Codex audita y la sesión local despliega.
+
 **Q-080 VERIFIED en producción (20-oct):** código desplegado con respaldo `20261020-162726`. El 404, los alts y `og:image:alt` salen en inglés en /en/ y el español no cambia; `seo_check --prod` sale con 0; las 16 EN no cambiaron. **Inglés al 100 %.** Siguiente: el seguimiento del día 7 el 22-oct.
 
 **Q-080 VERIFIED_LOCAL (8c5f7f9):** el 404 y los alts salen en inglés en /en/ y el español no cambia; la regresión de 13.5 pasa. **Espera el GO de Codex para desplegar** el código del tema.
