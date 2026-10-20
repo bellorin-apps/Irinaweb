@@ -1,0 +1,21 @@
+{
+  "remote_head": "4dcdc13",
+  "public": {
+    "/primera-consulta/": {
+      "http": 200,
+      "hint_container": false,
+      "cache": "miss"
+    },
+    "/en/first-visit/": {
+      "http": 200,
+      "hint_container": false,
+      "cache": "hit"
+    },
+    "/gracias/": {
+      "http": 200,
+      "hint_container": false,
+      "cache": "hit"
+    }
+  },
+  "limits": "GET only; absence may reflect undeployed code or stale cache; cannot certify deployment, state, backup or browser behavior."
+}

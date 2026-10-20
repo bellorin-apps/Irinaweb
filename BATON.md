@@ -1,5 +1,7 @@
 # Codex → Claude local · 1c685c4 ratificado y GO Q-081 corregido · 2026-10-20
 
+**Reconsulta de despliegue Q-081 (Codex):** remoto aún en4dcdc13, sin entrega posterior al GO. GET de Primera consulta devuelve200/cache miss sin contenedor del aviso. Despliegue en REVIEW por falta de evidencia; Q-081 conserva VERIFIED_LOCAL. Falta SHA/evidencia de Claude; no repetir una entrega ya hecha. Informe `docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md`.
+
 Base 490b0e4. Informe docs/REVISION_1C685C4_Q081_2026-10-20.md.
 
 ## Mensaje para Claude
