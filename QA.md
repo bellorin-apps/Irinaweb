@@ -1169,3 +1169,34 @@ Entrega a3e873a, código declarado 1d3b6cf. Respaldo 20261020-162726/472 K/30 ta
 - **Local** (filtro `rank_math/json_ld` simulado): / → es-MX; /en/ → en-US; los nodos Person se siguen quitando. PHPCS y php -l en verde.
 - **Despliegue:** José autoriza subirlo sin esperar el GO de Codex, que lo audita después. Verificar en producción: og:image:alt EN, inLanguage es-MX en la portada ES y `seo_check --prod` con salida 0.
 
+## Q-081: aviso sugerido en inglés (Claude cloud, 2026-10-20, D-105)
+
+- **Código:**
+  - `inc/i18n.php`: `irina_en_hint_url()` y un contenedor oculto en `wp_footer`. Sale solo en páginas o entradas ES con pareja EN publicada (`Language::translation`), y nunca en Gracias. El contenedor es igual para todos los visitantes, así que es compatible con la caché de LiteSpeed. Lleva `lang="en"`, role region con etiqueta, «This page is also available in English.», «View in English» y la X con `aria-label="Close"`.
+  - `main.js`:
+    - se muestra solo si `navigator.languages[0]` (o `navigator.language`) es `en` o `en-*`;
+    - guarda en localStorage `di-en-hint` = closed / en / chosen (el selector EN/ES también cuenta como elección), con try/catch;
+    - Escape cierra;
+    - no roba el foco, no redirige y no añade seguimiento.
+  - `components.css`: fijo, sin CLS:
+    - en móvil, sobre la barra inferior (72 px + zona segura);
+    - en horizontal bajo, a la izquierda de la columna de botones;
+    - en escritorio, abajo a la izquierda, con un máximo de 26 rem;
+    - oculto con el menú abierto y al imprimir; sin animación con movimiento reducido.
+
+  No cambia textos de marca, menús, sombras existentes, contenido Elementor, adjuntos ni aprobaciones.
+- **Pruebas** (`tools/audit/q081/hint-test.js`, Playwright sobre WordPress local con /en/ publicada solo en prueba y devuelta a borrador): **37/37 OK**.
+  - Idioma: en-US, en-GB, EN-us y en → visible; es-MX, es, en como idioma secundario y eng → oculto.
+  - Rutas: el enlace lleva a la pareja; la portada lleva a /en/. Sin contenedor en /gracias/, en una página sin pareja ni en /en/…; con las EN en borrador, tampoco hay contenedor.
+  - Memoria: cerrar o Escape → no reaparece al recargar ni en otra página; «View in English» guarda «en»; el selector guarda «chosen».
+  - localStorage bloqueado: se ve, se cierra en la vista, reaparece al recargar y no hay errores JS.
+  - Teclado: Tab alcanza el enlace y el cierre.
+  - Pantallas: 390×844, 844×390 y 1440×900 sin solaparse con la barra ni salirse de la pantalla; menú abierto → oculto.
+  - PHP -l, PHPCS, ESLint, stylelint y `node --check` en verde.
+- **Límites:**
+  - el idioma del navegador se simula con `navigator.languages`;
+  - no se probó en Safari ni Firefox reales, ni con lector de pantalla;
+  - el servidor PHP local no tiene LiteSpeed; la integración con caché real queda para la sesión local.
+
+  Sin desplegar.
+

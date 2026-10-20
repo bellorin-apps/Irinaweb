@@ -682,3 +682,18 @@ gmp-advanced-marker:focus:not(:focus-visible) { outline: none; }
 .di-lang:hover, .di-lang:focus-visible { background: rgb(36 31 35 / 0.08); color: inherit; }
 .di-lang--panel { border-color: rgb(36 31 35 / 0.12); color: var(--color-text); }
 body.di-dark .di-lang--panel { border-color: rgb(255 255 255 / 0.2); color: #fff; }
+/* Aviso para navegadores en inglés en páginas españolas (D-105, Q-081). Fijo y fuera del flujo (sin CLS); en móvil, sobre la barra
+   inferior (72 px + zona segura) sin taparla; en horizontal bajo, a la izquierda de la columna de botones; oculto con el menú abierto. */
+.di-en-hint { position: fixed; z-index: 55; left: var(--gutter); right: var(--gutter); bottom: calc(72px + env(safe-area-inset-bottom, 0px) + 10px); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.9rem; padding: 0.8rem 3.2rem 0.8rem 1rem; background: var(--color-surface); color: var(--color-text); border: 1px solid rgb(36 31 35 / 0.12); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); font-size: 0.88rem; line-height: 1.4; opacity: 0; transform: translateY(8px); transition: opacity var(--motion-base) var(--ease-out), transform var(--motion-base) var(--ease-out); }
+.di-en-hint[hidden] { display: none; }
+.di-en-hint.is-in { opacity: 1; transform: none; }
+.di-en-hint__t { margin: 0; max-width: none; }
+.di-en-hint .di-en-hint__go { color: var(--color-secondary-strong); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.di-en-hint .di-en-hint__x { position: absolute; top: 50%; right: 0.35rem; width: 44px; height: 44px; margin-top: -22px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--color-text); cursor: pointer; }
+.di-en-hint .di-en-hint__x:hover, .di-en-hint .di-en-hint__x:focus-visible { background: var(--color-surface-soft); }
+.di-en-hint .di-en-hint__go:focus-visible, .di-en-hint .di-en-hint__x:focus-visible { outline: 2px solid var(--color-secondary-strong); outline-offset: 2px; }
+body.menu-open .di-en-hint { display: none; }
+@media (min-width: 900px) { .di-en-hint { right: auto; bottom: 24px; max-width: 26rem; } }
+@media (max-width: 899px) and (orientation: landscape) and (max-height: 500px) { .di-en-hint { bottom: calc(12px + env(safe-area-inset-bottom, 0px)); right: calc(var(--gutter) + 58px); } }
+@media (prefers-reduced-motion: reduce) { .di-en-hint { transition: none; transform: none; } }
+@media print { .di-en-hint { display: none; } }

@@ -179,3 +179,33 @@ foreach ( [ 'rank_math/opengraph/facebook/og_image_alt', 'rank_math/opengraph/tw
 		static fn( $alt ) => 'en' === irina_lang() && is_string( $alt ) ? irina_alt_en( $alt ) : $alt
 	);
 }
+
+/**
+ * URL de la pareja inglesa PUBLICADA de la página española actual, para el aviso sugerido (D-105, Q-081). Vacío en inglés, sin pareja
+ * publicada, fuera de páginas o entradas, y en Gracias.
+ */
+function irina_en_hint_url(): string {
+	if ( 'es' !== irina_lang() || ! is_singular() || ! class_exists( '\DraIrina\Core\I18n\Language' ) || irina_is_page( 'gracias' ) ) {
+		return '';
+	}
+	$en = \DraIrina\Core\I18n\Language::translation( (int) get_queried_object_id(), 'en' );
+	return $en && 'publish' === get_post_status( $en ) ? (string) get_permalink( $en ) : '';
+}
+
+// Aviso sugerido (D-105, Q-081): el servidor emite el mismo contenedor oculto para todos (compatible con la caché de LiteSpeed) y
+// main.js lo muestra solo si el idioma principal del navegador es inglés y el visitante no lo cerró ni eligió. Sin redirección.
+add_action(
+	'wp_footer',
+	static function (): void {
+		$url = irina_en_hint_url();
+		if ( '' === $url ) {
+			return;
+		}
+		printf(
+			'<div class="di-en-hint" lang="en" role="region" aria-label="Language suggestion" data-en-url="%1$s" hidden><p class="di-en-hint__t">This page is also available in English.</p><a class="di-en-hint__go" href="%1$s" hreflang="en-US">View in English</a><button type="button" class="di-en-hint__x" aria-label="Close">%2$s</button></div>' . "\n",
+			esc_url( $url ),
+			irina_icon( 'x', 'di-icon', 18 ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- irina_icon escapa sus atributos.
+		);
+	},
+	5
+);
