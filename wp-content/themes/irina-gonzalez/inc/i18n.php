@@ -156,7 +156,7 @@ function irina_alt_en( string $alt ): string {
 		'Dra. Irina González Sáez — Otorrinolaringología' => 'Dr. Irina González Sáez — Otolaryngology (ENT)',
 		'Otorrinolaringología'                            => 'Otolaryngology (ENT)',
 		'Ronquido y apnea del sueño'                      => 'Snoring and sleep apnea',
-		'Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño' => 'Dr. Irina González Sáez · Your ENT and sleep specialist',
+		'Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño' => 'Dr. Irina González Sáez · Your ENT | Sleep specialist', // José, 2026-10-20: como el subtítulo de About.
 	];
 	return $map[ trim( $alt ) ] ?? $alt;
 }

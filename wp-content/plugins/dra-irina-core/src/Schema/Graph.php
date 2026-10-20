@@ -469,6 +469,10 @@ final class Graph {
 			if ( ! is_array( $node ) ) {
 				continue;
 			}
+			if ( isset( $node['inLanguage'] ) ) {
+				// Rank Math pone «es» en la portada; el resto del grafo usa es-MX / en-US (José, 2026-10-20).
+				$data[ $key ]['inLanguage'] = Language::TAGS[ Language::current() ];
+			}
 			$type  = $node['@type'] ?? '';
 			$types = is_array( $type ) ? $type : [ $type ];
 			foreach ( $types as $t ) {

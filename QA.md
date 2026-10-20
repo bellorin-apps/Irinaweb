@@ -1161,3 +1161,11 @@ Q-080VERIFIED_LOCAL ratificado:PHPlint/PHPCS y14callbacksreales con dobles pasan
 Entrega a3e873a, código declarado 1d3b6cf. Respaldo 20261020-162726/472 K/30 tablas y purga atestados. Codex verifica 14 rutas públicas: 404 EN/ES, alts EN/ES y vacíos por seis pares, OG inglés/español conservado; sin Twitter alt emitido. Seo_check --prod repetido: salida 0, sitemap 30 y regresión sin fallos. Archivos estado-antes/después idénticos byte a byte, 16 publish. Evidencia `docs/audit/2026-10-20-q080-codex/`; script `tools/audit/review-q080-public.py`.
 
 **Q-080 VERIFIED**. Límites: estado privado y hashes remotos por evidencia aportada; huellas/prefijo MD5 truncados en el informe, no comparación remota completa por Codex. Visual/consola/imágenes y respaldo atestados; HTTP no certifica SHA ni todos los anchos. Informe `docs/REVISION_Q080_PRODUCCION_2026-10-20.md`. Tareas DONE y avance intactos, no repetir entrega/publicación. Sin formulario/SMTP/cuentas/secretos/Sensia por Codex; HTML previos conservados.
+
+## Ajustes de José tras Q-080 (Claude cloud, 2026-10-20)
+
+- **og:image:alt en /en/:** «Dr. Irina González Sáez · Your ENT | Sleep specialist», como el subtítulo aprobado de About (decisión de José).
+- **inLanguage de Rank Math:** la portada ES decía «es». Ahora `strip_rank_math_duplicates()` normaliza cualquier `inLanguage` de Rank Math al del idioma de la página: es-MX o en-US, como el resto del grafo.
+- **Local** (filtro `rank_math/json_ld` simulado): / → es-MX; /en/ → en-US; los nodos Person se siguen quitando. PHPCS y php -l en verde.
+- **Despliegue:** José autoriza subirlo sin esperar el GO de Codex, que lo audita después. Verificar en producción: og:image:alt EN, inLanguage es-MX en la portada ES y `seo_check --prod` con salida 0.
+
