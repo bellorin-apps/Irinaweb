@@ -1103,3 +1103,22 @@ Límites: simulador compara cuerpoHTML/Elementor, no todos los metadatos; aproba
 - **Estados:** 13.4, 13.5 y 13.7 pasan a **REVIEW** para que Codex los ratifique. El avance solo cambia con DONE.
 - **Evidencia:** `docs/audit/2026-10-20-en-prod/` (`lanzamiento.md`, `seo.log`, `C-seo.json`).
 - **Límites:** IndexNow avisó y no se deshace (D-100); no se probó el formulario ni SMTP.
+
+## Q-080 corregido: textos en español en /en/ (Claude cloud, 2026-10-20)
+
+- **Q-080 · P3 · FIXED_LOCAL.** Cambios solo en `inc/i18n.php` del tema. No toca el contenido Elementor aprobado ni los adjuntos.
+  1. **Título de la 404 en /en/:** «Page not found | Dr. Irina González Sáez». Toma el `nombre_profesional` inglés del Consultorio; si falta, usa el del sitio.
+  2. **Alt de las fotos:** `irina_alt_en()` traduce en /en/ el alt de la Biblioteca solo si coincide exactamente con uno de los alts españoles vistos en producción el 20-oct:
+     - hero-home, hero-dra, hero-primera, hero-contacto, hero-sueno y hero-orl;
+     - area-orl, area-sueno y dra-escucharte.
+
+     Un alt distinto, como el inglés que ya trae un widget (endoscopio, logos), no se toca.
+  3. **og:image:alt en /en/:** también salía en español («Tu Otorrino Especialista en Sueño»). Ahora es «Dr. Irina González Sáez · Your ENT and sleep specialist», con los filtros de Rank Math `opengraph/facebook/og_image_alt` y `twitter/twitter_image_alt`.
+- **Local:** adjunto de prueba con el alt de Primera consulta:
+  - por /en/first-visit/ → «Dr. Irina González Sáez — First visit»; por /primera-consulta/ → sin cambio;
+  - alt explícito del widget en inglés → sin cambio;
+  - filtro og en /en/ → inglés; en español → sin cambio.
+
+  Adjunto de prueba borrado. PHPCS y php -l en verde.
+- **Límite:** sin Rank Math local. El título de la 404 y el nombre exacto del filtro og (`rank_math/opengraph/{red}/{propiedad con _}`) se verifican en la copia aislada o en producción. Si se edita un alt español en Medios, hay que actualizar su traducción en `irina_alt_en()`.
+

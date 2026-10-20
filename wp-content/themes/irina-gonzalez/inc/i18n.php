@@ -127,10 +127,55 @@ function irina_cred_text( WP_Post $credential, string $field ): string {
 	return 'titulo' === $field ? $credential->post_title : (string) get_post_meta( $credential->ID, 'di_' . $field, true );
 }
 
-// Título de la 404 bajo /en/: Rank Math usa el de Ajustes (en español, Q-061).
+// Título de la 404 bajo /en/: Rank Math usa el de Ajustes (en español, Q-061); el nombre, el inglés del Consultorio (Q-080).
 add_filter(
 	'rank_math/frontend/title',
 	static function ( string $title ): string {
-		return is_404() && 'en' === irina_lang() ? 'Page not found | ' . wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES ) : $title;
+		if ( ! is_404() || 'en' !== irina_lang() ) {
+			return $title;
+		}
+		$name = class_exists( '\DraIrina\Core\Settings\PracticeSettings' ) ? (string) \DraIrina\Core\Settings\PracticeSettings::get( 'nombre_profesional' ) : '';
+		return 'Page not found | ' . ( '' !== $name ? $name : wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES ) );
 	}
 );
+
+/**
+ * Texto alternativo en inglés de las fotos compartidas por las dos versiones (Q-080). Se traduce el alt guardado en la Biblioteca
+ * de medios solo si coincide exactamente con uno de esta lista; un alt distinto (p. ej., el que ya trae en inglés un widget)
+ * no se toca. Si se edita un alt en español, hay que actualizar aquí su traducción.
+ *
+ * @param string $alt Texto alternativo en español.
+ */
+function irina_alt_en( string $alt ): string {
+	$map = [
+		'Dra. Irina González Sáez'                        => 'Dr. Irina González Sáez',
+		'Dra. Irina González Sáez en consultorio'         => 'Dr. Irina González Sáez in her office',
+		'Dra. Irina González Sáez — Primera consulta'     => 'Dr. Irina González Sáez — First visit',
+		'Dra. Irina González Sáez — Contacto'             => 'Dr. Irina González Sáez — Contact',
+		'Dra. Irina González Sáez — Sueño'                => 'Dr. Irina González Sáez — Sleep',
+		'Dra. Irina González Sáez — Otorrinolaringología' => 'Dr. Irina González Sáez — Otolaryngology (ENT)',
+		'Otorrinolaringología'                            => 'Otolaryngology (ENT)',
+		'Ronquido y apnea del sueño'                      => 'Snoring and sleep apnea',
+		'Dra. Irina González Sáez · Tu Otorrino Especialista en Sueño' => 'Dr. Irina González Sáez · Your ENT and sleep specialist',
+	];
+	return $map[ trim( $alt ) ] ?? $alt;
+}
+
+add_filter(
+	'wp_get_attachment_image_attributes',
+	static function ( array $attr ): array {
+		if ( 'en' === irina_lang() && isset( $attr['alt'] ) ) {
+			$attr['alt'] = irina_alt_en( (string) $attr['alt'] );
+		}
+		return $attr;
+	},
+	20
+);
+
+// Alt de la imagen social (og:image:alt) en /en/: Rank Math toma el de la imagen por defecto, en español.
+foreach ( [ 'rank_math/opengraph/facebook/og_image_alt', 'rank_math/opengraph/twitter/twitter_image_alt' ] as $irina_og_alt ) {
+	add_filter(
+		$irina_og_alt,
+		static fn( $alt ) => 'en' === irina_lang() && is_string( $alt ) ? irina_alt_en( $alt ) : $alt
+	);
+}
