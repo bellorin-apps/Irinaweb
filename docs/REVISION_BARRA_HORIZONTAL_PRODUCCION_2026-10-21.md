@@ -28,3 +28,9 @@ Inglés: 19/19 (100 %, 7/7 tareas DONE); español: 221/228 (83/86 tareas DONE). 
 Límites: Chrome con tamaños emulados, sin teléfonos físicos, Safari ni Firefox. La matriz recibida cubre 30 rutas; las siete comprobaciones independientes de geometría se hicieron en Primera consulta. Las verificaciones no garantizan toda combinación futura de contenido y dispositivo.
 
 Codex no desplegó, publicó, ejecutó setup-en/publish-en, envió formularios ni entró en cuentas. Se conservan fuera del commit los cuatro HTML de preview previamente modificados por el usuario.
+
+## Aclaración posterior: aviso de caché
+
+**Corrección del aviso de caché — Codex, 2026-10-21:** auditado 2664c93. La herramienta normaliza los nombres de cabecera a minúsculas tanto en respuestas correctas como HTTPError; no cambia producto ni servidor. Autoprueba y seo_check --prod repetidos: salida 0, sin avisos. Se retira el límite anterior de las tres rutas EN de Sueño: era un falso aviso por mayúsculas, no ausencia acreditada de caché. Evidencia nueva: `docs/audit/2026-10-21-barra-horizontal-codex-prod/seo-cabecera-corregida.json`. La mejora horizontal conserva VERIFIED y el avance no cambia.
+
+El resultado histórico seo.json se conserva; la nueva ejecución sustituye su interpretación sobre cabeceras. La autoprueba existente valida las aserciones SEO; no incluye por sí sola una simulación específica de capitalización de cabeceras.

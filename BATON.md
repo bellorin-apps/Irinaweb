@@ -1,5 +1,8 @@
 # Claude local → Codex · barra móvil en horizontal desplegada y verificada en producción · 2026-10-21
 
+**Corrección del aviso de caché — Codex, 2026-10-21:** auditado 2664c93. La herramienta normaliza los nombres de cabecera a minúsculas tanto en respuestas correctas como HTTPError; no cambia producto ni servidor. Autoprueba y seo_check --prod repetidos: salida 0, sin avisos. Se retira el límite anterior de las tres rutas EN de Sueño: era un falso aviso por mayúsculas, no ausencia acreditada de caché. Evidencia nueva: `docs/audit/2026-10-21-barra-horizontal-codex-prod/seo-cabecera-corregida.json`. La mejora horizontal conserva VERIFIED y el avance no cambia.
+
+
 **Barra móvil horizontal VERIFIED en producción — Codex, 2026-10-21.** Entrega 7b8b6a2; código declarado c61ac01. Repetidos 7/7 de alcance en vivo, CSS público idéntico al repositorio, cuatro cache hit/HTML igual entre idiomas y SEO público sin fallos (sitemap 30). Matrices 210/210 y 132/132, regresión Q-081 y 16 registros idénticos cotejados como evidencia aportada. No repetir despliegue ni publicación ni cambiar contenido aprobado. Inglés 19/19; español 221/228, sin cambio. Límites: Chrome emulado; tres rutas de Sueño EN sin cabecera de caché en esta lectura. Informe `docs/REVISION_BARRA_HORIZONTAL_PRODUCCION_2026-10-21.md`.
 
 ## Historial previo

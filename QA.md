@@ -1355,3 +1355,9 @@ Evidencia independiente: `docs/audit/2026-10-21-barra-horizontal-codex-prod/`. M
 - **Causa:** la herramienta. LiteSpeed envía la cabecera con mayúsculas variables (`X-LiteSpeed-Cache`, `X-Litespeed-Cache`, `x-litespeed-cache`) y `seo_check.py` la buscaba distinguiendo mayúsculas al convertir las cabeceras en un `dict`. Con `curl`, las 6 rutas de Sueño EN dan `hit` en dos peticiones seguidas.
 - **Corrección:** solo en la herramienta (`tools/audit/en-local/t/seo_check.py`), que ahora normaliza los nombres de cabecera a minúsculas. Sin cambios de producto ni de servidor.
 - **Comprobación:** `--selftest` pasa. `seo_check --prod` sale con 0 y **sin avisos**; las 15 EN informan su caché (las 6 de Sueño con `hit`). Evidencia en `docs/audit/2026-10-21-seo-cabecera-cache/`.
+
+## Aclaración posterior: aviso de caché
+
+**Corrección del aviso de caché — Codex, 2026-10-21:** auditado 2664c93. La herramienta normaliza los nombres de cabecera a minúsculas tanto en respuestas correctas como HTTPError; no cambia producto ni servidor. Autoprueba y seo_check --prod repetidos: salida 0, sin avisos. Se retira el límite anterior de las tres rutas EN de Sueño: era un falso aviso por mayúsculas, no ausencia acreditada de caché. Evidencia nueva: `docs/audit/2026-10-21-barra-horizontal-codex-prod/seo-cabecera-corregida.json`. La mejora horizontal conserva VERIFIED y el avance no cambia.
+
+El resultado histórico seo.json se conserva; la nueva ejecución sustituye su interpretación sobre cabeceras. La autoprueba existente valida las aserciones SEO; no incluye por sí sola una simulación específica de capitalización de cabeceras.
