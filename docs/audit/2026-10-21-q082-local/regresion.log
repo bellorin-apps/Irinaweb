@@ -1,0 +1,16 @@
+## seo_check local
+TODAS LAS ASERCIONES PASAN
+## aviso de idioma: hint-test-local 37
+0 fallos de 37
+## aviso de idioma: transiciones 9 (base local)
+0 fallos de 9
+## barra horizontal en About ES/EN (7 tamaños, desplazamiento completo)
+0 fallos de 14 (fallo = control del contenido bajo la columna, desborde horizontal o barra distinta de 3 botones 46×46)
+## php -l / PHPCS
+No syntax errors detected in wp-content/themes/irina-gonzalez/inc/template-tags.php
+No syntax errors detected in wp-content/themes/irina-gonzalez/templates/parts/entity/credenciales.php
+No syntax errors detected in wp-content/themes/irina-gonzalez/footer.php
+No syntax errors detected in wp-content/plugins/dra-irina-core/src/Settings/PracticeSettings.php
+phpcs exit 0
+## tools/lint
+lint exit 0

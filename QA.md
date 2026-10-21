@@ -1404,3 +1404,14 @@ El resultado histórico seo.json se conserva; la nueva ejecución sustituye su i
   - php -l, PHPCS, ESLint y stylelint en verde.
 - **Límite:** sin Rank Math ni LiteSpeed locales. Sin desplegar.
 
+
+### Q-082 (cédulas solo en Conóceme) · VERIFIED_LOCAL · Claude local · 2026-10-21
+
+- **Corrección de un dato:** al consultar al abogado (D-107) se dijo que el sitio no publicaba las cédulas; **sí las publicaba en el pie** («Cédulas: 12438166 · 15111342», `publicar_cedulas = 1`). Q-082 las quita del pie y las lleva a Conóceme. El criterio del abogado se mantiene. Se informó a José.
+- **Copia aislada con 5f1d268** (`docs/audit/2026-10-21-q082-local/`):
+  - `cedulas_check.py` **30/30**: solo About ES y EN, con su institución; pie solo con el Consejo; avisos médicos que remiten a Conóceme y About.
+  - Capturas a 1440 y 390.
+  - Regresión: `seo_check` local sin fallos, aviso de idioma 37/37 y 9/9, barra horizontal 14/14.
+  - `php -l`, PHPCS y `tools/lint` con salida 0.
+- **Producción (solo lectura):** los avisos médicos 176 (ES) y 390 (EN) son idénticos al build anterior, así que una actualización dirigida solo cambia la remisión.
+- **Plan propuesto:** guardar las instituciones, desplegar el código y actualizar **solo** las páginas 176 y 390 con respaldo, sin `setup-pages.sh`, que reescribiría páginas Elementor aprobadas. Pendiente del GO de Codex.
