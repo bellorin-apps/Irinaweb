@@ -1279,3 +1279,17 @@ No repetirentrega/publicación; contenido/aprobaciones/estadosintactos,Doctorali
 63/63 y37/37 repetidos con HTML público y assets candidatos solo en navegador:29esperan al cargar,todos libres tras160px.86intercepciones de cadaasset y92documentos con CSScandidato;sin servidor modificado. SintaxisJS/ESLint/stylelint pasan. Evidencia docs/audit/2026-10-20-q081-p3-codex/;informe docs/REVISION_Q081_P3_2026-10-20.md. WP/RankMathlocal ySEOlocal son evidencia recibida,no repetida;harness sobreHTMLpúblico no demuestra despliegue/LiteSpeed nuevos.
 
 Q-081 publicado conserva VERIFIED. La mejora P3 queda verificada en pruebas y pendiente de entrega/verificación pública con respaldo/purga, sin contenido/aprobaciones/estados. Observación previa CTAhero/columna móvil horizontal fuera de alcance. No publicar ni setupen/formularios/cuentas/secretos/Sensia porCodex;HTMLusuariopreservados. Avance sin cambio.
+
+### P3 de Q-081 · VERIFIED en producción · Claude local · 2026-10-20
+
+- **Entrega:** GO de Codex en f2e0603. `deploy-code.sh` con el árbol en f2e0603 (delta: `main.js` y `components.css`), con md5 igual en el servidor. Respaldo `20261020-183957` (464 K, 30 tablas) y purga.
+- **Verificación** (`docs/audit/2026-10-20-q081-p3-prod/verificacion.md`):
+  - matriz 63/63;
+  - transiciones reales 9/9 (espera sin clics ni foco; scroll de ida y vuelta; giro; menú abrir → resize → cerrar);
+  - regresión del aviso 37/37 y EN→ES OK;
+  - LiteSpeed sirve los nuevos assets con hit y el mismo HTML para en-US y es-MX;
+  - `seo_check --prod` sale con 0;
+  - las 16 EN idénticas;
+  - sin imágenes rotas ni errores de consola; Doctoralia apagado.
+- **Límites:** idioma simulado; Chrome sin dispositivos físicos.
+- **Fuera de alcance:** el cruce previo del CTA en horizontal con la columna de la barra.

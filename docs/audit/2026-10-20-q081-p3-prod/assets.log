@@ -1,0 +1,16 @@
+# Assets servidos tras la purga (LiteSpeed)
+/primera-consulta/ en-US cache=miss main.js?ver=1792542010 components.css?ver=1792542010
+/primera-consulta/ es-MX cache=hit main.js?ver=1792542010 components.css?ver=1792542010
+/ en-US cache=miss main.js?ver=1792542010 components.css?ver=1792542010
+/ es-MX cache=miss main.js?ver=1792542010 components.css?ver=1792542010
+main.js servido contiene is-waiting: 1 · MutationObserver: 2
+components.css servido contiene .is-waiting: 2
+# Caché LiteSpeed: mismo HTML para en-US y es-MX (2 peticiones cada uno)
+/ en-US #1 cache=hit md5=c288253e78 assets=main.js?ver=1792542010
+/ en-US #2 cache=hit md5=c288253e78 assets=main.js?ver=1792542010
+/ es-MX #1 cache=hit md5=c288253e78 assets=main.js?ver=1792542010
+/ es-MX #2 cache=hit md5=c288253e78 assets=main.js?ver=1792542010
+/primera-consulta/ en-US #1 cache=hit md5=a2b43122d3 assets=main.js?ver=1792542010
+/primera-consulta/ en-US #2 cache=hit md5=a2b43122d3 assets=main.js?ver=1792542010
+/primera-consulta/ es-MX #1 cache=hit md5=a2b43122d3 assets=main.js?ver=1792542010
+/primera-consulta/ es-MX #2 cache=hit md5=a2b43122d3 assets=main.js?ver=1792542010

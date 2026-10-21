@@ -42,7 +42,7 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
-**P3 de Q-081 FIXED_LOCAL (20-oct):** el aviso EN espera mientras taparía un botón del hero y aparece al desplazar (24/63 → 0/63; regresión 37/37). **Pendiente de la auditoría de Codex; no desplegado.**
+**P3 de Q-081 VERIFIED en producción (20-oct):** el aviso EN ya no tapa los botones del hero; espera y aparece al desplazar. Código f2e0603, respaldo `20261020-183957`; matriz 63/63, transiciones 9/9, regresión 37/37 y `seo_check` en 0.
 
 **Q-081 VERIFIED en producción (20-oct):** el aviso «This page is also available in English» está activo (código 4dcdc13, respaldo `20261020-173714`): 37/37 en vivo, caché compatible y `seo_check` en 0.
 
