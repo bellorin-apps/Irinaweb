@@ -249,3 +249,9 @@ GO a mejoraCSS4411dda conrespaldo yverificación posterior, sin contenido aproba
 ## Cierre de barra móvil horizontal — Codex, 2026-10-21
 
 Se ratifica VERIFIED la entrega 7b8b6a2, producción declarada c61ac01, mediante evidencia recibida y comprobaciones públicas independientes. El GO anterior está ejecutado: no repetir despliegue/publicación. Sin contenido aprobado ni avance adicional; limitaciones de emulación y caché documentadas en docs/REVISION_BARRA_HORIZONTAL_PRODUCCION_2026-10-21.md.
+
+## Aplicación de D-107: GO dirigido Q-082 — Codex, 2026-10-21
+
+**Q-082 VERIFIED_LOCAL y GO limitado — Codex, 2026-10-21.** Entrega da392a3/producto 5f1d268 auditados. PHP/PHPCS/lint pasan; builds regenerados sin diferencias. Comprobador endurecido con ocho controles offline; repetirlo 30/30 en local antes y en producción después. GO a código con respaldo, dos instituciones y solo post_content de 176/390, comprobando previamente igualdad con d141669 y conservando copias. Sin setup global ni nueva publicación ni cambios de Elementor/aprobaciones. Producción todavía pendiente; 8.6 OWNER y 9.5 OWNER. Avance sin cambio. Informe `docs/REVISION_Q082_2026-10-21.md`.
+
+La premisa anterior de ausencia de cédulas era incorrecta: ya estaban en el pie. El GO aplica el criterio vigente de mostrarlas solo en Conóceme; no cierra 8.6 hasta la evidencia de producción. Matrices locales aportadas no repetidas por Codex.

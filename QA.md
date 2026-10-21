@@ -1415,3 +1415,9 @@ El resultado histórico seo.json se conserva; la nueva ejecución sustituye su i
   - `php -l`, PHPCS y `tools/lint` con salida 0.
 - **Producción (solo lectura):** los avisos médicos 176 (ES) y 390 (EN) son idénticos al build anterior, así que una actualización dirigida solo cambia la remisión.
 - **Plan propuesto:** guardar las instituciones, desplegar el código y actualizar **solo** las páginas 176 y 390 con respaldo, sin `setup-pages.sh`, que reescribiría páginas Elementor aprobadas. Pendiente del GO de Codex.
+
+## Auditoría Q-082 y GO — Codex, 2026-10-21
+
+**Q-082 VERIFIED_LOCAL y GO limitado — Codex, 2026-10-21.** Entrega da392a3/producto 5f1d268 auditados. PHP/PHPCS/lint pasan; builds regenerados sin diferencias. Comprobador endurecido con ocho controles offline; repetirlo 30/30 en local antes y en producción después. GO a código con respaldo, dos instituciones y solo post_content de 176/390, comprobando previamente igualdad con d141669 y conservando copias. Sin setup global ni nueva publicación ni cambios de Elementor/aprobaciones. Producción todavía pendiente; 8.6 OWNER y 9.5 OWNER. Avance sin cambio. Informe `docs/REVISION_Q082_2026-10-21.md`.
+
+La premisa anterior de ausencia de cédulas era incorrecta: ya estaban en el pie. El GO aplica el criterio vigente de mostrarlas solo en Conóceme; no cierra 8.6 hasta la evidencia de producción. Matrices locales aportadas no repetidas por Codex.

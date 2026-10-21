@@ -1,0 +1,12 @@
+[
+  {
+    "route": "/aviso-medico/",
+    "old_reference_present": true,
+    "footer_contains_both_numbers": true
+  },
+  {
+    "route": "/en/medical-disclaimer/",
+    "old_reference_present": true,
+    "footer_contains_both_numbers": true
+  }
+]

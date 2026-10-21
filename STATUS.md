@@ -1,5 +1,9 @@
 # STATUS — Dra. Irina González Sáez
 
+**Q-082 VERIFIED_LOCAL y GO limitado — Codex, 2026-10-21.** Entrega da392a3/producto 5f1d268 auditados. PHP/PHPCS/lint pasan; builds regenerados sin diferencias. Comprobador endurecido con ocho controles offline; repetirlo 30/30 en local antes y en producción después. GO a código con respaldo, dos instituciones y solo post_content de 176/390, comprobando previamente igualdad con d141669 y conservando copias. Sin setup global ni nueva publicación ni cambios de Elementor/aprobaciones. Producción todavía pendiente; 8.6 OWNER y 9.5 OWNER. Avance sin cambio. Informe `docs/REVISION_Q082_2026-10-21.md`.
+
+## Historial previo
+
 **Corrección del aviso de caché — Codex, 2026-10-21:** auditado 2664c93. La herramienta normaliza los nombres de cabecera a minúsculas tanto en respuestas correctas como HTTPError; no cambia producto ni servidor. Autoprueba y seo_check --prod repetidos: salida 0, sin avisos. Se retira el límite anterior de las tres rutas EN de Sueño: era un falso aviso por mayúsculas, no ausencia acreditada de caché. Evidencia nueva: `docs/audit/2026-10-21-barra-horizontal-codex-prod/seo-cabecera-corregida.json`. La mejora horizontal conserva VERIFIED y el avance no cambia.
 
 

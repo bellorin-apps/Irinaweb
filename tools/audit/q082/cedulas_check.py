@@ -26,12 +26,13 @@ for p in ES + EN:
     else:
         ok = not block and not any(nums)
         line = f"{'OK  ' if ok else 'FAIL'} {p} sin cédulas" + ("" if ok else f" (bloque {bool(block)}, números {nums})")
-    footer_ok = all("12438166" not in f and "Cédulas" not in f for f in foot)
-    if not footer_ok: ok = False; line += f" · PIE CON CÉDULAS: {text(foot[0])}"
+    footer_ok = bool(foot) and all(not any(n in f for n in ("12438166", "15111342")) and "cédula" not in text(f).lower() and "license" not in text(f).lower() for f in foot)
+    if not footer_ok: ok = False; line += f" · PIE CON CÉDULAS: {text(foot[0]) if foot else 'ausente'}"
     elif foot: line += f" · pie: «{text(foot[0]).strip()[:60]}…»"
     if p in ("/aviso-medico/", "/en/medical-disclaimer/"):
         want = 'href="/dra-irina-gonzalez-saez/"' if p == "/aviso-medico/" else 'href="/en/dr-irina-gonzalez-saez/"'
-        rem = want in raw and ("al pie de cada" not in raw and "foot of every" not in raw)
+        paragraphs = re.findall(r"<p\b[^>]*>(.*?)</p>", raw, re.S)
+        rem = any(want in para and ("cédulas profesionales" in text(para) or "professional licenses" in text(para)) for para in paragraphs) and ("al pie de cada" not in raw and "foot of every" not in raw)
         ok = ok and rem; line += f" · remisión a Conóceme/About: {'sí' if rem else 'NO'}"
     if not ok: fail.append(p)
     print(line)
