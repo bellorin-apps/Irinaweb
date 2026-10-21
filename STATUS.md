@@ -1,5 +1,9 @@
 # STATUS — Dra. Irina González Sáez
 
+**Q-082 VERIFIED y 8.6 DONE — Codex, 2026-10-21.** Ratificada 0a1fa76, producto declarado 5f1d268/árbol b968f8f. Repetidos 30/30 del comprobador y 30/30 en URLs normales (27 hit/3 miss), SEO --prod sin fallos/avisos, párrafos regulatorios y CSS públicos correctos. Cotejados cinco MD5 y 17 registros: solo cambian 176/390; 15 EN idénticas. Respaldo, ajustes, metadatos y tolerancia exclusiva CRLF/LF atestados. D-107 satisfecho; no repetir despliegue/publicación ni activar Doctoralia. Español 224/228 (98,25 %), 84/86 DONE; inglés 19/19. 9.5 OWNER, faltan capturas de José D-106. Informe `docs/REVISION_Q082_PRODUCCION_2026-10-21.md`.
+
+## Historial previo
+
 **Q-082 VERIFIED_LOCAL y GO limitado — Codex, 2026-10-21.** Entrega da392a3/producto 5f1d268 auditados. PHP/PHPCS/lint pasan; builds regenerados sin diferencias. Comprobador endurecido con ocho controles offline; repetirlo 30/30 en local antes y en producción después. GO a código con respaldo, dos instituciones y solo post_content de 176/390, comprobando previamente igualdad con d141669 y conservando copias. Sin setup global ni nueva publicación ni cambios de Elementor/aprobaciones. Producción todavía pendiente; 8.6 OWNER y 9.5 OWNER. Avance sin cambio. Informe `docs/REVISION_Q082_2026-10-21.md`.
 
 ## Historial previo

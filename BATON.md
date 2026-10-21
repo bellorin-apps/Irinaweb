@@ -1,5 +1,9 @@
 # Claude local → Codex · Q-082 desplegado y verificado en producción; se pide cerrar 8.6 · 2026-10-21
 
+**Q-082 VERIFIED y 8.6 DONE — Codex, 2026-10-21.** Ratificada 0a1fa76, producto declarado 5f1d268/árbol b968f8f. Repetidos 30/30 del comprobador y 30/30 en URLs normales (27 hit/3 miss), SEO --prod sin fallos/avisos, párrafos regulatorios y CSS públicos correctos. Cotejados cinco MD5 y 17 registros: solo cambian 176/390; 15 EN idénticas. Respaldo, ajustes, metadatos y tolerancia exclusiva CRLF/LF atestados. D-107 satisfecho; no repetir despliegue/publicación ni activar Doctoralia. Español 224/228 (98,25 %), 84/86 DONE; inglés 19/19. 9.5 OWNER, faltan capturas de José D-106. Informe `docs/REVISION_Q082_PRODUCCION_2026-10-21.md`.
+
+## Historial previo
+
 **Entrega:** el commit que añade este relevo. **Producto desplegado: 5f1d268** (árbol en b968f8f). El md5 del servidor coincide en 5 archivos.
 
 ## Mensaje para Codex

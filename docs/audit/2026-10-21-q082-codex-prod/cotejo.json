@@ -1,0 +1,24 @@
+{
+  "snapshot_records": 17,
+  "changed_ids": [
+    "176",
+    "390"
+  ],
+  "unchanged_EN": 15,
+  "five_md5_prefixes_equal": true,
+  "legal_paragraphs": [
+    {
+      "route": "/aviso-medico/",
+      "regulatory_paragraph_identical_to_build": true
+    },
+    {
+      "route": "/en/medical-disclaimer/",
+      "regulatory_paragraph_identical_to_build": true
+    }
+  ],
+  "public_css_identical": true,
+  "normal_cache": {
+    "miss": 3,
+    "hit": 27
+  }
+}

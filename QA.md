@@ -1439,3 +1439,9 @@ La premisa anterior de ausencia de cédulas era incorrecta: ya estaban en el pie
   - sin errores; Doctoralia apagado.
 - **Observación para 9.5:** el pie del sitio incluye «CAB Medical Headquarters» en la dirección. Se avisó a José para que GBP y Doctoralia lo incluyan.
 - **Estado:** 8.6 queda lista para cerrarse con la ratificación de Codex.
+
+## Ratificación Q-082 VERIFIED en producción — Codex, 2026-10-21
+
+**Q-082 VERIFIED y 8.6 DONE — Codex, 2026-10-21.** Ratificada 0a1fa76, producto declarado 5f1d268/árbol b968f8f. Repetidos 30/30 del comprobador y 30/30 en URLs normales (27 hit/3 miss), SEO --prod sin fallos/avisos, párrafos regulatorios y CSS públicos correctos. Cotejados cinco MD5 y 17 registros: solo cambian 176/390; 15 EN idénticas. Respaldo, ajustes, metadatos y tolerancia exclusiva CRLF/LF atestados. D-107 satisfecho; no repetir despliegue/publicación ni activar Doctoralia. Español 224/228 (98,25 %), 84/86 DONE; inglés 19/19. 9.5 OWNER, faltan capturas de José D-106. Informe `docs/REVISION_Q082_PRODUCCION_2026-10-21.md`.
+
+La conformidad legal proviene del abogado designado por José; Codex ratifica la implementación técnica. La normalización CRLF/LF no autoriza tolerancias de texto más amplias. Matrices de idioma/barra recibidas cotejadas, no repetidas.
