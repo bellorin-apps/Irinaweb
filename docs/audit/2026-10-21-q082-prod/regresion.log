@@ -1,0 +1,11 @@
+## seo_check --prod
+Sitemap: 30 URL · 15 EN + 15 ES
+TODAS LAS ASERCIONES PASAN
+## aviso de idioma 37 (producción)
+0 fallos de 37
+## transiciones 9
+0 fallos de 9
+## EN→ES
+OK   EN→ES con el selector: {"url":"/primera-consulta/","g
+## barra horizontal About ES/EN
+0 fallos de 14 (fallo = control del contenido bajo la columna, desborde horizontal o barra distinta de 3 botones 46×46)

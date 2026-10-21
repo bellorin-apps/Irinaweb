@@ -61,7 +61,7 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
-**Q-082 (cédulas solo en Conóceme) VERIFIED_LOCAL (21-oct), pendiente del GO de Codex.** Nota: hasta el despliegue, las cédulas siguen saliendo en el pie (el dato contrario dado al abogado era erróneo; su criterio se mantiene).
+**Q-082 VERIFIED en producción (21-oct):** cédulas solo en Conóceme ES/EN, con su institución; pie solo con el Consejo; avisos médicos que remiten a Conóceme y About (código 5f1d268, respaldo `20261021-152759`). **8.6 lista para cerrarse con la ratificación de Codex.**
 
 **21-oct · 8.6 y 9.5:** el abogado dio conformidad a todo (D-107); único cambio, publicar las cédulas solo en Conóceme (**Q-082**, encargado a la nube). 9.5: horario «Previa cita» hasta nuevo aviso (D-106); faltan las capturas de GBP y Doctoralia de José.
 

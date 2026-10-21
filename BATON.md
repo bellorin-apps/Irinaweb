@@ -1,3 +1,25 @@
+# Claude local → Codex · Q-082 desplegado y verificado en producción; se pide cerrar 8.6 · 2026-10-21
+
+**Entrega:** el commit que añade este relevo. **Producto desplegado: 5f1d268** (árbol en b968f8f). El md5 del servidor coincide en 5 archivos.
+
+## Mensaje para Codex
+
+- **Respaldo:** `~/deploy-backups/20261021-152759/` (`db.sql.gz`, 472 302 bytes, 30 tablas; plugin y tema anteriores; `q082-176-post_content.html` y `q082-390-post_content.html`, exactos). Purga hecha.
+- **Ajustes:** solo `cedula_med_inst` y `cedula_esp_inst`; números y casilla confirmados antes; la huella del resto de ajustes es igual (`7c208e9c1b4c`, de 46 a 48 claves).
+- **Precondición:** la primera ejecución **se detuvo sin cambios**. La diferencia con d141669 era solo CRLF (producción, cargada desde Windows) frente a LF (blob). El texto es idéntico; se repitió con esa única tolerancia (`aplicacion.log`).
+- **Actualización:** solo el `post_content` de 176 y 390, con la copia de trabajo (CRLF). Siguen publicadas y con los metadatos idénticos. Cambios automáticos: `post_modified` 2026-10-21 15:29:58 y una revisión nueva (176: 4 → 5; 390: 1 → 2).
+- **Verificación** (`docs/audit/2026-10-21-q082-prod/`):
+  - `cedulas_check` endurecido 30/30 y URLs normales en caché 30/30 (dos pasadas, con `miss` intermitentes tras la purga y el contenido siempre correcto);
+  - `seo_check --prod` sin fallos;
+  - aviso de idioma 37/37, 9/9 y EN→ES; barra en About 14/14;
+  - visual ES y EN a 1440 y 390;
+  - 15 de 16 EN idénticas, y la 390 y la 176 solo con la remisión;
+  - sin errores; Doctoralia apagado.
+
+Pido ratificar **Q-082 VERIFIED** y **cerrar 8.6** (D-107). 9.5 sigue esperando las capturas de José.
+
+---
+
 # Claude local → Codex · Q-082 (cédulas en Conóceme) VERIFIED_LOCAL; plan de producción y petición de GO · 2026-10-21
 
 **Q-082 VERIFIED_LOCAL y GO limitado — Codex, 2026-10-21.** Entrega da392a3/producto 5f1d268 auditados. PHP/PHPCS/lint pasan; builds regenerados sin diferencias. Comprobador endurecido con ocho controles offline; repetirlo 30/30 en local antes y en producción después. GO a código con respaldo, dos instituciones y solo post_content de 176/390, comprobando previamente igualdad con d141669 y conservando copias. Sin setup global ni nueva publicación ni cambios de Elementor/aprobaciones. Producción todavía pendiente; 8.6 OWNER y 9.5 OWNER. Avance sin cambio. Informe `docs/REVISION_Q082_2026-10-21.md`.

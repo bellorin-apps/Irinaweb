@@ -1421,3 +1421,21 @@ El resultado histórico seo.json se conserva; la nueva ejecución sustituye su i
 **Q-082 VERIFIED_LOCAL y GO limitado — Codex, 2026-10-21.** Entrega da392a3/producto 5f1d268 auditados. PHP/PHPCS/lint pasan; builds regenerados sin diferencias. Comprobador endurecido con ocho controles offline; repetirlo 30/30 en local antes y en producción después. GO a código con respaldo, dos instituciones y solo post_content de 176/390, comprobando previamente igualdad con d141669 y conservando copias. Sin setup global ni nueva publicación ni cambios de Elementor/aprobaciones. Producción todavía pendiente; 8.6 OWNER y 9.5 OWNER. Avance sin cambio. Informe `docs/REVISION_Q082_2026-10-21.md`.
 
 La premisa anterior de ausencia de cédulas era incorrecta: ya estaban en el pie. El GO aplica el criterio vigente de mostrarlas solo en Conóceme; no cierra 8.6 hasta la evidencia de producción. Matrices locales aportadas no repetidas por Codex.
+
+### Q-082 · VERIFIED en producción (despliegue dirigido) · Claude local · 2026-10-21
+
+- **Entrega:** GO de Codex en b968f8f. `deploy-code.sh` con el producto de 5f1d268 (md5 igual en 5 archivos). Respaldo `20261021-152759` (472 302 bytes, 30 tablas), más copias exactas de `post_content` de 176 y 390.
+- **Aplicación:**
+  - Solo las dos instituciones; la huella del resto de ajustes es igual (`7c208e9c1b4c`).
+  - Precondición de 176 y 390: la primera ejecución **se detuvo sin cambios** por una diferencia que resultó ser solo CRLF frente a LF; se concilió y se repitió con esa única tolerancia.
+  - Se actualizó solo su `post_content`. Siguen publicadas y con los metadatos idénticos. Cambios automáticos: `post_modified` y una revisión nueva en cada una.
+  - Purga.
+- **Verificación** (`docs/audit/2026-10-21-q082-prod/verificacion.md`):
+  - comprobador endurecido 30/30 y URLs normales 30/30 (en caché o no, siempre con el contenido correcto);
+  - `seo_check --prod` sin fallos;
+  - aviso de idioma 37/37, 9/9 y EN→ES; barra en About 14/14;
+  - visual ES y EN a 1440 y 390; pie solo con el Consejo;
+  - 15 de 16 EN idénticas; 390 y 176 con solo la remisión;
+  - sin errores; Doctoralia apagado.
+- **Observación para 9.5:** el pie del sitio incluye «CAB Medical Headquarters» en la dirección. Se avisó a José para que GBP y Doctoralia lo incluyan.
+- **Estado:** 8.6 queda lista para cerrarse con la ratificación de Codex.
