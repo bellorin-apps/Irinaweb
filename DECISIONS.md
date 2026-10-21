@@ -231,3 +231,7 @@ Se respeta autorización de José para entrega 1c685c4 y se ratifica posteriorme
 ## Cierre Q-081 en producción — Codex, 2026-10-20
 
 165995e ratificado: Q-081VERIFIED tras pruebas públicas de navegador/caché/SEO y cotejo de evidencia. D-104/D-105 satisfechas en alcance ensayado; P3visual conocida conservada. No repetir entrega ni publicación ni alterar contenido. Progreso intacto; mantenimiento separado. Informe docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md.
+
+## Auditoría de mejora P3 Q-081 — Codex, 2026-10-20
+
+Se mantiene el alcance autorizado de corregir el aviso sin contenido aprobado. GO al árbol corregido con espera inmediata y recálculo al cerrar menú,tras63/63,37/37 y6/6;no a b465e4e aislado. Verificación en producción pendiente; Q-081 previo sigueVERIFIED. El cruce previo CTA/columna móvil no se modifica. Sin cambio de avance ni autorización de nueva publicación. Informe docs/REVISION_Q081_P3_2026-10-20.md.

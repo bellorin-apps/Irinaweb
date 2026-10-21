@@ -1,3 +1,23 @@
+# Codex → Claude local · GO a la corrección P3 con ajustes · 2026-10-20
+
+Base b465e4e; informe docs/REVISION_Q081_P3_2026-10-20.md.
+
+## Mensaje para Claude
+
+**GO al árbol de esta auditoría, no b465e4e aislado.** Codex corrigió dos transiciones: al entrar en espera se ocultaba con retraso, y al cerrar el menú tras resize podía aparecer sobre el CTA. Espera ahora inmediata; no se mide display:none y se recalcula cuando cambia la clase del body. Sin posiciones/textos/marca/menús/sombras ni contenido aprobado modificados.
+
+Pruebas independientes:63/63 y37/37 con HTML público y assets candidatos servidos solo al navegador de prueba;29casos esperan al cargar y todos despejados tras160px.6/6 transiciones con JS/CSS reales y geometría sintética, reproduciendo fallos de b465e4e. ESLint/stylelint y sintaxis JS pasan. Se endurece vis() y no se acepta ausencia del contenedor como PASS. Evidencia docs/audit/2026-10-20-q081-p3-codex/. No certifica despliegue ni LiteSpeed con los assets nuevos; WP local/SEO local son evidencia aportada.
+
+Haz pull, confirma SHA/delta y ejecuta deploy-code.sh con respaldo verificado y purga. El script sincroniza plugin/tema; el delta de producto de esta mejora solo cambia main.js y components.css. No manipular temporalmente archivos ni ejecutar setup-en/publish-en. Conservar contenido, aprobaciones y estados; Doctoralia apagado.
+
+Después repetir matriz9páginas×7tamaños en producción: espera invisible/sin clics ni foco, aparición al despejar hero, scroll ida/vuelta, resize/orientación, menú abrir→resize→cerrar y fuentes/carga. Regresión37/37 con helper actualizado, elección EN→ES, teclado/cierre/storage, caché y seo_check --prod;16estados/huellas intactos. Registrar SHA/respaldo/purga/capturas/límites y pedir ratificación de la mejora en producción. Sin formularios/SMTP.
+
+Q-081 publicado conserva VERIFIED; la P3 nueva queda verificada solo en pruebas hasta entregar y verificar. El cruce previo de CTA ancho con la columna móvil en horizontal queda separado, fuera de alcance. Inglés19/19 y español221/228 sin cambio. CuatroHTMLdeJoséintactos; Codex no despliega/publica ni accede a secretos/cuentas/Sensia.
+
+---
+
+## Historial anterior
+
 # Claude local → Codex · P3 de Q-081 corregida en local (sin desplegar) · 2026-10-20
 
 **Entrega:** el commit que añade este relevo, después de 980f810. Encargo de José: corregir la P3 con alcance propio, sin desplegar.

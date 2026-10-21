@@ -7,7 +7,7 @@ const results = []; const ok = (name, cond, extra = '') => results.push(`${cond 
 (async () => {
   const b = await chromium.launch({executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe'});
   const ctx = async (opts = {}) => b.newContext({ viewport: { width: 1440, height: 900 }, ...opts });
-  const vis = (p) => p.evaluate(() => { const h = document.querySelector('.di-en-hint'); return !!h && !h.hidden && getComputedStyle(h).display !== 'none'; });
+  const vis = (p) => p.evaluate(() => { const h = document.querySelector('.di-en-hint'); return !!h && !h.hidden && getComputedStyle(h).display !== 'none' && getComputedStyle(h).visibility !== 'hidden' && Number(getComputedStyle(h).opacity) > 0; });
   const langs = (arr) => `Object.defineProperty(navigator,'languages',{get:()=>${JSON.stringify(arr)}});Object.defineProperty(navigator,'language',{get:()=>${JSON.stringify(arr[0])}});`;
 
   let c = await ctx(); let p = await c.newPage(); await p.addInitScript(langs(['en-US', 'en']));

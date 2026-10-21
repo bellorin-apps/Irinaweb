@@ -37,8 +37,8 @@ const fmt = r => r.state === 'none' ? 'sin aviso' : `${r.state} ${r.top}–${r.b
       await pg.evaluate(() => window.scrollBy(0, 160)); await pg.waitForTimeout(500);
       const d = await pg.evaluate(measure);
       if (SHOTS && p === '/primera-consulta/') await pg.screenshot({ path: `${SHOTS}/p3-${w}x${h}-scroll160.png` });
-      const okLoad = a.state === 'none' || a.state === 'waiting' || (!a.hero.length && !a.barHits.length);
-      const okScroll = a.state === 'none' || (d.state === 'visible' && !d.hero.length && !d.barHits.length);
+      const okLoad = a.state !== 'none' && (a.state === 'waiting' || (!a.hero.length && !a.barHits.length));
+      const okScroll = d.state === 'visible' && !d.hero.length && !d.barHits.length;
       const ok = okLoad && okScroll;
       if (!ok) bad++;
       rows.push(`${ok ? 'OK  ' : 'FAIL'} ${w}×${h} ${p}\n       carga: ${fmt(a)}\n       +160px: ${fmt(d)}`);

@@ -463,6 +463,7 @@
       var heroBtns = Array.prototype.slice.call(document.querySelectorAll('.di-bleed a, .di-bleed button'));
       var hintWait = function () {
         if (enHint.hidden) { return; }
+        if (window.getComputedStyle(enHint).display === 'none') { return; }
         // Margen de 8 px: cubre el desplazamiento de la animación de entrada y deja aire entre el aviso y el botón.
         var h = enHint.getBoundingClientRect();
         var m = 8;
@@ -481,6 +482,10 @@
       hintWait();
       window.addEventListener('scroll', hintSchedule, { passive: true });
       window.addEventListener('resize', hintSchedule);
+      // El menú oculta el aviso con CSS: recalcular al cerrarlo, también si hubo resize mientras estaba abierto.
+      if (window.MutationObserver) {
+        new MutationObserver(hintSchedule).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      }
       // El hero puede recolocarse al terminar de cargar fuentes e imágenes: volver a comprobar entonces.
       window.addEventListener('load', hintSchedule);
       if (document.fonts && document.fonts.ready) { document.fonts.ready.then(hintSchedule); }

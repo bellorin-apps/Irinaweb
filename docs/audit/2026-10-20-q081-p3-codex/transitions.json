@@ -1,0 +1,48 @@
+{
+  "pass": 6,
+  "checks": [
+    "baseline menu bug reproduced",
+    "baseline delayed hiding reproduced",
+    "initial overlap waits",
+    "menu close recomputes overlap",
+    "new overlap immediately hidden",
+    "scroll reveals clear hint"
+  ],
+  "baseline": {
+    "initial": {
+      "waiting": true,
+      "visible": false
+    },
+    "afterMenu": {
+      "waiting": false,
+      "visible": true
+    },
+    "immediate": {
+      "waiting": true,
+      "visible": true
+    },
+    "scrolled": {
+      "waiting": false,
+      "visible": true
+    }
+  },
+  "current": {
+    "initial": {
+      "waiting": true,
+      "visible": false
+    },
+    "afterMenu": {
+      "waiting": true,
+      "visible": false
+    },
+    "immediate": {
+      "waiting": true,
+      "visible": false
+    },
+    "scrolled": {
+      "waiting": false,
+      "visible": true
+    }
+  },
+  "limits": "Synthetic geometry with actual JS/CSS, not WordPress/LiteSpeed integration."
+}

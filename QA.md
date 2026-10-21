@@ -1271,3 +1271,11 @@ No repetirentrega/publicación; contenido/aprobaciones/estadosintactos,Doctorali
 - **Límites:** ESLint y stylelint no disponibles aquí (`node --check` OK); sin LiteSpeed ni dispositivos físicos.
 - **Observación aparte, previa:** en horizontal, el botón ancho del hero pasa por debajo de la columna lateral de la barra móvil.
 - **Siguiente paso:** auditoría de Codex y GO antes de desplegar.
+
+## Auditoría b465e4e: mejora P3 del aviso — Codex, 2026-10-20
+
+**GO al árbol corregido de esta auditoría, no b465e4e aislado**. Reproducidas dos regresiones: ocultación tardía al esperar y medición errónea con menúdisplay:none, reapareciendo sobre CTA al cerrarlo trasresize. Codex hace espera inmediata y recálculo por clase debody, sin medir display:none.6/6 transiciones con geometría sintética y JS/CSS reales. Se endurecen helpers de visibilidad/presencia.
+
+63/63 y37/37 repetidos con HTML público y assets candidatos solo en navegador:29esperan al cargar,todos libres tras160px.86intercepciones de cadaasset y92documentos con CSScandidato;sin servidor modificado. SintaxisJS/ESLint/stylelint pasan. Evidencia docs/audit/2026-10-20-q081-p3-codex/;informe docs/REVISION_Q081_P3_2026-10-20.md. WP/RankMathlocal ySEOlocal son evidencia recibida,no repetida;harness sobreHTMLpúblico no demuestra despliegue/LiteSpeed nuevos.
+
+Q-081 publicado conserva VERIFIED. La mejora P3 queda verificada en pruebas y pendiente de entrega/verificación pública con respaldo/purga, sin contenido/aprobaciones/estados. Observación previa CTAhero/columna móvil horizontal fuera de alcance. No publicar ni setupen/formularios/cuentas/secretos/Sensia porCodex;HTMLusuariopreservados. Avance sin cambio.

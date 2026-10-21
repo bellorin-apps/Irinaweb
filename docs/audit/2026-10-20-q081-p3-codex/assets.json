@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "js": 86,
+    "css": 86,
+    "documentsWithCandidateCss": 92
+  },
+  "limits": "Public HTML with browser-only candidate assets, no WordPress local installation or server cache deployment certification."
+}
