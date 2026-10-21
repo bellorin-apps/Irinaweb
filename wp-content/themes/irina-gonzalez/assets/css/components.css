@@ -492,6 +492,11 @@ body.has-mobile-bar { padding-bottom: 72px; }
   .di-mobile-bar a:hover, .di-mobile-bar a:focus-visible { background: var(--color-surface); }
   body.has-mobile-bar { padding-bottom: 0; }
   .di-bleed { --di-peek: 4.5rem; }
+  /* La columna fija (46 px) no debe tapar el contenido: los contenedores de la página y del pie dejan libre su franja derecha
+     (46 px + 12 px de aire, como el aviso de idioma) y se alinean al margen izquierdo. Los fondos siguen a todo el ancho y la
+     cabecera no cambia (el ☰ comparte eje con la columna). */
+  .di-main :is(.di-container, .di-container--narrow), .di-footer :is(.di-container, .di-container--narrow) { width: min(100% - 2 * var(--gutter) - 58px, var(--container)); margin-inline: var(--gutter) auto; }
+  .di-main .di-container--narrow, .di-footer .di-container--narrow { width: min(100% - 2 * var(--gutter) - 58px, var(--container-narrow)); }
 }
 
 /* Interiores: artículo, TOC, revisión, FAQ, fuentes */

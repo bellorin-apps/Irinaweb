@@ -1,0 +1,11 @@
+## solape-cta.cjs (P3 de Q-081), copia aislada
+0 fallos de 63
+## hint-test-local.cjs (37 casos), copia aislada
+0 fallos de 37
+## transiciones-prod.cjs con base local
+0 fallos de 9
+## seo_check local
+TODAS LAS ASERCIONES PASAN
+## lint (tools/lint: ESLint + stylelint)
+exit 0
+node --check main.js OK

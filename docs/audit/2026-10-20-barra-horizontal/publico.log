@@ -1,0 +1,7 @@
+# BANCO CON HTML PÚBLICO: páginas reales de producción; components.css servido sustituido SOLO en el navegador de prueba
+## antes (components.css servido, sin sustituir)
+72 fallos de 90 (fallo = botón del hero bajo la columna, desborde horizontal o botón de la barra < 46×46)
+## después (components.css candidato del repositorio)
+components.css sustituido en el navegador 90 veces (banco con HTML público; no acredita despliegue)
+
+0 fallos de 90 (fallo = botón del hero bajo la columna, desborde horizontal o botón de la barra < 46×46)

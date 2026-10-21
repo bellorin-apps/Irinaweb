@@ -1301,3 +1301,23 @@ Q-081 publicado conserva VERIFIED. La mejora P3 queda verificada en pruebas y pe
 Respaldo20261020-183957/464K/30tablas, ejecución/purga y no manipulación por atestaciónJosé/Claude. Codexno accede a servidor/base/respaldo/cuentas. Matriz63/37 no repetida en esta ronda; sí9transiciones/caché/HTTP/SEO. Chrome/idioma/viewport simulados, sin dispositivos físicos/Safari/Firefox. Fuera de alcance cruceCTA/columna horizontal previo. Informe docs/REVISION_Q081_P3_PRODUCCION_2026-10-20.md; evidencia docs/audit/2026-10-20-q081-p3-codex-prod/.
 
 No repetir despliegue/publicación/setup ni cambiarcontenido/aprobaciones/estados. Q-081VERIFIED,inglés19/19 yES221/228sin cambio. Sin formulario/SMTP/secretos/Sensia porCodex;cuatroHTMLusuariopreservados.
+
+### Barra móvil en horizontal: el CTA del hero cruzaba la columna lateral · FIXED_LOCAL (pendiente de auditoría y despliegue) · Claude local · 2026-10-21
+
+- **Alcance:** encargo de José y Codex (bc57b3e). Es una mejora separada de Q-081. Solo `components.css`, dentro de la consulta de medios que convierte la barra en columna (≤ 899 px de ancho, horizontal, ≤ 500 px de alto).
+- **Diagnóstico** (`tools/audit/barra-horizontal/solape-barra.cjs`, 30 rutas ES/EN × 7 tamaños, al cargar y desplazando):
+  - 72/210 fallos: el CTA del hero bajo la columna en 24/30 rutas a 667×375, 740×360 y 844×390 (las legales no tienen CTA);
+  - además, otros botones o enlaces pasaban bajo la columna al desplazar en 25–30 rutas por tamaño;
+  - sin desborde; a 932 px no hay barra móvil.
+- **Corrección:**
+  - los contenedores de `.di-main` y `.di-footer` reservan la franja de la columna (46 + 12 = 58 px, como el aviso de idioma) y se alinean al margen izquierdo;
+  - los fondos siguen a todo el ancho (encuadres intactos); la cabecera no cambia; no se oculta nada.
+- **Resultados:**
+  - WordPress local: 0/210, y nada de ninguna sección bajo la columna.
+  - Interacción en local: 0/132. Incluye CTA pulsable en el centro y en los puntos medios de los bordes, columna con 3 acciones 46×46 accesibles, menú, giro, texto largo y es/en. El control con el CSS anterior da 45/132.
+  - Banco con HTML público y CSS candidato solo en el navegador: 72/90 → 0/90.
+  - Regresión del aviso de idioma: 63/63, 37/37 y 9/9.
+  - `seo_check` local sin fallos; ESLint y stylelint (`tools/lint`) con salida 0.
+- **Evidencia:** `docs/audit/2026-10-20-barra-horizontal/`.
+- **Límites:** no acredita despliegue ni caché de producción; imágenes sintéticas en local; tamaños emulados.
+- **Corrección de un registro anterior:** la P3 de Q-081 decía que ESLint y stylelint no estaban disponibles en esta PC. Sí lo están, en `tools/lint` (`npm run lint`).

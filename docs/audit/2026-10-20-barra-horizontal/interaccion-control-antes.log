@@ -1,0 +1,134 @@
+OK   es-MX 667×375 /: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 667×375 /: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":330,"clear":true,"reach":true,"inView":true},{"t":"Conocer a la Dra. IrinaLa Dra.","right":640,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 667×375 /: sin desborde horizontal
+OK   es-MX 740×360 /: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 740×360 /: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":366,"clear":true,"reach":true,"inView":true},{"t":"Conocer a la Dra. IrinaLa Dra.","right":710,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 740×360 /: sin desborde horizontal
+OK   es-MX 844×390 /: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 844×390 /: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":418,"clear":true,"reach":true,"inView":true},{"t":"Conocer a la Dra. IrinaLa Dra.","right":812,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 844×390 /: sin desborde horizontal
+OK   es-MX 667×375 /primera-consulta/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 667×375 /primera-consulta/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":640,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 667×375 /primera-consulta/: sin desborde horizontal
+OK   es-MX 740×360 /primera-consulta/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 740×360 /primera-consulta/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":710,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 740×360 /primera-consulta/: sin desborde horizontal
+OK   es-MX 844×390 /primera-consulta/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 844×390 /primera-consulta/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":812,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 844×390 /primera-consulta/: sin desborde horizontal
+OK   es-MX 667×375 /dra-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 667×375 /dra-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":330,"clear":true,"reach":true,"inView":true},{"t":"Opiniones en DoctoraliaDoctora","right":640,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 667×375 /dra-irina-gonzalez-saez/: sin desborde horizontal
+OK   es-MX 740×360 /dra-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 740×360 /dra-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":366,"clear":true,"reach":true,"inView":true},{"t":"Opiniones en DoctoraliaDoctora","right":710,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 740×360 /dra-irina-gonzalez-saez/: sin desborde horizontal
+OK   es-MX 844×390 /dra-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 844×390 /dra-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":418,"clear":true,"reach":true,"inView":true},{"t":"Opiniones en DoctoraliaDoctora","right":812,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 844×390 /dra-irina-gonzalez-saez/: sin desborde horizontal
+OK   es-MX 667×375 /sueno/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 667×375 /sueno/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar valoración de ronquido","right":640,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 667×375 /sueno/: sin desborde horizontal
+OK   es-MX 740×360 /sueno/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 740×360 /sueno/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar valoración de ronquido","right":710,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 740×360 /sueno/: sin desborde horizontal
+OK   es-MX 844×390 /sueno/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 844×390 /sueno/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar valoración de ronquido","right":812,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 844×390 /sueno/: sin desborde horizontal
+OK   es-MX 667×375 /en/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 667×375 /en/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":330,"clear":true,"reach":true,"inView":true},{"t":"Meet Dr. IrinaDr. Irina","right":640,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 667×375 /en/: sin desborde horizontal
+OK   es-MX 740×360 /en/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 740×360 /en/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":366,"clear":true,"reach":true,"inView":true},{"t":"Meet Dr. IrinaDr. Irina","right":710,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 740×360 /en/: sin desborde horizontal
+OK   es-MX 844×390 /en/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 844×390 /en/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":418,"clear":true,"reach":true,"inView":true},{"t":"Meet Dr. IrinaDr. Irina","right":812,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 844×390 /en/: sin desborde horizontal
+OK   es-MX 667×375 /en/first-visit/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 667×375 /en/first-visit/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":640,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 667×375 /en/first-visit/: sin desborde horizontal
+OK   es-MX 740×360 /en/first-visit/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 740×360 /en/first-visit/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":710,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 740×360 /en/first-visit/: sin desborde horizontal
+OK   es-MX 844×390 /en/first-visit/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 844×390 /en/first-visit/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":812,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 844×390 /en/first-visit/: sin desborde horizontal
+OK   es-MX 667×375 /en/dr-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 667×375 /en/dr-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":330,"clear":true,"reach":true,"inView":true},{"t":"Reviews on DoctoraliaDoctorali","right":640,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 667×375 /en/dr-irina-gonzalez-saez/: sin desborde horizontal
+OK   es-MX 740×360 /en/dr-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 740×360 /en/dr-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":366,"clear":true,"reach":true,"inView":true},{"t":"Reviews on DoctoraliaDoctorali","right":710,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 740×360 /en/dr-irina-gonzalez-saez/: sin desborde horizontal
+OK   es-MX 844×390 /en/dr-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL es-MX 844×390 /en/dr-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":418,"clear":true,"reach":true,"inView":true},{"t":"Reviews on DoctoraliaDoctorali","right":812,"clear":false,"reach":true,"inView":true}]
+OK   es-MX 844×390 /en/dr-irina-gonzalez-saez/: sin desborde horizontal
+OK   en-US 667×375 /: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 667×375 /: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":330,"clear":true,"reach":true,"inView":true},{"t":"Conocer a la Dra. IrinaLa Dra.","right":640,"clear":false,"reach":true,"inView":true}]
+OK   en-US 667×375 /: sin desborde horizontal
+OK   en-US 740×360 /: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 740×360 /: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":366,"clear":true,"reach":true,"inView":true},{"t":"Conocer a la Dra. IrinaLa Dra.","right":710,"clear":false,"reach":true,"inView":true}]
+OK   en-US 740×360 /: sin desborde horizontal
+OK   en-US 844×390 /: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 844×390 /: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":418,"clear":true,"reach":true,"inView":true},{"t":"Conocer a la Dra. IrinaLa Dra.","right":812,"clear":false,"reach":true,"inView":true}]
+OK   en-US 844×390 /: sin desborde horizontal
+OK   en-US 667×375 /primera-consulta/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 667×375 /primera-consulta/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":640,"clear":false,"reach":true,"inView":true}]
+OK   en-US 667×375 /primera-consulta/: sin desborde horizontal
+OK   en-US 740×360 /primera-consulta/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 740×360 /primera-consulta/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":710,"clear":false,"reach":true,"inView":true}]
+OK   en-US 740×360 /primera-consulta/: sin desborde horizontal
+OK   en-US 844×390 /primera-consulta/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 844×390 /primera-consulta/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":812,"clear":false,"reach":true,"inView":true}]
+OK   en-US 844×390 /primera-consulta/: sin desborde horizontal
+OK   en-US 667×375 /dra-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 667×375 /dra-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":330,"clear":true,"reach":true,"inView":true},{"t":"Opiniones en DoctoraliaDoctora","right":640,"clear":false,"reach":true,"inView":true}]
+OK   en-US 667×375 /dra-irina-gonzalez-saez/: sin desborde horizontal
+OK   en-US 740×360 /dra-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 740×360 /dra-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":366,"clear":true,"reach":true,"inView":true},{"t":"Opiniones en DoctoraliaDoctora","right":710,"clear":false,"reach":true,"inView":true}]
+OK   en-US 740×360 /dra-irina-gonzalez-saez/: sin desborde horizontal
+OK   en-US 844×390 /dra-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 844×390 /dra-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar por WhatsAppWhatsApp","right":418,"clear":true,"reach":true,"inView":true},{"t":"Opiniones en DoctoraliaDoctora","right":812,"clear":false,"reach":true,"inView":true}]
+OK   en-US 844×390 /dra-irina-gonzalez-saez/: sin desborde horizontal
+OK   en-US 667×375 /sueno/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 667×375 /sueno/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar valoración de ronquido","right":640,"clear":false,"reach":true,"inView":true}]
+OK   en-US 667×375 /sueno/: sin desborde horizontal
+OK   en-US 740×360 /sueno/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 740×360 /sueno/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar valoración de ronquido","right":710,"clear":false,"reach":true,"inView":true}]
+OK   en-US 740×360 /sueno/: sin desborde horizontal
+OK   en-US 844×390 /sueno/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 844×390 /sueno/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Agendar valoración de ronquido","right":812,"clear":false,"reach":true,"inView":true}]
+OK   en-US 844×390 /sueno/: sin desborde horizontal
+OK   en-US 667×375 /en/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 667×375 /en/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":330,"clear":true,"reach":true,"inView":true},{"t":"Meet Dr. IrinaDr. Irina","right":640,"clear":false,"reach":true,"inView":true}]
+OK   en-US 667×375 /en/: sin desborde horizontal
+OK   en-US 740×360 /en/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 740×360 /en/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":366,"clear":true,"reach":true,"inView":true},{"t":"Meet Dr. IrinaDr. Irina","right":710,"clear":false,"reach":true,"inView":true}]
+OK   en-US 740×360 /en/: sin desborde horizontal
+OK   en-US 844×390 /en/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 844×390 /en/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":418,"clear":true,"reach":true,"inView":true},{"t":"Meet Dr. IrinaDr. Irina","right":812,"clear":false,"reach":true,"inView":true}]
+OK   en-US 844×390 /en/: sin desborde horizontal
+OK   en-US 667×375 /en/first-visit/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 667×375 /en/first-visit/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":640,"clear":false,"reach":true,"inView":true}]
+OK   en-US 667×375 /en/first-visit/: sin desborde horizontal
+OK   en-US 740×360 /en/first-visit/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 740×360 /en/first-visit/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":710,"clear":false,"reach":true,"inView":true}]
+OK   en-US 740×360 /en/first-visit/: sin desborde horizontal
+OK   en-US 844×390 /en/first-visit/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 844×390 /en/first-visit/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":812,"clear":false,"reach":true,"inView":true}]
+OK   en-US 844×390 /en/first-visit/: sin desborde horizontal
+OK   en-US 667×375 /en/dr-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 667×375 /en/dr-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":330,"clear":true,"reach":true,"inView":true},{"t":"Reviews on DoctoraliaDoctorali","right":640,"clear":false,"reach":true,"inView":true}]
+OK   en-US 667×375 /en/dr-irina-gonzalez-saez/: sin desborde horizontal
+OK   en-US 740×360 /en/dr-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 740×360 /en/dr-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":366,"clear":true,"reach":true,"inView":true},{"t":"Reviews on DoctoraliaDoctorali","right":710,"clear":false,"reach":true,"inView":true}]
+OK   en-US 740×360 /en/dr-irina-gonzalez-saez/: sin desborde horizontal
+OK   en-US 844×390 /en/dr-irina-gonzalez-saez/: columna con 3 acciones 46×46 accesibles y sin taparse
+FAIL en-US 844×390 /en/dr-irina-gonzalez-saez/: CTA del hero fuera de la columna y pulsable entero — [{"t":"Book via WhatsAppWhatsApp","right":418,"clear":true,"reach":true,"inView":true},{"t":"Reviews on DoctoraliaDoctorali","right":812,"clear":false,"reach":true,"inView":true}]
+OK   en-US 844×390 /en/dr-irina-gonzalez-saez/: sin desborde horizontal
+OK   vertical 390×844: barra inferior (no columna)
+FAIL giro a 844×390: columna y CTA libre y pulsable — {"column":true,"barHidden":false,"colLeft":766,"ctas":[{"t":"Agendar por WhatsAppWhatsApp","right":812,"clear":false,"reach":true,"inView":true}],"barInfo":[{"name":"WhatsApp","w":46,"h":46,"reach":true},{"name":"Llamar","w":46,"h":46,"reach":true},{"name":"Cómo llegar","w":46,"h":46,"reach":true}],"overflow":0,"menuOpen":false}
+OK   menú abierto: columna oculta
+FAIL menú cerrado: columna visible y CTA libre y pulsable — {"column":true,"barHidden":false,"colLeft":766,"ctas":[{"t":"Agendar por WhatsAppWhatsApp","right":812,"clear":false,"reach":true,"inView":true}],"barInfo":[{"name":"WhatsApp","w":46,"h":46,"reach":true},{"name":"Llamar","w":46,"h":46,"reach":true},{"name":"Cómo llegar","w":46,"h":46,"reach":true}],"overflow":0,"menuOpen":false}
+OK   vuelta a vertical: barra inferior y sin desborde
+FAIL texto largo en 667×375: CTA libre, pulsable y sin desborde — {"column":true,"barHidden":false,"colLeft":594,"ctas":[{"t":"Agendar valoración de ronquido","right":640,"clear":false,"reach":true,"inView":true}],"barInfo":[{"name":"WhatsApp","w":46,"h":46,"reach":true},{"name":"Llamar","w":46,"h":46,"reach":true},{"name":"Cómo llegar","w":46,"h":46,"reach":true}],"overflow":0,"menuOpen":false}
+
+45 fallos de 132

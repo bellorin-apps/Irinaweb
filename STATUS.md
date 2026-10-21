@@ -46,6 +46,8 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
+**Barra móvil en horizontal (21-oct): FIXED_LOCAL, pendiente de auditoría y despliegue.** El CTA del hero y el resto del contenido dejan libre la columna lateral (local 72/210 → 0/210; banco público 72/90 → 0/90; regresión del aviso de idioma sin fallos). No está en producción.
+
 **P3 de Q-081 VERIFIED en producción (20-oct):** el aviso EN ya no tapa los botones del hero; espera y aparece al desplazar. Código f2e0603, respaldo `20261020-183957`; matriz 63/63, transiciones 9/9, regresión 37/37 y `seo_check` en 0.
 
 **Q-081 VERIFIED en producción (20-oct):** el aviso «This page is also available in English» está activo (código 4dcdc13, respaldo `20261020-173714`): 37/37 en vivo, caché compatible y `seo_check` en 0.
