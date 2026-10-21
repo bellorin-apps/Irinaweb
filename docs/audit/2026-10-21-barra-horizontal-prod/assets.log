@@ -1,0 +1,13 @@
+# Assets y caché tras la purga
+/ en-US #1 cache=miss md5=8f35ed4b9e css=components.css?ver=1792562927
+/ en-US #2 cache=hit md5=8f35ed4b9e css=components.css?ver=1792562927
+/ es-MX #1 cache=hit md5=8f35ed4b9e css=components.css?ver=1792562927
+/ es-MX #2 cache=hit md5=8f35ed4b9e css=components.css?ver=1792562927
+/primera-consulta/ en-US #1 cache=miss md5=285809d536 css=components.css?ver=1792562927
+/primera-consulta/ en-US #2 cache=hit md5=285809d536 css=components.css?ver=1792562927
+/primera-consulta/ es-MX #1 cache=hit md5=285809d536 css=components.css?ver=1792562927
+/primera-consulta/ es-MX #2 cache=hit md5=285809d536 css=components.css?ver=1792562927
+components.css servido: reserva de 58px presente: 2 · md5 servido=9abf405491d8 (repo 9abf405491d8)
+## 4 · la reserva solo vive dentro de la consulta horizontal
+consulta que contiene la reserva: @media (max-width: 899px) and (orientation: landscape) and (max-height: 500px)
+apariciones de la regla de contenedores: 1

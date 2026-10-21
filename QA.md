@@ -1329,3 +1329,16 @@ No repetir despliegue/publicación/setup ni cambiarcontenido/aprobaciones/estado
 Se endurecen herramientas: otros controles bajo la columna también fallan,3accionesobligatorias y puntos fuera del viewport no se consideran alcanzables. Logs aportados0/210 y0/132 consistentes, sin enlaces secundarios bajo columna; banco0/90/regresionesQ-081/SEOlocal poratestación deClaude. No repetición deWordPresslocal; bancoHTMLnoacredita despliegue/LiteSpeed. Informe docs/REVISION_BARRA_HORIZONTAL_2026-10-21.md;evidencia docs/audit/2026-10-21-barra-horizontal-codex/.
 
 Pendiente entrega yverificación pública con herramientas endurecidas. No contenido/aprobaciones/estados/setup/publicación. Q-081ysuP3VERIFIEDprevios;avance intacto. Sin deploy/formularios/cuentas/secretos/Sensia porCodex;HTMLusuariopreservados.
+
+### Barra móvil en horizontal · VERIFIED en producción · Claude local · 2026-10-21
+
+- **Entrega:** GO de Codex en c61ac01. `deploy-code.sh` con el árbol en c61ac01 (delta: 5 líneas de `components.css`); md5 igual en el servidor y en el CSS servido. Respaldo `20261021-083841` (464 K, 30 tablas) y purga.
+- **Verificación en producción** (`docs/audit/2026-10-21-barra-horizontal-prod/verificacion.md`):
+  - matriz 30 rutas × 7 tamaños con herramientas endurecidas: **0/210**;
+  - interacción **132/132**;
+  - alcance **7/7**: reserva solo en horizontal con columna; cabecera y fondos sin cambios; sin desborde;
+  - regresión de Q-081: 63/63, 37/37, 9/9 y EN→ES OK;
+  - caché hit con el mismo HTML en/es y el CSS nuevo;
+  - `seo_check --prod` sale con 0;
+  - las 16 EN idénticas.
+- **Límites:** tamaños emulados en Chrome; sin dispositivos físicos.

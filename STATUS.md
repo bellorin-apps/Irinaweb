@@ -50,7 +50,7 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
-**Barra móvil en horizontal (21-oct): FIXED_LOCAL, pendiente de auditoría y despliegue.** El CTA del hero y el resto del contenido dejan libre la columna lateral (local 72/210 → 0/210; banco público 72/90 → 0/90; regresión del aviso de idioma sin fallos). No está en producción.
+**Barra móvil en horizontal VERIFIED en producción (21-oct):** el CTA del hero y el contenido dejan libre la columna lateral (código c61ac01, respaldo `20261021-083841`): matriz 0/210, interacción 132/132, regresión de Q-081 sin fallos y `seo_check` en 0.
 
 **P3 de Q-081 VERIFIED en producción (20-oct):** el aviso EN ya no tapa los botones del hero; espera y aparece al desplazar. Código f2e0603, respaldo `20261020-183957`; matriz 63/63, transiciones 9/9, regresión 37/37 y `seo_check` en 0.
 

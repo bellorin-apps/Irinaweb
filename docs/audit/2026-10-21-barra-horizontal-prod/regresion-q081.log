@@ -1,0 +1,5 @@
+## Regresión Q-081 en producción
+solape-cta.cjs: 0 fallos de 63
+hint-test (37) base producción: 0 fallos de 37
+transiciones-prod.cjs: 0 fallos de 9
+eleccion-es-prod.cjs: OK   EN→ES con el selector: {"url":"/primera-consulta/","guardado":"chosen","c
