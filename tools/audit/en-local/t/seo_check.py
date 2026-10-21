@@ -42,9 +42,9 @@ def fetch(url, cache_bust=False):
         url += ("&" if "?" in url else "?") + "di_cb=%d" % time.time()
     try:
         r = _OPEN.open(urllib.request.Request(url, headers=_UA), timeout=60)
-        return r.status, r.read().decode("utf-8", "replace"), dict(r.headers)
+        return r.status, r.read().decode("utf-8", "replace"), {k.lower(): v for k, v in r.headers.items()}  # cabeceras sin distinguir mayúsculas
     except urllib.error.HTTPError as e:
-        return e.code, e.read().decode("utf-8", "replace"), dict(e.headers or {})
+        return e.code, e.read().decode("utf-8", "replace"), {k.lower(): v for k, v in (e.headers or {}).items()}
 
 
 # Nodos acordados para la paridad EN↔ES (Q-077). ImageObject, BreadcrumbList, etc. son auxiliares de Rank Math y pueden
@@ -132,7 +132,7 @@ def collect_prod(out):
     links = {}
     for p in EN:
         _, h, hd = fetch(S + p)
-        out["en"][p]["cache"] = hd.get("x-litespeed-cache") or hd.get("X-LiteSpeed-Cache")
+        out["en"][p]["cache"] = hd.get("x-litespeed-cache")  # el servidor varía las mayúsculas del nombre (X-Litespeed-Cache…)
         for u in re.findall(r'<a[^>]+href="([^"#]+)"', h):
             pu = urllib.parse.urlparse(urllib.parse.urljoin(S + p, u))
             if pu.scheme in ("http", "https") and pu.netloc == host:

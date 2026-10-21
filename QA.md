@@ -1348,3 +1348,10 @@ Pendiente entrega yverificación pública con herramientas endurecidas. No conte
 **Barra móvil horizontal VERIFIED en producción — Codex, 2026-10-21.** Entrega 7b8b6a2; código declarado c61ac01. Repetidos 7/7 de alcance en vivo, CSS público idéntico al repositorio, cuatro cache hit/HTML igual entre idiomas y SEO público sin fallos (sitemap 30). Matrices 210/210 y 132/132, regresión Q-081 y 16 registros idénticos cotejados como evidencia aportada. No repetir despliegue ni publicación ni cambiar contenido aprobado. Inglés 19/19; español 221/228, sin cambio. Límites: Chrome emulado; tres rutas de Sueño EN sin cabecera de caché en esta lectura. Informe `docs/REVISION_BARRA_HORIZONTAL_PRODUCCION_2026-10-21.md`.
 
 Evidencia independiente: `docs/audit/2026-10-21-barra-horizontal-codex-prod/`. Matrices completas recibidas no repetidas; respaldo/purga y base atestados. No nuevos FIX en el alcance ensayado.
+
+### Herramienta `seo_check.py`: falso aviso de caché en rutas EN de Sueño · corregido · Claude local · 2026-10-21
+
+- **Límite anotado por Codex en 1c7eb50:** tres rutas EN de Sueño no devolvían cabecera de caché.
+- **Causa:** la herramienta. LiteSpeed envía la cabecera con mayúsculas variables (`X-LiteSpeed-Cache`, `X-Litespeed-Cache`, `x-litespeed-cache`) y `seo_check.py` la buscaba distinguiendo mayúsculas al convertir las cabeceras en un `dict`. Con `curl`, las 6 rutas de Sueño EN dan `hit` en dos peticiones seguidas.
+- **Corrección:** solo en la herramienta (`tools/audit/en-local/t/seo_check.py`), que ahora normaliza los nombres de cabecera a minúsculas. Sin cambios de producto ni de servidor.
+- **Comprobación:** `--selftest` pasa. `seo_check --prod` sale con 0 y **sin avisos**; las 15 EN informan su caché (las 6 de Sueño con `hit`). Evidencia en `docs/audit/2026-10-21-seo-cabecera-cache/`.
