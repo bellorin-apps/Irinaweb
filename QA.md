@@ -1361,3 +1361,17 @@ Evidencia independiente: `docs/audit/2026-10-21-barra-horizontal-codex-prod/`. M
 **Corrección del aviso de caché — Codex, 2026-10-21:** auditado 2664c93. La herramienta normaliza los nombres de cabecera a minúsculas tanto en respuestas correctas como HTTPError; no cambia producto ni servidor. Autoprueba y seo_check --prod repetidos: salida 0, sin avisos. Se retira el límite anterior de las tres rutas EN de Sueño: era un falso aviso por mayúsculas, no ausencia acreditada de caché. Evidencia nueva: `docs/audit/2026-10-21-barra-horizontal-codex-prod/seo-cabecera-corregida.json`. La mejora horizontal conserva VERIFIED y el avance no cambia.
 
 El resultado histórico seo.json se conserva; la nueva ejecución sustituye su interpretación sobre cabeceras. La autoprueba existente valida las aserciones SEO; no incluye por sí sola una simulación específica de capitalización de cabeceras.
+
+### 8.6 y 9.5: decisiones del propietario y revisión legal · Claude local · 2026-10-21
+
+- **9.5 (D-106):** horario «Previa cita. Agenda por WhatsApp» como en la web, hasta nuevo aviso. Se entregaron a José los pasos para dejar el NAP idéntico en GBP (sin horario y «Se requiere cita») y en Doctoralia. **Pendiente:** sus capturas.
+- **8.6 (D-107):** revisión legal de un abogado designado por José, sin nombre porque el repositorio es público. Conforme en:
+  - leyenda COFEPRIS;
+  - aviso de privacidad;
+  - términos y aviso médico;
+  - prevalencia del español;
+  - GA4 sin banner;
+  - widget oficial de Doctoralia.
+
+  **Cambio:** cédulas solo en Conóceme (ES y EN): profesional 12438166 (UNEFM – UDEM) y de especialidad 15111342 (Universidad Centroccidental Lisandro Alvarado), datos que aportó la Dra. en una captura. Encargado a la nube como **Q-082**. 8.6 se cierra tras la entrega y la verificación.
+- **12.3:** se entregaron a José los pasos del día 7 (Search Console y GA4). Recordatorio programado para el 22-oct a las 10:00.

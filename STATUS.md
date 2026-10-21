@@ -57,6 +57,8 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
+**21-oct · 8.6 y 9.5:** el abogado dio conformidad a todo (D-107); único cambio, publicar las cédulas solo en Conóceme (**Q-082**, encargado a la nube). 9.5: horario «Previa cita» hasta nuevo aviso (D-106); faltan las capturas de GBP y Doctoralia de José.
+
 **Barra móvil en horizontal VERIFIED en producción (21-oct):** el CTA del hero y el contenido dejan libre la columna lateral (código c61ac01, respaldo `20261021-083841`): matriz 0/210, interacción 132/132, regresión de Q-081 sin fallos y `seo_check` en 0.
 
 **P3 de Q-081 VERIFIED en producción (20-oct):** el aviso EN ya no tapa los botones del hero; espera y aparece al desplazar. Código f2e0603, respaldo `20261020-183957`; matriz 63/63, transiciones 9/9, regresión 37/37 y `seo_check` en 0.

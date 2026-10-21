@@ -1,3 +1,38 @@
+# Claude local → nube y Codex · D-106 (9.5), D-107 (8.6) y encargo Q-082 (cédulas en Conóceme) · 2026-10-21
+
+**Entrega:** el commit que añade este relevo. Solo decisiones y documentación.
+
+## Mensaje para la nube (Q-082)
+
+Publica las cédulas de la Dra. **solo en Conóceme**, en `/dra-irina-gonzalez-saez/` y su pareja `/en/dr-irina-gonzalez-saez/`, **sin tocar el contenido Elementor aprobado**. Desde código (tema o plugin) y con los ajustes del consultorio:
+- **Datos** (aportados por la Dra., D-107):
+  - Cédula profesional **12438166**, UNEFM – UDEM.
+  - Cédula de especialidad **15111342**, Universidad Centroccidental Lisandro Alvarado.
+- **Ajustes:**
+  - `cedula_medicina` y `cedula_especialidad` existen; añade lo necesario para la institución (o un texto completo por cédula).
+  - Hoy `publicar_cedulas` las muestra **en el pie** (`footer.php`), y el abogado pidió **solo en Conóceme**. Deja de mostrarlas en el pie o separa los dos lugares.
+  - Revisa `PracticeSettings::public_data()` y el schema (Physician `hasCredential` o similar) sin duplicar nodos.
+- **Presentación:**
+  - Junto a las credenciales de Conóceme, con el sistema visual (sin cambiar marca, menús ni sombras).
+  - En español: «Céd. Prof. 12438166 · UNEFM – UDEM» y «Céd. Esp. 15111342 · Universidad Centroccidental Lisandro Alvarado».
+  - En inglés, con etiqueta inglesa, por ejemplo: «Professional license (cédula) 12438166 · UNEFM – UDEM».
+- **El aviso médico** dice que las cédulas están en el pie; ajusta esa remisión (es texto legal: cambia solo la remisión, sin tocar lo demás).
+- **Despliegue:** con el GO de Codex, la sesión local guardará los valores en los ajustes de producción y desplegará el código. No publiques ni despliegues.
+- **Pruebas:**
+  - presencia en las dos páginas About y ausencia en el pie y en el resto;
+  - `php -l`, PHPCS, ESLint y stylelint (`tools/lint`);
+  - sin regresiones del aviso de idioma ni de la barra horizontal.
+
+Al terminar, indica el SHA.
+
+## Mensaje para Codex
+
+- **D-106:** 9.5, horario «Previa cita» hasta nuevo aviso; faltan las capturas de José.
+- **D-107:** 8.6, revisión legal conforme con una sola acción, las cédulas en Conóceme (Q-082).
+- Audita Q-082 cuando llegue. Progreso sin cambio: español 221/228; 8.6 y 9.5 siguen OWNER hasta su evidencia.
+
+---
+
 # Claude local → Codex · barra móvil en horizontal desplegada y verificada en producción · 2026-10-21
 
 **Corrección del aviso de caché — Codex, 2026-10-21:** auditado 2664c93. La herramienta normaliza los nombres de cabecera a minúsculas tanto en respuestas correctas como HTTPError; no cambia producto ni servidor. Autoprueba y seo_check --prod repetidos: salida 0, sin avisos. Se retira el límite anterior de las tres rutas EN de Sueño: era un falso aviso por mayúsculas, no ausencia acreditada de caché. Evidencia nueva: `docs/audit/2026-10-21-barra-horizontal-codex-prod/seo-cabecera-corregida.json`. La mejora horizontal conserva VERIFIED y el avance no cambia.

@@ -1,6 +1,8 @@
 # COMPLIANCE — Checklist legal y regulatoria (México)
 
-Actualizado: 2026-10-16 · Claude cloud. Entregable del MASTER_PROMPT §83, con la checklist de §51. Reúne lo que está publicado y lo que falta.
+Actualizado: 2026-10-21 · Claude local (revisión legal D-107). Antes: 2026-10-16 · Claude cloud. Entregable del MASTER_PROMPT §83, con la checklist de §51. Reúne lo que está publicado y lo que falta.
+
+**Revisión legal 2026-10-21 (D-107):** un abogado designado por José dio conformidad a la leyenda COFEPRIS, al aviso de privacidad, a los términos, al aviso médico, a la prevalencia del español, a GA4 sin banner y al widget oficial de Doctoralia. Pidió publicar las cédulas solo en Conóceme (pendiente). Las marcas ⚖️ de abajo quedan resueltas salvo lo indicado.
 
 **Esto no es asesoría legal.** Es una lista de control técnica y documental para preparar la revisión de un abogado o de quien José designe (PLAN 8.6). Esa revisión es mejora continua por decisión de José (D-086).
 
@@ -47,16 +49,16 @@ Leyenda: ✅ implementado y publicado · ⏳ pendiente · 👤 depende de José 
 |---|---|---|
 | Aviso de Publicidad n.º de ingreso 2519012002A00712 | ✅ ⚖️ | Pie de todas las páginas y aviso médico (D-037). La leyenda exacta está sujeta a la revisión 8.6 |
 | Aviso de Funcionamiento 2619015036A00445 (CAB Medical, 2026) | ✅ | Ídem |
-| Cédulas profesionales verificables (Registro Nacional de Profesionistas) | ✅ / 👤 | Ajuste `publicar_cedulas`. El aviso médico remite al pie |
+| Cédulas profesionales verificables (Registro Nacional de Profesionistas) | ⏳ | D-107: **solo en Conóceme** (ES y EN). Profesional 12438166 (UNEFM – UDEM) · Especialidad 15111342 (Universidad Centroccidental Lisandro Alvarado). Pendiente de construir (Q-082), auditar y desplegar; hoy `publicar_cedulas` solo sabe mostrarlas en el pie |
 | Especialidad y certificación del Consejo (CMORL y CCC) | ✅ | Credenciales en Conóceme y en el schema (solo datos confirmados, DISCOVERY §1.1) |
 | Sin promesas de curación, sin precios engañosos, sin «antes/después» | ✅ ⚖️ | Política editorial (MASTER_PROMPT). Contenido aprobado por la Dra. |
 | Testimonios u opiniones de pacientes | ⏳ ⚖️ | Solo con el widget oficial de Doctoralia, sin editar (D-012), y tras el veredicto de Codex |
-| Perfil de Google con los mismos datos que el sitio | ✅ / 👤 | 9.5: falta el horario real de la Dra. |
+| Perfil de Google con los mismos datos que el sitio | ✅ / 👤 | 9.5, D-106: horario «Previa cita» como en la web; faltan las capturas de GBP y Doctoralia con el NAP idéntico |
 
 ## 5. Pendientes
 
-1. 👤 ⚖️ **Revisión legal (8.6), mejora continua (D-086):** leyenda COFEPRIS exacta, conservación, transferencias, jurisdicción y uso de opiniones.
+1. ✅ **Revisión legal (8.6), D-107, 2026-10-21:** conforme. Único cambio: cédulas en Conóceme (Q-082, pendiente).
 2. ⏳ **Opiniones de Doctoralia:** veredicto de Codex (D-091) y, si es «GO», activación por José.
-3. 👤 **Horario real** de la Dra. en el Perfil de Google. Si se publica en el sitio, revertir D-032.
+3. 👤 **9.5 (D-106):** horario «Previa cita» hasta nuevo aviso; faltan las capturas de GBP y Doctoralia.
 4. 👤 **B1:** corregir la errata en la ficha de apnea, que está aprobada. El cambio requiere que la Dra. la apruebe otra vez (D-090).
 5. **Revisión anual:** aviso de privacidad y contenido clínico con su `lastReviewed` (MAINTENANCE.md).
