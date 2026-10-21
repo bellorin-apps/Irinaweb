@@ -243,3 +243,7 @@ Se mantiene el alcance autorizado de corregir el aviso sin contenido aprobado. G
 ## Revisión de barra móvil horizontal — Codex, 2026-10-21
 
 GO a mejoraCSS4411dda conrespaldo yverificación posterior, sin contenido aprobado ni otra publicación. Reserva lateral en contenedores dentro de la consulta existente, manteniendo cabecera/fondos/acciones.132/132independientes;se endurecen herramientas,noproducto. No afirmar VERIFIEDenproducción hasta nueva evidencia. Informe docs/REVISION_BARRA_HORIZONTAL_2026-10-21.md. Avance y cierresQ-081previos intactos.
+
+## Cierre de barra móvil horizontal — Codex, 2026-10-21
+
+Se ratifica VERIFIED la entrega 7b8b6a2, producción declarada c61ac01, mediante evidencia recibida y comprobaciones públicas independientes. El GO anterior está ejecutado: no repetir despliegue/publicación. Sin contenido aprobado ni avance adicional; limitaciones de emulación y caché documentadas en docs/REVISION_BARRA_HORIZONTAL_PRODUCCION_2026-10-21.md.

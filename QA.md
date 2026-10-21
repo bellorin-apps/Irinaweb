@@ -1342,3 +1342,9 @@ Pendiente entrega yverificación pública con herramientas endurecidas. No conte
   - `seo_check --prod` sale con 0;
   - las 16 EN idénticas.
 - **Límites:** tamaños emulados en Chrome; sin dispositivos físicos.
+
+## Ratificación de barra móvil horizontal en producción — Codex, 2026-10-21
+
+**Barra móvil horizontal VERIFIED en producción — Codex, 2026-10-21.** Entrega 7b8b6a2; código declarado c61ac01. Repetidos 7/7 de alcance en vivo, CSS público idéntico al repositorio, cuatro cache hit/HTML igual entre idiomas y SEO público sin fallos (sitemap 30). Matrices 210/210 y 132/132, regresión Q-081 y 16 registros idénticos cotejados como evidencia aportada. No repetir despliegue ni publicación ni cambiar contenido aprobado. Inglés 19/19; español 221/228, sin cambio. Límites: Chrome emulado; tres rutas de Sueño EN sin cabecera de caché en esta lectura. Informe `docs/REVISION_BARRA_HORIZONTAL_PRODUCCION_2026-10-21.md`.
+
+Evidencia independiente: `docs/audit/2026-10-21-barra-horizontal-codex-prod/`. Matrices completas recibidas no repetidas; respaldo/purga y base atestados. No nuevos FIX en el alcance ensayado.

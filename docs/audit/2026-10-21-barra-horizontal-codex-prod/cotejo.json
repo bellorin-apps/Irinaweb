@@ -1,0 +1,40 @@
+{
+  "/en-US": {
+    "status": 200,
+    "cache": "hit",
+    "sha256": "a6be3b1c5dae95e29abfeab3877253d3dccf85b67b3ff3ec5c2da8076cac5c34"
+  },
+  "/es-MX": {
+    "status": 200,
+    "cache": "hit",
+    "sha256": "a6be3b1c5dae95e29abfeab3877253d3dccf85b67b3ff3ec5c2da8076cac5c34"
+  },
+  "/primera-consulta/en-US": {
+    "status": 200,
+    "cache": "hit",
+    "sha256": "bc839db52873e636c2a46674c57557962dff91de0cd33caa2f1e67a32586867e"
+  },
+  "/primera-consulta/es-MX": {
+    "status": 200,
+    "cache": "hit",
+    "sha256": "bc839db52873e636c2a46674c57557962dff91de0cd33caa2f1e67a32586867e"
+  },
+  "css": {
+    "url": "https://drairinagonzalez.com/wp-content/themes/irina-gonzalez/assets/css/components.css?ver=1792562927",
+    "bytes": 78377,
+    "sha256": "dcecdbfd7ad9e33e5cc95b200c60561749cf3b65f8842c1cac6deebd641dd108",
+    "identical_to_repository": true
+  },
+  "state_artifacts": {
+    "identical": true,
+    "records": 16
+  },
+  "matriz.log": {
+    "ok_rows": 210,
+    "summary": "0 fallos de 210"
+  },
+  "interaccion.log": {
+    "ok_rows": 132,
+    "summary": "0 fallos de 132"
+  }
+}
