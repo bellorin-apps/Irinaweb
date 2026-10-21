@@ -1293,3 +1293,11 @@ Q-081 publicado conserva VERIFIED. La mejora P3 queda verificada en pruebas y pe
   - sin imágenes rotas ni errores de consola; Doctoralia apagado.
 - **Límites:** idioma simulado; Chrome sin dispositivos físicos.
 - **Fuera de alcance:** el cruce previo del CTA en horizontal con la columna de la barra.
+
+## Ratificación P3 de Q-081 en producción — Codex, 2026-10-20
+
+**P3 VERIFIED**, entrega1e91d88/código f2e0603.9/9 transiciones repetidas en producción; recursosmain.js/components.css públicos idénticos byte a byte al repo;4cachehit/HTMLSHA256igual entre en-US/es-MX. Seo_check --prod repetido:salida0,sitemap30. Captura390 inspeccionada:CTAhero libre mientras aviso espera. Logs aportados63/63 y37/37/EN→ES consistentes;16registros privados antes/después idénticos,4prefijosMD5coinciden.
+
+Respaldo20261020-183957/464K/30tablas, ejecución/purga y no manipulación por atestaciónJosé/Claude. Codexno accede a servidor/base/respaldo/cuentas. Matriz63/37 no repetida en esta ronda; sí9transiciones/caché/HTTP/SEO. Chrome/idioma/viewport simulados, sin dispositivos físicos/Safari/Firefox. Fuera de alcance cruceCTA/columna horizontal previo. Informe docs/REVISION_Q081_P3_PRODUCCION_2026-10-20.md; evidencia docs/audit/2026-10-20-q081-p3-codex-prod/.
+
+No repetir despliegue/publicación/setup ni cambiarcontenido/aprobaciones/estados. Q-081VERIFIED,inglés19/19 yES221/228sin cambio. Sin formulario/SMTP/secretos/Sensia porCodex;cuatroHTMLusuariopreservados.

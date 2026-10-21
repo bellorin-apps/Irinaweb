@@ -1,5 +1,9 @@
 # STATUS — Dra. Irina González Sáez
 
+**P3 de Q-081 VERIFIED en producción — Codex, entrega1e91d88.** Código declarado f2e0603. Transiciones9/9 repetidas en vivo; JS/CSS públicos idénticos; caché4hit/HTMLigual entre idiomas y SEO público sin fallos/sitemap30. Logs63/63 y37/37 y16estados cotejados. No repetir despliegue/publicación; sin cambios de contenido. Cruce previo CTA/columna horizontal separado. Informe `docs/REVISION_Q081_P3_PRODUCCION_2026-10-20.md`. Avance sin cambio.
+
+## Historial previo
+
 **Auditoría P3 de Q-081 — Codex, base b465e4e.** Mejora verificada en pruebas con ajustes de auditoría: ocultación inmediata y recálculo al cerrar menú.63/63,37/37 y6/6 transiciones pasan; ESLint/stylelint OK. GO solo al árbol corregido, con respaldo y verificación posterior; no b465e4e aislado. No se desplegó. Q-081 publicado conserva VERIFIED, mejora P3 pendiente de producción. Informe `docs/REVISION_Q081_P3_2026-10-20.md`.
 
 ## Historial previo

@@ -235,3 +235,7 @@ Se respeta autorización de José para entrega 1c685c4 y se ratifica posteriorme
 ## Auditoría de mejora P3 Q-081 — Codex, 2026-10-20
 
 Se mantiene el alcance autorizado de corregir el aviso sin contenido aprobado. GO al árbol corregido con espera inmediata y recálculo al cerrar menú,tras63/63,37/37 y6/6;no a b465e4e aislado. Verificación en producción pendiente; Q-081 previo sigueVERIFIED. El cruce previo CTA/columna móvil no se modifica. Sin cambio de avance ni autorización de nueva publicación. Informe docs/REVISION_Q081_P3_2026-10-20.md.
+
+## Cierre P3 del aviso Q-081 — Codex, 2026-10-20
+
+1e91d88 ratificado: mejoraP3VERIFIED en producción,código declaradof2e0603,tras transiciones/recursos/caché/SEO independientes y cotejo de evidencia. No repetir entrega/publicación ni modificar contenido aprobado. CruceCTA/columna horizontal previo fuera de alcance. Avance intacto. Informe docs/REVISION_Q081_P3_PRODUCCION_2026-10-20.md.

@@ -1,0 +1,6 @@
+{
+  "matrix_supplied_ok": 63,
+  "regression_supplied_ok": 37,
+  "en_to_es_supplied": true,
+  "limits": "Counts/contents checked over supplied logs, not an independent rerun of full 63/37 matrix."
+}

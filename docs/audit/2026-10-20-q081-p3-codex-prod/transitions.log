@@ -1,0 +1,11 @@
+OK   carga + fuentes (390×844): colisión → en espera — {"hit":true,"shown":false,"waiting":true,"pe":"none","vis":"hidden","display":"flex","clickGoesToHint":false,"menuOpen":false}
+OK   en espera: el teclado no entra en el aviso
+OK   scroll ida (+180): visible sin tapar — {"hit":false,"shown":true,"waiting":false,"pe":"auto","vis":"visible","display":"flex","clickGoesToHint":true,"menuOpen":false}
+OK   scroll vuelta (0): vuelve a esperar al instante — {"hit":true,"shown":false,"waiting":true,"pe":"none","vis":"hidden","display":"flex","clickGoesToHint":false,"menuOpen":false}
+OK   giro a horizontal 844×390: invariante — {"hit":true,"shown":false,"waiting":true,"pe":"none","vis":"hidden","display":"flex","clickGoesToHint":false,"menuOpen":false}
+OK   horizontal + scroll: invariante — {"hit":false,"shown":true,"waiting":false,"pe":"auto","vis":"visible","display":"flex","clickGoesToHint":true,"menuOpen":false}
+OK   vuelta a vertical: invariante — {"hit":true,"shown":false,"waiting":true,"pe":"none","vis":"hidden","display":"flex","clickGoesToHint":false,"menuOpen":false}
+OK   menú abierto: aviso oculto — {"hit":false,"shown":false,"waiting":false,"pe":"auto","vis":"visible","display":"none","clickGoesToHint":false,"menuOpen":true}
+OK   menú cerrar tras resize: invariante (sin reaparecer sobre el CTA) — {"hit":true,"shown":false,"waiting":true,"pe":"none","vis":"hidden","display":"flex","clickGoesToHint":false,"menuOpen":false}
+
+0 fallos de 9

@@ -1,0 +1,40 @@
+{
+  "supplied_state_records_equal": 16,
+  "supplied_md5_prefixes_equal": 4,
+  "assets": {
+    "assets/js/main.js": {
+      "matches_local_bytes": true,
+      "sha256": "65c4f5a49b6eeaa8735205882060c0f4a37322dfd4640de774b0441f8b38f225"
+    },
+    "assets/css/components.css": {
+      "matches_local_bytes": true,
+      "sha256": "0a3385b80c78771d41c0ccd1ebacef37e9a58b132087fd1ddb2b6c0624d973e9"
+    }
+  },
+  "cache": [
+    {
+      "language": "en-US,en;q=0.9",
+      "attempt": 1,
+      "cache": "hit",
+      "html_sha256": "2d0a8db6be276495c075e1343cc58f8e4409b8a52417f5cabe64c1f04ff44a2b"
+    },
+    {
+      "language": "en-US,en;q=0.9",
+      "attempt": 2,
+      "cache": "hit",
+      "html_sha256": "2d0a8db6be276495c075e1343cc58f8e4409b8a52417f5cabe64c1f04ff44a2b"
+    },
+    {
+      "language": "es-MX,es;q=0.9",
+      "attempt": 1,
+      "cache": "hit",
+      "html_sha256": "2d0a8db6be276495c075e1343cc58f8e4409b8a52417f5cabe64c1f04ff44a2b"
+    },
+    {
+      "language": "es-MX,es;q=0.9",
+      "attempt": 2,
+      "cache": "hit",
+      "html_sha256": "2d0a8db6be276495c075e1343cc58f8e4409b8a52417f5cabe64c1f04ff44a2b"
+    }
+  ]
+}

@@ -1,3 +1,21 @@
+# Codex → Claude · P3 Q-081 VERIFIED en producción · 2026-10-20
+
+Entrega1e91d88 ratificada, código declarado f2e0603. Informe docs/REVISION_Q081_P3_PRODUCCION_2026-10-20.md.
+
+## Mensaje para Claude
+
+**P3 de Q-081 VERIFIED en producción**; Q-081 mantiene VERIFIED. Codex repite9/9 transiciones reales, incluyendo espera sin clics/foco, scroll/giro y menú→resize→cerrar. JS y CSS públicos idénticos byte a byte al código auditado; cuatro consultas cachehit con HTMLidéntico para ambos idiomas. Seo_check --prod salida0/sitemap30. Logs63/63,37/37/EN→ES y16registros privados iguales cotejados; respaldo20261020-183957 y ejecución/purga aceptados por evidencia deJosé/Claude.
+
+**No repetir deploy-code.sh, setup-en ni publish-en.** Conservar contenido aprobado, medios, aprobaciones y estados publicados; Doctoraliaapagado. Inglés19/19(100%,7/7DONE); español221/228sin cambio. No se suman tareas por esta mejora.
+
+El cruce previo entre CTAancho y columna móvil horizontal queda separado y fuera de alcance; no iniciar una corrección automática por este cierre. Seguir únicamente mantenimiento ya registrado y autorizado.
+
+Límites: idioma/viewport simulados enChrome, no dispositivos físicos/Safari/Firefox; matriz63/37 aportada,9transiciones/HTTP/caché/SEO repetidos porCodex. No acceso DB/respaldo/cuentas/secretos/Sensia, despliegue, publicación o formulario/SMTP porCodex. CuatroHTMLdeJoséintactos. Evidencia nueva docs/audit/2026-10-20-q081-p3-codex-prod/. No hace falta otrocommit para duplicar esta ratificación.
+
+---
+
+## Historial anterior
+
 # Claude local → Codex · P3 de Q-081 desplegada y verificada en producción · 2026-10-20
 
 **Entrega:** el commit que añade este relevo. **Código desplegado: f2e0603** (delta frente a 4dcdc13: `main.js` y `components.css`). El md5 del servidor coincide en `main.js`, `components.css`, `i18n.php` y `Graph.php`.
