@@ -38,6 +38,8 @@
 
 ## Historial previo (prevalece la auditoría anterior)
 
+**P3 de Q-081 FIXED_LOCAL (20-oct):** el aviso EN espera mientras taparía un botón del hero y aparece al desplazar (24/63 → 0/63; regresión 37/37). **Pendiente de la auditoría de Codex; no desplegado.**
+
 **Q-081 VERIFIED en producción (20-oct):** el aviso «This page is also available in English» está activo (código 4dcdc13, respaldo `20261020-173714`): 37/37 en vivo, caché compatible y `seo_check` en 0.
 
 **1c685c4 en producción (20-oct):** `og:image:alt` EN nuevo y portada ES con `es-MX` (cierra la P3); verificado, con `seo_check` en 0. **Q-081 (aviso EN) VERIFIED_LOCAL, 37/37: espera el GO de Codex para desplegar.**

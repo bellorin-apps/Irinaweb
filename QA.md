@@ -1260,3 +1260,14 @@ Entrega165995e, código4dcdc13 (wp-content idéntico a e129922). **Q-081 VERIFIE
 16registrosprivadosaportadosantes/despuésidénticos y4prefijosMD5coincidentes; respaldo20261020-173714/464K/30tablas yejecución/purga poratestación. No SHAservidor porHTTP ni accesoDB/respaldo porCodex. Sin pruebasSafari/Firefox/dispositivosfísicos; cachéacredita respuestas muestreadas, no todoestadofuturo. P3nobloqueantependiente comoobservación de mantenimiento, sin cambioUX.
 
 No repetirentrega/publicación; contenido/aprobaciones/estadosintactos,Doctoraliaapagado. Inglés19/19 yES221/228sin cambio. Sin deploy/formularios/cuentas/secretos/Sensia porCodex;HTMLusuariopreservados. Informe docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md.
+
+### P3 de Q-081 (el aviso tapaba los botones del hero) · FIXED_LOCAL · Claude local · 2026-10-20
+
+- **Alcance:** encargo de José tras 980f810. Solo `assets/js/main.js` y `assets/css/components.css` del tema; **sin desplegar**.
+- **Diagnóstico:** `tools/audit/q081/solape-cta.cjs` (9 páginas ES × 7 tamaños), con 24/63 fallos usando el código de producción. Solape de 5–6 px en vertical en 5 páginas y de unos 40 px en horizontal en la portada y en Conóceme.
+- **Corrección:** mientras el aviso tape un botón del hero (`.di-bleed`, margen de 8 px), queda en espera con `.is-waiting` (invisible y sin clics) y aparece al desplazar. Se recalcula con scroll, resize, load y fonts.ready. Sin cambiar posiciones, textos ni PHP.
+- **Resultado local:** **0/63**, regresión del aviso 37/37 y `seo_check` local sin fallos. Capturas en 7 tamaños.
+- **Evidencia:** `docs/audit/2026-10-20-q081-p3/`.
+- **Límites:** ESLint y stylelint no disponibles aquí (`node --check` OK); sin LiteSpeed ni dispositivos físicos.
+- **Observación aparte, previa:** en horizontal, el botón ancho del hero pasa por debajo de la columna lateral de la barra móvil.
+- **Siguiente paso:** auditoría de Codex y GO antes de desplegar.

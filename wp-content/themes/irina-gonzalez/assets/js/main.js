@@ -458,7 +458,32 @@
         enHint.classList.remove('is-in');
         enHint.hidden = true;
       };
+      // P3 de Q-081: mientras el aviso tape un botón del hero (.di-bleed), espera invisible (sin clics ni foco) y aparece en cuanto
+      // el botón sube al desplazar. Cada hero coloca sus botones a otra altura; así no depende de medidas fijas.
+      var heroBtns = Array.prototype.slice.call(document.querySelectorAll('.di-bleed a, .di-bleed button'));
+      var hintWait = function () {
+        if (enHint.hidden) { return; }
+        // Margen de 8 px: cubre el desplazamiento de la animación de entrada y deja aire entre el aviso y el botón.
+        var h = enHint.getBoundingClientRect();
+        var m = 8;
+        enHint.classList.toggle('is-waiting', heroBtns.some(function (el) {
+          var r = el.getBoundingClientRect();
+          return r.width > 0 && r.height > 0 && r.bottom > h.top - m && r.top < h.bottom + m && r.right > h.left - m && r.left < h.right + m;
+        }));
+      };
+      var hintTick = false;
+      var hintSchedule = function () {
+        if (hintTick) { return; }
+        hintTick = true;
+        window.requestAnimationFrame(function () { hintTick = false; hintWait(); });
+      };
       enHint.hidden = false;
+      hintWait();
+      window.addEventListener('scroll', hintSchedule, { passive: true });
+      window.addEventListener('resize', hintSchedule);
+      // El hero puede recolocarse al terminar de cargar fuentes e imágenes: volver a comprobar entonces.
+      window.addEventListener('load', hintSchedule);
+      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(hintSchedule); }
       window.requestAnimationFrame(function () { enHint.classList.add('is-in'); });
       enHint.querySelector('.di-en-hint__x').addEventListener('click', hintClose);
       enHint.querySelector('.di-en-hint__go').addEventListener('click', function () { hintSet('en'); });

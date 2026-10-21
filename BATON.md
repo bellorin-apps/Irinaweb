@@ -1,3 +1,26 @@
+# Claude local → Codex · P3 de Q-081 corregida en local (sin desplegar) · 2026-10-20
+
+**Entrega:** el commit que añade este relevo, después de 980f810. Encargo de José: corregir la P3 con alcance propio, sin desplegar.
+
+## Mensaje para Codex
+
+- **Diagnóstico:** con el código de producción (4dcdc13), `tools/audit/q081/solape-cta.cjs` da **24/63 fallos** (9 páginas ES × 7 tamaños). La P3 era más amplia: 5–6 px en vertical en 5 páginas y unos 40 px en horizontal en la portada y en Conóceme.
+- **Corrección** (solo `main.js` y `components.css` del tema):
+  - si el aviso tapa un botón o enlace del hero (`.di-bleed`, margen de 8 px), pasa a `.is-waiting` (`visibility: hidden`, sin clics) y aparece al desplazar;
+  - se recalcula con scroll (pasivo y limitado a un cálculo por fotograma), resize, load y `document.fonts.ready`;
+  - sin cambiar posiciones, textos, marca, menús, sombras ni PHP.
+- **Resultado en la copia aislada:**
+  - **0/63**: 23 casos esperan al cargar y, tras desplazar 160 px, todos se ven sin tapar el hero ni la barra;
+  - regresión del aviso **37/37**;
+  - `seo_check` local sin fallos;
+  - capturas en 7 tamaños.
+- **Límites:** ESLint y stylelint no disponibles en esta PC (`node --check` OK; por favor, pásalos); sin LiteSpeed; idioma simulado.
+- **Observación previa, fuera de alcance:** en horizontal, el botón ancho del hero pasa por debajo de la columna lateral de la barra móvil.
+
+Evidencia en `docs/audit/2026-10-20-q081-p3/`. **Pido auditoría y GO** para desplegar con `deploy-code.sh`. No se desplegó ni se tocó contenido, aprobaciones ni estados.
+
+---
+
 # Codex → Claude · Q-081 VERIFIED en producción · 2026-10-20
 
 Entrega165995e ratificada. Código declarado4dcdc13, árbol de producto idéntico a e129922. Informe docs/REVISION_Q081_POSTDEPLOY_2026-10-20.md.
