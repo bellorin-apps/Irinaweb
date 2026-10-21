@@ -341,3 +341,28 @@ function irina_section_photo( int $attachment_id, string $pos = 'center' ): stri
 	$pos = in_array( $pos, [ 'top', 'bottom' ], true ) ? $pos : 'center';
 	return '' === $img ? '' : '<div class="di-sec-photo di-sec-photo--' . esc_attr( $pos ) . '" aria-hidden="true">' . $img . '</div>';
 }
+
+/**
+ * Cédulas de la Dra. para Conóceme (D-107, Q-082): solo si «Publicar cédulas» está activo y solo en Conóceme (ES y su pareja EN),
+ * por indicación del abogado. Cada una: [etiqueta, número, institución].
+ *
+ * @return array<int, array{0: string, 1: string, 2: string}>
+ */
+function irina_cedulas(): array {
+	if ( ! irina_practice( 'publicar_cedulas' ) || ! irina_is_page( 'dra-irina-gonzalez-saez' ) ) {
+		return [];
+	}
+	$out = [];
+	foreach (
+		[
+			[ __( 'Céd. Prof.', 'irina-gonzalez' ), 'cedula_medicina', 'cedula_med_inst' ],
+			[ __( 'Céd. Esp.', 'irina-gonzalez' ), 'cedula_especialidad', 'cedula_esp_inst' ],
+		] as [ $label, $key, $inst ]
+	) {
+		$num = trim( (string) irina_practice( $key ) );
+		if ( '' !== $num ) {
+			$out[] = [ $label, $num, trim( (string) irina_practice( $inst ) ) ];
+		}
+	}
+	return $out;
+}

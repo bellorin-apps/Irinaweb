@@ -27,7 +27,8 @@ THEME = {
     "Si llegaste desde un enlace antiguo de otorrino-monterrey.com, el contenido vive ahora en este sitio.": "If you followed an old link from otorrino-monterrey.com, that content now lives on this site.",
     # Pie y cabecera
     "<b>Respirar</b> bien, dormir bien, oír <b><em>bien</em></b>": "<b>Breathe</b> well, sleep well, hear <b><em>well</em></b>",
-    "Cédulas:": "Professional licenses (cédulas):",
+    "Céd. Prof.": "Professional license (cédula)",
+    "Céd. Esp.": "Specialty license (cédula)",
     "Atención": "Care",
     "Consultorio": "Office",
     "Horario": "Hours",

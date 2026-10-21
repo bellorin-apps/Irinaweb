@@ -12,11 +12,12 @@ if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_loca
 	echo '</body></html>';
 	return;
 }
-$irina_tel   = (string) irina_practice( 'telefono' );
-$irina_wa    = (string) irina_practice( 'whatsapp' );
-$irina_mail  = (string) irina_practice( 'email' );
-$irina_rows  = irina_hours_rows();
-$irina_cedul = irina_practice( 'publicar_cedulas' ) ? trim( (string) irina_practice( 'cedula_medicina' ) . ' · ' . (string) irina_practice( 'cedula_especialidad' ), ' ·' ) : '';
+$irina_tel  = (string) irina_practice( 'telefono' );
+$irina_wa   = (string) irina_practice( 'whatsapp' );
+$irina_mail = (string) irina_practice( 'email' );
+$irina_rows = irina_hours_rows();
+// D-107, Q-082: las cédulas se muestran solo en Conóceme (irina_cedulas()); el pie conserva la línea del Consejo con la misma condición.
+$irina_board = irina_practice( 'publicar_cedulas' ) ? trim( (string) irina_practice( 'consejo_certificado' ) ) : '';
 if ( irina_elementor_main() ) {
 	echo '</main>';
 }
@@ -41,8 +42,8 @@ if ( irina_elementor_main() ) {
 					<a class="di-brand" href="<?php echo esc_url( irina_home_url() ); ?>"><?php echo irina_brand_block( 'footer' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					<p class="di-footer__tag"><?php echo esc_html( (string) irina_practice( 'subespecialidad' ) ); ?></p>
 				</div>
-				<?php if ( '' !== $irina_cedul ) : ?>
-					<p class="di-footer__creds"><?php esc_html_e( 'Cédulas:', 'irina-gonzalez' ); ?> <?php echo esc_html( $irina_cedul ); ?><br><?php echo esc_html( (string) irina_practice( 'consejo_certificado' ) ); ?></p>
+				<?php if ( '' !== $irina_board ) : ?>
+					<p class="di-footer__creds"><?php echo esc_html( $irina_board ); ?></p>
 				<?php endif; ?>
 			</div>
 			<div>

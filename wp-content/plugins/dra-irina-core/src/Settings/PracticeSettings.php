@@ -57,8 +57,10 @@ final class PracticeSettings {
 			'gbp_url'                => [ 'Ficha de Google (URL)', 'url', true ],
 			'ga4_id'                 => [ 'Google Analytics 4: ID de medición (G-XXXXXXX; vacío = sin medición)', 'text', true ],
 			'cedula_medicina'        => [ 'Cédula profesional (medicina)', 'text', false ],
+			'cedula_med_inst'        => [ 'Cédula profesional: institución (ej. UNEFM – UDEM)', 'text', false ],
 			'cedula_especialidad'    => [ 'Cédula de especialidad', 'text', false ],
-			'publicar_cedulas'       => [ 'Publicar cédulas en el sitio', 'checkbox', false ],
+			'cedula_esp_inst'        => [ 'Cédula de especialidad: institución', 'text', false ],
+			'publicar_cedulas'       => [ 'Publicar cédulas en Conóceme (solo ahí, por indicación legal; D-107)', 'checkbox', false ],
 			'consejo_certificado'    => [ 'Certificación de Consejo (texto a mostrar)', 'text', true ],
 			'marca_isotipo_texto'    => [ 'Cabecera: usar isotipo + nombre en texto (desmarcado = logotipo completo)', 'checkbox', false ],
 			'aviso_publicidad'       => [ 'Aviso de Publicidad COFEPRIS (número de ingreso)', 'text', true ],
@@ -238,6 +240,8 @@ final class PracticeSettings {
 		if ( self::get( 'publicar_cedulas' ) ) {
 			$out['cedula_medicina']     = self::get( 'cedula_medicina' );
 			$out['cedula_especialidad'] = self::get( 'cedula_especialidad' );
+			$out['cedula_med_inst']     = self::get( 'cedula_med_inst' );
+			$out['cedula_esp_inst']     = self::get( 'cedula_esp_inst' );
 		}
 		if ( self::get( 'horario_oculto' ) ) {
 			unset( $out['horario'] );

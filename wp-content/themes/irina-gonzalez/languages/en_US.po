@@ -89,8 +89,11 @@ msgstr "Credentials"
 msgid "Cuéntanos brevemente. No es necesario incluir detalles clínicos: los vemos en consulta."
 msgstr "Tell us briefly. There’s no need to include clinical details: we’ll go over them at your visit."
 
-msgid "Cédulas:"
-msgstr "Professional licenses (cédulas):"
+msgid "Céd. Esp."
+msgstr "Specialty license (cédula)"
+
+msgid "Céd. Prof."
+msgstr "Professional license (cédula)"
 
 msgid "Cómo llegar"
 msgstr "Get directions"

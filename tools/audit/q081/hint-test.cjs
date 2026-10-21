@@ -1,4 +1,4 @@
-// Q-081 (D-105): pruebas sintéticas del aviso inglés. Uso: node hint-test.js <archivo con una ruta ES sin pareja> <carpeta de capturas>; servidor en localhost:8089 con /en/ publicada (solo en local).
+// Q-081 (D-105): pruebas sintéticas del aviso inglés. Uso: node hint-test.cjs <archivo con una ruta ES sin pareja> <carpeta de capturas>; servidor en localhost:8089 con /en/ publicada (solo en local).
 const { chromium } = require('/opt/node-tools/node_modules/playwright');
 const B = 'http://localhost:8089';
 const results = []; const ok = (name, cond, extra = '') => results.push(`${cond ? 'OK  ' : 'FAIL'} ${name}${extra ? ' — ' + extra : ''}`);

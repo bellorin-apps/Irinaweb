@@ -1185,7 +1185,7 @@ Entrega a3e873a, código declarado 1d3b6cf. Respaldo 20261020-162726/472 K/30 ta
     - oculto con el menú abierto y al imprimir; sin animación con movimiento reducido.
 
   No cambia textos de marca, menús, sombras existentes, contenido Elementor, adjuntos ni aprobaciones.
-- **Pruebas** (`tools/audit/q081/hint-test.js`, Playwright sobre WordPress local con /en/ publicada solo en prueba y devuelta a borrador): **37/37 OK**.
+- **Pruebas** (`tools/audit/q081/hint-test.cjs`, Playwright sobre WordPress local con /en/ publicada solo en prueba y devuelta a borrador): **37/37 OK**.
   - Idioma: en-US, en-GB, EN-us y en → visible; es-MX, es, en como idioma secundario y eng → oculto.
   - Rutas: el enlace lleva a la pareja; la portada lleva a /en/. Sin contenedor en /gracias/, en una página sin pareja ni en /en/…; con las EN en borrador, tampoco hay contenedor.
   - Memoria: cerrar o Escape → no reaparece al recargar ni en otra página; «View in English» guarda «en»; el selector guarda «chosen».
@@ -1375,3 +1375,32 @@ El resultado histórico seo.json se conserva; la nueva ejecución sustituye su i
 
   **Cambio:** cédulas solo en Conóceme (ES y EN): profesional 12438166 (UNEFM – UDEM) y de especialidad 15111342 (Universidad Centroccidental Lisandro Alvarado), datos que aportó la Dra. en una captura. Encargado a la nube como **Q-082**. 8.6 se cierra tras la entrega y la verificación.
 - **12.3:** se entregaron a José los pasos del día 7 (Search Console y GA4). Recordatorio programado para el 22-oct a las 10:00.
+
+## Q-082: cédulas solo en Conóceme (Claude cloud, 2026-10-21, D-107)
+
+- **Ajustes del consultorio:** campos nuevos `cedula_med_inst` y `cedula_esp_inst` (institución). La casilla «Publicar cédulas» indica ahora «solo en Conóceme». La sesión local guarda en producción, tras el GO de Codex:
+  - cedula_medicina 12438166 · cedula_med_inst «UNEFM – UDEM»;
+  - cedula_especialidad 15111342 · cedula_esp_inst «Universidad Centroccidental Lisandro Alvarado»;
+  - publicar_cedulas activo.
+
+  Los números ya estaban guardados; solo faltan las instituciones.
+- **Tema:**
+  - `irina_cedulas()` devuelve las cédulas solo si la casilla está activa y la página es Conóceme ES o su pareja EN (`irina_is_page`).
+  - `entity/credenciales.php` las muestra bajo la rejilla de credenciales: «Céd. Prof. 12438166 · UNEFM – UDEM» y «Céd. Esp. 15111342 · Universidad Centroccidental Lisandro Alvarado». En inglés: «Professional license (cédula) …» y «Specialty license (cédula) …» (strings_en, .mo regenerado).
+  - Estilo `.di-cedulas`: texto discreto, sin sombras ni cambios de marca.
+  - **Pie:** ya no muestra las cédulas. Conserva la línea del Consejo con la misma condición que antes.
+- **Aviso médico** (solo la remisión):
+  - ES: «se indican en la página <a>Conóceme</a> y pueden verificarse…»;
+  - EN: «are shown on the <a>About</a> page and can be verified…».
+
+  Builds regenerados: solo cambian esas dos frases (legal y pages; en/legal y en/). **Producción:** la página ES se actualiza con su setup de legales. La EN está publicada y setup-en no la toca, así que la sesión local la actualiza a mano con respaldo; es texto legal, con el OK de José (D-107).
+- **Schema:** sin cambios. Physician ya lleva `hasCredential` desde el CPT credencial; las cédulas no se añaden como nodos para no duplicar credenciales. `public_data()` expone las instituciones junto a los números cuando se publican.
+- **Local:**
+  - con ajustes de prueba, el bloque aparece en /dra-irina-gonzalez-saez/ y /en/dr-irina-gonzalez-saez/, y no en /, /contacto/, /en/, /en/contact/, una ficha ni /aviso-medico/;
+  - el pie muestra solo el Consejo, en ES y en EN;
+  - capturas en escritorio y móvil;
+  - regresión Q-081: `tools/audit/q081/hint-test.cjs` 37/37, que incluye la barra horizontal 844×390. Se renombró de .js a .cjs porque `tools/package.json` declara módulos ES;
+  - ajustes y estados locales restaurados;
+  - php -l, PHPCS, ESLint y stylelint en verde.
+- **Límite:** sin Rank Math ni LiteSpeed locales. Sin desplegar.
+

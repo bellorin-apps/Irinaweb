@@ -50,9 +50,10 @@ foreach ( $irina_q as $irina_c ) {
 		$irina_cards[] = [ $irina_label, irina_cred_text( $irina_c, 'titulo' ), trim( implode( ', ', array_filter( [ $irina_inst, $irina_lug ] ) ) . ( '' !== $irina_anio ? '. ' . $irina_anio . '.' : '' ) ) ];
 	}
 }
+$irina_ced   = irina_cedulas();
 $irina_extra = array_map( 'strval', (array) $irina_a['extra_tags'] );
 $irina_tags  = array_merge( $irina_tags, $irina_extra ? $irina_extra : irina_hospitals() );
-if ( ! $irina_cards && ( ! $irina_tags || '' === $irina_a['tags_title'] ) ) {
+if ( ! $irina_cards && ! $irina_ced && ( ! $irina_tags || '' === $irina_a['tags_title'] ) ) {
 	return;
 }
 ?>
@@ -77,6 +78,13 @@ if ( ! $irina_cards && ( ! $irina_tags || '' === $irina_a['tags_title'] ) ) {
 			$irina_d = 0; foreach ( $irina_cards as [ $irina_l, $irina_t, $irina_s ] ) :
 				?>
 				<div class="di-cred di-reveal di-reveal--d<?php echo esc_attr( (string) min( 4, $irina_d++ ) ); ?>"><p class="di-eyebrow"><?php echo esc_html( $irina_l ); ?></p><h3><?php echo esc_html( $irina_t ); ?></h3><p class="di-muted"><?php echo esc_html( $irina_s ); ?></p></div><?php endforeach; ?></div>
+		<?php endif; ?>
+		<?php if ( $irina_ced ) : // D-107, Q-082: cédulas solo en Conóceme. ?>
+			<ul class="di-cedulas di-reveal">
+			<?php
+			foreach ( $irina_ced as [ $irina_l, $irina_n, $irina_i ] ) :
+				?>
+				<li><b><?php echo esc_html( $irina_l . ' ' . $irina_n ); ?></b><?php echo '' !== $irina_i ? ' · ' . esc_html( $irina_i ) : ''; ?></li><?php endforeach; ?></ul>
 		<?php endif; ?>
 		<?php if ( $irina_tags && '' !== $irina_a['tags_title'] ) : // Con tags_title vacío, las membresías y hospitales van en la sección de logos (di-logos). ?>
 			<h3 class="di-reveal" style="margin-top:var(--space-2xl)"><?php echo esc_html( $irina_a['tags_title'] ); ?></h3>
