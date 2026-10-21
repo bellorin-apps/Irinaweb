@@ -1321,3 +1321,11 @@ No repetir despliegue/publicación/setup ni cambiarcontenido/aprobaciones/estado
 - **Evidencia:** `docs/audit/2026-10-20-barra-horizontal/`.
 - **Límites:** no acredita despliegue ni caché de producción; imágenes sintéticas en local; tamaños emulados.
 - **Corrección de un registro anterior:** la P3 de Q-081 decía que ESLint y stylelint no estaban disponibles en esta PC. Sí lo están, en `tools/lint` (`npm run lint`).
+
+## Auditoría4411dda: barra móvil horizontal — Codex, 2026-10-21
+
+**GO de código** para mejoraCSS,conrespaldo/verificación posterior. Producto solo components.css,+5líneas bajo la mediaquery de la columna; no cambios adicionales de producto porCodex.132/132 independientes con HTMLpúblico yCSScandidato servido43veces solo al navegador;captura667texto largo y844fotos reales inspeccionadas. ESLint/stylelint/sintaxis herramientas pasan.
+
+Se endurecen herramientas: otros controles bajo la columna también fallan,3accionesobligatorias y puntos fuera del viewport no se consideran alcanzables. Logs aportados0/210 y0/132 consistentes, sin enlaces secundarios bajo columna; banco0/90/regresionesQ-081/SEOlocal poratestación deClaude. No repetición deWordPresslocal; bancoHTMLnoacredita despliegue/LiteSpeed. Informe docs/REVISION_BARRA_HORIZONTAL_2026-10-21.md;evidencia docs/audit/2026-10-21-barra-horizontal-codex/.
+
+Pendiente entrega yverificación pública con herramientas endurecidas. No contenido/aprobaciones/estados/setup/publicación. Q-081ysuP3VERIFIEDprevios;avance intacto. Sin deploy/formularios/cuentas/secretos/Sensia porCodex;HTMLusuariopreservados.

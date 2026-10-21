@@ -54,8 +54,8 @@ const probe = () => {
           const s = await pg.evaluate(probe); s.hits.hero.forEach(x => heroHits.add(x)); s.hits.other.forEach(x => otherHits.add(x)); overflow = Math.max(overflow, s.overflow);
         }
       }
-      const tapOk = !first.column || first.sizes.every(s => s === '46×46');
-      const ok = heroHits.size === 0 && overflow <= 0 && tapOk;
+      const tapOk = !first.column || (first.sizes.length === 3 && first.sizes.every(s => s === '46×46'));
+      const ok = heroHits.size === 0 && otherHits.size === 0 && overflow <= 0 && tapOk;
       if (!ok) bad++;
       rows.push(`${ok ? 'OK  ' : 'FAIL'} ${w}×${h} ${p} ${first.column ? `columna x ${Math.round(first.zone.l)}–${Math.round(first.zone.r)} botones ${first.sizes.join(',')}` : first.barOn ? 'barra inferior' : 'sin barra'}`
         + ` · CTA hero: ${first.ctas.map(c => `«${c.t}» ${c.w}px, margen dcho ${c.r}px`).join(' | ') || '—'}`
@@ -68,6 +68,6 @@ const probe = () => {
   }
   await b.close(); console.log(rows.join('\n'));
   if (CSS) console.log(`components.css sustituido en el navegador ${sustituidos} veces (banco con HTML público; no acredita despliegue)`);
-  console.log(`\n${bad} fallos de ${rows.length} (fallo = botón del hero bajo la columna, desborde horizontal o botón de la barra < 46×46)`);
+  console.log(`\n${bad} fallos de ${rows.length} (fallo = control del contenido bajo la columna, desborde horizontal o barra distinta de 3 botones 46×46)`);
   process.exit(bad ? 1 : 0);
 })();

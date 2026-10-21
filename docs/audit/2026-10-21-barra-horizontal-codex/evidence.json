@@ -1,0 +1,9 @@
+{
+  "despues.log": {
+    "supplied_passes": 210
+  },
+  "interaccion.log": {
+    "supplied_passes": 132
+  },
+  "limits": "Read supplied logs, not independent WordPress local execution."
+}

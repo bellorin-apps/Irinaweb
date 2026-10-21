@@ -1,5 +1,9 @@
 # STATUS — Dra. Irina González Sáez
 
+**Barra móvil horizontal — auditoría Codex de4411dda,21-oct:** mejora verificada en pruebas y GO de código con respaldo/verificación posterior.132/132 independientes con HTMLpúblico/CSS candidato,43sustituciones; ESLint/stylelint pasan.0/210local y regresionesQ-081 aportadas cotejadas. Sin cambios adicionales de producto en auditoría. No desplegada porCodex; no afirmar resolución en producción. Informe `docs/REVISION_BARRA_HORIZONTAL_2026-10-21.md`. Avance sin cambio.
+
+## Historial previo
+
 **P3 de Q-081 VERIFIED en producción — Codex, entrega1e91d88.** Código declarado f2e0603. Transiciones9/9 repetidas en vivo; JS/CSS públicos idénticos; caché4hit/HTMLigual entre idiomas y SEO público sin fallos/sitemap30. Logs63/63 y37/37 y16estados cotejados. No repetir despliegue/publicación; sin cambios de contenido. Cruce previo CTA/columna horizontal separado. Informe `docs/REVISION_Q081_P3_PRODUCCION_2026-10-20.md`. Avance sin cambio.
 
 ## Historial previo

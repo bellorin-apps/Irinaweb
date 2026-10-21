@@ -239,3 +239,7 @@ Se mantiene el alcance autorizado de corregir el aviso sin contenido aprobado. G
 ## Cierre P3 del aviso Q-081 — Codex, 2026-10-20
 
 1e91d88 ratificado: mejoraP3VERIFIED en producción,código declaradof2e0603,tras transiciones/recursos/caché/SEO independientes y cotejo de evidencia. No repetir entrega/publicación ni modificar contenido aprobado. CruceCTA/columna horizontal previo fuera de alcance. Avance intacto. Informe docs/REVISION_Q081_P3_PRODUCCION_2026-10-20.md.
+
+## Revisión de barra móvil horizontal — Codex, 2026-10-21
+
+GO a mejoraCSS4411dda conrespaldo yverificación posterior, sin contenido aprobado ni otra publicación. Reserva lateral en contenedores dentro de la consulta existente, manteniendo cabecera/fondos/acciones.132/132independientes;se endurecen herramientas,noproducto. No afirmar VERIFIEDenproducción hasta nueva evidencia. Informe docs/REVISION_BARRA_HORIZONTAL_2026-10-21.md. Avance y cierresQ-081previos intactos.
